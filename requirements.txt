@@ -1,0 +1,11 @@
+torch
+numpy
+transformers
+scipy
+tqdm
+pydantic
+python-dotenv
+langchain_core
+langchain_openai
+pandas
+pyyaml
