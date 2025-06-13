@@ -1,6 +1,5 @@
 import json
 import os
-from glob import glob
 from scripts_utils import get_model_name
 
 TASKS = ["EA", "EU"]

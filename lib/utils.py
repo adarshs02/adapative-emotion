@@ -8,11 +8,6 @@ from pydantic import BaseModel, Field
 from langchain_core.output_parsers import PydanticOutputParser
 import string
 
-
-def get_model_name(path):
-    return path.split("/")[-1].replace(".", "_")
-
-
 def load_yaml(file_path):
     data = {}
     with open(file_path) as stream:

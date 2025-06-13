@@ -1,11 +1,9 @@
 import json
 import torch
 import numpy as np
-# from transformers import AutoTokenizer, AutoModelForCausalLM # Now handled by ModelInitializer
 from scipy.stats import pearsonr
 from tqdm import tqdm
-import sys
-from pathlib import Path # Import Path
+from pathlib import Path
 
 # --- CONFIGURABLE PARAMETERS ---
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
@@ -13,11 +11,8 @@ MAX_NEW_TOKENS = 128
 TEMPERATURE = 0.6
 # -----------------------------
 
-# Adjust path to import from lib using pathlib
-script_path = Path(__file__).resolve() # Get absolute path of the current script
-project_root = script_path.parent.parent # Get 'scripts' directory's parent (project root)
-if str(project_root) not in sys.path:
-    sys.path.insert(0, str(project_root)) # Add project root to the start of sys.path
+# Project root via pathlib
+project_root = Path(__file__).resolve().parent.parent
 
 from scripts_utils import ModelInitializer, print_gpu_info, get_model_name # Using centralized utilities
 # Define paths relative to the project root

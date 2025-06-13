@@ -1,5 +1,4 @@
 import json
-from collections import defaultdict
 from pathlib import Path
 import numpy as np
 
@@ -26,7 +25,7 @@ with open(RESULTS_PATH, "r") as f:
     data = json.load(f)
 
 # Aggregate statistics
-results_by_type = defaultdict(lambda: {"positive": [], "negative": [], "count": 0})
+results_by_type = {}
 all_scores = []
 
 for entry in data:
@@ -43,6 +42,8 @@ for entry in data:
     positive_score = scores_arr[positive_indices].sum()
     negative_score = scores_arr[negative_indices].sum()
 
+    if entry_type not in results_by_type:
+        results_by_type[entry_type] = {"positive": [], "negative": [], "count": 0}
     results_by_type[entry_type]["positive"].append(positive_score)
     results_by_type[entry_type]["negative"].append(negative_score)
     results_by_type[entry_type]["count"] += 1

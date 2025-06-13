@@ -1,8 +1,5 @@
-# Configure environment before imports
+# Basic environment setup
 import os
-import sys
-
-# Basic imports
 import torch 
 import json
 

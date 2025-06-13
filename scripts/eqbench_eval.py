@@ -5,6 +5,7 @@ import torch
 
 # Import your LlamaModelClient (assumes it's in the same project as emobench_llama.py)
 from scripts_utils import ModelInitializer, get_model_name, print_gpu_info # Added print_gpu_info for consistency
+from eqbench_score import calculate_and_save_eq_score
 
 # Determine project root directory based on script location
 # Assumes this script (eqbench_eval.py) is in a subdirectory (e.g., 'scripts') of the project root.
@@ -50,5 +51,9 @@ for idx, (qid, item) in enumerate(tqdm(data.items(), desc="EQ-Bench")):
 
 with open(RESULTS_OUT, 'w') as f:
     json.dump(results, f, indent=2, ensure_ascii=False)
+
+print(f"Results saved to {RESULTS_OUT}")
+print("Calculating EQ-Bench score...")
+calculate_and_save_eq_score(str(RESULTS_OUT))
 
 print("Done.")
