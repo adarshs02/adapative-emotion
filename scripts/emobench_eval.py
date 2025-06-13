@@ -40,6 +40,18 @@ if __name__ == "__main__":
 
     # Initialize score tracking
     task_accuracies = {}
+    task_emo_accuracies = {} # For EU emotion-only accuracy
+
+    FEW_SHOT_EXAMPLES_EU = [
+        {
+            "scenario": "Lena has been trying to study hard the entire week for her crucial medical exam, but has not found the chance because of her social life. So, with high anxiety, she decided to prepare hours away from the exam. In the middle of her study, she got a notification about the cancellation of the exam due to a virus outbreak in her college.",
+            "answer": {"emo_label": "Relief", "cause_label": "The medical exam was cancelled due to a virus outbreak"}
+        },
+        {
+            "scenario": "After waiting for almost two hours for his date, Roger was considering leaving when he heard a familiar voice behind him. It was his date, Jessica, who frantically apologized for being late and explained she had been helping a family stuck on the highway.",
+            "answer": {"emo_label": "Admiration", "cause_label": "Jessica was late because she was helping a family in need"}
+        }
+    ]
 
     for task in ["EA", "EU"]:
         for lang in ["en"]:
@@ -50,6 +62,16 @@ if __name__ == "__main__":
             df = df[df["language"] == lang]
             print(f"\nEvaluating {task}-{lang} ({len(df)} samples):\n")
             correct = 0
+            emo_correct = 0 # Counter for emotion-only accuracy in EU task
+
+            # Create few-shot prompt for EU task
+            few_shot_prompt = ""
+            if task == "EU":
+                few_shot_prompt = "Please identify the emotion and its cause from the scenario. Respond ONLY in JSON format.\n\n"
+                for ex in FEW_SHOT_EXAMPLES_EU:
+                    few_shot_prompt += f"Scenario: {ex['scenario']}\n"
+                    few_shot_prompt += f"Answer: {json.dumps(ex['answer'])}\n\n"
+                few_shot_prompt += "--- End of examples ---\n\n"
             for idx, sample in tqdm(df.iterrows(), total=len(df), desc=f"{task}-{lang}"):
                 if task == "EA":
                     # Build prompt from scenario, subject, and choices
@@ -61,7 +83,8 @@ if __name__ == "__main__":
                         prompt += f"{chr(97+i)}) {choice}\n"
                     prompt += "Answer:"
                 elif task == "EU":
-                    prompt = sample["scenario"] # Use scenario for EU task
+                    scenario = sample["scenario"]
+                    prompt = few_shot_prompt + f"Scenario: {scenario}\nAnswer:"
                 else: # Fallback for other tasks, if any
                     prompt = sample["prompt"] if "prompt" in sample else sample.get("input", "")
 
@@ -127,8 +150,13 @@ if __name__ == "__main__":
                     gt_emo_label = sample['emotion_label'].strip() # Use correct column name from data.py
                     gt_cause_label = sample['cause_label'].strip() # Use correct column name from data.py
 
-                    is_correct = (model_emo_label == gt_emo_label) and (model_cause_label == gt_cause_label)
-                    print(f"Sample {idx}:\nPrompt: {prompt}\nModel: emo_label={model_emo_label}, cause_label={model_cause_label}\nGT: emo_label={gt_emo_label}, cause_label={gt_cause_label}\nCorrect: {is_correct}\n{'-'*40}")
+                    is_correct = (model_emo_label.lower() == gt_emo_label.lower()) and (model_cause_label.lower() == gt_cause_label.lower())
+
+                    # Emotion-only accuracy
+                    is_emo_correct = (model_emo_label.lower() == gt_emo_label.lower())
+                    if is_emo_correct:
+                        emo_correct += 1
+                    print(f"Sample {idx}:\nPrompt: {prompt}\nModel: emo_label={model_emo_label}, cause_label={model_cause_label}\nGT: emo_label={gt_emo_label}, cause_label={gt_cause_label}\nCorrect: {is_correct}, Emo Correct: {is_emo_correct}\n{'-'*40}")
                     # Record result for analysis
                     results.append({
                         "idx": int(idx),
@@ -138,13 +166,20 @@ if __name__ == "__main__":
                         "pred_cause": model_cause_label,
                         "gt_emo": gt_emo_label, # Use updated variable
                         "gt_cause": gt_cause_label, # Use updated variable
-                        "is_correct": is_correct
+                        "is_correct": is_correct,
+                        "is_emo_correct": is_emo_correct
                     })
                 if is_correct:
                     correct += 1
-            accuracy = correct / len(df)
+
+            accuracy = correct / len(df) if len(df) > 0 else 0
             task_accuracies[(task, lang)] = accuracy
-            print(f"\n{task}-{lang} Accuracy: {correct}/{len(df)} = {accuracy:.4f}\n")
+            print(f"\n{task}-{lang} Combined Accuracy: {correct}/{len(df)} = {accuracy:.4f}")
+
+            if task == "EU":
+                emo_accuracy = emo_correct / len(df) if len(df) > 0 else 0
+                task_emo_accuracies[(task, lang)] = emo_accuracy
+                print(f"{task}-{lang} Emotion-Only Accuracy: {emo_correct}/{len(df)} = {emo_accuracy:.4f}\n")
             # Save results if any were collected for the current task and language
             if results:
                 # Sanitize MODEL_NAME for use in filename (e.g., replace '/')
@@ -165,7 +200,9 @@ if __name__ == "__main__":
     print("\n--- Overall Model Scores ---")
     if task_accuracies:
         for (task_name, lang_name), acc in task_accuracies.items():
-            print(f"  {MODEL_NAME} - {task_name}-{lang_name} Accuracy: {acc:.4f}")
+            print(f"  {MODEL_NAME} - {task_name}-{lang_name} Combined Accuracy: {acc:.4f}")
+        for (task_name, lang_name), acc in task_emo_accuracies.items():
+            print(f"  {MODEL_NAME} - {task_name}-{lang_name} Emotion-Only Accuracy: {acc:.4f}")
     else:
         print("  No tasks were evaluated to show a summary.")
     print("\nDone.")

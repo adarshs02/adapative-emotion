@@ -77,12 +77,6 @@ class ModelInitializer:
         current_do_sample = do_sample if do_sample is not None else self.default_do_sample
 
         effective_prompt = prompt
-        # If EU task, append explicit instruction for JSON output to the prompt itself
-        if task == "EU":
-            effective_prompt = prompt + (
-                "\nPlease answer ONLY in the following JSON format. Do not add any extra text.\n"
-                'For example: {"emo_label": "Nervousness", "cause_label": "I don\'t know how to tell my sister that Daniel is taking Lisa to prom"}'
-            )
         
         inputs = self.tokenizer(effective_prompt, return_tensors="pt").to(self.device)
         input_length = inputs.input_ids.shape[1]
@@ -166,9 +160,9 @@ class ModelInitializer:
             }
 
 def get_model_name():
-    #return "meta-llama/Llama-3.1-8B-Instruct"
-    # return "Qwen/Qwen2.5-7B-Instruct"
-    return "mistralai/Mistral-7B-Instruct-v0.3"
+    # return "meta-llama/Llama-3.1-8B-Instruct"
+    return "Qwen/Qwen2.5-7B-Instruct"
+    # return "mistralai/Mistral-7B-Instruct-v0.3"
 
 def print_gpu_info():
     if torch.cuda.is_available():
