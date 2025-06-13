@@ -1,6 +1,5 @@
-# Basic imports and PyTorch config
+"""Shared utility helpers: model loading, response generation, simple I/O."""
 import torch
-
 
 import json
 import re
@@ -110,25 +109,50 @@ class ModelInitializer:
             print(f"DEBUG EU Completion: >>>{completion_str}<<< DEBUG END") 
             emo_label = ""
             cause_label = ""
-            # Try to extract JSON from the completion string
-            match = re.search(r'\{.*\}', completion_str) # Parse from completion_str
-            if match:
-                try:
-                    parsed = json.loads(match.group(0))
-                    emo_label = parsed.get("emo_label", "")
-                    cause_label = parsed.get("cause_label", "")
-                except Exception:
-                    # If JSON parsing from match fails, clear labels
-                    emo_label = ""
-                    cause_label = ""
-            # Fallback regex if direct JSON parsing fails or no match (applied to completion_str)
-            if not emo_label and not cause_label:
-                emo_match = re.search(r"emo_label\s*[:=]\s*([\w \u0026]+)", completion_str, re.IGNORECASE)
-                cause_match = re.search(r"cause_label\s*[:=]\s*([\w \u0026]+)", completion_str, re.IGNORECASE)
+            
+            stripped_completion = completion_str.strip() # Strip leading/trailing whitespace first
+
+            # 1. Try to parse the entire stripped string as JSON
+            try:
+                parsed = json.loads(stripped_completion)
+                emo_label = parsed.get("emo_label", "")
+                cause_label = parsed.get("cause_label", "")
+            except json.JSONDecodeError:
+                # 2. If full parse fails, try to find JSON object within the string
+                match = re.search(r'\{.*?\}', stripped_completion, re.DOTALL)
+                if match:
+                    try:
+                        parsed = json.loads(match.group(0))
+                        emo_label = parsed.get("emo_label", "")
+                        cause_label = parsed.get("cause_label", "")
+                    except json.JSONDecodeError:
+                        # JSON found but malformed, proceed to regex fallback
+                        pass 
+
+            # 3. Fallback to regex if JSON parsing failed OR if either label is still empty
+            if not emo_label or not cause_label:
+                temp_emo_label_regex = ""
+                temp_cause_label_regex = ""
+
+                # Regex patterns attempt to find labels if JSON parsing was incomplete or failed
+                # Using stripped_completion for regex as well
+                emo_match = re.search(r"emo_label\s*[:=]\s*\"?([\w\s\u0026',.-]+)\"?", stripped_completion, re.IGNORECASE)
+                cause_match = re.search(r"cause_label\s*[:=]\s*\"?([\w\s\u0026',.-]+)\"?", stripped_completion, re.IGNORECASE)
+                
                 if emo_match:
-                    emo_label = emo_match.group(1).strip()
+                    temp_emo_label_regex = emo_match.group(1).strip()
                 if cause_match:
-                    cause_label = cause_match.group(1).strip()
+                    temp_cause_label_regex = cause_match.group(1).strip()
+
+                # Only update if the label was not found by JSON and regex found something
+                if not emo_label and temp_emo_label_regex:
+                    emo_label = temp_emo_label_regex
+                if not cause_label and temp_cause_label_regex:
+                    cause_label = temp_cause_label_regex
+
+            if not emo_label and not cause_label: # Check if still empty after all attempts
+                 print(f"WARNING: EU task - Failed to extract emo_label or cause_label from completion.\n         Problematic completion_str: >>>{completion_str}<<< DEBUG END")
+
             return {
                 "full_raw_output": full_raw_output_str, 
                 "completion": completion_str, 
@@ -142,7 +166,7 @@ class ModelInitializer:
             }
 
 def get_model_name():
-    # return "meta-llama/Llama-3.1-8B-Instruct"
+    #return "meta-llama/Llama-3.1-8B-Instruct"
     # return "Qwen/Qwen2.5-7B-Instruct"
     return "mistralai/Mistral-7B-Instruct-v0.3"
 
