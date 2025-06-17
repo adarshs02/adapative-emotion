@@ -27,7 +27,7 @@ def print_gpu_info():
 
 # Determine project root
 script_dir = Path(__file__).resolve().parent
-project_root = script_dir.parent # Assumes 'scripts' is a direct child of project root
+project_root = script_dir.parent
 
 DATA_PATH = project_root / 'EmotionBench' / 'situations.json'
 
@@ -36,8 +36,8 @@ with open(DATA_PATH, 'r') as f:
     data = json.load(f)
 
 # Define model parameters for Qwen2.5
-MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.3"  # Using Qwen2.5 as requested
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"  # Using GPU if available
+MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.3"
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 MAX_NEW_TOKENS = 512
 TEMPERATURE = 0.6
 DO_SAMPLE = False
@@ -233,5 +233,5 @@ output_df = pd.DataFrame(output_rows)
 output_df.to_csv(project_root / "results" / "emotionbench" / "mistral-PANAS-testing.csv", index=False)
 
 # (Optional) Also save raw results as before
-with open(project_root / "results" / "emotionbench" / "emotionbench_mistral_results.json", 'w') as f:
+with open(project_root / "results" / "emotionbench" / "emotionbench_llama_results1.json", 'w') as f:
     json.dump(raw_results, f, indent=2, ensure_ascii=False)
