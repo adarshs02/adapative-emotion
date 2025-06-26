@@ -36,7 +36,7 @@ with open(DATA_PATH, 'r') as f:
     data = json.load(f)
 
 # Define model parameters for Qwen2.5
-MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.3"
+MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 MAX_NEW_TOKENS = 512
 TEMPERATURE = 0.6
