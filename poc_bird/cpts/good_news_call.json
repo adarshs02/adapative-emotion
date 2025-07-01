@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "news_type",
+      "values": [
+        "good",
+        "bad"
+      ]
+    },
+    {
+      "name": "relationship",
+      "values": [
+        "close",
+        "distant"
+      ]
+    },
+    {
+      "name": "expectation",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "news_type": "good",
+      "relationship": "close",
+      "expectation": "low",
+      "emotions": {
+        "excitement": 0.7,
+        "relief": 0.2,
+        "suspicion": 0.1
+      }
+    },
+    {
+      "news_type": "good",
+      "relationship": "close",
+      "expectation": "high",
+      "emotions": {
+        "excitement": 0.6,
+        "anticipation": 0.3,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "news_type": "good",
+      "relationship": "distant",
+      "expectation": "low",
+      "emotions": {
+        "surprise": 0.8,
+        "curiosity": 0.2,
+        "indifference": 0
+      }
+    },
+    {
+      "news_type": "good",
+      "relationship": "distant",
+      "expectation": "high",
+      "emotions": {
+        "surprise": 0.7,
+        "disappointment": 0.2,
+        "indifference": 0.1
+      }
+    },
+    {
+      "news_type": "bad",
+      "relationship": "close",
+      "expectation": "low",
+      "emotions": {
+        "shock": 0.9,
+        "sadness": 0.1,
+        "anger": 0
+      }
+    },
+    {
+      "news_type": "bad",
+      "relationship": "close",
+      "expectation": "high",
+      "emotions": {
+        "disappointment": 0.8,
+        "anger": 0.2,
+        "frustration": 0
+      }
+    },
+    {
+      "news_type": "bad",
+      "relationship": "distant",
+      "expectation": "low",
+      "emotions": {
+        "shock": 0.8,
+        "concern": 0.2,
+        "indifference": 0
+      }
+    },
+    {
+      "news_type": "bad",
+      "relationship": "distant",
+      "expectation": "high",
+      "emotions": {
+        "disappointment": 0.7,
+        "concern": 0.2,
+        "indifference": 0.1
+      }
+    }
+  ]
+}

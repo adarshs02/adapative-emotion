@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "noise_intensity",
+      "values": [
+        "mild",
+        "severe"
+      ]
+    },
+    {
+      "name": "familiarity_with_noises",
+      "values": [
+        "familiar",
+        "unfamiliar"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "noise_intensity": "mild",
+      "familiarity_with_noises": "familiar",
+      "emotions": {
+        "fear": 0.8,
+        "anxiety": 0.15,
+        "curiosity": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "noise_intensity": "mild",
+      "familiarity_with_noises": "unfamiliar",
+      "emotions": {
+        "fear": 0.7,
+        "surprise": 0.25,
+        "curiosity": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "noise_intensity": "severe",
+      "familiarity_with_noises": "familiar",
+      "emotions": {
+        "fear": 0.9,
+        "anxiety": 0.08,
+        "anger": 0.02
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "noise_intensity": "severe",
+      "familiarity_with_noises": "unfamiliar",
+      "emotions": {
+        "fear": 0.85,
+        "surprise": 0.1,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "noise_intensity": "mild",
+      "familiarity_with_noises": "familiar",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.3,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "noise_intensity": "mild",
+      "familiarity_with_noises": "unfamiliar",
+      "emotions": {
+        "anger": 0.7,
+        "surprise": 0.2,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "noise_intensity": "severe",
+      "familiarity_with_noises": "familiar",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.15,
+        "fear": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "noise_intensity": "severe",
+      "familiarity_with_noises": "unfamiliar",
+      "emotions": {
+        "anger": 0.85,
+        "surprise": 0.1,
+        "fear": 0.05
+      }
+    }
+  ]
+}

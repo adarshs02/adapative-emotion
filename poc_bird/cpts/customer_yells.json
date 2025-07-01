@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "customer_age",
+      "values": [
+        "young",
+        "old"
+      ]
+    },
+    {
+      "name": "customer_context",
+      "values": [
+        "public",
+        "private"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "customer_age": "young",
+      "customer_context": "public",
+      "emotions": {
+        "anger": 0.05,
+        "frustration": 0.45,
+        "surprise": 0.5
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "customer_age": "young",
+      "customer_context": "private",
+      "emotions": {
+        "anger": 0.1,
+        "frustration": 0.6,
+        "surprise": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "customer_age": "old",
+      "customer_context": "public",
+      "emotions": {
+        "anger": 0.15,
+        "frustration": 0.4,
+        "surprise": 0.45
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "customer_age": "old",
+      "customer_context": "private",
+      "emotions": {
+        "anger": 0.2,
+        "frustration": 0.5,
+        "surprise": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "customer_age": "young",
+      "customer_context": "public",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.3,
+        "surprise": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "customer_age": "young",
+      "customer_context": "private",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.25,
+        "surprise": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "customer_age": "old",
+      "customer_context": "public",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "surprise": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "customer_age": "old",
+      "customer_context": "private",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.15,
+        "surprise": 0.05
+      }
+    }
+  ]
+}

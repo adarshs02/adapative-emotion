@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "flight_status",
+      "values": [
+        "on_time",
+        "delayed"
+      ]
+    },
+    {
+      "name": "travel_frequency",
+      "values": [
+        "rare",
+        "frequent"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "flight_status": "on_time",
+      "travel_frequency": "rare",
+      "emotions": {
+        "frustration": 0.8,
+        "relief": 0.2,
+        "excitement": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "flight_status": "on_time",
+      "travel_frequency": "frequent",
+      "emotions": {
+        "relief": 0.7,
+        "excitement": 0.2,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "flight_status": "delayed",
+      "travel_frequency": "rare",
+      "emotions": {
+        "frustration": 0.6,
+        "relief": 0.3,
+        "excitement": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "flight_status": "delayed",
+      "travel_frequency": "frequent",
+      "emotions": {
+        "frustration": 0.5,
+        "relief": 0.3,
+        "excitement": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "flight_status": "on_time",
+      "travel_frequency": "rare",
+      "emotions": {
+        "frustration": 0.2,
+        "relief": 0.6,
+        "excitement": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "flight_status": "on_time",
+      "travel_frequency": "frequent",
+      "emotions": {
+        "relief": 0.8,
+        "frustration": 0.1,
+        "excitement": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "flight_status": "delayed",
+      "travel_frequency": "rare",
+      "emotions": {
+        "frustration": 0.8,
+        "relief": 0.1,
+        "excitement": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "flight_status": "delayed",
+      "travel_frequency": "frequent",
+      "emotions": {
+        "frustration": 0.9,
+        "relief": 0.05,
+        "excitement": 0.05
+      }
+    }
+  ]
+}

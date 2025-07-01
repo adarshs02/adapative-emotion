@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "appointment_type",
+      "values": [
+        "cancelled",
+        "confirmed"
+      ]
+    },
+    {
+      "name": "time_availability",
+      "values": [
+        "free",
+        "busy"
+      ]
+    },
+    {
+      "name": "emotional_state",
+      "values": [
+        "stable",
+        "unstable"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "appointment_type": "cancelled",
+      "time_availability": "free",
+      "emotional_state": "stable",
+      "emotions": {
+        "relieved": 0.7,
+        "excited": 0.2,
+        "frustrated": 0.1
+      }
+    },
+    {
+      "appointment_type": "cancelled",
+      "time_availability": "free",
+      "emotional_state": "unstable",
+      "emotions": {
+        "excited": 0.6,
+        "relieved": 0.3,
+        "anxious": 0.1
+      }
+    },
+    {
+      "appointment_type": "cancelled",
+      "time_availability": "busy",
+      "emotional_state": "stable",
+      "emotions": {
+        "frustrated": 0.5,
+        "relieved": 0.4,
+        "disappointed": 0.1
+      }
+    },
+    {
+      "appointment_type": "cancelled",
+      "time_availability": "busy",
+      "emotional_state": "unstable",
+      "emotions": {
+        "anxious": 0.6,
+        "frustrated": 0.3,
+        "disappointed": 0.1
+      }
+    },
+    {
+      "appointment_type": "confirmed",
+      "time_availability": "free",
+      "emotional_state": "stable",
+      "emotions": {
+        "excited": 0.1,
+        "relieved": 0.5,
+        "anxious": 0.4
+      }
+    },
+    {
+      "appointment_type": "confirmed",
+      "time_availability": "free",
+      "emotional_state": "unstable",
+      "emotions": {
+        "anxious": 0.7,
+        "frustrated": 0.2,
+        "relieved": 0.1
+      }
+    },
+    {
+      "appointment_type": "confirmed",
+      "time_availability": "busy",
+      "emotional_state": "stable",
+      "emotions": {
+        "disappointed": 0.6,
+        "frustrated": 0.3,
+        "relieved": 0.1
+      }
+    },
+    {
+      "appointment_type": "confirmed",
+      "time_availability": "busy",
+      "emotional_state": "unstable",
+      "emotions": {
+        "anxious": 0.8,
+        "frustrated": 0.1,
+        "disappointed": 0.1
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "damage_severity",
+      "values": [
+        "minor",
+        "major"
+      ]
+    },
+    {
+      "name": "relationship",
+      "values": [
+        "close",
+        "distant"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "damage_severity": "minor",
+      "relationship": "close",
+      "emotions": {
+        "guilt": 0.8,
+        "relief": 0.2,
+        "frustration": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "damage_severity": "minor",
+      "relationship": "distant",
+      "emotions": {
+        "relief": 0.7,
+        "guilt": 0.2,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "damage_severity": "major",
+      "relationship": "close",
+      "emotions": {
+        "guilt": 0.9,
+        "relief": 0.1,
+        "frustration": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "damage_severity": "major",
+      "relationship": "distant",
+      "emotions": {
+        "guilt": 0.8,
+        "frustration": 0.2,
+        "relief": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "damage_severity": "minor",
+      "relationship": "close",
+      "emotions": {
+        "anger": 0.4,
+        "guilt": 0.3,
+        "frustration": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "damage_severity": "minor",
+      "relationship": "distant",
+      "emotions": {
+        "anger": 0.6,
+        "guilt": 0.2,
+        "frustration": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "damage_severity": "major",
+      "relationship": "close",
+      "emotions": {
+        "anger": 0.7,
+        "guilt": 0.2,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "damage_severity": "major",
+      "relationship": "distant",
+      "emotions": {
+        "anger": 0.8,
+        "guilt": 0.1,
+        "frustration": 0.1
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "layoff_type",
+      "values": [
+        "sudden",
+        "planned"
+      ]
+    },
+    {
+      "name": "job_security",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "financial_stability",
+      "values": [
+        "stable",
+        "unstable"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "layoff_type": "sudden",
+      "job_security": "low",
+      "financial_stability": "stable",
+      "emotions": {
+        "fear": 0.6,
+        "anxiety": 0.3,
+        "resignation": 0.1
+      }
+    },
+    {
+      "layoff_type": "sudden",
+      "job_security": "low",
+      "financial_stability": "unstable",
+      "emotions": {
+        "fear": 0.7,
+        "anxiety": 0.2,
+        "desperation": 0.1
+      }
+    },
+    {
+      "layoff_type": "sudden",
+      "job_security": "high",
+      "financial_stability": "stable",
+      "emotions": {
+        "anger": 0.4,
+        "frustration": 0.3,
+        "disappointment": 0.3
+      }
+    },
+    {
+      "layoff_type": "sudden",
+      "job_security": "high",
+      "financial_stability": "unstable",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.3,
+        "helplessness": 0.2
+      }
+    },
+    {
+      "layoff_type": "planned",
+      "job_security": "low",
+      "financial_stability": "stable",
+      "emotions": {
+        "resignation": 0.5,
+        "acceptance": 0.3,
+        "fear": 0.2
+      }
+    },
+    {
+      "layoff_type": "planned",
+      "job_security": "low",
+      "financial_stability": "unstable",
+      "emotions": {
+        "desperation": 0.6,
+        "resignation": 0.2,
+        "anxiety": 0.2
+      }
+    },
+    {
+      "layoff_type": "planned",
+      "job_security": "high",
+      "financial_stability": "stable",
+      "emotions": {
+        "disappointment": 0.4,
+        "frustration": 0.3,
+        "acceptance": 0.3
+      }
+    },
+    {
+      "layoff_type": "planned",
+      "job_security": "high",
+      "financial_stability": "unstable",
+      "emotions": {
+        "helplessness": 0.5,
+        "frustration": 0.3,
+        "anger": 0.2
+      }
+    }
+  ]
+}

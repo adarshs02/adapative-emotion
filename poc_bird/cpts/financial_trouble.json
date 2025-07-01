@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "financial_stability",
+      "values": [
+        "stable",
+        "unstable"
+      ]
+    },
+    {
+      "name": "financial_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "support_system",
+      "values": [
+        "available",
+        "unavailable"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "financial_stability": "stable",
+      "financial_history": "first_time",
+      "support_system": "available",
+      "emotions": {
+        "frustration": 0.7,
+        "anxiety": 0.2,
+        "desperation": 0.1
+      }
+    },
+    {
+      "financial_stability": "stable",
+      "financial_history": "first_time",
+      "support_system": "unavailable",
+      "emotions": {
+        "frustration": 0.6,
+        "anxiety": 0.3,
+        "desperation": 0.1
+      }
+    },
+    {
+      "financial_stability": "stable",
+      "financial_history": "repeated",
+      "support_system": "available",
+      "emotions": {
+        "frustration": 0.4,
+        "anxiety": 0.5,
+        "desperation": 0.1
+      }
+    },
+    {
+      "financial_stability": "stable",
+      "financial_history": "repeated",
+      "support_system": "unavailable",
+      "emotions": {
+        "frustration": 0.7,
+        "anxiety": 0.2,
+        "desperation": 0.1
+      }
+    },
+    {
+      "financial_stability": "unstable",
+      "financial_history": "first_time",
+      "support_system": "available",
+      "emotions": {
+        "anxiety": 0.8,
+        "frustration": 0.2,
+        "desperation": 0.0
+      }
+    },
+    {
+      "financial_stability": "unstable",
+      "financial_history": "first_time",
+      "support_system": "unavailable",
+      "emotions": {
+        "anxiety": 0.9,
+        "frustration": 0.1,
+        "desperation": 0.0
+      }
+    },
+    {
+      "financial_stability": "unstable",
+      "financial_history": "repeated",
+      "support_system": "available",
+      "emotions": {
+        "desperation": 0.8,
+        "anxiety": 0.2,
+        "frustration": 0.0
+      }
+    },
+    {
+      "financial_stability": "unstable",
+      "financial_history": "repeated",
+      "support_system": "unavailable",
+      "emotions": {
+        "desperation": 0.9,
+        "anxiety": 0.1,
+        "frustration": 0.0
+      }
+    }
+  ]
+}

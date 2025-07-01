@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "relationship_with_person",
+      "values": [
+        "close",
+        "distant"
+      ]
+    },
+    {
+      "name": "emotional_state",
+      "values": [
+        "calm",
+        "frustrated"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "relationship_with_person": "close",
+      "emotional_state": "calm",
+      "emotions": {
+        "guilt": 0.8,
+        "relief": 0.2,
+        "frustration": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship_with_person": "close",
+      "emotional_state": "frustrated",
+      "emotions": {
+        "guilt": 0.6,
+        "relief": 0.3,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship_with_person": "distant",
+      "emotional_state": "calm",
+      "emotions": {
+        "guilt": 0.4,
+        "relief": 0.5,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship_with_person": "distant",
+      "emotional_state": "frustrated",
+      "emotions": {
+        "guilt": 0.2,
+        "relief": 0.3,
+        "frustration": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship_with_person": "close",
+      "emotional_state": "calm",
+      "emotions": {
+        "guilt": 0.1,
+        "relief": 0.0,
+        "frustration": 0.9
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship_with_person": "close",
+      "emotional_state": "frustrated",
+      "emotions": {
+        "guilt": 0.0,
+        "relief": 0.0,
+        "frustration": 1.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship_with_person": "distant",
+      "emotional_state": "calm",
+      "emotions": {
+        "guilt": 0.0,
+        "relief": 0.0,
+        "frustration": 1.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship_with_person": "distant",
+      "emotional_state": "frustrated",
+      "emotions": {
+        "guilt": 0.0,
+        "relief": 0.0,
+        "frustration": 1.0
+      }
+    }
+  ]
+}

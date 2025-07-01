@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "help_type",
+      "values": [
+        "minor",
+        "major"
+      ]
+    },
+    {
+      "name": "recipient_gratitude",
+      "values": [
+        "warm",
+        "cold"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "help_type": "minor",
+      "recipient_gratitude": "warm",
+      "emotions": {
+        "gratitude": 0.8,
+        "relief": 0.15,
+        "neutral": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "help_type": "minor",
+      "recipient_gratitude": "cold",
+      "emotions": {
+        "gratitude": 0.2,
+        "relief": 0.6,
+        "neutral": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "help_type": "major",
+      "recipient_gratitude": "warm",
+      "emotions": {
+        "gratitude": 0.9,
+        "relief": 0.1,
+        "neutral": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "help_type": "major",
+      "recipient_gratitude": "cold",
+      "emotions": {
+        "gratitude": 0.3,
+        "relief": 0.4,
+        "neutral": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "help_type": "minor",
+      "recipient_gratitude": "warm",
+      "emotions": {
+        "gratitude": 0.4,
+        "relief": 0.3,
+        "neutral": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "help_type": "minor",
+      "recipient_gratitude": "cold",
+      "emotions": {
+        "gratitude": 0.1,
+        "relief": 0.7,
+        "neutral": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "help_type": "major",
+      "recipient_gratitude": "warm",
+      "emotions": {
+        "gratitude": 0.8,
+        "relief": 0.1,
+        "neutral": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "help_type": "major",
+      "recipient_gratitude": "cold",
+      "emotions": {
+        "gratitude": 0.2,
+        "relief": 0.5,
+        "neutral": 0.3
+      }
+    }
+  ]
+}

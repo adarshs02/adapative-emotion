@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "time_of_day",
+      "values": [
+        "morning",
+        "afternoon"
+      ]
+    },
+    {
+      "name": "line_length",
+      "values": [
+        "short",
+        "long"
+      ]
+    },
+    {
+      "name": "personal_goal",
+      "values": [
+        "leisure",
+        "essential"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "time_of_day": "morning",
+      "line_length": "short",
+      "personal_goal": "leisure",
+      "emotions": {
+        "boredom": 0.7,
+        "frustration": 0.2,
+        "excitement": 0.1
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "line_length": "short",
+      "personal_goal": "essential",
+      "emotions": {
+        "frustration": 0.3,
+        "boredom": 0.5,
+        "relief": 0.2
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "line_length": "long",
+      "personal_goal": "leisure",
+      "emotions": {
+        "frustration": 0.8,
+        "boredom": 0.2,
+        "irritation": 0.0
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "line_length": "long",
+      "personal_goal": "essential",
+      "emotions": {
+        "frustration": 0.9,
+        "boredom": 0.1,
+        "relief": 0.0
+      }
+    },
+    {
+      "time_of_day": "afternoon",
+      "line_length": "short",
+      "personal_goal": "leisure",
+      "emotions": {
+        "boredom": 0.4,
+        "frustration": 0.3,
+        "excitement": 0.3
+      }
+    },
+    {
+      "time_of_day": "afternoon",
+      "line_length": "short",
+      "personal_goal": "essential",
+      "emotions": {
+        "frustration": 0.5,
+        "boredom": 0.3,
+        "relief": 0.2
+      }
+    },
+    {
+      "time_of_day": "afternoon",
+      "line_length": "long",
+      "personal_goal": "leisure",
+      "emotions": {
+        "frustration": 0.9,
+        "boredom": 0.1,
+        "irritation": 0.0
+      }
+    },
+    {
+      "time_of_day": "afternoon",
+      "line_length": "long",
+      "personal_goal": "essential",
+      "emotions": {
+        "frustration": 0.95,
+        "boredom": 0.05,
+        "relief": 0.0
+      }
+    }
+  ]
+}

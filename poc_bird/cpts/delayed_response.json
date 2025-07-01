@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "response_importance",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "response_delay",
+      "values": [
+        "short",
+        "long"
+      ]
+    },
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "response_importance": "low",
+      "response_delay": "short",
+      "offence_history": "first_time",
+      "emotions": {
+        "frustration": 0.8,
+        "relief": 0.2,
+        "excitement": 0.0
+      }
+    },
+    {
+      "response_importance": "low",
+      "response_delay": "short",
+      "offence_history": "repeated",
+      "emotions": {
+        "frustration": 0.7,
+        "relief": 0.2,
+        "excitement": 0.1
+      }
+    },
+    {
+      "response_importance": "low",
+      "response_delay": "long",
+      "offence_history": "first_time",
+      "emotions": {
+        "frustration": 0.6,
+        "relief": 0.3,
+        "excitement": 0.1
+      }
+    },
+    {
+      "response_importance": "low",
+      "response_delay": "long",
+      "offence_history": "repeated",
+      "emotions": {
+        "frustration": 0.8,
+        "relief": 0.1,
+        "excitement": 0.1
+      }
+    },
+    {
+      "response_importance": "high",
+      "response_delay": "short",
+      "offence_history": "first_time",
+      "emotions": {
+        "frustration": 0.4,
+        "relief": 0.3,
+        "anxiety": 0.3
+      }
+    },
+    {
+      "response_importance": "high",
+      "response_delay": "short",
+      "offence_history": "repeated",
+      "emotions": {
+        "frustration": 0.7,
+        "relief": 0.2,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "response_importance": "high",
+      "response_delay": "long",
+      "offence_history": "first_time",
+      "emotions": {
+        "frustration": 0.3,
+        "relief": 0.2,
+        "anxiety": 0.5
+      }
+    },
+    {
+      "response_importance": "high",
+      "response_delay": "long",
+      "offence_history": "repeated",
+      "emotions": {
+        "frustration": 0.8,
+        "relief": 0.1,
+        "anxiety": 0.1
+      }
+    }
+  ]
+}

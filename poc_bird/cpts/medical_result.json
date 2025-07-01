@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "test_results",
+      "values": [
+        "positive",
+        "negative"
+      ]
+    },
+    {
+      "name": "medical_history",
+      "values": [
+        "good",
+        "bad"
+      ]
+    },
+    {
+      "name": "previous_diagnosis",
+      "values": [
+        "yes",
+        "no"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "test_results": "positive",
+      "medical_history": "good",
+      "previous_diagnosis": "yes",
+      "emotions": {
+        "relief": 0.7,
+        "anxiety": 0.2,
+        "fear": 0.1
+      }
+    },
+    {
+      "test_results": "positive",
+      "medical_history": "good",
+      "previous_diagnosis": "no",
+      "emotions": {
+        "relief": 0.8,
+        "anxiety": 0.1,
+        "hope": 0.1
+      }
+    },
+    {
+      "test_results": "positive",
+      "medical_history": "bad",
+      "previous_diagnosis": "yes",
+      "emotions": {
+        "relief": 0.6,
+        "anxiety": 0.3,
+        "fear": 0.1
+      }
+    },
+    {
+      "test_results": "positive",
+      "medical_history": "bad",
+      "previous_diagnosis": "no",
+      "emotions": {
+        "relief": 0.7,
+        "anxiety": 0.2,
+        "hope": 0.1
+      }
+    },
+    {
+      "test_results": "negative",
+      "medical_history": "good",
+      "previous_diagnosis": "yes",
+      "emotions": {
+        "fear": 0.8,
+        "anxiety": 0.2,
+        "shock": 0.0
+      }
+    },
+    {
+      "test_results": "negative",
+      "medical_history": "good",
+      "previous_diagnosis": "no",
+      "emotions": {
+        "fear": 0.7,
+        "anxiety": 0.2,
+        "shock": 0.1
+      }
+    },
+    {
+      "test_results": "negative",
+      "medical_history": "bad",
+      "previous_diagnosis": "yes",
+      "emotions": {
+        "fear": 0.9,
+        "anxiety": 0.1,
+        "shock": 0.0
+      }
+    },
+    {
+      "test_results": "negative",
+      "medical_history": "bad",
+      "previous_diagnosis": "no",
+      "emotions": {
+        "fear": 0.8,
+        "anxiety": 0.2,
+        "shock": 0.0
+      }
+    }
+  ]
+}

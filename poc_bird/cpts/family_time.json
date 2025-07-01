@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "family_dynamics",
+      "values": [
+        "harmonious",
+        "tense"
+      ]
+    },
+    {
+      "name": "previous_evening_quality",
+      "values": [
+        "good",
+        "bad"
+      ]
+    },
+    {
+      "name": "shared_activity_type",
+      "values": [
+        "relaxing",
+        "energetic"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "family_dynamics": "harmonious",
+      "previous_evening_quality": "good",
+      "shared_activity_type": "relaxing",
+      "emotions": {
+        "happiness": 0.8,
+        "contentment": 0.15,
+        "boredom": 0.05
+      }
+    },
+    {
+      "family_dynamics": "harmonious",
+      "previous_evening_quality": "good",
+      "shared_activity_type": "energetic",
+      "emotions": {
+        "happiness": 0.7,
+        "excitement": 0.25,
+        "frustration": 0.05
+      }
+    },
+    {
+      "family_dynamics": "harmonious",
+      "previous_evening_quality": "bad",
+      "shared_activity_type": "relaxing",
+      "emotions": {
+        "happiness": 0.4,
+        "contentment": 0.3,
+        "boredom": 0.3
+      }
+    },
+    {
+      "family_dynamics": "harmonious",
+      "previous_evening_quality": "bad",
+      "shared_activity_type": "energetic",
+      "emotions": {
+        "happiness": 0.3,
+        "excitement": 0.4,
+        "frustration": 0.3
+      }
+    },
+    {
+      "family_dynamics": "tense",
+      "previous_evening_quality": "good",
+      "shared_activity_type": "relaxing",
+      "emotions": {
+        "anxiety": 0.2,
+        "happiness": 0.3,
+        "irritation": 0.5
+      }
+    },
+    {
+      "family_dynamics": "tense",
+      "previous_evening_quality": "good",
+      "shared_activity_type": "energetic",
+      "emotions": {
+        "anxiety": 0.1,
+        "excitement": 0.4,
+        "frustration": 0.5
+      }
+    },
+    {
+      "family_dynamics": "tense",
+      "previous_evening_quality": "bad",
+      "shared_activity_type": "relaxing",
+      "emotions": {
+        "anxiety": 0.5,
+        "happiness": 0.2,
+        "irritation": 0.3
+      }
+    },
+    {
+      "family_dynamics": "tense",
+      "previous_evening_quality": "bad",
+      "shared_activity_type": "energetic",
+      "emotions": {
+        "anxiety": 0.6,
+        "excitement": 0.2,
+        "frustration": 0.2
+      }
+    }
+  ]
+}

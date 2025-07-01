@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "urgency_level",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "visa_type",
+      "values": [
+        "tourist",
+        "work"
+      ]
+    },
+    {
+      "name": "previous_issues",
+      "values": [
+        "none",
+        "repeated"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "urgency_level": "low",
+      "visa_type": "tourist",
+      "previous_issues": "none",
+      "emotions": {
+        "frustration": 0.6,
+        "anxiety": 0.3,
+        "relief": 0.1
+      }
+    },
+    {
+      "urgency_level": "low",
+      "visa_type": "tourist",
+      "previous_issues": "repeated",
+      "emotions": {
+        "frustration": 0.8,
+        "anxiety": 0.2,
+        "relief": 0.0
+      }
+    },
+    {
+      "urgency_level": "low",
+      "visa_type": "work",
+      "previous_issues": "none",
+      "emotions": {
+        "frustration": 0.4,
+        "anxiety": 0.5,
+        "relief": 0.1
+      }
+    },
+    {
+      "urgency_level": "low",
+      "visa_type": "work",
+      "previous_issues": "repeated",
+      "emotions": {
+        "frustration": 0.7,
+        "anxiety": 0.2,
+        "relief": 0.1
+      }
+    },
+    {
+      "urgency_level": "high",
+      "visa_type": "tourist",
+      "previous_issues": "none",
+      "emotions": {
+        "frustration": 0.9,
+        "anxiety": 0.1,
+        "relief": 0.0
+      }
+    },
+    {
+      "urgency_level": "high",
+      "visa_type": "tourist",
+      "previous_issues": "repeated",
+      "emotions": {
+        "frustration": 0.95,
+        "anxiety": 0.05,
+        "relief": 0.0
+      }
+    },
+    {
+      "urgency_level": "high",
+      "visa_type": "work",
+      "previous_issues": "none",
+      "emotions": {
+        "frustration": 0.8,
+        "anxiety": 0.2,
+        "relief": 0.0
+      }
+    },
+    {
+      "urgency_level": "high",
+      "visa_type": "work",
+      "previous_issues": "repeated",
+      "emotions": {
+        "frustration": 0.9,
+        "anxiety": 0.1,
+        "relief": 0.0
+      }
+    }
+  ]
+}

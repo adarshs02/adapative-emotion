@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "performance_level",
+      "values": [
+        "good",
+        "bad"
+      ]
+    },
+    {
+      "name": "meeting_context",
+      "values": [
+        "formal",
+        "informal"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "performance_level": "good",
+      "meeting_context": "formal",
+      "emotions": {
+        "nervousness": 0.7,
+        "excitement": 0.2,
+        "confidence": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "performance_level": "good",
+      "meeting_context": "informal",
+      "emotions": {
+        "excitement": 0.8,
+        "nervousness": 0.15,
+        "confidence": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "performance_level": "bad",
+      "meeting_context": "formal",
+      "emotions": {
+        "nervousness": 0.6,
+        "frustration": 0.3,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "performance_level": "bad",
+      "meeting_context": "informal",
+      "emotions": {
+        "frustration": 0.7,
+        "anxiety": 0.25,
+        "nervousness": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "performance_level": "good",
+      "meeting_context": "formal",
+      "emotions": {
+        "anger": 0.4,
+        "frustration": 0.3,
+        "nervousness": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "performance_level": "good",
+      "meeting_context": "informal",
+      "emotions": {
+        "anger": 0.55,
+        "frustration": 0.25,
+        "nervousness": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "performance_level": "bad",
+      "meeting_context": "formal",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.15,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "performance_level": "bad",
+      "meeting_context": "informal",
+      "emotions": {
+        "anger": 0.85,
+        "frustration": 0.1,
+        "anxiety": 0.05
+      }
+    }
+  ]
+}

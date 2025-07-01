@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "message_type",
+      "values": [
+        "personal",
+        "public"
+      ]
+    },
+    {
+      "name": "sender_intent",
+      "values": [
+        "known",
+        "unknown"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "message_type": "personal",
+      "sender_intent": "known",
+      "emotions": {
+        "anxiety": 0.8,
+        "curiosity": 0.2,
+        "fear": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "message_type": "personal",
+      "sender_intent": "unknown",
+      "emotions": {
+        "anxiety": 0.7,
+        "curiosity": 0.2,
+        "fear": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "message_type": "public",
+      "sender_intent": "known",
+      "emotions": {
+        "anxiety": 0.5,
+        "curiosity": 0.3,
+        "fear": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "message_type": "public",
+      "sender_intent": "unknown",
+      "emotions": {
+        "anxiety": 0.6,
+        "curiosity": 0.2,
+        "fear": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "message_type": "personal",
+      "sender_intent": "known",
+      "emotions": {
+        "anger": 0.6,
+        "anxiety": 0.3,
+        "fear": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "message_type": "personal",
+      "sender_intent": "unknown",
+      "emotions": {
+        "anger": 0.7,
+        "anxiety": 0.2,
+        "fear": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "message_type": "public",
+      "sender_intent": "known",
+      "emotions": {
+        "anger": 0.8,
+        "anxiety": 0.1,
+        "fear": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "message_type": "public",
+      "sender_intent": "unknown",
+      "emotions": {
+        "anger": 0.9,
+        "anxiety": 0.08,
+        "fear": 0.02
+      }
+    }
+  ]
+}

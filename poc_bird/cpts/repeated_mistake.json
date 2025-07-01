@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "offender_intent",
+      "values": [
+        "accidental",
+        "intentional"
+      ]
+    },
+    {
+      "name": "emotional_involvement",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "offender_intent": "accidental",
+      "emotional_involvement": "low",
+      "emotions": {
+        "frustration": 0.7,
+        "relief": 0.3,
+        "indifference": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "offender_intent": "accidental",
+      "emotional_involvement": "high",
+      "emotions": {
+        "relief": 0.6,
+        "frustration": 0.3,
+        "concern": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "offender_intent": "intentional",
+      "emotional_involvement": "low",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.3,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "offender_intent": "intentional",
+      "emotional_involvement": "high",
+      "emotions": {
+        "anger": 0.7,
+        "concern": 0.2,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offender_intent": "accidental",
+      "emotional_involvement": "low",
+      "emotions": {
+        "frustration": 0.8,
+        "anger": 0.2,
+        "indifference": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offender_intent": "accidental",
+      "emotional_involvement": "high",
+      "emotions": {
+        "frustration": 0.7,
+        "concern": 0.2,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offender_intent": "intentional",
+      "emotional_involvement": "low",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.2,
+        "indifference": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offender_intent": "intentional",
+      "emotional_involvement": "high",
+      "emotions": {
+        "anger": 0.9,
+        "concern": 0.08,
+        "frustration": 0.02
+      }
+    }
+  ]
+}

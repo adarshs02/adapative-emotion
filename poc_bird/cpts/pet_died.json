@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "emotional_support",
+      "values": [
+        "available",
+        "unavailable"
+      ]
+    },
+    {
+      "name": "pet_age",
+      "values": [
+        "young",
+        "old"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "emotional_support": "available",
+      "pet_age": "young",
+      "emotions": {
+        "grief": 0.8,
+        "sadness": 0.2,
+        "acceptance": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_support": "available",
+      "pet_age": "old",
+      "emotions": {
+        "grief": 0.7,
+        "sadness": 0.2,
+        "acceptance": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_support": "unavailable",
+      "pet_age": "young",
+      "emotions": {
+        "grief": 0.9,
+        "sadness": 0.1,
+        "acceptance": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_support": "unavailable",
+      "pet_age": "old",
+      "emotions": {
+        "grief": 0.8,
+        "sadness": 0.2,
+        "acceptance": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_support": "available",
+      "pet_age": "young",
+      "emotions": {
+        "grief": 0.4,
+        "anger": 0.3,
+        "sadness": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_support": "available",
+      "pet_age": "old",
+      "emotions": {
+        "grief": 0.6,
+        "anger": 0.2,
+        "sadness": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_support": "unavailable",
+      "pet_age": "young",
+      "emotions": {
+        "grief": 0.7,
+        "anger": 0.2,
+        "sadness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_support": "unavailable",
+      "pet_age": "old",
+      "emotions": {
+        "grief": 0.8,
+        "anger": 0.1,
+        "sadness": 0.1
+      }
+    }
+  ]
+}

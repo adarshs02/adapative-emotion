@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "distance_apart",
+      "values": [
+        "short",
+        "long"
+      ]
+    },
+    {
+      "name": "communication_quality",
+      "values": [
+        "good",
+        "bad"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "distance_apart": "short",
+      "communication_quality": "good",
+      "emotions": {
+        "happiness": 0.9,
+        "nervousness": 0.05,
+        "awkwardness": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "distance_apart": "short",
+      "communication_quality": "bad",
+      "emotions": {
+        "happiness": 0.7,
+        "nervousness": 0.2,
+        "awkwardness": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "distance_apart": "long",
+      "communication_quality": "good",
+      "emotions": {
+        "happiness": 0.8,
+        "nervousness": 0.1,
+        "awkwardness": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "distance_apart": "long",
+      "communication_quality": "bad",
+      "emotions": {
+        "happiness": 0.5,
+        "nervousness": 0.3,
+        "awkwardness": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "distance_apart": "short",
+      "communication_quality": "good",
+      "emotions": {
+        "happiness": 0.6,
+        "nervousness": 0.2,
+        "awkwardness": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "distance_apart": "short",
+      "communication_quality": "bad",
+      "emotions": {
+        "happiness": 0.3,
+        "nervousness": 0.4,
+        "awkwardness": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "distance_apart": "long",
+      "communication_quality": "good",
+      "emotions": {
+        "happiness": 0.4,
+        "nervousness": 0.3,
+        "awkwardness": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "distance_apart": "long",
+      "communication_quality": "bad",
+      "emotions": {
+        "happiness": 0.2,
+        "nervousness": 0.5,
+        "awkwardness": 0.3
+      }
+    }
+  ]
+}

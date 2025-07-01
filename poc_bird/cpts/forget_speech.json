@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "audience_size",
+      "values": [
+        "small",
+        "large"
+      ]
+    },
+    {
+      "name": "public_importance",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "audience_size": "small",
+      "public_importance": "low",
+      "emotions": {
+        "shame": 0.8,
+        "frustration": 0.15,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "audience_size": "small",
+      "public_importance": "high",
+      "emotions": {
+        "shame": 0.7,
+        "frustration": 0.25,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "audience_size": "large",
+      "public_importance": "low",
+      "emotions": {
+        "shame": 0.6,
+        "frustration": 0.3,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "audience_size": "large",
+      "public_importance": "high",
+      "emotions": {
+        "shame": 0.5,
+        "frustration": 0.35,
+        "relief": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "audience_size": "small",
+      "public_importance": "low",
+      "emotions": {
+        "frustration": 0.8,
+        "shame": 0.15,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "audience_size": "small",
+      "public_importance": "high",
+      "emotions": {
+        "frustration": 0.7,
+        "shame": 0.25,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "audience_size": "large",
+      "public_importance": "low",
+      "emotions": {
+        "frustration": 0.6,
+        "shame": 0.25,
+        "anger": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "audience_size": "large",
+      "public_importance": "high",
+      "emotions": {
+        "frustration": 0.5,
+        "shame": 0.3,
+        "anger": 0.2
+      }
+    }
+  ]
+}

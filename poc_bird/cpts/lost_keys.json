@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "lateness_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "appointment_importance",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "stress_level",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "lateness_history": "first_time",
+      "appointment_importance": "low",
+      "stress_level": "low",
+      "emotions": {
+        "frustration": 0.6,
+        "anxiety": 0.3,
+        "calmness": 0.1
+      }
+    },
+    {
+      "lateness_history": "first_time",
+      "appointment_importance": "low",
+      "stress_level": "high",
+      "emotions": {
+        "frustration": 0.4,
+        "anxiety": 0.5,
+        "calmness": 0.1
+      }
+    },
+    {
+      "lateness_history": "first_time",
+      "appointment_importance": "high",
+      "stress_level": "low",
+      "emotions": {
+        "frustration": 0.2,
+        "anxiety": 0.6,
+        "calmness": 0.2
+      }
+    },
+    {
+      "lateness_history": "first_time",
+      "appointment_importance": "high",
+      "stress_level": "high",
+      "emotions": {
+        "frustration": 0.1,
+        "anxiety": 0.7,
+        "calmness": 0.2
+      }
+    },
+    {
+      "lateness_history": "repeated",
+      "appointment_importance": "low",
+      "stress_level": "low",
+      "emotions": {
+        "frustration": 0.8,
+        "anxiety": 0.2,
+        "calmness": 0.0
+      }
+    },
+    {
+      "lateness_history": "repeated",
+      "appointment_importance": "low",
+      "stress_level": "high",
+      "emotions": {
+        "frustration": 0.7,
+        "anxiety": 0.3,
+        "calmness": 0.0
+      }
+    },
+    {
+      "lateness_history": "repeated",
+      "appointment_importance": "high",
+      "stress_level": "low",
+      "emotions": {
+        "frustration": 0.5,
+        "anxiety": 0.4,
+        "calmness": 0.1
+      }
+    },
+    {
+      "lateness_history": "repeated",
+      "appointment_importance": "high",
+      "stress_level": "high",
+      "emotions": {
+        "frustration": 0.4,
+        "anxiety": 0.5,
+        "calmness": 0.1
+      }
+    }
+  ]
+}

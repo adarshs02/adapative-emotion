@@ -1,0 +1,147 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "neighbor_socioeconomic_status",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "neighbor_relationship",
+      "values": [
+        "friendly",
+        "distant"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "neighbor_socioeconomic_status": "low",
+      "neighbor_relationship": "friendly",
+      "emotions": {
+        "jealousy": 0.0,
+        "envy": 0.0,
+        "anger": 0.0,
+        "disgust": 0.0,
+        "admiration": 0.8,
+        "surprise": 0.2,
+        "curiosity": 0.0,
+        "indifference": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "neighbor_socioeconomic_status": "low",
+      "neighbor_relationship": "distant",
+      "emotions": {
+        "jealousy": 0.0,
+        "envy": 0.0,
+        "anger": 0.0,
+        "disgust": 0.0,
+        "admiration": 0.7,
+        "surprise": 0.3,
+        "curiosity": 0.0,
+        "indifference": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "neighbor_socioeconomic_status": "high",
+      "neighbor_relationship": "friendly",
+      "emotions": {
+        "jealousy": 0.0,
+        "envy": 0.0,
+        "anger": 0.0,
+        "disgust": 0.0,
+        "admiration": 0.6,
+        "surprise": 0.4,
+        "curiosity": 0.0,
+        "indifference": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "neighbor_socioeconomic_status": "high",
+      "neighbor_relationship": "distant",
+      "emotions": {
+        "jealousy": 0.0,
+        "envy": 0.0,
+        "anger": 0.0,
+        "disgust": 0.0,
+        "admiration": 0.5,
+        "surprise": 0.45,
+        "curiosity": 0.05,
+        "indifference": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "neighbor_socioeconomic_status": "low",
+      "neighbor_relationship": "friendly",
+      "emotions": {
+        "jealousy": 0.0,
+        "envy": 0.0,
+        "anger": 0.8,
+        "disgust": 0.2,
+        "admiration": 0.0,
+        "surprise": 0.0,
+        "curiosity": 0.0,
+        "indifference": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "neighbor_socioeconomic_status": "low",
+      "neighbor_relationship": "distant",
+      "emotions": {
+        "jealousy": 0.0,
+        "envy": 0.0,
+        "anger": 0.9,
+        "disgust": 0.1,
+        "admiration": 0.0,
+        "surprise": 0.0,
+        "curiosity": 0.0,
+        "indifference": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "neighbor_socioeconomic_status": "high",
+      "neighbor_relationship": "friendly",
+      "emotions": {
+        "jealousy": 0.0,
+        "envy": 0.0,
+        "anger": 0.7,
+        "disgust": 0.3,
+        "admiration": 0.0,
+        "surprise": 0.0,
+        "curiosity": 0.0,
+        "indifference": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "neighbor_socioeconomic_status": "high",
+      "neighbor_relationship": "distant",
+      "emotions": {
+        "jealousy": 0.0,
+        "envy": 0.0,
+        "anger": 0.85,
+        "disgust": 0.15,
+        "admiration": 0.0,
+        "surprise": 0.0,
+        "curiosity": 0.0,
+        "indifference": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "friendship_quality",
+      "values": [
+        "close",
+        "distant"
+      ]
+    },
+    {
+      "name": "communication_style",
+      "values": [
+        "open",
+        "secretive"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "friendship_quality": "close",
+      "communication_style": "open",
+      "emotions": {
+        "anger": 0.0,
+        "hurt": 0.6,
+        "relief": 0.4
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_quality": "close",
+      "communication_style": "secretive",
+      "emotions": {
+        "anger": 0.2,
+        "hurt": 0.5,
+        "relief": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_quality": "distant",
+      "communication_style": "open",
+      "emotions": {
+        "anger": 0.3,
+        "hurt": 0.4,
+        "relief": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_quality": "distant",
+      "communication_style": "secretive",
+      "emotions": {
+        "anger": 0.5,
+        "hurt": 0.3,
+        "relief": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_quality": "close",
+      "communication_style": "open",
+      "emotions": {
+        "anger": 0.8,
+        "hurt": 0.1,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_quality": "close",
+      "communication_style": "secretive",
+      "emotions": {
+        "anger": 0.9,
+        "hurt": 0.05,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_quality": "distant",
+      "communication_style": "open",
+      "emotions": {
+        "anger": 0.7,
+        "hurt": 0.2,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_quality": "distant",
+      "communication_style": "secretive",
+      "emotions": {
+        "anger": 0.95,
+        "hurt": 0.03,
+        "relief": 0.02
+      }
+    }
+  ]
+}

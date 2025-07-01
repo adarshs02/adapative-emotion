@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "friendship_depth",
+      "values": [
+        "shallow",
+        "deep"
+      ]
+    },
+    {
+      "name": "message_type",
+      "values": [
+        "kind",
+        "critical"
+      ]
+    },
+    {
+      "name": "previous_messages",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "friendship_depth": "shallow",
+      "message_type": "kind",
+      "previous_messages": "first_time",
+      "emotions": {
+        "gratitude": 0.7,
+        "happiness": 0.2,
+        "indifference": 0.1
+      }
+    },
+    {
+      "friendship_depth": "shallow",
+      "message_type": "kind",
+      "previous_messages": "repeated",
+      "emotions": {
+        "gratitude": 0.4,
+        "happiness": 0.5,
+        "surprise": 0.1
+      }
+    },
+    {
+      "friendship_depth": "shallow",
+      "message_type": "critical",
+      "previous_messages": "first_time",
+      "emotions": {
+        "anger": 0.6,
+        "happiness": 0.2,
+        "surprise": 0.2
+      }
+    },
+    {
+      "friendship_depth": "shallow",
+      "message_type": "critical",
+      "previous_messages": "repeated",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.1,
+        "surprise": 0.1
+      }
+    },
+    {
+      "friendship_depth": "deep",
+      "message_type": "kind",
+      "previous_messages": "first_time",
+      "emotions": {
+        "gratitude": 0.9,
+        "happiness": 0.08,
+        "love": 0.02
+      }
+    },
+    {
+      "friendship_depth": "deep",
+      "message_type": "kind",
+      "previous_messages": "repeated",
+      "emotions": {
+        "gratitude": 0.7,
+        "happiness": 0.25,
+        "love": 0.05
+      }
+    },
+    {
+      "friendship_depth": "deep",
+      "message_type": "critical",
+      "previous_messages": "first_time",
+      "emotions": {
+        "anger": 0.2,
+        "happiness": 0.6,
+        "surprise": 0.2
+      }
+    },
+    {
+      "friendship_depth": "deep",
+      "message_type": "critical",
+      "previous_messages": "repeated",
+      "emotions": {
+        "anger": 0.4,
+        "frustration": 0.3,
+        "surprise": 0.3
+      }
+    }
+  ]
+}

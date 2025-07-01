@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "gift_type",
+      "values": [
+        "personalized",
+        "non-personalized"
+      ]
+    },
+    {
+      "name": "relationship",
+      "values": [
+        "close",
+        "distant"
+      ]
+    },
+    {
+      "name": "effort",
+      "values": [
+        "high",
+        "low"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "gift_type": "personalized",
+      "relationship": "close",
+      "effort": "high",
+      "emotions": {
+        "gratitude": 0.7,
+        "surprise": 0.25,
+        "awkwardness": 0.05
+      }
+    },
+    {
+      "gift_type": "personalized",
+      "relationship": "close",
+      "effort": "low",
+      "emotions": {
+        "gratitude": 0.6,
+        "surprise": 0.3,
+        "awkwardness": 0.1
+      }
+    },
+    {
+      "gift_type": "personalized",
+      "relationship": "distant",
+      "effort": "high",
+      "emotions": {
+        "gratitude": 0.4,
+        "surprise": 0.4,
+        "awkwardness": 0.2
+      }
+    },
+    {
+      "gift_type": "personalized",
+      "relationship": "distant",
+      "effort": "low",
+      "emotions": {
+        "gratitude": 0.3,
+        "surprise": 0.3,
+        "awkwardness": 0.4
+      }
+    },
+    {
+      "gift_type": "non-personalized",
+      "relationship": "close",
+      "effort": "high",
+      "emotions": {
+        "gratitude": 0.2,
+        "surprise": 0.5,
+        "awkwardness": 0.3
+      }
+    },
+    {
+      "gift_type": "non-personalized",
+      "relationship": "close",
+      "effort": "low",
+      "emotions": {
+        "gratitude": 0.1,
+        "surprise": 0.6,
+        "awkwardness": 0.3
+      }
+    },
+    {
+      "gift_type": "non-personalized",
+      "relationship": "distant",
+      "effort": "high",
+      "emotions": {
+        "gratitude": 0.1,
+        "surprise": 0.4,
+        "awkwardness": 0.5
+      }
+    },
+    {
+      "gift_type": "non-personalized",
+      "relationship": "distant",
+      "effort": "low",
+      "emotions": {
+        "gratitude": 0.05,
+        "surprise": 0.3,
+        "awkwardness": 0.65
+      }
+    }
+  ]
+}

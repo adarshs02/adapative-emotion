@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "job_security",
+      "values": [
+        "stable",
+        "unstable"
+      ]
+    },
+    {
+      "name": "financial_preparedness",
+      "values": [
+        "prepared",
+        "unprepared"
+      ]
+    },
+    {
+      "name": "previous_job_experience",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "job_security": "stable",
+      "financial_preparedness": "prepared",
+      "previous_job_experience": "first_time",
+      "emotions": {
+        "shock": 0.6,
+        "anxiety": 0.3,
+        "resilience": 0.1
+      }
+    },
+    {
+      "job_security": "stable",
+      "financial_preparedness": "prepared",
+      "previous_job_experience": "repeated",
+      "emotions": {
+        "shock": 0.4,
+        "anxiety": 0.5,
+        "resilience": 0.1
+      }
+    },
+    {
+      "job_security": "stable",
+      "financial_preparedness": "unprepared",
+      "previous_job_experience": "first_time",
+      "emotions": {
+        "shock": 0.5,
+        "anxiety": 0.4,
+        "resilience": 0.1
+      }
+    },
+    {
+      "job_security": "stable",
+      "financial_preparedness": "unprepared",
+      "previous_job_experience": "repeated",
+      "emotions": {
+        "shock": 0.3,
+        "anxiety": 0.6,
+        "resilience": 0.1
+      }
+    },
+    {
+      "job_security": "unstable",
+      "financial_preparedness": "prepared",
+      "previous_job_experience": "first_time",
+      "emotions": {
+        "anxiety": 0.7,
+        "shock": 0.2,
+        "resilience": 0.1
+      }
+    },
+    {
+      "job_security": "unstable",
+      "financial_preparedness": "prepared",
+      "previous_job_experience": "repeated",
+      "emotions": {
+        "anxiety": 0.8,
+        "shock": 0.1,
+        "resilience": 0.1
+      }
+    },
+    {
+      "job_security": "unstable",
+      "financial_preparedness": "unprepared",
+      "previous_job_experience": "first_time",
+      "emotions": {
+        "anxiety": 0.9,
+        "shock": 0.08,
+        "resilience": 0.02
+      }
+    },
+    {
+      "job_security": "unstable",
+      "financial_preparedness": "unprepared",
+      "previous_job_experience": "repeated",
+      "emotions": {
+        "anxiety": 0.95,
+        "shock": 0.04,
+        "resilience": 0.01
+      }
+    }
+  ]
+}

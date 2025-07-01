@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "trust_level",
+      "values": [
+        "high",
+        "low"
+      ]
+    },
+    {
+      "name": "relationship_type",
+      "values": [
+        "close",
+        "distant"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "trust_level": "high",
+      "relationship_type": "close",
+      "emotions": {
+        "shame": 0.7,
+        "relief": 0.2,
+        "guilt": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "high",
+      "relationship_type": "distant",
+      "emotions": {
+        "relief": 0.6,
+        "shame": 0.3,
+        "surprise": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "low",
+      "relationship_type": "close",
+      "emotions": {
+        "shame": 0.5,
+        "surprise": 0.3,
+        "defensiveness": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "low",
+      "relationship_type": "distant",
+      "emotions": {
+        "surprise": 0.5,
+        "defensiveness": 0.3,
+        "anger": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "high",
+      "relationship_type": "close",
+      "emotions": {
+        "anger": 0.6,
+        "guilt": 0.3,
+        "resentment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "high",
+      "relationship_type": "distant",
+      "emotions": {
+        "anger": 0.7,
+        "resentment": 0.2,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "low",
+      "relationship_type": "close",
+      "emotions": {
+        "anger": 0.8,
+        "resentment": 0.1,
+        "defensiveness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "low",
+      "relationship_type": "distant",
+      "emotions": {
+        "anger": 0.9,
+        "frustration": 0.08,
+        "defensiveness": 0.02
+      }
+    }
+  ]
+}

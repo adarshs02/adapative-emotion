@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "pet_type",
+      "values": [
+        "small",
+        "large"
+      ]
+    },
+    {
+      "name": "owner_age",
+      "values": [
+        "young",
+        "old"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "pet_type": "small",
+      "owner_age": "young",
+      "emotions": {
+        "guilt": 0.8,
+        "frustration": 0.2,
+        "relief": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "pet_type": "small",
+      "owner_age": "old",
+      "emotions": {
+        "guilt": 0.7,
+        "relief": 0.2,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "pet_type": "large",
+      "owner_age": "young",
+      "emotions": {
+        "guilt": 0.6,
+        "frustration": 0.3,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "pet_type": "large",
+      "owner_age": "old",
+      "emotions": {
+        "guilt": 0.5,
+        "frustration": 0.4,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "pet_type": "small",
+      "owner_age": "young",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.3,
+        "guilt": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "pet_type": "small",
+      "owner_age": "old",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.2,
+        "guilt": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "pet_type": "large",
+      "owner_age": "young",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "guilt": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "pet_type": "large",
+      "owner_age": "old",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.1,
+        "guilt": 0.1
+      }
+    }
+  ]
+}

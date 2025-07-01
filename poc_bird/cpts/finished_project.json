@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "project_difficulty",
+      "values": [
+        "easy",
+        "hard"
+      ]
+    },
+    {
+      "name": "team_size",
+      "values": [
+        "small",
+        "large"
+      ]
+    },
+    {
+      "name": "personal_involvement",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "project_difficulty": "easy",
+      "team_size": "small",
+      "personal_involvement": "low",
+      "emotions": {
+        "satisfaction": 0.9,
+        "relief": 0.1,
+        "boredom": 0.0
+      }
+    },
+    {
+      "project_difficulty": "easy",
+      "team_size": "small",
+      "personal_involvement": "high",
+      "emotions": {
+        "satisfaction": 0.8,
+        "relief": 0.15,
+        "pride": 0.05
+      }
+    },
+    {
+      "project_difficulty": "easy",
+      "team_size": "large",
+      "personal_involvement": "low",
+      "emotions": {
+        "satisfaction": 0.85,
+        "relief": 0.1,
+        "boredom": 0.05
+      }
+    },
+    {
+      "project_difficulty": "easy",
+      "team_size": "large",
+      "personal_involvement": "high",
+      "emotions": {
+        "satisfaction": 0.7,
+        "relief": 0.2,
+        "pride": 0.1
+      }
+    },
+    {
+      "project_difficulty": "hard",
+      "team_size": "small",
+      "personal_involvement": "low",
+      "emotions": {
+        "satisfaction": 0.6,
+        "relief": 0.3,
+        "frustration": 0.1
+      }
+    },
+    {
+      "project_difficulty": "hard",
+      "team_size": "small",
+      "personal_involvement": "high",
+      "emotions": {
+        "satisfaction": 0.5,
+        "relief": 0.35,
+        "pride": 0.15
+      }
+    },
+    {
+      "project_difficulty": "hard",
+      "team_size": "large",
+      "personal_involvement": "low",
+      "emotions": {
+        "satisfaction": 0.4,
+        "relief": 0.4,
+        "frustration": 0.2
+      }
+    },
+    {
+      "project_difficulty": "hard",
+      "team_size": "large",
+      "personal_involvement": "high",
+      "emotions": {
+        "satisfaction": 0.3,
+        "relief": 0.45,
+        "pride": 0.25
+      }
+    }
+  ]
+}

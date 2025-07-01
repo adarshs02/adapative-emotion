@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "meal_quality",
+      "values": [
+        "good",
+        "bad"
+      ]
+    },
+    {
+      "name": "food_type",
+      "values": [
+        "familiar",
+        "new"
+      ]
+    },
+    {
+      "name": "company",
+      "values": [
+        "alone",
+        "with_others"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "meal_quality": "good",
+      "food_type": "familiar",
+      "company": "alone",
+      "emotions": {
+        "happiness": 0.8,
+        "relief": 0.15,
+        "boredom": 0.05
+      }
+    },
+    {
+      "meal_quality": "good",
+      "food_type": "familiar",
+      "company": "with_others",
+      "emotions": {
+        "happiness": 0.7,
+        "excitement": 0.25,
+        "relief": 0.05
+      }
+    },
+    {
+      "meal_quality": "good",
+      "food_type": "new",
+      "company": "alone",
+      "emotions": {
+        "curiosity": 0.6,
+        "happiness": 0.35,
+        "relief": 0.05
+      }
+    },
+    {
+      "meal_quality": "good",
+      "food_type": "new",
+      "company": "with_others",
+      "emotions": {
+        "excitement": 0.55,
+        "happiness": 0.35,
+        "curiosity": 0.1
+      }
+    },
+    {
+      "meal_quality": "bad",
+      "food_type": "familiar",
+      "company": "alone",
+      "emotions": {
+        "disappointment": 0.7,
+        "anger": 0.25,
+        "frustration": 0.05
+      }
+    },
+    {
+      "meal_quality": "bad",
+      "food_type": "familiar",
+      "company": "with_others",
+      "emotions": {
+        "anger": 0.6,
+        "disappointment": 0.3,
+        "frustration": 0.1
+      }
+    },
+    {
+      "meal_quality": "bad",
+      "food_type": "new",
+      "company": "alone",
+      "emotions": {
+        "anger": 0.7,
+        "disappointment": 0.25,
+        "frustration": 0.05
+      }
+    },
+    {
+      "meal_quality": "bad",
+      "food_type": "new",
+      "company": "with_others",
+      "emotions": {
+        "anger": 0.65,
+        "disappointment": 0.3,
+        "frustration": 0.05
+      }
+    }
+  ]
+}

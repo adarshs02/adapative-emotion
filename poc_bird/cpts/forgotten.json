@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "communication_style",
+      "values": [
+        "open",
+        "closed"
+      ]
+    },
+    {
+      "name": "emotional_involvement",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "communication_style": "open",
+      "emotional_involvement": "low",
+      "emotions": {
+        "sadness": 0.7,
+        "frustration": 0.2,
+        "acceptance": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_style": "open",
+      "emotional_involvement": "high",
+      "emotions": {
+        "sadness": 0.5,
+        "frustration": 0.3,
+        "guilt": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_style": "closed",
+      "emotional_involvement": "low",
+      "emotions": {
+        "frustration": 0.6,
+        "sadness": 0.3,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_style": "closed",
+      "emotional_involvement": "high",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "guilt": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "open",
+      "emotional_involvement": "low",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.1,
+        "helplessness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "open",
+      "emotional_involvement": "high",
+      "emotions": {
+        "anger": 0.9,
+        "guilt": 0.05,
+        "helplessness": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "closed",
+      "emotional_involvement": "low",
+      "emotions": {
+        "anger": 0.9,
+        "frustration": 0.05,
+        "helplessness": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "closed",
+      "emotional_involvement": "high",
+      "emotions": {
+        "anger": 0.95,
+        "guilt": 0.03,
+        "helplessness": 0.02
+      }
+    }
+  ]
+}

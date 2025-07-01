@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "police_intent",
+      "values": [
+        "friendly",
+        "serious"
+      ]
+    },
+    {
+      "name": "location",
+      "values": [
+        "home",
+        "public"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "police_intent": "friendly",
+      "location": "home",
+      "emotions": {
+        "anxiety": 0.8,
+        "relief": 0.2,
+        "curiosity": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "police_intent": "friendly",
+      "location": "public",
+      "emotions": {
+        "anxiety": 0.6,
+        "relief": 0.3,
+        "curiosity": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "police_intent": "serious",
+      "location": "home",
+      "emotions": {
+        "fear": 0.7,
+        "anger": 0.2,
+        "confusion": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "police_intent": "serious",
+      "location": "public",
+      "emotions": {
+        "fear": 0.8,
+        "anger": 0.1,
+        "confusion": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "police_intent": "friendly",
+      "location": "home",
+      "emotions": {
+        "anger": 0.4,
+        "frustration": 0.3,
+        "resignation": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "police_intent": "friendly",
+      "location": "public",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.3,
+        "resignation": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "police_intent": "serious",
+      "location": "home",
+      "emotions": {
+        "fear": 0.5,
+        "anger": 0.3,
+        "helplessness": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "police_intent": "serious",
+      "location": "public",
+      "emotions": {
+        "fear": 0.6,
+        "anger": 0.2,
+        "helplessness": 0.2
+      }
+    }
+  ]
+}

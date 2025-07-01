@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "memory_type",
+      "values": [
+        "fond",
+        "unpleasant"
+      ]
+    },
+    {
+      "name": "memory_recency",
+      "values": [
+        "recent",
+        "distant"
+      ]
+    },
+    {
+      "name": "memory_intensity",
+      "values": [
+        "strong",
+        "weak"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "memory_type": "fond",
+      "memory_recency": "recent",
+      "memory_intensity": "strong",
+      "emotions": {
+        "happiness": 0.7,
+        "nostalgia": 0.25,
+        "boredom": 0.05
+      }
+    },
+    {
+      "memory_type": "fond",
+      "memory_recency": "recent",
+      "memory_intensity": "weak",
+      "emotions": {
+        "happiness": 0.6,
+        "nostalgia": 0.35,
+        "boredom": 0.05
+      }
+    },
+    {
+      "memory_type": "fond",
+      "memory_recency": "distant",
+      "memory_intensity": "strong",
+      "emotions": {
+        "nostalgia": 0.7,
+        "happiness": 0.25,
+        "boredom": 0.05
+      }
+    },
+    {
+      "memory_type": "fond",
+      "memory_recency": "distant",
+      "memory_intensity": "weak",
+      "emotions": {
+        "nostalgia": 0.6,
+        "happiness": 0.35,
+        "boredom": 0.05
+      }
+    },
+    {
+      "memory_type": "unpleasant",
+      "memory_recency": "recent",
+      "memory_intensity": "strong",
+      "emotions": {
+        "anger": 0.7,
+        "sadness": 0.25,
+        "fear": 0.05
+      }
+    },
+    {
+      "memory_type": "unpleasant",
+      "memory_recency": "recent",
+      "memory_intensity": "weak",
+      "emotions": {
+        "anger": 0.6,
+        "sadness": 0.35,
+        "fear": 0.05
+      }
+    },
+    {
+      "memory_type": "unpleasant",
+      "memory_recency": "distant",
+      "memory_intensity": "strong",
+      "emotions": {
+        "sadness": 0.7,
+        "anger": 0.25,
+        "fear": 0.05
+      }
+    },
+    {
+      "memory_type": "unpleasant",
+      "memory_recency": "distant",
+      "memory_intensity": "weak",
+      "emotions": {
+        "sadness": 0.6,
+        "anger": 0.35,
+        "fear": 0.05
+      }
+    }
+  ]
+}

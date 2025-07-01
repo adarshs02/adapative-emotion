@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "vacation_type",
+      "values": [
+        "relaxing",
+        "adventurous"
+      ]
+    },
+    {
+      "name": "travel_companions",
+      "values": [
+        "alone",
+        "with_family"
+      ]
+    },
+    {
+      "name": "destination_unfamiliarity",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "vacation_type": "relaxing",
+      "travel_companions": "alone",
+      "destination_unfamiliarity": "first_time",
+      "emotions": {
+        "excitement": 0.8,
+        "nervousness": 0.15,
+        "boredom": 0.05
+      }
+    },
+    {
+      "vacation_type": "relaxing",
+      "travel_companions": "alone",
+      "destination_unfamiliarity": "repeated",
+      "emotions": {
+        "excitement": 0.6,
+        "nervousness": 0.25,
+        "boredom": 0.15
+      }
+    },
+    {
+      "vacation_type": "relaxing",
+      "travel_companions": "with_family",
+      "destination_unfamiliarity": "first_time",
+      "emotions": {
+        "excitement": 0.7,
+        "nervousness": 0.2,
+        "boredom": 0.1
+      }
+    },
+    {
+      "vacation_type": "relaxing",
+      "travel_companions": "with_family",
+      "destination_unfamiliarity": "repeated",
+      "emotions": {
+        "excitement": 0.5,
+        "nervousness": 0.3,
+        "boredom": 0.2
+      }
+    },
+    {
+      "vacation_type": "adventurous",
+      "travel_companions": "alone",
+      "destination_unfamiliarity": "first_time",
+      "emotions": {
+        "excitement": 0.9,
+        "fear": 0.05,
+        "boredom": 0.05
+      }
+    },
+    {
+      "vacation_type": "adventurous",
+      "travel_companions": "alone",
+      "destination_unfamiliarity": "repeated",
+      "emotions": {
+        "excitement": 0.8,
+        "fear": 0.1,
+        "boredom": 0.1
+      }
+    },
+    {
+      "vacation_type": "adventurous",
+      "travel_companions": "with_family",
+      "destination_unfamiliarity": "first_time",
+      "emotions": {
+        "excitement": 0.85,
+        "fear": 0.05,
+        "boredom": 0.1
+      }
+    },
+    {
+      "vacation_type": "adventurous",
+      "travel_companions": "with_family",
+      "destination_unfamiliarity": "repeated",
+      "emotions": {
+        "excitement": 0.7,
+        "fear": 0.15,
+        "boredom": 0.15
+      }
+    }
+  ]
+}

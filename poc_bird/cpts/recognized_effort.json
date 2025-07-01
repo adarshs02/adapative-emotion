@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "acknowledgement_type",
+      "values": [
+        "public",
+        "private"
+      ]
+    },
+    {
+      "name": "effort_level",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "previous_recognition",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "acknowledgement_type": "public",
+      "effort_level": "low",
+      "previous_recognition": "first_time",
+      "emotions": {
+        "gratitude": 0.7,
+        "surprise": 0.2,
+        "relief": 0.1
+      }
+    },
+    {
+      "acknowledgement_type": "public",
+      "effort_level": "low",
+      "previous_recognition": "repeated",
+      "emotions": {
+        "gratitude": 0.4,
+        "surprise": 0.3,
+        "relief": 0.3
+      }
+    },
+    {
+      "acknowledgement_type": "public",
+      "effort_level": "high",
+      "previous_recognition": "first_time",
+      "emotions": {
+        "gratitude": 0.8,
+        "pride": 0.2,
+        "relief": 0.0
+      }
+    },
+    {
+      "acknowledgement_type": "public",
+      "effort_level": "high",
+      "previous_recognition": "repeated",
+      "emotions": {
+        "gratitude": 0.6,
+        "pride": 0.3,
+        "relief": 0.1
+      }
+    },
+    {
+      "acknowledgement_type": "private",
+      "effort_level": "low",
+      "previous_recognition": "first_time",
+      "emotions": {
+        "gratitude": 0.5,
+        "surprise": 0.3,
+        "relief": 0.2
+      }
+    },
+    {
+      "acknowledgement_type": "private",
+      "effort_level": "low",
+      "previous_recognition": "repeated",
+      "emotions": {
+        "gratitude": 0.3,
+        "surprise": 0.4,
+        "relief": 0.3
+      }
+    },
+    {
+      "acknowledgement_type": "private",
+      "effort_level": "high",
+      "previous_recognition": "first_time",
+      "emotions": {
+        "gratitude": 0.9,
+        "pride": 0.1,
+        "relief": 0.0
+      }
+    },
+    {
+      "acknowledgement_type": "private",
+      "effort_level": "high",
+      "previous_recognition": "repeated",
+      "emotions": {
+        "gratitude": 0.7,
+        "pride": 0.2,
+        "relief": 0.1
+      }
+    }
+  ]
+}

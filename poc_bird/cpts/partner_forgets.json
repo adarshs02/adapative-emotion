@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "anniversary_importance",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "communication_style",
+      "values": [
+        "open",
+        "closed"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "anniversary_importance": "low",
+      "communication_style": "open",
+      "emotions": {
+        "happiness": 0.8,
+        "sadness": 0.15,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "anniversary_importance": "low",
+      "communication_style": "closed",
+      "emotions": {
+        "happiness": 0.6,
+        "sadness": 0.25,
+        "anger": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "anniversary_importance": "high",
+      "communication_style": "open",
+      "emotions": {
+        "happiness": 0.7,
+        "sadness": 0.2,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "anniversary_importance": "high",
+      "communication_style": "closed",
+      "emotions": {
+        "happiness": 0.4,
+        "sadness": 0.35,
+        "anger": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "anniversary_importance": "low",
+      "communication_style": "open",
+      "emotions": {
+        "happiness": 0.2,
+        "sadness": 0.3,
+        "anger": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "anniversary_importance": "low",
+      "communication_style": "closed",
+      "emotions": {
+        "happiness": 0.1,
+        "sadness": 0.4,
+        "anger": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "anniversary_importance": "high",
+      "communication_style": "open",
+      "emotions": {
+        "happiness": 0.1,
+        "sadness": 0.2,
+        "anger": 0.7
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "anniversary_importance": "high",
+      "communication_style": "closed",
+      "emotions": {
+        "happiness": 0.0,
+        "sadness": 0.1,
+        "anger": 0.9
+      }
+    }
+  ]
+}

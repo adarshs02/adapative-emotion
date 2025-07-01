@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "hunger_level",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "time_since_last_meal",
+      "values": [
+        "recent",
+        "long"
+      ]
+    },
+    {
+      "name": "environmental_stress",
+      "values": [
+        "calm",
+        "chaotic"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "hunger_level": "low",
+      "time_since_last_meal": "recent",
+      "environmental_stress": "calm",
+      "emotions": {
+        "happiness": 0.8,
+        "frustration": 0.2,
+        "anxiety": 0.0
+      }
+    },
+    {
+      "hunger_level": "low",
+      "time_since_last_meal": "recent",
+      "environmental_stress": "chaotic",
+      "emotions": {
+        "happiness": 0.4,
+        "frustration": 0.3,
+        "anxiety": 0.3
+      }
+    },
+    {
+      "hunger_level": "low",
+      "time_since_last_meal": "long",
+      "environmental_stress": "calm",
+      "emotions": {
+        "happiness": 0.6,
+        "frustration": 0.2,
+        "anxiety": 0.2
+      }
+    },
+    {
+      "hunger_level": "low",
+      "time_since_last_meal": "long",
+      "environmental_stress": "chaotic",
+      "emotions": {
+        "happiness": 0.2,
+        "frustration": 0.3,
+        "anxiety": 0.5
+      }
+    },
+    {
+      "hunger_level": "high",
+      "time_since_last_meal": "recent",
+      "environmental_stress": "calm",
+      "emotions": {
+        "happiness": 0.0,
+        "frustration": 0.5,
+        "anxiety": 0.5
+      }
+    },
+    {
+      "hunger_level": "high",
+      "time_since_last_meal": "recent",
+      "environmental_stress": "chaotic",
+      "emotions": {
+        "happiness": 0.0,
+        "frustration": 0.7,
+        "anxiety": 0.3
+      }
+    },
+    {
+      "hunger_level": "high",
+      "time_since_last_meal": "long",
+      "environmental_stress": "calm",
+      "emotions": {
+        "happiness": 0.0,
+        "frustration": 0.4,
+        "anxiety": 0.6
+      }
+    },
+    {
+      "hunger_level": "high",
+      "time_since_last_meal": "long",
+      "environmental_stress": "chaotic",
+      "emotions": {
+        "happiness": 0.0,
+        "frustration": 0.6,
+        "anxiety": 0.4
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "friendship_depth",
+      "values": [
+        "shallow",
+        "deep"
+      ]
+    },
+    {
+      "name": "emotional_control",
+      "values": [
+        "impulsive",
+        "reflective"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "shallow",
+      "emotional_control": "impulsive",
+      "emotions": {
+        "guilt": 0.8,
+        "anger": 0.1,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "shallow",
+      "emotional_control": "reflective",
+      "emotions": {
+        "guilt": 0.7,
+        "relief": 0.2,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "deep",
+      "emotional_control": "impulsive",
+      "emotions": {
+        "guilt": 0.6,
+        "relief": 0.3,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "deep",
+      "emotional_control": "reflective",
+      "emotions": {
+        "guilt": 0.5,
+        "relief": 0.4,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "shallow",
+      "emotional_control": "impulsive",
+      "emotions": {
+        "anger": 0.8,
+        "guilt": 0.2,
+        "relief": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "shallow",
+      "emotional_control": "reflective",
+      "emotions": {
+        "anger": 0.7,
+        "guilt": 0.2,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "deep",
+      "emotional_control": "impulsive",
+      "emotions": {
+        "anger": 0.6,
+        "guilt": 0.3,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "deep",
+      "emotional_control": "reflective",
+      "emotions": {
+        "anger": 0.5,
+        "guilt": 0.4,
+        "relief": 0.1
+      }
+    }
+  ]
+}

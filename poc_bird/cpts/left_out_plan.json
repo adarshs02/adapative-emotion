@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "relationship_with_planner",
+      "values": [
+        "close",
+        "distant"
+      ]
+    },
+    {
+      "name": "level_of_inclusion",
+      "values": [
+        "invited",
+        "uninvited"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "relationship_with_planner": "close",
+      "level_of_inclusion": "invited",
+      "emotions": {
+        "hurt": 0.8,
+        "anger": 0.15,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship_with_planner": "close",
+      "level_of_inclusion": "uninvited",
+      "emotions": {
+        "hurt": 0.7,
+        "anger": 0.25,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship_with_planner": "distant",
+      "level_of_inclusion": "invited",
+      "emotions": {
+        "hurt": 0.6,
+        "anger": 0.3,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship_with_planner": "distant",
+      "level_of_inclusion": "uninvited",
+      "emotions": {
+        "hurt": 0.5,
+        "anger": 0.35,
+        "disappointment": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship_with_planner": "close",
+      "level_of_inclusion": "invited",
+      "emotions": {
+        "anger": 0.6,
+        "hurt": 0.35,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship_with_planner": "close",
+      "level_of_inclusion": "uninvited",
+      "emotions": {
+        "anger": 0.8,
+        "hurt": 0.15,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship_with_planner": "distant",
+      "level_of_inclusion": "invited",
+      "emotions": {
+        "anger": 0.7,
+        "hurt": 0.25,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship_with_planner": "distant",
+      "level_of_inclusion": "uninvited",
+      "emotions": {
+        "anger": 0.85,
+        "hurt": 0.1,
+        "disappointment": 0.05
+      }
+    }
+  ]
+}

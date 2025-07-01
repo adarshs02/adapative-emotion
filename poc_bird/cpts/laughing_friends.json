@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "social_context",
+      "values": [
+        "formal",
+        "informal"
+      ]
+    },
+    {
+      "name": "laughter_intensity",
+      "values": [
+        "mild",
+        "extreme"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "social_context": "formal",
+      "laughter_intensity": "mild",
+      "emotions": {
+        "amusement": 0.8,
+        "surprise": 0.15,
+        "awkwardness": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_context": "formal",
+      "laughter_intensity": "extreme",
+      "emotions": {
+        "amusement": 0.7,
+        "surprise": 0.25,
+        "excitement": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_context": "informal",
+      "laughter_intensity": "mild",
+      "emotions": {
+        "amusement": 0.9,
+        "surprise": 0.08,
+        "playfulness": 0.02
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_context": "informal",
+      "laughter_intensity": "extreme",
+      "emotions": {
+        "amusement": 0.8,
+        "excitement": 0.15,
+        "playfulness": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_context": "formal",
+      "laughter_intensity": "mild",
+      "emotions": {
+        "amusement": 0.6,
+        "surprise": 0.3,
+        "awkwardness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_context": "formal",
+      "laughter_intensity": "extreme",
+      "emotions": {
+        "amusement": 0.5,
+        "surprise": 0.35,
+        "excitement": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_context": "informal",
+      "laughter_intensity": "mild",
+      "emotions": {
+        "amusement": 0.8,
+        "playfulness": 0.15,
+        "awkwardness": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_context": "informal",
+      "laughter_intensity": "extreme",
+      "emotions": {
+        "amusement": 0.7,
+        "excitement": 0.2,
+        "playfulness": 0.1
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "goal_importance",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "goal_frequency",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "self_confidence",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "goal_importance": "low",
+      "goal_frequency": "first_time",
+      "self_confidence": "low",
+      "emotions": {
+        "frustration": 0.7,
+        "disappointment": 0.2,
+        "resignation": 0.1
+      }
+    },
+    {
+      "goal_importance": "low",
+      "goal_frequency": "first_time",
+      "self_confidence": "high",
+      "emotions": {
+        "frustration": 0.4,
+        "disappointment": 0.5,
+        "resignation": 0.1
+      }
+    },
+    {
+      "goal_importance": "low",
+      "goal_frequency": "repeated",
+      "self_confidence": "low",
+      "emotions": {
+        "frustration": 0.6,
+        "anger": 0.3,
+        "resignation": 0.1
+      }
+    },
+    {
+      "goal_importance": "low",
+      "goal_frequency": "repeated",
+      "self_confidence": "high",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.3,
+        "disappointment": 0.2
+      }
+    },
+    {
+      "goal_importance": "high",
+      "goal_frequency": "first_time",
+      "self_confidence": "low",
+      "emotions": {
+        "frustration": 0.5,
+        "disappointment": 0.3,
+        "desperation": 0.2
+      }
+    },
+    {
+      "goal_importance": "high",
+      "goal_frequency": "first_time",
+      "self_confidence": "high",
+      "emotions": {
+        "frustration": 0.3,
+        "disappointment": 0.4,
+        "motivation": 0.3
+      }
+    },
+    {
+      "goal_importance": "high",
+      "goal_frequency": "repeated",
+      "self_confidence": "low",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.2,
+        "desperation": 0.2
+      }
+    },
+    {
+      "goal_importance": "high",
+      "goal_frequency": "repeated",
+      "self_confidence": "high",
+      "emotions": {
+        "anger": 0.4,
+        "frustration": 0.3,
+        "motivation": 0.3
+      }
+    }
+  ]
+}

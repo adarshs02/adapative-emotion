@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "apology_from_accuser",
+      "values": [
+        "given",
+        "not_given"
+      ]
+    },
+    {
+      "name": "support_from_others",
+      "values": [
+        "present",
+        "absent"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "apology_from_accuser": "given",
+      "support_from_others": "present",
+      "emotions": {
+        "anger": 0.0,
+        "frustration": 0.8,
+        "sadness": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_from_accuser": "given",
+      "support_from_others": "absent",
+      "emotions": {
+        "anger": 0.0,
+        "frustration": 0.7,
+        "sadness": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_from_accuser": "not_given",
+      "support_from_others": "present",
+      "emotions": {
+        "anger": 0.4,
+        "frustration": 0.5,
+        "sadness": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_from_accuser": "not_given",
+      "support_from_others": "absent",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.3,
+        "sadness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_from_accuser": "given",
+      "support_from_others": "present",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.2,
+        "sadness": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_from_accuser": "given",
+      "support_from_others": "absent",
+      "emotions": {
+        "anger": 0.9,
+        "frustration": 0.1,
+        "sadness": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_from_accuser": "not_given",
+      "support_from_others": "present",
+      "emotions": {
+        "anger": 0.9,
+        "frustration": 0.1,
+        "sadness": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_from_accuser": "not_given",
+      "support_from_others": "absent",
+      "emotions": {
+        "anger": 0.95,
+        "frustration": 0.05,
+        "sadness": 0.0
+      }
+    }
+  ]
+}

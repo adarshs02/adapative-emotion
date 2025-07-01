@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "message_type",
+      "values": [
+        "informal",
+        "formal"
+      ]
+    },
+    {
+      "name": "relationship",
+      "values": [
+        "close",
+        "acquaintance"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "message_type": "informal",
+      "relationship": "close",
+      "emotions": {
+        "frustration": 0.7,
+        "disappointment": 0.2,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "message_type": "informal",
+      "relationship": "acquaintance",
+      "emotions": {
+        "frustration": 0.5,
+        "disappointment": 0.4,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "message_type": "formal",
+      "relationship": "close",
+      "emotions": {
+        "disappointment": 0.6,
+        "frustration": 0.3,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "message_type": "formal",
+      "relationship": "acquaintance",
+      "emotions": {
+        "disappointment": 0.5,
+        "frustration": 0.3,
+        "indifference": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "message_type": "informal",
+      "relationship": "close",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.3,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "message_type": "informal",
+      "relationship": "acquaintance",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.4,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "message_type": "formal",
+      "relationship": "close",
+      "emotions": {
+        "anger": 0.4,
+        "frustration": 0.5,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "message_type": "formal",
+      "relationship": "acquaintance",
+      "emotions": {
+        "anger": 0.3,
+        "frustration": 0.5,
+        "indifference": 0.2
+      }
+    }
+  ]
+}

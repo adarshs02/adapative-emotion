@@ -1,0 +1,117 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "offender_intent",
+      "values": [
+        "malicious",
+        "accidental"
+      ]
+    },
+    {
+      "name": "victim_involvement",
+      "values": [
+        "direct",
+        "indirect"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "offender_intent": "malicious",
+      "victim_involvement": "direct",
+      "emotions": {
+        "anger": 0.0,
+        "fear": 0.0,
+        "guilt": 0.5,
+        "shame": 0.5
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "offender_intent": "malicious",
+      "victim_involvement": "indirect",
+      "emotions": {
+        "anger": 0.0,
+        "fear": 0.0,
+        "guilt": 0.0,
+        "shame": 0.0,
+        "helplessness": 0.5,
+        "sadness": 0.5
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "offender_intent": "accidental",
+      "victim_involvement": "direct",
+      "emotions": {
+        "anger": 0.0,
+        "fear": 0.0,
+        "guilt": 0.5,
+        "shame": 0.5
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "offender_intent": "accidental",
+      "victim_involvement": "indirect",
+      "emotions": {
+        "anger": 0.0,
+        "fear": 0.0,
+        "helplessness": 0.5,
+        "sadness": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offender_intent": "malicious",
+      "victim_involvement": "direct",
+      "emotions": {
+        "anger": 0.5,
+        "fear": 0.0,
+        "guilt": 0.0,
+        "shame": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offender_intent": "malicious",
+      "victim_involvement": "indirect",
+      "emotions": {
+        "anger": 0.5,
+        "fear": 0.0,
+        "helplessness": 0.0,
+        "sadness": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offender_intent": "accidental",
+      "victim_involvement": "direct",
+      "emotions": {
+        "anger": 0.0,
+        "fear": 0.0,
+        "guilt": 0.5,
+        "shame": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offender_intent": "accidental",
+      "victim_involvement": "indirect",
+      "emotions": {
+        "anger": 0.0,
+        "fear": 0.0,
+        "helplessness": 0.5,
+        "sadness": 0.5
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "colleague_support",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "communication_style",
+      "values": [
+        "direct",
+        "indirect"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "colleague_support": "low",
+      "communication_style": "direct",
+      "emotions": {
+        "frustration": 0.6,
+        "sadness": 0.3,
+        "resentment": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "colleague_support": "low",
+      "communication_style": "indirect",
+      "emotions": {
+        "frustration": 0.5,
+        "sadness": 0.4,
+        "resentment": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "colleague_support": "high",
+      "communication_style": "direct",
+      "emotions": {
+        "frustration": 0.2,
+        "sadness": 0.6,
+        "resentment": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "colleague_support": "high",
+      "communication_style": "indirect",
+      "emotions": {
+        "frustration": 0.1,
+        "sadness": 0.7,
+        "resentment": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "colleague_support": "low",
+      "communication_style": "direct",
+      "emotions": {
+        "frustration": 0.8,
+        "sadness": 0.1,
+        "resentment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "colleague_support": "low",
+      "communication_style": "indirect",
+      "emotions": {
+        "frustration": 0.7,
+        "sadness": 0.2,
+        "resentment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "colleague_support": "high",
+      "communication_style": "direct",
+      "emotions": {
+        "frustration": 0.4,
+        "sadness": 0.3,
+        "resentment": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "colleague_support": "high",
+      "communication_style": "indirect",
+      "emotions": {
+        "frustration": 0.3,
+        "sadness": 0.4,
+        "resentment": 0.3
+      }
+    }
+  ]
+}

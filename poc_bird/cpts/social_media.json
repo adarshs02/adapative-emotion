@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "friendship_depth",
+      "values": [
+        "casual",
+        "close"
+      ]
+    },
+    {
+      "name": "post_type",
+      "values": [
+        "positive",
+        "negative"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "casual",
+      "post_type": "positive",
+      "emotions": {
+        "happiness": 0.8,
+        "surprise": 0.15,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "casual",
+      "post_type": "negative",
+      "emotions": {
+        "happiness": 0.2,
+        "surprise": 0.6,
+        "indifference": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "close",
+      "post_type": "positive",
+      "emotions": {
+        "happiness": 0.9,
+        "surprise": 0.05,
+        "gratitude": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "close",
+      "post_type": "negative",
+      "emotions": {
+        "happiness": 0.1,
+        "surprise": 0.7,
+        "concern": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "casual",
+      "post_type": "positive",
+      "emotions": {
+        "happiness": 0.4,
+        "surprise": 0.3,
+        "irritation": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "casual",
+      "post_type": "negative",
+      "emotions": {
+        "happiness": 0.1,
+        "surprise": 0.4,
+        "anger": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "close",
+      "post_type": "positive",
+      "emotions": {
+        "happiness": 0.7,
+        "gratitude": 0.2,
+        "surprise": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "close",
+      "post_type": "negative",
+      "emotions": {
+        "happiness": 0.05,
+        "concern": 0.6,
+        "anger": 0.35
+      }
+    }
+  ]
+}

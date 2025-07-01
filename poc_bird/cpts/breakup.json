@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "ex_partners_support",
+      "values": [
+        "available",
+        "unavailable"
+      ]
+    },
+    {
+      "name": "personal_resilience",
+      "values": [
+        "high",
+        "low"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "ex_partners_support": "available",
+      "personal_resilience": "high",
+      "emotions": {
+        "sadness": 0.7,
+        "anger": 0.2,
+        "guilt": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "ex_partners_support": "available",
+      "personal_resilience": "low",
+      "emotions": {
+        "sadness": 0.6,
+        "guilt": 0.3,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "ex_partners_support": "unavailable",
+      "personal_resilience": "high",
+      "emotions": {
+        "anger": 0.6,
+        "sadness": 0.3,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "ex_partners_support": "unavailable",
+      "personal_resilience": "low",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "ex_partners_support": "available",
+      "personal_resilience": "high",
+      "emotions": {
+        "anger": 0.8,
+        "sadness": 0.1,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "ex_partners_support": "available",
+      "personal_resilience": "low",
+      "emotions": {
+        "anger": 0.9,
+        "anxiety": 0.08,
+        "sadness": 0.02
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "ex_partners_support": "unavailable",
+      "personal_resilience": "high",
+      "emotions": {
+        "anger": 0.9,
+        "frustration": 0.08,
+        "sadness": 0.02
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "ex_partners_support": "unavailable",
+      "personal_resilience": "low",
+      "emotions": {
+        "anger": 0.95,
+        "frustration": 0.04,
+        "anxiety": 0.01
+      }
+    }
+  ]
+}

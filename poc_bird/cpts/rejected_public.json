@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "audience_size",
+      "values": [
+        "small",
+        "large"
+      ]
+    },
+    {
+      "name": "self_confidence",
+      "values": [
+        "high",
+        "low"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "audience_size": "small",
+      "self_confidence": "high",
+      "emotions": {
+        "shame": 0.8,
+        "embarrassment": 0.2,
+        "anxiety": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "audience_size": "small",
+      "self_confidence": "low",
+      "emotions": {
+        "shame": 0.7,
+        "embarrassment": 0.2,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "audience_size": "large",
+      "self_confidence": "high",
+      "emotions": {
+        "shame": 0.6,
+        "embarrassment": 0.3,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "audience_size": "large",
+      "self_confidence": "low",
+      "emotions": {
+        "shame": 0.5,
+        "embarrassment": 0.4,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "audience_size": "small",
+      "self_confidence": "high",
+      "emotions": {
+        "anger": 0.4,
+        "frustration": 0.3,
+        "disgust": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "audience_size": "small",
+      "self_confidence": "low",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "disgust": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "audience_size": "large",
+      "self_confidence": "high",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.2,
+        "disgust": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "audience_size": "large",
+      "self_confidence": "low",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.1,
+        "disgust": 0.1
+      }
+    }
+  ]
+}

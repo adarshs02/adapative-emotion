@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "news_type",
+      "values": [
+        "good",
+        "bad"
+      ]
+    },
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "personal_stakes",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "news_type": "good",
+      "offence_history": "first_time",
+      "personal_stakes": "low",
+      "emotions": {
+        "excitement": 0.7,
+        "relief": 0.2,
+        "boredom": 0.1
+      }
+    },
+    {
+      "news_type": "good",
+      "offence_history": "first_time",
+      "personal_stakes": "high",
+      "emotions": {
+        "excitement": 0.8,
+        "relief": 0.15,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "news_type": "good",
+      "offence_history": "repeated",
+      "personal_stakes": "low",
+      "emotions": {
+        "relief": 0.6,
+        "excitement": 0.3,
+        "boredom": 0.1
+      }
+    },
+    {
+      "news_type": "good",
+      "offence_history": "repeated",
+      "personal_stakes": "high",
+      "emotions": {
+        "relief": 0.7,
+        "excitement": 0.25,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "news_type": "bad",
+      "offence_history": "first_time",
+      "personal_stakes": "low",
+      "emotions": {
+        "anxiety": 0.7,
+        "sadness": 0.25,
+        "anger": 0.05
+      }
+    },
+    {
+      "news_type": "bad",
+      "offence_history": "first_time",
+      "personal_stakes": "high",
+      "emotions": {
+        "anxiety": 0.8,
+        "sadness": 0.15,
+        "anger": 0.05
+      }
+    },
+    {
+      "news_type": "bad",
+      "offence_history": "repeated",
+      "personal_stakes": "low",
+      "emotions": {
+        "anger": 0.6,
+        "sadness": 0.3,
+        "boredom": 0.1
+      }
+    },
+    {
+      "news_type": "bad",
+      "offence_history": "repeated",
+      "personal_stakes": "high",
+      "emotions": {
+        "anger": 0.7,
+        "sadness": 0.25,
+        "anxiety": 0.05
+      }
+    }
+  ]
+}

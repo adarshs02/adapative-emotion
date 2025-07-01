@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "driver_intent",
+      "values": [
+        "accidental",
+        "intentional"
+      ]
+    },
+    {
+      "name": "traffic_congestion",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "driver_intent": "accidental",
+      "traffic_congestion": "low",
+      "emotions": {
+        "anger": 0.2,
+        "frustration": 0.6,
+        "relief": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driver_intent": "accidental",
+      "traffic_congestion": "high",
+      "emotions": {
+        "anger": 0.4,
+        "frustration": 0.4,
+        "relief": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driver_intent": "intentional",
+      "traffic_congestion": "low",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.1,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driver_intent": "intentional",
+      "traffic_congestion": "high",
+      "emotions": {
+        "anger": 0.9,
+        "frustration": 0.05,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driver_intent": "accidental",
+      "traffic_congestion": "low",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.3,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driver_intent": "accidental",
+      "traffic_congestion": "high",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driver_intent": "intentional",
+      "traffic_congestion": "low",
+      "emotions": {
+        "anger": 0.95,
+        "frustration": 0.04,
+        "relief": 0.01
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driver_intent": "intentional",
+      "traffic_congestion": "high",
+      "emotions": {
+        "anger": 0.98,
+        "frustration": 0.01,
+        "relief": 0.01
+      }
+    }
+  ]
+}

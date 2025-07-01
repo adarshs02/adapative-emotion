@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "familiarity_with_area",
+      "values": [
+        "familiar",
+        "unfamiliar"
+      ]
+    },
+    {
+      "name": "previous_experience_with_getting_lost",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "time_of_day",
+      "values": [
+        "day",
+        "night"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "familiarity_with_area": "familiar",
+      "previous_experience_with_getting_lost": "first_time",
+      "time_of_day": "day",
+      "emotions": {
+        "calm": 0.7,
+        "frustration": 0.2,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "familiarity_with_area": "familiar",
+      "previous_experience_with_getting_lost": "first_time",
+      "time_of_day": "night",
+      "emotions": {
+        "calm": 0.4,
+        "frustration": 0.3,
+        "anxiety": 0.3
+      }
+    },
+    {
+      "familiarity_with_area": "familiar",
+      "previous_experience_with_getting_lost": "repeated",
+      "time_of_day": "day",
+      "emotions": {
+        "calm": 0.2,
+        "frustration": 0.5,
+        "anxiety": 0.3
+      }
+    },
+    {
+      "familiarity_with_area": "familiar",
+      "previous_experience_with_getting_lost": "repeated",
+      "time_of_day": "night",
+      "emotions": {
+        "calm": 0.1,
+        "frustration": 0.6,
+        "anxiety": 0.3
+      }
+    },
+    {
+      "familiarity_with_area": "unfamiliar",
+      "previous_experience_with_getting_lost": "first_time",
+      "time_of_day": "day",
+      "emotions": {
+        "anxiety": 0.8,
+        "frustration": 0.2,
+        "calm": 0.0
+      }
+    },
+    {
+      "familiarity_with_area": "unfamiliar",
+      "previous_experience_with_getting_lost": "first_time",
+      "time_of_day": "night",
+      "emotions": {
+        "anxiety": 0.9,
+        "frustration": 0.1,
+        "calm": 0.0
+      }
+    },
+    {
+      "familiarity_with_area": "unfamiliar",
+      "previous_experience_with_getting_lost": "repeated",
+      "time_of_day": "day",
+      "emotions": {
+        "anxiety": 0.6,
+        "frustration": 0.3,
+        "calm": 0.1
+      }
+    },
+    {
+      "familiarity_with_area": "unfamiliar",
+      "previous_experience_with_getting_lost": "repeated",
+      "time_of_day": "night",
+      "emotions": {
+        "anxiety": 0.7,
+        "frustration": 0.2,
+        "calm": 0.1
+      }
+    }
+  ]
+}

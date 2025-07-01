@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "social_group_size",
+      "values": [
+        "small",
+        "large"
+      ]
+    },
+    {
+      "name": "personal_stakes",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "social_group_size": "small",
+      "personal_stakes": "low",
+      "emotions": {
+        "anxiety": 0.7,
+        "excitement": 0.2,
+        "apathy": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_group_size": "small",
+      "personal_stakes": "high",
+      "emotions": {
+        "anxiety": 0.6,
+        "excitement": 0.3,
+        "apathy": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_group_size": "large",
+      "personal_stakes": "low",
+      "emotions": {
+        "anxiety": 0.4,
+        "excitement": 0.3,
+        "apathy": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_group_size": "large",
+      "personal_stakes": "high",
+      "emotions": {
+        "anxiety": 0.5,
+        "excitement": 0.2,
+        "apathy": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_group_size": "small",
+      "personal_stakes": "low",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.3,
+        "apathy": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_group_size": "small",
+      "personal_stakes": "high",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.2,
+        "apathy": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_group_size": "large",
+      "personal_stakes": "low",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "apathy": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_group_size": "large",
+      "personal_stakes": "high",
+      "emotions": {
+        "anger": 0.9,
+        "frustration": 0.1,
+        "apathy": 0.0
+      }
+    }
+  ]
+}

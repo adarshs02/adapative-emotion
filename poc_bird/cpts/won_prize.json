@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "winning_type",
+      "values": [
+        "unexpected",
+        "expected"
+      ]
+    },
+    {
+      "name": "previous_wins",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "personal_importance",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "winning_type": "unexpected",
+      "previous_wins": "first_time",
+      "personal_importance": "low",
+      "emotions": {
+        "excitement": 0.7,
+        "relief": 0.2,
+        "boredom": 0.1
+      }
+    },
+    {
+      "winning_type": "unexpected",
+      "previous_wins": "first_time",
+      "personal_importance": "high",
+      "emotions": {
+        "excitement": 0.8,
+        "relief": 0.15,
+        "gratitude": 0.05
+      }
+    },
+    {
+      "winning_type": "unexpected",
+      "previous_wins": "repeated",
+      "personal_importance": "low",
+      "emotions": {
+        "excitement": 0.6,
+        "relief": 0.3,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "winning_type": "unexpected",
+      "previous_wins": "repeated",
+      "personal_importance": "high",
+      "emotions": {
+        "excitement": 0.7,
+        "gratitude": 0.25,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "winning_type": "expected",
+      "previous_wins": "first_time",
+      "personal_importance": "low",
+      "emotions": {
+        "relief": 0.6,
+        "excitement": 0.3,
+        "boredom": 0.1
+      }
+    },
+    {
+      "winning_type": "expected",
+      "previous_wins": "first_time",
+      "personal_importance": "high",
+      "emotions": {
+        "relief": 0.7,
+        "gratitude": 0.2,
+        "excitement": 0.1
+      }
+    },
+    {
+      "winning_type": "expected",
+      "previous_wins": "repeated",
+      "personal_importance": "low",
+      "emotions": {
+        "relief": 0.5,
+        "disappointment": 0.35,
+        "boredom": 0.15
+      }
+    },
+    {
+      "winning_type": "expected",
+      "previous_wins": "repeated",
+      "personal_importance": "high",
+      "emotions": {
+        "relief": 0.6,
+        "gratitude": 0.25,
+        "disappointment": 0.15
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "first_time",
+      "values": [
+        "yes",
+        "no"
+      ]
+    },
+    {
+      "name": "job_type",
+      "values": [
+        "new",
+        "familiar"
+      ]
+    },
+    {
+      "name": "preparation",
+      "values": [
+        "good",
+        "poor"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "first_time": "yes",
+      "job_type": "new",
+      "preparation": "good",
+      "emotions": {
+        "nervousness": 0.7,
+        "excitement": 0.25,
+        "confidence": 0.05
+      }
+    },
+    {
+      "first_time": "yes",
+      "job_type": "new",
+      "preparation": "poor",
+      "emotions": {
+        "nervousness": 0.9,
+        "excitement": 0.05,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "first_time": "yes",
+      "job_type": "familiar",
+      "preparation": "good",
+      "emotions": {
+        "nervousness": 0.2,
+        "excitement": 0.6,
+        "confidence": 0.2
+      }
+    },
+    {
+      "first_time": "yes",
+      "job_type": "familiar",
+      "preparation": "poor",
+      "emotions": {
+        "nervousness": 0.5,
+        "excitement": 0.3,
+        "anxiety": 0.2
+      }
+    },
+    {
+      "first_time": "no",
+      "job_type": "new",
+      "preparation": "good",
+      "emotions": {
+        "nervousness": 0.1,
+        "excitement": 0.8,
+        "confidence": 0.1
+      }
+    },
+    {
+      "first_time": "no",
+      "job_type": "new",
+      "preparation": "poor",
+      "emotions": {
+        "nervousness": 0.8,
+        "excitement": 0.1,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "first_time": "no",
+      "job_type": "familiar",
+      "preparation": "good",
+      "emotions": {
+        "nervousness": 0.05,
+        "excitement": 0.9,
+        "confidence": 0.05
+      }
+    },
+    {
+      "first_time": "no",
+      "job_type": "familiar",
+      "preparation": "poor",
+      "emotions": {
+        "nervousness": 0.3,
+        "excitement": 0.4,
+        "anxiety": 0.3
+      }
+    }
+  ]
+}

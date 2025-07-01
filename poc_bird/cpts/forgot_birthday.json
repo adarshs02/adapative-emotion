@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "friendship_depth",
+      "values": [
+        "shallow",
+        "deep"
+      ]
+    },
+    {
+      "name": "apology_status",
+      "values": [
+        "given",
+        "not_given"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "shallow",
+      "apology_status": "given",
+      "emotions": {
+        "guilt": 0.8,
+        "relief": 0.15,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "shallow",
+      "apology_status": "not_given",
+      "emotions": {
+        "guilt": 0.9,
+        "relief": 0.05,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "deep",
+      "apology_status": "given",
+      "emotions": {
+        "guilt": 0.4,
+        "relief": 0.5,
+        "remorse": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "deep",
+      "apology_status": "not_given",
+      "emotions": {
+        "guilt": 0.7,
+        "relief": 0.2,
+        "remorse": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "shallow",
+      "apology_status": "given",
+      "emotions": {
+        "guilt": 0.6,
+        "anger": 0.3,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "shallow",
+      "apology_status": "not_given",
+      "emotions": {
+        "guilt": 0.8,
+        "anger": 0.15,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "deep",
+      "apology_status": "given",
+      "emotions": {
+        "guilt": 0.3,
+        "anger": 0.4,
+        "remorse": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "deep",
+      "apology_status": "not_given",
+      "emotions": {
+        "guilt": 0.7,
+        "anger": 0.2,
+        "remorse": 0.1
+      }
+    }
+  ]
+}

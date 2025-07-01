@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "apartment_condition",
+      "values": [
+        "good",
+        "bad"
+      ]
+    },
+    {
+      "name": "relationship_with_landlord",
+      "values": [
+        "good",
+        "bad"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "apartment_condition": "good",
+      "relationship_with_landlord": "good",
+      "emotions": {
+        "nostalgia": 0.7,
+        "relief": 0.2,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apartment_condition": "good",
+      "relationship_with_landlord": "bad",
+      "emotions": {
+        "relief": 0.6,
+        "frustration": 0.3,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apartment_condition": "bad",
+      "relationship_with_landlord": "good",
+      "emotions": {
+        "nostalgia": 0.5,
+        "frustration": 0.4,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apartment_condition": "bad",
+      "relationship_with_landlord": "bad",
+      "emotions": {
+        "frustration": 0.7,
+        "disappointment": 0.2,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apartment_condition": "good",
+      "relationship_with_landlord": "good",
+      "emotions": {
+        "frustration": 0.4,
+        "relief": 0.3,
+        "bitterness": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apartment_condition": "good",
+      "relationship_with_landlord": "bad",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.3,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apartment_condition": "bad",
+      "relationship_with_landlord": "good",
+      "emotions": {
+        "bitterness": 0.6,
+        "frustration": 0.3,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apartment_condition": "bad",
+      "relationship_with_landlord": "bad",
+      "emotions": {
+        "anger": 0.7,
+        "disappointment": 0.2,
+        "frustration": 0.1
+      }
+    }
+  ]
+}

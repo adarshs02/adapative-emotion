@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "relationship",
+      "values": [
+        "close",
+        "distant"
+      ]
+    },
+    {
+      "name": "urgency",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "relationship": "close",
+      "urgency": "low",
+      "emotions": {
+        "shame": 0.7,
+        "relief": 0.3,
+        "frustration": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship": "close",
+      "urgency": "high",
+      "emotions": {
+        "shame": 0.6,
+        "relief": 0.3,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship": "distant",
+      "urgency": "low",
+      "emotions": {
+        "relief": 0.8,
+        "shame": 0.2,
+        "frustration": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship": "distant",
+      "urgency": "high",
+      "emotions": {
+        "anxiety": 0.5,
+        "relief": 0.4,
+        "shame": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship": "close",
+      "urgency": "low",
+      "emotions": {
+        "frustration": 0.6,
+        "shame": 0.3,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship": "close",
+      "urgency": "high",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "shame": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship": "distant",
+      "urgency": "low",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.1,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship": "distant",
+      "urgency": "high",
+      "emotions": {
+        "anger": 0.9,
+        "frustration": 0.08,
+        "shame": 0.02
+      }
+    }
+  ]
+}

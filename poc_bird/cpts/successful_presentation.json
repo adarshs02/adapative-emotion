@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "audience_size",
+      "values": [
+        "small",
+        "large"
+      ]
+    },
+    {
+      "name": "speaker_experience",
+      "values": [
+        "inexperienced",
+        "experienced"
+      ]
+    },
+    {
+      "name": "presentation_quality",
+      "values": [
+        "poor",
+        "good"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "audience_size": "small",
+      "speaker_experience": "inexperienced",
+      "presentation_quality": "poor",
+      "emotions": {
+        "relief": 0.8,
+        "frustration": 0.2,
+        "disgust": 0.0
+      }
+    },
+    {
+      "audience_size": "small",
+      "speaker_experience": "inexperienced",
+      "presentation_quality": "good",
+      "emotions": {
+        "relief": 0.7,
+        "frustration": 0.2,
+        "excitement": 0.1
+      }
+    },
+    {
+      "audience_size": "small",
+      "speaker_experience": "experienced",
+      "presentation_quality": "poor",
+      "emotions": {
+        "frustration": 0.6,
+        "disgust": 0.3,
+        "anger": 0.1
+      }
+    },
+    {
+      "audience_size": "small",
+      "speaker_experience": "experienced",
+      "presentation_quality": "good",
+      "emotions": {
+        "excitement": 0.8,
+        "relief": 0.2,
+        "satisfaction": 0.0
+      }
+    },
+    {
+      "audience_size": "large",
+      "speaker_experience": "inexperienced",
+      "presentation_quality": "poor",
+      "emotions": {
+        "disgust": 0.8,
+        "frustration": 0.2,
+        "anger": 0.0
+      }
+    },
+    {
+      "audience_size": "large",
+      "speaker_experience": "inexperienced",
+      "presentation_quality": "good",
+      "emotions": {
+        "relief": 0.6,
+        "excitement": 0.3,
+        "satisfaction": 0.1
+      }
+    },
+    {
+      "audience_size": "large",
+      "speaker_experience": "experienced",
+      "presentation_quality": "poor",
+      "emotions": {
+        "anger": 0.7,
+        "disgust": 0.2,
+        "frustration": 0.1
+      }
+    },
+    {
+      "audience_size": "large",
+      "speaker_experience": "experienced",
+      "presentation_quality": "good",
+      "emotions": {
+        "satisfaction": 0.8,
+        "excitement": 0.2,
+        "relief": 0.0
+      }
+    }
+  ]
+}

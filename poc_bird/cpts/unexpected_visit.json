@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "rent_payment_history",
+      "values": [
+        "on_time",
+        "late"
+      ]
+    },
+    {
+      "name": "landlord_relationship",
+      "values": [
+        "friendly",
+        "strict"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "rent_payment_history": "on_time",
+      "landlord_relationship": "friendly",
+      "emotions": {
+        "relieved": 0.8,
+        "anxious": 0.15,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "rent_payment_history": "on_time",
+      "landlord_relationship": "strict",
+      "emotions": {
+        "relieved": 0.6,
+        "anxious": 0.3,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "rent_payment_history": "late",
+      "landlord_relationship": "friendly",
+      "emotions": {
+        "anxious": 0.7,
+        "relieved": 0.25,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "rent_payment_history": "late",
+      "landlord_relationship": "strict",
+      "emotions": {
+        "angry": 0.55,
+        "anxious": 0.35,
+        "relieved": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "rent_payment_history": "on_time",
+      "landlord_relationship": "friendly",
+      "emotions": {
+        "angry": 0.4,
+        "anxious": 0.45,
+        "relieved": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "rent_payment_history": "on_time",
+      "landlord_relationship": "strict",
+      "emotions": {
+        "angry": 0.7,
+        "anxious": 0.25,
+        "relieved": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "rent_payment_history": "late",
+      "landlord_relationship": "friendly",
+      "emotions": {
+        "angry": 0.8,
+        "anxious": 0.15,
+        "relieved": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "rent_payment_history": "late",
+      "landlord_relationship": "strict",
+      "emotions": {
+        "angry": 0.9,
+        "anxious": 0.1,
+        "relieved": 0.01
+      }
+    }
+  ]
+}

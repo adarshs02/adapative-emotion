@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "notice_period",
+      "values": [
+        "short",
+        "long"
+      ]
+    },
+    {
+      "name": "relocation_type",
+      "values": [
+        "forced",
+        "voluntary"
+      ]
+    },
+    {
+      "name": "previous_experience",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "notice_period": "short",
+      "relocation_type": "forced",
+      "previous_experience": "first_time",
+      "emotions": {
+        "anxiety": 0.7,
+        "frustration": 0.2,
+        "resignation": 0.1
+      }
+    },
+    {
+      "notice_period": "short",
+      "relocation_type": "forced",
+      "previous_experience": "repeated",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.3,
+        "resignation": 0.1
+      }
+    },
+    {
+      "notice_period": "short",
+      "relocation_type": "voluntary",
+      "previous_experience": "first_time",
+      "emotions": {
+        "excitement": 0.6,
+        "anxiety": 0.3,
+        "curiosity": 0.1
+      }
+    },
+    {
+      "notice_period": "short",
+      "relocation_type": "voluntary",
+      "previous_experience": "repeated",
+      "emotions": {
+        "excitement": 0.4,
+        "anxiety": 0.4,
+        "resignation": 0.2
+      }
+    },
+    {
+      "notice_period": "long",
+      "relocation_type": "forced",
+      "previous_experience": "first_time",
+      "emotions": {
+        "anxiety": 0.8,
+        "fear": 0.2,
+        "resignation": 0.0
+      }
+    },
+    {
+      "notice_period": "long",
+      "relocation_type": "forced",
+      "previous_experience": "repeated",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "resignation": 0.1
+      }
+    },
+    {
+      "notice_period": "long",
+      "relocation_type": "voluntary",
+      "previous_experience": "first_time",
+      "emotions": {
+        "excitement": 0.5,
+        "anxiety": 0.3,
+        "curiosity": 0.2
+      }
+    },
+    {
+      "notice_period": "long",
+      "relocation_type": "voluntary",
+      "previous_experience": "repeated",
+      "emotions": {
+        "excitement": 0.3,
+        "anxiety": 0.4,
+        "resignation": 0.3
+      }
+    }
+  ]
+}

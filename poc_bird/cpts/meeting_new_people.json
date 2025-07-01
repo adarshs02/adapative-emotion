@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "social_context",
+      "values": [
+        "formal",
+        "informal"
+      ]
+    },
+    {
+      "name": "trust_level",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "social_context": "formal",
+      "trust_level": "low",
+      "emotions": {
+        "curiosity": 0.7,
+        "caution": 0.3,
+        "excitement": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_context": "formal",
+      "trust_level": "high",
+      "emotions": {
+        "curiosity": 0.6,
+        "caution": 0.3,
+        "excitement": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_context": "informal",
+      "trust_level": "low",
+      "emotions": {
+        "curiosity": 0.8,
+        "caution": 0.2,
+        "excitement": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_context": "informal",
+      "trust_level": "high",
+      "emotions": {
+        "curiosity": 0.7,
+        "caution": 0.2,
+        "excitement": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_context": "formal",
+      "trust_level": "low",
+      "emotions": {
+        "curiosity": 0.2,
+        "caution": 0.7,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_context": "formal",
+      "trust_level": "high",
+      "emotions": {
+        "curiosity": 0.1,
+        "caution": 0.6,
+        "anger": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_context": "informal",
+      "trust_level": "low",
+      "emotions": {
+        "curiosity": 0.1,
+        "caution": 0.8,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_context": "informal",
+      "trust_level": "high",
+      "emotions": {
+        "curiosity": 0.0,
+        "caution": 0.7,
+        "anger": 0.3
+      }
+    }
+  ]
+}

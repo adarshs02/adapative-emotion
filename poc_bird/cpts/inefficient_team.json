@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "team_member_involved",
+      "values": [
+        "leader",
+        "non_leader"
+      ]
+    },
+    {
+      "name": "team_size",
+      "values": [
+        "small",
+        "large"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "team_member_involved": "leader",
+      "team_size": "small",
+      "emotions": {
+        "frustration": 0.6,
+        "disappointment": 0.3,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "team_member_involved": "leader",
+      "team_size": "large",
+      "emotions": {
+        "frustration": 0.5,
+        "disappointment": 0.4,
+        "surprise": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "team_member_involved": "non_leader",
+      "team_size": "small",
+      "emotions": {
+        "frustration": 0.7,
+        "disappointment": 0.2,
+        "confusion": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "team_member_involved": "non_leader",
+      "team_size": "large",
+      "emotions": {
+        "frustration": 0.6,
+        "disappointment": 0.3,
+        "confusion": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "team_member_involved": "leader",
+      "team_size": "small",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "team_member_involved": "leader",
+      "team_size": "large",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.1,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "team_member_involved": "non_leader",
+      "team_size": "small",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.1,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "team_member_involved": "non_leader",
+      "team_size": "large",
+      "emotions": {
+        "anger": 0.9,
+        "frustration": 0.05,
+        "disappointment": 0.05
+      }
+    }
+  ]
+}

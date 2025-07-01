@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "empathy_level",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "self_importance",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "empathy_level": "low",
+      "self_importance": "low",
+      "emotions": {
+        "guilt": 0.8,
+        "shame": 0.1,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "empathy_level": "low",
+      "self_importance": "high",
+      "emotions": {
+        "guilt": 0.6,
+        "shame": 0.3,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "empathy_level": "high",
+      "self_importance": "low",
+      "emotions": {
+        "guilt": 0.4,
+        "shame": 0.3,
+        "remorse": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "empathy_level": "high",
+      "self_importance": "high",
+      "emotions": {
+        "guilt": 0.2,
+        "shame": 0.2,
+        "remorse": 0.6
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "empathy_level": "low",
+      "self_importance": "low",
+      "emotions": {
+        "anger": 0.7,
+        "guilt": 0.2,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "empathy_level": "low",
+      "self_importance": "high",
+      "emotions": {
+        "anger": 0.5,
+        "guilt": 0.3,
+        "indifference": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "empathy_level": "high",
+      "self_importance": "low",
+      "emotions": {
+        "anger": 0.3,
+        "guilt": 0.4,
+        "remorse": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "empathy_level": "high",
+      "self_importance": "high",
+      "emotions": {
+        "anger": 0.1,
+        "guilt": 0.2,
+        "remorse": 0.7
+      }
+    }
+  ]
+}

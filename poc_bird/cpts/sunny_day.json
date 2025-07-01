@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "sunshine_intensity",
+      "values": [
+        "weak",
+        "strong"
+      ]
+    },
+    {
+      "name": "morning_routine",
+      "values": [
+        "chaotic",
+        "smooth"
+      ]
+    },
+    {
+      "name": "sleep_quality",
+      "values": [
+        "poor",
+        "good"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "sunshine_intensity": "weak",
+      "morning_routine": "chaotic",
+      "sleep_quality": "poor",
+      "emotions": {
+        "gratitude": 0.2,
+        "boredom": 0.6,
+        "irritation": 0.2
+      }
+    },
+    {
+      "sunshine_intensity": "weak",
+      "morning_routine": "chaotic",
+      "sleep_quality": "good",
+      "emotions": {
+        "gratitude": 0.1,
+        "boredom": 0.7,
+        "irritation": 0.2
+      }
+    },
+    {
+      "sunshine_intensity": "weak",
+      "morning_routine": "smooth",
+      "sleep_quality": "poor",
+      "emotions": {
+        "gratitude": 0.3,
+        "boredom": 0.5,
+        "irritation": 0.2
+      }
+    },
+    {
+      "sunshine_intensity": "weak",
+      "morning_routine": "smooth",
+      "sleep_quality": "good",
+      "emotions": {
+        "gratitude": 0.4,
+        "boredom": 0.4,
+        "irritation": 0.2
+      }
+    },
+    {
+      "sunshine_intensity": "strong",
+      "morning_routine": "chaotic",
+      "sleep_quality": "poor",
+      "emotions": {
+        "gratitude": 0.1,
+        "boredom": 0.4,
+        "relaxation": 0.5
+      }
+    },
+    {
+      "sunshine_intensity": "strong",
+      "morning_routine": "chaotic",
+      "sleep_quality": "good",
+      "emotions": {
+        "gratitude": 0.05,
+        "boredom": 0.7,
+        "relaxation": 0.25
+      }
+    },
+    {
+      "sunshine_intensity": "strong",
+      "morning_routine": "smooth",
+      "sleep_quality": "poor",
+      "emotions": {
+        "gratitude": 0.2,
+        "boredom": 0.3,
+        "relaxation": 0.5
+      }
+    },
+    {
+      "sunshine_intensity": "strong",
+      "morning_routine": "smooth",
+      "sleep_quality": "good",
+      "emotions": {
+        "gratitude": 0.4,
+        "boredom": 0.3,
+        "relaxation": 0.3
+      }
+    }
+  ]
+}

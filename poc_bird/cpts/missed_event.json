@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "relationship_with_promiser",
+      "values": [
+        "close",
+        "distant"
+      ]
+    },
+    {
+      "name": "importance_of_event",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "relationship_with_promiser": "close",
+      "importance_of_event": "low",
+      "emotions": {
+        "guilt": 0.8,
+        "relief": 0.15,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship_with_promiser": "close",
+      "importance_of_event": "high",
+      "emotions": {
+        "guilt": 0.7,
+        "relief": 0.25,
+        "indignation": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship_with_promiser": "distant",
+      "importance_of_event": "low",
+      "emotions": {
+        "guilt": 0.6,
+        "relief": 0.3,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship_with_promiser": "distant",
+      "importance_of_event": "high",
+      "emotions": {
+        "guilt": 0.5,
+        "indignation": 0.35,
+        "relief": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship_with_promiser": "close",
+      "importance_of_event": "low",
+      "emotions": {
+        "guilt": 0.9,
+        "relief": 0.05,
+        "frustration": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship_with_promiser": "close",
+      "importance_of_event": "high",
+      "emotions": {
+        "guilt": 0.8,
+        "indignation": 0.15,
+        "frustration": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship_with_promiser": "distant",
+      "importance_of_event": "low",
+      "emotions": {
+        "guilt": 0.8,
+        "frustration": 0.15,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship_with_promiser": "distant",
+      "importance_of_event": "high",
+      "emotions": {
+        "guilt": 0.7,
+        "indignation": 0.25,
+        "frustration": 0.05
+      }
+    }
+  ]
+}

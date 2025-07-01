@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "public_audience",
+      "values": [
+        "small",
+        "large"
+      ]
+    },
+    {
+      "name": "presentation_experience",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "importance_of_presentation",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "public_audience": "small",
+      "presentation_experience": "first_time",
+      "importance_of_presentation": "low",
+      "emotions": {
+        "nervousness": 0.7,
+        "confidence": 0.2,
+        "excitement": 0.1
+      }
+    },
+    {
+      "public_audience": "small",
+      "presentation_experience": "first_time",
+      "importance_of_presentation": "high",
+      "emotions": {
+        "nervousness": 0.6,
+        "confidence": 0.3,
+        "excitement": 0.1
+      }
+    },
+    {
+      "public_audience": "small",
+      "presentation_experience": "repeated",
+      "importance_of_presentation": "low",
+      "emotions": {
+        "nervousness": 0.4,
+        "confidence": 0.5,
+        "excitement": 0.1
+      }
+    },
+    {
+      "public_audience": "small",
+      "presentation_experience": "repeated",
+      "importance_of_presentation": "high",
+      "emotions": {
+        "nervousness": 0.3,
+        "confidence": 0.6,
+        "excitement": 0.1
+      }
+    },
+    {
+      "public_audience": "large",
+      "presentation_experience": "first_time",
+      "importance_of_presentation": "low",
+      "emotions": {
+        "nervousness": 0.8,
+        "confidence": 0.1,
+        "excitement": 0.1
+      }
+    },
+    {
+      "public_audience": "large",
+      "presentation_experience": "first_time",
+      "importance_of_presentation": "high",
+      "emotions": {
+        "nervousness": 0.7,
+        "confidence": 0.2,
+        "excitement": 0.1
+      }
+    },
+    {
+      "public_audience": "large",
+      "presentation_experience": "repeated",
+      "importance_of_presentation": "low",
+      "emotions": {
+        "nervousness": 0.6,
+        "confidence": 0.3,
+        "excitement": 0.1
+      }
+    },
+    {
+      "public_audience": "large",
+      "presentation_experience": "repeated",
+      "importance_of_presentation": "high",
+      "emotions": {
+        "nervousness": 0.5,
+        "confidence": 0.4,
+        "excitement": 0.1
+      }
+    }
+  ]
+}

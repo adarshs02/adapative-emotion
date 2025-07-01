@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "colleague_intention",
+      "values": [
+        "accidental",
+        "intentional"
+      ]
+    },
+    {
+      "name": "personal_stake",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "colleague_intention": "accidental",
+      "personal_stake": "low",
+      "emotions": {
+        "disappointment": 0.7,
+        "relief": 0.3,
+        "frustration": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "colleague_intention": "accidental",
+      "personal_stake": "high",
+      "emotions": {
+        "relief": 0.6,
+        "disappointment": 0.3,
+        "gratitude": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "colleague_intention": "intentional",
+      "personal_stake": "low",
+      "emotions": {
+        "anger": 0.6,
+        "disappointment": 0.3,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "colleague_intention": "intentional",
+      "personal_stake": "high",
+      "emotions": {
+        "anger": 0.8,
+        "disappointment": 0.2,
+        "helplessness": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "colleague_intention": "accidental",
+      "personal_stake": "low",
+      "emotions": {
+        "frustration": 0.7,
+        "disappointment": 0.2,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "colleague_intention": "accidental",
+      "personal_stake": "high",
+      "emotions": {
+        "frustration": 0.6,
+        "disappointment": 0.3,
+        "gratitude": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "colleague_intention": "intentional",
+      "personal_stake": "low",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.2,
+        "helplessness": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "colleague_intention": "intentional",
+      "personal_stake": "high",
+      "emotions": {
+        "anger": 0.9,
+        "disappointment": 0.1,
+        "helplessness": 0.0
+      }
+    }
+  ]
+}

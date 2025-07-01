@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "health_status",
+      "values": [
+        "excellent",
+        "not_excellent"
+      ]
+    },
+    {
+      "name": "doctor_reputation",
+      "values": [
+        "trustworthy",
+        "untrustworthy"
+      ]
+    },
+    {
+      "name": "previous_doctor_visits",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "health_status": "excellent",
+      "doctor_reputation": "trustworthy",
+      "previous_doctor_visits": "first_time",
+      "emotions": {
+        "relief": 0.7,
+        "gratitude": 0.2,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "health_status": "excellent",
+      "doctor_reputation": "trustworthy",
+      "previous_doctor_visits": "repeated",
+      "emotions": {
+        "relief": 0.6,
+        "gratitude": 0.3,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "health_status": "excellent",
+      "doctor_reputation": "untrustworthy",
+      "previous_doctor_visits": "first_time",
+      "emotions": {
+        "anxiety": 0.7,
+        "relief": 0.2,
+        "suspicion": 0.1
+      }
+    },
+    {
+      "health_status": "excellent",
+      "doctor_reputation": "untrustworthy",
+      "previous_doctor_visits": "repeated",
+      "emotions": {
+        "suspicion": 0.6,
+        "anxiety": 0.3,
+        "anger": 0.1
+      }
+    },
+    {
+      "health_status": "not_excellent",
+      "doctor_reputation": "trustworthy",
+      "previous_doctor_visits": "first_time",
+      "emotions": {
+        "anxiety": 0.7,
+        "concern": 0.2,
+        "fear": 0.1
+      }
+    },
+    {
+      "health_status": "not_excellent",
+      "doctor_reputation": "trustworthy",
+      "previous_doctor_visits": "repeated",
+      "emotions": {
+        "concern": 0.6,
+        "anxiety": 0.3,
+        "fear": 0.1
+      }
+    },
+    {
+      "health_status": "not_excellent",
+      "doctor_reputation": "untrustworthy",
+      "previous_doctor_visits": "first_time",
+      "emotions": {
+        "anger": 0.7,
+        "fear": 0.2,
+        "suspicion": 0.1
+      }
+    },
+    {
+      "health_status": "not_excellent",
+      "doctor_reputation": "untrustworthy",
+      "previous_doctor_visits": "repeated",
+      "emotions": {
+        "anger": 0.6,
+        "fear": 0.3,
+        "suspicion": 0.1
+      }
+    }
+  ]
+}

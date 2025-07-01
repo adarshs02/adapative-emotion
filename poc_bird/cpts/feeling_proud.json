@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "self_improvement_progress",
+      "values": [
+        "little",
+        "significant"
+      ]
+    },
+    {
+      "name": "reflection_depth",
+      "values": [
+        "superficial",
+        "deep"
+      ]
+    },
+    {
+      "name": "emotional_state",
+      "values": [
+        "negative",
+        "positive"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "self_improvement_progress": "little",
+      "reflection_depth": "superficial",
+      "emotional_state": "negative",
+      "emotions": {
+        "disappointment": 0.8,
+        "boredom": 0.2,
+        "excitement": 0.0
+      }
+    },
+    {
+      "self_improvement_progress": "little",
+      "reflection_depth": "superficial",
+      "emotional_state": "positive",
+      "emotions": {
+        "gratitude": 0.4,
+        "boredom": 0.3,
+        "excitement": 0.3
+      }
+    },
+    {
+      "self_improvement_progress": "little",
+      "reflection_depth": "deep",
+      "emotional_state": "negative",
+      "emotions": {
+        "disappointment": 0.6,
+        "boredom": 0.2,
+        "excitement": 0.2
+      }
+    },
+    {
+      "self_improvement_progress": "little",
+      "reflection_depth": "deep",
+      "emotional_state": "positive",
+      "emotions": {
+        "gratitude": 0.5,
+        "boredom": 0.3,
+        "excitement": 0.2
+      }
+    },
+    {
+      "self_improvement_progress": "significant",
+      "reflection_depth": "superficial",
+      "emotional_state": "negative",
+      "emotions": {
+        "disappointment": 0.2,
+        "boredom": 0.6,
+        "excitement": 0.2
+      }
+    },
+    {
+      "self_improvement_progress": "significant",
+      "reflection_depth": "superficial",
+      "emotional_state": "positive",
+      "emotions": {
+        "gratitude": 0.7,
+        "boredom": 0.2,
+        "excitement": 0.1
+      }
+    },
+    {
+      "self_improvement_progress": "significant",
+      "reflection_depth": "deep",
+      "emotional_state": "negative",
+      "emotions": {
+        "disappointment": 0.1,
+        "boredom": 0.4,
+        "excitement": 0.5
+      }
+    },
+    {
+      "self_improvement_progress": "significant",
+      "reflection_depth": "deep",
+      "emotional_state": "positive",
+      "emotions": {
+        "gratitude": 0.8,
+        "boredom": 0.1,
+        "excitement": 0.1
+      }
+    }
+  ]
+}

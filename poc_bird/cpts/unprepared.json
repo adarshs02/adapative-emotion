@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "public_setting",
+      "values": [
+        "public",
+        "private"
+      ]
+    },
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "personal_relationship",
+      "values": [
+        "acquaintance",
+        "close"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "public": "public",
+      "first_time": "first_time",
+      "acquaintance": "acquaintance",
+      "emotions": {
+        "shame": 0.7,
+        "embarrassment": 0.2,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "public": "public",
+      "first_time": "first_time",
+      "close": "acquaintance",
+      "emotions": {
+        "shame": 0.6,
+        "embarrassment": 0.3,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "public": "public",
+      "first_time": "repeated",
+      "acquaintance": "acquaintance",
+      "emotions": {
+        "shame": 0.8,
+        "embarrassment": 0.2,
+        "anxiety": 0.0
+      }
+    },
+    {
+      "public": "public",
+      "first_time": "repeated",
+      "close": "acquaintance",
+      "emotions": {
+        "shame": 0.7,
+        "embarrassment": 0.2,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "public": "private",
+      "first_time": "first_time",
+      "acquaintance": "acquaintance",
+      "emotions": {
+        "shame": 0.4,
+        "embarrassment": 0.5,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "public": "private",
+      "first_time": "first_time",
+      "close": "acquaintance",
+      "emotions": {
+        "shame": 0.3,
+        "embarrassment": 0.6,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "public": "private",
+      "first_time": "repeated",
+      "acquaintance": "acquaintance",
+      "emotions": {
+        "shame": 0.6,
+        "embarrassment": 0.3,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "public": "private",
+      "first_time": "repeated",
+      "close": "acquaintance",
+      "emotions": {
+        "shame": 0.5,
+        "embarrassment": 0.4,
+        "anxiety": 0.1
+      }
+    }
+  ]
+}

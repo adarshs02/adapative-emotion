@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "home_quality",
+      "values": [
+        "good",
+        "bad"
+      ]
+    },
+    {
+      "name": "financial_stability",
+      "values": [
+        "stable",
+        "unstable"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "home_quality": "good",
+      "financial_stability": "stable",
+      "emotions": {
+        "excitement": 0.7,
+        "hope": 0.25,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "home_quality": "good",
+      "financial_stability": "unstable",
+      "emotions": {
+        "excitement": 0.6,
+        "hope": 0.3,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "home_quality": "bad",
+      "financial_stability": "stable",
+      "emotions": {
+        "excitement": 0.4,
+        "hope": 0.5,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "home_quality": "bad",
+      "financial_stability": "unstable",
+      "emotions": {
+        "excitement": 0.3,
+        "hope": 0.4,
+        "anxiety": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "home_quality": "good",
+      "financial_stability": "stable",
+      "emotions": {
+        "excitement": 0.2,
+        "hope": 0.6,
+        "anxiety": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "home_quality": "good",
+      "financial_stability": "unstable",
+      "emotions": {
+        "excitement": 0.1,
+        "hope": 0.5,
+        "anxiety": 0.4
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "home_quality": "bad",
+      "financial_stability": "stable",
+      "emotions": {
+        "excitement": 0.1,
+        "hope": 0.3,
+        "anxiety": 0.6
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "home_quality": "bad",
+      "financial_stability": "unstable",
+      "emotions": {
+        "excitement": 0.05,
+        "hope": 0.2,
+        "anxiety": 0.75
+      }
+    }
+  ]
+}

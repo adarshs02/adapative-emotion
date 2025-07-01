@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "work_importance",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "user_experience",
+      "values": [
+        "novice",
+        "experienced"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "work_importance": "low",
+      "user_experience": "novice",
+      "emotions": {
+        "frustration": 0.7,
+        "anger": 0.2,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "work_importance": "low",
+      "user_experience": "experienced",
+      "emotions": {
+        "frustration": 0.6,
+        "anger": 0.3,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "work_importance": "high",
+      "user_experience": "novice",
+      "emotions": {
+        "frustration": 0.8,
+        "anger": 0.1,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "work_importance": "high",
+      "user_experience": "experienced",
+      "emotions": {
+        "frustration": 0.7,
+        "anger": 0.2,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "work_importance": "low",
+      "user_experience": "novice",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.3,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "work_importance": "low",
+      "user_experience": "experienced",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.4,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "work_importance": "high",
+      "user_experience": "novice",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.2,
+        "disappointment": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "work_importance": "high",
+      "user_experience": "experienced",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "disappointment": 0.1
+      }
+    }
+  ]
+}

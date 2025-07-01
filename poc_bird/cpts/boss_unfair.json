@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "self_confidence",
+      "values": [
+        "high",
+        "low"
+      ]
+    },
+    {
+      "name": "emotional_control",
+      "values": [
+        "good",
+        "poor"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "self_confidence": "high",
+      "emotional_control": "good",
+      "emotions": {
+        "anger": 0.0,
+        "frustration": 0.2,
+        "sadness": 0.8
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "self_confidence": "high",
+      "emotional_control": "poor",
+      "emotions": {
+        "anger": 0.1,
+        "frustration": 0.4,
+        "sadness": 0.5
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "self_confidence": "low",
+      "emotional_control": "good",
+      "emotions": {
+        "anger": 0.2,
+        "frustration": 0.6,
+        "sadness": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "self_confidence": "low",
+      "emotional_control": "poor",
+      "emotions": {
+        "anger": 0.3,
+        "frustration": 0.5,
+        "sadness": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "self_confidence": "high",
+      "emotional_control": "good",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.3,
+        "sadness": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "self_confidence": "high",
+      "emotional_control": "poor",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "sadness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "self_confidence": "low",
+      "emotional_control": "good",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.1,
+        "sadness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "self_confidence": "low",
+      "emotional_control": "poor",
+      "emotions": {
+        "anger": 0.9,
+        "frustration": 0.08,
+        "sadness": 0.02
+      }
+    }
+  ]
+}

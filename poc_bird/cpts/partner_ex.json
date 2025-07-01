@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "ex_partners_attitude",
+      "values": [
+        "positive",
+        "negative"
+      ]
+    },
+    {
+      "name": "partner_reactions",
+      "values": [
+        "calm",
+        "defensive"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "ex_partners_attitude": "positive",
+      "partner_reactions": "calm",
+      "emotions": {
+        "sadness": 0.6,
+        "frustration": 0.3,
+        "guilt": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "ex_partners_attitude": "positive",
+      "partner_reactions": "defensive",
+      "emotions": {
+        "surprise": 0.4,
+        "frustration": 0.3,
+        "sadness": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "ex_partners_attitude": "negative",
+      "partner_reactions": "calm",
+      "emotions": {
+        "sadness": 0.7,
+        "guilt": 0.2,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "ex_partners_attitude": "negative",
+      "partner_reactions": "defensive",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.3,
+        "sadness": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "ex_partners_attitude": "positive",
+      "partner_reactions": "calm",
+      "emotions": {
+        "frustration": 0.5,
+        "anger": 0.3,
+        "sadness": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "ex_partners_attitude": "positive",
+      "partner_reactions": "defensive",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.3,
+        "sadness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "ex_partners_attitude": "negative",
+      "partner_reactions": "calm",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.1,
+        "sadness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "ex_partners_attitude": "negative",
+      "partner_reactions": "defensive",
+      "emotions": {
+        "anger": 0.9,
+        "frustration": 0.08,
+        "sadness": 0.02
+      }
+    }
+  ]
+}

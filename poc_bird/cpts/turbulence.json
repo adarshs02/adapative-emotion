@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "turbulence_severity",
+      "values": [
+        "mild",
+        "severe"
+      ]
+    },
+    {
+      "name": "flying_experience",
+      "values": [
+        "first_time",
+        "experienced"
+      ]
+    },
+    {
+      "name": "fear_level",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "turbulence_severity": "mild",
+      "flying_experience": "first_time",
+      "fear_level": "low",
+      "emotions": {
+        "anxiety": 0.2,
+        "relief": 0.8,
+        "excitement": 0.0
+      }
+    },
+    {
+      "turbulence_severity": "mild",
+      "flying_experience": "first_time",
+      "fear_level": "high",
+      "emotions": {
+        "anxiety": 0.7,
+        "relief": 0.2,
+        "excitement": 0.1
+      }
+    },
+    {
+      "turbulence_severity": "mild",
+      "flying_experience": "experienced",
+      "fear_level": "low",
+      "emotions": {
+        "anxiety": 0.1,
+        "relief": 0.8,
+        "excitement": 0.1
+      }
+    },
+    {
+      "turbulence_severity": "mild",
+      "flying_experience": "experienced",
+      "fear_level": "high",
+      "emotions": {
+        "anxiety": 0.4,
+        "relief": 0.5,
+        "excitement": 0.1
+      }
+    },
+    {
+      "turbulence_severity": "severe",
+      "flying_experience": "first_time",
+      "fear_level": "low",
+      "emotions": {
+        "anxiety": 0.9,
+        "relief": 0.05,
+        "excitement": 0.05
+      }
+    },
+    {
+      "turbulence_severity": "severe",
+      "flying_experience": "first_time",
+      "fear_level": "high",
+      "emotions": {
+        "anxiety": 0.95,
+        "relief": 0.03,
+        "excitement": 0.02
+      }
+    },
+    {
+      "turbulence_severity": "severe",
+      "flying_experience": "experienced",
+      "fear_level": "low",
+      "emotions": {
+        "anxiety": 0.6,
+        "relief": 0.3,
+        "excitement": 0.1
+      }
+    },
+    {
+      "turbulence_severity": "severe",
+      "flying_experience": "experienced",
+      "fear_level": "high",
+      "emotions": {
+        "anxiety": 0.9,
+        "relief": 0.08,
+        "excitement": 0.02
+      }
+    }
+  ]
+}

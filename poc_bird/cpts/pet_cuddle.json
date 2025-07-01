@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "pet_size",
+      "values": [
+        "small",
+        "large"
+      ]
+    },
+    {
+      "name": "pet_affection_level",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "pet_size": "small",
+      "pet_affection_level": "low",
+      "emotions": {
+        "happiness": 0.8,
+        "surprise": 0.15,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "pet_size": "small",
+      "pet_affection_level": "high",
+      "emotions": {
+        "happiness": 0.9,
+        "surprise": 0.1,
+        "anxiety": 0.01
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "pet_size": "large",
+      "pet_affection_level": "low",
+      "emotions": {
+        "happiness": 0.7,
+        "surprise": 0.25,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "pet_size": "large",
+      "pet_affection_level": "high",
+      "emotions": {
+        "happiness": 0.85,
+        "surprise": 0.12,
+        "anxiety": 0.03
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "pet_size": "small",
+      "pet_affection_level": "low",
+      "emotions": {
+        "happiness": 0.4,
+        "surprise": 0.3,
+        "anxiety": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "pet_size": "small",
+      "pet_affection_level": "high",
+      "emotions": {
+        "happiness": 0.6,
+        "surprise": 0.2,
+        "anxiety": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "pet_size": "large",
+      "pet_affection_level": "low",
+      "emotions": {
+        "happiness": 0.3,
+        "surprise": 0.35,
+        "anxiety": 0.35
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "pet_size": "large",
+      "pet_affection_level": "high",
+      "emotions": {
+        "happiness": 0.5,
+        "surprise": 0.25,
+        "anxiety": 0.25
+      }
+    }
+  ]
+}

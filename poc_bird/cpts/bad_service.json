@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "service_quality",
+      "values": [
+        "poor",
+        "good"
+      ]
+    },
+    {
+      "name": "customer_expectations",
+      "values": [
+        "high",
+        "low"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "service_quality": "poor",
+      "customer_expectations": "high",
+      "emotions": {
+        "frustration": 0.6,
+        "disappointment": 0.3,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "service_quality": "poor",
+      "customer_expectations": "low",
+      "emotions": {
+        "frustration": 0.4,
+        "disappointment": 0.5,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "service_quality": "good",
+      "customer_expectations": "high",
+      "emotions": {
+        "relief": 0.7,
+        "gratitude": 0.2,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "service_quality": "good",
+      "customer_expectations": "low",
+      "emotions": {
+        "gratitude": 0.8,
+        "relief": 0.2,
+        "happiness": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "service_quality": "poor",
+      "customer_expectations": "high",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.2,
+        "disgust": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "service_quality": "poor",
+      "customer_expectations": "low",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "disgust": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "service_quality": "good",
+      "customer_expectations": "high",
+      "emotions": {
+        "anger": 0.4,
+        "frustration": 0.5,
+        "disgust": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "service_quality": "good",
+      "customer_expectations": "low",
+      "emotions": {
+        "anger": 0.3,
+        "frustration": 0.6,
+        "disgust": 0.1
+      }
+    }
+  ]
+}

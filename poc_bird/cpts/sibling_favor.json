@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "parental_expectations",
+      "values": [
+        "high",
+        "low"
+      ]
+    },
+    {
+      "name": "self_confidence",
+      "values": [
+        "high",
+        "low"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "parental_expectations": "high",
+      "self_confidence": "high",
+      "emotions": {
+        "sadness": 0.7,
+        "frustration": 0.2,
+        "guilt": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "parental_expectations": "high",
+      "self_confidence": "low",
+      "emotions": {
+        "sadness": 0.6,
+        "frustration": 0.3,
+        "guilt": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "parental_expectations": "low",
+      "self_confidence": "high",
+      "emotions": {
+        "sadness": 0.4,
+        "frustration": 0.3,
+        "guilt": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "parental_expectations": "low",
+      "self_confidence": "low",
+      "emotions": {
+        "sadness": 0.5,
+        "frustration": 0.3,
+        "guilt": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "parental_expectations": "high",
+      "self_confidence": "high",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.3,
+        "helplessness": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "parental_expectations": "high",
+      "self_confidence": "low",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "helplessness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "parental_expectations": "low",
+      "self_confidence": "high",
+      "emotions": {
+        "anger": 0.3,
+        "frustration": 0.4,
+        "helplessness": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "parental_expectations": "low",
+      "self_confidence": "low",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.2,
+        "helplessness": 0.2
+      }
+    }
+  ]
+}

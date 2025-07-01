@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "communication_style",
+      "values": [
+        "open",
+        "closed"
+      ]
+    },
+    {
+      "name": "emotional_involvement",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "communication_style": "open",
+      "emotional_involvement": "low",
+      "emotions": {
+        "sadness": 0.6,
+        "guilt": 0.3,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_style": "open",
+      "emotional_involvement": "high",
+      "emotions": {
+        "sadness": 0.4,
+        "guilt": 0.3,
+        "relief": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_style": "closed",
+      "emotional_involvement": "low",
+      "emotions": {
+        "sadness": 0.5,
+        "guilt": 0.3,
+        "relief": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_style": "closed",
+      "emotional_involvement": "high",
+      "emotions": {
+        "sadness": 0.3,
+        "guilt": 0.4,
+        "relief": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "open",
+      "emotional_involvement": "low",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.3,
+        "resignation": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "open",
+      "emotional_involvement": "high",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "resignation": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "closed",
+      "emotional_involvement": "low",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.2,
+        "resignation": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "closed",
+      "emotional_involvement": "high",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.1,
+        "resignation": 0.1
+      }
+    }
+  ]
+}

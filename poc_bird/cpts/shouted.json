@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "relationship",
+      "values": [
+        "close",
+        "distant"
+      ]
+    },
+    {
+      "name": "provocation_level",
+      "values": [
+        "minor",
+        "severe"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "relationship": "close",
+      "provocation_level": "minor",
+      "emotions": {
+        "anger": 0.2,
+        "frustration": 0.6,
+        "surprise": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship": "close",
+      "provocation_level": "severe",
+      "emotions": {
+        "anger": 0.4,
+        "frustration": 0.4,
+        "surprise": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship": "distant",
+      "provocation_level": "minor",
+      "emotions": {
+        "anger": 0.1,
+        "frustration": 0.7,
+        "surprise": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship": "distant",
+      "provocation_level": "severe",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.3,
+        "surprise": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship": "close",
+      "provocation_level": "minor",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.2,
+        "surprise": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship": "close",
+      "provocation_level": "severe",
+      "emotions": {
+        "anger": 0.9,
+        "frustration": 0.1,
+        "surprise": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship": "distant",
+      "provocation_level": "minor",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "surprise": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship": "distant",
+      "provocation_level": "severe",
+      "emotions": {
+        "anger": 0.95,
+        "frustration": 0.05,
+        "surprise": 0.0
+      }
+    }
+  ]
+}

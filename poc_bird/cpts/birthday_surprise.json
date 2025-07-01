@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "surprise_type",
+      "values": [
+        "unexpected",
+        "expected"
+      ]
+    },
+    {
+      "name": "friendship_quality",
+      "values": [
+        "close",
+        "distant"
+      ]
+    },
+    {
+      "name": "birthday_feeling",
+      "values": [
+        "excited",
+        "unenthused"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "surprise_type": "unexpected",
+      "friendship_quality": "close",
+      "birthday_feeling": "excited",
+      "emotions": {
+        "happiness": 0.7,
+        "surprise": 0.25,
+        "awkwardness": 0.05
+      }
+    },
+    {
+      "surprise_type": "unexpected",
+      "friendship_quality": "close",
+      "birthday_feeling": "unenthused",
+      "emotions": {
+        "happiness": 0.2,
+        "surprise": 0.6,
+        "awkwardness": 0.2
+      }
+    },
+    {
+      "surprise_type": "unexpected",
+      "friendship_quality": "distant",
+      "birthday_feeling": "excited",
+      "emotions": {
+        "happiness": 0.4,
+        "surprise": 0.3,
+        "awkwardness": 0.3
+      }
+    },
+    {
+      "surprise_type": "unexpected",
+      "friendship_quality": "distant",
+      "birthday_feeling": "unenthused",
+      "emotions": {
+        "happiness": 0.1,
+        "surprise": 0.4,
+        "awkwardness": 0.5
+      }
+    },
+    {
+      "surprise_type": "expected",
+      "friendship_quality": "close",
+      "birthday_feeling": "excited",
+      "emotions": {
+        "happiness": 0.8,
+        "surprise": 0.15,
+        "awkwardness": 0.05
+      }
+    },
+    {
+      "surprise_type": "expected",
+      "friendship_quality": "close",
+      "birthday_feeling": "unenthused",
+      "emotions": {
+        "happiness": 0.3,
+        "surprise": 0.5,
+        "awkwardness": 0.2
+      }
+    },
+    {
+      "surprise_type": "expected",
+      "friendship_quality": "distant",
+      "birthday_feeling": "excited",
+      "emotions": {
+        "happiness": 0.2,
+        "surprise": 0.2,
+        "awkwardness": 0.6
+      }
+    },
+    {
+      "surprise_type": "expected",
+      "friendship_quality": "distant",
+      "birthday_feeling": "unenthused",
+      "emotions": {
+        "happiness": 0.05,
+        "surprise": 0.3,
+        "awkwardness": 0.65
+      }
+    }
+  ]
+}

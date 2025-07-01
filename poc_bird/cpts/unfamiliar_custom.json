@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "cultural_similarity",
+      "values": [
+        "similar",
+        "unfamiliar"
+      ]
+    },
+    {
+      "name": "social_support",
+      "values": [
+        "strong",
+        "weak"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "cultural_similarity": "similar",
+      "social_support": "strong",
+      "emotions": {
+        "curiosity": 0.8,
+        "relief": 0.15,
+        "frustration": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "cultural_similarity": "similar",
+      "social_support": "weak",
+      "emotions": {
+        "curiosity": 0.7,
+        "relief": 0.25,
+        "frustration": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "cultural_similarity": "unfamiliar",
+      "social_support": "strong",
+      "emotions": {
+        "curiosity": 0.6,
+        "relief": 0.3,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "cultural_similarity": "unfamiliar",
+      "social_support": "weak",
+      "emotions": {
+        "curiosity": 0.5,
+        "relief": 0.35,
+        "frustration": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "cultural_similarity": "similar",
+      "social_support": "strong",
+      "emotions": {
+        "frustration": 0.4,
+        "anger": 0.35,
+        "relief": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "cultural_similarity": "similar",
+      "social_support": "weak",
+      "emotions": {
+        "frustration": 0.5,
+        "anger": 0.3,
+        "relief": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "cultural_similarity": "unfamiliar",
+      "social_support": "strong",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.3,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "cultural_similarity": "unfamiliar",
+      "social_support": "weak",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.25,
+        "relief": 0.05
+      }
+    }
+  ]
+}

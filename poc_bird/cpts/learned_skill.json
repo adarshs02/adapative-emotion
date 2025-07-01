@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "effort",
+      "values": [
+        "high",
+        "low"
+      ]
+    },
+    {
+      "name": "improvement",
+      "values": [
+        "significant",
+        "minor"
+      ]
+    },
+    {
+      "name": "confidence",
+      "values": [
+        "high",
+        "low"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "effort": "high",
+      "improvement": "significant",
+      "confidence": "high",
+      "emotions": {
+        "satisfaction": 0.7,
+        "relief": 0.2,
+        "frustration": 0.1
+      }
+    },
+    {
+      "effort": "high",
+      "improvement": "significant",
+      "confidence": "low",
+      "emotions": {
+        "satisfaction": 0.4,
+        "relief": 0.3,
+        "frustration": 0.3
+      }
+    },
+    {
+      "effort": "high",
+      "improvement": "minor",
+      "confidence": "high",
+      "emotions": {
+        "satisfaction": 0.5,
+        "relief": 0.3,
+        "frustration": 0.2
+      }
+    },
+    {
+      "effort": "high",
+      "improvement": "minor",
+      "confidence": "low",
+      "emotions": {
+        "satisfaction": 0.2,
+        "relief": 0.4,
+        "frustration": 0.4
+      }
+    },
+    {
+      "effort": "low",
+      "improvement": "significant",
+      "confidence": "high",
+      "emotions": {
+        "satisfaction": 0.3,
+        "relief": 0.5,
+        "frustration": 0.2
+      }
+    },
+    {
+      "effort": "low",
+      "improvement": "significant",
+      "confidence": "low",
+      "emotions": {
+        "satisfaction": 0.1,
+        "relief": 0.2,
+        "frustration": 0.7
+      }
+    },
+    {
+      "effort": "low",
+      "improvement": "minor",
+      "confidence": "high",
+      "emotions": {
+        "satisfaction": 0.1,
+        "relief": 0.4,
+        "frustration": 0.5
+      }
+    },
+    {
+      "effort": "low",
+      "improvement": "minor",
+      "confidence": "low",
+      "emotions": {
+        "satisfaction": 0.0,
+        "relief": 0.3,
+        "frustration": 0.7
+      }
+    }
+  ]
+}

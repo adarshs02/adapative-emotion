@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "communication_style",
+      "values": [
+        "clear",
+        "vague"
+      ]
+    },
+    {
+      "name": "impact_on_job",
+      "values": [
+        "minor",
+        "major"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "communication_style": "clear",
+      "impact_on_job": "minor",
+      "emotions": {
+        "frustration": 0.7,
+        "confusion": 0.2,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_style": "clear",
+      "impact_on_job": "major",
+      "emotions": {
+        "frustration": 0.4,
+        "confusion": 0.3,
+        "relief": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_style": "vague",
+      "impact_on_job": "minor",
+      "emotions": {
+        "frustration": 0.5,
+        "confusion": 0.4,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_style": "vague",
+      "impact_on_job": "major",
+      "emotions": {
+        "frustration": 0.6,
+        "confusion": 0.3,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "clear",
+      "impact_on_job": "minor",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.3,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "clear",
+      "impact_on_job": "major",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.2,
+        "relief": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "vague",
+      "impact_on_job": "minor",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "vague",
+      "impact_on_job": "major",
+      "emotions": {
+        "anger": 0.9,
+        "frustration": 0.1,
+        "relief": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "relationship_with_host",
+      "values": [
+        "close",
+        "distant"
+      ]
+    },
+    {
+      "name": "selfesteem",
+      "values": [
+        "high",
+        "low"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "relationship_with_host": "close",
+      "selfesteem": "high",
+      "emotions": {
+        "hurt": 0.7,
+        "anger": 0.2,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship_with_host": "close",
+      "selfesteem": "low",
+      "emotions": {
+        "hurt": 0.6,
+        "anger": 0.3,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship_with_host": "distant",
+      "selfesteem": "high",
+      "emotions": {
+        "hurt": 0.5,
+        "anger": 0.3,
+        "disappointment": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship_with_host": "distant",
+      "selfesteem": "low",
+      "emotions": {
+        "hurt": 0.4,
+        "anger": 0.4,
+        "disappointment": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship_with_host": "close",
+      "selfesteem": "high",
+      "emotions": {
+        "anger": 0.6,
+        "hurt": 0.3,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship_with_host": "close",
+      "selfesteem": "low",
+      "emotions": {
+        "anger": 0.7,
+        "hurt": 0.2,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship_with_host": "distant",
+      "selfesteem": "high",
+      "emotions": {
+        "anger": 0.8,
+        "hurt": 0.1,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship_with_host": "distant",
+      "selfesteem": "low",
+      "emotions": {
+        "anger": 0.9,
+        "hurt": 0.08,
+        "disappointment": 0.02
+      }
+    }
+  ]
+}

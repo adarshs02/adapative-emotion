@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "baby_age",
+      "values": [
+        "infant",
+        "toddler"
+      ]
+    },
+    {
+      "name": "context",
+      "values": [
+        "playtime",
+        "mealtime"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "baby_age": "infant",
+      "context": "playtime",
+      "emotions": {
+        "happiness": 0.8,
+        "surprise": 0.15,
+        "curiosity": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "baby_age": "infant",
+      "context": "mealtime",
+      "emotions": {
+        "happiness": 0.7,
+        "surprise": 0.2,
+        "curiosity": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "baby_age": "toddler",
+      "context": "playtime",
+      "emotions": {
+        "happiness": 0.6,
+        "surprise": 0.3,
+        "curiosity": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "baby_age": "toddler",
+      "context": "mealtime",
+      "emotions": {
+        "happiness": 0.5,
+        "surprise": 0.4,
+        "curiosity": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "baby_age": "infant",
+      "context": "playtime",
+      "emotions": {
+        "happiness": 0.4,
+        "surprise": 0.3,
+        "curiosity": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "baby_age": "infant",
+      "context": "mealtime",
+      "emotions": {
+        "happiness": 0.3,
+        "surprise": 0.2,
+        "curiosity": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "baby_age": "toddler",
+      "context": "playtime",
+      "emotions": {
+        "happiness": 0.2,
+        "surprise": 0.2,
+        "curiosity": 0.6
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "baby_age": "toddler",
+      "context": "mealtime",
+      "emotions": {
+        "happiness": 0.1,
+        "surprise": 0.1,
+        "curiosity": 0.8
+      }
+    }
+  ]
+}

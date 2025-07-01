@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "injury_severity",
+      "values": [
+        "minor",
+        "severe"
+      ]
+    },
+    {
+      "name": "public_attention",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "injury_severity": "minor",
+      "public_attention": "low",
+      "emotions": {
+        "shame": 0.7,
+        "embarrassment": 0.2,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "injury_severity": "minor",
+      "public_attention": "high",
+      "emotions": {
+        "embarrassment": 0.6,
+        "shame": 0.3,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "injury_severity": "severe",
+      "public_attention": "low",
+      "emotions": {
+        "shame": 0.5,
+        "embarrassment": 0.3,
+        "fear": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "injury_severity": "severe",
+      "public_attention": "high",
+      "emotions": {
+        "shame": 0.4,
+        "embarrassment": 0.3,
+        "fear": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "injury_severity": "minor",
+      "public_attention": "low",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.3,
+        "shame": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "injury_severity": "minor",
+      "public_attention": "high",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "shame": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "injury_severity": "severe",
+      "public_attention": "low",
+      "emotions": {
+        "anger": 0.8,
+        "fear": 0.2,
+        "shame": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "injury_severity": "severe",
+      "public_attention": "high",
+      "emotions": {
+        "anger": 0.9,
+        "fear": 0.1,
+        "shame": 0.0
+      }
+    }
+  ]
+}

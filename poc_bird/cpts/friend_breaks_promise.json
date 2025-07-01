@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "friendship_depth",
+      "values": [
+        "shallow",
+        "deep"
+      ]
+    },
+    {
+      "name": "trust_level",
+      "values": [
+        "high",
+        "low"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "shallow",
+      "trust_level": "high",
+      "emotions": {
+        "anger": 0.0,
+        "disappointment": 0.8,
+        "hurt": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "shallow",
+      "trust_level": "low",
+      "emotions": {
+        "anger": 0.2,
+        "disappointment": 0.6,
+        "hurt": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "deep",
+      "trust_level": "high",
+      "emotions": {
+        "anger": 0.1,
+        "disappointment": 0.7,
+        "hurt": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "deep",
+      "trust_level": "low",
+      "emotions": {
+        "anger": 0.3,
+        "disappointment": 0.5,
+        "hurt": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "shallow",
+      "trust_level": "high",
+      "emotions": {
+        "anger": 0.8,
+        "disappointment": 0.1,
+        "hurt": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "shallow",
+      "trust_level": "low",
+      "emotions": {
+        "anger": 0.9,
+        "disappointment": 0.05,
+        "hurt": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "deep",
+      "trust_level": "high",
+      "emotions": {
+        "anger": 0.7,
+        "disappointment": 0.2,
+        "hurt": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "deep",
+      "trust_level": "low",
+      "emotions": {
+        "anger": 0.95,
+        "disappointment": 0.03,
+        "hurt": 0.02
+      }
+    }
+  ]
+}

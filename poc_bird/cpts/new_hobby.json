@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "novelty",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "effort",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "previous_experience",
+      "values": [
+        "none",
+        "some"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "novelty": "first_time",
+      "effort": "low",
+      "previous_experience": "none",
+      "emotions": {
+        "excitement": 0.7,
+        "curiosity": 0.2,
+        "frustration": 0.1
+      }
+    },
+    {
+      "novelty": "first_time",
+      "effort": "low",
+      "previous_experience": "some",
+      "emotions": {
+        "excitement": 0.6,
+        "curiosity": 0.3,
+        "frustration": 0.1
+      }
+    },
+    {
+      "novelty": "first_time",
+      "effort": "high",
+      "previous_experience": "none",
+      "emotions": {
+        "excitement": 0.5,
+        "curiosity": 0.4,
+        "frustration": 0.1
+      }
+    },
+    {
+      "novelty": "first_time",
+      "effort": "high",
+      "previous_experience": "some",
+      "emotions": {
+        "excitement": 0.4,
+        "curiosity": 0.5,
+        "frustration": 0.1
+      }
+    },
+    {
+      "novelty": "repeated",
+      "effort": "low",
+      "previous_experience": "none",
+      "emotions": {
+        "excitement": 0.2,
+        "curiosity": 0.6,
+        "frustration": 0.2
+      }
+    },
+    {
+      "novelty": "repeated",
+      "effort": "low",
+      "previous_experience": "some",
+      "emotions": {
+        "excitement": 0.3,
+        "curiosity": 0.5,
+        "frustration": 0.2
+      }
+    },
+    {
+      "novelty": "repeated",
+      "effort": "high",
+      "previous_experience": "none",
+      "emotions": {
+        "excitement": 0.1,
+        "curiosity": 0.7,
+        "frustration": 0.2
+      }
+    },
+    {
+      "novelty": "repeated",
+      "effort": "high",
+      "previous_experience": "some",
+      "emotions": {
+        "excitement": 0.2,
+        "curiosity": 0.6,
+        "frustration": 0.2
+      }
+    }
+  ]
+}

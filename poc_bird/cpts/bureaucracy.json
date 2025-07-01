@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "bureaucratic_experience",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "bureaucratic_complexity",
+      "values": [
+        "simple",
+        "complex"
+      ]
+    },
+    {
+      "name": "personal_stakes",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "bureaucratic_experience": "first_time",
+      "bureaucratic_complexity": "simple",
+      "personal_stakes": "low",
+      "emotions": {
+        "frustration": 0.7,
+        "helplessness": 0.2,
+        "indifference": 0.1
+      }
+    },
+    {
+      "bureaucratic_experience": "first_time",
+      "bureaucratic_complexity": "simple",
+      "personal_stakes": "high",
+      "emotions": {
+        "frustration": 0.6,
+        "helplessness": 0.3,
+        "concern": 0.1
+      }
+    },
+    {
+      "bureaucratic_experience": "first_time",
+      "bureaucratic_complexity": "complex",
+      "personal_stakes": "low",
+      "emotions": {
+        "frustration": 0.5,
+        "helplessness": 0.3,
+        "confusion": 0.2
+      }
+    },
+    {
+      "bureaucratic_experience": "first_time",
+      "bureaucratic_complexity": "complex",
+      "personal_stakes": "high",
+      "emotions": {
+        "frustration": 0.4,
+        "concern": 0.4,
+        "helplessness": 0.2
+      }
+    },
+    {
+      "bureaucratic_experience": "repeated",
+      "bureaucratic_complexity": "simple",
+      "personal_stakes": "low",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.3,
+        "helplessness": 0.1
+      }
+    },
+    {
+      "bureaucratic_experience": "repeated",
+      "bureaucratic_complexity": "simple",
+      "personal_stakes": "high",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "concern": 0.1
+      }
+    },
+    {
+      "bureaucratic_experience": "repeated",
+      "bureaucratic_complexity": "complex",
+      "personal_stakes": "low",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.1,
+        "helplessness": 0.1
+      }
+    },
+    {
+      "bureaucratic_experience": "repeated",
+      "bureaucratic_complexity": "complex",
+      "personal_stakes": "high",
+      "emotions": {
+        "anger": 0.9,
+        "concern": 0.08,
+        "helplessness": 0.02
+      }
+    }
+  ]
+}

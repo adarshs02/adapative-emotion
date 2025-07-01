@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "audience_size",
+      "values": [
+        "small",
+        "large"
+      ]
+    },
+    {
+      "name": "public_setting",
+      "values": [
+        "private",
+        "public"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "audience_size": "small",
+      "public_setting": "private",
+      "emotions": {
+        "shame": 0.8,
+        "anxiety": 0.15,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "audience_size": "small",
+      "public_setting": "public",
+      "emotions": {
+        "shame": 0.7,
+        "anxiety": 0.25,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "audience_size": "large",
+      "public_setting": "private",
+      "emotions": {
+        "shame": 0.6,
+        "anxiety": 0.3,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "audience_size": "large",
+      "public_setting": "public",
+      "emotions": {
+        "shame": 0.5,
+        "anxiety": 0.4,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "audience_size": "small",
+      "public_setting": "private",
+      "emotions": {
+        "shame": 0.2,
+        "anxiety": 0.6,
+        "anger": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "audience_size": "small",
+      "public_setting": "public",
+      "emotions": {
+        "shame": 0.1,
+        "anxiety": 0.5,
+        "anger": 0.4
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "audience_size": "large",
+      "public_setting": "private",
+      "emotions": {
+        "shame": 0.1,
+        "anxiety": 0.4,
+        "anger": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "audience_size": "large",
+      "public_setting": "public",
+      "emotions": {
+        "shame": 0.05,
+        "anxiety": 0.3,
+        "anger": 0.65
+      }
+    }
+  ]
+}

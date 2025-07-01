@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "friendship_depth",
+      "values": [
+        "shallow",
+        "deep"
+      ]
+    },
+    {
+      "name": "self_confidence",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "shallow",
+      "self_confidence": "low",
+      "emotions": {
+        "jealousy": 0.8,
+        "sadness": 0.15,
+        "resentment": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "shallow",
+      "self_confidence": "high",
+      "emotions": {
+        "jealousy": 0.4,
+        "sadness": 0.5,
+        "resentment": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "deep",
+      "self_confidence": "low",
+      "emotions": {
+        "jealousy": 0.6,
+        "sadness": 0.3,
+        "resentment": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_depth": "deep",
+      "self_confidence": "high",
+      "emotions": {
+        "jealousy": 0.2,
+        "sadness": 0.7,
+        "resentment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "shallow",
+      "self_confidence": "low",
+      "emotions": {
+        "jealousy": 0.9,
+        "sadness": 0.08,
+        "resentment": 0.02
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "shallow",
+      "self_confidence": "high",
+      "emotions": {
+        "jealousy": 0.6,
+        "sadness": 0.35,
+        "resentment": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "deep",
+      "self_confidence": "low",
+      "emotions": {
+        "jealousy": 0.8,
+        "sadness": 0.15,
+        "resentment": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_depth": "deep",
+      "self_confidence": "high",
+      "emotions": {
+        "jealousy": 0.4,
+        "sadness": 0.55,
+        "resentment": 0.05
+      }
+    }
+  ]
+}

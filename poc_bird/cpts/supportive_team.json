@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "colleague_support",
+      "values": [
+        "high",
+        "low"
+      ]
+    },
+    {
+      "name": "idea_importance",
+      "values": [
+        "critical",
+        "non_critical"
+      ]
+    },
+    {
+      "name": "meeting_context",
+      "values": [
+        "formal",
+        "informal"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "colleague_support": "high",
+      "idea_importance": "critical",
+      "meeting_context": "formal",
+      "emotions": {
+        "excitement": 0.7,
+        "confidence": 0.25,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "colleague_support": "high",
+      "idea_importance": "critical",
+      "meeting_context": "informal",
+      "emotions": {
+        "excitement": 0.6,
+        "confidence": 0.35,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "colleague_support": "high",
+      "idea_importance": "non_critical",
+      "meeting_context": "formal",
+      "emotions": {
+        "excitement": 0.4,
+        "confidence": 0.5,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "colleague_support": "high",
+      "idea_importance": "non_critical",
+      "meeting_context": "informal",
+      "emotions": {
+        "excitement": 0.3,
+        "confidence": 0.55,
+        "anxiety": 0.15
+      }
+    },
+    {
+      "colleague_support": "low",
+      "idea_importance": "critical",
+      "meeting_context": "formal",
+      "emotions": {
+        "anxiety": 0.7,
+        "frustration": 0.25,
+        "confidence": 0.05
+      }
+    },
+    {
+      "colleague_support": "low",
+      "idea_importance": "critical",
+      "meeting_context": "informal",
+      "emotions": {
+        "anxiety": 0.65,
+        "frustration": 0.3,
+        "confidence": 0.05
+      }
+    },
+    {
+      "colleague_support": "low",
+      "idea_importance": "non_critical",
+      "meeting_context": "formal",
+      "emotions": {
+        "frustration": 0.6,
+        "anxiety": 0.35,
+        "confidence": 0.05
+      }
+    },
+    {
+      "colleague_support": "low",
+      "idea_importance": "non_critical",
+      "meeting_context": "informal",
+      "emotions": {
+        "frustration": 0.55,
+        "anxiety": 0.4,
+        "confidence": 0.05
+      }
+    }
+  ]
+}

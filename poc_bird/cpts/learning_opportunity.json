@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "workshop_interest",
+      "values": [
+        "high",
+        "low"
+      ]
+    },
+    {
+      "name": "workshop_difficulty",
+      "values": [
+        "easy",
+        "hard"
+      ]
+    },
+    {
+      "name": "time_commitment",
+      "values": [
+        "short",
+        "long"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "workshop_interest": "high",
+      "workshop_difficulty": "easy",
+      "time_commitment": "short",
+      "emotions": {
+        "excitement": 0.8,
+        "anxiety": 0.15,
+        "boredom": 0.05
+      }
+    },
+    {
+      "workshop_interest": "high",
+      "workshop_difficulty": "easy",
+      "time_commitment": "long",
+      "emotions": {
+        "excitement": 0.7,
+        "anxiety": 0.2,
+        "boredom": 0.1
+      }
+    },
+    {
+      "workshop_interest": "high",
+      "workshop_difficulty": "hard",
+      "time_commitment": "short",
+      "emotions": {
+        "anxiety": 0.6,
+        "excitement": 0.3,
+        "boredom": 0.1
+      }
+    },
+    {
+      "workshop_interest": "high",
+      "workshop_difficulty": "hard",
+      "time_commitment": "long",
+      "emotions": {
+        "anxiety": 0.8,
+        "excitement": 0.15,
+        "boredom": 0.05
+      }
+    },
+    {
+      "workshop_interest": "low",
+      "workshop_difficulty": "easy",
+      "time_commitment": "short",
+      "emotions": {
+        "boredom": 0.9,
+        "excitement": 0.05,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "workshop_interest": "low",
+      "workshop_difficulty": "easy",
+      "time_commitment": "long",
+      "emotions": {
+        "boredom": 0.8,
+        "excitement": 0.1,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "workshop_interest": "low",
+      "workshop_difficulty": "hard",
+      "time_commitment": "short",
+      "emotions": {
+        "anxiety": 0.7,
+        "boredom": 0.25,
+        "excitement": 0.05
+      }
+    },
+    {
+      "workshop_interest": "low",
+      "workshop_difficulty": "hard",
+      "time_commitment": "long",
+      "emotions": {
+        "anxiety": 0.9,
+        "boredom": 0.08,
+        "excitement": 0.02
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "food_value",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "personal_responsibility",
+      "values": [
+        "yes",
+        "no"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "food_value": "low",
+      "personal_responsibility": "yes",
+      "emotions": {
+        "shame": 0.8,
+        "frustration": 0.15,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "food_value": "low",
+      "personal_responsibility": "no",
+      "emotions": {
+        "frustration": 0.6,
+        "shame": 0.3,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "food_value": "high",
+      "personal_responsibility": "yes",
+      "emotions": {
+        "shame": 0.7,
+        "frustration": 0.25,
+        "disgust": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "food_value": "high",
+      "personal_responsibility": "no",
+      "emotions": {
+        "frustration": 0.5,
+        "shame": 0.35,
+        "disgust": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "food_value": "low",
+      "personal_responsibility": "yes",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.3,
+        "shame": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "food_value": "low",
+      "personal_responsibility": "no",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "shame": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "food_value": "high",
+      "personal_responsibility": "yes",
+      "emotions": {
+        "anger": 0.8,
+        "disgust": 0.15,
+        "shame": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "food_value": "high",
+      "personal_responsibility": "no",
+      "emotions": {
+        "anger": 0.9,
+        "disgust": 0.08,
+        "shame": 0.02
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "task_overload",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "task_importance",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "time_pressure",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "task_overload": "low",
+      "task_importance": "low",
+      "time_pressure": "low",
+      "emotions": {
+        "frustration": 0.8,
+        "anxiety": 0.2,
+        "excitement": 0.0
+      }
+    },
+    {
+      "task_overload": "low",
+      "task_importance": "low",
+      "time_pressure": "high",
+      "emotions": {
+        "frustration": 0.7,
+        "anxiety": 0.2,
+        "excitement": 0.1
+      }
+    },
+    {
+      "task_overload": "low",
+      "task_importance": "high",
+      "time_pressure": "low",
+      "emotions": {
+        "frustration": 0.5,
+        "anxiety": 0.3,
+        "excitement": 0.2
+      }
+    },
+    {
+      "task_overload": "low",
+      "task_importance": "high",
+      "time_pressure": "high",
+      "emotions": {
+        "frustration": 0.4,
+        "anxiety": 0.4,
+        "excitement": 0.2
+      }
+    },
+    {
+      "task_overload": "high",
+      "task_importance": "low",
+      "time_pressure": "low",
+      "emotions": {
+        "frustration": 0.9,
+        "anxiety": 0.1,
+        "excitement": 0.0
+      }
+    },
+    {
+      "task_overload": "high",
+      "task_importance": "low",
+      "time_pressure": "high",
+      "emotions": {
+        "frustration": 0.8,
+        "anxiety": 0.2,
+        "excitement": 0.0
+      }
+    },
+    {
+      "task_overload": "high",
+      "task_importance": "high",
+      "time_pressure": "low",
+      "emotions": {
+        "frustration": 0.8,
+        "anxiety": 0.2,
+        "excitement": 0.0
+      }
+    },
+    {
+      "task_overload": "high",
+      "task_importance": "high",
+      "time_pressure": "high",
+      "emotions": {
+        "frustration": 0.7,
+        "anxiety": 0.3,
+        "excitement": 0.0
+      }
+    }
+  ]
+}

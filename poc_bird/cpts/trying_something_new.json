@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "familiarity",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "confidence",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "anxiety_level",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "familiarity": "first_time",
+      "confidence": "low",
+      "anxiety_level": "low",
+      "emotions": {
+        "excitement": 0.6,
+        "curiosity": 0.3,
+        "fear": 0.1
+      }
+    },
+    {
+      "familiarity": "first_time",
+      "confidence": "low",
+      "anxiety_level": "high",
+      "emotions": {
+        "fear": 0.7,
+        "anxiety": 0.2,
+        "curiosity": 0.1
+      }
+    },
+    {
+      "familiarity": "first_time",
+      "confidence": "high",
+      "anxiety_level": "low",
+      "emotions": {
+        "excitement": 0.8,
+        "confidence": 0.2,
+        "curiosity": 0.0
+      }
+    },
+    {
+      "familiarity": "first_time",
+      "confidence": "high",
+      "anxiety_level": "high",
+      "emotions": {
+        "fear": 0.2,
+        "anxiety": 0.5,
+        "excitement": 0.3
+      }
+    },
+    {
+      "familiarity": "repeated",
+      "confidence": "low",
+      "anxiety_level": "low",
+      "emotions": {
+        "fear": 0.1,
+        "anxiety": 0.2,
+        "disgust": 0.7
+      }
+    },
+    {
+      "familiarity": "repeated",
+      "confidence": "low",
+      "anxiety_level": "high",
+      "emotions": {
+        "fear": 0.8,
+        "anxiety": 0.1,
+        "disgust": 0.1
+      }
+    },
+    {
+      "familiarity": "repeated",
+      "confidence": "high",
+      "anxiety_level": "low",
+      "emotions": {
+        "confidence": 0.9,
+        "excitement": 0.1,
+        "curiosity": 0.0
+      }
+    },
+    {
+      "familiarity": "repeated",
+      "confidence": "high",
+      "anxiety_level": "high",
+      "emotions": {
+        "fear": 0.3,
+        "anxiety": 0.4,
+        "disgust": 0.3
+      }
+    }
+  ]
+}

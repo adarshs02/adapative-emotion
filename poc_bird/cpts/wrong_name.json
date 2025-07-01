@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "relationship",
+      "values": [
+        "close",
+        "distant"
+      ]
+    },
+    {
+      "name": "intention",
+      "values": [
+        "accidental",
+        "intentional"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "relationship": "close",
+      "intention": "accidental",
+      "emotions": {
+        "surprise": 0.8,
+        "embarrassment": 0.15,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship": "close",
+      "intention": "intentional",
+      "emotions": {
+        "surprise": 0.6,
+        "embarrassment": 0.3,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship": "distant",
+      "intention": "accidental",
+      "emotions": {
+        "surprise": 0.7,
+        "embarrassment": 0.2,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "relationship": "distant",
+      "intention": "intentional",
+      "emotions": {
+        "surprise": 0.5,
+        "embarrassment": 0.4,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship": "close",
+      "intention": "accidental",
+      "emotions": {
+        "embarrassment": 0.8,
+        "surprise": 0.15,
+        "frustration": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship": "close",
+      "intention": "intentional",
+      "emotions": {
+        "anger": 0.7,
+        "embarrassment": 0.2,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship": "distant",
+      "intention": "accidental",
+      "emotions": {
+        "embarrassment": 0.7,
+        "surprise": 0.2,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "relationship": "distant",
+      "intention": "intentional",
+      "emotions": {
+        "anger": 0.6,
+        "embarrassment": 0.3,
+        "frustration": 0.1
+      }
+    }
+  ]
+}

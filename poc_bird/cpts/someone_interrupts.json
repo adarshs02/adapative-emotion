@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "interrupter_intent",
+      "values": [
+        "accidental",
+        "deliberate"
+      ]
+    },
+    {
+      "name": "speaker_importance",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "interrupter_intent": "accidental",
+      "speaker_importance": "low",
+      "emotions": {
+        "frustration": 0.8,
+        "surprise": 0.2,
+        "boredom": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "interrupter_intent": "accidental",
+      "speaker_importance": "high",
+      "emotions": {
+        "frustration": 0.7,
+        "surprise": 0.2,
+        "boredom": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "interrupter_intent": "deliberate",
+      "speaker_importance": "low",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.3,
+        "surprise": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "interrupter_intent": "deliberate",
+      "speaker_importance": "high",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.2,
+        "surprise": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "interrupter_intent": "accidental",
+      "speaker_importance": "low",
+      "emotions": {
+        "frustration": 0.9,
+        "anger": 0.1,
+        "boredom": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "interrupter_intent": "accidental",
+      "speaker_importance": "high",
+      "emotions": {
+        "frustration": 0.8,
+        "anger": 0.2,
+        "boredom": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "interrupter_intent": "deliberate",
+      "speaker_importance": "low",
+      "emotions": {
+        "anger": 0.9,
+        "frustration": 0.1,
+        "boredom": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "interrupter_intent": "deliberate",
+      "speaker_importance": "high",
+      "emotions": {
+        "anger": 0.95,
+        "frustration": 0.05,
+        "boredom": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "delivery_importance",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "time_pressure",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "delivery_importance": "low",
+      "offence_history": "first_time",
+      "time_pressure": "low",
+      "emotions": {
+        "frustration": 0.6,
+        "relief": 0.4,
+        "indifference": 0.0
+      }
+    },
+    {
+      "delivery_importance": "low",
+      "offence_history": "first_time",
+      "time_pressure": "high",
+      "emotions": {
+        "frustration": 0.7,
+        "relief": 0.2,
+        "indifference": 0.1
+      }
+    },
+    {
+      "delivery_importance": "low",
+      "offence_history": "repeated",
+      "time_pressure": "low",
+      "emotions": {
+        "frustration": 0.4,
+        "relief": 0.3,
+        "indifference": 0.3
+      }
+    },
+    {
+      "delivery_importance": "low",
+      "offence_history": "repeated",
+      "time_pressure": "high",
+      "emotions": {
+        "frustration": 0.6,
+        "relief": 0.2,
+        "indifference": 0.2
+      }
+    },
+    {
+      "delivery_importance": "high",
+      "offence_history": "first_time",
+      "time_pressure": "low",
+      "emotions": {
+        "frustration": 0.8,
+        "relief": 0.1,
+        "indifference": 0.1
+      }
+    },
+    {
+      "delivery_importance": "high",
+      "offence_history": "first_time",
+      "time_pressure": "high",
+      "emotions": {
+        "frustration": 0.9,
+        "relief": 0.05,
+        "indifference": 0.05
+      }
+    },
+    {
+      "delivery_importance": "high",
+      "offence_history": "repeated",
+      "time_pressure": "low",
+      "emotions": {
+        "frustration": 0.7,
+        "relief": 0.2,
+        "indifference": 0.1
+      }
+    },
+    {
+      "delivery_importance": "high",
+      "offence_history": "repeated",
+      "time_pressure": "high",
+      "emotions": {
+        "frustration": 0.9,
+        "relief": 0.05,
+        "indifference": 0.05
+      }
+    }
+  ]
+}

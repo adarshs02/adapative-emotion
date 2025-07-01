@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "social_support",
+      "values": [
+        "strong",
+        "weak"
+      ]
+    },
+    {
+      "name": "self_confidence",
+      "values": [
+        "high",
+        "low"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "social_support": "strong",
+      "self_confidence": "high",
+      "emotions": {
+        "shame": 0.6,
+        "anger": 0.3,
+        "sadness": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_support": "strong",
+      "self_confidence": "low",
+      "emotions": {
+        "shame": 0.5,
+        "sadness": 0.4,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_support": "weak",
+      "self_confidence": "high",
+      "emotions": {
+        "shame": 0.7,
+        "anger": 0.2,
+        "sadness": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_support": "weak",
+      "self_confidence": "low",
+      "emotions": {
+        "shame": 0.8,
+        "anxiety": 0.1,
+        "sadness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_support": "strong",
+      "self_confidence": "high",
+      "emotions": {
+        "anger": 0.6,
+        "shame": 0.3,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_support": "strong",
+      "self_confidence": "low",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.2,
+        "sadness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_support": "weak",
+      "self_confidence": "high",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.1,
+        "sadness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_support": "weak",
+      "self_confidence": "low",
+      "emotions": {
+        "anger": 0.9,
+        "frustration": 0.08,
+        "anxiety": 0.02
+      }
+    }
+  ]
+}

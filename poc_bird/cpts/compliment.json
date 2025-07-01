@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "compliment_sincerity",
+      "values": [
+        "genuine",
+        "insincere"
+      ]
+    },
+    {
+      "name": "self_confidence",
+      "values": [
+        "low",
+        "high"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "compliment_sincerity": "genuine",
+      "self_confidence": "low",
+      "emotions": {
+        "gratitude": 0.8,
+        "surprise": 0.15,
+        "embarrassment": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "compliment_sincerity": "genuine",
+      "self_confidence": "high",
+      "emotions": {
+        "gratitude": 0.7,
+        "surprise": 0.25,
+        "pride": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "compliment_sincerity": "insincere",
+      "self_confidence": "low",
+      "emotions": {
+        "suspicion": 0.6,
+        "anger": 0.3,
+        "embarrassment": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "compliment_sincerity": "insincere",
+      "self_confidence": "high",
+      "emotions": {
+        "suspicion": 0.5,
+        "anger": 0.4,
+        "defensiveness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "compliment_sincerity": "genuine",
+      "self_confidence": "low",
+      "emotions": {
+        "gratitude": 0.4,
+        "surprise": 0.3,
+        "relief": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "compliment_sincerity": "genuine",
+      "self_confidence": "high",
+      "emotions": {
+        "gratitude": 0.6,
+        "pride": 0.3,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "compliment_sincerity": "insincere",
+      "self_confidence": "low",
+      "emotions": {
+        "suspicion": 0.7,
+        "anger": 0.2,
+        "embarrassment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "compliment_sincerity": "insincere",
+      "self_confidence": "high",
+      "emotions": {
+        "suspicion": 0.6,
+        "anger": 0.3,
+        "defensiveness": 0.1
+      }
+    }
+  ]
+}

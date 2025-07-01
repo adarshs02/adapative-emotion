@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "item_value",
+      "values": [
+        "low",
+        "high"
+      ]
+    },
+    {
+      "name": "relationship_with_owner",
+      "values": [
+        "acquaintance",
+        "close_friend"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "item_value": "low",
+      "relationship_with_owner": "acquaintance",
+      "emotions": {
+        "anger": 0.0,
+        "frustration": 0.8,
+        "sadness": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "item_value": "low",
+      "relationship_with_owner": "close_friend",
+      "emotions": {
+        "anger": 0.1,
+        "frustration": 0.7,
+        "sadness": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "item_value": "high",
+      "relationship_with_owner": "acquaintance",
+      "emotions": {
+        "anger": 0.3,
+        "frustration": 0.5,
+        "sadness": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "item_value": "high",
+      "relationship_with_owner": "close_friend",
+      "emotions": {
+        "anger": 0.4,
+        "frustration": 0.4,
+        "sadness": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "item_value": "low",
+      "relationship_with_owner": "acquaintance",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.1,
+        "sadness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "item_value": "low",
+      "relationship_with_owner": "close_friend",
+      "emotions": {
+        "anger": 0.9,
+        "frustration": 0.05,
+        "sadness": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "item_value": "high",
+      "relationship_with_owner": "acquaintance",
+      "emotions": {
+        "anger": 0.95,
+        "frustration": 0.03,
+        "sadness": 0.02
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "item_value": "high",
+      "relationship_with_owner": "close_friend",
+      "emotions": {
+        "anger": 0.98,
+        "frustration": 0.01,
+        "sadness": 0.01
+      }
+    }
+  ]
+}

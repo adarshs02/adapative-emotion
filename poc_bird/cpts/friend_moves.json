@@ -1,0 +1,107 @@
+{
+  "factors": [
+    {
+      "name": "distance",
+      "values": [
+        "close",
+        "far"
+      ]
+    },
+    {
+      "name": "offence_history",
+      "values": [
+        "first_time",
+        "repeated"
+      ]
+    },
+    {
+      "name": "communication_style",
+      "values": [
+        "open",
+        "closed"
+      ]
+    }
+  ],
+  "cpt": [
+    {
+      "distance": "close",
+      "offence_history": "first_time",
+      "communication_style": "open",
+      "emotions": {
+        "sadness": 0.7,
+        "guilt": 0.2,
+        "relief": 0.1
+      }
+    },
+    {
+      "distance": "close",
+      "offence_history": "first_time",
+      "communication_style": "closed",
+      "emotions": {
+        "sadness": 0.6,
+        "guilt": 0.3,
+        "relief": 0.1
+      }
+    },
+    {
+      "distance": "close",
+      "offence_history": "repeated",
+      "communication_style": "open",
+      "emotions": {
+        "anger": 0.4,
+        "sadness": 0.3,
+        "guilt": 0.3
+      }
+    },
+    {
+      "distance": "close",
+      "offence_history": "repeated",
+      "communication_style": "closed",
+      "emotions": {
+        "anger": 0.6,
+        "sadness": 0.2,
+        "guilt": 0.2
+      }
+    },
+    {
+      "distance": "far",
+      "offence_history": "first_time",
+      "communication_style": "open",
+      "emotions": {
+        "sadness": 0.8,
+        "relief": 0.2,
+        "hope": 0.0
+      }
+    },
+    {
+      "distance": "far",
+      "offence_history": "first_time",
+      "communication_style": "closed",
+      "emotions": {
+        "sadness": 0.7,
+        "relief": 0.2,
+        "hope": 0.1
+      }
+    },
+    {
+      "distance": "far",
+      "offence_history": "repeated",
+      "communication_style": "open",
+      "emotions": {
+        "anger": 0.2,
+        "sadness": 0.6,
+        "hope": 0.2
+      }
+    },
+    {
+      "distance": "far",
+      "offence_history": "repeated",
+      "communication_style": "closed",
+      "emotions": {
+        "anger": 0.4,
+        "sadness": 0.4,
+        "hope": 0.2
+      }
+    }
+  ]
+}
