@@ -8,7 +8,7 @@ from sentence_transformers import SentenceTransformer, util
 SCENARIOS_FILE = "scenarios.json"
 CPT_DIR = "cpts"
 LLM_MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
-SIMILARITY_MODEL_NAME = 'all-MiniLM-L6-v2' # For fast similarity search
+SIMILARITY_MODEL_NAME = 'Qwen/Qwen3-Embedding-8B'
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 FACTOR_PROMPT_TEMPLATE = """\
@@ -35,29 +35,7 @@ JSON SPEC:
 }}
 """
 
-ROUTER_PROMPT_TEMPLATE = """\
-You are a JSON-only routing API. Your only function is to select a scenario ID from a provided list and estimate your confidence.
 
-Analyze the user's SITUATION and choose the single best matching scenario ID from the AVAILABLE SCENARIOS list.
-
-SITUATION:
-"{user_situation}"
-
-AVAILABLE SCENARIOS:
-{scenarios_json}
-
-Your response MUST be a single, valid JSON object and nothing else. Do not include markdown, explanations, or any other text.
-
-JSON SPEC:
-{{
-  "scenario_id": "<chosen_scenario_id>",
-  "confidence_score": <float_between_0.0_and_1.0>
-}}
-
-RULES:
-1. The 'confidence_score' should be your estimated probability that the chosen scenario is correct.
-2. If no scenario is a good match, you MUST choose 'unsure_scenario' and provide a low confidence_score.
-"""
 
 def load_llm_model():
     """Loads the tokenizer and model from Hugging Face for factor selection."""
@@ -140,80 +118,30 @@ def get_factor_values_from_llm(user_situation, scenario_description, factors, to
     
     return None
 
-def get_scenario_from_llm(user_situation, scenarios_data, tokenizer, model):
-    """Asks the LLM to choose the best-matching scenario and provide a confidence score."""
-    print("\n--- Asking LLM to route to the best scenario from the shortlist ---")
-    
-    scenarios_for_prompt = [{"id": s["id"], "description": s["description"]} for s in scenarios_data["scenarios"]]
-    scenarios_json = json.dumps(scenarios_for_prompt, indent=2)
-
-    prompt = ROUTER_PROMPT_TEMPLATE.format(
-        user_situation=user_situation,
-        scenarios_json=scenarios_json
-    )
-
-    messages = [{"role": "user", "content": prompt}]
-    full_prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    inputs = tokenizer(full_prompt, return_tensors="pt").to(DEVICE)
-
-    with torch.no_grad():
-        outputs = model.generate(
-            **inputs,
-            max_new_tokens=128, # Lower max tokens, as we expect a short JSON response
-            temperature=0.6,
-            do_sample=True,
-            pad_token_id=tokenizer.eos_token_id
-        )
-
-    input_length = inputs['input_ids'].shape[1]
-    generated_tokens = outputs[0][input_length:]
-    generation_only = tokenizer.decode(generated_tokens, skip_special_tokens=True)
-
-    json_response = extract_json_from_response(generation_only)
-    if json_response and "scenario_id" in json_response and "confidence_score" in json_response:
-        chosen_id = json_response["scenario_id"]
-        confidence = json_response["confidence_score"]
-        
-        chosen_scenario = next((s for s in scenarios_data['scenarios'] if s['id'] == chosen_id), None)
-        if chosen_scenario:
-            print(f"LLM routed to scenario: '{chosen_scenario['description']}' with confidence {confidence:.2f}")
-            return chosen_scenario, confidence
-        else:
-            print(f"LLM chose an invalid scenario_id: {chosen_id}")
-    
-    print("LLM failed to route to a valid scenario.")
-    return None, 0.0
-
 def find_top_similar_scenarios(user_situation, scenarios, similarity_model, top_k=5):
     """
     Finds the top_k most similar scenarios and their scores.
     Returns a list of dictionaries, e.g., [{'score': 0.8, 'scenario': {...}}, ...].
     """
     print(f"\n--- Finding top {top_k} similar scenarios using '{SIMILARITY_MODEL_NAME}' ---")
+    scenario_descriptions = [s['description'] for s in scenarios]
     
-    scenarios_to_search = [s for s in scenarios if s['id'] != 'unsure_scenario']
-    scenario_descriptions = [s['description'] for s in scenarios_to_search]
-
-    if not scenario_descriptions:
-        print("No scenarios available for similarity search.")
-        return []
-
     user_embedding = similarity_model.encode(user_situation, convert_to_tensor=True)
     scenario_embeddings = similarity_model.encode(scenario_descriptions, convert_to_tensor=True)
-    cosine_scores = util.cos_sim(user_embedding, scenario_embeddings)
+
+    cosine_scores = util.cos_sim(user_embedding, scenario_embeddings)[0]
     
-    k = min(top_k, len(scenarios_to_search))
-    top_results = torch.topk(cosine_scores, k=k, dim=1)
+    top_results = torch.topk(cosine_scores, k=min(top_k, len(scenarios)))
 
+    matches = []
+    for score, idx in zip(top_results.values, top_results.indices):
+        matches.append({'score': score.item(), 'scenario': scenarios[idx]})
+    
     print("Top matches from similarity search:")
-    top_matches = []
-    for score, idx in zip(top_results[0][0], top_results[1][0]):
-        matched_scenario = scenarios_to_search[idx]
-        match_data = {'score': score.item(), 'scenario': matched_scenario}
-        top_matches.append(match_data)
-        print(f"  - Score: {match_data['score']:.4f} - {matched_scenario['description']}")
-
-    return top_matches
+    for match in matches:
+        print(f"  - Score: {match['score']:.4f} - {match['scenario']['description']}")
+        
+    return matches
 
 def get_probabilities_for_factors(cpt_data, selected_factors):
     """Finds the matching emotion probabilities for a given set of factor values."""
@@ -298,39 +226,29 @@ def main():
     top_matches = find_top_similar_scenarios(user_situation, all_scenarios, similarity_model, top_k=5)
 
     best_scenario = None
-    tokenizer, model = None, None
 
-    # Decide whether to use similarity search fallback or LLM router
+    # Decide whether to use similarity search fallback or the top match
     if not top_matches or top_matches[0]['score'] < 0.32:
         score = top_matches[0]['score'] if top_matches else 0
         print(f"\nCould not find a sufficiently similar scenario (top score: {score:.2f} < 0.32).")
         
-        # Check if a similar situation is already in no_scenario.json before logging
         if not check_for_similar_logged_situation(user_situation, similarity_model):
             log_unmatched_situation(user_situation)
 
         print("Defaulting to 'unsure_scenario'.")
         best_scenario = next((s for s in all_scenarios if s['id'] == 'unsure_scenario'), None)
     else:
-        # High score path: let the LLM choose from the shortlist
-        top_scenarios = [match['scenario'] for match in top_matches]
-        unsure_scenario_obj = next((s for s in all_scenarios if s['id'] == 'unsure_scenario'), None)
-        if unsure_scenario_obj and unsure_scenario_obj not in top_scenarios:
-            print("Adding 'unsure_scenario' to the list for final LLM selection.")
-            top_scenarios.append(unsure_scenario_obj)
-
-        shortlisted_scenarios_data = {"scenarios": top_scenarios}
-        tokenizer, model = load_llm_model()
-        best_scenario, _ = get_scenario_from_llm(user_situation, shortlisted_scenarios_data, tokenizer, model)
+        # High score path: use the top match from similarity search
+        best_scenario = top_matches[0]['scenario']
+        print(f"\n--- Scenario selected by embedding model: '{best_scenario['description']}' (Score: {top_matches[0]['score']:.4f}) ---")
 
     # --- Process the chosen scenario ---
     if not best_scenario:
         print("Could not determine a scenario. Exiting.")
         return
         
-    # If we fell back or the LLM router failed, we might need to load the LLM now
-    if tokenizer is None or model is None:
-        tokenizer, model = load_llm_model()
+    # Load the LLM for factor extraction
+    tokenizer, model = load_llm_model()
 
     cpt_filename = os.path.join(CPT_DIR, f"{best_scenario['id']}.json")
 
