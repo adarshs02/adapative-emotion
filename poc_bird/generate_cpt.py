@@ -5,7 +5,7 @@ import re
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # --- Model Configuration ---
-MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
+MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.3"
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 # --- Prompt Templates ---
