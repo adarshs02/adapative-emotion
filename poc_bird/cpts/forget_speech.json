@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "audience_size",
-      "values": [
-        "small",
-        "large"
-      ]
-    },
-    {
-      "name": "public_importance",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "preparation_level": [
+      "poor",
+      "good"
+    ],
+    "audience_size": [
+      "small",
+      "large"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
+      "preparation_level": "poor",
       "audience_size": "small",
-      "public_importance": "low",
       "emotions": {
-        "shame": 0.8,
-        "frustration": 0.15,
-        "relief": 0.05
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "audience_size": "small",
-      "public_importance": "high",
-      "emotions": {
-        "shame": 0.7,
+        "embarrassment": 0.7,
         "frustration": 0.25,
-        "relief": 0.05
+        "determination": 0.05
       }
     },
     {
       "offence_history": "first_time",
+      "preparation_level": "poor",
       "audience_size": "large",
-      "public_importance": "low",
       "emotions": {
-        "shame": 0.6,
+        "embarrassment": 0.8,
+        "frustration": 0.15,
+        "determination": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "preparation_level": "good",
+      "audience_size": "small",
+      "emotions": {
+        "relief": 0.6,
+        "pride": 0.3,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "preparation_level": "good",
+      "audience_size": "large",
+      "emotions": {
+        "relief": 0.7,
+        "pride": 0.25,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation_level": "poor",
+      "audience_size": "small",
+      "emotions": {
+        "embarrassment": 0.6,
         "frustration": 0.3,
-        "relief": 0.1
+        "anger": 0.1
       }
     },
     {
-      "offence_history": "first_time",
+      "offence_history": "repeated",
+      "preparation_level": "poor",
       "audience_size": "large",
-      "public_importance": "high",
       "emotions": {
-        "shame": 0.5,
+        "embarrassment": 0.75,
+        "frustration": 0.2,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation_level": "good",
+      "audience_size": "small",
+      "emotions": {
+        "embarrassment": 0.5,
         "frustration": 0.35,
-        "relief": 0.15
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "audience_size": "small",
-      "public_importance": "low",
-      "emotions": {
-        "frustration": 0.8,
-        "shame": 0.15,
-        "anger": 0.05
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "audience_size": "small",
-      "public_importance": "high",
-      "emotions": {
-        "frustration": 0.7,
-        "shame": 0.25,
-        "anger": 0.05
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "audience_size": "large",
-      "public_importance": "low",
-      "emotions": {
-        "frustration": 0.6,
-        "shame": 0.25,
         "anger": 0.15
       }
     },
     {
       "offence_history": "repeated",
+      "preparation_level": "good",
       "audience_size": "large",
-      "public_importance": "high",
       "emotions": {
-        "frustration": 0.5,
-        "shame": 0.3,
-        "anger": 0.2
+        "embarrassment": 0.65,
+        "frustration": 0.25,
+        "anger": 0.1
       }
     }
   ]

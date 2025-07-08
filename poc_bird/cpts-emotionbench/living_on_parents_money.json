@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "age": [
+      "young",
+      "adult"
+    ],
+    "gratitude": [
+      "present",
+      "absent"
+    ],
+    "responsibility": [
+      "fulfilled",
+      "neglected"
+    ]
+  },
+  "cpt": [
+    {
+      "age": "young",
+      "gratitude": "present",
+      "responsibility": "fulfilled",
+      "emotions": {
+        "contentment": 0.6000000000000001,
+        "gratitude": 0.30000000000000004,
+        "happiness": 0.10000000000000002
+      }
+    },
+    {
+      "age": "young",
+      "gratitude": "present",
+      "responsibility": "neglected",
+      "emotions": {
+        "frustration": 0.4,
+        "guilt": 0.35,
+        "anxiety": 0.25
+      }
+    },
+    {
+      "age": "young",
+      "gratitude": "absent",
+      "responsibility": "fulfilled",
+      "emotions": {
+        "entitlement": 0.5,
+        "arrogance": 0.3,
+        "contentment": 0.2
+      }
+    },
+    {
+      "age": "young",
+      "gratitude": "absent",
+      "responsibility": "neglected",
+      "emotions": {
+        "anger": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "anxiety": 0.10000000000000002
+      }
+    },
+    {
+      "age": "adult",
+      "gratitude": "present",
+      "responsibility": "fulfilled",
+      "emotions": {
+        "contentment": 0.7000000000000001,
+        "gratitude": 0.20000000000000004,
+        "happiness": 0.10000000000000002
+      }
+    },
+    {
+      "age": "adult",
+      "gratitude": "present",
+      "responsibility": "neglected",
+      "emotions": {
+        "frustration": 0.55,
+        "guilt": 0.35,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "age": "adult",
+      "gratitude": "absent",
+      "responsibility": "fulfilled",
+      "emotions": {
+        "entitlement": 0.6000000000000001,
+        "arrogance": 0.30000000000000004,
+        "dissatisfaction": 0.10000000000000002
+      }
+    },
+    {
+      "age": "adult",
+      "gratitude": "absent",
+      "responsibility": "neglected",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.25,
+        "disappointment": 0.05
+      }
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "factors": {
+    "temperature": [
+      "cold",
+      "warm"
+    ],
+    "landscape": [
+      "barren",
+      "vibrant"
+    ],
+    "weather": [
+      "gloomy",
+      "bright"
+    ]
+  },
+  "cpt": [
+    {
+      "temperature": "cold",
+      "landscape": "barren",
+      "weather": "gloomy",
+      "emotions": {
+        "sadness": 0.6,
+        "isolation": 0.35,
+        "longing": 0.025,
+        "frustration": 0.025
+      }
+    },
+    {
+      "temperature": "cold",
+      "landscape": "barren",
+      "weather": "bright",
+      "emotions": {
+        "frustration": 0.30000000000000004,
+        "disappointment": 0.175,
+        "resignation": 0.125,
+        "sadness": 0.2,
+        "isolation": 0.15,
+        "hope": 0.05
+      }
+    },
+    {
+      "temperature": "cold",
+      "landscape": "vibrant",
+      "weather": "gloomy",
+      "emotions": {
+        "sadness": 0.4000000000000001,
+        "melancholy": 0.17500000000000002,
+        "despair": 0.07500000000000001,
+        "disappointment": 0.20000000000000004,
+        "frustration": 0.10000000000000002,
+        "longing": 0.05000000000000001
+      }
+    },
+    {
+      "temperature": "cold",
+      "landscape": "vibrant",
+      "weather": "bright",
+      "emotions": {
+        "surprise": 0.2,
+        "confusion": 0.15,
+        "curiosity": 0.15,
+        "happiness": 0.2,
+        "relief": 0.15,
+        "longing": 0.1,
+        "gratitude": 0.05
+      }
+    },
+    {
+      "temperature": "warm",
+      "landscape": "barren",
+      "weather": "gloomy",
+      "emotions": {
+        "sadness": 0.48717948717948717,
+        "discomfort": 0.1794871794871795,
+        "unease": 0.07692307692307693,
+        "isolation": 0.1794871794871795,
+        "frustration": 0.05128205128205129,
+        "melancholy": 0.025641025641025644
+      }
+    },
+    {
+      "temperature": "warm",
+      "landscape": "barren",
+      "weather": "bright",
+      "emotions": {
+        "happiness": 0.55,
+        "relief": 0.3,
+        "contentment": 0.1,
+        "gratitude": 0.05
+      }
+    },
+    {
+      "temperature": "warm",
+      "landscape": "vibrant",
+      "weather": "gloomy",
+      "emotions": {
+        "sadness": 0.45,
+        "disappointment": 0.35,
+        "melancholy": 0.075,
+        "frustration": 0.1,
+        "longing": 0.025
+      }
+    },
+    {
+      "temperature": "warm",
+      "landscape": "vibrant",
+      "weather": "bright",
+      "emotions": {
+        "joy": 0.325,
+        "gratitude": 0.3,
+        "delight": 0.05,
+        "happiness": 0.3,
+        "contentment": 0.025
+      }
+    }
+  ]
+}

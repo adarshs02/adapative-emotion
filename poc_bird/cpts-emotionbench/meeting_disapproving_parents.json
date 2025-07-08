@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "approval_from_parents": [
+      "approve",
+      "disapprove"
+    ],
+    "openness_from_fiance": [
+      "open",
+      "closed"
+    ],
+    "outcome_of_meeting": [
+      "positive",
+      "negative"
+    ]
+  },
+  "cpt": [
+    {
+      "approval_from_parents": "approve",
+      "openness_from_fiance": "open",
+      "outcome_of_meeting": "positive",
+      "emotions": {
+        "happy": 0.6000000000000001,
+        "relieved": 0.30000000000000004,
+        "confident": 0.10000000000000002
+      }
+    },
+    {
+      "approval_from_parents": "approve",
+      "openness_from_fiance": "closed",
+      "outcome_of_meeting": "positive",
+      "emotions": {
+        "surprised": 0.4,
+        "grateful": 0.35,
+        "anxious": 0.25
+      }
+    },
+    {
+      "approval_from_parents": "approve",
+      "openness_from_fiance": "open",
+      "outcome_of_meeting": "negative",
+      "emotions": {
+        "disappointed": 0.47368421052631576,
+        "frustrated": 0.36842105263157887,
+        "determined": 0.15789473684210525
+      }
+    },
+    {
+      "approval_from_parents": "approve",
+      "openness_from_fiance": "closed",
+      "outcome_of_meeting": "negative",
+      "emotions": {
+        "disappointed": 0.5,
+        "frustrated": 0.3,
+        "anxious": 0.2
+      }
+    },
+    {
+      "approval_from_parents": "disapprove",
+      "openness_from_fiance": "open",
+      "outcome_of_meeting": "positive",
+      "emotions": {
+        "proud": 0.25,
+        "relieved": 0.4,
+        "confident": 0.35
+      }
+    },
+    {
+      "approval_from_parents": "disapprove",
+      "openness_from_fiance": "closed",
+      "outcome_of_meeting": "positive",
+      "emotions": {
+        "surprised": 0.35,
+        "grateful": 0.4,
+        "anxious": 0.25
+      }
+    },
+    {
+      "approval_from_parents": "disapprove",
+      "openness_from_fiance": "open",
+      "outcome_of_meeting": "negative",
+      "emotions": {
+        "disappointed": 0.5789473684210527,
+        "frustrated": 0.36842105263157887,
+        "determined": 0.05263157894736842
+      }
+    },
+    {
+      "approval_from_parents": "disapprove",
+      "openness_from_fiance": "closed",
+      "outcome_of_meeting": "negative",
+      "emotions": {
+        "disappointed": 0.6000000000000001,
+        "frustrated": 0.30000000000000004,
+        "anxious": 0.10000000000000002
+      }
+    }
+  ]
+}

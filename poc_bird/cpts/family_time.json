@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "family_dynamics",
-      "values": [
-        "harmonious",
-        "tense"
-      ]
-    },
-    {
-      "name": "previous_evening_quality",
-      "values": [
-        "good",
-        "bad"
-      ]
-    },
-    {
-      "name": "shared_activity_type",
-      "values": [
-        "relaxing",
-        "energetic"
-      ]
-    }
-  ],
+  "factors": {
+    "quality_time": [
+      "spent_quality_time",
+      "did_not_spend_quality_time"
+    ],
+    "family_interaction": [
+      "positive_interaction",
+      "negative_interaction"
+    ],
+    "familiarity": [
+      "familiar",
+      "unfamiliar"
+    ]
+  },
   "cpt": [
     {
-      "family_dynamics": "harmonious",
-      "previous_evening_quality": "good",
-      "shared_activity_type": "relaxing",
+      "quality_time": "spent_quality_time",
+      "family_interaction": "positive_interaction",
+      "familiarity": "familiar",
       "emotions": {
-        "happiness": 0.8,
-        "contentment": 0.15,
-        "boredom": 0.05
+        "joy": 0.6,
+        "contentment": 0.35,
+        "sadness": 0.05
       }
     },
     {
-      "family_dynamics": "harmonious",
-      "previous_evening_quality": "good",
-      "shared_activity_type": "energetic",
+      "quality_time": "spent_quality_time",
+      "family_interaction": "positive_interaction",
+      "familiarity": "unfamiliar",
       "emotions": {
-        "happiness": 0.7,
-        "excitement": 0.25,
-        "frustration": 0.05
+        "happiness": 0.5,
+        "curiosity": 0.35,
+        "discomfort": 0.15
       }
     },
     {
-      "family_dynamics": "harmonious",
-      "previous_evening_quality": "bad",
-      "shared_activity_type": "relaxing",
+      "quality_time": "spent_quality_time",
+      "family_interaction": "negative_interaction",
+      "familiarity": "familiar",
       "emotions": {
-        "happiness": 0.4,
-        "contentment": 0.3,
-        "boredom": 0.3
+        "frustration": 0.45,
+        "irritation": 0.35,
+        "sadness": 0.15
       }
     },
     {
-      "family_dynamics": "harmonious",
-      "previous_evening_quality": "bad",
-      "shared_activity_type": "energetic",
+      "quality_time": "spent_quality_time",
+      "family_interaction": "negative_interaction",
+      "familiarity": "unfamiliar",
       "emotions": {
-        "happiness": 0.3,
-        "excitement": 0.4,
-        "frustration": 0.3
+        "unease": 0.5,
+        "annoyance": 0.35,
+        "discomfort": 0.15
       }
     },
     {
-      "family_dynamics": "tense",
-      "previous_evening_quality": "good",
-      "shared_activity_type": "relaxing",
+      "quality_time": "did_not_spend_quality_time",
+      "family_interaction": "positive_interaction",
+      "familiarity": "familiar",
       "emotions": {
-        "anxiety": 0.2,
-        "happiness": 0.3,
-        "irritation": 0.5
+        "regret": 0.6,
+        "longing": 0.35,
+        "contentment": 0.05
       }
     },
     {
-      "family_dynamics": "tense",
-      "previous_evening_quality": "good",
-      "shared_activity_type": "energetic",
+      "quality_time": "did_not_spend_quality_time",
+      "family_interaction": "positive_interaction",
+      "familiarity": "unfamiliar",
       "emotions": {
-        "anxiety": 0.1,
-        "excitement": 0.4,
-        "frustration": 0.5
+        "disappointment": 0.5,
+        "regret": 0.35,
+        "sadness": 0.15
       }
     },
     {
-      "family_dynamics": "tense",
-      "previous_evening_quality": "bad",
-      "shared_activity_type": "relaxing",
+      "quality_time": "did_not_spend_quality_time",
+      "family_interaction": "negative_interaction",
+      "familiarity": "familiar",
       "emotions": {
-        "anxiety": 0.5,
-        "happiness": 0.2,
-        "irritation": 0.3
+        "resentment": 0.45,
+        "anger": 0.35,
+        "sadness": 0.15
       }
     },
     {
-      "family_dynamics": "tense",
-      "previous_evening_quality": "bad",
-      "shared_activity_type": "energetic",
+      "quality_time": "did_not_spend_quality_time",
+      "family_interaction": "negative_interaction",
+      "familiarity": "unfamiliar",
       "emotions": {
-        "anxiety": 0.6,
-        "excitement": 0.2,
-        "frustration": 0.2
+        "resentment": 0.5,
+        "anger": 0.35,
+        "disappointment": 0.15
       }
     }
   ]

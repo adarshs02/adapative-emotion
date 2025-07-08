@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "sleep_quality": [
+      "poor",
+      "good"
+    ],
+    "task_pressure": [
+      "high",
+      "low"
+    ],
+    "passion_level": [
+      "dim",
+      "vibrant"
+    ]
+  },
+  "cpt": [
+    {
+      "sleep_quality": "poor",
+      "task_pressure": "high",
+      "passion_level": "dim",
+      "emotions": {
+        "anxiety": 0.6,
+        "frustration": 0.35,
+        "apathy": 0.05
+      }
+    },
+    {
+      "sleep_quality": "poor",
+      "task_pressure": "high",
+      "passion_level": "vibrant",
+      "emotions": {
+        "anxiety": 0.5,
+        "frustration": 0.4,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "sleep_quality": "poor",
+      "task_pressure": "low",
+      "passion_level": "dim",
+      "emotions": {
+        "fatigue": 0.7,
+        "apathy": 0.25,
+        "sadness": 0.05
+      }
+    },
+    {
+      "sleep_quality": "poor",
+      "task_pressure": "low",
+      "passion_level": "vibrant",
+      "emotions": {
+        "fatigue": 0.6000000000000001,
+        "sadness": 0.30000000000000004,
+        "boredom": 0.10000000000000002
+      }
+    },
+    {
+      "sleep_quality": "good",
+      "task_pressure": "high",
+      "passion_level": "dim",
+      "emotions": {
+        "anxiety": 0.45,
+        "frustration": 0.4,
+        "disappointment": 0.15
+      }
+    },
+    {
+      "sleep_quality": "good",
+      "task_pressure": "high",
+      "passion_level": "vibrant",
+      "emotions": {
+        "anxiety": 0.35,
+        "frustration": 0.4,
+        "determination": 0.25
+      }
+    },
+    {
+      "sleep_quality": "good",
+      "task_pressure": "low",
+      "passion_level": "dim",
+      "emotions": {
+        "relaxation": 0.7000000000000001,
+        "apathy": 0.20000000000000004,
+        "contentment": 0.10000000000000002
+      }
+    },
+    {
+      "sleep_quality": "good",
+      "task_pressure": "low",
+      "passion_level": "vibrant",
+      "emotions": {
+        "relaxation": 0.6000000000000001,
+        "contentment": 0.30000000000000004,
+        "happiness": 0.10000000000000002
+      }
+    }
+  ]
+}

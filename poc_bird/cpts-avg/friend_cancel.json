@@ -1,0 +1,100 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "communication_history": [
+      "clear",
+      "unclear"
+    ],
+    "friend_importance": [
+      "close",
+      "acquaintance"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "communication_history": "clear",
+      "friend_importance": "close",
+      "emotions": {
+        "surprised": 0.32499999999999996,
+        "disappointed": 0.4,
+        "confused": 0.275
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_history": "unclear",
+      "friend_importance": "close",
+      "emotions": {
+        "frustrated": 0.35,
+        "worried": 0.35,
+        "confused": 0.15,
+        "suspicious": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_history": "clear",
+      "friend_importance": "acquaintance",
+      "emotions": {
+        "indifferent": 0.5,
+        "surprised": 0.3,
+        "disappointed": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_history": "unclear",
+      "friend_importance": "acquaintance",
+      "emotions": {
+        "frustrated": 0.4,
+        "indifferent": 0.3,
+        "confused": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_history": "clear",
+      "friend_importance": "close",
+      "emotions": {
+        "angry": 0.55,
+        "disappointed": 0.3,
+        "frustrated": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_history": "unclear",
+      "friend_importance": "close",
+      "emotions": {
+        "angry": 0.6,
+        "disappointed": 0.125,
+        "frustrated": 0.125,
+        "suspicious": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_history": "clear",
+      "friend_importance": "acquaintance",
+      "emotions": {
+        "indifferent": 0.4,
+        "angry": 0.3,
+        "frustrated": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_history": "unclear",
+      "friend_importance": "acquaintance",
+      "emotions": {
+        "indifferent": 0.4,
+        "angry": 0.35,
+        "frustrated": 0.25
+      }
+    }
+  ]
+}

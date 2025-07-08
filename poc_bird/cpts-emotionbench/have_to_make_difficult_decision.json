@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "preparedness": [
+      "well_prepared",
+      "not_well_prepared"
+    ],
+    "consequence_severity": [
+      "minor",
+      "major"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "preparedness": "well_prepared",
+      "consequence_severity": "minor",
+      "offence_history": "first_time",
+      "emotions": {
+        "relief": 0.6000000000000001,
+        "satisfaction": 0.30000000000000004,
+        "anxiety": 0.10000000000000002
+      }
+    },
+    {
+      "preparedness": "well_prepared",
+      "consequence_severity": "minor",
+      "offence_history": "repeated",
+      "emotions": {
+        "regret": 0.44444444444444453,
+        "relief": 0.33333333333333337,
+        "satisfaction": 0.22222222222222227
+      }
+    },
+    {
+      "preparedness": "well_prepared",
+      "consequence_severity": "major",
+      "offence_history": "first_time",
+      "emotions": {
+        "fear": 0.5,
+        "anger": 0.3,
+        "regret": 0.2
+      }
+    },
+    {
+      "preparedness": "well_prepared",
+      "consequence_severity": "major",
+      "offence_history": "repeated",
+      "emotions": {
+        "anger": 0.6000000000000001,
+        "fear": 0.30000000000000004,
+        "regret": 0.10000000000000002
+      }
+    },
+    {
+      "preparedness": "not_well_prepared",
+      "consequence_severity": "minor",
+      "offence_history": "first_time",
+      "emotions": {
+        "anxiety": 0.7000000000000001,
+        "regret": 0.20000000000000004,
+        "surprise": 0.10000000000000002
+      }
+    },
+    {
+      "preparedness": "not_well_prepared",
+      "consequence_severity": "minor",
+      "offence_history": "repeated",
+      "emotions": {
+        "anxiety": 0.6000000000000001,
+        "regret": 0.30000000000000004,
+        "surprise": 0.10000000000000002
+      }
+    },
+    {
+      "preparedness": "not_well_prepared",
+      "consequence_severity": "major",
+      "offence_history": "first_time",
+      "emotions": {
+        "fear": 0.7000000000000001,
+        "anxiety": 0.20000000000000004,
+        "surprise": 0.10000000000000002
+      }
+    },
+    {
+      "preparedness": "not_well_prepared",
+      "consequence_severity": "major",
+      "offence_history": "repeated",
+      "emotions": {
+        "fear": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "surprise": 0.10000000000000002
+      }
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "preparation": [
+      "planned",
+      "unplanned"
+    ],
+    "traffic_conditions": [
+      "light",
+      "heavy"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "preparation": "planned",
+      "traffic_conditions": "light",
+      "emotions": {
+        "frustration": 0.2,
+        "annoyance": 0.175,
+        "relief": 0.125,
+        "happy": 0.1,
+        "frustrated": 0.2,
+        "anxious": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "preparation": "planned",
+      "traffic_conditions": "heavy",
+      "emotions": {
+        "frustration": 0.3,
+        "anger": 0.15,
+        "anxiety": 0.05,
+        "frustrated": 0.25,
+        "anxious": 0.175,
+        "angry": 0.075
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "preparation": "unplanned",
+      "traffic_conditions": "light",
+      "emotions": {
+        "surprise": 0.17500000000000002,
+        "frustration": 0.15000000000000002,
+        "annoyance": 0.17500000000000002,
+        "surprised": 0.15000000000000002,
+        "frustrated": 0.20000000000000004,
+        "anxious": 0.15000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "preparation": "unplanned",
+      "traffic_conditions": "heavy",
+      "emotions": {
+        "surprise": 0.225,
+        "frustration": 0.175,
+        "anger": 0.1,
+        "surprised": 0.125,
+        "frustrated": 0.25,
+        "angry": 0.125
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation": "planned",
+      "traffic_conditions": "light",
+      "emotions": {
+        "anger": 0.275,
+        "frustration": 0.175,
+        "annoyance": 0.05,
+        "frustrated": 0.15,
+        "angry": 0.25,
+        "anxious": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation": "planned",
+      "traffic_conditions": "heavy",
+      "emotions": {
+        "anger": 0.35,
+        "frustration": 0.125,
+        "anxiety": 0.025,
+        "angry": 0.3,
+        "frustrated": 0.15,
+        "anxious": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation": "unplanned",
+      "traffic_conditions": "light",
+      "emotions": {
+        "anger": 0.3,
+        "frustration": 0.15,
+        "annoyance": 0.05,
+        "frustrated": 0.2,
+        "angry": 0.25,
+        "anxious": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation": "unplanned",
+      "traffic_conditions": "heavy",
+      "emotions": {
+        "anger": 0.375,
+        "frustration": 0.1,
+        "anxiety": 0.025,
+        "angry": 0.35,
+        "frustrated": 0.1,
+        "anxious": 0.05
+      }
+    }
+  ]
+}

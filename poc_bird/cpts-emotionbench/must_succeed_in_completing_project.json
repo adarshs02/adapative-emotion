@@ -1,0 +1,109 @@
+{
+  "factors": {
+    "project_complexity": [
+      "simple",
+      "complex"
+    ],
+    "time_remaining": [
+      "plenty",
+      "little"
+    ],
+    "previous_success": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "project_complexity": "simple",
+      "time_remaining": "plenty",
+      "previous_success": "yes",
+      "emotions": {
+        "confident": 0.8,
+        "excited": 0.075,
+        "relaxed": 0.1,
+        "anxious": 0.025
+      }
+    },
+    {
+      "project_complexity": "simple",
+      "time_remaining": "plenty",
+      "previous_success": "no",
+      "emotions": {
+        "anxious": 0.42500000000000004,
+        "stressed": 0.275,
+        "frustrated": 0.1,
+        "nervous": 0.2
+      }
+    },
+    {
+      "project_complexity": "simple",
+      "time_remaining": "little",
+      "previous_success": "yes",
+      "emotions": {
+        "rushed": 0.3,
+        "stressed": 0.44999999999999996,
+        "determined": 0.2,
+        "confident": 0.05
+      }
+    },
+    {
+      "project_complexity": "simple",
+      "time_remaining": "little",
+      "previous_success": "no",
+      "emotions": {
+        "panicked": 0.35,
+        "stressed": 0.5,
+        "angry": 0.025,
+        "anxious": 0.1,
+        "frustrated": 0.025
+      }
+    },
+    {
+      "project_complexity": "complex",
+      "time_remaining": "plenty",
+      "previous_success": "yes",
+      "emotions": {
+        "confident": 0.425,
+        "determined": 0.5,
+        "excited": 0.05,
+        "focused": 0.025
+      }
+    },
+    {
+      "project_complexity": "complex",
+      "time_remaining": "plenty",
+      "previous_success": "no",
+      "emotions": {
+        "anxious": 0.45,
+        "stressed": 0.2,
+        "frustrated": 0.05,
+        "nervous": 0.25,
+        "overwhelmed": 0.05
+      }
+    },
+    {
+      "project_complexity": "complex",
+      "time_remaining": "little",
+      "previous_success": "yes",
+      "emotions": {
+        "rushed": 0.35,
+        "stressed": 0.525,
+        "determined": 0.1,
+        "focused": 0.025
+      }
+    },
+    {
+      "project_complexity": "complex",
+      "time_remaining": "little",
+      "previous_success": "no",
+      "emotions": {
+        "panicked": 0.4,
+        "stressed": 0.525,
+        "angry": 0.025,
+        "anxious": 0.025,
+        "overwhelmed": 0.025
+      }
+    }
+  ]
+}

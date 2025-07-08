@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "control_over_score": [
+      "has_control",
+      "no_control"
+    ],
+    "exam_importance": [
+      "low",
+      "high"
+    ],
+    "exam_preparation": [
+      "well_prepared",
+      "poorly_prepared"
+    ]
+  },
+  "cpt": [
+    {
+      "control_over_score": "has_control",
+      "exam_importance": "low",
+      "exam_preparation": "well_prepared",
+      "emotions": {
+        "relief": 0.7,
+        "satisfaction": 0.25,
+        "frustration": 0.05
+      }
+    },
+    {
+      "control_over_score": "has_control",
+      "exam_importance": "low",
+      "exam_preparation": "poorly_prepared",
+      "emotions": {
+        "disappointment": 0.6,
+        "frustration": 0.35,
+        "anger": 0.05
+      }
+    },
+    {
+      "control_over_score": "has_control",
+      "exam_importance": "high",
+      "exam_preparation": "well_prepared",
+      "emotions": {
+        "satisfaction": 0.7,
+        "relief": 0.25,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "control_over_score": "has_control",
+      "exam_importance": "high",
+      "exam_preparation": "poorly_prepared",
+      "emotions": {
+        "anxiety": 0.6,
+        "frustration": 0.35,
+        "anger": 0.05
+      }
+    },
+    {
+      "control_over_score": "no_control",
+      "exam_importance": "low",
+      "exam_preparation": "well_prepared",
+      "emotions": {
+        "worry": 0.7,
+        "anxiety": 0.25,
+        "relief": 0.05
+      }
+    },
+    {
+      "control_over_score": "no_control",
+      "exam_importance": "low",
+      "exam_preparation": "poorly_prepared",
+      "emotions": {
+        "worry": 0.6,
+        "anxiety": 0.35,
+        "anger": 0.05
+      }
+    },
+    {
+      "control_over_score": "no_control",
+      "exam_importance": "high",
+      "exam_preparation": "well_prepared",
+      "emotions": {
+        "worry": 0.7,
+        "anxiety": 0.25,
+        "fear": 0.05
+      }
+    },
+    {
+      "control_over_score": "no_control",
+      "exam_importance": "high",
+      "exam_preparation": "poorly_prepared",
+      "emotions": {
+        "worry": 0.6,
+        "anxiety": 0.35,
+        "fear": 0.05
+      }
+    }
+  ]
+}

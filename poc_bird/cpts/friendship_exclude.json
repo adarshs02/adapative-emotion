@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "friendship_quality",
-      "values": [
-        "close",
-        "distant"
-      ]
-    },
-    {
-      "name": "social_status",
-      "values": [
-        "popular",
-        "not_popular"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "friend_communication": [
+      "open",
+      "closed"
+    ],
+    "social_anxiety": [
+      "low",
+      "high"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "friendship_quality": "close",
-      "social_status": "popular",
+      "friend_communication": "open",
+      "social_anxiety": "low",
       "emotions": {
-        "hurt": 0.7,
-        "anger": 0.2,
-        "disappointment": 0.1
+        "happy": 0.1,
+        "surprised": 0.3,
+        "disappointed": 0.6
       }
     },
     {
       "offence_history": "first_time",
-      "friendship_quality": "close",
-      "social_status": "not_popular",
+      "friend_communication": "open",
+      "social_anxiety": "high",
       "emotions": {
-        "hurt": 0.6,
-        "anger": 0.3,
-        "disappointment": 0.1
+        "anxious": 0.25,
+        "disappointed": 0.5,
+        "angry": 0.25
       }
     },
     {
       "offence_history": "first_time",
-      "friendship_quality": "distant",
-      "social_status": "popular",
+      "friend_communication": "closed",
+      "social_anxiety": "low",
+      "emotions": {
+        "hurt": 0.3,
+        "disappointed": 0.5,
+        "confused": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_communication": "closed",
+      "social_anxiety": "high",
       "emotions": {
         "hurt": 0.4,
-        "anger": 0.3,
-        "disappointment": 0.3
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "friendship_quality": "distant",
-      "social_status": "not_popular",
-      "emotions": {
-        "hurt": 0.5,
-        "anger": 0.2,
-        "disappointment": 0.3
+        "angry": 0.4,
+        "anxious": 0.2
       }
     },
     {
       "offence_history": "repeated",
-      "friendship_quality": "close",
-      "social_status": "popular",
+      "friend_communication": "open",
+      "social_anxiety": "low",
       "emotions": {
-        "anger": 0.6,
+        "disappointed": 0.2,
+        "angry": 0.5,
+        "hurt": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_communication": "open",
+      "social_anxiety": "high",
+      "emotions": {
+        "angry": 0.55,
+        "hurt": 0.35,
+        "disappointed": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_communication": "closed",
+      "social_anxiety": "low",
+      "emotions": {
+        "angry": 0.6,
         "hurt": 0.3,
-        "disappointment": 0.1
+        "disappointed": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "friendship_quality": "close",
-      "social_status": "not_popular",
+      "friend_communication": "closed",
+      "social_anxiety": "high",
       "emotions": {
-        "anger": 0.7,
+        "angry": 0.7,
         "hurt": 0.2,
-        "disappointment": 0.1
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "friendship_quality": "distant",
-      "social_status": "popular",
-      "emotions": {
-        "anger": 0.8,
-        "hurt": 0.1,
-        "disappointment": 0.1
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "friendship_quality": "distant",
-      "social_status": "not_popular",
-      "emotions": {
-        "anger": 0.9,
-        "hurt": 0.08,
-        "disappointment": 0.02
+        "disappointed": 0.1
       }
     }
   ]

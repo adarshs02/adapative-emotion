@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "caller_intent",
-      "values": [
-        "friendly",
-        "suspicious"
-      ]
-    },
-    {
-      "name": "time_of_day",
-      "values": [
-        "daytime",
-        "nighttime"
-      ]
-    }
-  ],
+  "factors": {
+    "call_history": [
+      "first_time",
+      "repeated"
+    ],
+    "call_nature": [
+      "friendly",
+      "harassing"
+    ],
+    "call_unknown_identity": [
+      "known",
+      "unknown"
+    ]
+  },
   "cpt": [
     {
-      "offence_history": "first_time",
-      "caller_intent": "friendly",
-      "time_of_day": "daytime",
+      "call_history": "first_time",
+      "call_nature": "friendly",
+      "call_unknown_identity": "known",
       "emotions": {
-        "anxiety": 0.8,
-        "curiosity": 0.2,
-        "relaxation": 0.0
+        "curiosity": 0.6,
+        "relief": 0.35,
+        "anxiety": 0.05
       }
     },
     {
-      "offence_history": "first_time",
-      "caller_intent": "friendly",
-      "time_of_day": "nighttime",
+      "call_history": "first_time",
+      "call_nature": "friendly",
+      "call_unknown_identity": "unknown",
       "emotions": {
-        "anxiety": 0.6,
+        "surprise": 0.7,
+        "curiosity": 0.25,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "call_history": "first_time",
+      "call_nature": "harassing",
+      "call_unknown_identity": "known",
+      "emotions": {
+        "anger": 0.8,
+        "fear": 0.15,
+        "confusion": 0.05
+      }
+    },
+    {
+      "call_history": "first_time",
+      "call_nature": "harassing",
+      "call_unknown_identity": "unknown",
+      "emotions": {
+        "fear": 0.85,
+        "anger": 0.1,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "call_history": "repeated",
+      "call_nature": "friendly",
+      "call_unknown_identity": "known",
+      "emotions": {
+        "familiarity": 0.6,
         "curiosity": 0.3,
-        "relaxation": 0.1
+        "relief": 0.1
       }
     },
     {
-      "offence_history": "first_time",
-      "caller_intent": "suspicious",
-      "time_of_day": "daytime",
+      "call_history": "repeated",
+      "call_nature": "friendly",
+      "call_unknown_identity": "unknown",
       "emotions": {
-        "anxiety": 0.4,
-        "curiosity": 0.5,
-        "relaxation": 0.1
+        "surprise": 0.6,
+        "curiosity": 0.3,
+        "relief": 0.1
       }
     },
     {
-      "offence_history": "first_time",
-      "caller_intent": "suspicious",
-      "time_of_day": "nighttime",
+      "call_history": "repeated",
+      "call_nature": "harassing",
+      "call_unknown_identity": "known",
       "emotions": {
-        "anxiety": 0.7,
-        "curiosity": 0.2,
-        "relaxation": 0.1
+        "anger": 0.9,
+        "fear": 0.05,
+        "frustration": 0.05
       }
     },
     {
-      "offence_history": "repeated",
-      "caller_intent": "friendly",
-      "time_of_day": "daytime",
+      "call_history": "repeated",
+      "call_nature": "harassing",
+      "call_unknown_identity": "unknown",
       "emotions": {
-        "anxiety": 0.2,
-        "curiosity": 0.7,
-        "relaxation": 0.1
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "caller_intent": "friendly",
-      "time_of_day": "nighttime",
-      "emotions": {
-        "anxiety": 0.5,
-        "curiosity": 0.4,
-        "relaxation": 0.1
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "caller_intent": "suspicious",
-      "time_of_day": "daytime",
-      "emotions": {
-        "anxiety": 0.9,
-        "curiosity": 0.1,
-        "relaxation": 0.0
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "caller_intent": "suspicious",
-      "time_of_day": "nighttime",
-      "emotions": {
-        "anxiety": 0.95,
-        "curiosity": 0.05,
-        "relaxation": 0.0
+        "fear": 0.95,
+        "anger": 0.03,
+        "anxiety": 0.02
       }
     }
   ]

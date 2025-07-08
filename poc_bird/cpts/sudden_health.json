@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "chest_pain_type",
-      "values": [
-        "acute",
-        "chronic"
-      ]
-    },
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "physical_activity",
-      "values": [
-        "recent",
-        "none"
-      ]
-    }
-  ],
+  "factors": {
+    "pain_severity": [
+      "mild",
+      "severe"
+    ],
+    "medical_history": [
+      "healthy",
+      "pre-existing_conditions"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
   "cpt": [
     {
-      "chest_pain_type": "acute",
+      "pain_severity": "mild",
+      "medical_history": "healthy",
       "offence_history": "first_time",
-      "physical_activity": "recent",
       "emotions": {
-        "anxiety": 0.6,
-        "fear": 0.3,
-        "relief": 0.1
-      }
-    },
-    {
-      "chest_pain_type": "acute",
-      "offence_history": "first_time",
-      "physical_activity": "none",
-      "emotions": {
-        "anxiety": 0.8,
-        "fear": 0.2,
-        "relief": 0.0
-      }
-    },
-    {
-      "chest_pain_type": "acute",
-      "offence_history": "repeated",
-      "physical_activity": "recent",
-      "emotions": {
-        "anxiety": 0.4,
-        "fear": 0.5,
-        "relief": 0.1
-      }
-    },
-    {
-      "chest_pain_type": "acute",
-      "offence_history": "repeated",
-      "physical_activity": "none",
-      "emotions": {
-        "anxiety": 0.7,
-        "fear": 0.2,
-        "relief": 0.1
-      }
-    },
-    {
-      "chest_pain_type": "chronic",
-      "offence_history": "first_time",
-      "physical_activity": "recent",
-      "emotions": {
-        "anxiety": 0.2,
-        "fear": 0.6,
-        "relief": 0.2
-      }
-    },
-    {
-      "chest_pain_type": "chronic",
-      "offence_history": "first_time",
-      "physical_activity": "none",
-      "emotions": {
-        "anxiety": 0.5,
+        "surprise": 0.3,
         "fear": 0.4,
-        "relief": 0.1
+        "anxiety": 0.3
       }
     },
     {
-      "chest_pain_type": "chronic",
+      "pain_severity": "mild",
+      "medical_history": "healthy",
       "offence_history": "repeated",
-      "physical_activity": "recent",
       "emotions": {
-        "anxiety": 0.1,
-        "fear": 0.8,
-        "relief": 0.1
+        "frustration": 0.25,
+        "anxiety": 0.5,
+        "anger": 0.25
       }
     },
     {
-      "chest_pain_type": "chronic",
-      "offence_history": "repeated",
-      "physical_activity": "none",
+      "pain_severity": "mild",
+      "medical_history": "pre-existing_conditions",
+      "offence_history": "first_time",
       "emotions": {
+        "worry": 0.4,
+        "anxiety": 0.5,
+        "fear": 0.1
+      }
+    },
+    {
+      "pain_severity": "mild",
+      "medical_history": "pre-existing_conditions",
+      "offence_history": "repeated",
+      "emotions": {
+        "worry": 0.35,
+        "anxiety": 0.55,
+        "fear": 0.1
+      }
+    },
+    {
+      "pain_severity": "severe",
+      "medical_history": "healthy",
+      "offence_history": "first_time",
+      "emotions": {
+        "fear": 0.6,
         "anxiety": 0.3,
+        "panic": 0.1
+      }
+    },
+    {
+      "pain_severity": "severe",
+      "medical_history": "healthy",
+      "offence_history": "repeated",
+      "emotions": {
+        "anger": 0.4,
         "fear": 0.5,
-        "relief": 0.2
+        "anxiety": 0.1
+      }
+    },
+    {
+      "pain_severity": "severe",
+      "medical_history": "pre-existing_conditions",
+      "offence_history": "first_time",
+      "emotions": {
+        "worry": 0.55,
+        "anxiety": 0.35,
+        "fear": 0.05
+      }
+    },
+    {
+      "pain_severity": "severe",
+      "medical_history": "pre-existing_conditions",
+      "offence_history": "repeated",
+      "emotions": {
+        "worry": 0.6,
+        "anxiety": 0.3,
+        "fear": 0.1
       }
     }
   ]

@@ -1,0 +1,104 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "social_support": [
+      "none",
+      "present"
+    ],
+    "self_esteem": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "social_support": "none",
+      "self_esteem": "low",
+      "emotions": {
+        "shame": 0.30000000000000004,
+        "sadness": 0.47500000000000003,
+        "anger": 0.07500000000000002,
+        "disappointment": 0.15000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_support": "none",
+      "self_esteem": "high",
+      "emotions": {
+        "disappointment": 0.375,
+        "sadness": 0.2,
+        "frustration": 0.225,
+        "embarrassment": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_support": "present",
+      "self_esteem": "low",
+      "emotions": {
+        "shame": 0.3,
+        "sadness": 0.47500000000000003,
+        "disappointment": 0.22499999999999998
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_support": "present",
+      "self_esteem": "high",
+      "emotions": {
+        "relief": 0.3,
+        "gratitude": 0.25,
+        "disappointment": 0.45
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_support": "none",
+      "self_esteem": "low",
+      "emotions": {
+        "shame": 0.358974358974359,
+        "sadness": 0.358974358974359,
+        "anger": 0.10256410256410259,
+        "disappointment": 0.1794871794871795
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_support": "none",
+      "self_esteem": "high",
+      "emotions": {
+        "anger": 0.44999999999999996,
+        "disappointment": 0.35,
+        "frustration": 0.05,
+        "embarrassment": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_support": "present",
+      "self_esteem": "low",
+      "emotions": {
+        "shame": 0.325,
+        "sadness": 0.375,
+        "anger": 0.15000000000000002,
+        "disappointment": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_support": "present",
+      "self_esteem": "high",
+      "emotions": {
+        "anger": 0.525,
+        "disappointment": 0.32500000000000007,
+        "determination": 0.025000000000000005,
+        "embarrassment": 0.12500000000000003
+      }
+    }
+  ]
+}

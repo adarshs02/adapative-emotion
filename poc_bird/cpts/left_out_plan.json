@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "relationship_with_planner",
-      "values": [
-        "close",
-        "distant"
-      ]
-    },
-    {
-      "name": "level_of_inclusion",
-      "values": [
-        "invited",
-        "uninvited"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "invited_status": [
+      "yes",
+      "no"
+    ],
+    "friendship_level": [
+      "close",
+      "acquaintance"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "relationship_with_planner": "close",
-      "level_of_inclusion": "invited",
+      "invited_status": "yes",
+      "friendship_level": "close",
       "emotions": {
-        "hurt": 0.8,
-        "anger": 0.15,
-        "disappointment": 0.05
+        "surprise": 0.3,
+        "confusion": 0.4,
+        "indifference": 0.3
       }
     },
     {
       "offence_history": "first_time",
-      "relationship_with_planner": "close",
-      "level_of_inclusion": "uninvited",
+      "invited_status": "yes",
+      "friendship_level": "acquaintance",
       "emotions": {
-        "hurt": 0.7,
-        "anger": 0.25,
-        "disappointment": 0.05
+        "surprise": 0.4,
+        "confusion": 0.35,
+        "annoyance": 0.25
       }
     },
     {
       "offence_history": "first_time",
-      "relationship_with_planner": "distant",
-      "level_of_inclusion": "invited",
+      "invited_status": "no",
+      "friendship_level": "close",
       "emotions": {
-        "hurt": 0.6,
-        "anger": 0.3,
-        "disappointment": 0.1
+        "shock": 0.5,
+        "disappointment": 0.4,
+        "indifference": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "relationship_with_planner": "distant",
-      "level_of_inclusion": "uninvited",
+      "invited_status": "no",
+      "friendship_level": "acquaintance",
       "emotions": {
-        "hurt": 0.5,
-        "anger": 0.35,
-        "disappointment": 0.15
+        "shock": 0.6,
+        "disappointment": 0.3,
+        "resentment": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "relationship_with_planner": "close",
-      "level_of_inclusion": "invited",
+      "invited_status": "yes",
+      "friendship_level": "close",
       "emotions": {
         "anger": 0.6,
-        "hurt": 0.35,
-        "disappointment": 0.05
+        "disappointment": 0.3,
+        "betrayal": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "relationship_with_planner": "close",
-      "level_of_inclusion": "uninvited",
-      "emotions": {
-        "anger": 0.8,
-        "hurt": 0.15,
-        "disappointment": 0.05
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "relationship_with_planner": "distant",
-      "level_of_inclusion": "invited",
+      "invited_status": "yes",
+      "friendship_level": "acquaintance",
       "emotions": {
         "anger": 0.7,
-        "hurt": 0.25,
-        "disappointment": 0.05
+        "disappointment": 0.2,
+        "resentment": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "relationship_with_planner": "distant",
-      "level_of_inclusion": "uninvited",
+      "invited_status": "no",
+      "friendship_level": "close",
       "emotions": {
-        "anger": 0.85,
-        "hurt": 0.1,
-        "disappointment": 0.05
+        "anger": 0.8,
+        "disappointment": 0.15,
+        "betrayal": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "invited_status": "no",
+      "friendship_level": "acquaintance",
+      "emotions": {
+        "anger": 0.9,
+        "disappointment": 0.05,
+        "resentment": 0.05
       }
     }
   ]

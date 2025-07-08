@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "trust_level",
-      "values": [
-        "high",
-        "low"
-      ]
-    },
-    {
-      "name": "relationship_type",
-      "values": [
-        "close",
-        "distant"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "trust_level": [
+      "high",
+      "low"
+    ],
+    "intent_of_sharer": [
+      "supportive",
+      "malicious"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
       "trust_level": "high",
-      "relationship_type": "close",
+      "intent_of_sharer": "supportive",
       "emotions": {
-        "shame": 0.7,
-        "relief": 0.2,
-        "guilt": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "trust_level": "high",
-      "relationship_type": "distant",
-      "emotions": {
-        "relief": 0.6,
-        "shame": 0.3,
-        "surprise": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "trust_level": "low",
-      "relationship_type": "close",
-      "emotions": {
-        "shame": 0.5,
         "surprise": 0.3,
-        "defensiveness": 0.2
+        "gratitude": 0.45,
+        "relief": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "high",
+      "intent_of_sharer": "malicious",
+      "emotions": {
+        "shock": 0.4,
+        "anger": 0.45,
+        "fear": 0.15
       }
     },
     {
       "offence_history": "first_time",
       "trust_level": "low",
-      "relationship_type": "distant",
+      "intent_of_sharer": "supportive",
       "emotions": {
-        "surprise": 0.5,
-        "defensiveness": 0.3,
-        "anger": 0.2
+        "suspicion": 0.5,
+        "surprise": 0.3,
+        "relief": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "low",
+      "intent_of_sharer": "malicious",
+      "emotions": {
+        "suspicion": 0.6,
+        "anger": 0.3,
+        "fear": 0.1
       }
     },
     {
       "offence_history": "repeated",
       "trust_level": "high",
-      "relationship_type": "close",
+      "intent_of_sharer": "supportive",
       "emotions": {
-        "anger": 0.6,
-        "guilt": 0.3,
-        "resentment": 0.1
+        "surprise": 0.2,
+        "gratitude": 0.4,
+        "relief": 0.4
       }
     },
     {
       "offence_history": "repeated",
       "trust_level": "high",
-      "relationship_type": "distant",
+      "intent_of_sharer": "malicious",
       "emotions": {
-        "anger": 0.7,
-        "resentment": 0.2,
-        "frustration": 0.1
+        "shock": 0.35,
+        "anger": 0.55,
+        "fear": 0.05
       }
     },
     {
       "offence_history": "repeated",
       "trust_level": "low",
-      "relationship_type": "close",
+      "intent_of_sharer": "supportive",
       "emotions": {
-        "anger": 0.8,
-        "resentment": 0.1,
-        "defensiveness": 0.1
+        "suspicion": 0.6,
+        "surprise": 0.3,
+        "relief": 0.1
       }
     },
     {
       "offence_history": "repeated",
       "trust_level": "low",
-      "relationship_type": "distant",
+      "intent_of_sharer": "malicious",
       "emotions": {
-        "anger": 0.9,
-        "frustration": 0.08,
-        "defensiveness": 0.02
+        "suspicion": 0.7,
+        "anger": 0.25,
+        "fear": 0.05
       }
     }
   ]

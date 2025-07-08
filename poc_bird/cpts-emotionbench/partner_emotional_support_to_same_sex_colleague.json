@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "support_intent": [
+      "genuine",
+      "insincere"
+    ],
+    "partner_involvement_level": [
+      "minimal",
+      "significant"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "support_intent": "genuine",
+      "partner_involvement_level": "minimal",
+      "emotions": {
+        "happy": 0.6000000000000001,
+        "proud": 0.30000000000000004,
+        "jealous": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_intent": "genuine",
+      "partner_involvement_level": "significant",
+      "emotions": {
+        "happy": 0.55,
+        "proud": 0.35,
+        "concerned": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_intent": "insincere",
+      "partner_involvement_level": "minimal",
+      "emotions": {
+        "suspicious": 0.6000000000000001,
+        "angry": 0.30000000000000004,
+        "indifferent": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_intent": "insincere",
+      "partner_involvement_level": "significant",
+      "emotions": {
+        "suspicious": 0.55,
+        "angry": 0.35,
+        "betrayed": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_intent": "genuine",
+      "partner_involvement_level": "minimal",
+      "emotions": {
+        "happy": 0.4,
+        "proud": 0.4,
+        "frustrated": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_intent": "genuine",
+      "partner_involvement_level": "significant",
+      "emotions": {
+        "happy": 0.35,
+        "proud": 0.4,
+        "frustrated": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_intent": "insincere",
+      "partner_involvement_level": "minimal",
+      "emotions": {
+        "suspicious": 0.6000000000000001,
+        "angry": 0.30000000000000004,
+        "disappointed": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_intent": "insincere",
+      "partner_involvement_level": "significant",
+      "emotions": {
+        "suspicious": 0.55,
+        "angry": 0.35,
+        "disappointed": 0.1
+      }
+    }
+  ]
+}

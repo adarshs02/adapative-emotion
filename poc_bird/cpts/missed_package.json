@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "delivery_importance",
-      "values": [
-        "low",
-        "high"
-      ]
-    },
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "time_pressure",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "delivery_importance": [
+      "high",
+      "low"
+    ],
+    "delivery_frequency": [
+      "rare",
+      "frequent"
+    ],
+    "preparation_level": [
+      "well_prepared",
+      "unprepared"
+    ]
+  },
   "cpt": [
     {
-      "delivery_importance": "low",
-      "offence_history": "first_time",
-      "time_pressure": "low",
+      "delivery_importance": "high",
+      "delivery_frequency": "rare",
+      "preparation_level": "well_prepared",
       "emotions": {
-        "frustration": 0.6,
-        "relief": 0.4,
-        "indifference": 0.0
-      }
-    },
-    {
-      "delivery_importance": "low",
-      "offence_history": "first_time",
-      "time_pressure": "high",
-      "emotions": {
-        "frustration": 0.7,
-        "relief": 0.2,
-        "indifference": 0.1
-      }
-    },
-    {
-      "delivery_importance": "low",
-      "offence_history": "repeated",
-      "time_pressure": "low",
-      "emotions": {
-        "frustration": 0.4,
-        "relief": 0.3,
-        "indifference": 0.3
-      }
-    },
-    {
-      "delivery_importance": "low",
-      "offence_history": "repeated",
-      "time_pressure": "high",
-      "emotions": {
-        "frustration": 0.6,
-        "relief": 0.2,
-        "indifference": 0.2
+        "relief": 0.6,
+        "frustration": 0.3,
+        "disappointment": 0.1
       }
     },
     {
       "delivery_importance": "high",
-      "offence_history": "first_time",
-      "time_pressure": "low",
+      "delivery_frequency": "rare",
+      "preparation_level": "unprepared",
+      "emotions": {
+        "frustration": 0.75,
+        "disappointment": 0.2,
+        "anger": 0.05
+      }
+    },
+    {
+      "delivery_importance": "high",
+      "delivery_frequency": "frequent",
+      "preparation_level": "well_prepared",
+      "emotions": {
+        "relief": 0.4,
+        "frustration": 0.5,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "delivery_importance": "high",
+      "delivery_frequency": "frequent",
+      "preparation_level": "unprepared",
       "emotions": {
         "frustration": 0.8,
-        "relief": 0.1,
-        "indifference": 0.1
+        "disappointment": 0.15,
+        "anger": 0.05
       }
     },
     {
-      "delivery_importance": "high",
-      "offence_history": "first_time",
-      "time_pressure": "high",
+      "delivery_importance": "low",
+      "delivery_frequency": "rare",
+      "preparation_level": "well_prepared",
       "emotions": {
-        "frustration": 0.9,
-        "relief": 0.05,
-        "indifference": 0.05
-      }
-    },
-    {
-      "delivery_importance": "high",
-      "offence_history": "repeated",
-      "time_pressure": "low",
-      "emotions": {
-        "frustration": 0.7,
         "relief": 0.2,
-        "indifference": 0.1
+        "indifference": 0.7,
+        "happiness": 0.1
       }
     },
     {
-      "delivery_importance": "high",
-      "offence_history": "repeated",
-      "time_pressure": "high",
+      "delivery_importance": "low",
+      "delivery_frequency": "rare",
+      "preparation_level": "unprepared",
       "emotions": {
-        "frustration": 0.9,
-        "relief": 0.05,
-        "indifference": 0.05
+        "indifference": 0.6,
+        "frustration": 0.3,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "delivery_importance": "low",
+      "delivery_frequency": "frequent",
+      "preparation_level": "well_prepared",
+      "emotions": {
+        "indifference": 0.8,
+        "relief": 0.1,
+        "happiness": 0.1
+      }
+    },
+    {
+      "delivery_importance": "low",
+      "delivery_frequency": "frequent",
+      "preparation_level": "unprepared",
+      "emotions": {
+        "indifference": 0.9,
+        "frustration": 0.05,
+        "disappointment": 0.05
       }
     }
   ]

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "self_worth": [
+      "high",
+      "low"
+    ],
+    "acceptance_level": [
+      "accepting",
+      "denying"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "self_worth": "high",
+      "acceptance_level": "accepting",
+      "emotions": {
+        "happiness": 0.1,
+        "sadness": 0.3,
+        "regret": 0.6
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "self_worth": "high",
+      "acceptance_level": "denying",
+      "emotions": {
+        "anger": 0.2,
+        "sadness": 0.5,
+        "acceptance": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "self_worth": "high",
+      "acceptance_level": "accepting",
+      "emotions": {
+        "anger": 0.4,
+        "sadness": 0.5,
+        "regret": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "self_worth": "high",
+      "acceptance_level": "denying",
+      "emotions": {
+        "anger": 0.6000000000000001,
+        "sadness": 0.30000000000000004,
+        "denial": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "self_worth": "low",
+      "acceptance_level": "accepting",
+      "emotions": {
+        "sadness": 0.7000000000000001,
+        "regret": 0.20000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "self_worth": "low",
+      "acceptance_level": "denying",
+      "emotions": {
+        "sadness": 0.6000000000000001,
+        "anger": 0.30000000000000004,
+        "self_pity": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "self_worth": "low",
+      "acceptance_level": "accepting",
+      "emotions": {
+        "sadness": 0.8,
+        "anger": 0.15,
+        "regret": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "self_worth": "low",
+      "acceptance_level": "denying",
+      "emotions": {
+        "anger": 0.8,
+        "denial": 0.15,
+        "self_blame": 0.05
+      }
+    }
+  ]
+}

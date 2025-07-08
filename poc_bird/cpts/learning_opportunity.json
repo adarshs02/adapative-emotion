@@ -1,106 +1,98 @@
 {
-  "factors": [
-    {
-      "name": "workshop_interest",
-      "values": [
-        "high",
-        "low"
-      ]
-    },
-    {
-      "name": "workshop_difficulty",
-      "values": [
-        "easy",
-        "hard"
-      ]
-    },
-    {
-      "name": "time_commitment",
-      "values": [
-        "short",
-        "long"
-      ]
-    }
-  ],
+  "factors": {
+    "workshop_interest_level": [
+      "high",
+      "low"
+    ],
+    "workshop_expectations": [
+      "met",
+      "exceeded",
+      "unmet"
+    ],
+    "workshop_cost": [
+      "free",
+      "paid"
+    ]
+  },
   "cpt": [
     {
-      "workshop_interest": "high",
-      "workshop_difficulty": "easy",
-      "time_commitment": "short",
+      "workshop_interest_level": "high",
+      "workshop_expectations": "met",
+      "workshop_cost": "free",
       "emotions": {
-        "excitement": 0.8,
-        "anxiety": 0.15,
+        "joy": 0.6,
+        "satisfaction": 0.35,
         "boredom": 0.05
       }
     },
     {
-      "workshop_interest": "high",
-      "workshop_difficulty": "easy",
-      "time_commitment": "long",
+      "workshop_interest_level": "high",
+      "workshop_expectations": "met",
+      "workshop_cost": "paid",
       "emotions": {
-        "excitement": 0.7,
-        "anxiety": 0.2,
-        "boredom": 0.1
+        "contentment": 0.55,
+        "satisfaction": 0.35,
+        "disappointment": 0.05
       }
     },
     {
-      "workshop_interest": "high",
-      "workshop_difficulty": "hard",
-      "time_commitment": "short",
+      "workshop_interest_level": "high",
+      "workshop_expectations": "exceeded",
+      "workshop_cost": "free",
       "emotions": {
-        "anxiety": 0.6,
-        "excitement": 0.3,
-        "boredom": 0.1
+        "elation": 0.7,
+        "satisfaction": 0.25,
+        "surprise": 0.05
       }
     },
     {
-      "workshop_interest": "high",
-      "workshop_difficulty": "hard",
-      "time_commitment": "long",
+      "workshop_interest_level": "high",
+      "workshop_expectations": "exceeded",
+      "workshop_cost": "paid",
       "emotions": {
-        "anxiety": 0.8,
-        "excitement": 0.15,
-        "boredom": 0.05
+        "gratitude": 0.6,
+        "satisfaction": 0.35,
+        "delight": 0.05
       }
     },
     {
-      "workshop_interest": "low",
-      "workshop_difficulty": "easy",
-      "time_commitment": "short",
+      "workshop_interest_level": "high",
+      "workshop_expectations": "unmet",
+      "workshop_cost": "free",
       "emotions": {
-        "boredom": 0.9,
-        "excitement": 0.05,
-        "anxiety": 0.05
+        "disappointment": 0.7,
+        "frustration": 0.25,
+        "sadness": 0.05
       }
     },
     {
-      "workshop_interest": "low",
-      "workshop_difficulty": "easy",
-      "time_commitment": "long",
+      "workshop_interest_level": "high",
+      "workshop_expectations": "unmet",
+      "workshop_cost": "paid",
       "emotions": {
-        "boredom": 0.8,
-        "excitement": 0.1,
-        "anxiety": 0.1
+        "disappointment": 0.6,
+        "frustration": 0.35,
+        "anger": 0.05
       }
     },
     {
-      "workshop_interest": "low",
-      "workshop_difficulty": "hard",
-      "time_commitment": "short",
+      "workshop_interest_level": "low",
+      "workshop_expectations": "met",
+      "workshop_cost": "free",
       "emotions": {
-        "anxiety": 0.7,
-        "boredom": 0.25,
-        "excitement": 0.05
+        "boredom": 0.7,
+        "disappointment": 0.25,
+        "apathy": 0.05
       }
     },
     {
-      "workshop_interest": "low",
-      "workshop_difficulty": "hard",
-      "time_commitment": "long",
+      "workshop_interest_level": "low",
+      "workshop_expectations": "met",
+      "workshop_cost": "paid",
       "emotions": {
-        "anxiety": 0.9,
-        "boredom": 0.08,
-        "excitement": 0.02
+        "regret": 0.6,
+        "disappointment": 0.35,
+        "frustration": 0.05
       }
     }
   ]

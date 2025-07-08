@@ -1,0 +1,107 @@
+{
+  "factors": {
+    "line_length": [
+      "short",
+      "long"
+    ],
+    "time_estimate": [
+      "accurate",
+      "inaccurate"
+    ],
+    "line_movement_speed": [
+      "fast",
+      "slow"
+    ]
+  },
+  "cpt": [
+    {
+      "line_length": "short",
+      "time_estimate": "accurate",
+      "line_movement_speed": "fast",
+      "emotions": {
+        "happy": 0.7,
+        "frustrated": 0.25,
+        "bored": 0.05
+      }
+    },
+    {
+      "line_length": "short",
+      "time_estimate": "accurate",
+      "line_movement_speed": "slow",
+      "emotions": {
+        "impatient": 0.3,
+        "bored": 0.2,
+        "frustrated": 0.25,
+        "happy": 0.25
+      }
+    },
+    {
+      "line_length": "short",
+      "time_estimate": "inaccurate",
+      "line_movement_speed": "fast",
+      "emotions": {
+        "surprised": 0.2,
+        "happy": 0.3,
+        "frustrated": 0.44999999999999996,
+        "anxious": 0.05
+      }
+    },
+    {
+      "line_length": "short",
+      "time_estimate": "inaccurate",
+      "line_movement_speed": "slow",
+      "emotions": {
+        "angry": 0.25,
+        "frustrated": 0.55,
+        "disappointed": 0.05,
+        "happy": 0.1,
+        "anxious": 0.05
+      }
+    },
+    {
+      "line_length": "long",
+      "time_estimate": "accurate",
+      "line_movement_speed": "fast",
+      "emotions": {
+        "happy": 0.25,
+        "frustrated": 0.55,
+        "bored": 0.1,
+        "anxious": 0.1
+      }
+    },
+    {
+      "line_length": "long",
+      "time_estimate": "accurate",
+      "line_movement_speed": "slow",
+      "emotions": {
+        "impatient": 0.3,
+        "frustrated": 0.55,
+        "bored": 0.1,
+        "happy": 0.05
+      }
+    },
+    {
+      "line_length": "long",
+      "time_estimate": "inaccurate",
+      "line_movement_speed": "fast",
+      "emotions": {
+        "surprised": 0.2,
+        "happy": 0.2,
+        "frustrated": 0.575,
+        "anxious": 0.025
+      }
+    },
+    {
+      "line_length": "long",
+      "time_estimate": "inaccurate",
+      "line_movement_speed": "slow",
+      "emotions": {
+        "angry": 0.25,
+        "frustrated": 0.65,
+        "disappointed": 0.05,
+        "happy": 0.025,
+        "anxious": 0.025
+      }
+    }
+  ]
+}

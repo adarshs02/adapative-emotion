@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "experience": [
+      "first_time",
+      "repeated"
+    ],
+    "seat_location": [
+      "window",
+      "aisle"
+    ],
+    "preparedness": [
+      "unprepared",
+      "prepared"
+    ]
+  },
+  "cpt": [
+    {
+      "experience": "first_time",
+      "seat_location": "window",
+      "preparedness": "unprepared",
+      "emotions": {
+        "anxious": 0.6,
+        "fearful": 0.35,
+        "bored": 0.05
+      }
+    },
+    {
+      "experience": "first_time",
+      "seat_location": "window",
+      "preparedness": "prepared",
+      "emotions": {
+        "curious": 0.4,
+        "relaxed": 0.55,
+        "bored": 0.05
+      }
+    },
+    {
+      "experience": "first_time",
+      "seat_location": "aisle",
+      "preparedness": "unprepared",
+      "emotions": {
+        "anxious": 0.55,
+        "fearful": 0.35,
+        "bored": 0.1
+      }
+    },
+    {
+      "experience": "first_time",
+      "seat_location": "aisle",
+      "preparedness": "prepared",
+      "emotions": {
+        "curious": 0.4,
+        "relaxed": 0.5,
+        "bored": 0.1
+      }
+    },
+    {
+      "experience": "repeated",
+      "seat_location": "window",
+      "preparedness": "unprepared",
+      "emotions": {
+        "anxious": 0.7,
+        "fearful": 0.25,
+        "angry": 0.05
+      }
+    },
+    {
+      "experience": "repeated",
+      "seat_location": "window",
+      "preparedness": "prepared",
+      "emotions": {
+        "anxious": 0.5,
+        "relaxed": 0.4,
+        "angry": 0.1
+      }
+    },
+    {
+      "experience": "repeated",
+      "seat_location": "aisle",
+      "preparedness": "unprepared",
+      "emotions": {
+        "anxious": 0.65,
+        "fearful": 0.25,
+        "angry": 0.1
+      }
+    },
+    {
+      "experience": "repeated",
+      "seat_location": "aisle",
+      "preparedness": "prepared",
+      "emotions": {
+        "anxious": 0.5,
+        "relaxed": 0.4,
+        "angry": 0.1
+      }
+    }
+  ]
+}

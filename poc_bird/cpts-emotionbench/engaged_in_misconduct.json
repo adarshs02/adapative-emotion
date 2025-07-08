@@ -1,0 +1,108 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "severity": [
+      "minor",
+      "major"
+    ],
+    "consequences": [
+      "light",
+      "heavy"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "severity": "minor",
+      "consequences": "light",
+      "emotions": {
+        "relief": 0.35,
+        "regret": 0.475,
+        "fear": 0.175
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "severity": "minor",
+      "consequences": "heavy",
+      "emotions": {
+        "shock": 0.275,
+        "anger": 0.42500000000000004,
+        "fear": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "severity": "major",
+      "consequences": "light",
+      "emotions": {
+        "shock": 0.3,
+        "fear": 0.15,
+        "disbelief": 0.05,
+        "surprise": 0.1,
+        "regret": 0.25,
+        "anxiety": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "severity": "major",
+      "consequences": "heavy",
+      "emotions": {
+        "shock": 0.4,
+        "fear": 0.325,
+        "anger": 0.275
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "severity": "minor",
+      "consequences": "light",
+      "emotions": {
+        "disappointment": 0.15,
+        "regret": 0.45,
+        "frustration": 0.1,
+        "indifference": 0.05,
+        "relief": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "severity": "minor",
+      "consequences": "heavy",
+      "emotions": {
+        "anger": 0.45000000000000007,
+        "regret": 0.25000000000000006,
+        "fear": 0.20000000000000004,
+        "shock": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "severity": "major",
+      "consequences": "light",
+      "emotions": {
+        "anger": 0.3,
+        "fear": 0.15,
+        "disappointment": 0.05,
+        "surprise": 0.075,
+        "regret": 0.225,
+        "anxiety": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "severity": "major",
+      "consequences": "heavy",
+      "emotions": {
+        "anger": 0.625,
+        "fear": 0.175,
+        "disappointment": 0.05,
+        "shock": 0.15
+      }
+    }
+  ]
+}

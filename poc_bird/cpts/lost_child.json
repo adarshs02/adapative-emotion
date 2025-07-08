@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "child_age",
-      "values": [
-        "young",
-        "old"
-      ]
-    },
-    {
-      "name": "crowd_density",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "crowd_size": [
+      "small",
+      "large"
+    ],
+    "child_age": [
+      "young",
+      "old"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
   "cpt": [
     {
-      "offence_history": "first_time",
+      "crowd_size": "small",
       "child_age": "young",
-      "crowd_density": "low",
-      "emotions": {
-        "anxiety": 0.8,
-        "frustration": 0.15,
-        "calm": 0.05
-      }
-    },
-    {
       "offence_history": "first_time",
-      "child_age": "young",
-      "crowd_density": "high",
-      "emotions": {
-        "anxiety": 0.9,
-        "frustration": 0.08,
-        "calm": 0.02
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "child_age": "old",
-      "crowd_density": "low",
       "emotions": {
         "anxiety": 0.6,
-        "frustration": 0.25,
-        "calm": 0.15
+        "frustration": 0.3,
+        "panic": 0.1
       }
     },
     {
-      "offence_history": "first_time",
-      "child_age": "old",
-      "crowd_density": "high",
-      "emotions": {
-        "anxiety": 0.8,
-        "frustration": 0.15,
-        "calm": 0.05
-      }
-    },
-    {
-      "offence_history": "repeated",
+      "crowd_size": "small",
       "child_age": "young",
-      "crowd_density": "low",
-      "emotions": {
-        "anxiety": 0.4,
-        "frustration": 0.45,
-        "anger": 0.15
-      }
-    },
-    {
       "offence_history": "repeated",
-      "child_age": "young",
-      "crowd_density": "high",
-      "emotions": {
-        "anxiety": 0.7,
-        "frustration": 0.25,
-        "anger": 0.05
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "child_age": "old",
-      "crowd_density": "low",
-      "emotions": {
-        "anxiety": 0.2,
-        "frustration": 0.5,
-        "anger": 0.3
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "child_age": "old",
-      "crowd_density": "high",
       "emotions": {
         "anxiety": 0.5,
-        "frustration": 0.35,
-        "anger": 0.15
+        "frustration": 0.4,
+        "anger": 0.1
+      }
+    },
+    {
+      "crowd_size": "small",
+      "child_age": "old",
+      "offence_history": "first_time",
+      "emotions": {
+        "anxiety": 0.4,
+        "worry": 0.5,
+        "relief": 0.1
+      }
+    },
+    {
+      "crowd_size": "small",
+      "child_age": "old",
+      "offence_history": "repeated",
+      "emotions": {
+        "anxiety": 0.3,
+        "worry": 0.5,
+        "anger": 0.2
+      }
+    },
+    {
+      "crowd_size": "large",
+      "child_age": "young",
+      "offence_history": "first_time",
+      "emotions": {
+        "anxiety": 0.7,
+        "frustration": 0.2,
+        "panic": 0.1
+      }
+    },
+    {
+      "crowd_size": "large",
+      "child_age": "young",
+      "offence_history": "repeated",
+      "emotions": {
+        "anxiety": 0.6,
+        "frustration": 0.3,
+        "anger": 0.1
+      }
+    },
+    {
+      "crowd_size": "large",
+      "child_age": "old",
+      "offence_history": "first_time",
+      "emotions": {
+        "anxiety": 0.5,
+        "worry": 0.4,
+        "relief": 0.1
+      }
+    },
+    {
+      "crowd_size": "large",
+      "child_age": "old",
+      "offence_history": "repeated",
+      "emotions": {
+        "anxiety": 0.4,
+        "worry": 0.5,
+        "anger": 0.1
       }
     }
   ]

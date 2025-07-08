@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "customer_age",
-      "values": [
-        "young",
-        "old"
-      ]
-    },
-    {
-      "name": "customer_context",
-      "values": [
-        "public",
-        "private"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "customer_behavior": [
+      "calm",
+      "aggressive"
+    ],
+    "reason_known": [
+      "known",
+      "unknown"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "customer_age": "young",
-      "customer_context": "public",
+      "customer_behavior": "calm",
+      "reason_known": "known",
       "emotions": {
-        "anger": 0.05,
-        "frustration": 0.45,
-        "surprise": 0.5
+        "surprised": 0.3,
+        "confused": 0.4,
+        "frustrated": 0.3
       }
     },
     {
       "offence_history": "first_time",
-      "customer_age": "young",
-      "customer_context": "private",
+      "customer_behavior": "aggressive",
+      "reason_known": "known",
       "emotions": {
-        "anger": 0.1,
-        "frustration": 0.6,
-        "surprise": 0.3
+        "alarmed": 0.2,
+        "angry": 0.6,
+        "fearful": 0.2
       }
     },
     {
       "offence_history": "first_time",
-      "customer_age": "old",
-      "customer_context": "public",
+      "customer_behavior": "calm",
+      "reason_known": "unknown",
       "emotions": {
-        "anger": 0.15,
-        "frustration": 0.4,
-        "surprise": 0.45
+        "confused": 0.4,
+        "frustrated": 0.4,
+        "anxious": 0.2
       }
     },
     {
       "offence_history": "first_time",
-      "customer_age": "old",
-      "customer_context": "private",
+      "customer_behavior": "aggressive",
+      "reason_known": "unknown",
       "emotions": {
-        "anger": 0.2,
-        "frustration": 0.5,
-        "surprise": 0.3
+        "alarmed": 0.3,
+        "angry": 0.5,
+        "fearful": 0.2
       }
     },
     {
       "offence_history": "repeated",
-      "customer_age": "young",
-      "customer_context": "public",
+      "customer_behavior": "calm",
+      "reason_known": "known",
       "emotions": {
-        "anger": 0.5,
-        "frustration": 0.3,
-        "surprise": 0.2
+        "frustrated": 0.2,
+        "angry": 0.6,
+        "disappointed": 0.2
       }
     },
     {
       "offence_history": "repeated",
-      "customer_age": "young",
-      "customer_context": "private",
+      "customer_behavior": "aggressive",
+      "reason_known": "known",
       "emotions": {
-        "anger": 0.6,
-        "frustration": 0.25,
-        "surprise": 0.15
+        "alarmed": 0.2,
+        "angry": 0.7,
+        "fearful": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "customer_age": "old",
-      "customer_context": "public",
+      "customer_behavior": "calm",
+      "reason_known": "unknown",
       "emotions": {
-        "anger": 0.7,
-        "frustration": 0.2,
-        "surprise": 0.1
+        "frustrated": 0.3,
+        "angry": 0.5,
+        "disappointed": 0.2
       }
     },
     {
       "offence_history": "repeated",
-      "customer_age": "old",
-      "customer_context": "private",
+      "customer_behavior": "aggressive",
+      "reason_known": "unknown",
       "emotions": {
-        "anger": 0.8,
-        "frustration": 0.15,
-        "surprise": 0.05
+        "alarmed": 0.3,
+        "angry": 0.6,
+        "fearful": 0.1
       }
     }
   ]

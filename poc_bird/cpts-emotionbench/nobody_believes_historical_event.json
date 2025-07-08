@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "believed_by_some": [
+      "no",
+      "yes"
+    ],
+    "evidence_provided": [
+      "none",
+      "some"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "believed_by_some": "no",
+      "evidence_provided": "none",
+      "emotions": {
+        "frustration": 0.6,
+        "disappointment": 0.35,
+        "confidence": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "believed_by_some": "no",
+      "evidence_provided": "some",
+      "emotions": {
+        "frustration": 0.45,
+        "disappointment": 0.4,
+        "anger": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "believed_by_some": "yes",
+      "evidence_provided": "none",
+      "emotions": {
+        "relief": 0.6000000000000001,
+        "gratitude": 0.30000000000000004,
+        "confidence": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "believed_by_some": "yes",
+      "evidence_provided": "some",
+      "emotions": {
+        "relief": 0.55,
+        "gratitude": 0.35,
+        "satisfaction": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "believed_by_some": "no",
+      "evidence_provided": "none",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.25,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "believed_by_some": "no",
+      "evidence_provided": "some",
+      "emotions": {
+        "anger": 0.65,
+        "frustration": 0.25,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "believed_by_some": "yes",
+      "evidence_provided": "none",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.15,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "believed_by_some": "yes",
+      "evidence_provided": "some",
+      "emotions": {
+        "anger": 0.75,
+        "frustration": 0.15,
+        "disappointment": 0.1
+      }
+    }
+  ]
+}

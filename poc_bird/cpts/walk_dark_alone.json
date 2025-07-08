@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "location_familiarity",
-      "values": [
-        "familiar",
-        "unfamiliar"
-      ]
-    },
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "footstep_distance",
-      "values": [
-        "close",
-        "distant"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "presence_of_others": [
+      "alone",
+      "accompanied"
+    ],
+    "suspicious_noise_source": [
+      "unknown",
+      "known"
+    ]
+  },
   "cpt": [
     {
-      "location_familiarity": "familiar",
       "offence_history": "first_time",
-      "footstep_distance": "close",
-      "emotions": {
-        "fear": 0.0,
-        "surprise": 0.8,
-        "relief": 0.2
-      }
-    },
-    {
-      "location_familiarity": "familiar",
-      "offence_history": "first_time",
-      "footstep_distance": "distant",
-      "emotions": {
-        "fear": 0.2,
-        "surprise": 0.6,
-        "relief": 0.2
-      }
-    },
-    {
-      "location_familiarity": "familiar",
-      "offence_history": "repeated",
-      "footstep_distance": "close",
-      "emotions": {
-        "fear": 0.8,
-        "anger": 0.1,
-        "relief": 0.1
-      }
-    },
-    {
-      "location_familiarity": "familiar",
-      "offence_history": "repeated",
-      "footstep_distance": "distant",
-      "emotions": {
-        "fear": 0.5,
-        "anger": 0.3,
-        "relief": 0.2
-      }
-    },
-    {
-      "location_familiarity": "unfamiliar",
-      "offence_history": "first_time",
-      "footstep_distance": "close",
-      "emotions": {
-        "fear": 0.9,
-        "surprise": 0.1,
-        "anxiety": 0.0
-      }
-    },
-    {
-      "location_familiarity": "unfamiliar",
-      "offence_history": "first_time",
-      "footstep_distance": "distant",
+      "presence_of_others": "alone",
+      "suspicious_noise_source": "unknown",
       "emotions": {
         "fear": 0.7,
-        "surprise": 0.2,
-        "anxiety": 0.1
+        "curiosity": 0.25,
+        "relaxation": 0.05
       }
     },
     {
-      "location_familiarity": "unfamiliar",
+      "offence_history": "first_time",
+      "presence_of_others": "alone",
+      "suspicious_noise_source": "known",
+      "emotions": {
+        "fear": 0.85,
+        "anxiety": 0.1,
+        "curiosity": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "presence_of_others": "accompanied",
+      "suspicious_noise_source": "unknown",
+      "emotions": {
+        "surprise": 0.5,
+        "curiosity": 0.4,
+        "relaxation": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "presence_of_others": "accompanied",
+      "suspicious_noise_source": "known",
+      "emotions": {
+        "surprise": 0.6,
+        "anxiety": 0.3,
+        "curiosity": 0.1
+      }
+    },
+    {
       "offence_history": "repeated",
-      "footstep_distance": "close",
+      "presence_of_others": "alone",
+      "suspicious_noise_source": "unknown",
+      "emotions": {
+        "fear": 0.9,
+        "anxiety": 0.05,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "presence_of_others": "alone",
+      "suspicious_noise_source": "known",
       "emotions": {
         "fear": 0.95,
-        "anger": 0.05,
-        "anxiety": 0.0
+        "anxiety": 0.03,
+        "anger": 0.02
       }
     },
     {
-      "location_familiarity": "unfamiliar",
       "offence_history": "repeated",
-      "footstep_distance": "distant",
+      "presence_of_others": "accompanied",
+      "suspicious_noise_source": "unknown",
       "emotions": {
         "fear": 0.8,
-        "anger": 0.15,
-        "anxiety": 0.05
+        "anxiety": 0.15,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "presence_of_others": "accompanied",
+      "suspicious_noise_source": "known",
+      "emotions": {
+        "fear": 0.85,
+        "anxiety": 0.1,
+        "anger": 0.05
       }
     }
   ]

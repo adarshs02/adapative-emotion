@@ -1,42 +1,23 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "dog_size",
-      "values": [
-        "small",
-        "large"
-      ]
-    },
-    {
-      "name": "owner_presence",
-      "values": [
-        "present",
-        "absent"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "dog_size": [
+      "small",
+      "large"
+    ],
+    "distance": [
+      "close",
+      "far"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
       "dog_size": "small",
-      "owner_presence": "present",
-      "emotions": {
-        "fear": 0.8,
-        "surprise": 0.15,
-        "curiosity": 0.05
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "dog_size": "small",
-      "owner_presence": "absent",
+      "distance": "close",
       "emotions": {
         "fear": 0.7,
         "surprise": 0.25,
@@ -45,62 +26,72 @@
     },
     {
       "offence_history": "first_time",
-      "dog_size": "large",
-      "owner_presence": "present",
+      "dog_size": "small",
+      "distance": "far",
       "emotions": {
-        "fear": 0.6,
-        "surprise": 0.3,
-        "anger": 0.1
+        "caution": 0.6,
+        "surprise": 0.35,
+        "curiosity": 0.05
       }
     },
     {
       "offence_history": "first_time",
       "dog_size": "large",
-      "owner_presence": "absent",
+      "distance": "close",
       "emotions": {
-        "fear": 0.5,
-        "surprise": 0.35,
-        "anger": 0.15
+        "fear": 0.85,
+        "surprise": 0.1,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "dog_size": "large",
+      "distance": "far",
+      "emotions": {
+        "caution": 0.7,
+        "surprise": 0.25,
+        "curiosity": 0.05
       }
     },
     {
       "offence_history": "repeated",
       "dog_size": "small",
-      "owner_presence": "present",
-      "emotions": {
-        "anger": 0.7,
-        "fear": 0.25,
-        "frustration": 0.05
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "dog_size": "small",
-      "owner_presence": "absent",
+      "distance": "close",
       "emotions": {
         "anger": 0.6,
         "fear": 0.3,
-        "frustration": 0.1
+        "anxiety": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "dog_size": "large",
-      "owner_presence": "present",
+      "dog_size": "small",
+      "distance": "far",
       "emotions": {
-        "anger": 0.8,
-        "fear": 0.15,
-        "frustration": 0.05
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "dog_size": "large",
-      "owner_presence": "absent",
-      "emotions": {
-        "anger": 0.7,
+        "caution": 0.7,
         "fear": 0.2,
-        "frustration": 0.1
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "dog_size": "large",
+      "distance": "close",
+      "emotions": {
+        "anger": 0.85,
+        "fear": 0.1,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "dog_size": "large",
+      "distance": "far",
+      "emotions": {
+        "caution": 0.7,
+        "fear": 0.2,
+        "anxiety": 0.1
       }
     }
   ]

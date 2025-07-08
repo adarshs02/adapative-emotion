@@ -1,0 +1,99 @@
+{
+  "factors": {
+    "adjustment_attempts": [
+      "1st",
+      "2nd",
+      "3rd"
+    ],
+    "store_response": [
+      "supportive",
+      "dismissive"
+    ],
+    "comfort_level": [
+      "comfortable",
+      "uncomfortable"
+    ]
+  },
+  "cpt": [
+    {
+      "adjustment_attempts": "1st",
+      "store_response": "supportive",
+      "comfort_level": "comfortable",
+      "emotions": {
+        "satisfaction": 0.8,
+        "frustration": 0.15,
+        "anger": 0.05
+      }
+    },
+    {
+      "adjustment_attempts": "1st",
+      "store_response": "supportive",
+      "comfort_level": "uncomfortable",
+      "emotions": {
+        "frustration": 0.7,
+        "disappointment": 0.25,
+        "anger": 0.05
+      }
+    },
+    {
+      "adjustment_attempts": "1st",
+      "store_response": "dismissive",
+      "comfort_level": "comfortable",
+      "emotions": {
+        "confusion": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "doubt": 0.10000000000000002
+      }
+    },
+    {
+      "adjustment_attempts": "1st",
+      "store_response": "dismissive",
+      "comfort_level": "uncomfortable",
+      "emotions": {
+        "frustration": 0.8,
+        "disappointment": 0.15,
+        "anger": 0.05
+      }
+    },
+    {
+      "adjustment_attempts": "2nd",
+      "store_response": "supportive",
+      "comfort_level": "comfortable",
+      "emotions": {
+        "relief": 0.5,
+        "frustration": 0.35,
+        "doubt": 0.15
+      }
+    },
+    {
+      "adjustment_attempts": "2nd",
+      "store_response": "supportive",
+      "comfort_level": "uncomfortable",
+      "emotions": {
+        "frustration": 0.7,
+        "disappointment": 0.25,
+        "anger": 0.05
+      }
+    },
+    {
+      "adjustment_attempts": "2nd",
+      "store_response": "dismissive",
+      "comfort_level": "comfortable",
+      "emotions": {
+        "confusion": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "doubt": 0.10000000000000002
+      }
+    },
+    {
+      "adjustment_attempts": "2nd",
+      "store_response": "dismissive",
+      "comfort_level": "uncomfortable",
+      "emotions": {
+        "frustration": 0.8,
+        "disappointment": 0.15,
+        "anger": 0.05
+      }
+    }
+  ]
+}

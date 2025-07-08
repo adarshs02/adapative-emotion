@@ -1,0 +1,120 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "question_importance": [
+      "low",
+      "high"
+    ],
+    "confidence_in_answer": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "question_importance": "low",
+      "confidence_in_answer": "low",
+      "emotions": {
+        "confusion": 0.30000000000000004,
+        "anxiety": 0.30000000000000004,
+        "frustration": 0.25000000000000006,
+        "confidence": 0.07500000000000001,
+        "relief": 0.07500000000000001
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "question_importance": "low",
+      "confidence_in_answer": "high",
+      "emotions": {
+        "relief": 0.575,
+        "confidence": 0.2125,
+        "happiness": 0.0125,
+        "pride": 0.0875,
+        "anxiety": 0.025,
+        "curiosity": 0.025,
+        "satisfaction": 0.0625
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "question_importance": "high",
+      "confidence_in_answer": "low",
+      "emotions": {
+        "anxiety": 0.6,
+        "fear": 0.325,
+        "dread": 0.025,
+        "confusion": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "question_importance": "high",
+      "confidence_in_answer": "high",
+      "emotions": {
+        "relief": 0.5250000000000001,
+        "gratitude": 0.07500000000000001,
+        "happiness": 0.012500000000000002,
+        "satisfaction": 0.15000000000000002,
+        "confidence": 0.15000000000000002,
+        "curiosity": 0.07500000000000001,
+        "pride": 0.012500000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "question_importance": "low",
+      "confidence_in_answer": "low",
+      "emotions": {
+        "anxiety": 0.42500000000000004,
+        "frustration": 0.45,
+        "regret": 0.125
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "question_importance": "low",
+      "confidence_in_answer": "high",
+      "emotions": {
+        "relief": 0.30000000000000004,
+        "confidence": 0.1625,
+        "happiness": 0.037500000000000006,
+        "anxiety": 0.025000000000000005,
+        "pride": 0.07500000000000001,
+        "frustration": 0.2750000000000001,
+        "dissatisfaction": 0.08750000000000001,
+        "guilt": 0.037500000000000006
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "question_importance": "high",
+      "confidence_in_answer": "low",
+      "emotions": {
+        "anxiety": 0.55,
+        "fear": 0.32499999999999996,
+        "dread": 0.025,
+        "regret": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "question_importance": "high",
+      "confidence_in_answer": "high",
+      "emotions": {
+        "relief": 0.38749999999999996,
+        "gratitude": 0.1125,
+        "happiness": 0.025,
+        "anxiety": 0.025,
+        "frustration": 0.2,
+        "anger": 0.125,
+        "confidence": 0.1,
+        "pride": 0.025
+      }
+    }
+  ]
+}

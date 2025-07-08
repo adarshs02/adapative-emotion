@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "sleep_history": [
+      "relaxed_sleeper",
+      "stressed_sleeper"
+    ],
+    "rush_level": [
+      "calm",
+      "rushed"
+    ],
+    "clothes_organization": [
+      "tidy",
+      "disorganized"
+    ]
+  },
+  "cpt": [
+    {
+      "sleep_history": "relaxed_sleeper",
+      "rush_level": "calm",
+      "clothes_organization": "tidy",
+      "emotions": {
+        "contentment": 0.7,
+        "relaxation": 0.25,
+        "happiness": 0.05
+      }
+    },
+    {
+      "sleep_history": "relaxed_sleeper",
+      "rush_level": "calm",
+      "clothes_organization": "disorganized",
+      "emotions": {
+        "frustration": 0.4,
+        "anxiety": 0.35,
+        "irritation": 0.25
+      }
+    },
+    {
+      "sleep_history": "relaxed_sleeper",
+      "rush_level": "rushed",
+      "clothes_organization": "tidy",
+      "emotions": {
+        "hurry": 0.6000000000000001,
+        "stress": 0.30000000000000004,
+        "nervousness": 0.10000000000000002
+      }
+    },
+    {
+      "sleep_history": "relaxed_sleeper",
+      "rush_level": "rushed",
+      "clothes_organization": "disorganized",
+      "emotions": {
+        "panic": 0.5,
+        "anxiety": 0.4,
+        "frustration": 0.1
+      }
+    },
+    {
+      "sleep_history": "stressed_sleeper",
+      "rush_level": "calm",
+      "clothes_organization": "tidy",
+      "emotions": {
+        "contentment": 0.3,
+        "relaxation": 0.25,
+        "happiness": 0.45
+      }
+    },
+    {
+      "sleep_history": "stressed_sleeper",
+      "rush_level": "calm",
+      "clothes_organization": "disorganized",
+      "emotions": {
+        "frustration": 0.6,
+        "anxiety": 0.35,
+        "irritation": 0.05
+      }
+    },
+    {
+      "sleep_history": "stressed_sleeper",
+      "rush_level": "rushed",
+      "clothes_organization": "tidy",
+      "emotions": {
+        "hurry": 0.4,
+        "stress": 0.5,
+        "nervousness": 0.1
+      }
+    },
+    {
+      "sleep_history": "stressed_sleeper",
+      "rush_level": "rushed",
+      "clothes_organization": "disorganized",
+      "emotions": {
+        "panic": 0.55,
+        "anxiety": 0.4,
+        "frustration": 0.05
+      }
+    }
+  ]
+}

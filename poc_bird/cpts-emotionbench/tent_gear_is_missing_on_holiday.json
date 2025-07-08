@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "responsibility_distribution": [
+      "equal",
+      "unfair"
+    ],
+    "solution_proposal": [
+      "quick_solution",
+      "no_solution"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "responsibility_distribution": "equal",
+      "solution_proposal": "quick_solution",
+      "emotions": {
+        "happy": 0.6000000000000001,
+        "frustrated": 0.30000000000000004,
+        "anxious": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "responsibility_distribution": "unfair",
+      "solution_proposal": "quick_solution",
+      "emotions": {
+        "frustrated": 0.7,
+        "angry": 0.25,
+        "anxious": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "responsibility_distribution": "equal",
+      "solution_proposal": "no_solution",
+      "emotions": {
+        "frustrated": 0.8,
+        "anxious": 0.15,
+        "helpless": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "responsibility_distribution": "unfair",
+      "solution_proposal": "no_solution",
+      "emotions": {
+        "angry": 0.85,
+        "frustrated": 0.1,
+        "helpless": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "responsibility_distribution": "equal",
+      "solution_proposal": "quick_solution",
+      "emotions": {
+        "frustrated": 0.5,
+        "angry": 0.4,
+        "disappointed": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "responsibility_distribution": "unfair",
+      "solution_proposal": "quick_solution",
+      "emotions": {
+        "angry": 0.75,
+        "frustrated": 0.2,
+        "disappointed": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "responsibility_distribution": "equal",
+      "solution_proposal": "no_solution",
+      "emotions": {
+        "angry": 0.7,
+        "disappointed": 0.25,
+        "helpless": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "responsibility_distribution": "unfair",
+      "solution_proposal": "no_solution",
+      "emotions": {
+        "angry": 0.85,
+        "disappointed": 0.1,
+        "helpless": 0.05
+      }
+    }
+  ]
+}

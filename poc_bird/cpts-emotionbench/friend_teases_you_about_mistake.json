@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "support_from_friend": [
+      "none",
+      "some"
+    ],
+    "teasing_from_classmates": [
+      "minimal",
+      "significant"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "support_from_friend": "none",
+      "teasing_from_classmates": "minimal",
+      "emotions": {
+        "amusement": 0.1,
+        "embarrassment": 0.3,
+        "anger": 0.6
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_from_friend": "some",
+      "teasing_from_classmates": "minimal",
+      "emotions": {
+        "amusement": 0.05,
+        "embarrassment": 0.4,
+        "anger": 0.55
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_from_friend": "none",
+      "teasing_from_classmates": "significant",
+      "emotions": {
+        "amusement": 0.02,
+        "embarrassment": 0.35,
+        "anger": 0.63
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_from_friend": "some",
+      "teasing_from_classmates": "significant",
+      "emotions": {
+        "amusement": 0.01,
+        "embarrassment": 0.3,
+        "anger": 0.69
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_from_friend": "none",
+      "teasing_from_classmates": "minimal",
+      "emotions": {
+        "amusement": 0.01,
+        "embarrassment": 0.25,
+        "anger": 0.74
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_from_friend": "some",
+      "teasing_from_classmates": "minimal",
+      "emotions": {
+        "amusement": 0.0,
+        "embarrassment": 0.2,
+        "anger": 0.8
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_from_friend": "none",
+      "teasing_from_classmates": "significant",
+      "emotions": {
+        "amusement": 0.0,
+        "embarrassment": 0.2,
+        "anger": 0.8
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_from_friend": "some",
+      "teasing_from_classmates": "significant",
+      "emotions": {
+        "amusement": 0.0,
+        "embarrassment": 0.15,
+        "anger": 0.85
+      }
+    }
+  ]
+}

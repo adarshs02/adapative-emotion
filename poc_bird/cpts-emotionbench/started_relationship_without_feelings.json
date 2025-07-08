@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "honesty": [
+      "disclosed",
+      "not_disclosed"
+    ],
+    "intent": [
+      "sincere",
+      "insincere"
+    ],
+    "history": [
+      "first_time",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "honesty": "disclosed",
+      "intent": "sincere",
+      "history": "first_time",
+      "emotions": {
+        "regret": 0.1,
+        "disappointment": 0.35,
+        "curiosity": 0.55
+      }
+    },
+    {
+      "honesty": "disclosed",
+      "intent": "sincere",
+      "history": "repeated",
+      "emotions": {
+        "disappointment": 0.4,
+        "suspicion": 0.45,
+        "anger": 0.15
+      }
+    },
+    {
+      "honesty": "disclosed",
+      "intent": "insincere",
+      "history": "first_time",
+      "emotions": {
+        "disappointment": 0.6000000000000001,
+        "suspicion": 0.30000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "honesty": "disclosed",
+      "intent": "insincere",
+      "history": "repeated",
+      "emotions": {
+        "disappointment": 0.7,
+        "suspicion": 0.25,
+        "anger": 0.05
+      }
+    },
+    {
+      "honesty": "not_disclosed",
+      "intent": "sincere",
+      "history": "first_time",
+      "emotions": {
+        "surprise": 0.4,
+        "confusion": 0.45,
+        "trust": 0.15
+      }
+    },
+    {
+      "honesty": "not_disclosed",
+      "intent": "sincere",
+      "history": "repeated",
+      "emotions": {
+        "surprise": 0.3,
+        "confusion": 0.5,
+        "distrust": 0.2
+      }
+    },
+    {
+      "honesty": "not_disclosed",
+      "intent": "insincere",
+      "history": "first_time",
+      "emotions": {
+        "surprise": 0.6000000000000001,
+        "confusion": 0.30000000000000004,
+        "distrust": 0.10000000000000002
+      }
+    },
+    {
+      "honesty": "not_disclosed",
+      "intent": "insincere",
+      "history": "repeated",
+      "emotions": {
+        "surprise": 0.7,
+        "confusion": 0.25,
+        "distrust": 0.05
+      }
+    }
+  ]
+}

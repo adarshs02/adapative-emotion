@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "urgency_level",
-      "values": [
-        "low",
-        "high"
-      ]
-    },
-    {
-      "name": "visa_type",
-      "values": [
-        "tourist",
-        "work"
-      ]
-    },
-    {
-      "name": "previous_issues",
-      "values": [
-        "none",
-        "repeated"
-      ]
-    }
-  ],
+  "factors": {
+    "urgency": [
+      "low",
+      "high"
+    ],
+    "visa_history": [
+      "clean",
+      "tarnished"
+    ],
+    "support_system": [
+      "strong",
+      "weak"
+    ]
+  },
   "cpt": [
     {
-      "urgency_level": "low",
-      "visa_type": "tourist",
-      "previous_issues": "none",
+      "urgency": "low",
+      "visa_history": "clean",
+      "support_system": "strong",
       "emotions": {
-        "frustration": 0.6,
+        "relief": 0.6,
         "anxiety": 0.3,
-        "relief": 0.1
+        "frustration": 0.1
       }
     },
     {
-      "urgency_level": "low",
-      "visa_type": "tourist",
-      "previous_issues": "repeated",
+      "urgency": "low",
+      "visa_history": "clean",
+      "support_system": "weak",
       "emotions": {
-        "frustration": 0.8,
-        "anxiety": 0.2,
-        "relief": 0.0
+        "anxiety": 0.7,
+        "frustration": 0.25,
+        "worry": 0.05
       }
     },
     {
-      "urgency_level": "low",
-      "visa_type": "work",
-      "previous_issues": "none",
+      "urgency": "high",
+      "visa_history": "clean",
+      "support_system": "strong",
       "emotions": {
-        "frustration": 0.4,
-        "anxiety": 0.5,
-        "relief": 0.1
+        "relief": 0.4,
+        "anxiety": 0.45,
+        "urgency": 0.15
       }
     },
     {
-      "urgency_level": "low",
-      "visa_type": "work",
-      "previous_issues": "repeated",
+      "urgency": "high",
+      "visa_history": "clean",
+      "support_system": "weak",
       "emotions": {
-        "frustration": 0.7,
-        "anxiety": 0.2,
-        "relief": 0.1
+        "anxiety": 0.65,
+        "urgency": 0.3,
+        "worry": 0.05
       }
     },
     {
-      "urgency_level": "high",
-      "visa_type": "tourist",
-      "previous_issues": "none",
+      "urgency": "low",
+      "visa_history": "tarnished",
+      "support_system": "strong",
       "emotions": {
-        "frustration": 0.9,
-        "anxiety": 0.1,
-        "relief": 0.0
+        "regret": 0.4,
+        "anxiety": 0.45,
+        "frustration": 0.15
       }
     },
     {
-      "urgency_level": "high",
-      "visa_type": "tourist",
-      "previous_issues": "repeated",
+      "urgency": "low",
+      "visa_history": "tarnished",
+      "support_system": "weak",
       "emotions": {
-        "frustration": 0.95,
-        "anxiety": 0.05,
-        "relief": 0.0
+        "regret": 0.6,
+        "anxiety": 0.3,
+        "worry": 0.1
       }
     },
     {
-      "urgency_level": "high",
-      "visa_type": "work",
-      "previous_issues": "none",
+      "urgency": "high",
+      "visa_history": "tarnished",
+      "support_system": "strong",
       "emotions": {
-        "frustration": 0.8,
-        "anxiety": 0.2,
-        "relief": 0.0
+        "regret": 0.5,
+        "anxiety": 0.4,
+        "urgency": 0.1
       }
     },
     {
-      "urgency_level": "high",
-      "visa_type": "work",
-      "previous_issues": "repeated",
+      "urgency": "high",
+      "visa_history": "tarnished",
+      "support_system": "weak",
       "emotions": {
-        "frustration": 0.9,
-        "anxiety": 0.1,
-        "relief": 0.0
+        "regret": 0.65,
+        "anxiety": 0.3,
+        "worry": 0.05
       }
     }
   ]

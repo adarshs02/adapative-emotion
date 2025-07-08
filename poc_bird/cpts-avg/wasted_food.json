@@ -1,0 +1,106 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "intentionality": [
+      "accidental",
+      "intentional"
+    ],
+    "waste_amount": [
+      "small",
+      "large"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "intentionality": "accidental",
+      "waste_amount": "small",
+      "emotions": {
+        "regret": 0.6000000000000001,
+        "surprise": 0.1,
+        "frustration": 0.23333333333333334,
+        "indifference": 0.06666666666666668
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intentionality": "accidental",
+      "waste_amount": "large",
+      "emotions": {
+        "regret": 0.7666666666666667,
+        "surprise": 0.06666666666666668,
+        "frustration": 0.13333333333333336,
+        "indifference": 0.03333333333333334
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intentionality": "intentional",
+      "waste_amount": "small",
+      "emotions": {
+        "shock": 0.13333333333333333,
+        "anger": 0.48333333333333334,
+        "regret": 0.3,
+        "indifference": 0.08333333333333333
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intentionality": "intentional",
+      "waste_amount": "large",
+      "emotions": {
+        "shock": 0.18333333333333335,
+        "anger": 0.5833333333333334,
+        "regret": 0.18333333333333332,
+        "indifference": 0.05000000000000001
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intentionality": "accidental",
+      "waste_amount": "small",
+      "emotions": {
+        "frustration": 0.44067796610169485,
+        "regret": 0.4745762711864407,
+        "surprise": 0.03389830508474576,
+        "indifference": 0.050847457627118654
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intentionality": "accidental",
+      "waste_amount": "large",
+      "emotions": {
+        "frustration": 0.3833333333333333,
+        "regret": 0.5499999999999999,
+        "surprise": 0.016666666666666666,
+        "indifference": 0.05000000000000001
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intentionality": "intentional",
+      "waste_amount": "small",
+      "emotions": {
+        "anger": 0.6779661016949152,
+        "regret": 0.2542372881355932,
+        "shock": 0.03389830508474576,
+        "indifference": 0.03389830508474576
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intentionality": "intentional",
+      "waste_amount": "large",
+      "emotions": {
+        "anger": 0.7833333333333333,
+        "regret": 0.15,
+        "shock": 0.016666666666666666,
+        "indifference": 0.05000000000000001
+      }
+    }
+  ]
+}

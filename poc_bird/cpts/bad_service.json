@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "service_quality",
-      "values": [
-        "poor",
-        "good"
-      ]
-    },
-    {
-      "name": "customer_expectations",
-      "values": [
-        "high",
-        "low"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "service_quality": [
+      "minimal",
+      "expected"
+    ],
+    "expectations": [
+      "low",
+      "high"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "service_quality": "poor",
-      "customer_expectations": "high",
+      "service_quality": "minimal",
+      "expectations": "low",
       "emotions": {
         "frustration": 0.6,
-        "disappointment": 0.3,
-        "anger": 0.1
+        "disappointment": 0.35,
+        "indifference": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "service_quality": "poor",
-      "customer_expectations": "low",
+      "service_quality": "minimal",
+      "expectations": "high",
       "emotions": {
-        "frustration": 0.4,
-        "disappointment": 0.5,
-        "relief": 0.1
+        "frustration": 0.8,
+        "disappointment": 0.15,
+        "anger": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "service_quality": "good",
-      "customer_expectations": "high",
+      "service_quality": "expected",
+      "expectations": "low",
       "emotions": {
-        "relief": 0.7,
-        "gratitude": 0.2,
-        "disappointment": 0.1
+        "satisfaction": 0.6,
+        "relief": 0.35,
+        "indifference": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "service_quality": "good",
-      "customer_expectations": "low",
+      "service_quality": "expected",
+      "expectations": "high",
       "emotions": {
-        "gratitude": 0.8,
-        "relief": 0.2,
-        "happiness": 0.0
+        "satisfaction": 0.4,
+        "disappointment": 0.45,
+        "frustration": 0.15
       }
     },
     {
       "offence_history": "repeated",
-      "service_quality": "poor",
-      "customer_expectations": "high",
+      "service_quality": "minimal",
+      "expectations": "low",
       "emotions": {
-        "anger": 0.8,
-        "frustration": 0.2,
-        "disgust": 0.0
+        "frustration": 0.85,
+        "disappointment": 0.1,
+        "anger": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "service_quality": "poor",
-      "customer_expectations": "low",
+      "service_quality": "minimal",
+      "expectations": "high",
       "emotions": {
         "anger": 0.7,
-        "frustration": 0.2,
-        "disgust": 0.1
+        "frustration": 0.25,
+        "disappointment": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "service_quality": "good",
-      "customer_expectations": "high",
+      "service_quality": "expected",
+      "expectations": "low",
       "emotions": {
-        "anger": 0.4,
-        "frustration": 0.5,
-        "disgust": 0.1
+        "frustration": 0.75,
+        "disappointment": 0.2,
+        "anger": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "service_quality": "good",
-      "customer_expectations": "low",
+      "service_quality": "expected",
+      "expectations": "high",
       "emotions": {
-        "anger": 0.3,
-        "frustration": 0.6,
-        "disgust": 0.1
+        "anger": 0.8,
+        "frustration": 0.15,
+        "disappointment": 0.05
       }
     }
   ]

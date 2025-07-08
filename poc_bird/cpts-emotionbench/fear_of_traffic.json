@@ -1,0 +1,106 @@
+{
+  "factors": {
+    "traffic_experience": [
+      "inexperienced",
+      "experienced"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "stress_level": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "traffic_experience": "inexperienced",
+      "offence_history": "first_time",
+      "stress_level": "low",
+      "emotions": {
+        "excitement": 0.5,
+        "anxiety": 0.4,
+        "frustration": 0.1
+      }
+    },
+    {
+      "traffic_experience": "inexperienced",
+      "offence_history": "first_time",
+      "stress_level": "high",
+      "emotions": {
+        "anxiety": 0.6499999999999999,
+        "fear": 0.275,
+        "frustration": 0.07500000000000001
+      }
+    },
+    {
+      "traffic_experience": "inexperienced",
+      "offence_history": "repeated",
+      "stress_level": "low",
+      "emotions": {
+        "anxiety": 0.48717948717948717,
+        "anger": 0.2564102564102564,
+        "frustration": 0.2564102564102564
+      }
+    },
+    {
+      "traffic_experience": "inexperienced",
+      "offence_history": "repeated",
+      "stress_level": "high",
+      "emotions": {
+        "anger": 0.48717948717948717,
+        "fear": 0.4102564102564103,
+        "frustration": 0.10256410256410257
+      }
+    },
+    {
+      "traffic_experience": "experienced",
+      "offence_history": "first_time",
+      "stress_level": "low",
+      "emotions": {
+        "excitement": 0.43589743589743596,
+        "relief": 0.1794871794871795,
+        "satisfaction": 0.07692307692307693,
+        "relaxation": 0.2307692307692308,
+        "frustration": 0.07692307692307693
+      }
+    },
+    {
+      "traffic_experience": "experienced",
+      "offence_history": "first_time",
+      "stress_level": "high",
+      "emotions": {
+        "relief": 0.3076923076923077,
+        "satisfaction": 0.15384615384615385,
+        "contentment": 0.051282051282051294,
+        "anxiety": 0.2307692307692308,
+        "fear": 0.1794871794871795,
+        "relaxation": 0.07692307692307693
+      }
+    },
+    {
+      "traffic_experience": "experienced",
+      "offence_history": "repeated",
+      "stress_level": "low",
+      "emotions": {
+        "relief": 0.2,
+        "anger": 0.3,
+        "frustration": 0.25,
+        "relaxation": 0.25
+      }
+    },
+    {
+      "traffic_experience": "experienced",
+      "offence_history": "repeated",
+      "stress_level": "high",
+      "emotions": {
+        "anger": 0.5384615384615384,
+        "frustration": 0.12820512820512822,
+        "disappointment": 0.025641025641025644,
+        "fear": 0.2820512820512821,
+        "relaxation": 0.025641025641025644
+      }
+    }
+  ]
+}

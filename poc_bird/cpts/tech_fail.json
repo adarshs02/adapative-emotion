@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "work_importance",
-      "values": [
-        "low",
-        "high"
-      ]
-    },
-    {
-      "name": "user_experience",
-      "values": [
-        "novice",
-        "experienced"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "preparedness": [
+      "unprepared",
+      "prepared"
+    ],
+    "importance": [
+      "low",
+      "high"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "work_importance": "low",
-      "user_experience": "novice",
-      "emotions": {
-        "frustration": 0.7,
-        "anger": 0.2,
-        "disappointment": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "work_importance": "low",
-      "user_experience": "experienced",
+      "preparedness": "unprepared",
+      "importance": "low",
       "emotions": {
         "frustration": 0.6,
-        "anger": 0.3,
-        "disappointment": 0.1
+        "annoyance": 0.35,
+        "disappointment": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "work_importance": "high",
-      "user_experience": "novice",
-      "emotions": {
-        "frustration": 0.8,
-        "anger": 0.1,
-        "disappointment": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "work_importance": "high",
-      "user_experience": "experienced",
+      "preparedness": "unprepared",
+      "importance": "high",
       "emotions": {
         "frustration": 0.7,
-        "anger": 0.2,
-        "disappointment": 0.1
+        "anger": 0.25,
+        "disappointment": 0.05
       }
     },
     {
-      "offence_history": "repeated",
-      "work_importance": "low",
-      "user_experience": "novice",
+      "offence_history": "first_time",
+      "preparedness": "prepared",
+      "importance": "low",
       "emotions": {
-        "anger": 0.6,
-        "frustration": 0.3,
-        "disappointment": 0.1
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "work_importance": "low",
-      "user_experience": "experienced",
-      "emotions": {
-        "anger": 0.5,
         "frustration": 0.4,
+        "annoyance": 0.5,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "preparedness": "prepared",
+      "importance": "high",
+      "emotions": {
+        "frustration": 0.5,
+        "anger": 0.4,
         "disappointment": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "work_importance": "high",
-      "user_experience": "novice",
+      "preparedness": "unprepared",
+      "importance": "low",
       "emotions": {
-        "anger": 0.8,
-        "frustration": 0.2,
-        "disappointment": 0.0
+        "frustration": 0.75,
+        "anger": 0.2,
+        "disappointment": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "work_importance": "high",
-      "user_experience": "experienced",
+      "preparedness": "unprepared",
+      "importance": "high",
+      "emotions": {
+        "anger": 0.65,
+        "frustration": 0.3,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparedness": "prepared",
+      "importance": "low",
+      "emotions": {
+        "frustration": 0.55,
+        "anger": 0.35,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparedness": "prepared",
+      "importance": "high",
       "emotions": {
         "anger": 0.7,
-        "frustration": 0.2,
-        "disappointment": 0.1
+        "frustration": 0.25,
+        "disappointment": 0.05
       }
     }
   ]

@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "relationship_quality",
-      "values": [
-        "close",
-        "distant"
-      ]
-    },
-    {
-      "name": "email_content",
-      "values": [
-        "positive",
-        "negative"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "message_content": [
+      "positive",
+      "neutral"
+    ],
+    "sender_identity": [
+      "known",
+      "unknown"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "relationship_quality": "close",
-      "email_content": "positive",
+      "message_content": "positive",
+      "sender_identity": "known",
       "emotions": {
-        "surprise": 0.8,
-        "happiness": 0.15,
-        "curiosity": 0.05
+        "happy": 0.6,
+        "surprised": 0.3,
+        "curious": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "relationship_quality": "close",
-      "email_content": "negative",
+      "message_content": "neutral",
+      "sender_identity": "known",
       "emotions": {
-        "surprise": 0.7,
-        "concern": 0.25,
-        "happiness": 0.05
+        "curious": 0.5,
+        "confused": 0.35,
+        "indifferent": 0.15
       }
     },
     {
       "offence_history": "first_time",
-      "relationship_quality": "distant",
-      "email_content": "positive",
+      "message_content": "positive",
+      "sender_identity": "unknown",
       "emotions": {
-        "surprise": 0.6,
-        "happiness": 0.3,
-        "curiosity": 0.1
+        "happy": 0.4,
+        "surprised": 0.4,
+        "suspicious": 0.2
       }
     },
     {
       "offence_history": "first_time",
-      "relationship_quality": "distant",
-      "email_content": "negative",
+      "message_content": "neutral",
+      "sender_identity": "unknown",
       "emotions": {
-        "concern": 0.6,
-        "surprise": 0.3,
-        "happiness": 0.1
+        "curious": 0.5,
+        "confused": 0.35,
+        "suspicious": 0.15
       }
     },
     {
       "offence_history": "repeated",
-      "relationship_quality": "close",
-      "email_content": "positive",
+      "message_content": "positive",
+      "sender_identity": "known",
       "emotions": {
-        "happiness": 0.4,
-        "gratitude": 0.3,
-        "surprise": 0.3
+        "happy": 0.3,
+        "surprised": 0.4,
+        "angry": 0.3
       }
     },
     {
       "offence_history": "repeated",
-      "relationship_quality": "close",
-      "email_content": "negative",
+      "message_content": "neutral",
+      "sender_identity": "known",
       "emotions": {
-        "anger": 0.5,
-        "concern": 0.3,
-        "happiness": 0.2
+        "surprised": 0.4,
+        "confused": 0.35,
+        "angry": 0.25
       }
     },
     {
       "offence_history": "repeated",
-      "relationship_quality": "distant",
-      "email_content": "positive",
+      "message_content": "positive",
+      "sender_identity": "unknown",
       "emotions": {
-        "gratitude": 0.2,
-        "happiness": 0.4,
-        "surprise": 0.4
+        "happy": 0.2,
+        "surprised": 0.4,
+        "suspicious": 0.4
       }
     },
     {
       "offence_history": "repeated",
-      "relationship_quality": "distant",
-      "email_content": "negative",
+      "message_content": "neutral",
+      "sender_identity": "unknown",
       "emotions": {
-        "anger": 0.7,
-        "concern": 0.2,
-        "happiness": 0.1
+        "surprised": 0.4,
+        "confused": 0.35,
+        "suspicious": 0.25
       }
     }
   ]

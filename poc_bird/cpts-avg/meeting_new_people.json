@@ -1,0 +1,102 @@
+{
+  "factors": {
+    "familiarity": [
+      "familiar",
+      "unfamiliar"
+    ],
+    "interaction_quality": [
+      "positive",
+      "negative"
+    ],
+    "previous_interactions": [
+      "none",
+      "previous"
+    ]
+  },
+  "cpt": [
+    {
+      "familiarity": "familiar",
+      "interaction_quality": "positive",
+      "previous_interactions": "none",
+      "emotions": {
+        "curiosity": 0.6,
+        "caution": 0.35,
+        "excitement": 0.05
+      }
+    },
+    {
+      "familiarity": "familiar",
+      "interaction_quality": "positive",
+      "previous_interactions": "previous",
+      "emotions": {
+        "comfort": 0.45000000000000007,
+        "curiosity": 0.325,
+        "relief": 0.22500000000000003
+      }
+    },
+    {
+      "familiarity": "familiar",
+      "interaction_quality": "negative",
+      "previous_interactions": "none",
+      "emotions": {
+        "frustration": 0.525,
+        "caution": 0.375,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "familiarity": "familiar",
+      "interaction_quality": "negative",
+      "previous_interactions": "previous",
+      "emotions": {
+        "irritation": 0.6,
+        "caution": 0.3,
+        "disappointment": 0.05,
+        "dissatisfaction": 0.05
+      }
+    },
+    {
+      "familiarity": "unfamiliar",
+      "interaction_quality": "positive",
+      "previous_interactions": "none",
+      "emotions": {
+        "curiosity": 0.725,
+        "anxiety": 0.225,
+        "excitement": 0.05
+      }
+    },
+    {
+      "familiarity": "unfamiliar",
+      "interaction_quality": "positive",
+      "previous_interactions": "previous",
+      "emotions": {
+        "curiosity": 0.5000000000000001,
+        "relief": 0.325,
+        "excitement": 0.07500000000000001,
+        "pleasure": 0.10000000000000002
+      }
+    },
+    {
+      "familiarity": "unfamiliar",
+      "interaction_quality": "negative",
+      "previous_interactions": "none",
+      "emotions": {
+        "anxiety": 0.625,
+        "caution": 0.3,
+        "fear": 0.05,
+        "unease": 0.025
+      }
+    },
+    {
+      "familiarity": "unfamiliar",
+      "interaction_quality": "negative",
+      "previous_interactions": "previous",
+      "emotions": {
+        "anxiety": 0.7,
+        "caution": 0.225,
+        "fear": 0.05,
+        "dread": 0.025
+      }
+    }
+  ]
+}

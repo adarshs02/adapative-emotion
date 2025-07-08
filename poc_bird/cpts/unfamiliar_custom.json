@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "cultural_similarity",
-      "values": [
-        "similar",
-        "unfamiliar"
-      ]
-    },
-    {
-      "name": "social_support",
-      "values": [
-        "strong",
-        "weak"
-      ]
-    }
-  ],
+  "factors": {
+    "comfort_level": [
+      "Familiar",
+      "Unfamiliar"
+    ],
+    "preparedness": [
+      "Prepared",
+      "Unprepared"
+    ],
+    "open_mindedness": [
+      "Open",
+      "Closed"
+    ]
+  },
   "cpt": [
     {
-      "offence_history": "first_time",
-      "cultural_similarity": "similar",
-      "social_support": "strong",
+      "comfort_level": "Familiar",
+      "preparedness": "Prepared",
+      "open_mindedness": "Open",
       "emotions": {
-        "curiosity": 0.8,
-        "relief": 0.15,
-        "frustration": 0.05
+        "Curiosity": 0.35,
+        "Excitement": 0.4,
+        "Anxiety": 0.25
       }
     },
     {
-      "offence_history": "first_time",
-      "cultural_similarity": "similar",
-      "social_support": "weak",
+      "comfort_level": "Familiar",
+      "preparedness": "Prepared",
+      "open_mindedness": "Closed",
       "emotions": {
-        "curiosity": 0.7,
-        "relief": 0.25,
-        "frustration": 0.05
+        "Frustration": 0.25,
+        "Resignation": 0.45,
+        "Satisfaction": 0.3
       }
     },
     {
-      "offence_history": "first_time",
-      "cultural_similarity": "unfamiliar",
-      "social_support": "strong",
+      "comfort_level": "Familiar",
+      "preparedness": "Unprepared",
+      "open_mindedness": "Open",
       "emotions": {
-        "curiosity": 0.6,
-        "relief": 0.3,
-        "frustration": 0.1
+        "Confusion": 0.4,
+        "Fear": 0.35,
+        "Curiosity": 0.25
       }
     },
     {
-      "offence_history": "first_time",
-      "cultural_similarity": "unfamiliar",
-      "social_support": "weak",
+      "comfort_level": "Familiar",
+      "preparedness": "Unprepared",
+      "open_mindedness": "Closed",
       "emotions": {
-        "curiosity": 0.5,
-        "relief": 0.35,
-        "frustration": 0.15
+        "Anger": 0.35,
+        "Resentment": 0.4,
+        "Frustration": 0.25
       }
     },
     {
-      "offence_history": "repeated",
-      "cultural_similarity": "similar",
-      "social_support": "strong",
+      "comfort_level": "Unfamiliar",
+      "preparedness": "Prepared",
+      "open_mindedness": "Open",
       "emotions": {
-        "frustration": 0.4,
-        "anger": 0.35,
-        "relief": 0.25
+        "Awe": 0.3,
+        "Excitement": 0.45,
+        "Anxiety": 0.25
       }
     },
     {
-      "offence_history": "repeated",
-      "cultural_similarity": "similar",
-      "social_support": "weak",
+      "comfort_level": "Unfamiliar",
+      "preparedness": "Prepared",
+      "open_mindedness": "Closed",
       "emotions": {
-        "frustration": 0.5,
-        "anger": 0.3,
-        "relief": 0.2
+        "Discomfort": 0.35,
+        "Resignation": 0.4,
+        "Satisfaction": 0.25
       }
     },
     {
-      "offence_history": "repeated",
-      "cultural_similarity": "unfamiliar",
-      "social_support": "strong",
+      "comfort_level": "Unfamiliar",
+      "preparedness": "Unprepared",
+      "open_mindedness": "Open",
       "emotions": {
-        "anger": 0.6,
-        "frustration": 0.3,
-        "relief": 0.1
+        "Overwhelmed": 0.4,
+        "Fear": 0.35,
+        "Curiosity": 0.25
       }
     },
     {
-      "offence_history": "repeated",
-      "cultural_similarity": "unfamiliar",
-      "social_support": "weak",
+      "comfort_level": "Unfamiliar",
+      "preparedness": "Unprepared",
+      "open_mindedness": "Closed",
       "emotions": {
-        "anger": 0.7,
-        "frustration": 0.25,
-        "relief": 0.05
+        "Anger": 0.4,
+        "Resentment": 0.4,
+        "Frustration": 0.2
       }
     }
   ]

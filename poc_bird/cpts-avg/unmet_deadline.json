@@ -1,0 +1,111 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "colleague_attitude": [
+      "supportive",
+      "unsupportive"
+    ],
+    "deadline_importance": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "colleague_attitude": "supportive",
+      "deadline_importance": "low",
+      "emotions": {
+        "relief": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "anger": 0.07500000000000002,
+        "regret": 0.025000000000000005
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "colleague_attitude": "supportive",
+      "deadline_importance": "high",
+      "emotions": {
+        "frustration": 0.475,
+        "disappointment": 0.3125,
+        "anger": 0.0125,
+        "stress": 0.125,
+        "anxiety": 0.05,
+        "worry": 0.025
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "colleague_attitude": "unsupportive",
+      "deadline_importance": "low",
+      "emotions": {
+        "frustration": 0.6499999999999999,
+        "disappointment": 0.1,
+        "anger": 0.2,
+        "regret": 0.025,
+        "anxiety": 0.025
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "colleague_attitude": "unsupportive",
+      "deadline_importance": "high",
+      "emotions": {
+        "anger": 0.5443037974683544,
+        "disappointment": 0.06329113924050632,
+        "frustration": 0.1772151898734177,
+        "stress": 0.15189873417721517,
+        "anxiety": 0.06329113924050632
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "colleague_attitude": "supportive",
+      "deadline_importance": "low",
+      "emotions": {
+        "frustration": 0.5750000000000001,
+        "anger": 0.32500000000000007,
+        "disappointment": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "colleague_attitude": "supportive",
+      "deadline_importance": "high",
+      "emotions": {
+        "anger": 0.575,
+        "disappointment": 0.16249999999999998,
+        "frustration": 0.0625,
+        "stress": 0.15,
+        "anxiety": 0.025,
+        "worry": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "colleague_attitude": "unsupportive",
+      "deadline_importance": "low",
+      "emotions": {
+        "anger": 0.7250000000000001,
+        "disappointment": 0.11249999999999999,
+        "frustration": 0.1375,
+        "anxiety": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "colleague_attitude": "unsupportive",
+      "deadline_importance": "high",
+      "emotions": {
+        "anger": 0.8374999999999999,
+        "disappointment": 0.05,
+        "frustration": 0.0875,
+        "anxiety": 0.025
+      }
+    }
+  ]
+}

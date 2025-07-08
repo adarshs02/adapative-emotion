@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "perceived_intent": [
+      "friendly_compliment",
+      "flirtatious_comment"
+    ],
+    "partner_reaction": [
+      "accepting",
+      "defensive"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "perceived_intent": "friendly_compliment",
+      "partner_reaction": "accepting",
+      "emotions": {
+        "happy": 0.75,
+        "surprised": 0.2,
+        "jealous": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "perceived_intent": "friendly_compliment",
+      "partner_reaction": "defensive",
+      "emotions": {
+        "hurt": 0.4,
+        "confused": 0.45,
+        "angry": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "perceived_intent": "flirtatious_comment",
+      "partner_reaction": "accepting",
+      "emotions": {
+        "uncomfortable": 0.6000000000000001,
+        "suspicious": 0.30000000000000004,
+        "hurt": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "perceived_intent": "flirtatious_comment",
+      "partner_reaction": "defensive",
+      "emotions": {
+        "angry": 0.7,
+        "hurt": 0.25,
+        "suspicious": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "perceived_intent": "friendly_compliment",
+      "partner_reaction": "accepting",
+      "emotions": {
+        "hurt": 0.55,
+        "angry": 0.35,
+        "suspicious": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "perceived_intent": "friendly_compliment",
+      "partner_reaction": "defensive",
+      "emotions": {
+        "angry": 0.75,
+        "hurt": 0.2,
+        "suspicious": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "perceived_intent": "flirtatious_comment",
+      "partner_reaction": "accepting",
+      "emotions": {
+        "angry": 0.8,
+        "hurt": 0.15,
+        "suspicious": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "perceived_intent": "flirtatious_comment",
+      "partner_reaction": "defensive",
+      "emotions": {
+        "angry": 0.9,
+        "hurt": 0.1,
+        "suspicious": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "friend_apology": [
+      "sincere",
+      "insincere"
+    ],
+    "friend_explanation": [
+      "reasonable",
+      "unreasonable"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "friend_apology": "sincere",
+      "friend_explanation": "reasonable",
+      "emotions": {
+        "surprise": 0.1,
+        "disappointment": 0.25,
+        "forgiveness": 0.15,
+        "hurt": 0.15,
+        "disappointed": 0.225,
+        "forgiving": 0.125
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_apology": "sincere",
+      "friend_explanation": "unreasonable",
+      "emotions": {
+        "surprise": 0.12820512820512822,
+        "anger": 0.2820512820512821,
+        "forgiveness": 0.07692307692307693,
+        "hurt": 0.20512820512820515,
+        "angry": 0.23076923076923078,
+        "disappointed": 0.07692307692307693
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_apology": "insincere",
+      "friend_explanation": "reasonable",
+      "emotions": {
+        "surprise": 0.15,
+        "disappointment": 0.2,
+        "anger": 0.15,
+        "hurt": 0.25,
+        "angry": 0.175,
+        "disappointed": 0.075
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_apology": "insincere",
+      "friend_explanation": "unreasonable",
+      "emotions": {
+        "surprise": 0.17948717948717946,
+        "anger": 0.28205128205128205,
+        "betrayal": 0.02564102564102564,
+        "hurt": 0.30769230769230765,
+        "angry": 0.15384615384615383,
+        "disappointed": 0.05128205128205128
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_apology": "sincere",
+      "friend_explanation": "reasonable",
+      "emotions": {
+        "disappointment": 0.15,
+        "anger": 0.275,
+        "betrayal": 0.075,
+        "hurt": 0.2,
+        "angry": 0.25,
+        "disappointed": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_apology": "sincere",
+      "friend_explanation": "unreasonable",
+      "emotions": {
+        "disappointment": 0.125,
+        "anger": 0.3,
+        "betrayal": 0.075,
+        "hurt": 0.275,
+        "angry": 0.2,
+        "disappointed": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_apology": "insincere",
+      "friend_explanation": "reasonable",
+      "emotions": {
+        "disappointment": 0.1794871794871795,
+        "anger": 0.2820512820512821,
+        "betrayal": 0.025641025641025644,
+        "hurt": 0.3076923076923077,
+        "angry": 0.1794871794871795,
+        "disappointed": 0.025641025641025644
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_apology": "insincere",
+      "friend_explanation": "unreasonable",
+      "emotions": {
+        "disappointment": 0.2,
+        "anger": 0.275,
+        "betrayal": 0.025,
+        "hurt": 0.35,
+        "angry": 0.125,
+        "disappointed": 0.025
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "effort_put_in": [
+      "minimal",
+      "significant"
+    ],
+    "communication_level": [
+      "poor",
+      "good"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "effort_put_in": "minimal",
+      "communication_level": "poor",
+      "emotions": {
+        "hopeful": 0.1,
+        "frustrated": 0.4,
+        "helpless": 0.5
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "effort_put_in": "minimal",
+      "communication_level": "good",
+      "emotions": {
+        "optimistic": 0.2,
+        "frustrated": 0.45,
+        "disappointed": 0.35
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "effort_put_in": "significant",
+      "communication_level": "poor",
+      "emotions": {
+        "hopeful": 0.2631578947368421,
+        "anxious": 0.3684210526315789,
+        "frustrated": 0.3684210526315789
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "effort_put_in": "significant",
+      "communication_level": "good",
+      "emotions": {
+        "optimistic": 0.4,
+        "hopeful": 0.35,
+        "relieved": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "effort_put_in": "minimal",
+      "communication_level": "poor",
+      "emotions": {
+        "frustrated": 0.55,
+        "angry": 0.3,
+        "helpless": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "effort_put_in": "minimal",
+      "communication_level": "good",
+      "emotions": {
+        "frustrated": 0.45,
+        "angry": 0.4,
+        "disappointed": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "effort_put_in": "significant",
+      "communication_level": "poor",
+      "emotions": {
+        "angry": 0.6000000000000001,
+        "frustrated": 0.30000000000000004,
+        "helpless": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "effort_put_in": "significant",
+      "communication_level": "good",
+      "emotions": {
+        "hopeful": 0.2,
+        "angry": 0.45,
+        "optimistic": 0.35
+      }
+    }
+  ]
+}

@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "colleague_intent",
-      "values": [
-        "accidental",
-        "intentional"
-      ]
-    },
-    {
-      "name": "personal_stress_level",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "colleague_attitude": [
+      "supportive",
+      "unsupportive"
+    ],
+    "deadline_importance": [
+      "low",
+      "high"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "colleague_intent": "accidental",
-      "personal_stress_level": "low",
+      "colleague_attitude": "supportive",
+      "deadline_importance": "low",
       "emotions": {
-        "frustration": 0.7,
-        "anger": 0.2,
-        "disappointment": 0.1
+        "relief": 0.6,
+        "frustration": 0.3,
+        "anger": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "colleague_intent": "accidental",
-      "personal_stress_level": "high",
+      "colleague_attitude": "supportive",
+      "deadline_importance": "high",
+      "emotions": {
+        "disappointment": 0.4,
+        "frustration": 0.5,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "colleague_attitude": "unsupportive",
+      "deadline_importance": "low",
       "emotions": {
         "frustration": 0.6,
         "anger": 0.3,
-        "disappointment": 0.1
+        "anxiety": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "colleague_intent": "intentional",
-      "personal_stress_level": "low",
+      "colleague_attitude": "unsupportive",
+      "deadline_importance": "high",
       "emotions": {
-        "anger": 0.8,
-        "frustration": 0.2,
-        "disappointment": 0.0
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "colleague_intent": "intentional",
-      "personal_stress_level": "high",
-      "emotions": {
-        "anger": 0.9,
-        "frustration": 0.1,
-        "disappointment": 0.0
+        "disappointment": 0.4,
+        "frustration": 0.5,
+        "anxiety": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "colleague_intent": "accidental",
-      "personal_stress_level": "low",
+      "colleague_attitude": "supportive",
+      "deadline_importance": "low",
       "emotions": {
-        "anger": 0.5,
-        "frustration": 0.4,
-        "disappointment": 0.1
+        "frustration": 0.7,
+        "anger": 0.2,
+        "anxiety": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "colleague_intent": "accidental",
-      "personal_stress_level": "high",
+      "colleague_attitude": "supportive",
+      "deadline_importance": "high",
       "emotions": {
-        "anger": 0.7,
-        "frustration": 0.3,
-        "disappointment": 0.0
+        "disappointment": 0.3,
+        "frustration": 0.5,
+        "anger": 0.2
       }
     },
     {
       "offence_history": "repeated",
-      "colleague_intent": "intentional",
-      "personal_stress_level": "low",
+      "colleague_attitude": "unsupportive",
+      "deadline_importance": "low",
       "emotions": {
-        "anger": 0.9,
-        "frustration": 0.1,
-        "disappointment": 0.0
+        "frustration": 0.8,
+        "anger": 0.15,
+        "anxiety": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "colleague_intent": "intentional",
-      "personal_stress_level": "high",
+      "colleague_attitude": "unsupportive",
+      "deadline_importance": "high",
       "emotions": {
-        "anger": 0.95,
-        "frustration": 0.05,
-        "disappointment": 0.0
+        "disappointment": 0.3,
+        "frustration": 0.5,
+        "anger": 0.2
       }
     }
   ]

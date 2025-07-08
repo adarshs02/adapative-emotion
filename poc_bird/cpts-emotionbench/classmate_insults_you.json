@@ -1,0 +1,102 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "justification": [
+      "unjustified",
+      "justified"
+    ],
+    "self_confidence": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "justification": "unjustified",
+      "self_confidence": "low",
+      "emotions": {
+        "guilt": 0.6000000000000001,
+        "anger": 0.30000000000000004,
+        "sadness": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "justification": "unjustified",
+      "self_confidence": "high",
+      "emotions": {
+        "surprise": 0.4,
+        "disappointment": 0.35,
+        "indignation": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "justification": "unjustified",
+      "self_confidence": "low",
+      "emotions": {
+        "anger": 0.55,
+        "guilt": 0.35,
+        "sadness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "justification": "unjustified",
+      "self_confidence": "high",
+      "emotions": {
+        "anger": 0.725,
+        "indignation": 0.2,
+        "determination": 0.025,
+        "frustration": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "justification": "justified",
+      "self_confidence": "low",
+      "emotions": {
+        "relief": 0.6000000000000001,
+        "surprise": 0.30000000000000004,
+        "sadness": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "justification": "justified",
+      "self_confidence": "high",
+      "emotions": {
+        "satisfaction": 0.5000000000000001,
+        "pride": 0.35000000000000003,
+        "gratitude": 0.07500000000000001,
+        "happiness": 0.07500000000000001
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "justification": "justified",
+      "self_confidence": "low",
+      "emotions": {
+        "relief": 0.65,
+        "gratitude": 0.10000000000000002,
+        "sadness": 0.10000000000000002,
+        "surprise": 0.15000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "justification": "justified",
+      "self_confidence": "high",
+      "emotions": {
+        "satisfaction": 0.675,
+        "pride": 0.22499999999999998,
+        "gratitude": 0.025,
+        "happiness": 0.075
+      }
+    }
+  ]
+}

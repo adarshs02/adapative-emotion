@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "social_isolation_duration": [
+      "short",
+      "long"
+    ],
+    "social_activity_before": [
+      "active",
+      "inactive"
+    ],
+    "communication_attempts": [
+      "none",
+      "some"
+    ]
+  },
+  "cpt": [
+    {
+      "social_isolation_duration": "short",
+      "social_activity_before": "active",
+      "communication_attempts": "none",
+      "emotions": {
+        "boredom": 0.35,
+        "anxiety": 0.4,
+        "frustration": 0.25
+      }
+    },
+    {
+      "social_isolation_duration": "short",
+      "social_activity_before": "active",
+      "communication_attempts": "some",
+      "emotions": {
+        "relief": 0.25,
+        "hope": 0.45,
+        "anticipation": 0.3
+      }
+    },
+    {
+      "social_isolation_duration": "short",
+      "social_activity_before": "inactive",
+      "communication_attempts": "none",
+      "emotions": {
+        "loneliness": 0.55,
+        "despair": 0.3,
+        "boredom": 0.15
+      }
+    },
+    {
+      "social_isolation_duration": "short",
+      "social_activity_before": "inactive",
+      "communication_attempts": "some",
+      "emotions": {
+        "hope": 0.3,
+        "relief": 0.4,
+        "anxiety": 0.3
+      }
+    },
+    {
+      "social_isolation_duration": "long",
+      "social_activity_before": "active",
+      "communication_attempts": "none",
+      "emotions": {
+        "loneliness": 0.6000000000000001,
+        "despair": 0.30000000000000004,
+        "boredom": 0.10000000000000002
+      }
+    },
+    {
+      "social_isolation_duration": "long",
+      "social_activity_before": "active",
+      "communication_attempts": "some",
+      "emotions": {
+        "hopelessness": 0.4,
+        "anxiety": 0.45,
+        "frustration": 0.15
+      }
+    },
+    {
+      "social_isolation_duration": "long",
+      "social_activity_before": "inactive",
+      "communication_attempts": "none",
+      "emotions": {
+        "despair": 0.7,
+        "loneliness": 0.25,
+        "boredom": 0.05
+      }
+    },
+    {
+      "social_isolation_duration": "long",
+      "social_activity_before": "inactive",
+      "communication_attempts": "some",
+      "emotions": {
+        "anxiety": 0.47368421052631576,
+        "hope": 0.36842105263157887,
+        "relief": 0.15789473684210525
+      }
+    }
+  ]
+}

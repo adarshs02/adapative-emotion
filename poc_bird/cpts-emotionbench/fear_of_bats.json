@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "familiarity_with_bats": [
+      "familiar",
+      "unfamiliar"
+    ],
+    "perception_of_threat": [
+      "low",
+      "high"
+    ],
+    "night_fear_level": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "familiarity_with_bats": "familiar",
+      "perception_of_threat": "low",
+      "night_fear_level": "low",
+      "emotions": {
+        "curiosity": 0.6,
+        "surprise": 0.35,
+        "fear": 0.05
+      }
+    },
+    {
+      "familiarity_with_bats": "familiar",
+      "perception_of_threat": "high",
+      "night_fear_level": "low",
+      "emotions": {
+        "fear": 0.4,
+        "surprise": 0.4,
+        "curiosity": 0.2
+      }
+    },
+    {
+      "familiarity_with_bats": "familiar",
+      "perception_of_threat": "low",
+      "night_fear_level": "high",
+      "emotions": {
+        "fear": 0.7,
+        "surprise": 0.25,
+        "curiosity": 0.05
+      }
+    },
+    {
+      "familiarity_with_bats": "familiar",
+      "perception_of_threat": "high",
+      "night_fear_level": "high",
+      "emotions": {
+        "fear": 0.8,
+        "surprise": 0.15,
+        "curiosity": 0.05
+      }
+    },
+    {
+      "familiarity_with_bats": "unfamiliar",
+      "perception_of_threat": "low",
+      "night_fear_level": "low",
+      "emotions": {
+        "fear": 0.20000000000000004,
+        "surprise": 0.7000000000000001,
+        "curiosity": 0.10000000000000002
+      }
+    },
+    {
+      "familiarity_with_bats": "unfamiliar",
+      "perception_of_threat": "high",
+      "night_fear_level": "low",
+      "emotions": {
+        "fear": 0.5,
+        "surprise": 0.4,
+        "curiosity": 0.1
+      }
+    },
+    {
+      "familiarity_with_bats": "unfamiliar",
+      "perception_of_threat": "low",
+      "night_fear_level": "high",
+      "emotions": {
+        "fear": 0.6000000000000001,
+        "surprise": 0.30000000000000004,
+        "curiosity": 0.10000000000000002
+      }
+    },
+    {
+      "familiarity_with_bats": "unfamiliar",
+      "perception_of_threat": "high",
+      "night_fear_level": "high",
+      "emotions": {
+        "fear": 0.8,
+        "surprise": 0.15,
+        "curiosity": 0.05
+      }
+    }
+  ]
+}

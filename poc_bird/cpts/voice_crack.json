@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "audience_size",
-      "values": [
-        "small",
-        "large"
-      ]
-    },
-    {
-      "name": "public_setting",
-      "values": [
-        "private",
-        "public"
-      ]
-    }
-  ],
+  "factors": {
+    "age_group": [
+      "young",
+      "adult"
+    ],
+    "speaking_context": [
+      "formal",
+      "informal"
+    ],
+    "emotional_state": [
+      "calm",
+      "nervous"
+    ]
+  },
   "cpt": [
     {
-      "offence_history": "first_time",
-      "audience_size": "small",
-      "public_setting": "private",
+      "age_group": "young",
+      "speaking_context": "formal",
+      "emotional_state": "calm",
       "emotions": {
-        "shame": 0.8,
-        "anxiety": 0.15,
-        "relief": 0.05
+        "amusement": 0.05,
+        "surprise": 0.2,
+        "confidence": 0.75
       }
     },
     {
-      "offence_history": "first_time",
-      "audience_size": "small",
-      "public_setting": "public",
+      "age_group": "young",
+      "speaking_context": "formal",
+      "emotional_state": "nervous",
       "emotions": {
-        "shame": 0.7,
-        "anxiety": 0.25,
-        "relief": 0.05
+        "anxiety": 0.35,
+        "embarrassment": 0.4,
+        "determination": 0.25
       }
     },
     {
-      "offence_history": "first_time",
-      "audience_size": "large",
-      "public_setting": "private",
+      "age_group": "young",
+      "speaking_context": "informal",
+      "emotional_state": "calm",
       "emotions": {
-        "shame": 0.6,
-        "anxiety": 0.3,
-        "relief": 0.1
+        "relaxation": 0.6,
+        "happiness": 0.3,
+        "boredom": 0.1
       }
     },
     {
-      "offence_history": "first_time",
-      "audience_size": "large",
-      "public_setting": "public",
+      "age_group": "young",
+      "speaking_context": "informal",
+      "emotional_state": "nervous",
       "emotions": {
-        "shame": 0.5,
-        "anxiety": 0.4,
-        "relief": 0.1
+        "shyness": 0.4,
+        "nervousness": 0.5,
+        "excitement": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "audience_size": "small",
-      "public_setting": "private",
+      "age_group": "adult",
+      "speaking_context": "formal",
+      "emotional_state": "calm",
       "emotions": {
-        "shame": 0.2,
-        "anxiety": 0.6,
-        "anger": 0.2
+        "professionalism": 0.7,
+        "confidence": 0.25,
+        "anxiety": 0.05
       }
     },
     {
-      "offence_history": "repeated",
-      "audience_size": "small",
-      "public_setting": "public",
+      "age_group": "adult",
+      "speaking_context": "formal",
+      "emotional_state": "nervous",
       "emotions": {
-        "shame": 0.1,
-        "anxiety": 0.5,
-        "anger": 0.4
+        "anxiety": 0.55,
+        "nervousness": 0.35,
+        "determination": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "audience_size": "large",
-      "public_setting": "private",
+      "age_group": "adult",
+      "speaking_context": "informal",
+      "emotional_state": "calm",
       "emotions": {
-        "shame": 0.1,
-        "anxiety": 0.4,
-        "anger": 0.5
+        "relaxation": 0.65,
+        "happiness": 0.25,
+        "boredom": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "audience_size": "large",
-      "public_setting": "public",
+      "age_group": "adult",
+      "speaking_context": "informal",
+      "emotional_state": "nervous",
       "emotions": {
-        "shame": 0.05,
-        "anxiety": 0.3,
-        "anger": 0.65
+        "shyness": 0.4,
+        "nervousness": 0.5,
+        "excitement": 0.1
       }
     }
   ]

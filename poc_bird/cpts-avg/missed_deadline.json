@@ -1,0 +1,116 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "responsibility_level": [
+      "low",
+      "high"
+    ],
+    "consequences": [
+      "minor",
+      "major"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "responsibility_level": "low",
+      "consequences": "minor",
+      "emotions": {
+        "relief": 0.5333333333333333,
+        "frustration": 0.35000000000000003,
+        "guilt": 0.11666666666666665
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "responsibility_level": "low",
+      "consequences": "major",
+      "emotions": {
+        "frustration": 0.39999999999999997,
+        "worry": 0.08333333333333333,
+        "anger": 0.016666666666666666,
+        "surprise": 0.13333333333333333,
+        "fear": 0.21666666666666665,
+        "disappointment": 0.08333333333333333,
+        "guilt": 0.06666666666666667
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "responsibility_level": "high",
+      "consequences": "minor",
+      "emotions": {
+        "relief": 0.33333333333333337,
+        "frustration": 0.4333333333333334,
+        "guilt": 0.13333333333333336,
+        "regret": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "responsibility_level": "high",
+      "consequences": "major",
+      "emotions": {
+        "frustration": 0.35000000000000003,
+        "worry": 0.09999999999999999,
+        "anger": 0.03333333333333333,
+        "shock": 0.16666666666666666,
+        "fear": 0.25,
+        "disappointment": 0.049999999999999996,
+        "regret": 0.049999999999999996
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "responsibility_level": "low",
+      "consequences": "minor",
+      "emotions": {
+        "frustration": 0.559322033898305,
+        "worry": 0.06779661016949153,
+        "anger": 0.18644067796610173,
+        "guilt": 0.15254237288135594,
+        "indifference": 0.03389830508474576
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "responsibility_level": "low",
+      "consequences": "major",
+      "emotions": {
+        "worry": 0.19999999999999998,
+        "anger": 0.4833333333333334,
+        "fear": 0.19999999999999998,
+        "disappointment": 0.049999999999999996,
+        "guilt": 0.06666666666666667
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "responsibility_level": "high",
+      "consequences": "minor",
+      "emotions": {
+        "frustration": 0.26666666666666666,
+        "worry": 0.09999999999999999,
+        "anger": 0.4166666666666667,
+        "guilt": 0.08333333333333333,
+        "indifference": 0.03333333333333333,
+        "regret": 0.09999999999999999
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "responsibility_level": "high",
+      "consequences": "major",
+      "emotions": {
+        "worry": 0.23333333333333334,
+        "anger": 0.5000000000000001,
+        "fear": 0.2,
+        "disappointment": 0.03333333333333334,
+        "regret": 0.03333333333333334
+      }
+    }
+  ]
+}

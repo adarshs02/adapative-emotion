@@ -1,0 +1,115 @@
+{
+  "factors": {
+    "injury_severity": [
+      "minor",
+      "major"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "importance_of_appointment": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "injury_severity": "minor",
+      "offence_history": "first_time",
+      "importance_of_appointment": "low",
+      "emotions": {
+        "fear": 0.15,
+        "frustration": 0.375,
+        "sadness": 0.15,
+        "surprise": 0.2,
+        "relief": 0.125
+      }
+    },
+    {
+      "injury_severity": "minor",
+      "offence_history": "first_time",
+      "importance_of_appointment": "high",
+      "emotions": {
+        "fear": 0.125,
+        "anger": 0.4,
+        "sadness": 0.15,
+        "disappointment": 0.25,
+        "anxiety": 0.075
+      }
+    },
+    {
+      "injury_severity": "minor",
+      "offence_history": "repeated",
+      "importance_of_appointment": "low",
+      "emotions": {
+        "fear": 0.1,
+        "anger": 0.25,
+        "sadness": 0.15,
+        "surprise": 0.15,
+        "frustration": 0.225,
+        "relief": 0.125
+      }
+    },
+    {
+      "injury_severity": "minor",
+      "offence_history": "repeated",
+      "importance_of_appointment": "high",
+      "emotions": {
+        "fear": 0.07500000000000001,
+        "anger": 0.5000000000000001,
+        "sadness": 0.12500000000000003,
+        "disappointment": 0.22500000000000003,
+        "anxiety": 0.07500000000000001
+      }
+    },
+    {
+      "injury_severity": "major",
+      "offence_history": "first_time",
+      "importance_of_appointment": "low",
+      "emotions": {
+        "fear": 0.37500000000000006,
+        "anger": 0.22500000000000003,
+        "sadness": 0.07500000000000001,
+        "shock": 0.25000000000000006,
+        "relief": 0.07500000000000001
+      }
+    },
+    {
+      "injury_severity": "major",
+      "offence_history": "first_time",
+      "importance_of_appointment": "high",
+      "emotions": {
+        "fear": 0.37500000000000006,
+        "anger": 0.25000000000000006,
+        "sadness": 0.07500000000000001,
+        "shock": 0.22500000000000003,
+        "disappointment": 0.07500000000000001
+      }
+    },
+    {
+      "injury_severity": "major",
+      "offence_history": "repeated",
+      "importance_of_appointment": "low",
+      "emotions": {
+        "fear": 0.375,
+        "anger": 0.275,
+        "sadness": 0.075,
+        "shock": 0.2,
+        "relief": 0.075
+      }
+    },
+    {
+      "injury_severity": "major",
+      "offence_history": "repeated",
+      "importance_of_appointment": "high",
+      "emotions": {
+        "fear": 0.35000000000000003,
+        "anger": 0.30000000000000004,
+        "sadness": 0.07500000000000001,
+        "shock": 0.20000000000000007,
+        "disappointment": 0.07500000000000001
+      }
+    }
+  ]
+}

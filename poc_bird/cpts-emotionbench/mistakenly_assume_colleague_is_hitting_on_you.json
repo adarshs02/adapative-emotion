@@ -1,0 +1,104 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "clarity_of_communication": [
+      "clear",
+      "blurted_out"
+    ],
+    "surprise_level": [
+      "expected",
+      "unexpected"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "clarity_of_communication": "clear",
+      "surprise_level": "expected",
+      "emotions": {
+        "relief": 0.6,
+        "embarrassment": 0.3,
+        "confidence": 0.05,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "clarity_of_communication": "clear",
+      "surprise_level": "unexpected",
+      "emotions": {
+        "surprise": 0.7,
+        "confusion": 0.15000000000000002,
+        "embarrassment": 0.05,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "clarity_of_communication": "blurted_out",
+      "surprise_level": "expected",
+      "emotions": {
+        "nervousness": 0.75,
+        "embarrassment": 0.2,
+        "confusion": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "clarity_of_communication": "blurted_out",
+      "surprise_level": "unexpected",
+      "emotions": {
+        "nervousness": 0.85,
+        "surprise": 0.1,
+        "confusion": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "clarity_of_communication": "clear",
+      "surprise_level": "expected",
+      "emotions": {
+        "frustration": 0.30000000000000004,
+        "embarrassment": 0.15000000000000002,
+        "confusion": 0.05000000000000001,
+        "relief": 0.20000000000000004,
+        "anger": 0.20000000000000004,
+        "disappointment": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "clarity_of_communication": "clear",
+      "surprise_level": "unexpected",
+      "emotions": {
+        "surprise": 0.6499999999999999,
+        "confusion": 0.15000000000000002,
+        "frustration": 0.05,
+        "anger": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "clarity_of_communication": "blurted_out",
+      "surprise_level": "expected",
+      "emotions": {
+        "nervousness": 0.75,
+        "frustration": 0.2,
+        "confusion": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "clarity_of_communication": "blurted_out",
+      "surprise_level": "unexpected",
+      "emotions": {
+        "nervousness": 0.85,
+        "surprise": 0.1,
+        "frustration": 0.05
+      }
+    }
+  ]
+}

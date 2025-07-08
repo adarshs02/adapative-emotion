@@ -1,0 +1,120 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "intent": [
+      "unintentional",
+      "intentional"
+    ],
+    "victim_relationship": [
+      "acquaintance",
+      "stranger"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "intent": "unintentional",
+      "victim_relationship": "acquaintance",
+      "emotions": {
+        "surprise": 0.32499999999999996,
+        "disappointment": 0.35,
+        "confusion": 0.275,
+        "betrayal": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intent": "unintentional",
+      "victim_relationship": "stranger",
+      "emotions": {
+        "shock": 0.2,
+        "disbelief": 0.175,
+        "sympathy": 0.125,
+        "surprise": 0.2,
+        "disappointment": 0.15,
+        "confusion": 0.1,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intent": "intentional",
+      "victim_relationship": "acquaintance",
+      "emotions": {
+        "anger": 0.45,
+        "betrayal": 0.25,
+        "disappointment": 0.05,
+        "shock": 0.1,
+        "disgust": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intent": "intentional",
+      "victim_relationship": "stranger",
+      "emotions": {
+        "outrage": 0.3,
+        "indignation": 0.15,
+        "fear": 0.1,
+        "shock": 0.1,
+        "disgust": 0.15,
+        "anger": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intent": "unintentional",
+      "victim_relationship": "acquaintance",
+      "emotions": {
+        "frustration": 0.25,
+        "disappointment": 0.35,
+        "anger": 0.05,
+        "surprise": 0.1,
+        "confusion": 0.15,
+        "betrayal": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intent": "unintentional",
+      "victim_relationship": "stranger",
+      "emotions": {
+        "disgust": 0.225,
+        "shock": 0.175,
+        "outrage": 0.1,
+        "surprise": 0.1,
+        "disappointment": 0.15,
+        "confusion": 0.15,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intent": "intentional",
+      "victim_relationship": "acquaintance",
+      "emotions": {
+        "anger": 0.55,
+        "betrayal": 0.175,
+        "disappointment": 0.025,
+        "shock": 0.1,
+        "disgust": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intent": "intentional",
+      "victim_relationship": "stranger",
+      "emotions": {
+        "outrage": 0.4,
+        "indignation": 0.075,
+        "fear": 0.07500000000000001,
+        "shock": 0.1,
+        "disgust": 0.15,
+        "anger": 0.2
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "parent_reaction": [
+      "understanding",
+      "strict"
+    ],
+    "consequences_severity": [
+      "minor",
+      "major"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "parent_reaction": "understanding",
+      "consequences_severity": "minor",
+      "emotions": {
+        "excitement": 0.6,
+        "defiance": 0.35,
+        "regret": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "parent_reaction": "understanding",
+      "consequences_severity": "major",
+      "emotions": {
+        "fear": 0.4,
+        "defiance": 0.3,
+        "regret": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "parent_reaction": "strict",
+      "consequences_severity": "minor",
+      "emotions": {
+        "anxiety": 0.47368421052631576,
+        "defiance": 0.36842105263157887,
+        "relief": 0.15789473684210525
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "parent_reaction": "strict",
+      "consequences_severity": "major",
+      "emotions": {
+        "anxiety": 0.55,
+        "defiance": 0.3,
+        "regret": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "parent_reaction": "understanding",
+      "consequences_severity": "minor",
+      "emotions": {
+        "defiance": 0.4,
+        "anger": 0.35,
+        "regret": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "parent_reaction": "understanding",
+      "consequences_severity": "major",
+      "emotions": {
+        "defiance": 0.36842105263157887,
+        "anger": 0.47368421052631576,
+        "fear": 0.15789473684210525
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "parent_reaction": "strict",
+      "consequences_severity": "minor",
+      "emotions": {
+        "defiance": 0.3,
+        "anger": 0.45,
+        "regret": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "parent_reaction": "strict",
+      "consequences_severity": "major",
+      "emotions": {
+        "defiance": 0.2631578947368421,
+        "anger": 0.5789473684210527,
+        "fear": 0.15789473684210525
+      }
+    }
+  ]
+}

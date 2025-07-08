@@ -1,0 +1,104 @@
+{
+  "factors": {
+    "date_type": [
+      "First time",
+      "Repeated"
+    ],
+    "preparation": [
+      "Well prepared",
+      "Not well prepared"
+    ],
+    "chemistry": [
+      "Good chemistry",
+      "No chemistry"
+    ]
+  },
+  "cpt": [
+    {
+      "date_type": "First time",
+      "preparation": "Well prepared",
+      "chemistry": "Good chemistry",
+      "emotions": {
+        "Excited": 0.6499999999999999,
+        "Nervous": 0.3,
+        "Confident": 0.025,
+        "Anxious": 0.025
+      }
+    },
+    {
+      "date_type": "First time",
+      "preparation": "Well prepared",
+      "chemistry": "No chemistry",
+      "emotions": {
+        "Disappointed": 0.45,
+        "Anxious": 0.175,
+        "Relieved": 0.175,
+        "Frustrated": 0.2
+      }
+    },
+    {
+      "date_type": "First time",
+      "preparation": "Not well prepared",
+      "chemistry": "Good chemistry",
+      "emotions": {
+        "Stressed": 0.55,
+        "Nervous": 0.2,
+        "Embarrassed": 0.2,
+        "Hopeful": 0.05
+      }
+    },
+    {
+      "date_type": "First time",
+      "preparation": "Not well prepared",
+      "chemistry": "No chemistry",
+      "emotions": {
+        "Frustrated": 0.3,
+        "Disappointed": 0.30000000000000004,
+        "Relieved": 0.05,
+        "Regretful": 0.35
+      }
+    },
+    {
+      "date_type": "Repeated",
+      "preparation": "Well prepared",
+      "chemistry": "Good chemistry",
+      "emotions": {
+        "Happy": 0.375,
+        "Confident": 0.55,
+        "Relaxed": 0.07500000000000001
+      }
+    },
+    {
+      "date_type": "Repeated",
+      "preparation": "Well prepared",
+      "chemistry": "No chemistry",
+      "emotions": {
+        "Disappointed": 0.5,
+        "Frustrated": 0.3,
+        "Relieved": 0.2
+      }
+    },
+    {
+      "date_type": "Repeated",
+      "preparation": "Not well prepared",
+      "chemistry": "Good chemistry",
+      "emotions": {
+        "Anxious": 0.6,
+        "Stressed": 0.2,
+        "Embarrassed": 0.1,
+        "Nervous": 0.1
+      }
+    },
+    {
+      "date_type": "Repeated",
+      "preparation": "Not well prepared",
+      "chemistry": "No chemistry",
+      "emotions": {
+        "Angry": 0.25,
+        "Disappointed": 0.275,
+        "Frustrated": 0.07500000000000001,
+        "Regretful": 0.4
+      }
+    }
+  ]
+}

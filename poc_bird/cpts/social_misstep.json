@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "offender_intent",
-      "values": [
-        "accidental",
-        "intentional"
-      ]
-    },
-    {
-      "name": "offended_person_relationship",
-      "values": [
-        "close",
-        "distant"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "apology_given": [
+      "no",
+      "yes"
+    ],
+    "relationship_with_person": [
+      "acquaintance",
+      "close_friend"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "offender_intent": "accidental",
-      "offended_person_relationship": "close",
+      "apology_given": "no",
+      "relationship_with_person": "acquaintance",
       "emotions": {
-        "guilt": 0.8,
-        "relief": 0.15,
-        "anger": 0.05
+        "regret": 0.7,
+        "embarrassment": 0.25,
+        "indifference": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "offender_intent": "accidental",
-      "offended_person_relationship": "distant",
+      "apology_given": "no",
+      "relationship_with_person": "close_friend",
       "emotions": {
-        "relief": 0.7,
-        "guilt": 0.25,
+        "regret": 0.6,
+        "anger": 0.3,
+        "embarrassment": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_given": "yes",
+      "relationship_with_person": "acquaintance",
+      "emotions": {
+        "relief": 0.8,
+        "regret": 0.15,
         "embarrassment": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "offender_intent": "intentional",
-      "offended_person_relationship": "close",
+      "apology_given": "yes",
+      "relationship_with_person": "close_friend",
       "emotions": {
-        "anger": 0.6,
-        "guilt": 0.3,
-        "shame": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "offender_intent": "intentional",
-      "offended_person_relationship": "distant",
-      "emotions": {
-        "anger": 0.8,
-        "resentment": 0.15,
-        "shame": 0.05
+        "gratitude": 0.5,
+        "relief": 0.4,
+        "embarrassment": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "offender_intent": "accidental",
-      "offended_person_relationship": "close",
+      "apology_given": "no",
+      "relationship_with_person": "acquaintance",
       "emotions": {
-        "guilt": 0.9,
-        "frustration": 0.05,
-        "anger": 0.05
+        "regret": 0.5,
+        "anger": 0.4,
+        "indifference": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "offender_intent": "accidental",
-      "offended_person_relationship": "distant",
+      "apology_given": "no",
+      "relationship_with_person": "close_friend",
       "emotions": {
-        "frustration": 0.7,
-        "guilt": 0.25,
-        "embarrassment": 0.05
+        "regret": 0.45,
+        "anger": 0.45,
+        "disappointment": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "offender_intent": "intentional",
-      "offended_person_relationship": "close",
+      "apology_given": "yes",
+      "relationship_with_person": "acquaintance",
       "emotions": {
-        "anger": 0.8,
-        "resentment": 0.15,
-        "shame": 0.05
+        "regret": 0.6,
+        "anger": 0.3,
+        "relief": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "offender_intent": "intentional",
-      "offended_person_relationship": "distant",
+      "apology_given": "yes",
+      "relationship_with_person": "close_friend",
       "emotions": {
-        "anger": 0.9,
-        "resentment": 0.08,
-        "shame": 0.02
+        "regret": 0.55,
+        "anger": 0.35,
+        "gratitude": 0.05
       }
     }
   ]

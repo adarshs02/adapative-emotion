@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "home_quality",
-      "values": [
-        "good",
-        "bad"
-      ]
-    },
-    {
-      "name": "financial_stability",
-      "values": [
-        "stable",
-        "unstable"
-      ]
-    }
-  ],
+  "factors": {
+    "move_history": [
+      "first_time",
+      "repeated"
+    ],
+    "home_condition": [
+      "well_maintained",
+      "needs_repair"
+    ],
+    "neighborhood_reputation": [
+      "safe",
+      "dangerous"
+    ]
+  },
   "cpt": [
     {
-      "offence_history": "first_time",
-      "home_quality": "good",
-      "financial_stability": "stable",
+      "move_history": "first_time",
+      "home_condition": "well_maintained",
+      "neighborhood_reputation": "safe",
       "emotions": {
-        "excitement": 0.7,
-        "hope": 0.25,
-        "anxiety": 0.05
+        "hopeful": 0.8,
+        "excited": 0.15,
+        "anxious": 0.05
       }
     },
     {
-      "offence_history": "first_time",
-      "home_quality": "good",
-      "financial_stability": "unstable",
+      "move_history": "first_time",
+      "home_condition": "well_maintained",
+      "neighborhood_reputation": "dangerous",
       "emotions": {
-        "excitement": 0.6,
-        "hope": 0.3,
-        "anxiety": 0.1
+        "hopeful": 0.6,
+        "nervous": 0.3,
+        "anxious": 0.1
       }
     },
     {
-      "offence_history": "first_time",
-      "home_quality": "bad",
-      "financial_stability": "stable",
+      "move_history": "first_time",
+      "home_condition": "needs_repair",
+      "neighborhood_reputation": "safe",
       "emotions": {
-        "excitement": 0.4,
-        "hope": 0.5,
-        "anxiety": 0.1
+        "hopeful": 0.5,
+        "nervous": 0.35,
+        "stressed": 0.15
       }
     },
     {
-      "offence_history": "first_time",
-      "home_quality": "bad",
-      "financial_stability": "unstable",
+      "move_history": "first_time",
+      "home_condition": "needs_repair",
+      "neighborhood_reputation": "dangerous",
       "emotions": {
-        "excitement": 0.3,
-        "hope": 0.4,
-        "anxiety": 0.3
+        "hopeful": 0.4,
+        "nervous": 0.45,
+        "stressed": 0.15
       }
     },
     {
-      "offence_history": "repeated",
-      "home_quality": "good",
-      "financial_stability": "stable",
+      "move_history": "repeated",
+      "home_condition": "well_maintained",
+      "neighborhood_reputation": "safe",
       "emotions": {
-        "excitement": 0.2,
-        "hope": 0.6,
-        "anxiety": 0.2
+        "hopeful": 0.7,
+        "content": 0.2,
+        "relieved": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "home_quality": "good",
-      "financial_stability": "unstable",
+      "move_history": "repeated",
+      "home_condition": "well_maintained",
+      "neighborhood_reputation": "dangerous",
       "emotions": {
-        "excitement": 0.1,
-        "hope": 0.5,
-        "anxiety": 0.4
+        "hopeful": 0.55,
+        "nervous": 0.3,
+        "anxious": 0.15
       }
     },
     {
-      "offence_history": "repeated",
-      "home_quality": "bad",
-      "financial_stability": "stable",
+      "move_history": "repeated",
+      "home_condition": "needs_repair",
+      "neighborhood_reputation": "safe",
       "emotions": {
-        "excitement": 0.1,
-        "hope": 0.3,
-        "anxiety": 0.6
+        "hopeful": 0.45,
+        "nervous": 0.35,
+        "stressed": 0.2
       }
     },
     {
-      "offence_history": "repeated",
-      "home_quality": "bad",
-      "financial_stability": "unstable",
+      "move_history": "repeated",
+      "home_condition": "needs_repair",
+      "neighborhood_reputation": "dangerous",
       "emotions": {
-        "excitement": 0.05,
-        "hope": 0.2,
-        "anxiety": 0.75
+        "hopeful": 0.4,
+        "nervous": 0.45,
+        "anxious": 0.15
       }
     }
   ]

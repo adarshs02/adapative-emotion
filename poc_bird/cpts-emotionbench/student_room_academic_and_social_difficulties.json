@@ -1,0 +1,109 @@
+{
+  "factors": {
+    "academic_pressure": [
+      "high",
+      "low"
+    ],
+    "social_isolation": [
+      "high",
+      "low"
+    ],
+    "financial_stress": [
+      "high",
+      "low"
+    ]
+  },
+  "cpt": [
+    {
+      "academic_pressure": "high",
+      "social_isolation": "high",
+      "financial_stress": "high",
+      "emotions": {
+        "anxiety": 0.7,
+        "frustration": 0.25,
+        "sadness": 0.025,
+        "depression": 0.025
+      }
+    },
+    {
+      "academic_pressure": "high",
+      "social_isolation": "high",
+      "financial_stress": "low",
+      "emotions": {
+        "anxiety": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "academic_pressure": "high",
+      "social_isolation": "low",
+      "financial_stress": "high",
+      "emotions": {
+        "anxiety": 0.5641025641025641,
+        "frustration": 0.17948717948717946,
+        "sadness": 0.02564102564102564,
+        "worry": 0.17948717948717946,
+        "anger": 0.05128205128205128
+      }
+    },
+    {
+      "academic_pressure": "high",
+      "social_isolation": "low",
+      "financial_stress": "low",
+      "emotions": {
+        "anxiety": 0.45,
+        "frustration": 0.2,
+        "anger": 0.075,
+        "worry": 0.2,
+        "relief": 0.075
+      }
+    },
+    {
+      "academic_pressure": "low",
+      "social_isolation": "high",
+      "financial_stress": "high",
+      "emotions": {
+        "sadness": 0.3,
+        "frustration": 0.32499999999999996,
+        "anxiety": 0.05,
+        "boredom": 0.2,
+        "depression": 0.125
+      }
+    },
+    {
+      "academic_pressure": "low",
+      "social_isolation": "high",
+      "financial_stress": "low",
+      "emotions": {
+        "sadness": 0.25,
+        "frustration": 0.175,
+        "boredom": 0.325,
+        "relief": 0.175,
+        "happiness": 0.075
+      }
+    },
+    {
+      "academic_pressure": "low",
+      "social_isolation": "low",
+      "financial_stress": "high",
+      "emotions": {
+        "sadness": 0.225,
+        "frustration": 0.2,
+        "anger": 0.2,
+        "boredom": 0.2,
+        "worry": 0.175
+      }
+    },
+    {
+      "academic_pressure": "low",
+      "social_isolation": "low",
+      "financial_stress": "low",
+      "emotions": {
+        "boredom": 0.25,
+        "happiness": 0.4,
+        "relief": 0.35
+      }
+    }
+  ]
+}

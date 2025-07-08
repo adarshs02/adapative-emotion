@@ -1,0 +1,122 @@
+{
+  "factors": {
+    "speech_experience": [
+      "inexperienced",
+      "experienced"
+    ],
+    "audience_reaction": [
+      "uncomfortable",
+      "supportive"
+    ],
+    "speech_preparation": [
+      "poor",
+      "well_prepared"
+    ]
+  },
+  "cpt": [
+    {
+      "speech_experience": "inexperienced",
+      "audience_reaction": "uncomfortable",
+      "speech_preparation": "poor",
+      "emotions": {
+        "anxiety": 0.27777777777777773,
+        "nervousness": 0.3333333333333333,
+        "confidence": 0.018518518518518517,
+        "nervous": 0.27777777777777773,
+        "anxious": 0.07407407407407407,
+        "confident": 0.018518518518518517
+      }
+    },
+    {
+      "speech_experience": "inexperienced",
+      "audience_reaction": "uncomfortable",
+      "speech_preparation": "well_prepared",
+      "emotions": {
+        "anxiety": 0.23529411764705882,
+        "nervousness": 0.3137254901960785,
+        "confidence": 0.058823529411764705,
+        "nervous": 0.19607843137254904,
+        "anxious": 0.13725490196078433,
+        "confident": 0.058823529411764705
+      }
+    },
+    {
+      "speech_experience": "inexperienced",
+      "audience_reaction": "supportive",
+      "speech_preparation": "poor",
+      "emotions": {
+        "anxiety": 0.23404255319148937,
+        "nervousness": 0.3191489361702127,
+        "confidence": 0.02127659574468085,
+        "nervous": 0.2553191489361702,
+        "anxious": 0.1276595744680851,
+        "confident": 0.0425531914893617
+      }
+    },
+    {
+      "speech_experience": "inexperienced",
+      "audience_reaction": "supportive",
+      "speech_preparation": "well_prepared",
+      "emotions": {
+        "anxiety": 0.1914893617021277,
+        "nervousness": 0.27659574468085113,
+        "confidence": 0.10638297872340427,
+        "nervous": 0.17021276595744683,
+        "anxious": 0.12765957446808512,
+        "confident": 0.12765957446808512
+      }
+    },
+    {
+      "speech_experience": "experienced",
+      "audience_reaction": "uncomfortable",
+      "speech_preparation": "poor",
+      "emotions": {
+        "anxiety": 0.19512195121951223,
+        "nervousness": 0.29268292682926833,
+        "confidence": 0.02439024390243903,
+        "nervous": 0.21951219512195125,
+        "anxious": 0.19512195121951223,
+        "confident": 0.07317073170731708
+      }
+    },
+    {
+      "speech_experience": "experienced",
+      "audience_reaction": "uncomfortable",
+      "speech_preparation": "well_prepared",
+      "emotions": {
+        "anxiety": 0.15,
+        "nervousness": 0.25,
+        "confidence": 0.1,
+        "nervous": 0.15,
+        "anxious": 0.2,
+        "confident": 0.15
+      }
+    },
+    {
+      "speech_experience": "experienced",
+      "audience_reaction": "supportive",
+      "speech_preparation": "poor",
+      "emotions": {
+        "anxiety": 0.14285714285714285,
+        "nervousness": 0.2571428571428572,
+        "confidence": 0.028571428571428574,
+        "nervous": 0.19999999999999998,
+        "anxious": 0.2285714285714286,
+        "confident": 0.14285714285714285
+      }
+    },
+    {
+      "speech_experience": "experienced",
+      "audience_reaction": "supportive",
+      "speech_preparation": "well_prepared",
+      "emotions": {
+        "anxiety": 0.1,
+        "nervousness": 0.2,
+        "confidence": 0.2,
+        "nervous": 0.125,
+        "anxious": 0.175,
+        "confident": 0.2
+      }
+    }
+  ]
+}

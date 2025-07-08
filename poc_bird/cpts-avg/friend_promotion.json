@@ -1,0 +1,105 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "friend_performance": [
+      "excellent",
+      "average"
+    ],
+    "self_performance": [
+      "excellent",
+      "below_average"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "friend_performance": "excellent",
+      "self_performance": "excellent",
+      "emotions": {
+        "happy_for_friend": 0.7,
+        "disappointed": 0.25,
+        "jealous": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_performance": "excellent",
+      "self_performance": "below_average",
+      "emotions": {
+        "disappointed": 0.8,
+        "jealous": 0.15,
+        "angry": 0.025,
+        "frustrated": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_performance": "excellent",
+      "self_performance": "excellent",
+      "emotions": {
+        "disappointed": 0.44999999999999996,
+        "jealous": 0.15,
+        "angry": 0.35,
+        "hurt": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_performance": "excellent",
+      "self_performance": "below_average",
+      "emotions": {
+        "disappointed": 0.475,
+        "angry": 0.475,
+        "jealous": 0.025,
+        "frustrated": 0.025
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_performance": "average",
+      "self_performance": "excellent",
+      "emotions": {
+        "happy_for_friend": 0.45,
+        "disappointed": 0.4,
+        "surprised": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_performance": "average",
+      "self_performance": "below_average",
+      "emotions": {
+        "disappointed": 0.75,
+        "surprised": 0.1,
+        "angry": 0.025,
+        "frustrated": 0.1,
+        "resentful": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_performance": "average",
+      "self_performance": "excellent",
+      "emotions": {
+        "disappointed": 0.4,
+        "surprised": 0.125,
+        "angry": 0.45,
+        "hurt": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_performance": "average",
+      "self_performance": "below_average",
+      "emotions": {
+        "disappointed": 0.45,
+        "angry": 0.5,
+        "surprised": 0.025,
+        "resentful": 0.025
+      }
+    }
+  ]
+}

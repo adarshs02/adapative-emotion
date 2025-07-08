@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "communication_style",
-      "values": [
-        "open",
-        "closed"
-      ]
-    },
-    {
-      "name": "emotional_involvement",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "history_of_mixed_signals": [
+      "first_time",
+      "repeated"
+    ],
+    "communication_clarity": [
+      "clear",
+      "unclear"
+    ],
+    "context_of_interaction": [
+      "personal",
+      "professional"
+    ]
+  },
   "cpt": [
     {
-      "offence_history": "first_time",
-      "communication_style": "open",
-      "emotional_involvement": "low",
+      "history_of_mixed_signals": "first_time",
+      "communication_clarity": "clear",
+      "context_of_interaction": "personal",
       "emotions": {
-        "trust": 0.9,
-        "confusion": 0.1,
-        "frustration": 0.0
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "communication_style": "open",
-      "emotional_involvement": "high",
-      "emotions": {
-        "trust": 0.8,
-        "confusion": 0.15,
-        "frustration": 0.05
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "communication_style": "closed",
-      "emotional_involvement": "low",
-      "emotions": {
-        "trust": 0.7,
-        "confusion": 0.2,
-        "frustration": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "communication_style": "closed",
-      "emotional_involvement": "high",
-      "emotions": {
-        "trust": 0.6,
-        "confusion": 0.25,
-        "frustration": 0.15
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "communication_style": "open",
-      "emotional_involvement": "low",
-      "emotions": {
-        "trust": 0.4,
-        "confusion": 0.3,
-        "frustration": 0.3
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "communication_style": "open",
-      "emotional_involvement": "high",
-      "emotions": {
-        "trust": 0.3,
-        "confusion": 0.35,
-        "frustration": 0.35
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "communication_style": "closed",
-      "emotional_involvement": "low",
-      "emotions": {
-        "trust": 0.2,
         "confusion": 0.4,
-        "frustration": 0.4
+        "hope": 0.35,
+        "frustration": 0.25
       }
     },
     {
-      "offence_history": "repeated",
-      "communication_style": "closed",
-      "emotional_involvement": "high",
+      "history_of_mixed_signals": "first_time",
+      "communication_clarity": "clear",
+      "context_of_interaction": "professional",
       "emotions": {
-        "trust": 0.1,
-        "confusion": 0.45,
-        "frustration": 0.45
+        "surprise": 0.3,
+        "curiosity": 0.4,
+        "anxiety": 0.3
+      }
+    },
+    {
+      "history_of_mixed_signals": "first_time",
+      "communication_clarity": "unclear",
+      "context_of_interaction": "personal",
+      "emotions": {
+        "frustration": 0.5,
+        "confusion": 0.4,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "history_of_mixed_signals": "first_time",
+      "communication_clarity": "unclear",
+      "context_of_interaction": "professional",
+      "emotions": {
+        "confusion": 0.4,
+        "anxiety": 0.35,
+        "frustration": 0.25
+      }
+    },
+    {
+      "history_of_mixed_signals": "repeated",
+      "communication_clarity": "clear",
+      "context_of_interaction": "personal",
+      "emotions": {
+        "frustration": 0.6,
+        "confusion": 0.3,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "history_of_mixed_signals": "repeated",
+      "communication_clarity": "clear",
+      "context_of_interaction": "professional",
+      "emotions": {
+        "frustration": 0.5,
+        "anxiety": 0.35,
+        "confusion": 0.15
+      }
+    },
+    {
+      "history_of_mixed_signals": "repeated",
+      "communication_clarity": "unclear",
+      "context_of_interaction": "personal",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.3,
+        "confusion": 0.1
+      }
+    },
+    {
+      "history_of_mixed_signals": "repeated",
+      "communication_clarity": "unclear",
+      "context_of_interaction": "professional",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.35,
+        "anxiety": 0.15
       }
     }
   ]

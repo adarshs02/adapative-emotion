@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "peer_comparison": [
+      "high",
+      "low"
+    ],
+    "expectation_level": [
+      "unrealistic",
+      "realistic"
+    ],
+    "outcome_relevance": [
+      "direct",
+      "indirect"
+    ]
+  },
+  "cpt": [
+    {
+      "peer_comparison": "high",
+      "expectation_level": "unrealistic",
+      "outcome_relevance": "direct",
+      "emotions": {
+        "disappointment": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "peer_comparison": "high",
+      "expectation_level": "unrealistic",
+      "outcome_relevance": "indirect",
+      "emotions": {
+        "disappointment": 0.5789473684210527,
+        "frustration": 0.36842105263157887,
+        "envy": 0.05263157894736842
+      }
+    },
+    {
+      "peer_comparison": "high",
+      "expectation_level": "realistic",
+      "outcome_relevance": "direct",
+      "emotions": {
+        "disappointment": 0.8,
+        "frustration": 0.15,
+        "resignation": 0.05
+      }
+    },
+    {
+      "peer_comparison": "high",
+      "expectation_level": "realistic",
+      "outcome_relevance": "indirect",
+      "emotions": {
+        "disappointment": 0.7000000000000001,
+        "frustration": 0.20000000000000004,
+        "determination": 0.10000000000000002
+      }
+    },
+    {
+      "peer_comparison": "low",
+      "expectation_level": "unrealistic",
+      "outcome_relevance": "direct",
+      "emotions": {
+        "disappointment": 0.4,
+        "frustration": 0.5,
+        "anger": 0.1
+      }
+    },
+    {
+      "peer_comparison": "low",
+      "expectation_level": "unrealistic",
+      "outcome_relevance": "indirect",
+      "emotions": {
+        "disappointment": 0.36842105263157887,
+        "frustration": 0.5789473684210527,
+        "envy": 0.05263157894736842
+      }
+    },
+    {
+      "peer_comparison": "low",
+      "expectation_level": "realistic",
+      "outcome_relevance": "direct",
+      "emotions": {
+        "disappointment": 0.6842105263157895,
+        "frustration": 0.2631578947368421,
+        "resignation": 0.05263157894736842
+      }
+    },
+    {
+      "peer_comparison": "low",
+      "expectation_level": "realistic",
+      "outcome_relevance": "indirect",
+      "emotions": {
+        "disappointment": 0.5789473684210527,
+        "frustration": 0.36842105263157887,
+        "determination": 0.05263157894736842
+      }
+    }
+  ]
+}

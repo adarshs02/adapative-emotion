@@ -1,0 +1,99 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "support_from_others": [
+      "none",
+      "some"
+    ],
+    "perceived_importance": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "support_from_others": "none",
+      "perceived_importance": "low",
+      "emotions": {
+        "frustration": 0.6,
+        "disappointment": 0.32499999999999996,
+        "indifference": 0.025,
+        "confusion": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_from_others": "some",
+      "perceived_importance": "low",
+      "emotions": {
+        "frustration": 0.4,
+        "disappointment": 0.475,
+        "anger": 0.125
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_from_others": "none",
+      "perceived_importance": "high",
+      "emotions": {
+        "frustration": 0.55,
+        "disappointment": 0.35,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_from_others": "some",
+      "perceived_importance": "high",
+      "emotions": {
+        "frustration": 0.45,
+        "disappointment": 0.4,
+        "anger": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_from_others": "none",
+      "perceived_importance": "low",
+      "emotions": {
+        "frustration": 0.3,
+        "disappointment": 0.275,
+        "anger": 0.425
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_from_others": "some",
+      "perceived_importance": "low",
+      "emotions": {
+        "frustration": 0.3,
+        "disappointment": 0.275,
+        "anger": 0.425
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_from_others": "none",
+      "perceived_importance": "high",
+      "emotions": {
+        "frustration": 0.3,
+        "disappointment": 0.225,
+        "anger": 0.47500000000000003
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_from_others": "some",
+      "perceived_importance": "high",
+      "emotions": {
+        "frustration": 0.30000000000000004,
+        "disappointment": 0.25,
+        "anger": 0.45
+      }
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "perceived_intent": [
+      "friendly",
+      "unintentional"
+    ],
+    "trust_level": [
+      "high",
+      "low"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "perceived_intent": "friendly",
+      "trust_level": "high",
+      "emotions": {
+        "happy": 0.7,
+        "surprised": 0.15,
+        "suspicious": 0.125,
+        "angry": 0.025
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "perceived_intent": "friendly",
+      "trust_level": "low",
+      "emotions": {
+        "hurt": 0.4,
+        "confused": 0.2,
+        "suspicious": 0.35,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "perceived_intent": "unintentional",
+      "trust_level": "high",
+      "emotions": {
+        "frustrated": 0.3888888888888889,
+        "surprised": 0.3888888888888889,
+        "happy": 0.22222222222222227
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "perceived_intent": "unintentional",
+      "trust_level": "low",
+      "emotions": {
+        "frustrated": 0.5,
+        "confused": 0.3,
+        "hurt": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "perceived_intent": "friendly",
+      "trust_level": "high",
+      "emotions": {
+        "angry": 0.4,
+        "hurt": 0.25,
+        "suspicious": 0.35
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "perceived_intent": "friendly",
+      "trust_level": "low",
+      "emotions": {
+        "angry": 0.4,
+        "hurt": 0.45,
+        "suspicious": 0.15000000000000005
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "perceived_intent": "unintentional",
+      "trust_level": "high",
+      "emotions": {
+        "angry": 0.55,
+        "frustrated": 0.3,
+        "hurt": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "perceived_intent": "unintentional",
+      "trust_level": "low",
+      "emotions": {
+        "angry": 0.75,
+        "hurt": 0.2,
+        "suspicious": 0.05
+      }
+    }
+  ]
+}

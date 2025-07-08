@@ -1,0 +1,115 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "partner_awareness": [
+      "unaware",
+      "aware"
+    ],
+    "remorse": [
+      "regret",
+      "no_regret"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "partner_awareness": "unaware",
+      "remorse": "regret",
+      "emotions": {
+        "guilt": 0.4,
+        "shame": 0.47500000000000003,
+        "relief": 0.025,
+        "regret": 0.075,
+        "anxiety": 0.025
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "partner_awareness": "unaware",
+      "remorse": "no_regret",
+      "emotions": {
+        "surprise": 0.44999999999999996,
+        "excitement": 0.175,
+        "fear": 0.025,
+        "shame": 0.3,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "partner_awareness": "aware",
+      "remorse": "regret",
+      "emotions": {
+        "guilt": 0.45,
+        "anxiety": 0.05,
+        "shame": 0.47500000000000003,
+        "regret": 0.025
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "partner_awareness": "aware",
+      "remorse": "no_regret",
+      "emotions": {
+        "surprise": 0.35000000000000003,
+        "excitement": 0.10000000000000002,
+        "relief": 0.05000000000000001,
+        "shame": 0.35000000000000003,
+        "fear": 0.10000000000000002,
+        "indifference": 0.05000000000000001
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "partner_awareness": "unaware",
+      "remorse": "regret",
+      "emotions": {
+        "guilt": 0.375,
+        "shame": 0.1,
+        "anxiety": 0.05,
+        "anger": 0.4,
+        "regret": 0.075
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "partner_awareness": "unaware",
+      "remorse": "no_regret",
+      "emotions": {
+        "surprise": 0.25,
+        "excitement": 0.175,
+        "fear": 0.075,
+        "anger": 0.3,
+        "indifference": 0.15,
+        "shame": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "partner_awareness": "aware",
+      "remorse": "regret",
+      "emotions": {
+        "guilt": 0.475,
+        "shame": 0.015,
+        "anxiety": 0.035,
+        "anger": 0.45,
+        "regret": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "partner_awareness": "aware",
+      "remorse": "no_regret",
+      "emotions": {
+        "surprise": 0.3,
+        "excitement": 0.15,
+        "fear": 0.15000000000000002,
+        "anger": 0.35,
+        "indifference": 0.05
+      }
+    }
+  ]
+}

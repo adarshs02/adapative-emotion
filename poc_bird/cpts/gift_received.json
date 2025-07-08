@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "gift_type",
-      "values": [
-        "personalized",
-        "non-personalized"
-      ]
-    },
-    {
-      "name": "relationship",
-      "values": [
-        "close",
-        "distant"
-      ]
-    },
-    {
-      "name": "effort",
-      "values": [
-        "high",
-        "low"
-      ]
-    }
-  ],
+  "factors": {
+    "gift_value": [
+      "low",
+      "high"
+    ],
+    "gift_relevance": [
+      "irrelevant",
+      "relevant"
+    ],
+    "gift_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
   "cpt": [
     {
-      "gift_type": "personalized",
-      "relationship": "close",
-      "effort": "high",
+      "gift_value": "low",
+      "gift_relevance": "irrelevant",
+      "gift_history": "first_time",
+      "emotions": {
+        "surprise": 0.6,
+        "disappointment": 0.3,
+        "neutral": 0.1
+      }
+    },
+    {
+      "gift_value": "low",
+      "gift_relevance": "irrelevant",
+      "gift_history": "repeated",
+      "emotions": {
+        "surprise": 0.4,
+        "disappointment": 0.5,
+        "anger": 0.1
+      }
+    },
+    {
+      "gift_value": "low",
+      "gift_relevance": "relevant",
+      "gift_history": "first_time",
       "emotions": {
         "gratitude": 0.7,
-        "surprise": 0.25,
-        "awkwardness": 0.05
+        "surprise": 0.2,
+        "neutral": 0.1
       }
     },
     {
-      "gift_type": "personalized",
-      "relationship": "close",
-      "effort": "low",
+      "gift_value": "low",
+      "gift_relevance": "relevant",
+      "gift_history": "repeated",
       "emotions": {
-        "gratitude": 0.6,
+        "gratitude": 0.5,
         "surprise": 0.3,
-        "awkwardness": 0.1
+        "anger": 0.2
       }
     },
     {
-      "gift_type": "personalized",
-      "relationship": "distant",
-      "effort": "high",
+      "gift_value": "high",
+      "gift_relevance": "irrelevant",
+      "gift_history": "first_time",
       "emotions": {
+        "confusion": 0.4,
+        "gratitude": 0.5,
+        "neutral": 0.1
+      }
+    },
+    {
+      "gift_value": "high",
+      "gift_relevance": "irrelevant",
+      "gift_history": "repeated",
+      "emotions": {
+        "confusion": 0.5,
         "gratitude": 0.4,
-        "surprise": 0.4,
-        "awkwardness": 0.2
+        "anger": 0.1
       }
     },
     {
-      "gift_type": "personalized",
-      "relationship": "distant",
-      "effort": "low",
+      "gift_value": "high",
+      "gift_relevance": "relevant",
+      "gift_history": "first_time",
       "emotions": {
-        "gratitude": 0.3,
-        "surprise": 0.3,
-        "awkwardness": 0.4
-      }
-    },
-    {
-      "gift_type": "non-personalized",
-      "relationship": "close",
-      "effort": "high",
-      "emotions": {
+        "delight": 0.7,
         "gratitude": 0.2,
-        "surprise": 0.5,
-        "awkwardness": 0.3
+        "neutral": 0.1
       }
     },
     {
-      "gift_type": "non-personalized",
-      "relationship": "close",
-      "effort": "low",
+      "gift_value": "high",
+      "gift_relevance": "relevant",
+      "gift_history": "repeated",
       "emotions": {
-        "gratitude": 0.1,
-        "surprise": 0.6,
-        "awkwardness": 0.3
-      }
-    },
-    {
-      "gift_type": "non-personalized",
-      "relationship": "distant",
-      "effort": "high",
-      "emotions": {
-        "gratitude": 0.1,
-        "surprise": 0.4,
-        "awkwardness": 0.5
-      }
-    },
-    {
-      "gift_type": "non-personalized",
-      "relationship": "distant",
-      "effort": "low",
-      "emotions": {
-        "gratitude": 0.05,
-        "surprise": 0.3,
-        "awkwardness": 0.65
+        "delight": 0.6,
+        "gratitude": 0.3,
+        "happiness": 0.1
       }
     }
   ]

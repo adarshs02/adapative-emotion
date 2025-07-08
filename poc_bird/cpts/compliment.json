@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "compliment_sincerity",
-      "values": [
-        "genuine",
-        "insincere"
-      ]
-    },
-    {
-      "name": "self_confidence",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "compliment_frequency": [
+      "first_time",
+      "repeated"
+    ],
+    "compliment_sincerity": [
+      "genuine",
+      "insincere"
+    ],
+    "self_confidence": [
+      "high",
+      "low"
+    ]
+  },
   "cpt": [
     {
-      "offence_history": "first_time",
-      "compliment_sincerity": "genuine",
-      "self_confidence": "low",
-      "emotions": {
-        "gratitude": 0.8,
-        "surprise": 0.15,
-        "embarrassment": 0.05
-      }
-    },
-    {
-      "offence_history": "first_time",
+      "compliment_frequency": "first_time",
       "compliment_sincerity": "genuine",
       "self_confidence": "high",
       "emotions": {
-        "gratitude": 0.7,
-        "surprise": 0.25,
-        "pride": 0.05
+        "happy": 0.7,
+        "surprised": 0.2,
+        "flattered": 0.1
       }
     },
     {
-      "offence_history": "first_time",
-      "compliment_sincerity": "insincere",
-      "self_confidence": "low",
-      "emotions": {
-        "suspicion": 0.6,
-        "anger": 0.3,
-        "embarrassment": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "compliment_sincerity": "insincere",
-      "self_confidence": "high",
-      "emotions": {
-        "suspicion": 0.5,
-        "anger": 0.4,
-        "defensiveness": 0.1
-      }
-    },
-    {
-      "offence_history": "repeated",
+      "compliment_frequency": "first_time",
       "compliment_sincerity": "genuine",
       "self_confidence": "low",
       "emotions": {
-        "gratitude": 0.4,
-        "surprise": 0.3,
-        "relief": 0.3
+        "happy": 0.5,
+        "surprised": 0.35,
+        "self_conscious": 0.15
       }
     },
     {
-      "offence_history": "repeated",
-      "compliment_sincerity": "genuine",
+      "compliment_frequency": "first_time",
+      "compliment_sincerity": "insincere",
       "self_confidence": "high",
       "emotions": {
-        "gratitude": 0.6,
-        "pride": 0.3,
-        "relief": 0.1
+        "suspicious": 0.6,
+        "uncomfortable": 0.3,
+        "amused": 0.1
       }
     },
     {
-      "offence_history": "repeated",
+      "compliment_frequency": "first_time",
       "compliment_sincerity": "insincere",
       "self_confidence": "low",
       "emotions": {
-        "suspicion": 0.7,
-        "anger": 0.2,
-        "embarrassment": 0.1
+        "suspicious": 0.75,
+        "uncomfortable": 0.2,
+        "offended": 0.05
       }
     },
     {
-      "offence_history": "repeated",
+      "compliment_frequency": "repeated",
+      "compliment_sincerity": "genuine",
+      "self_confidence": "high",
+      "emotions": {
+        "grateful": 0.6,
+        "happy": 0.3,
+        "flattered": 0.1
+      }
+    },
+    {
+      "compliment_frequency": "repeated",
+      "compliment_sincerity": "genuine",
+      "self_confidence": "low",
+      "emotions": {
+        "grateful": 0.5,
+        "happy": 0.35,
+        "self_conscious": 0.15
+      }
+    },
+    {
+      "compliment_frequency": "repeated",
       "compliment_sincerity": "insincere",
       "self_confidence": "high",
       "emotions": {
-        "suspicion": 0.6,
-        "anger": 0.3,
-        "defensiveness": 0.1
+        "suspicious": 0.8,
+        "uncomfortable": 0.2,
+        "amused": 0.05
+      }
+    },
+    {
+      "compliment_frequency": "repeated",
+      "compliment_sincerity": "insincere",
+      "self_confidence": "low",
+      "emotions": {
+        "suspicious": 0.9,
+        "uncomfortable": 0.1,
+        "offended": 0.05
       }
     }
   ]

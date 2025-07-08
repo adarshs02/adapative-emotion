@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "self_effort": [
+      "low",
+      "high"
+    ],
+    "support_system": [
+      "none",
+      "present"
+    ],
+    "future_perspective": [
+      "negative",
+      "positive"
+    ]
+  },
+  "cpt": [
+    {
+      "self_effort": "low",
+      "support_system": "none",
+      "future_perspective": "negative",
+      "emotions": {
+        "disappointment": 0.6000000000000001,
+        "regret": 0.30000000000000004,
+        "helplessness": 0.10000000000000002
+      }
+    },
+    {
+      "self_effort": "low",
+      "support_system": "none",
+      "future_perspective": "positive",
+      "emotions": {
+        "determination": 0.3,
+        "frustration": 0.45,
+        "hopelessness": 0.25
+      }
+    },
+    {
+      "self_effort": "low",
+      "support_system": "present",
+      "future_perspective": "negative",
+      "emotions": {
+        "disappointment": 0.45,
+        "regret": 0.35,
+        "helplessness": 0.2
+      }
+    },
+    {
+      "self_effort": "low",
+      "support_system": "present",
+      "future_perspective": "positive",
+      "emotions": {
+        "determination": 0.4,
+        "frustration": 0.4,
+        "hope": 0.2
+      }
+    },
+    {
+      "self_effort": "high",
+      "support_system": "none",
+      "future_perspective": "negative",
+      "emotions": {
+        "disappointment": 0.55,
+        "regret": 0.3,
+        "anger": 0.15
+      }
+    },
+    {
+      "self_effort": "high",
+      "support_system": "none",
+      "future_perspective": "positive",
+      "emotions": {
+        "determination": 0.5,
+        "frustration": 0.35,
+        "anger": 0.15
+      }
+    },
+    {
+      "self_effort": "high",
+      "support_system": "present",
+      "future_perspective": "negative",
+      "emotions": {
+        "disappointment": 0.45,
+        "regret": 0.35,
+        "anger": 0.2
+      }
+    },
+    {
+      "self_effort": "high",
+      "support_system": "present",
+      "future_perspective": "positive",
+      "emotions": {
+        "determination": 0.6,
+        "frustration": 0.25,
+        "anger": 0.15
+      }
+    }
+  ]
+}

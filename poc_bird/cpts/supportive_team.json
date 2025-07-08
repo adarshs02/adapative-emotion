@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "colleague_support",
-      "values": [
-        "high",
-        "low"
-      ]
-    },
-    {
-      "name": "idea_importance",
-      "values": [
-        "critical",
-        "non_critical"
-      ]
-    },
-    {
-      "name": "meeting_context",
-      "values": [
-        "formal",
-        "informal"
-      ]
-    }
-  ],
+  "factors": {
+    "support_level": [
+      "high",
+      "low"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "personal_involvement": [
+      "minimal",
+      "significant"
+    ]
+  },
   "cpt": [
     {
-      "colleague_support": "high",
-      "idea_importance": "critical",
-      "meeting_context": "formal",
+      "support_level": "high",
+      "offence_history": "first_time",
+      "personal_involvement": "minimal",
       "emotions": {
-        "excitement": 0.7,
-        "confidence": 0.25,
-        "anxiety": 0.05
+        "confident": 0.7,
+        "happy": 0.25,
+        "anxious": 0.05
       }
     },
     {
-      "colleague_support": "high",
-      "idea_importance": "critical",
-      "meeting_context": "informal",
+      "support_level": "high",
+      "offence_history": "first_time",
+      "personal_involvement": "significant",
       "emotions": {
-        "excitement": 0.6,
-        "confidence": 0.35,
-        "anxiety": 0.05
+        "confident": 0.55,
+        "happy": 0.35,
+        "relieved": 0.05
       }
     },
     {
-      "colleague_support": "high",
-      "idea_importance": "non_critical",
-      "meeting_context": "formal",
+      "support_level": "high",
+      "offence_history": "repeated",
+      "personal_involvement": "minimal",
       "emotions": {
-        "excitement": 0.4,
-        "confidence": 0.5,
-        "anxiety": 0.1
+        "confident": 0.5,
+        "angry": 0.35,
+        "anxious": 0.15
       }
     },
     {
-      "colleague_support": "high",
-      "idea_importance": "non_critical",
-      "meeting_context": "informal",
+      "support_level": "high",
+      "offence_history": "repeated",
+      "personal_involvement": "significant",
       "emotions": {
-        "excitement": 0.3,
-        "confidence": 0.55,
-        "anxiety": 0.15
+        "confident": 0.4,
+        "angry": 0.45,
+        "frustrated": 0.15
       }
     },
     {
-      "colleague_support": "low",
-      "idea_importance": "critical",
-      "meeting_context": "formal",
+      "support_level": "low",
+      "offence_history": "first_time",
+      "personal_involvement": "minimal",
       "emotions": {
-        "anxiety": 0.7,
-        "frustration": 0.25,
-        "confidence": 0.05
+        "anxious": 0.6,
+        "doubtful": 0.3,
+        "disappointed": 0.1
       }
     },
     {
-      "colleague_support": "low",
-      "idea_importance": "critical",
-      "meeting_context": "informal",
+      "support_level": "low",
+      "offence_history": "first_time",
+      "personal_involvement": "significant",
       "emotions": {
-        "anxiety": 0.65,
-        "frustration": 0.3,
-        "confidence": 0.05
+        "anxious": 0.5,
+        "doubtful": 0.35,
+        "disappointed": 0.15
       }
     },
     {
-      "colleague_support": "low",
-      "idea_importance": "non_critical",
-      "meeting_context": "formal",
+      "support_level": "low",
+      "offence_history": "repeated",
+      "personal_involvement": "minimal",
       "emotions": {
-        "frustration": 0.6,
-        "anxiety": 0.35,
-        "confidence": 0.05
+        "anxious": 0.55,
+        "angry": 0.35,
+        "disappointed": 0.05
       }
     },
     {
-      "colleague_support": "low",
-      "idea_importance": "non_critical",
-      "meeting_context": "informal",
+      "support_level": "low",
+      "offence_history": "repeated",
+      "personal_involvement": "significant",
       "emotions": {
-        "frustration": 0.55,
-        "anxiety": 0.4,
-        "confidence": 0.05
+        "anxious": 0.6,
+        "angry": 0.3,
+        "frustrated": 0.1
       }
     }
   ]

@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "relationship_with_person",
-      "values": [
-        "close",
-        "distant"
-      ]
-    },
-    {
-      "name": "emotional_state",
-      "values": [
-        "calm",
-        "frustrated"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "apology_given": [
+      "no",
+      "yes"
+    ],
+    "victim_response": [
+      "indifferent",
+      "angry"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "relationship_with_person": "close",
-      "emotional_state": "calm",
+      "apology_given": "no",
+      "victim_response": "indifferent",
       "emotions": {
-        "guilt": 0.8,
-        "relief": 0.2,
-        "frustration": 0.0
+        "regret": 0.6,
+        "shame": 0.35,
+        "indifference": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "relationship_with_person": "close",
-      "emotional_state": "frustrated",
+      "apology_given": "no",
+      "victim_response": "angry",
       "emotions": {
-        "guilt": 0.6,
-        "relief": 0.3,
-        "frustration": 0.1
+        "fear": 0.3,
+        "regret": 0.45,
+        "anger": 0.25
       }
     },
     {
       "offence_history": "first_time",
-      "relationship_with_person": "distant",
-      "emotional_state": "calm",
+      "apology_given": "yes",
+      "victim_response": "indifferent",
       "emotions": {
-        "guilt": 0.4,
         "relief": 0.5,
-        "frustration": 0.1
+        "gratitude": 0.3,
+        "indifference": 0.2
       }
     },
     {
       "offence_history": "first_time",
-      "relationship_with_person": "distant",
-      "emotional_state": "frustrated",
+      "apology_given": "yes",
+      "victim_response": "angry",
       "emotions": {
-        "guilt": 0.2,
-        "relief": 0.3,
-        "frustration": 0.5
+        "regret": 0.4,
+        "fear": 0.3,
+        "apology_accepted": 0.3
       }
     },
     {
       "offence_history": "repeated",
-      "relationship_with_person": "close",
-      "emotional_state": "calm",
+      "apology_given": "no",
+      "victim_response": "indifferent",
       "emotions": {
-        "guilt": 0.1,
-        "relief": 0.0,
-        "frustration": 0.9
+        "defensiveness": 0.45,
+        "regret": 0.35,
+        "indifference": 0.15
       }
     },
     {
       "offence_history": "repeated",
-      "relationship_with_person": "close",
-      "emotional_state": "frustrated",
+      "apology_given": "no",
+      "victim_response": "angry",
       "emotions": {
-        "guilt": 0.0,
-        "relief": 0.0,
-        "frustration": 1.0
+        "fear": 0.25,
+        "anger": 0.5,
+        "defensiveness": 0.25
       }
     },
     {
       "offence_history": "repeated",
-      "relationship_with_person": "distant",
-      "emotional_state": "calm",
+      "apology_given": "yes",
+      "victim_response": "indifferent",
       "emotions": {
-        "guilt": 0.0,
-        "relief": 0.0,
-        "frustration": 1.0
+        "defensiveness": 0.35,
+        "regret": 0.4,
+        "apology_accepted": 0.25
       }
     },
     {
       "offence_history": "repeated",
-      "relationship_with_person": "distant",
-      "emotional_state": "frustrated",
+      "apology_given": "yes",
+      "victim_response": "angry",
       "emotions": {
-        "guilt": 0.0,
-        "relief": 0.0,
-        "frustration": 1.0
+        "fear": 0.2,
+        "anger": 0.55,
+        "apology_accepted": 0.25
       }
     }
   ]

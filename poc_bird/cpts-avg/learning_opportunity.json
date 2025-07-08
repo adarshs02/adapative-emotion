@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "workshop_interest_level": [
+      "high",
+      "low"
+    ],
+    "workshop_expectations": [
+      "met",
+      "unmet"
+    ],
+    "workshop_experience": [
+      "positive",
+      "negative"
+    ]
+  },
+  "cpt": [
+    {
+      "workshop_interest_level": "high",
+      "workshop_expectations": "met",
+      "workshop_experience": "positive",
+      "emotions": {
+        "joy": 0.6,
+        "satisfaction": 0.35,
+        "excitement": 0.05
+      }
+    },
+    {
+      "workshop_interest_level": "high",
+      "workshop_expectations": "met",
+      "workshop_experience": "negative",
+      "emotions": {
+        "disappointment": 0.47368421052631576,
+        "frustration": 0.36842105263157887,
+        "sadness": 0.15789473684210525
+      }
+    },
+    {
+      "workshop_interest_level": "high",
+      "workshop_expectations": "unmet",
+      "workshop_experience": "positive",
+      "emotions": {
+        "surprise": 0.3,
+        "disappointment": 0.45,
+        "confusion": 0.25
+      }
+    },
+    {
+      "workshop_interest_level": "high",
+      "workshop_expectations": "unmet",
+      "workshop_experience": "negative",
+      "emotions": {
+        "anger": 0.5,
+        "disappointment": 0.35,
+        "frustration": 0.15
+      }
+    },
+    {
+      "workshop_interest_level": "low",
+      "workshop_expectations": "met",
+      "workshop_experience": "positive",
+      "emotions": {
+        "indifference": 0.5,
+        "satisfaction": 0.35,
+        "relief": 0.15
+      }
+    },
+    {
+      "workshop_interest_level": "low",
+      "workshop_expectations": "met",
+      "workshop_experience": "negative",
+      "emotions": {
+        "disappointment": 0.5,
+        "frustration": 0.35,
+        "sadness": 0.15
+      }
+    },
+    {
+      "workshop_interest_level": "low",
+      "workshop_expectations": "unmet",
+      "workshop_experience": "positive",
+      "emotions": {
+        "surprise": 0.3,
+        "indifference": 0.45,
+        "confusion": 0.25
+      }
+    },
+    {
+      "workshop_interest_level": "low",
+      "workshop_expectations": "unmet",
+      "workshop_experience": "negative",
+      "emotions": {
+        "anger": 0.5,
+        "disappointment": 0.35,
+        "frustration": 0.15
+      }
+    }
+  ]
+}

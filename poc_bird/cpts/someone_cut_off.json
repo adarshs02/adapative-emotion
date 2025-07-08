@@ -8,99 +8,99 @@
       ]
     },
     {
-      "name": "driver_intent",
+      "name": "traffic_situation",
       "values": [
-        "accidental",
-        "intentional"
+        "normal",
+        "heavy"
       ]
     },
     {
-      "name": "traffic_congestion",
+      "name": "driver_attitude",
       "values": [
-        "low",
-        "high"
+        "calm",
+        "aggressive"
       ]
     }
   ],
   "cpt": [
     {
       "offence_history": "first_time",
-      "driver_intent": "accidental",
-      "traffic_congestion": "low",
+      "traffic_situation": "normal",
+      "driver_attitude": "calm",
       "emotions": {
-        "anger": 0.2,
-        "frustration": 0.6,
-        "relief": 0.2
+        "relaxed": 0.8,
+        "frustrated": 0.15,
+        "angry": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "driver_intent": "accidental",
-      "traffic_congestion": "high",
+      "traffic_situation": "normal",
+      "driver_attitude": "aggressive",
       "emotions": {
-        "anger": 0.4,
-        "frustration": 0.4,
-        "relief": 0.2
+        "frustrated": 0.6,
+        "angry": 0.35,
+        "outraged": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "driver_intent": "intentional",
-      "traffic_congestion": "low",
+      "traffic_situation": "heavy",
+      "driver_attitude": "calm",
       "emotions": {
-        "anger": 0.8,
-        "frustration": 0.1,
-        "relief": 0.1
+        "stressed": 0.6,
+        "frustrated": 0.3,
+        "anxious": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "driver_intent": "intentional",
-      "traffic_congestion": "high",
+      "traffic_situation": "heavy",
+      "driver_attitude": "aggressive",
       "emotions": {
-        "anger": 0.9,
-        "frustration": 0.05,
-        "relief": 0.05
+        "stressed": 0.5,
+        "angry": 0.4,
+        "outraged": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "driver_intent": "accidental",
-      "traffic_congestion": "low",
+      "traffic_situation": "normal",
+      "driver_attitude": "calm",
       "emotions": {
-        "anger": 0.6,
-        "frustration": 0.3,
-        "relief": 0.1
+        "frustrated": 0.7,
+        "angry": 0.25,
+        "outraged": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "driver_intent": "accidental",
-      "traffic_congestion": "high",
+      "traffic_situation": "normal",
+      "driver_attitude": "aggressive",
       "emotions": {
-        "anger": 0.7,
-        "frustration": 0.2,
-        "relief": 0.1
+        "angry": 0.7,
+        "outraged": 0.25,
+        "enraged": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "driver_intent": "intentional",
-      "traffic_congestion": "low",
+      "traffic_situation": "heavy",
+      "driver_attitude": "calm",
       "emotions": {
-        "anger": 0.95,
-        "frustration": 0.04,
-        "relief": 0.01
+        "stressed": 0.7,
+        "frustrated": 0.2,
+        "angry": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "driver_intent": "intentional",
-      "traffic_congestion": "high",
+      "traffic_situation": "heavy",
+      "driver_attitude": "aggressive",
       "emotions": {
-        "anger": 0.98,
-        "frustration": 0.01,
-        "relief": 0.01
+        "stressed": 0.6,
+        "angry": 0.3,
+        "enraged": 0.1
       }
     }
   ]

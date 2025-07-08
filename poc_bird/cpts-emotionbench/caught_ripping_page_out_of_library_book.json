@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "intent": [
+      "unintentional",
+      "intentional"
+    ],
+    "consequences": [
+      "minor",
+      "major"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "intent": "unintentional",
+      "consequences": "minor",
+      "emotions": {
+        "surprise": 0.6,
+        "regret": 0.35,
+        "fear": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intent": "unintentional",
+      "consequences": "major",
+      "emotions": {
+        "shock": 0.5,
+        "regret": 0.4,
+        "fear": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intent": "intentional",
+      "consequences": "minor",
+      "emotions": {
+        "relief": 0.2,
+        "pride": 0.4,
+        "guilt": 0.4
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intent": "intentional",
+      "consequences": "major",
+      "emotions": {
+        "anxiety": 0.4,
+        "regret": 0.4,
+        "fear": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intent": "unintentional",
+      "consequences": "minor",
+      "emotions": {
+        "frustration": 0.5,
+        "regret": 0.4,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intent": "unintentional",
+      "consequences": "major",
+      "emotions": {
+        "anger": 0.6000000000000001,
+        "regret": 0.30000000000000004,
+        "fear": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intent": "intentional",
+      "consequences": "minor",
+      "emotions": {
+        "arrogance": 0.2,
+        "pride": 0.4,
+        "guilt": 0.4
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intent": "intentional",
+      "consequences": "major",
+      "emotions": {
+        "defiance": 0.4,
+        "regret": 0.4,
+        "fear": 0.2
+      }
+    }
+  ]
+}

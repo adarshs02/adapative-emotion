@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "vacation_type",
-      "values": [
-        "relaxing",
-        "adventurous"
-      ]
-    },
-    {
-      "name": "travel_companions",
-      "values": [
-        "alone",
-        "with_family"
-      ]
-    },
-    {
-      "name": "destination_unfamiliarity",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    }
-  ],
+  "factors": {
+    "vacation_type": [
+      "relaxing",
+      "adventurous"
+    ],
+    "preparation_status": [
+      "well_prepared",
+      "rushed"
+    ],
+    "anticipation_level": [
+      "high",
+      "low"
+    ]
+  },
   "cpt": [
     {
       "vacation_type": "relaxing",
-      "travel_companions": "alone",
-      "destination_unfamiliarity": "first_time",
+      "preparation_status": "well_prepared",
+      "anticipation_level": "high",
       "emotions": {
-        "excitement": 0.8,
-        "nervousness": 0.15,
-        "boredom": 0.05
+        "Excitement": 0.6,
+        "Anxiety": 0.25,
+        "Relief": 0.15
       }
     },
     {
       "vacation_type": "relaxing",
-      "travel_companions": "alone",
-      "destination_unfamiliarity": "repeated",
+      "preparation_status": "well_prepared",
+      "anticipation_level": "low",
       "emotions": {
-        "excitement": 0.6,
-        "nervousness": 0.25,
-        "boredom": 0.15
+        "Contentment": 0.75,
+        "Boredom": 0.2,
+        "Disappointment": 0.05
       }
     },
     {
       "vacation_type": "relaxing",
-      "travel_companions": "with_family",
-      "destination_unfamiliarity": "first_time",
+      "preparation_status": "rushed",
+      "anticipation_level": "high",
       "emotions": {
-        "excitement": 0.7,
-        "nervousness": 0.2,
-        "boredom": 0.1
+        "Stress": 0.5,
+        "Excitement": 0.35,
+        "Anxiety": 0.15
       }
     },
     {
       "vacation_type": "relaxing",
-      "travel_companions": "with_family",
-      "destination_unfamiliarity": "repeated",
+      "preparation_status": "rushed",
+      "anticipation_level": "low",
       "emotions": {
-        "excitement": 0.5,
-        "nervousness": 0.3,
-        "boredom": 0.2
+        "Frustration": 0.6,
+        "Boredom": 0.3,
+        "Relief": 0.1
       }
     },
     {
       "vacation_type": "adventurous",
-      "travel_companions": "alone",
-      "destination_unfamiliarity": "first_time",
+      "preparation_status": "well_prepared",
+      "anticipation_level": "high",
       "emotions": {
-        "excitement": 0.9,
-        "fear": 0.05,
-        "boredom": 0.05
+        "Thrill": 0.65,
+        "Excitement": 0.25,
+        "Anxiety": 0.1
       }
     },
     {
       "vacation_type": "adventurous",
-      "travel_companions": "alone",
-      "destination_unfamiliarity": "repeated",
+      "preparation_status": "well_prepared",
+      "anticipation_level": "low",
       "emotions": {
-        "excitement": 0.8,
-        "fear": 0.1,
-        "boredom": 0.1
+        "Curiosity": 0.7,
+        "Boredom": 0.2,
+        "Disappointment": 0.1
       }
     },
     {
       "vacation_type": "adventurous",
-      "travel_companions": "with_family",
-      "destination_unfamiliarity": "first_time",
+      "preparation_status": "rushed",
+      "anticipation_level": "high",
       "emotions": {
-        "excitement": 0.85,
-        "fear": 0.05,
-        "boredom": 0.1
+        "Fear": 0.45,
+        "Thrill": 0.35,
+        "Anxiety": 0.15
       }
     },
     {
       "vacation_type": "adventurous",
-      "travel_companions": "with_family",
-      "destination_unfamiliarity": "repeated",
+      "preparation_status": "rushed",
+      "anticipation_level": "low",
       "emotions": {
-        "excitement": 0.7,
-        "fear": 0.15,
-        "boredom": 0.15
+        "Regret": 0.6,
+        "Boredom": 0.3,
+        "Disappointment": 0.1
       }
     }
   ]

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "unemployment_duration": [
+      "short",
+      "long"
+    ],
+    "job_search_effort": [
+      "low",
+      "high"
+    ],
+    "previous_job_performance": [
+      "poor",
+      "good"
+    ]
+  },
+  "cpt": [
+    {
+      "unemployment_duration": "short",
+      "job_search_effort": "low",
+      "previous_job_performance": "poor",
+      "emotions": {
+        "frustration": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "hopelessness": 0.10000000000000002
+      }
+    },
+    {
+      "unemployment_duration": "short",
+      "job_search_effort": "low",
+      "previous_job_performance": "good",
+      "emotions": {
+        "relief": 0.4,
+        "confidence": 0.4,
+        "optimism": 0.2
+      }
+    },
+    {
+      "unemployment_duration": "short",
+      "job_search_effort": "high",
+      "previous_job_performance": "poor",
+      "emotions": {
+        "frustration": 0.7,
+        "anxiety": 0.25,
+        "anger": 0.05
+      }
+    },
+    {
+      "unemployment_duration": "short",
+      "job_search_effort": "high",
+      "previous_job_performance": "good",
+      "emotions": {
+        "confidence": 0.55,
+        "optimism": 0.35,
+        "hope": 0.1
+      }
+    },
+    {
+      "unemployment_duration": "long",
+      "job_search_effort": "low",
+      "previous_job_performance": "poor",
+      "emotions": {
+        "frustration": 0.8,
+        "anxiety": 0.15,
+        "anger": 0.05
+      }
+    },
+    {
+      "unemployment_duration": "long",
+      "job_search_effort": "low",
+      "previous_job_performance": "good",
+      "emotions": {
+        "disappointment": 0.5,
+        "anxiety": 0.4,
+        "despair": 0.1
+      }
+    },
+    {
+      "unemployment_duration": "long",
+      "job_search_effort": "high",
+      "previous_job_performance": "poor",
+      "emotions": {
+        "frustration": 0.85,
+        "anxiety": 0.1,
+        "anger": 0.05
+      }
+    },
+    {
+      "unemployment_duration": "long",
+      "job_search_effort": "high",
+      "previous_job_performance": "good",
+      "emotions": {
+        "determination": 0.55,
+        "optimism": 0.35,
+        "resilience": 0.1
+      }
+    }
+  ]
+}

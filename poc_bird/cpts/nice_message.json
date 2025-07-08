@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "friendship_depth",
-      "values": [
-        "shallow",
-        "deep"
-      ]
-    },
-    {
-      "name": "message_type",
-      "values": [
-        "kind",
-        "critical"
-      ]
-    },
-    {
-      "name": "previous_messages",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    }
-  ],
+  "factors": {
+    "friend_history": [
+      "positive",
+      "negative"
+    ],
+    "message_content": [
+      "positive",
+      "negative"
+    ],
+    "message_frequency": [
+      "rare",
+      "frequent"
+    ]
+  },
   "cpt": [
     {
-      "friendship_depth": "shallow",
-      "message_type": "kind",
-      "previous_messages": "first_time",
+      "friend_history": "positive",
+      "message_content": "positive",
+      "message_frequency": "rare",
       "emotions": {
-        "gratitude": 0.7,
-        "happiness": 0.2,
-        "indifference": 0.1
+        "happy": 0.75,
+        "surprised": 0.2,
+        "curious": 0.05
       }
     },
     {
-      "friendship_depth": "shallow",
-      "message_type": "kind",
-      "previous_messages": "repeated",
+      "friend_history": "positive",
+      "message_content": "positive",
+      "message_frequency": "frequent",
       "emotions": {
-        "gratitude": 0.4,
-        "happiness": 0.5,
-        "surprise": 0.1
+        "grateful": 0.6,
+        "content": 0.35,
+        "excited": 0.05
       }
     },
     {
-      "friendship_depth": "shallow",
-      "message_type": "critical",
-      "previous_messages": "first_time",
+      "friend_history": "positive",
+      "message_content": "negative",
+      "message_frequency": "rare",
       "emotions": {
-        "anger": 0.6,
-        "happiness": 0.2,
-        "surprise": 0.2
+        "concerned": 0.6,
+        "sad": 0.3,
+        "anxious": 0.1
       }
     },
     {
-      "friendship_depth": "shallow",
-      "message_type": "critical",
-      "previous_messages": "repeated",
+      "friend_history": "positive",
+      "message_content": "negative",
+      "message_frequency": "frequent",
       "emotions": {
-        "anger": 0.8,
-        "frustration": 0.1,
-        "surprise": 0.1
+        "sympathetic": 0.7,
+        "worried": 0.25,
+        "frustrated": 0.05
       }
     },
     {
-      "friendship_depth": "deep",
-      "message_type": "kind",
-      "previous_messages": "first_time",
+      "friend_history": "negative",
+      "message_content": "positive",
+      "message_frequency": "rare",
       "emotions": {
-        "gratitude": 0.9,
-        "happiness": 0.08,
-        "love": 0.02
+        "confused": 0.45,
+        "suspicious": 0.4,
+        "hopeful": 0.15
       }
     },
     {
-      "friendship_depth": "deep",
-      "message_type": "kind",
-      "previous_messages": "repeated",
+      "friend_history": "negative",
+      "message_content": "positive",
+      "message_frequency": "frequent",
       "emotions": {
-        "gratitude": 0.7,
-        "happiness": 0.25,
-        "love": 0.05
+        "forgiving": 0.55,
+        "suspicious": 0.35,
+        "amused": 0.1
       }
     },
     {
-      "friendship_depth": "deep",
-      "message_type": "critical",
-      "previous_messages": "first_time",
+      "friend_history": "negative",
+      "message_content": "negative",
+      "message_frequency": "rare",
       "emotions": {
-        "anger": 0.2,
-        "happiness": 0.6,
-        "surprise": 0.2
+        "angry": 0.7,
+        "offended": 0.25,
+        "disappointed": 0.05
       }
     },
     {
-      "friendship_depth": "deep",
-      "message_type": "critical",
-      "previous_messages": "repeated",
+      "friend_history": "negative",
+      "message_content": "negative",
+      "message_frequency": "frequent",
       "emotions": {
-        "anger": 0.4,
-        "frustration": 0.3,
-        "surprise": 0.3
+        "resentful": 0.75,
+        "angry": 0.2,
+        "disappointed": 0.05
       }
     }
   ]

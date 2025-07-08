@@ -1,0 +1,114 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "communication_attempt": [
+      "yes",
+      "no"
+    ],
+    "reason_for_no_contact": [
+      "unintentional",
+      "intentional"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "communication_attempt": "yes",
+      "reason_for_no_contact": "unintentional",
+      "emotions": {
+        "sadness": 0.7619047619047619,
+        "regret": 0.14285714285714285,
+        "anger": 0.047619047619047616,
+        "anxiety": 0.047619047619047616,
+        "indifference": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_attempt": "yes",
+      "reason_for_no_contact": "intentional",
+      "emotions": {
+        "sadness": 0.5714285714285714,
+        "regret": 0.3333333333333333,
+        "anger": 0.047619047619047616,
+        "anxiety": 0.047619047619047616,
+        "indifference": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_attempt": "no",
+      "reason_for_no_contact": "unintentional",
+      "emotions": {
+        "sadness": 0.9,
+        "regret": 0.1,
+        "anger": 0.0,
+        "anxiety": 0.0,
+        "indifference": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_attempt": "no",
+      "reason_for_no_contact": "intentional",
+      "emotions": {
+        "sadness": 0.8095238095238094,
+        "regret": 0.09523809523809523,
+        "anger": 0.047619047619047616,
+        "anxiety": 0.0,
+        "indifference": 0.047619047619047616
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_attempt": "yes",
+      "reason_for_no_contact": "unintentional",
+      "emotions": {
+        "sadness": 0.6666666666666666,
+        "regret": 0.23809523809523808,
+        "anger": 0.047619047619047616,
+        "anxiety": 0.047619047619047616,
+        "indifference": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_attempt": "yes",
+      "reason_for_no_contact": "intentional",
+      "emotions": {
+        "sadness": 0.6000000000000001,
+        "regret": 0.30000000000000004,
+        "anger": 0.10000000000000002,
+        "anxiety": 0.0,
+        "indifference": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_attempt": "no",
+      "reason_for_no_contact": "unintentional",
+      "emotions": {
+        "sadness": 0.85,
+        "regret": 0.1,
+        "anger": 0.05,
+        "anxiety": 0.0,
+        "indifference": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_attempt": "no",
+      "reason_for_no_contact": "intentional",
+      "emotions": {
+        "sadness": 0.7619047619047619,
+        "regret": 0.14285714285714285,
+        "anger": 0.047619047619047616,
+        "anxiety": 0.047619047619047616,
+        "indifference": 0.0
+      }
+    }
+  ]
+}

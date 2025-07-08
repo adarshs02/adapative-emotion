@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "openness_about_relationship": [
+      "open",
+      "secretive"
+    ],
+    "colleague_interest_level": [
+      "casual",
+      "serious"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "openness_about_relationship": "open",
+      "colleague_interest_level": "casual",
+      "emotions": {
+        "anxiety": 0.2,
+        "curiosity": 0.4,
+        "trust": 0.4
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "openness_about_relationship": "open",
+      "colleague_interest_level": "serious",
+      "emotions": {
+        "anxiety": 0.3,
+        "fear": 0.45,
+        "jealousy": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "openness_about_relationship": "secretive",
+      "colleague_interest_level": "casual",
+      "emotions": {
+        "anxiety": 0.35,
+        "suspicion": 0.5,
+        "trust": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "openness_about_relationship": "secretive",
+      "colleague_interest_level": "serious",
+      "emotions": {
+        "anxiety": 0.42857142857142855,
+        "suspicion": 0.5238095238095238,
+        "anger": 0.047619047619047616
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "openness_about_relationship": "open",
+      "colleague_interest_level": "casual",
+      "emotions": {
+        "anxiety": 0.4,
+        "fear": 0.45,
+        "anger": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "openness_about_relationship": "open",
+      "colleague_interest_level": "serious",
+      "emotions": {
+        "anxiety": 0.5,
+        "fear": 0.4,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "openness_about_relationship": "secretive",
+      "colleague_interest_level": "casual",
+      "emotions": {
+        "anxiety": 0.55,
+        "suspicion": 0.4,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "openness_about_relationship": "secretive",
+      "colleague_interest_level": "serious",
+      "emotions": {
+        "anxiety": 0.6,
+        "suspicion": 0.35,
+        "anger": 0.05
+      }
+    }
+  ]
+}

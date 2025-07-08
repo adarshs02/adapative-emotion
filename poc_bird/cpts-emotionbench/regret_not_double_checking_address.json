@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "preparation_level": [
+      "well_prepared",
+      "not_well_prepared"
+    ],
+    "job_importance": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "preparation_level": "well_prepared",
+      "job_importance": "low",
+      "emotions": {
+        "relief": 0.7,
+        "confidence": 0.25,
+        "excitement": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "preparation_level": "well_prepared",
+      "job_importance": "high",
+      "emotions": {
+        "anxiety": 0.4,
+        "confidence": 0.35,
+        "excitement": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "preparation_level": "not_well_prepared",
+      "job_importance": "low",
+      "emotions": {
+        "regret": 0.6000000000000001,
+        "nervousness": 0.30000000000000004,
+        "anxiety": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "preparation_level": "not_well_prepared",
+      "job_importance": "high",
+      "emotions": {
+        "regret": 0.75,
+        "nervousness": 0.2,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation_level": "well_prepared",
+      "job_importance": "low",
+      "emotions": {
+        "regret": 0.5,
+        "confidence": 0.35,
+        "relief": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation_level": "well_prepared",
+      "job_importance": "high",
+      "emotions": {
+        "anger": 0.47368421052631576,
+        "anxiety": 0.36842105263157887,
+        "confidence": 0.15789473684210525
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation_level": "not_well_prepared",
+      "job_importance": "low",
+      "emotions": {
+        "anger": 0.6000000000000001,
+        "regret": 0.30000000000000004,
+        "nervousness": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation_level": "not_well_prepared",
+      "job_importance": "high",
+      "emotions": {
+        "anger": 0.75,
+        "regret": 0.2,
+        "nervousness": 0.05
+      }
+    }
+  ]
+}

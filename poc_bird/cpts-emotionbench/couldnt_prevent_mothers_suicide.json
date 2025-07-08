@@ -1,0 +1,103 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "support_system": [
+      "none",
+      "present"
+    ],
+    "guilt_feelings": [
+      "none",
+      "present"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "support_system": "none",
+      "guilt_feelings": "none",
+      "emotions": {
+        "shock": 0.6,
+        "sadness": 0.35,
+        "regret": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_system": "present",
+      "guilt_feelings": "none",
+      "emotions": {
+        "shock": 0.20000000000000004,
+        "sadness": 0.5750000000000001,
+        "guilt": 0.07500000000000001,
+        "regret": 0.10000000000000002,
+        "anger": 0.05000000000000001
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_system": "none",
+      "guilt_feelings": "present",
+      "emotions": {
+        "shock": 0.4,
+        "sadness": 0.45,
+        "guilt": 0.15000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_system": "none",
+      "guilt_feelings": "none",
+      "emotions": {
+        "shock": 0.30000000000000004,
+        "sadness": 0.45,
+        "anger": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_system": "present",
+      "guilt_feelings": "none",
+      "emotions": {
+        "shock": 0.125,
+        "sadness": 0.47500000000000003,
+        "anger": 0.25,
+        "regret": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_system": "none",
+      "guilt_feelings": "present",
+      "emotions": {
+        "shock": 0.275,
+        "sadness": 0.4,
+        "anger": 0.325
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_system": "present",
+      "guilt_feelings": "present",
+      "emotions": {
+        "shock": 0.15,
+        "sadness": 0.525,
+        "guilt": 0.275,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_system": "present",
+      "guilt_feelings": "present",
+      "emotions": {
+        "shock": 0.12195121951219513,
+        "sadness": 0.4390243902439025,
+        "anger": 0.24390243902439027,
+        "guilt": 0.1951219512195122
+      }
+    }
+  ]
+}

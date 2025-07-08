@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "pet_age": [
+      "young",
+      "old"
+    ],
+    "pet_type": [
+      "dog",
+      "cat"
+    ],
+    "pet_length_of_time_together": [
+      "short",
+      "long"
+    ]
+  },
+  "cpt": [
+    {
+      "pet_age": "young",
+      "pet_type": "dog",
+      "pet_length_of_time_together": "short",
+      "emotions": {
+        "shock": 0.6,
+        "sadness": 0.35,
+        "regret": 0.05
+      }
+    },
+    {
+      "pet_age": "young",
+      "pet_type": "dog",
+      "pet_length_of_time_together": "long",
+      "emotions": {
+        "sadness": 0.7,
+        "nostalgia": 0.25,
+        "relief": 0.05
+      }
+    },
+    {
+      "pet_age": "young",
+      "pet_type": "cat",
+      "pet_length_of_time_together": "short",
+      "emotions": {
+        "shock": 0.5789473684210527,
+        "sadness": 0.36842105263157887,
+        "anger": 0.05263157894736842
+      }
+    },
+    {
+      "pet_age": "young",
+      "pet_type": "cat",
+      "pet_length_of_time_together": "long",
+      "emotions": {
+        "sadness": 0.7000000000000001,
+        "nostalgia": 0.20000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "pet_age": "old",
+      "pet_type": "dog",
+      "pet_length_of_time_together": "short",
+      "emotions": {
+        "shock": 0.45,
+        "sadness": 0.4,
+        "relief": 0.15
+      }
+    },
+    {
+      "pet_age": "old",
+      "pet_type": "dog",
+      "pet_length_of_time_together": "long",
+      "emotions": {
+        "sadness": 0.6000000000000001,
+        "nostalgia": 0.30000000000000004,
+        "relief": 0.10000000000000002
+      }
+    },
+    {
+      "pet_age": "old",
+      "pet_type": "cat",
+      "pet_length_of_time_together": "short",
+      "emotions": {
+        "shock": 0.5,
+        "sadness": 0.35,
+        "anger": 0.15
+      }
+    },
+    {
+      "pet_age": "old",
+      "pet_type": "cat",
+      "pet_length_of_time_together": "long",
+      "emotions": {
+        "sadness": 0.65,
+        "nostalgia": 0.25,
+        "anger": 0.1
+      }
+    }
+  ]
+}

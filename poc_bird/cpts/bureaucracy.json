@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "bureaucratic_experience",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "bureaucratic_complexity",
-      "values": [
-        "simple",
-        "complex"
-      ]
-    },
-    {
-      "name": "personal_stakes",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "preparation": [
+      "unprepared",
+      "prepared"
+    ],
+    "time_of_day": [
+      "morning",
+      "afternoon"
+    ]
+  },
   "cpt": [
     {
-      "bureaucratic_experience": "first_time",
-      "bureaucratic_complexity": "simple",
-      "personal_stakes": "low",
-      "emotions": {
-        "frustration": 0.7,
-        "helplessness": 0.2,
-        "indifference": 0.1
-      }
-    },
-    {
-      "bureaucratic_experience": "first_time",
-      "bureaucratic_complexity": "simple",
-      "personal_stakes": "high",
+      "offence_history": "first_time",
+      "preparation": "unprepared",
+      "time_of_day": "morning",
       "emotions": {
         "frustration": 0.6,
-        "helplessness": 0.3,
-        "concern": 0.1
+        "annoyance": 0.35,
+        "confusion": 0.05
       }
     },
     {
-      "bureaucratic_experience": "first_time",
-      "bureaucratic_complexity": "complex",
-      "personal_stakes": "low",
+      "offence_history": "first_time",
+      "preparation": "unprepared",
+      "time_of_day": "afternoon",
       "emotions": {
-        "frustration": 0.5,
-        "helplessness": 0.3,
-        "confusion": 0.2
+        "frustration": 0.65,
+        "annoyance": 0.3,
+        "confusion": 0.05
       }
     },
     {
-      "bureaucratic_experience": "first_time",
-      "bureaucratic_complexity": "complex",
-      "personal_stakes": "high",
+      "offence_history": "first_time",
+      "preparation": "prepared",
+      "time_of_day": "morning",
       "emotions": {
-        "frustration": 0.4,
-        "concern": 0.4,
-        "helplessness": 0.2
+        "relief": 0.4,
+        "frustration": 0.35,
+        "annoyance": 0.25
       }
     },
     {
-      "bureaucratic_experience": "repeated",
-      "bureaucratic_complexity": "simple",
-      "personal_stakes": "low",
+      "offence_history": "first_time",
+      "preparation": "prepared",
+      "time_of_day": "afternoon",
+      "emotions": {
+        "relief": 0.45,
+        "frustration": 0.3,
+        "annoyance": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation": "unprepared",
+      "time_of_day": "morning",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.25,
+        "annoyance": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation": "unprepared",
+      "time_of_day": "afternoon",
+      "emotions": {
+        "anger": 0.75,
+        "frustration": 0.2,
+        "annoyance": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation": "prepared",
+      "time_of_day": "morning",
       "emotions": {
         "anger": 0.6,
         "frustration": 0.3,
-        "helplessness": 0.1
+        "annoyance": 0.1
       }
     },
     {
-      "bureaucratic_experience": "repeated",
-      "bureaucratic_complexity": "simple",
-      "personal_stakes": "high",
+      "offence_history": "repeated",
+      "preparation": "prepared",
+      "time_of_day": "afternoon",
       "emotions": {
-        "anger": 0.7,
-        "frustration": 0.2,
-        "concern": 0.1
-      }
-    },
-    {
-      "bureaucratic_experience": "repeated",
-      "bureaucratic_complexity": "complex",
-      "personal_stakes": "low",
-      "emotions": {
-        "anger": 0.8,
-        "frustration": 0.1,
-        "helplessness": 0.1
-      }
-    },
-    {
-      "bureaucratic_experience": "repeated",
-      "bureaucratic_complexity": "complex",
-      "personal_stakes": "high",
-      "emotions": {
-        "anger": 0.9,
-        "concern": 0.08,
-        "helplessness": 0.02
+        "anger": 0.65,
+        "frustration": 0.25,
+        "annoyance": 0.1
       }
     }
   ]

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "swelling_face": [
+      "Nervous",
+      "Anxious"
+    ],
+    "racing_heart": [
+      "Yes",
+      "No"
+    ],
+    "articulation_difficulty": [
+      "Yes",
+      "No"
+    ]
+  },
+  "cpt": [
+    {
+      "swelling_face": "Nervous",
+      "racing_heart": "Yes",
+      "articulation_difficulty": "Yes",
+      "emotions": {
+        "Nervous": 0.5,
+        "Anxious": 0.30000000000000004,
+        "Embarrassed": 0.2
+      }
+    },
+    {
+      "swelling_face": "Nervous",
+      "racing_heart": "Yes",
+      "articulation_difficulty": "No",
+      "emotions": {
+        "Nervous": 0.425,
+        "Anxious": 0.4,
+        "Frustrated": 0.175
+      }
+    },
+    {
+      "swelling_face": "Nervous",
+      "racing_heart": "No",
+      "articulation_difficulty": "Yes",
+      "emotions": {
+        "Nervous": 0.35000000000000003,
+        "Anxious": 0.42500000000000004,
+        "Confused": 0.225
+      }
+    },
+    {
+      "swelling_face": "Nervous",
+      "racing_heart": "No",
+      "articulation_difficulty": "No",
+      "emotions": {
+        "Nervous": 0.3,
+        "Anxious": 0.47500000000000003,
+        "Relieved": 0.22499999999999998
+      }
+    },
+    {
+      "swelling_face": "Anxious",
+      "racing_heart": "Yes",
+      "articulation_difficulty": "Yes",
+      "emotions": {
+        "Anxious": 0.575,
+        "Nervous": 0.25,
+        "Embarrassed": 0.175
+      }
+    },
+    {
+      "swelling_face": "Anxious",
+      "racing_heart": "Yes",
+      "articulation_difficulty": "No",
+      "emotions": {
+        "Anxious": 0.525,
+        "Nervous": 0.32500000000000007,
+        "Frustrated": 0.15000000000000002
+      }
+    },
+    {
+      "swelling_face": "Anxious",
+      "racing_heart": "No",
+      "articulation_difficulty": "Yes",
+      "emotions": {
+        "Anxious": 0.44999999999999996,
+        "Nervous": 0.35,
+        "Confused": 0.2
+      }
+    },
+    {
+      "swelling_face": "Anxious",
+      "racing_heart": "No",
+      "articulation_difficulty": "No",
+      "emotions": {
+        "Anxious": 0.4,
+        "Nervous": 0.4,
+        "Relieved": 0.2
+      }
+    }
+  ]
+}

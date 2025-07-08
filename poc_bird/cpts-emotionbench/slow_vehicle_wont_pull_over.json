@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "road_condition": [
+      "good",
+      "poor"
+    ],
+    "time_of_day": [
+      "day",
+      "night"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "road_condition": "good",
+      "time_of_day": "day",
+      "emotions": {
+        "frustration": 0.3,
+        "annoyance": 0.5,
+        "anger": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "road_condition": "good",
+      "time_of_day": "night",
+      "emotions": {
+        "frustration": 0.25,
+        "annoyance": 0.55,
+        "anger": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "road_condition": "poor",
+      "time_day": "day",
+      "emotions": {
+        "frustration": 0.375,
+        "annoyance": 0.525,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "road_condition": "poor",
+      "time_day": "night",
+      "emotions": {
+        "frustration": 0.375,
+        "annoyance": 0.525,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "road_condition": "good",
+      "time_day": "day",
+      "emotions": {
+        "frustration": 0.2,
+        "annoyance": 0.45,
+        "anger": 0.35
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "road_condition": "good",
+      "time_day": "night",
+      "emotions": {
+        "frustration": 0.2,
+        "annoyance": 0.45,
+        "anger": 0.35
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "road_condition": "poor",
+      "time_day": "day",
+      "emotions": {
+        "frustration": 0.3,
+        "annoyance": 0.5,
+        "anger": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "road_condition": "poor",
+      "time_day": "night",
+      "emotions": {
+        "frustration": 0.3,
+        "annoyance": 0.5,
+        "anger": 0.2
+      }
+    }
+  ]
+}

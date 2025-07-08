@@ -1,114 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "accuser_credibility",
-      "values": [
-        "high",
-        "low"
-      ]
-    },
-    {
-      "name": "evidence_quality",
-      "values": [
-        "strong",
-        "weak"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "evidence_quality": [
+      "strong",
+      "weak"
+    ],
+    "support_from_others": [
+      "yes",
+      "no"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "accuser_credibility": "high",
       "evidence_quality": "strong",
+      "support_from_others": "yes",
       "emotions": {
-        "shame": 0.0,
-        "anger": 0.0,
-        "anxiety": 0.9,
-        "relief": 0.1
+        "confident": 0.8,
+        "anxious": 0.15,
+        "angry": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "accuser_credibility": "high",
-      "evidence_quality": "weak",
+      "evidence_quality": "strong",
+      "support_from_others": "no",
       "emotions": {
-        "shame": 0.2,
-        "anger": 0.0,
-        "anxiety": 0.6,
-        "relief": 0.2
+        "confident": 0.5,
+        "anxious": 0.35,
+        "angry": 0.15
       }
     },
     {
       "offence_history": "first_time",
-      "accuser_credibility": "low",
-      "evidence_quality": "strong",
+      "evidence_quality": "weak",
+      "support_from_others": "yes",
       "emotions": {
-        "shame": 0.4,
-        "anger": 0.1,
-        "anxiety": 0.3,
-        "relief": 0.2
+        "confident": 0.2,
+        "anxious": 0.6,
+        "angry": 0.2
       }
     },
     {
       "offence_history": "first_time",
-      "accuser_credibility": "low",
       "evidence_quality": "weak",
+      "support_from_others": "no",
       "emotions": {
-        "shame": 0.6,
-        "anger": 0.2,
-        "anxiety": 0.1,
-        "relief": 0.1
+        "confident": 0.1,
+        "anxious": 0.7,
+        "angry": 0.2
       }
     },
     {
       "offence_history": "repeated",
-      "accuser_credibility": "high",
       "evidence_quality": "strong",
+      "support_from_others": "yes",
       "emotions": {
-        "shame": 0.8,
-        "anger": 0.1,
-        "anxiety": 0.05,
-        "relief": 0.05
+        "confident": 0.2,
+        "anxious": 0.4,
+        "angry": 0.4
       }
     },
     {
       "offence_history": "repeated",
-      "accuser_credibility": "high",
-      "evidence_quality": "weak",
-      "emotions": {
-        "shame": 0.9,
-        "anger": 0.05,
-        "anxiety": 0.0,
-        "relief": 0.05
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "accuser_credibility": "low",
       "evidence_quality": "strong",
+      "support_from_others": "no",
       "emotions": {
-        "shame": 0.9,
-        "anger": 0.05,
-        "anxiety": 0.0,
-        "relief": 0.05
+        "confident": 0.1,
+        "anxious": 0.35,
+        "angry": 0.55
       }
     },
     {
       "offence_history": "repeated",
-      "accuser_credibility": "low",
       "evidence_quality": "weak",
+      "support_from_others": "yes",
       "emotions": {
-        "shame": 1.0,
-        "anger": 0.0,
-        "anxiety": 0.0,
-        "relief": 0.0
+        "confident": 0.05,
+        "anxious": 0.55,
+        "angry": 0.4
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "evidence_quality": "weak",
+      "support_from_others": "no",
+      "emotions": {
+        "confident": 0.02,
+        "anxious": 0.45,
+        "angry": 0.53
       }
     }
   ]

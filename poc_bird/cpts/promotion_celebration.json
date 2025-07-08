@@ -1,106 +1,105 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "colleague_support",
-      "values": [
-        "low",
-        "high"
-      ]
-    },
-    {
-      "name": "personal_expectations",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "colleague_reaction": [
+      "positive",
+      "neutral"
+    ],
+    "self_expectation": [
+      "exceeded",
+      "met"
+    ],
+    "promotion_type": [
+      "significant",
+      "minor"
+    ]
+  },
   "cpt": [
     {
-      "offence_history": "first_time",
-      "colleague_support": "low",
-      "personal_expectations": "low",
+      "colleague_reaction": "positive",
+      "self_expectation": "exceeded",
+      "promotion_type": "significant",
       "emotions": {
-        "gratitude": 0.8,
-        "surprise": 0.15,
-        "anxiety": 0.05
+        "happy": 0.75,
+        "proud": 0.2,
+        "relieved": 0.05,
+        "anxious": 0.0
       }
     },
     {
-      "offence_history": "first_time",
-      "colleague_support": "low",
-      "personal_expectations": "high",
+      "colleague_reaction": "positive",
+      "self_expectation": "exceeded",
+      "promotion_type": "minor",
       "emotions": {
-        "gratitude": 0.7,
-        "surprise": 0.2,
-        "anxiety": 0.1
+        "happy": 0.6,
+        "surprised": 0.25,
+        "grateful": 0.1,
+        "anxious": 0.05
       }
     },
     {
-      "offence_history": "first_time",
-      "colleague_support": "high",
-      "personal_expectations": "low",
+      "colleague_reaction": "positive",
+      "self_expectation": "met",
+      "promotion_type": "significant",
       "emotions": {
-        "gratitude": 0.6,
-        "surprise": 0.25,
-        "anxiety": 0.15
+        "happy": 0.5,
+        "satisfied": 0.35,
+        "relieved": 0.1,
+        "disappointed": 0.05
       }
     },
     {
-      "offence_history": "first_time",
-      "colleague_support": "high",
-      "personal_expectations": "high",
+      "colleague_reaction": "positive",
+      "self_expectation": "met",
+      "promotion_type": "minor",
       "emotions": {
-        "gratitude": 0.5,
-        "surprise": 0.3,
-        "anxiety": 0.2
+        "happy": 0.4,
+        "satisfied": 0.4,
+        "relieved": 0.15,
+        "disappointed": 0.05
       }
     },
     {
-      "offence_history": "repeated",
-      "colleague_support": "low",
-      "personal_expectations": "low",
+      "colleague_reaction": "neutral",
+      "self_expectation": "exceeded",
+      "promotion_type": "significant",
       "emotions": {
-        "gratitude": 0.3,
-        "surprise": 0.1,
-        "anger": 0.6
+        "happy": 0.45,
+        "proud": 0.35,
+        "anxious": 0.1,
+        "disappointed": 0.05
       }
     },
     {
-      "offence_history": "repeated",
-      "colleague_support": "low",
-      "personal_expectations": "high",
+      "colleague_reaction": "neutral",
+      "self_expectation": "exceeded",
+      "promotion_type": "minor",
       "emotions": {
-        "gratitude": 0.2,
-        "surprise": 0.05,
-        "anger": 0.75
+        "happy": 0.35,
+        "surprised": 0.3,
+        "grateful": 0.2,
+        "disappointed": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "colleague_support": "high",
-      "personal_expectations": "low",
+      "colleague_reaction": "neutral",
+      "self_expectation": "met",
+      "promotion_type": "significant",
       "emotions": {
-        "gratitude": 0.2,
-        "surprise": 0.05,
-        "anger": 0.75
+        "happy": 0.3,
+        "satisfied": 0.4,
+        "relieved": 0.2,
+        "disappointed": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "colleague_support": "high",
-      "personal_expectations": "high",
+      "colleague_reaction": "neutral",
+      "self_expectation": "met",
+      "promotion_type": "minor",
       "emotions": {
-        "gratitude": 0.1,
-        "surprise": 0.02,
-        "anger": 0.88
+        "happy": 0.25,
+        "satisfied": 0.4,
+        "relieved": 0.25,
+        "disappointed": 0.1
       }
     }
   ]

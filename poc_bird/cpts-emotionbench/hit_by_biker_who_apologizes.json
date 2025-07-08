@@ -1,0 +1,105 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "apology_sincerity": [
+      "insincere",
+      "sincere"
+    ],
+    "damage_severity": [
+      "minor",
+      "major"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "apology_sincerity": "insincere",
+      "damage_severity": "minor",
+      "emotions": {
+        "anger": 0.15000000000000002,
+        "surprise": 0.525,
+        "disappointment": 0.15,
+        "frustration": 0.175
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_sincerity": "insincere",
+      "damage_severity": "major",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.4,
+        "disappointment": 0.05,
+        "shock": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_sincerity": "sincere",
+      "damage_severity": "minor",
+      "emotions": {
+        "relief": 0.30000000000000004,
+        "gratitude": 0.5,
+        "surprise": 0.05,
+        "doubt": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_sincerity": "sincere",
+      "damage_severity": "major",
+      "emotions": {
+        "relief": 0.15,
+        "gratitude": 0.4,
+        "anger": 0.30000000000000004,
+        "fear": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_sincerity": "insincere",
+      "damage_severity": "minor",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.4,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_sincerity": "insincere",
+      "damage_severity": "major",
+      "emotions": {
+        "anger": 0.75,
+        "frustration": 0.175,
+        "disappointment": 0.025,
+        "disgust": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_sincerity": "sincere",
+      "damage_severity": "minor",
+      "emotions": {
+        "anger": 0.325,
+        "forgiveness": 0.5,
+        "disappointment": 0.05,
+        "distrust": 0.125
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_sincerity": "sincere",
+      "damage_severity": "major",
+      "emotions": {
+        "anger": 0.5,
+        "forgiveness": 0.35,
+        "relief": 0.05,
+        "fear": 0.1
+      }
+    }
+  ]
+}

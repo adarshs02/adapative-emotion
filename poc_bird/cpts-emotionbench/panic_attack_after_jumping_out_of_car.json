@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "panic_history": [
+      "first_time",
+      "repeated"
+    ],
+    "trigger_type": [
+      "physical",
+      "mental"
+    ],
+    "environment": [
+      "safe",
+      "unsafe"
+    ]
+  },
+  "cpt": [
+    {
+      "panic_history": "first_time",
+      "trigger_type": "physical",
+      "environment": "safe",
+      "emotions": {
+        "fear": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "surprise": 0.10000000000000002
+      }
+    },
+    {
+      "panic_history": "first_time",
+      "trigger_type": "physical",
+      "environment": "unsafe",
+      "emotions": {
+        "fear": 0.8,
+        "anxiety": 0.15,
+        "anger": 0.05
+      }
+    },
+    {
+      "panic_history": "first_time",
+      "trigger_type": "mental",
+      "environment": "safe",
+      "emotions": {
+        "anxiety": 0.7000000000000001,
+        "stress": 0.20000000000000004,
+        "sadness": 0.10000000000000002
+      }
+    },
+    {
+      "panic_history": "first_time",
+      "trigger_type": "mental",
+      "environment": "unsafe",
+      "emotions": {
+        "anxiety": 0.85,
+        "stress": 0.1,
+        "fear": 0.05
+      }
+    },
+    {
+      "panic_history": "repeated",
+      "trigger_type": "physical",
+      "environment": "safe",
+      "emotions": {
+        "fear": 0.4,
+        "anxiety": 0.45,
+        "anger": 0.15
+      }
+    },
+    {
+      "panic_history": "repeated",
+      "trigger_type": "physical",
+      "environment": "unsafe",
+      "emotions": {
+        "fear": 0.75,
+        "anxiety": 0.2,
+        "anger": 0.05
+      }
+    },
+    {
+      "panic_history": "repeated",
+      "trigger_type": "mental",
+      "environment": "safe",
+      "emotions": {
+        "anxiety": 0.6000000000000001,
+        "stress": 0.30000000000000004,
+        "sadness": 0.10000000000000002
+      }
+    },
+    {
+      "panic_history": "repeated",
+      "trigger_type": "mental",
+      "environment": "unsafe",
+      "emotions": {
+        "anxiety": 0.85,
+        "stress": 0.1,
+        "fear": 0.05
+      }
+    }
+  ]
+}

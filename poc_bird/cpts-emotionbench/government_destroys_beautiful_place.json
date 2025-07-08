@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "government_action_history": [
+      "first_time",
+      "repeated"
+    ],
+    "personal_involvement": [
+      "not_involved",
+      "involved"
+    ],
+    "belief_in_government_decision": [
+      "agree",
+      "disagree"
+    ]
+  },
+  "cpt": [
+    {
+      "government_action_history": "first_time",
+      "personal_involvement": "not_involved",
+      "belief_in_government_decision": "agree",
+      "emotions": {
+        "hope": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "indifference": 0.10000000000000002
+      }
+    },
+    {
+      "government_action_history": "first_time",
+      "personal_involvement": "not_involved",
+      "belief_in_government_decision": "disagree",
+      "emotions": {
+        "anger": 0.4,
+        "frustration": 0.45,
+        "sadness": 0.15
+      }
+    },
+    {
+      "government_action_history": "first_time",
+      "personal_involvement": "involved",
+      "belief_in_government_decision": "agree",
+      "emotions": {
+        "hope": 0.5,
+        "anxiety": 0.3,
+        "frustration": 0.2
+      }
+    },
+    {
+      "government_action_history": "first_time",
+      "personal_involvement": "involved",
+      "belief_in_government_decision": "disagree",
+      "emotions": {
+        "anger": 0.55,
+        "frustration": 0.35,
+        "sadness": 0.1
+      }
+    },
+    {
+      "government_action_history": "repeated",
+      "personal_involvement": "not_involved",
+      "belief_in_government_decision": "agree",
+      "emotions": {
+        "disappointment": 0.45,
+        "frustration": 0.4,
+        "indifference": 0.15
+      }
+    },
+    {
+      "government_action_history": "repeated",
+      "personal_involvement": "not_involved",
+      "belief_in_government_decision": "disagree",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.35,
+        "sadness": 0.05
+      }
+    },
+    {
+      "government_action_history": "repeated",
+      "personal_involvement": "involved",
+      "belief_in_government_decision": "agree",
+      "emotions": {
+        "disappointment": 0.5,
+        "anxiety": 0.35,
+        "frustration": 0.15
+      }
+    },
+    {
+      "government_action_history": "repeated",
+      "personal_involvement": "involved",
+      "belief_in_government_decision": "disagree",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.25,
+        "sadness": 0.05
+      }
+    }
+  ]
+}

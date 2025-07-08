@@ -1,0 +1,108 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "teasing_intensity": [
+      "mild",
+      "intense"
+    ],
+    "friends_presence": [
+      "alone",
+      "present"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "teasing_intensity": "mild",
+      "friends_presence": "alone",
+      "emotions": {
+        "amused": 0.3,
+        "annoyed": 0.4,
+        "frustrated": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "teasing_intensity": "mild",
+      "friends_presence": "present",
+      "emotions": {
+        "amused": 0.30000000000000004,
+        "annoyed": 0.425,
+        "frustrated": 0.15,
+        "embarrassed": 0.125
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "teasing_intensity": "intense",
+      "friends_presence": "alone",
+      "emotions": {
+        "amused": 0.09756097560975611,
+        "annoyed": 0.5853658536585367,
+        "frustrated": 0.14634146341463417,
+        "angry": 0.17073170731707318
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "teasing_intensity": "intense",
+      "friends_presence": "present",
+      "emotions": {
+        "amused": 0.175,
+        "annoyed": 0.325,
+        "frustrated": 0.125,
+        "angry": 0.275,
+        "embarrassed": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "teasing_intensity": "mild",
+      "friends_presence": "alone",
+      "emotions": {
+        "amused": 0.1,
+        "annoyed": 0.475,
+        "frustrated": 0.175,
+        "angry": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "teasing_intensity": "mild",
+      "friends_presence": "present",
+      "emotions": {
+        "amused": 0.175,
+        "annoyed": 0.275,
+        "frustrated": 0.175,
+        "angry": 0.275,
+        "embarrassed": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "teasing_intensity": "intense",
+      "friends_presence": "alone",
+      "emotions": {
+        "amused": 0.05,
+        "annoyed": 0.55,
+        "frustrated": 0.15,
+        "angry": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "teasing_intensity": "intense",
+      "friends_presence": "present",
+      "emotions": {
+        "amused": 0.135,
+        "annoyed": 0.3,
+        "frustrated": 0.125,
+        "angry": 0.365,
+        "embarrassed": 0.075
+      }
+    }
+  ]
+}

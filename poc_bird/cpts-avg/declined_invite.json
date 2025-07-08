@@ -1,0 +1,122 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "invitation_reason": [
+      "personal",
+      "professional"
+    ],
+    "communication_method": [
+      "direct",
+      "indirect"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "invitation_reason": "personal",
+      "communication_method": "direct",
+      "emotions": {
+        "disappointment": 0.2,
+        "surprise": 0.23333333333333334,
+        "confusion": 0.11666666666666667,
+        "hurt": 0.11666666666666667,
+        "happy": 0.2,
+        "surprised": 0.1,
+        "disappointed": 0.03333333333333334
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "invitation_reason": "personal",
+      "communication_method": "indirect",
+      "emotions": {
+        "hurt": 0.38983050847457623,
+        "disappointment": 0.2711864406779661,
+        "surprise": 0.0847457627118644,
+        "confusion": 0.050847457627118633,
+        "confused": 0.11864406779661014,
+        "disappointed": 0.0847457627118644
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "invitation_reason": "professional",
+      "communication_method": "direct",
+      "emotions": {
+        "frustration": 0.30000000000000004,
+        "disappointment": 0.2166666666666667,
+        "confusion": 0.03333333333333334,
+        "surprise": 0.11666666666666667,
+        "relieved": 0.13333333333333336,
+        "surprised": 0.1,
+        "disappointed": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "invitation_reason": "professional",
+      "communication_method": "indirect",
+      "emotions": {
+        "frustration": 0.35000000000000003,
+        "disappointment": 0.2333333333333333,
+        "confusion": 0.08333333333333333,
+        "offended": 0.13333333333333333,
+        "confused": 0.09999999999999999,
+        "disappointed": 0.09999999999999999
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "invitation_reason": "personal",
+      "communication_method": "direct",
+      "emotions": {
+        "anger": 0.42372881355932207,
+        "disappointment": 0.0847457627118644,
+        "hurt": 0.2542372881355932,
+        "angry": 0.20338983050847456,
+        "disappointed": 0.03389830508474576
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "invitation_reason": "personal",
+      "communication_method": "indirect",
+      "emotions": {
+        "anger": 0.4666666666666667,
+        "disappointment": 0.08333333333333334,
+        "hurt": 0.18333333333333338,
+        "angry": 0.23333333333333334,
+        "disappointed": 0.03333333333333334
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "invitation_reason": "professional",
+      "communication_method": "direct",
+      "emotions": {
+        "anger": 0.48333333333333334,
+        "frustration": 0.15,
+        "disappointment": 0.03333333333333333,
+        "angry": 0.26666666666666666,
+        "offended": 0.03333333333333333,
+        "disappointed": 0.03333333333333333
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "invitation_reason": "professional",
+      "communication_method": "indirect",
+      "emotions": {
+        "anger": 0.5166666666666666,
+        "frustration": 0.11666666666666663,
+        "disappointment": 0.033333333333333326,
+        "angry": 0.29999999999999993,
+        "offended": 0.016666666666666663,
+        "disappointed": 0.016666666666666663
+      }
+    }
+  ]
+}

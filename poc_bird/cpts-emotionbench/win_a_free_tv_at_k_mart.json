@@ -1,0 +1,122 @@
+{
+  "factors": {
+    "surprise_level": [
+      "Unexpected",
+      "Expected"
+    ],
+    "reward_value": [
+      "High",
+      "Low"
+    ],
+    "public_attention": [
+      "Private",
+      "Public"
+    ]
+  },
+  "cpt": [
+    {
+      "surprise_level": "Unexpected",
+      "reward_value": "High",
+      "public_attention": "Private",
+      "emotions": {
+        "Excitement": 0.3,
+        "Surprise": 0.175,
+        "Happiness": 0.025,
+        "happiness": 0.35,
+        "surprise": 0.125,
+        "anxiety": 0.025
+      }
+    },
+    {
+      "surprise_level": "Unexpected",
+      "reward_value": "High",
+      "public_attention": "Public",
+      "emotions": {
+        "Excitement": 0.25,
+        "Surprise": 0.2,
+        "Happiness": 0.05,
+        "happiness": 0.3,
+        "surprise": 0.15,
+        "embarrassment": 0.05
+      }
+    },
+    {
+      "surprise_level": "Unexpected",
+      "reward_value": "Low",
+      "public_attention": "Private",
+      "emotions": {
+        "Confusion": 0.3,
+        "Surprise": 0.175,
+        "Disappointment": 0.025,
+        "disappointment": 0.25,
+        "surprise": 0.2,
+        "confusion": 0.05
+      }
+    },
+    {
+      "surprise_level": "Unexpected",
+      "reward_value": "Low",
+      "public_attention": "Public",
+      "emotions": {
+        "Confusion": 0.25,
+        "Surprise": 0.2,
+        "Disappointment": 0.05,
+        "disappointment": 0.3,
+        "surprise": 0.15,
+        "embarrassment": 0.05
+      }
+    },
+    {
+      "surprise_level": "Expected",
+      "reward_value": "High",
+      "public_attention": "Private",
+      "emotions": {
+        "Happiness": 0.3,
+        "Relief": 0.175,
+        "Surprise": 0.025,
+        "happiness": 0.4,
+        "relief": 0.075,
+        "surprise": 0.025
+      }
+    },
+    {
+      "surprise_level": "Expected",
+      "reward_value": "High",
+      "public_attention": "Public",
+      "emotions": {
+        "Happiness": 0.25,
+        "Relief": 0.2,
+        "Surprise": 0.05,
+        "happiness": 0.35,
+        "relief": 0.1,
+        "gratitude": 0.05
+      }
+    },
+    {
+      "surprise_level": "Expected",
+      "reward_value": "Low",
+      "public_attention": "Private",
+      "emotions": {
+        "Disappointment": 0.3,
+        "Frustration": 0.175,
+        "Relief": 0.025,
+        "disappointment": 0.3,
+        "relief": 0.125,
+        "frustration": 0.075
+      }
+    },
+    {
+      "surprise_level": "Expected",
+      "reward_value": "Low",
+      "public_attention": "Public",
+      "emotions": {
+        "Disappointment": 0.25,
+        "Frustration": 0.2,
+        "Relief": 0.05,
+        "disappointment": 0.35,
+        "relief": 0.1,
+        "frustration": 0.05
+      }
+    }
+  ]
+}

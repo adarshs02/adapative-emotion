@@ -1,0 +1,99 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "perceived_intent": [
+      "accidental",
+      "deliberate"
+    ],
+    "social_context": [
+      "alone",
+      "with_witnesses"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "perceived_intent": "accidental",
+      "social_context": "alone",
+      "emotions": {
+        "surprise": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "perceived_intent": "deliberate",
+      "social_context": "alone",
+      "emotions": {
+        "disappointment": 0.4,
+        "frustration": 0.5,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "perceived_intent": "accidental",
+      "social_context": "with_witnesses",
+      "emotions": {
+        "surprise": 0.5,
+        "frustration": 0.35,
+        "indignation": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "perceived_intent": "deliberate",
+      "social_context": "with_witnesses",
+      "emotions": {
+        "disappointment": 0.35,
+        "frustration": 0.45,
+        "indignation": 0.15,
+        "outrage": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "perceived_intent": "accidental",
+      "social_context": "alone",
+      "emotions": {
+        "frustration": 0.6000000000000001,
+        "anger": 0.30000000000000004,
+        "disappointment": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "perceived_intent": "deliberate",
+      "social_context": "alone",
+      "emotions": {
+        "anger": 0.7000000000000001,
+        "frustration": 0.20000000000000004,
+        "indignation": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "perceived_intent": "accidental",
+      "social_context": "with_witnesses",
+      "emotions": {
+        "frustration": 0.5,
+        "anger": 0.4,
+        "indignation": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "perceived_intent": "deliberate",
+      "social_context": "with_witnesses",
+      "emotions": {
+        "anger": 0.75,
+        "indignation": 0.2,
+        "outrage": 0.05
+      }
+    }
+  ]
+}

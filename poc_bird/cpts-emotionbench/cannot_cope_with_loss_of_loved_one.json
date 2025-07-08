@@ -1,0 +1,106 @@
+{
+  "factors": {
+    "time_since_loss": [
+      "recent",
+      "long_time"
+    ],
+    "support_system": [
+      "strong",
+      "weak"
+    ],
+    "coping_strategies": [
+      "effective",
+      "ineffective"
+    ]
+  },
+  "cpt": [
+    {
+      "time_since_loss": "recent",
+      "support_system": "strong",
+      "coping_strategies": "effective",
+      "emotions": {
+        "sadness": 0.75,
+        "guilt": 0.15,
+        "anger": 0.05,
+        "denial": 0.05
+      }
+    },
+    {
+      "time_since_loss": "recent",
+      "support_system": "weak",
+      "coping_strategies": "effective",
+      "emotions": {
+        "sadness": 0.8095238095238094,
+        "anxiety": 0.09523809523809523,
+        "anger": 0.047619047619047616,
+        "depression": 0.047619047619047616
+      }
+    },
+    {
+      "time_since_loss": "recent",
+      "support_system": "strong",
+      "coping_strategies": "ineffective",
+      "emotions": {
+        "sadness": 0.8571428571428571,
+        "anxiety": 0.047619047619047616,
+        "anger": 0.047619047619047616,
+        "despair": 0.047619047619047616
+      }
+    },
+    {
+      "time_since_loss": "recent",
+      "support_system": "weak",
+      "coping_strategies": "ineffective",
+      "emotions": {
+        "sadness": 0.9047619047619047,
+        "anxiety": 0.02857142857142857,
+        "anger": 0.019047619047619046,
+        "despair": 0.047619047619047616
+      }
+    },
+    {
+      "time_since_loss": "long_time",
+      "support_system": "strong",
+      "coping_strategies": "effective",
+      "emotions": {
+        "sadness": 0.3,
+        "acceptance": 0.45,
+        "hope": 0.15,
+        "regret": 0.1
+      }
+    },
+    {
+      "time_since_loss": "long_time",
+      "support_system": "weak",
+      "coping_strategies": "effective",
+      "emotions": {
+        "sadness": 0.4000000000000001,
+        "anxiety": 0.30000000000000004,
+        "anger": 0.20000000000000004,
+        "regret": 0.10000000000000002
+      }
+    },
+    {
+      "time_since_loss": "long_time",
+      "support_system": "strong",
+      "coping_strategies": "ineffective",
+      "emotions": {
+        "sadness": 0.5,
+        "anxiety": 0.3,
+        "anger": 0.15,
+        "despair": 0.05
+      }
+    },
+    {
+      "time_since_loss": "long_time",
+      "support_system": "weak",
+      "coping_strategies": "ineffective",
+      "emotions": {
+        "sadness": 0.6,
+        "anxiety": 0.25,
+        "anger": 0.1,
+        "despair": 0.05
+      }
+    }
+  ]
+}

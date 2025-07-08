@@ -1,0 +1,112 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "consequences_felt": [
+      "minimal",
+      "significant"
+    ],
+    "remorse_felt": [
+      "none",
+      "some"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "consequences_felt": "minimal",
+      "remorse_feel": "none",
+      "emotions": {
+        "regret": 0.2820512820512821,
+        "guilt": 0.4871794871794872,
+        "relief": 0.15384615384615385,
+        "shame": 0.07692307692307693
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "consequences_felt": "minimal",
+      "remorse_feel": "some",
+      "emotions": {
+        "regret": 0.2820512820512821,
+        "guilt": 0.4871794871794872,
+        "relief": 0.15384615384615385,
+        "shame": 0.07692307692307693
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "consequences_felt": "significant",
+      "remorse_feel": "none",
+      "emotions": {
+        "fear": 0.3333333333333333,
+        "anger": 0.43589743589743596,
+        "regret": 0.07692307692307693,
+        "guilt": 0.12820512820512822,
+        "shame": 0.025641025641025644
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "consequences_felt": "significant",
+      "remorse_feel": "some",
+      "emotions": {
+        "fear": 0.3333333333333333,
+        "anger": 0.43589743589743596,
+        "regret": 0.07692307692307693,
+        "guilt": 0.12820512820512822,
+        "shame": 0.025641025641025644
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "consequences_felt": "minimal",
+      "remorse_feel": "none",
+      "emotions": {
+        "indifference": 0.17499999999999996,
+        "defiance": 0.42499999999999993,
+        "regret": 0.17499999999999996,
+        "guilt": 0.17499999999999996,
+        "shame": 0.04999999999999999
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "consequences_felt": "minimal",
+      "remorse_feel": "some",
+      "emotions": {
+        "indifference": 0.17499999999999996,
+        "defiance": 0.42499999999999993,
+        "regret": 0.17499999999999996,
+        "guilt": 0.17499999999999996,
+        "shame": 0.04999999999999999
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "consequences_felt": "significant",
+      "remorse_feel": "none",
+      "emotions": {
+        "anger": 0.5250000000000001,
+        "fear": 0.30000000000000004,
+        "defiance": 0.07500000000000001,
+        "guilt": 0.07500000000000001,
+        "shame": 0.025000000000000005
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "consequences_felt": "significant",
+      "remorse_feel": "some",
+      "emotions": {
+        "anger": 0.5250000000000001,
+        "fear": 0.30000000000000004,
+        "defiance": 0.07500000000000001,
+        "guilt": 0.07500000000000001,
+        "shame": 0.025000000000000005
+      }
+    }
+  ]
+}

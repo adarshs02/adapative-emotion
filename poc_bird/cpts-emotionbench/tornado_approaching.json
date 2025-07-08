@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "tornado_type": [
+      "expected",
+      "unexpected"
+    ],
+    "house_damage": [
+      "minimal",
+      "significant"
+    ],
+    "preparedness": [
+      "well",
+      "poor"
+    ]
+  },
+  "cpt": [
+    {
+      "tornado_type": "expected",
+      "house_damage": "minimal",
+      "preparedness": "well",
+      "emotions": {
+        "relief": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "gratitude": 0.10000000000000002
+      }
+    },
+    {
+      "tornado_type": "expected",
+      "house_damage": "minimal",
+      "preparedness": "poor",
+      "emotions": {
+        "anxiety": 0.7000000000000001,
+        "regret": 0.20000000000000004,
+        "fear": 0.10000000000000002
+      }
+    },
+    {
+      "tornado_type": "expected",
+      "house_damage": "significant",
+      "preparedness": "well",
+      "emotions": {
+        "fear": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "sadness": 0.10000000000000002
+      }
+    },
+    {
+      "tornado_type": "expected",
+      "house_damage": "significant",
+      "preparedness": "poor",
+      "emotions": {
+        "fear": 0.8,
+        "anxiety": 0.15,
+        "anger": 0.05
+      }
+    },
+    {
+      "tornado_type": "unexpected",
+      "house_damage": "minimal",
+      "preparedness": "well",
+      "emotions": {
+        "surprise": 0.6000000000000001,
+        "relief": 0.30000000000000004,
+        "gratitude": 0.10000000000000002
+      }
+    },
+    {
+      "tornado_type": "unexpected",
+      "house_damage": "minimal",
+      "preparedness": "poor",
+      "emotions": {
+        "surprise": 0.7000000000000001,
+        "anxiety": 0.20000000000000004,
+        "fear": 0.10000000000000002
+      }
+    },
+    {
+      "tornado_type": "unexpected",
+      "house_damage": "significant",
+      "preparedness": "well",
+      "emotions": {
+        "shock": 0.6000000000000001,
+        "fear": 0.30000000000000004,
+        "sadness": 0.10000000000000002
+      }
+    },
+    {
+      "tornado_type": "unexpected",
+      "house_damage": "significant",
+      "preparedness": "poor",
+      "emotions": {
+        "shock": 0.8,
+        "fear": 0.15,
+        "anger": 0.05
+      }
+    }
+  ]
+}

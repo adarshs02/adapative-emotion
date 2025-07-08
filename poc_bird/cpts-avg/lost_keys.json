@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "preparation": [
+      "well_prepared",
+      "not_prepared"
+    ],
+    "time_left": [
+      "enough_time",
+      "little_time"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "preparation": "well_prepared",
+      "time_left": "enough_time",
+      "emotions": {
+        "relief": 0.6000000000000001,
+        "happiness": 0.30000000000000004,
+        "anxiety": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "preparation": "not_prepared",
+      "time_left": "enough_time",
+      "emotions": {
+        "frustration": 0.5,
+        "anxiety": 0.4,
+        "worry": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "preparation": "well_prepared",
+      "time_left": "little_time",
+      "emotions": {
+        "stress": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "urgency": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "preparation": "not_prepared",
+      "time_left": "little_time",
+      "emotions": {
+        "panic": 0.7000000000000001,
+        "anxiety": 0.20000000000000004,
+        "frustration": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation": "well_prepared",
+      "time_left": "enough_time",
+      "emotions": {
+        "relief": 0.44444444444444453,
+        "happiness": 0.33333333333333337,
+        "anxiety": 0.22222222222222227
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation": "not_prepared",
+      "time_left": "enough_time",
+      "emotions": {
+        "frustration": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation": "well_prepared",
+      "time_left": "little_time",
+      "emotions": {
+        "stress": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "urgency": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation": "not_prepared",
+      "time_left": "little_time",
+      "emotions": {
+        "panic": 0.7000000000000001,
+        "anxiety": 0.20000000000000004,
+        "anger": 0.10000000000000002
+      }
+    }
+  ]
+}

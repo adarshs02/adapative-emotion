@@ -1,0 +1,106 @@
+{
+  "factors": {
+    "age_group": [
+      "young",
+      "adult"
+    ],
+    "speaking_context": [
+      "formal",
+      "informal"
+    ],
+    "practice_time": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "age_group": "young",
+      "speaking_context": "formal",
+      "practice_time": "yes",
+      "emotions": {
+        "surprise": 0.19999999999999996,
+        "nervousness": 0.3999999999999999,
+        "embarrassment": 0.29999999999999993,
+        "confidence": 0.09999999999999998
+      }
+    },
+    {
+      "age_group": "young",
+      "speaking_context": "formal",
+      "practice_time": "no",
+      "emotions": {
+        "surprise": 0.3,
+        "nervousness": 0.5,
+        "embarrassment": 0.15,
+        "confidence": 0.05
+      }
+    },
+    {
+      "age_group": "young",
+      "speaking_context": "informal",
+      "practice_time": "yes",
+      "emotions": {
+        "amusement": 0.25,
+        "relaxation": 0.4,
+        "embarrassment": 0.2,
+        "frustration": 0.15
+      }
+    },
+    {
+      "age_group": "young",
+      "speaking_context": "informal",
+      "practice_time": "no",
+      "emotions": {
+        "amusement": 0.2,
+        "relaxation": 0.3,
+        "embarrassment": 0.35,
+        "frustration": 0.15
+      }
+    },
+    {
+      "age_group": "adult",
+      "speaking_context": "formal",
+      "practice_time": "yes",
+      "emotions": {
+        "surprise": 0.15,
+        "nervousness": 0.45,
+        "embarrassment": 0.25,
+        "confidence": 0.15
+      }
+    },
+    {
+      "age_group": "adult",
+      "speaking_context": "formal",
+      "practice_time": "no",
+      "emotions": {
+        "surprise": 0.25,
+        "nervousness": 0.5,
+        "embarrassment": 0.15,
+        "confidence": 0.1
+      }
+    },
+    {
+      "age_group": "adult",
+      "speaking_context": "informal",
+      "practice_time": "yes",
+      "emotions": {
+        "amusement": 0.2,
+        "relaxation": 0.4,
+        "frustration": 0.25,
+        "confidence": 0.15
+      }
+    },
+    {
+      "age_group": "adult",
+      "speaking_context": "informal",
+      "practice_time": "no",
+      "emotions": {
+        "amusement": 0.15789473684210525,
+        "relaxation": 0.3157894736842105,
+        "frustration": 0.3684210526315789,
+        "confidence": 0.15789473684210525
+      }
+    }
+  ]
+}

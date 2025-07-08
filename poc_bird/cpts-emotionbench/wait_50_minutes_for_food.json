@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "wait_time_expectation": [
+      "low",
+      "high"
+    ],
+    "wait_time_actual": [
+      "short",
+      "long"
+    ],
+    "dining_frequency": [
+      "infrequent",
+      "frequent"
+    ]
+  },
+  "cpt": [
+    {
+      "wait_time_expectation": "low",
+      "wait_time_actual": "short",
+      "dining_frequency": "infrequent",
+      "emotions": {
+        "satisfied": 0.7,
+        "pleased": 0.25,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "wait_time_expectation": "low",
+      "wait_time_actual": "short",
+      "dining_frequency": "frequent",
+      "emotions": {
+        "relieved": 0.6000000000000001,
+        "pleased": 0.30000000000000004,
+        "disappointed": 0.10000000000000002
+      }
+    },
+    {
+      "wait_time_expectation": "low",
+      "wait_time_actual": "long",
+      "dining_frequency": "infrequent",
+      "emotions": {
+        "frustrated": 0.8,
+        "angry": 0.15,
+        "disappointed": 0.05
+      }
+    },
+    {
+      "wait_time_expectation": "low",
+      "wait_time_actual": "long",
+      "dining_frequency": "frequent",
+      "emotions": {
+        "frustrated": 0.75,
+        "angry": 0.2,
+        "disappointed": 0.05
+      }
+    },
+    {
+      "wait_time_expectation": "high",
+      "wait_time_actual": "short",
+      "dining_frequency": "infrequent",
+      "emotions": {
+        "surprised": 0.6000000000000001,
+        "pleased": 0.30000000000000004,
+        "relieved": 0.10000000000000002
+      }
+    },
+    {
+      "wait_time_expectation": "high",
+      "wait_time_actual": "short",
+      "dining_frequency": "frequent",
+      "emotions": {
+        "grateful": 0.6000000000000001,
+        "pleased": 0.30000000000000004,
+        "relieved": 0.10000000000000002
+      }
+    },
+    {
+      "wait_time_expectation": "high",
+      "wait_time_actual": "long",
+      "dining_frequency": "infrequent",
+      "emotions": {
+        "frustrated": 0.85,
+        "angry": 0.1,
+        "disappointed": 0.05
+      }
+    },
+    {
+      "wait_time_expectation": "high",
+      "wait_time_actual": "long",
+      "dining_frequency": "frequent",
+      "emotions": {
+        "frustrated": 0.8,
+        "angry": 0.15,
+        "disappointed": 0.05
+      }
+    }
+  ]
+}

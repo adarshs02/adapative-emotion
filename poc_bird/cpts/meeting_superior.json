@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "performance_level",
-      "values": [
-        "good",
-        "bad"
-      ]
-    },
-    {
-      "name": "meeting_context",
-      "values": [
-        "formal",
-        "informal"
-      ]
-    }
-  ],
+  "factors": {
+    "performance_evaluation": [
+      "positive",
+      "negative"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "preparation": [
+      "well_prepared",
+      "poorly_prepared"
+    ]
+  },
   "cpt": [
     {
+      "performance_evaluation": "positive",
       "offence_history": "first_time",
-      "performance_level": "good",
-      "meeting_context": "formal",
+      "preparation": "well_prepared",
       "emotions": {
-        "nervousness": 0.7,
-        "excitement": 0.2,
-        "confidence": 0.1
+        "confident": 0.7,
+        "relieved": 0.25,
+        "happy": 0.05
       }
     },
     {
+      "performance_evaluation": "positive",
       "offence_history": "first_time",
-      "performance_level": "good",
-      "meeting_context": "informal",
+      "preparation": "poorly_prepared",
       "emotions": {
-        "excitement": 0.8,
-        "nervousness": 0.15,
-        "confidence": 0.05
+        "nervous": 0.6,
+        "anxious": 0.35,
+        "frustrated": 0.05
       }
     },
     {
+      "performance_evaluation": "negative",
       "offence_history": "first_time",
-      "performance_level": "bad",
-      "meeting_context": "formal",
+      "preparation": "well_prepared",
       "emotions": {
-        "nervousness": 0.6,
-        "frustration": 0.3,
-        "anxiety": 0.1
+        "anxious": 0.55,
+        "embarrassed": 0.3,
+        "determined": 0.15
       }
     },
     {
+      "performance_evaluation": "negative",
       "offence_history": "first_time",
-      "performance_level": "bad",
-      "meeting_context": "informal",
+      "preparation": "poorly_prepared",
       "emotions": {
-        "frustration": 0.7,
-        "anxiety": 0.25,
-        "nervousness": 0.05
+        "nervous": 0.6,
+        "anxious": 0.35,
+        "frustrated": 0.05
       }
     },
     {
+      "performance_evaluation": "positive",
       "offence_history": "repeated",
-      "performance_level": "good",
-      "meeting_context": "formal",
+      "preparation": "well_prepared",
       "emotions": {
-        "anger": 0.4,
-        "frustration": 0.3,
-        "nervousness": 0.3
+        "confident": 0.5,
+        "arrogant": 0.35,
+        "relieved": 0.15
       }
     },
     {
+      "performance_evaluation": "positive",
       "offence_history": "repeated",
-      "performance_level": "good",
-      "meeting_context": "informal",
+      "preparation": "poorly_prepared",
       "emotions": {
-        "anger": 0.55,
-        "frustration": 0.25,
-        "nervousness": 0.2
+        "nervous": 0.6,
+        "anxious": 0.35,
+        "frustrated": 0.05
       }
     },
     {
+      "performance_evaluation": "negative",
       "offence_history": "repeated",
-      "performance_level": "bad",
-      "meeting_context": "formal",
+      "preparation": "well_prepared",
       "emotions": {
-        "anger": 0.8,
-        "frustration": 0.15,
-        "anxiety": 0.05
+        "anxious": 0.55,
+        "embarrassed": 0.3,
+        "defensive": 0.15
       }
     },
     {
+      "performance_evaluation": "negative",
       "offence_history": "repeated",
-      "performance_level": "bad",
-      "meeting_context": "informal",
+      "preparation": "poorly_prepared",
       "emotions": {
-        "anger": 0.85,
-        "frustration": 0.1,
-        "anxiety": 0.05
+        "nervous": 0.6,
+        "anxious": 0.35,
+        "frustrated": 0.05
       }
     }
   ]

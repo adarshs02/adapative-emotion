@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "goal_importance",
-      "values": [
-        "low",
-        "high"
-      ]
-    },
-    {
-      "name": "goal_progress",
-      "values": [
-        "slow",
-        "fast"
-      ]
-    },
-    {
-      "name": "motivation_level",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "time_spent_thinking": [
+      "less_than_30_minutes",
+      "more_than_30_minutes"
+    ],
+    "clarity_of_goals": [
+      "clear",
+      "unclear"
+    ],
+    "stress_level": [
+      "low",
+      "high"
+    ]
+  },
   "cpt": [
     {
-      "goal_importance": "low",
-      "goal_progress": "slow",
-      "motivation_level": "low",
+      "time_spent_thinking": "less_than_30_minutes",
+      "clarity_of_goals": "clear",
+      "stress_level": "low",
       "emotions": {
-        "frustration": 0.8,
-        "excitement": 0.2,
-        "boredom": 0.0
+        "contentment": 0.6,
+        "motivation": 0.35,
+        "anxiety": 0.05
       }
     },
     {
-      "goal_importance": "low",
-      "goal_progress": "slow",
-      "motivation_level": "high",
+      "time_spent_thinking": "less_than_30_minutes",
+      "clarity_of_goals": "clear",
+      "stress_level": "high",
+      "emotions": {
+        "frustration": 0.4,
+        "motivation": 0.35,
+        "anxiety": 0.25
+      }
+    },
+    {
+      "time_spent_thinking": "less_than_30_minutes",
+      "clarity_of_goals": "unclear",
+      "stress_level": "low",
+      "emotions": {
+        "confusion": 0.5,
+        "dissatisfaction": 0.4,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "time_spent_thinking": "less_than_30_minutes",
+      "clarity_of_goals": "unclear",
+      "stress_level": "high",
       "emotions": {
         "frustration": 0.6,
-        "excitement": 0.3,
-        "boredom": 0.1
+        "dissatisfaction": 0.3,
+        "anxiety": 0.1
       }
     },
     {
-      "goal_importance": "low",
-      "goal_progress": "fast",
-      "motivation_level": "low",
+      "time_spent_thinking": "more_than_30_minutes",
+      "clarity_of_goals": "clear",
+      "stress_level": "low",
       "emotions": {
-        "frustration": 0.4,
-        "excitement": 0.4,
-        "boredom": 0.2
+        "contentment": 0.4,
+        "motivation": 0.45,
+        "anxiety": 0.15
       }
     },
     {
-      "goal_importance": "low",
-      "goal_progress": "fast",
-      "motivation_level": "high",
+      "time_spent_thinking": "more_than_30_minutes",
+      "clarity_of_goals": "clear",
+      "stress_level": "high",
       "emotions": {
-        "frustration": 0.2,
-        "excitement": 0.6,
-        "boredom": 0.2
+        "frustration": 0.55,
+        "motivation": 0.35,
+        "anxiety": 0.1
       }
     },
     {
-      "goal_importance": "high",
-      "goal_progress": "slow",
-      "motivation_level": "low",
+      "time_spent_thinking": "more_than_30_minutes",
+      "clarity_of_goals": "unclear",
+      "stress_level": "low",
       "emotions": {
-        "frustration": 0.9,
-        "excitement": 0.1,
-        "boredom": 0.0
+        "confusion": 0.5,
+        "dissatisfaction": 0.4,
+        "anxiety": 0.1
       }
     },
     {
-      "goal_importance": "high",
-      "goal_progress": "slow",
-      "motivation_level": "high",
+      "time_spent_thinking": "more_than_30_minutes",
+      "clarity_of_goals": "unclear",
+      "stress_level": "high",
       "emotions": {
-        "frustration": 0.8,
-        "excitement": 0.2,
-        "boredom": 0.0
-      }
-    },
-    {
-      "goal_importance": "high",
-      "goal_progress": "fast",
-      "motivation_level": "low",
-      "emotions": {
-        "frustration": 0.7,
-        "excitement": 0.2,
-        "boredom": 0.1
-      }
-    },
-    {
-      "goal_importance": "high",
-      "goal_progress": "fast",
-      "motivation_level": "high",
-      "emotions": {
-        "frustration": 0.4,
-        "excitement": 0.5,
-        "boredom": 0.1
+        "frustration": 0.6,
+        "dissatisfaction": 0.3,
+        "anxiety": 0.1
       }
     }
   ]

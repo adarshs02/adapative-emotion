@@ -1,0 +1,102 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "communication_attempt": [
+      "no_attempt",
+      "attempt"
+    ],
+    "trust_level": [
+      "high",
+      "low"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "communication_attempt": "no_attempt",
+      "trust_level": "high",
+      "emotions": {
+        "frustration": 0.5897435897435898,
+        "anxiety": 0.3333333333333333,
+        "indifference": 0.07692307692307694
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_attempt": "no_attempt",
+      "trust_level": "low",
+      "emotions": {
+        "anger": 0.6499999999999999,
+        "anxiety": 0.175,
+        "disappointment": 0.025,
+        "frustration": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_attempt": "attempt",
+      "trust_level": "high",
+      "emotions": {
+        "frustration": 0.38461538461538464,
+        "anxiety": 0.3076923076923077,
+        "concern": 0.07692307692307693,
+        "relief": 0.23076923076923078
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_attempt": "attempt",
+      "trust_level": "low",
+      "emotions": {
+        "anger": 0.525,
+        "anxiety": 0.22499999999999998,
+        "suspicion": 0.075,
+        "frustration": 0.175
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_attempt": "no_attempt",
+      "trust_level": "high",
+      "emotions": {
+        "frustration": 0.525,
+        "anger": 0.15000000000000002,
+        "disappointment": 0.325
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_attempt": "no_attempt",
+      "trust_level": "low",
+      "emotions": {
+        "anger": 0.775,
+        "frustration": 0.10000000000000002,
+        "disappointment": 0.12500000000000003
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_attempt": "attempt",
+      "trust_level": "high",
+      "emotions": {
+        "frustration": 0.4871794871794872,
+        "anger": 0.1794871794871795,
+        "disappointment": 0.33333333333333337
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_attempt": "attempt",
+      "trust_level": "low",
+      "emotions": {
+        "anger": 0.775,
+        "frustration": 0.1,
+        "suspicion": 0.025,
+        "disappointment": 0.1
+      }
+    }
+  ]
+}

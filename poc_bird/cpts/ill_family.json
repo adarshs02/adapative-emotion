@@ -1,0 +1,104 @@
+{
+  "factors": {
+    "illness_severity": [
+      "mild",
+      "severe"
+    ],
+    "family_relationship": [
+      "close",
+      "distant"
+    ],
+    "previous_illness_history": [
+      "none",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "illness_severity": "mild",
+      "family_relationship": "close",
+      "previous_illness_history": "none",
+      "emotions": {
+        "worry": 0.6,
+        "compassion": 0.35,
+        "frustration": 0.05
+      }
+    },
+    {
+      "illness_severity": "mild",
+      "family_relationship": "close",
+      "previous_illness_history": "repeated",
+      "emotions": {
+        "worry": 0.7,
+        "compassion": 0.25,
+        "frustration": 0.05,
+        "anger": 0.05
+      }
+    },
+    {
+      "illness_severity": "mild",
+      "family_relationship": "distant",
+      "previous_illness_history": "none",
+      "emotions": {
+        "worry": 0.5,
+        "compassion": 0.25,
+        "frustration": 0.15,
+        "indifference": 0.1
+      }
+    },
+    {
+      "illness_severity": "mild",
+      "family_relationship": "distant",
+      "previous_illness_history": "repeated",
+      "emotions": {
+        "worry": 0.6,
+        "compassion": 0.2,
+        "frustration": 0.1,
+        "anger": 0.1
+      }
+    },
+    {
+      "illness_severity": "severe",
+      "family_relationship": "close",
+      "previous_illness_history": "none",
+      "emotions": {
+        "worry": 0.8,
+        "compassion": 0.15,
+        "fear": 0.05
+      }
+    },
+    {
+      "illness_severity": "severe",
+      "family_relationship": "close",
+      "previous_illness_history": "repeated",
+      "emotions": {
+        "worry": 0.85,
+        "compassion": 0.05,
+        "fear": 0.05,
+        "anger": 0.05
+      }
+    },
+    {
+      "illness_severity": "severe",
+      "family_relationship": "distant",
+      "previous_illness_history": "none",
+      "emotions": {
+        "worry": 0.7,
+        "compassion": 0.15,
+        "fear": 0.1,
+        "indifference": 0.05
+      }
+    },
+    {
+      "illness_severity": "severe",
+      "family_relationship": "distant",
+      "previous_illness_history": "repeated",
+      "emotions": {
+        "worry": 0.8,
+        "compassion": 0.1,
+        "fear": 0.05,
+        "anger": 0.05
+      }
+    }
+  ]
+}

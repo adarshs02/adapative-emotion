@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "distance_of_move": [
+      "local",
+      "international"
+    ],
+    "length_of_friendship": [
+      "short",
+      "long"
+    ],
+    "frequency_of_communication": [
+      "rare",
+      "frequent"
+    ]
+  },
+  "cpt": [
+    {
+      "distance_of_move": "local",
+      "length_of_friendship": "short",
+      "frequency_of_communication": "rare",
+      "emotions": {
+        "sadness": 0.7,
+        "anxiety": 0.25,
+        "relief": 0.05
+      }
+    },
+    {
+      "distance_of_move": "local",
+      "length_of_friendship": "short",
+      "frequency_of_communication": "frequent",
+      "emotions": {
+        "happiness": 0.3,
+        "sadness": 0.4,
+        "relief": 0.3
+      }
+    },
+    {
+      "distance_of_move": "local",
+      "length_of_friendship": "long",
+      "frequency_of_communication": "rare",
+      "emotions": {
+        "sadness": 0.8,
+        "anxiety": 0.15,
+        "regret": 0.05
+      }
+    },
+    {
+      "distance_of_move": "local",
+      "length_of_friendship": "long",
+      "frequency_of_communication": "frequent",
+      "emotions": {
+        "happiness": 0.2,
+        "sadness": 0.5,
+        "gratitude": 0.3
+      }
+    },
+    {
+      "distance_of_move": "international",
+      "length_of_friendship": "short",
+      "frequency_of_communication": "rare",
+      "emotions": {
+        "sadness": 0.9,
+        "anxiety": 0.05,
+        "regret": 0.05
+      }
+    },
+    {
+      "distance_of_move": "international",
+      "length_of_friendship": "short",
+      "frequency_of_communication": "frequent",
+      "emotions": {
+        "happiness": 0.1,
+        "sadness": 0.6,
+        "anticipation": 0.3
+      }
+    },
+    {
+      "distance_of_move": "international",
+      "length_of_friendship": "long",
+      "frequency_of_communication": "rare",
+      "emotions": {
+        "sadness": 0.95,
+        "anxiety": 0.03,
+        "regret": 0.02
+      }
+    },
+    {
+      "distance_of_move": "international",
+      "length_of_friendship": "long",
+      "frequency_of_communication": "frequent",
+      "emotions": {
+        "happiness": 0.05,
+        "sadness": 0.7,
+        "nostalgia": 0.25
+      }
+    }
+  ]
+}

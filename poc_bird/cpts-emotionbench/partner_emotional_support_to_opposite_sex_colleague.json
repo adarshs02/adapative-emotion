@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "knowledge_of_relationship": [
+      "Knows about the relationship",
+      "Does not know about the relationship"
+    ],
+    "intentional_action": [
+      "Intentional",
+      "Unintentional"
+    ],
+    "frequency_of_incident": [
+      "First time",
+      "Repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "knowledge_of_relationship": "Knows about the relationship",
+      "intentional_action": "Intentional",
+      "frequency_of_incident": "First time",
+      "emotions": {
+        "Jealousy": 0.1,
+        "Concern": 0.35,
+        "Indifference": 0.55
+      }
+    },
+    {
+      "knowledge_of_relationship": "Knows about the relationship",
+      "intentional_action": "Intentional",
+      "frequency_of_incident": "Repeated",
+      "emotions": {
+        "Jealousy": 0.25,
+        "Anger": 0.5,
+        "Concern": 0.25
+      }
+    },
+    {
+      "knowledge_of_relationship": "Knows about the relationship",
+      "intentional_action": "Unintentional",
+      "frequency_of_incident": "First time",
+      "emotions": {
+        "Surprise": 0.3,
+        "Concern": 0.45,
+        "Indifference": 0.25
+      }
+    },
+    {
+      "knowledge_of_relationship": "Knows about the relationship",
+      "intentional_action": "Unintentional",
+      "frequency_of_incident": "Repeated",
+      "emotions": {
+        "Surprise": 0.2,
+        "Frustration": 0.4,
+        "Indifference": 0.4
+      }
+    },
+    {
+      "knowledge_of_relationship": "Does not know about the relationship",
+      "intentional_action": "Intentional",
+      "frequency_of_incident": "First time",
+      "emotions": {
+        "Suspicion": 0.36842105263157887,
+        "Concern": 0.47368421052631576,
+        "Indifference": 0.15789473684210525
+      }
+    },
+    {
+      "knowledge_of_relationship": "Does not know about the relationship",
+      "intentional_action": "Intentional",
+      "frequency_of_incident": "Repeated",
+      "emotions": {
+        "Suspicion": 0.4,
+        "Anger": 0.45,
+        "Concern": 0.15
+      }
+    },
+    {
+      "knowledge_of_relationship": "Does not know about the relationship",
+      "intentional_action": "Unintentional",
+      "frequency_of_incident": "First time",
+      "emotions": {
+        "Surprise": 0.4,
+        "Concern": 0.45,
+        "Indifference": 0.15
+      }
+    },
+    {
+      "knowledge_of_relationship": "Does not know about the relationship",
+      "intentional_action": "Unintentional",
+      "frequency_of_incident": "Repeated",
+      "emotions": {
+        "Surprise": 0.3,
+        "Frustration": 0.4,
+        "Indifference": 0.3
+      }
+    }
+  ]
+}

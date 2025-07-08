@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "communication_style": [
+      "calm",
+      "aggressive"
+    ],
+    "parent_response": [
+      "understanding",
+      "unreasonable"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "communication_style": "calm",
+      "parent_response": "understanding",
+      "emotions": {
+        "acceptance": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "relief": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_style": "calm",
+      "parent_response": "unreasonable",
+      "emotions": {
+        "anger": 0.47368421052631576,
+        "anxiety": 0.36842105263157887,
+        "frustration": 0.15789473684210525
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_style": "aggressive",
+      "parent_response": "understanding",
+      "emotions": {
+        "anger": 0.5789473684210527,
+        "frustration": 0.3157894736842105,
+        "relief": 0.10526315789473684
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_style": "aggressive",
+      "parent_response": "unreasonable",
+      "emotions": {
+        "anger": 0.7000000000000001,
+        "anxiety": 0.20000000000000004,
+        "frustration": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "calm",
+      "parent_response": "understanding",
+      "emotions": {
+        "anger": 0.6842105263157895,
+        "anxiety": 0.2631578947368421,
+        "frustration": 0.05263157894736842
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "calm",
+      "parent_response": "unreasonable",
+      "emotions": {
+        "anger": 0.8,
+        "anxiety": 0.15,
+        "frustration": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "aggressive",
+      "parent_response": "understanding",
+      "emotions": {
+        "anger": 0.75,
+        "anxiety": 0.2,
+        "frustration": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "aggressive",
+      "parent_response": "unreasonable",
+      "emotions": {
+        "anger": 0.9,
+        "anxiety": 0.05,
+        "frustration": 0.05
+      }
+    }
+  ]
+}

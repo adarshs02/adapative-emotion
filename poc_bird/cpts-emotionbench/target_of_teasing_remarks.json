@@ -1,0 +1,103 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "social_support": [
+      "alone",
+      "with_support"
+    ],
+    "self_esteem": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "social_support": "alone",
+      "self_esteem": "low",
+      "emotions": {
+        "fearment": 0.6,
+        "hurt": 0.35,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_support": "alone",
+      "self_esteem": "high",
+      "emotions": {
+        "surprise": 0.3,
+        "hurt": 0.45,
+        "amusement": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_support": "with_support",
+      "self_esteem": "low",
+      "emotions": {
+        "fearment": 0.4,
+        "hurt": 0.475,
+        "shame": 0.05,
+        "embarrassment": 0.075
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_support": "with_support",
+      "self_esteem": "high",
+      "emotions": {
+        "surprise": 0.12820512820512822,
+        "relief": 0.358974358974359,
+        "amusement": 0.38461538461538464,
+        "pride": 0.12820512820512822
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_support": "alone",
+      "self_esteem": "low",
+      "emotions": {
+        "fearment": 0.375,
+        "hurt": 0.525,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_support": "alone",
+      "self_esteem": "high",
+      "emotions": {
+        "anger": 0.4499999999999999,
+        "hurt": 0.3999999999999999,
+        "frustration": 0.04999999999999999,
+        "fearment": 0.09999999999999998
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_support": "with_support",
+      "self_esteem": "low",
+      "emotions": {
+        "fearment": 0.3,
+        "hurt": 0.525,
+        "anger": 0.175
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_support": "with_support",
+      "self_esteem": "high",
+      "emotions": {
+        "anger": 0.55,
+        "hurt": 0.15,
+        "frustration": 0.05,
+        "relief": 0.1,
+        "pride": 0.15
+      }
+    }
+  ]
+}

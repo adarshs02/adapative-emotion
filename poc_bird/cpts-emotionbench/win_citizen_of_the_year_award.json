@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "expected_win": [
+      "expected_win_yes",
+      "expected_win_no"
+    ],
+    "public_speaking_comfort": [
+      "comfortable",
+      "uncomfortable"
+    ],
+    "award_importance": [
+      "important",
+      "unimportant"
+    ]
+  },
+  "cpt": [
+    {
+      "expected_win": "expected_win_yes",
+      "public_speaking_comfort": "comfortable",
+      "award_importance": "important",
+      "emotions": {
+        "pride": 0.6,
+        "excitement": 0.35,
+        "nervousness": 0.05
+      }
+    },
+    {
+      "expected_win": "expected_win_yes",
+      "public_speaking_comfort": "uncomfortable",
+      "award_importance": "important",
+      "emotions": {
+        "pride": 0.45,
+        "anxiety": 0.4,
+        "nervousness": 0.15
+      }
+    },
+    {
+      "expected_win": "expected_win_yes",
+      "public_speaking_comfort": "comfortable",
+      "award_importance": "unimportant",
+      "emotions": {
+        "surprise": 0.4,
+        "gratitude": 0.35,
+        "relief": 0.25
+      }
+    },
+    {
+      "expected_win": "expected_win_yes",
+      "public_speaking_comfort": "uncomfortable",
+      "award_importance": "unimportant",
+      "emotions": {
+        "surprise": 0.5,
+        "gratitude": 0.3,
+        "relief": 0.2
+      }
+    },
+    {
+      "expected_win": "expected_win_no",
+      "public_speaking_comfort": "comfortable",
+      "award_importance": "important",
+      "emotions": {
+        "shock": 0.47368421052631576,
+        "gratitude": 0.36842105263157887,
+        "happiness": 0.15789473684210525
+      }
+    },
+    {
+      "expected_win": "expected_win_no",
+      "public_speaking_comfort": "uncomfortable",
+      "award_importance": "important",
+      "emotions": {
+        "shock": 0.55,
+        "gratitude": 0.3,
+        "happiness": 0.15
+      }
+    },
+    {
+      "expected_win": "expected_win_no",
+      "public_speaking_comfort": "comfortable",
+      "award_importance": "unimportant",
+      "emotions": {
+        "surprise": 0.5,
+        "disbelief": 0.35,
+        "happiness": 0.15
+      }
+    },
+    {
+      "expected_win": "expected_win_no",
+      "public_speaking_comfort": "uncomfortable",
+      "award_importance": "unimportant",
+      "emotions": {
+        "surprise": 0.55,
+        "disbelief": 0.3,
+        "happiness": 0.15
+      }
+    }
+  ]
+}

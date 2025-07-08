@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "familiarity_with_area",
-      "values": [
-        "familiar",
-        "unfamiliar"
-      ]
-    },
-    {
-      "name": "previous_experience_with_getting_lost",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "time_of_day",
-      "values": [
-        "day",
-        "night"
-      ]
-    }
-  ],
+  "factors": {
+    "familiarity_with_area": [
+      "Familiar",
+      "Unfamiliar"
+    ],
+    "preparedness": [
+      "Prepared",
+      "Unprepared"
+    ],
+    "anxiety_level": [
+      "Low",
+      "High"
+    ]
+  },
   "cpt": [
     {
-      "familiarity_with_area": "familiar",
-      "previous_experience_with_getting_lost": "first_time",
-      "time_of_day": "day",
+      "familiarity_with_area": "Familiar",
+      "preparedness": "Prepared",
+      "anxiety_level": "Low",
       "emotions": {
-        "calm": 0.7,
-        "frustration": 0.2,
-        "anxiety": 0.1
+        "Relief": 0.6,
+        "Curiosity": 0.3,
+        "Frustration": 0.1
       }
     },
     {
-      "familiarity_with_area": "familiar",
-      "previous_experience_with_getting_lost": "first_time",
-      "time_of_day": "night",
+      "familiarity_with_area": "Familiar",
+      "preparedness": "Unprepared",
+      "anxiety_level": "Low",
       "emotions": {
-        "calm": 0.4,
-        "frustration": 0.3,
-        "anxiety": 0.3
+        "Anxiety": 0.4,
+        "Frustration": 0.4,
+        "Determination": 0.2
       }
     },
     {
-      "familiarity_with_area": "familiar",
-      "previous_experience_with_getting_lost": "repeated",
-      "time_of_day": "day",
+      "familiarity_with_area": "Familiar",
+      "preparedness": "Prepared",
+      "anxiety_level": "High",
       "emotions": {
-        "calm": 0.2,
-        "frustration": 0.5,
-        "anxiety": 0.3
+        "Fear": 0.5,
+        "Anxiety": 0.35,
+        "Determination": 0.15
       }
     },
     {
-      "familiarity_with_area": "familiar",
-      "previous_experience_with_getting_lost": "repeated",
-      "time_of_day": "night",
+      "familiarity_with_area": "Familiar",
+      "preparedness": "Unprepared",
+      "anxiety_level": "High",
       "emotions": {
-        "calm": 0.1,
-        "frustration": 0.6,
-        "anxiety": 0.3
+        "Fear": 0.6,
+        "Anxiety": 0.3,
+        "Panic": 0.1
       }
     },
     {
-      "familiarity_with_area": "unfamiliar",
-      "previous_experience_with_getting_lost": "first_time",
-      "time_of_day": "day",
+      "familiarity_with_area": "Unfamiliar",
+      "preparedness": "Prepared",
+      "anxiety_level": "Low",
       "emotions": {
-        "anxiety": 0.8,
-        "frustration": 0.2,
-        "calm": 0.0
+        "Curiosity": 0.7,
+        "Excitement": 0.2,
+        "Confusion": 0.1
       }
     },
     {
-      "familiarity_with_area": "unfamiliar",
-      "previous_experience_with_getting_lost": "first_time",
-      "time_of_day": "night",
+      "familiarity_with_area": "Unfamiliar",
+      "preparedness": "Unprepared",
+      "anxiety_level": "Low",
       "emotions": {
-        "anxiety": 0.9,
-        "frustration": 0.1,
-        "calm": 0.0
+        "Anxiety": 0.5,
+        "Confusion": 0.4,
+        "Determination": 0.1
       }
     },
     {
-      "familiarity_with_area": "unfamiliar",
-      "previous_experience_with_getting_lost": "repeated",
-      "time_of_day": "day",
+      "familiarity_with_area": "Unfamiliar",
+      "preparedness": "Prepared",
+      "anxiety_level": "High",
       "emotions": {
-        "anxiety": 0.6,
-        "frustration": 0.3,
-        "calm": 0.1
+        "Fear": 0.6,
+        "Anxiety": 0.3,
+        "Despair": 0.1
       }
     },
     {
-      "familiarity_with_area": "unfamiliar",
-      "previous_experience_with_getting_lost": "repeated",
-      "time_of_day": "night",
+      "familiarity_with_area": "Unfamiliar",
+      "preparedness": "Unprepared",
+      "anxiety_level": "High",
       "emotions": {
-        "anxiety": 0.7,
-        "frustration": 0.2,
-        "calm": 0.1
+        "Fear": 0.7,
+        "Anxiety": 0.2,
+        "Panic": 0.1
       }
     }
   ]

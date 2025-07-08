@@ -1,0 +1,122 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "team_response": [
+      "acknowledged",
+      "ignored"
+    ],
+    "personal_value": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "team_response": "acknowledged",
+      "personal_value": "low",
+      "emotions": {
+        "happy": 0.1,
+        "frustrated": 0.3,
+        "confused": 0.1,
+        "contentment": 0.35,
+        "frustration": 0.125,
+        "disappointment": 0.025
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "team_response": "ignored",
+      "personal_value": "low",
+      "emotions": {
+        "frustrated": 0.35000000000000003,
+        "disappointed": 0.10000000000000002,
+        "confused": 0.05000000000000001,
+        "frustration": 0.4000000000000001,
+        "disappointment": 0.07500000000000001,
+        "anger": 0.025000000000000005
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "team_response": "acknowledged",
+      "personal_value": "low",
+      "emotions": {
+        "angry": 0.25,
+        "frustrated": 0.2,
+        "disappointed": 0.05,
+        "frustration": 0.3,
+        "disappointment": 0.15,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "team_response": "ignored",
+      "personal_value": "low",
+      "emotions": {
+        "angry": 0.4,
+        "frustrated": 0.075,
+        "disappointed": 0.025,
+        "anger": 0.4,
+        "disappointment": 0.075,
+        "frustration": 0.025
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "team_response": "acknowledged",
+      "personal_value": "high",
+      "emotions": {
+        "proud": 0.15,
+        "happy": 0.25,
+        "satisfied": 0.1,
+        "contentment": 0.45,
+        "pride": 0.025,
+        "frustration": 0.025
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "team_response": "ignored",
+      "personal_value": "high",
+      "emotions": {
+        "frustrated": 0.30000000000000004,
+        "disappointed": 0.15000000000000002,
+        "confused": 0.05000000000000001,
+        "frustration": 0.4000000000000001,
+        "disappointment": 0.07500000000000001,
+        "confusion": 0.025000000000000005
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "team_response": "acknowledged",
+      "personal_value": "high",
+      "emotions": {
+        "angry": 0.30000000000000004,
+        "frustrated": 0.15000000000000002,
+        "disappointed": 0.05000000000000001,
+        "frustration": 0.35000000000000003,
+        "disappointment": 0.12500000000000003,
+        "anger": 0.025000000000000005
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "team_response": "ignored",
+      "personal_value": "high",
+      "emotions": {
+        "angry": 0.4,
+        "frustrated": 0.075,
+        "disappointed": 0.025,
+        "anger": 0.4,
+        "disappointment": 0.075,
+        "frustration": 0.025
+      }
+    }
+  ]
+}

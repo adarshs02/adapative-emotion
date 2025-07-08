@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "friendship_depth",
-      "values": [
-        "shallow",
-        "deep"
-      ]
-    },
-    {
-      "name": "emotional_control",
-      "values": [
-        "impulsive",
-        "reflective"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "reason_for_ignoring": [
+      "unintentional",
+      "intentional"
+    ],
+    "friend_relationship": [
+      "close",
+      "acquaintance"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "friendship_depth": "shallow",
-      "emotional_control": "impulsive",
+      "reason_for_ignoring": "unintentional",
+      "friend_relationship": "close",
       "emotions": {
-        "guilt": 0.8,
-        "anger": 0.1,
-        "relief": 0.1
+        "regret": 0.7,
+        "guilt": 0.25,
+        "anxiety": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "friendship_depth": "shallow",
-      "emotional_control": "reflective",
+      "reason_for_ignoring": "unintentional",
+      "friend_relationship": "acquaintance",
       "emotions": {
-        "guilt": 0.7,
-        "relief": 0.2,
-        "anger": 0.1
+        "empathy": 0.6,
+        "surprise": 0.3,
+        "concern": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "friendship_depth": "deep",
-      "emotional_control": "impulsive",
-      "emotions": {
-        "guilt": 0.6,
-        "relief": 0.3,
-        "anger": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "friendship_depth": "deep",
-      "emotional_control": "reflective",
-      "emotions": {
-        "guilt": 0.5,
-        "relief": 0.4,
-        "anger": 0.1
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "friendship_depth": "shallow",
-      "emotional_control": "impulsive",
+      "reason_for_ignoring": "intentional",
+      "friend_relationship": "close",
       "emotions": {
         "anger": 0.8,
-        "guilt": 0.2,
-        "relief": 0.0
+        "betrayal": 0.15,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "reason_for_ignoring": "intentional",
+      "friend_relationship": "acquaintance",
+      "emotions": {
+        "indifference": 0.6,
+        "surprise": 0.3,
+        "disappointment": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "friendship_depth": "shallow",
-      "emotional_control": "reflective",
+      "reason_for_ignoring": "unintentional",
+      "friend_relationship": "close",
       "emotions": {
-        "anger": 0.7,
-        "guilt": 0.2,
-        "relief": 0.1
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "friendship_depth": "deep",
-      "emotional_control": "impulsive",
-      "emotions": {
-        "anger": 0.6,
+        "regret": 0.6,
         "guilt": 0.3,
-        "relief": 0.1
+        "anxiety": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "friendship_depth": "deep",
-      "emotional_control": "reflective",
+      "reason_for_ignoring": "unintentional",
+      "friend_relationship": "acquaintance",
       "emotions": {
-        "anger": 0.5,
-        "guilt": 0.4,
-        "relief": 0.1
+        "empathy": 0.5,
+        "surprise": 0.4,
+        "concern": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "reason_for_ignoring": "intentional",
+      "friend_relationship": "close",
+      "emotions": {
+        "anger": 0.9,
+        "betrayal": 0.05,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "reason_for_ignoring": "intentional",
+      "friend_relationship": "acquaintance",
+      "emotions": {
+        "indifference": 0.6,
+        "surprise": 0.3,
+        "disappointment": 0.1
       }
     }
   ]

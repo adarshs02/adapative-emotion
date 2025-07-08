@@ -1,0 +1,105 @@
+{
+  "factors": {
+    "Quality_of_time": [
+      "High",
+      "Low"
+    ],
+    "Family_interaction": [
+      "Positive",
+      "Negative"
+    ],
+    "Frequency_of_gatherings": [
+      "Regular",
+      "Rare"
+    ]
+  },
+  "cpt": [
+    {
+      "Quality_of_time": "High",
+      "Family_interaction": "Positive",
+      "Frequency_of_gatherings": "Regular",
+      "emotions": {
+        "Joy": 0.65,
+        "Contentment": 0.25,
+        "Peace": 0.05,
+        "Sadness": 0.05
+      }
+    },
+    {
+      "Quality_of_time": "High",
+      "Family_interaction": "Positive",
+      "Frequency_of_gatherings": "Rare",
+      "emotions": {
+        "Happiness": 0.5,
+        "Anticipation": 0.35,
+        "Sadness": 0.15
+      }
+    },
+    {
+      "Quality_of_time": "High",
+      "Family_interaction": "Negative",
+      "Frequency_of_gatherings": "Regular",
+      "emotions": {
+        "Frustration": 0.4,
+        "Disappointment": 0.35,
+        "Anger": 0.2,
+        "Sadness": 0.05
+      }
+    },
+    {
+      "Quality_of_time": "High",
+      "Family_interaction": "Negative",
+      "Frequency_of_gatherings": "Rare",
+      "emotions": {
+        "Relief": 0.3,
+        "Regret": 0.3,
+        "Anger": 0.25,
+        "Sadness": 0.15
+      }
+    },
+    {
+      "Quality_of_time": "Low",
+      "Family_interaction": "Positive",
+      "Frequency_of_gatherings": "Regular",
+      "emotions": {
+        "Dissatisfaction": 0.4000000000000001,
+        "Disappointment": 0.30000000000000004,
+        "Frustration": 0.20000000000000004,
+        "Sadness": 0.10000000000000002
+      }
+    },
+    {
+      "Quality_of_time": "Low",
+      "Family_interaction": "Positive",
+      "Frequency_of_gatherings": "Rare",
+      "emotions": {
+        "Longing": 0.4000000000000001,
+        "Regret": 0.30000000000000004,
+        "Hope": 0.20000000000000004,
+        "Sadness": 0.10000000000000002
+      }
+    },
+    {
+      "Quality_of_time": "Low",
+      "Family_interaction": "Negative",
+      "Frequency_of_gatherings": "Regular",
+      "emotions": {
+        "Anger": 0.5,
+        "Frustration": 0.35,
+        "Disappointment": 0.1,
+        "Sadness": 0.05
+      }
+    },
+    {
+      "Quality_of_time": "Low",
+      "Family_interaction": "Negative",
+      "Frequency_of_gatherings": "Rare",
+      "emotions": {
+        "Relief": 0.3,
+        "Anger": 0.25,
+        "Frustration": 0.2,
+        "Sadness": 0.25
+      }
+    }
+  ]
+}

@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "CareerDirectionClarity",
-      "values": [
-        "clear",
-        "unclear"
-      ]
-    },
-    {
-      "name": "CareerGoalsAlignment",
-      "values": [
-        "aligned",
-        "misaligned"
-      ]
-    },
-    {
-      "name": "CareerExperience",
-      "values": [
-        "experienced",
-        "inexperienced"
-      ]
-    }
-  ],
+  "factors": {
+    "clarity_of_goals": [
+      "clear",
+      "unclear"
+    ],
+    "support_system": [
+      "strong",
+      "weak"
+    ],
+    "stress_level": [
+      "low",
+      "high"
+    ]
+  },
   "cpt": [
     {
-      "CareerDirectionClarity": "clear",
-      "CareerGoalsAlignment": "aligned",
-      "CareerExperience": "experienced",
+      "clarity_of_goals": "clear",
+      "support_system": "strong",
+      "stress_level": "low",
       "emotions": {
-        "excitement": 0.7,
-        "anxiety": 0.2,
-        "apathy": 0.1
+        "confident": 0.75,
+        "anxious": 0.2,
+        "frustrated": 0.05
       }
     },
     {
-      "CareerDirectionClarity": "clear",
-      "CareerGoalsAlignment": "aligned",
-      "CareerExperience": "inexperienced",
+      "clarity_of_goals": "clear",
+      "support_system": "strong",
+      "stress_level": "high",
       "emotions": {
-        "excitement": 0.6,
-        "anxiety": 0.3,
-        "apathy": 0.1
+        "stressed": 0.6,
+        "anxious": 0.35,
+        "frustrated": 0.05
       }
     },
     {
-      "CareerDirectionClarity": "clear",
-      "CareerGoalsAlignment": "misaligned",
-      "CareerExperience": "experienced",
+      "clarity_of_goals": "clear",
+      "support_system": "weak",
+      "stress_level": "low",
       "emotions": {
-        "anxiety": 0.6,
-        "excitement": 0.3,
-        "apathy": 0.1
+        "unsure": 0.5,
+        "anxious": 0.4,
+        "frustrated": 0.1
       }
     },
     {
-      "CareerDirectionClarity": "clear",
-      "CareerGoalsAlignment": "misaligned",
-      "CareerExperience": "inexperienced",
+      "clarity_of_goals": "clear",
+      "support_system": "weak",
+      "stress_level": "high",
       "emotions": {
-        "anxiety": 0.7,
-        "excitement": 0.2,
-        "apathy": 0.1
+        "stressed": 0.7,
+        "anxious": 0.25,
+        "frustrated": 0.05
       }
     },
     {
-      "CareerDirectionClarity": "unclear",
-      "CareerGoalsAlignment": "aligned",
-      "CareerExperience": "experienced",
+      "clarity_of_goals": "unclear",
+      "support_system": "strong",
+      "stress_level": "low",
       "emotions": {
-        "anxiety": 0.4,
-        "excitement": 0.3,
-        "frustration": 0.3
+        "confused": 0.6,
+        "anxious": 0.3,
+        "frustrated": 0.1
       }
     },
     {
-      "CareerDirectionClarity": "unclear",
-      "CareerGoalsAlignment": "aligned",
-      "CareerExperience": "inexperienced",
+      "clarity_of_goals": "unclear",
+      "support_system": "strong",
+      "stress_level": "high",
       "emotions": {
-        "anxiety": 0.5,
-        "excitement": 0.3,
-        "frustration": 0.2
+        "stressed": 0.75,
+        "anxious": 0.2,
+        "frustrated": 0.05
       }
     },
     {
-      "CareerDirectionClarity": "unclear",
-      "CareerGoalsAlignment": "misaligned",
-      "CareerExperience": "experienced",
+      "clarity_of_goals": "unclear",
+      "support_system": "weak",
+      "stress_level": "low",
       "emotions": {
-        "frustration": 0.6,
-        "anxiety": 0.3,
-        "apathy": 0.1
+        "confused": 0.8,
+        "anxious": 0.15,
+        "frustrated": 0.05
       }
     },
     {
-      "CareerDirectionClarity": "unclear",
-      "CareerGoalsAlignment": "misaligned",
-      "CareerExperience": "inexperienced",
+      "clarity_of_goals": "unclear",
+      "support_system": "weak",
+      "stress_level": "high",
       "emotions": {
-        "frustration": 0.7,
-        "anxiety": 0.2,
-        "apathy": 0.1
+        "stressed": 0.9,
+        "anxious": 0.05,
+        "frustrated": 0.05
       }
     }
   ]

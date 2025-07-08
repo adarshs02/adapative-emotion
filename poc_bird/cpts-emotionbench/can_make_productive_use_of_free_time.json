@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "productivity_level": [
+      "High",
+      "Low"
+    ],
+    "time_availability": [
+      "Adequate",
+      "Limited"
+    ],
+    "motivation_level": [
+      "High",
+      "Low"
+    ]
+  },
+  "cpt": [
+    {
+      "productivity_level": "High",
+      "time_availability": "Adequate",
+      "motivation_level": "High",
+      "emotions": {
+        "Happy": 0.6000000000000001,
+        "Excited": 0.30000000000000004,
+        "Relaxed": 0.10000000000000002
+      }
+    },
+    {
+      "productivity_level": "High",
+      "time_availability": "Adequate",
+      "motivation_level": "Low",
+      "emotions": {
+        "Frustrated": 0.4,
+        "Disappointed": 0.35,
+        "Bored": 0.25
+      }
+    },
+    {
+      "productivity_level": "High",
+      "time_availability": "Limited",
+      "motivation_level": "High",
+      "emotions": {
+        "Determined": 0.5,
+        "Anxious": 0.35,
+        "Focused": 0.15
+      }
+    },
+    {
+      "productivity_level": "High",
+      "time_availability": "Limited",
+      "motivation_level": "Low",
+      "emotions": {
+        "Overwhelmed": 0.6000000000000001,
+        "Stressed": 0.30000000000000004,
+        "Resigned": 0.10000000000000002
+      }
+    },
+    {
+      "productivity_level": "Low",
+      "time_availability": "Adequate",
+      "motivation_level": "High",
+      "emotions": {
+        "Discouraged": 0.45,
+        "Indifferent": 0.35,
+        "Dissatisfied": 0.2
+      }
+    },
+    {
+      "productivity_level": "Low",
+      "time_availability": "Adequate",
+      "motivation_level": "Low",
+      "emotions": {
+        "Apathetic": 0.6000000000000001,
+        "Bored": 0.30000000000000004,
+        "Uninterested": 0.10000000000000002
+      }
+    },
+    {
+      "productivity_level": "Low",
+      "time_availability": "Limited",
+      "motivation_level": "High",
+      "emotions": {
+        "Driven": 0.5,
+        "Nervous": 0.35,
+        "Determined": 0.15
+      }
+    },
+    {
+      "productivity_level": "Low",
+      "time_availability": "Limited",
+      "motivation_level": "Low",
+      "emotions": {
+        "Overwhelmed": 0.6000000000000001,
+        "Stressed": 0.30000000000000004,
+        "Resigned": 0.10000000000000002
+      }
+    }
+  ]
+}

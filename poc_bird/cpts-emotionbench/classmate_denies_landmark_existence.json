@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "persistency": [
+      "gently",
+      "insistently"
+    ],
+    "proof_evidence": [
+      "little",
+      "much"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "persistency": "gently",
+      "proof_evidence": "little",
+      "emotions": {
+        "frustration": 0.6000000000000001,
+        "doubt": 0.30000000000000004,
+        "determination": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "persistency": "gently",
+      "proof_evidence": "much",
+      "emotions": {
+        "confidence": 0.7000000000000001,
+        "frustration": 0.20000000000000004,
+        "doubt": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "persistency": "insistently",
+      "proof_evidence": "little",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.4,
+        "doubt": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "persistency": "insistently",
+      "proof_evidence": "much",
+      "emotions": {
+        "relief": 0.6000000000000001,
+        "confidence": 0.30000000000000004,
+        "doubt": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "persistency": "gently",
+      "proof_evidence": "little",
+      "emotions": {
+        "anger": 0.7000000000000001,
+        "frustration": 0.20000000000000004,
+        "doubt": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "persistency": "gently",
+      "proof_evidence": "much",
+      "emotions": {
+        "confidence": 0.5,
+        "relief": 0.4,
+        "doubt": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "persistency": "insistently",
+      "proof_evidence": "little",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.2,
+        "doubt": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "persistency": "insistently",
+      "proof_evidence": "much",
+      "emotions": {
+        "confidence": 0.7000000000000001,
+        "relief": 0.20000000000000004,
+        "doubt": 0.10000000000000002
+      }
+    }
+  ]
+}

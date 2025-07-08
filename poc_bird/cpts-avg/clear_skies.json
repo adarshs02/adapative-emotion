@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "weather_change": [
+      "favorable",
+      "unfavorable"
+    ],
+    "plan_importance": [
+      "high",
+      "low"
+    ],
+    "previous_outdoor_plans": [
+      "successful",
+      "unsuccessful"
+    ]
+  },
+  "cpt": [
+    {
+      "weather_change": "favorable",
+      "plan_importance": "high",
+      "previous_outdoor_plans": "successful",
+      "emotions": {
+        "joy": 0.65,
+        "relief": 0.3,
+        "gratitude": 0.05
+      }
+    },
+    {
+      "weather_change": "favorable",
+      "plan_importance": "high",
+      "previous_outdoor_plans": "unsuccessful",
+      "emotions": {
+        "happiness": 0.5,
+        "anticipation": 0.35,
+        "anxiety": 0.15
+      }
+    },
+    {
+      "weather_change": "favorable",
+      "plan_importance": "low",
+      "previous_outdoor_plans": "successful",
+      "emotions": {
+        "contentment": 0.7,
+        "satisfaction": 0.25,
+        "boredom": 0.05
+      }
+    },
+    {
+      "weather_change": "favorable",
+      "plan_importance": "low",
+      "previous_outdoor_plans": "unsuccessful",
+      "emotions": {
+        "relief": 0.6000000000000001,
+        "hope": 0.30000000000000004,
+        "disappointment": 0.10000000000000002
+      }
+    },
+    {
+      "weather_change": "unfavorable",
+      "plan_importance": "high",
+      "previous_outdoor_plans": "successful",
+      "emotions": {
+        "frustration": 0.6,
+        "disappointment": 0.35,
+        "anger": 0.05
+      }
+    },
+    {
+      "weather_change": "unfavorable",
+      "plan_importance": "high",
+      "previous_outdoor_plans": "unsuccessful",
+      "emotions": {
+        "disappointment": 0.7,
+        "sadness": 0.25,
+        "resentment": 0.05
+      }
+    },
+    {
+      "weather_change": "unfavorable",
+      "plan_importance": "low",
+      "previous_outdoor_plans": "successful",
+      "emotions": {
+        "dissatisfaction": 0.7,
+        "boredom": 0.25,
+        "regret": 0.05
+      }
+    },
+    {
+      "weather_change": "unfavorable",
+      "plan_importance": "low",
+      "previous_outdoor_plans": "unsuccessful",
+      "emotions": {
+        "relief": 0.6000000000000001,
+        "boredom": 0.30000000000000004,
+        "indifference": 0.10000000000000002
+      }
+    }
+  ]
+}

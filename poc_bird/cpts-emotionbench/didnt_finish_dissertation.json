@@ -1,0 +1,112 @@
+{
+  "factors": {
+    "deadline_approach": [
+      "close",
+      "far"
+    ],
+    "preparation_effort": [
+      "low",
+      "high"
+    ],
+    "past_performance": [
+      "poor",
+      "good"
+    ]
+  },
+  "cpt": [
+    {
+      "deadline_approach": "close",
+      "preparation_effort": "low",
+      "past_performance": "poor",
+      "emotions": {
+        "frustration": 0.475,
+        "anxiety": 0.44999999999999996,
+        "regret": 0.07500000000000001
+      }
+    },
+    {
+      "deadline_approach": "close",
+      "preparation_effort": "low",
+      "past_performance": "good",
+      "emotions": {
+        "disappointment": 0.375,
+        "anxiety": 0.175,
+        "determination": 0.25,
+        "surprise": 0.2
+      }
+    },
+    {
+      "deadline_approach": "close",
+      "preparation_effort": "high",
+      "past_performance": "poor",
+      "emotions": {
+        "anger": 0.2750000000000001,
+        "frustration": 0.30000000000000004,
+        "anxiety": 0.4,
+        "regret": 0.025000000000000005
+      }
+    },
+    {
+      "deadline_approach": "close",
+      "preparation_effort": "high",
+      "past_performance": "good",
+      "emotions": {
+        "determination": 0.45,
+        "confidence": 0.175,
+        "anxiety": 0.05,
+        "relief": 0.2,
+        "satisfaction": 0.125
+      }
+    },
+    {
+      "deadline_approach": "far",
+      "preparation_effort": "low",
+      "past_performance": "poor",
+      "emotions": {
+        "procrastination": 0.3,
+        "anxiety": 0.15,
+        "regret": 0.1,
+        "worry": 0.25,
+        "frustration": 0.2
+      }
+    },
+    {
+      "deadline_approach": "far",
+      "preparation_effort": "low",
+      "past_performance": "good",
+      "emotions": {
+        "complacency": 0.2,
+        "anxiety": 0.175,
+        "motivation": 0.125,
+        "optimism": 0.3,
+        "confidence": 0.15,
+        "relief": 0.05
+      }
+    },
+    {
+      "deadline_approach": "far",
+      "preparation_effort": "high",
+      "past_performance": "poor",
+      "emotions": {
+        "anxiety": 0.2,
+        "fear": 0.175,
+        "determination": 0.125,
+        "worry": 0.3,
+        "frustration": 0.15,
+        "regret": 0.05
+      }
+    },
+    {
+      "deadline_approach": "far",
+      "preparation_effort": "high",
+      "past_performance": "good",
+      "emotions": {
+        "confidence": 0.42499999999999993,
+        "motivation": 0.17499999999999996,
+        "anxiety": 0.04999999999999999,
+        "optimism": 0.29999999999999993,
+        "satisfaction": 0.04999999999999999
+      }
+    }
+  ]
+}

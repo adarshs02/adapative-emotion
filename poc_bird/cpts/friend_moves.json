@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "distance",
-      "values": [
-        "close",
-        "far"
-      ]
-    },
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "communication_style",
-      "values": [
-        "open",
-        "closed"
-      ]
-    }
-  ],
+  "factors": {
+    "distance_of_move": [
+      "Local",
+      "Long-distance"
+    ],
+    "length_of_friendship": [
+      "Short",
+      "Long"
+    ],
+    "frequency_of_communication": [
+      "Rare",
+      "Frequent"
+    ]
+  },
   "cpt": [
     {
-      "distance": "close",
-      "offence_history": "first_time",
-      "communication_style": "open",
+      "distance_of_move": "Local",
+      "length_of_friendship": "Short",
+      "frequency_of_communication": "Rare",
       "emotions": {
-        "sadness": 0.7,
-        "guilt": 0.2,
-        "relief": 0.1
+        "Sadness": 0.7,
+        "Regret": 0.25,
+        "Indifference": 0.05
       }
     },
     {
-      "distance": "close",
-      "offence_history": "first_time",
-      "communication_style": "closed",
+      "distance_of_move": "Local",
+      "length_of_friendship": "Short",
+      "frequency_of_communication": "Frequent",
       "emotions": {
-        "sadness": 0.6,
-        "guilt": 0.3,
-        "relief": 0.1
+        "Hope": 0.3,
+        "Sadness": 0.45,
+        "Relief": 0.25
       }
     },
     {
-      "distance": "close",
-      "offence_history": "repeated",
-      "communication_style": "open",
+      "distance_of_move": "Local",
+      "length_of_friendship": "Long",
+      "frequency_of_communication": "Rare",
       "emotions": {
-        "anger": 0.4,
-        "sadness": 0.3,
-        "guilt": 0.3
+        "Sadness": 0.6,
+        "Regret": 0.3,
+        "Anger": 0.1
       }
     },
     {
-      "distance": "close",
-      "offence_history": "repeated",
-      "communication_style": "closed",
+      "distance_of_move": "Local",
+      "length_of_friendship": "Long",
+      "frequency_of_communication": "Frequent",
       "emotions": {
-        "anger": 0.6,
-        "sadness": 0.2,
-        "guilt": 0.2
+        "Hope": 0.4,
+        "Sadness": 0.5,
+        "Relief": 0.1
       }
     },
     {
-      "distance": "far",
-      "offence_history": "first_time",
-      "communication_style": "open",
+      "distance_of_move": "Long-distance",
+      "length_of_friendship": "Short",
+      "frequency_of_communication": "Rare",
       "emotions": {
-        "sadness": 0.8,
-        "relief": 0.2,
-        "hope": 0.0
+        "Sadness": 0.8,
+        "Regret": 0.2,
+        "Indifference": 0.0
       }
     },
     {
-      "distance": "far",
-      "offence_history": "first_time",
-      "communication_style": "closed",
+      "distance_of_move": "Long-distance",
+      "length_of_friendship": "Short",
+      "frequency_of_communication": "Frequent",
       "emotions": {
-        "sadness": 0.7,
-        "relief": 0.2,
-        "hope": 0.1
+        "Hope": 0.2,
+        "Sadness": 0.6,
+        "Relief": 0.2
       }
     },
     {
-      "distance": "far",
-      "offence_history": "repeated",
-      "communication_style": "open",
+      "distance_of_move": "Long-distance",
+      "length_of_friendship": "Long",
+      "frequency_of_communication": "Rare",
       "emotions": {
-        "anger": 0.2,
-        "sadness": 0.6,
-        "hope": 0.2
+        "Sadness": 0.85,
+        "Regret": 0.1,
+        "Anger": 0.05
       }
     },
     {
-      "distance": "far",
-      "offence_history": "repeated",
-      "communication_style": "closed",
+      "distance_of_move": "Long-distance",
+      "length_of_friendship": "Long",
+      "frequency_of_communication": "Frequent",
       "emotions": {
-        "anger": 0.4,
-        "sadness": 0.4,
-        "hope": 0.2
+        "Hope": 0.15,
+        "Sadness": 0.7,
+        "Relief": 0.15
       }
     }
   ]

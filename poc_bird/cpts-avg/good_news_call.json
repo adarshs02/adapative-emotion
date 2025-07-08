@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "call_type": [
+      "personal",
+      "professional"
+    ],
+    "expectation": [
+      "high",
+      "low"
+    ],
+    "relevance": [
+      "important",
+      "unimportant"
+    ]
+  },
+  "cpt": [
+    {
+      "call_type": "personal",
+      "expectation": "high",
+      "relevance": "important",
+      "emotions": {
+        "joy": 0.75,
+        "relief": 0.15,
+        "surprise": 0.1
+      }
+    },
+    {
+      "call_type": "personal",
+      "expectation": "high",
+      "relevance": "unimportant",
+      "emotions": {
+        "happiness": 0.6,
+        "confusion": 0.25,
+        "irritation": 0.15
+      }
+    },
+    {
+      "call_type": "personal",
+      "expectation": "low",
+      "relevance": "important",
+      "emotions": {
+        "joy": 0.3,
+        "surprise": 0.4,
+        "disappointment": 0.3
+      }
+    },
+    {
+      "call_type": "personal",
+      "expectation": "low",
+      "relevance": "unimportant",
+      "emotions": {
+        "relief": 0.5,
+        "boredom": 0.3,
+        "irritation": 0.2
+      }
+    },
+    {
+      "call_type": "professional",
+      "expectation": "high",
+      "relevance": "important",
+      "emotions": {
+        "excitement": 0.6,
+        "relief": 0.2,
+        "satisfaction": 0.2
+      }
+    },
+    {
+      "call_type": "professional",
+      "expectation": "high",
+      "relevance": "unimportant",
+      "emotions": {
+        "happiness": 0.4,
+        "surprise": 0.3,
+        "frustration": 0.3
+      }
+    },
+    {
+      "call_type": "professional",
+      "expectation": "low",
+      "relevance": "important",
+      "emotions": {
+        "disappointment": 0.5,
+        "frustration": 0.3,
+        "resignation": 0.2
+      }
+    },
+    {
+      "call_type": "professional",
+      "expectation": "low",
+      "relevance": "unimportant",
+      "emotions": {
+        "relief": 0.6,
+        "boredom": 0.2,
+        "irritation": 0.2
+      }
+    }
+  ]
+}

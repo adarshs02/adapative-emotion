@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "Shared_Laughter_Intensity": [
+      "Light",
+      "Heavy"
+    ],
+    "Friendship_Level": [
+      "Acquaintance",
+      "Close"
+    ],
+    "Laughter_Frequency": [
+      "Rare",
+      "Frequent"
+    ]
+  },
+  "cpt": [
+    {
+      "Shared_Laughter_Intensity": "Light",
+      "Friendship_Level": "Acquaintance",
+      "Laughter_Frequency": "Rare",
+      "emotions": {
+        "Joy": 0.6,
+        "Amusement": 0.35,
+        "Relief": 0.05
+      }
+    },
+    {
+      "Shared_Laughter_Intensity": "Light",
+      "Friendship_Level": "Acquaintance",
+      "Laughter_Frequency": "Frequent",
+      "emotions": {
+        "Joy": 0.55,
+        "Amusement": 0.3,
+        "Contentment": 0.15
+      }
+    },
+    {
+      "Shared_Laughter_Intensity": "Light",
+      "Friendship_Level": "Close",
+      "Laughter_Frequency": "Rare",
+      "emotions": {
+        "Joy": 0.7,
+        "Amusement": 0.25,
+        "Gratitude": 0.05
+      }
+    },
+    {
+      "Shared_Laughter_Intensity": "Light",
+      "Friendship_Level": "Close",
+      "Laughter_Frequency": "Frequent",
+      "emotions": {
+        "Joy": 0.65,
+        "Amusement": 0.2,
+        "Happiness": 0.15
+      }
+    },
+    {
+      "Shared_Laughter_Intensity": "Heavy",
+      "Friendship_Level": "Acquaintance",
+      "Laughter_Frequency": "Rare",
+      "emotions": {
+        "Joy": 0.75,
+        "Amusement": 0.2,
+        "Relief": 0.05
+      }
+    },
+    {
+      "Shared_Laughter_Intensity": "Heavy",
+      "Friendship_Level": "Acquaintance",
+      "Laughter_Frequency": "Frequent",
+      "emotions": {
+        "Joy": 0.7,
+        "Amusement": 0.25,
+        "Contentment": 0.05
+      }
+    },
+    {
+      "Shared_Laughter_Intensity": "Heavy",
+      "Friendship_Level": "Close",
+      "Laughter_Frequency": "Rare",
+      "emotions": {
+        "Joy": 0.8,
+        "Amusement": 0.15,
+        "Gratitude": 0.05
+      }
+    },
+    {
+      "Shared_Laughter_Intensity": "Heavy",
+      "Friendship_Level": "Close",
+      "Laughter_Frequency": "Frequent",
+      "emotions": {
+        "Joy": 0.75,
+        "Amusement": 0.2,
+        "Happiness": 0.05
+      }
+    }
+  ]
+}

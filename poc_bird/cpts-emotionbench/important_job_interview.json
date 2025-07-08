@@ -1,0 +1,110 @@
+{
+  "factors": {
+    "preparation_level": [
+      "well_prepared",
+      "poorly_prepared"
+    ],
+    "interviewer_attitude": [
+      "supportive",
+      "unsupportive"
+    ],
+    "interview_outcome": [
+      "positive",
+      "negative"
+    ]
+  },
+  "cpt": [
+    {
+      "preparation_level": "well_prepared",
+      "interviewer_attitude": "supportive",
+      "interview_outcome": "positive",
+      "emotions": {
+        "confident": 0.7,
+        "relieved": 0.25,
+        "anxious": 0.025,
+        "excited": 0.025
+      }
+    },
+    {
+      "preparation_level": "well_prepared",
+      "interviewer_attitude": "supportive",
+      "interview_outcome": "negative",
+      "emotions": {
+        "disappointed": 0.6000000000000001,
+        "frustrated": 0.30000000000000004,
+        "determined": 0.10000000000000002
+      }
+    },
+    {
+      "preparation_level": "well_prepared",
+      "interviewer_attitude": "unsupportive",
+      "interview_outcome": "positive",
+      "emotions": {
+        "nervous": 0.6,
+        "confused": 0.15,
+        "determined": 0.05,
+        "surprised": 0.15,
+        "grateful": 0.05
+      }
+    },
+    {
+      "preparation_level": "well_prepared",
+      "interviewer_attitude": "unsupportive",
+      "interview_outcome": "negative",
+      "emotions": {
+        "angry": 0.375,
+        "disappointed": 0.2,
+        "frustrated": 0.05,
+        "disheartened": 0.35,
+        "determined": 0.025
+      }
+    },
+    {
+      "preparation_level": "poorly_prepared",
+      "interviewer_attitude": "supportive",
+      "interview_outcome": "positive",
+      "emotions": {
+        "anxious": 0.4,
+        "nervous": 0.075,
+        "confident": 0.025,
+        "relieved": 0.25,
+        "surprised": 0.175,
+        "grateful": 0.075
+      }
+    },
+    {
+      "preparation_level": "poorly_prepared",
+      "interviewer_attitude": "supportive",
+      "interview_outcome": "negative",
+      "emotions": {
+        "disappointed": 0.7,
+        "frustrated": 0.25,
+        "determined": 0.05
+      }
+    },
+    {
+      "preparation_level": "poorly_prepared",
+      "interviewer_attitude": "unsupportive",
+      "interview_outcome": "positive",
+      "emotions": {
+        "anxious": 0.35,
+        "nervous": 0.5,
+        "angry": 0.05,
+        "surprised": 0.075,
+        "grateful": 0.025
+      }
+    },
+    {
+      "preparation_level": "poorly_prepared",
+      "interviewer_attitude": "unsupportive",
+      "interview_outcome": "negative",
+      "emotions": {
+        "angry": 0.375,
+        "disappointed": 0.15,
+        "frustrated": 0.05,
+        "disheartened": 0.4,
+        "determined": 0.025
+      }
+    }
+  ]
+}

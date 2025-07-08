@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "acknowledgement_type",
-      "values": [
-        "public",
-        "private"
-      ]
-    },
-    {
-      "name": "effort_level",
-      "values": [
-        "low",
-        "high"
-      ]
-    },
-    {
-      "name": "previous_recognition",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    }
-  ],
+  "factors": {
+    "public_recognition_level": [
+      "Minor",
+      "Major"
+    ],
+    "personal_expectation": [
+      "Low",
+      "High"
+    ],
+    "previous_acknowledgement_history": [
+      "First time",
+      "Repeated"
+    ]
+  },
   "cpt": [
     {
-      "acknowledgement_type": "public",
-      "effort_level": "low",
-      "previous_recognition": "first_time",
+      "public_recognition_level": "Minor",
+      "personal_expectation": "Low",
+      "previous_acknowledgement_history": "First time",
       "emotions": {
-        "gratitude": 0.7,
-        "surprise": 0.2,
-        "relief": 0.1
+        "Surprise": 0.4,
+        "Happiness": 0.5,
+        "Pride": 0.1
       }
     },
     {
-      "acknowledgement_type": "public",
-      "effort_level": "low",
-      "previous_recognition": "repeated",
+      "public_recognition_level": "Minor",
+      "personal_expectation": "Low",
+      "previous_acknowledgement_history": "Repeated",
       "emotions": {
-        "gratitude": 0.4,
-        "surprise": 0.3,
-        "relief": 0.3
+        "Contentment": 0.55,
+        "Happiness": 0.35,
+        "Pride": 0.1
       }
     },
     {
-      "acknowledgement_type": "public",
-      "effort_level": "high",
-      "previous_recognition": "first_time",
+      "public_recognition_level": "Minor",
+      "personal_expectation": "High",
+      "previous_acknowledgement_history": "First time",
       "emotions": {
-        "gratitude": 0.8,
-        "pride": 0.2,
-        "relief": 0.0
+        "Disappointment": 0.2,
+        "Happiness": 0.6,
+        "Pride": 0.2
       }
     },
     {
-      "acknowledgement_type": "public",
-      "effort_level": "high",
-      "previous_recognition": "repeated",
+      "public_recognition_level": "Minor",
+      "personal_expectation": "High",
+      "previous_acknowledgement_history": "Repeated",
       "emotions": {
-        "gratitude": 0.6,
-        "pride": 0.3,
-        "relief": 0.1
+        "Contentment": 0.4,
+        "Happiness": 0.5,
+        "Pride": 0.1
       }
     },
     {
-      "acknowledgement_type": "private",
-      "effort_level": "low",
-      "previous_recognition": "first_time",
+      "public_recognition_level": "Major",
+      "personal_expectation": "Low",
+      "previous_acknowledgement_history": "First time",
       "emotions": {
-        "gratitude": 0.5,
-        "surprise": 0.3,
-        "relief": 0.2
+        "Astonishment": 0.3,
+        "Happiness": 0.6,
+        "Pride": 0.1
       }
     },
     {
-      "acknowledgement_type": "private",
-      "effort_level": "low",
-      "previous_recognition": "repeated",
+      "public_recognition_level": "Major",
+      "personal_expectation": "Low",
+      "previous_acknowledgement_history": "Repeated",
       "emotions": {
-        "gratitude": 0.3,
-        "surprise": 0.4,
-        "relief": 0.3
+        "Euphoria": 0.5,
+        "Happiness": 0.4,
+        "Pride": 0.1
       }
     },
     {
-      "acknowledgement_type": "private",
-      "effort_level": "high",
-      "previous_recognition": "first_time",
+      "public_recognition_level": "Major",
+      "personal_expectation": "High",
+      "previous_acknowledgement_history": "First time",
       "emotions": {
-        "gratitude": 0.9,
-        "pride": 0.1,
-        "relief": 0.0
+        "Elation": 0.4,
+        "Happiness": 0.5,
+        "Pride": 0.1
       }
     },
     {
-      "acknowledgement_type": "private",
-      "effort_level": "high",
-      "previous_recognition": "repeated",
+      "public_recognition_level": "Major",
+      "personal_expectation": "High",
+      "previous_acknowledgement_history": "Repeated",
       "emotions": {
-        "gratitude": 0.7,
-        "pride": 0.2,
-        "relief": 0.1
+        "Satisfaction": 0.6,
+        "Happiness": 0.3,
+        "Pride": 0.1
       }
     }
   ]

@@ -1,176 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "study_effort",
-      "values": [
-        "high",
-        "low"
-      ]
-    },
-    {
-      "name": "exam_expectation",
-      "values": [
-        "high",
-        "low"
-      ]
-    },
-    {
-      "name": "past_performance",
-      "values": [
-        "good",
-        "bad"
-      ]
-    }
-  ],
+  "factors": {
+    "study_effort": [
+      "low",
+      "high"
+    ],
+    "exam_expectation": [
+      "low",
+      "high"
+    ],
+    "exam_history": [
+      "good",
+      "poor"
+    ]
+  },
   "cpt": [
     {
-      "study_effort": "high",
-      "exam_expectation": "high",
-      "past_performance": "good",
-      "emotions": {
-        "relief": 0.7,
-        "satisfaction": 0.25,
-        "frustration": 0.05
-      }
-    },
-    {
-      "study_effort": "high",
-      "exam_expectation": "high",
-      "past_performance": "good",
-      "emotions": {
-        "satisfaction": 0.8,
-        "relief": 0.15,
-        "excitement": 0.05
-      }
-    },
-    {
-      "study_effort": "high",
-      "exam_expectation": "high",
-      "past_performance": "bad",
+      "study_effort": "low",
+      "exam_expectation": "low",
+      "exam_history": "good",
       "emotions": {
         "relief": 0.6,
-        "satisfaction": 0.35,
-        "frustration": 0.05
+        "surprise": 0.3,
+        "disappointment": 0.1
       }
     },
     {
-      "study_effort": "high",
+      "study_effort": "low",
+      "exam_expectation": "low",
+      "exam_history": "poor",
+      "emotions": {
+        "disappointment": 0.8,
+        "frustration": 0.15,
+        "relief": 0.05
+      }
+    },
+    {
+      "study_effort": "low",
       "exam_expectation": "high",
-      "past_performance": "bad",
+      "exam_history": "good",
       "emotions": {
-        "satisfaction": 0.7,
-        "relief": 0.25,
-        "excitement": 0.05
+        "pride": 0.5,
+        "relief": 0.4,
+        "surprise": 0.1
+      }
+    },
+    {
+      "study_effort": "low",
+      "exam_expectation": "high",
+      "exam_history": "poor",
+      "emotions": {
+        "disappointment": 0.75,
+        "frustration": 0.2,
+        "shock": 0.05
       }
     },
     {
       "study_effort": "high",
       "exam_expectation": "low",
-      "past_performance": "good",
-      "emotions": {
-        "satisfaction": 0.8,
-        "relief": 0.15,
-        "excitement": 0.05
-      }
-    },
-    {
-      "study_effort": "high",
-      "exam_expectation": "low",
-      "past_performance": "good",
+      "exam_history": "good",
       "emotions": {
         "relief": 0.7,
-        "satisfaction": 0.25,
-        "frustration": 0.05
+        "surprise": 0.25,
+        "happiness": 0.05
       }
     },
     {
       "study_effort": "high",
       "exam_expectation": "low",
-      "past_performance": "bad",
-      "emotions": {
-        "satisfaction": 0.7,
-        "relief": 0.25,
-        "excitement": 0.05
-      }
-    },
-    {
-      "study_effort": "high",
-      "exam_expectation": "low",
-      "past_performance": "bad",
+      "exam_history": "poor",
       "emotions": {
         "relief": 0.6,
-        "satisfaction": 0.35,
-        "frustration": 0.05
+        "surprise": 0.3,
+        "disappointment": 0.1
       }
     },
     {
-      "study_effort": "low",
+      "study_effort": "high",
       "exam_expectation": "high",
-      "past_performance": "good",
+      "exam_history": "good",
       "emotions": {
-        "frustration": 0.7,
-        "disappointment": 0.25,
+        "pride": 0.8,
+        "happiness": 0.15,
         "relief": 0.05
       }
     },
     {
-      "study_effort": "low",
+      "study_effort": "high",
       "exam_expectation": "high",
-      "past_performance": "good",
+      "exam_history": "poor",
       "emotions": {
-        "disappointment": 0.8,
-        "frustration": 0.15,
-        "excitement": 0.05
-      }
-    },
-    {
-      "study_effort": "low",
-      "exam_expectation": "high",
-      "past_performance": "bad",
-      "emotions": {
-        "disappointment": 0.7,
-        "frustration": 0.25,
-        "relief": 0.05
-      }
-    },
-    {
-      "study_effort": "low",
-      "exam_expectation": "high",
-      "past_performance": "bad",
-      "emotions": {
-        "disappointment": 0.8,
-        "frustration": 0.15,
-        "excitement": 0.05
-      }
-    },
-    {
-      "study_effort": "low",
-      "exam_expectation": "low",
-      "past_performance": "good",
-      "emotions": {
-        "disappointment": 0.7,
-        "frustration": 0.25,
-        "relief": 0.05
-      }
-    },
-    {
-      "study_effort": "low",
-      "exam_expectation": "low",
-      "past_performance": "good",
-      "emotions": {
-        "disappointment": 0.8,
-        "frustration": 0.15,
-        "excitement": 0.05
-      }
-    },
-    {
-      "study_effort": "low",
-      "exam_expectation": "low",
-      "past_performance": "bad",
-      "emotions": {
-        "disappointment": 0.7,
-        "frustration": 0.25,
-        "relief": 0.05
+        "pride": 0.5,
+        "relief": 0.35,
+        "frustration": 0.15
       }
     }
   ]

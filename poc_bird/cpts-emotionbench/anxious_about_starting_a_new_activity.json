@@ -1,0 +1,104 @@
+{
+  "factors": {
+    "Familiarity": [
+      "First_time",
+      "Repeated"
+    ],
+    "Confidence": [
+      "Low",
+      "High"
+    ],
+    "Preparation": [
+      "Poor",
+      "Good"
+    ]
+  },
+  "cpt": [
+    {
+      "Familiarity": "First_time",
+      "Confidence": "Low",
+      "Preparation": "Poor",
+      "emotions": {
+        "Excitement": 0.3,
+        "Nervousness": 0.5,
+        "Anxiety": 0.2
+      }
+    },
+    {
+      "Familiarity": "First_time",
+      "Confidence": "Low",
+      "Preparation": "Good",
+      "emotions": {
+        "Excitement": 0.4,
+        "Nervousness": 0.35,
+        "Confidence_doubt": 0.25
+      }
+    },
+    {
+      "Familiarity": "First_time",
+      "Confidence": "High",
+      "Preparation": "Poor",
+      "emotions": {
+        "Excitement": 0.25,
+        "Overwhelmed": 0.5,
+        "Frustration": 0.25
+      }
+    },
+    {
+      "Familiarity": "First_time",
+      "Confidence": "High",
+      "Preparation": "Good",
+      "emotions": {
+        "Excitement": 0.45,
+        "Confidence": 0.4,
+        "Enthusiasm": 0.15
+      }
+    },
+    {
+      "Familiarity": "Repeated",
+      "Confidence": "Low",
+      "Preparation": "Poor",
+      "emotions": {
+        "Nervousness": 0.42500000000000004,
+        "Anxiety": 0.225,
+        "Fear_of_failure": 0.075,
+        "Frustration": 0.15,
+        "Insecurity": 0.125
+      }
+    },
+    {
+      "Familiarity": "Repeated",
+      "Confidence": "Low",
+      "Preparation": "Good",
+      "emotions": {
+        "Nervousness": 0.3333333333333333,
+        "Confidence_doubt": 0.2307692307692308,
+        "Frustration": 0.25641025641025644,
+        "Determination": 0.1794871794871795
+      }
+    },
+    {
+      "Familiarity": "Repeated",
+      "Confidence": "High",
+      "Preparation": "Poor",
+      "emotions": {
+        "Anger": 0.45,
+        "Frustration": 0.2,
+        "Overwhelmed": 0.05,
+        "Nervousness": 0.175,
+        "Dissatisfaction": 0.125
+      }
+    },
+    {
+      "Familiarity": "Repeated",
+      "Confidence": "High",
+      "Preparation": "Good",
+      "emotions": {
+        "Confidence": 0.5,
+        "Enthusiasm": 0.375,
+        "Satisfaction": 0.05,
+        "Eagerness": 0.075
+      }
+    }
+  ]
+}

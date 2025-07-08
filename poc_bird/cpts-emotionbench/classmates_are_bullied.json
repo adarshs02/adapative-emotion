@@ -1,0 +1,106 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "empathy_level": [
+      "low",
+      "high"
+    ],
+    "personal_involvement": [
+      "not_involved",
+      "involved"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "empathy_level": "low",
+      "personal_involvement": "not_involved",
+      "emotions": {
+        "sadness": 0.35000000000000003,
+        "empathy": 0.17500000000000002,
+        "indifference": 0.37500000000000006,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "empathy_level": "low",
+      "personal_involvement": "involved",
+      "emotions": {
+        "anger": 0.375,
+        "sadness": 0.3,
+        "empathy": 0.2,
+        "indifference": 0.125
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "empathy_level": "high",
+      "personal_involvement": "not_involved",
+      "emotions": {
+        "sadness": 0.30000000000000004,
+        "empathy": 0.44999999999999996,
+        "indifference": 0.2,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "empathy_level": "high",
+      "personal_involvement": "involved",
+      "emotions": {
+        "anger": 0.275,
+        "sadness": 0.375,
+        "empathy": 0.275,
+        "indifference": 0.075
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "empathy_level": "low",
+      "personal_involvement": "not_involved",
+      "emotions": {
+        "anger": 0.5,
+        "sadness": 0.25,
+        "indifference": 0.2,
+        "empathy": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "empathy_level": "low",
+      "personal_involvement": "involved",
+      "emotions": {
+        "anger": 0.625,
+        "sadness": 0.225,
+        "empathy": 0.07500000000000001,
+        "indifference": 0.075
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "empathy_level": "high",
+      "personal_involvement": "not_involved",
+      "emotions": {
+        "anger": 0.30000000000000004,
+        "sadness": 0.4,
+        "empathy": 0.25,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "empathy_level": "high",
+      "personal_involvement": "involved",
+      "emotions": {
+        "anger": 0.575,
+        "sadness": 0.275,
+        "empathy": 0.1,
+        "indifference": 0.05
+      }
+    }
+  ]
+}

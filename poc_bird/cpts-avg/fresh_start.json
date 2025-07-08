@@ -1,0 +1,108 @@
+{
+  "factors": {
+    "home_condition": [
+      "well_maintained",
+      "needs_repair"
+    ],
+    "neighborhood_reputation": [
+      "safe",
+      "dangerous"
+    ],
+    "moving_experience": [
+      "smooth",
+      "stressful"
+    ]
+  },
+  "cpt": [
+    {
+      "home_condition": "well_maintained",
+      "neighborhood_reputation": "safe",
+      "moving_experience": "smooth",
+      "emotions": {
+        "hopeful": 0.7,
+        "excited": 0.25,
+        "relieved": 0.025,
+        "anxious": 0.025
+      }
+    },
+    {
+      "home_condition": "well_maintained",
+      "neighborhood_reputation": "dangerous",
+      "moving_experience": "smooth",
+      "emotions": {
+        "hopeful": 0.5000000000000001,
+        "anxious": 0.35000000000000003,
+        "cautious": 0.07500000000000001,
+        "nervous": 0.07500000000000001
+      }
+    },
+    {
+      "home_condition": "well_maintained",
+      "neighborhood_reputation": "safe",
+      "moving_experience": "stressful",
+      "emotions": {
+        "hopeful": 0.4,
+        "frustrated": 0.275,
+        "relieved": 0.1,
+        "stressed": 0.225
+      }
+    },
+    {
+      "home_condition": "well_maintained",
+      "neighborhood_reputation": "dangerous",
+      "moving_experience": "stressful",
+      "emotions": {
+        "hopeful": 0.3,
+        "anxious": 0.25,
+        "fearful": 0.1,
+        "stressed": 0.25,
+        "afraid": 0.1
+      }
+    },
+    {
+      "home_condition": "needs_repair",
+      "neighborhood_reputation": "safe",
+      "moving_experience": "smooth",
+      "emotions": {
+        "hopeful": 0.3947368421052631,
+        "disappointed": 0.3157894736842105,
+        "determined": 0.05263157894736842,
+        "anxious": 0.23684210526315788
+      }
+    },
+    {
+      "home_condition": "needs_repair",
+      "neighborhood_reputation": "dangerous",
+      "moving_experience": "smooth",
+      "emotions": {
+        "hopeful": 0.25,
+        "disappointed": 0.425,
+        "cautious": 0.125,
+        "anxious": 0.2
+      }
+    },
+    {
+      "home_condition": "needs_repair",
+      "neighborhood_reputation": "safe",
+      "moving_experience": "stressful",
+      "emotions": {
+        "hopeful": 0.25,
+        "disappointed": 0.35,
+        "frustrated": 0.15,
+        "stressed": 0.25
+      }
+    },
+    {
+      "home_condition": "needs_repair",
+      "neighborhood_reputation": "dangerous",
+      "moving_experience": "stressful",
+      "emotions": {
+        "hopeful": 0.175,
+        "disappointed": 0.25,
+        "fearful": 0.175,
+        "stressed": 0.275,
+        "afraid": 0.125
+      }
+    }
+  ]
+}

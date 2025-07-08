@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "attitude_towards_person": [
+      "supportive",
+      "unsupportive"
+    ],
+    "perceived_intent": [
+      "unintentional",
+      "intentional"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "attitude_towards_person": "supportive",
+      "perceived_intent": "unintentional",
+      "emotions": {
+        "frustration": 0.3,
+        "concern": 0.5,
+        "patience": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "attitude_towards_person": "supportive",
+      "perceived_intent": "intentional",
+      "emotions": {
+        "frustration": 0.4,
+        "anger": 0.5,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "attitude_towards_person": "unsupportive",
+      "perceived_intent": "unintentional",
+      "emotions": {
+        "irritation": 0.4,
+        "frustration": 0.5,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "attitude_towards_person": "unsupportive",
+      "perceived_intent": "intentional",
+      "emotions": {
+        "anger": 0.6000000000000001,
+        "disgust": 0.30000000000000004,
+        "frustration": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "attitude_towards_person": "supportive",
+      "perceived_intent": "unintentional",
+      "emotions": {
+        "frustration": 0.2,
+        "concern": 0.5,
+        "patience": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "attitude_towards_person": "supportive",
+      "perceived_intent": "intentional",
+      "emotions": {
+        "anger": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "disappointment": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "attitude_towards_person": "unsupportive",
+      "perceived_intent": "unintentional",
+      "emotions": {
+        "irritation": 0.5,
+        "frustration": 0.4,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "attitude_towards_person": "unsupportive",
+      "perceived_intent": "intentional",
+      "emotions": {
+        "anger": 0.7000000000000001,
+        "disgust": 0.20000000000000004,
+        "frustration": 0.10000000000000002
+      }
+    }
+  ]
+}

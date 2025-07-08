@@ -1,0 +1,112 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "remorse_level": [
+      "low",
+      "high"
+    ],
+    "consequences_fear": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "remorse_level": "low",
+      "consequences_fear": "low",
+      "emotions": {
+        "regret": 0.625,
+        "guilt": 0.125,
+        "fear": 0.025,
+        "anger": 0.025,
+        "shame": 0.15,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "remorse_level": "low",
+      "consequences_fear": "high",
+      "emotions": {
+        "regret": 0.47500000000000003,
+        "guilt": 0.15,
+        "fear": 0.175,
+        "anger": 0.025,
+        "shame": 0.175
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "remorse_level": "high",
+      "consequences_fear": "low",
+      "emotions": {
+        "regret": 0.6097560975609755,
+        "guilt": 0.26829268292682923,
+        "fear": 0.024390243902439022,
+        "anger": 0.024390243902439022,
+        "anxiety": 0.07317073170731705
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "remorse_level": "high",
+      "consequences_fear": "high",
+      "emotions": {
+        "regret": 0.5365853658536587,
+        "guilt": 0.3170731707317074,
+        "fear": 0.12195121951219513,
+        "anger": 0.02439024390243903
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "remorse_level": "low",
+      "consequences_fear": "low",
+      "emotions": {
+        "regret": 0.3999999999999999,
+        "guilt": 0.14999999999999997,
+        "fear": 0.04999999999999999,
+        "anger": 0.17499999999999996,
+        "shame": 0.22499999999999995
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "remorse_level": "low",
+      "consequences_fear": "high",
+      "emotions": {
+        "regret": 0.3589743589743589,
+        "guilt": 0.1282051282051282,
+        "fear": 0.28205128205128205,
+        "anger": 0.05128205128205128,
+        "shame": 0.17948717948717946
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "remorse_level": "high",
+      "consequences_fear": "low",
+      "emotions": {
+        "regret": 0.525,
+        "guilt": 0.32500000000000007,
+        "fear": 0.025000000000000005,
+        "anger": 0.12500000000000003
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "remorse_level": "high",
+      "consequences_fear": "high",
+      "emotions": {
+        "regret": 0.42500000000000004,
+        "guilt": 0.325,
+        "fear": 0.175,
+        "anger": 0.07500000000000001
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "presence_of_parents": [
+      "yes",
+      "no"
+    ],
+    "physical_pain": [
+      "minimal",
+      "severe"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "presence_of_parents": "yes",
+      "physical_pain": "minimal",
+      "emotions": {
+        "happiness": 0.33333333333333337,
+        "sadness": 0.6666666666666667,
+        "anger": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "presence_of_parents": "no",
+      "physical_pain": "minimal",
+      "emotions": {
+        "happiness": 0.01,
+        "sadness": 0.05,
+        "anger": 0.94
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "presence_of_parents": "yes",
+      "physical_pain": "severe",
+      "emotions": {
+        "happiness": 0.0,
+        "sadness": 0.05,
+        "anger": 0.95
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "presence_of_parents": "no",
+      "physical_pain": "severe",
+      "emotions": {
+        "happiness": 0.0,
+        "sadness": 0.02,
+        "anger": 0.98
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "presence_of_parents": "yes",
+      "physical_pain": "minimal",
+      "emotions": {
+        "happiness": 0.0,
+        "sadness": 0.05,
+        "anger": 0.95
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "presence_of_parents": "no",
+      "physical_pain": "minimal",
+      "emotions": {
+        "happiness": 0.0,
+        "sadness": 0.08,
+        "anger": 0.92
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "presence_of_parents": "yes",
+      "physical_pain": "severe",
+      "emotions": {
+        "happiness": 0.0,
+        "sadness": 0.08,
+        "anger": 0.92
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "presence_of_parents": "no",
+      "physical_pain": "severe",
+      "emotions": {
+        "happiness": 0.0,
+        "sadness": 0.02,
+        "anger": 0.98
+      }
+    }
+  ]
+}

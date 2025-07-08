@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "consequences_awareness": [
+      "unaware",
+      "aware"
+    ],
+    "personal_values": [
+      "selfish",
+      "altruistic"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "consequences_awareness": "unaware",
+      "personal_values": "selfish",
+      "emotions": {
+        "regret": 0.6000000000000001,
+        "guilt": 0.30000000000000004,
+        "indifference": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "consequences_awareness": "unaware",
+      "personal_values": "altruistic",
+      "emotions": {
+        "disappointment": 0.4,
+        "empathy": 0.5,
+        "remorse": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "consequences_awareness": "aware",
+      "personal_values": "selfish",
+      "emotions": {
+        "regret": 0.75,
+        "guilt": 0.2,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "consequences_awareness": "aware",
+      "personal_values": "altruistic",
+      "emotions": {
+        "disappointment": 0.55,
+        "empathy": 0.35,
+        "remorse": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "consequences_awareness": "unaware",
+      "personal_values": "selfish",
+      "emotions": {
+        "regret": 0.8,
+        "guilt": 0.15,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "consequences_awareness": "unaware",
+      "personal_values": "altruistic",
+      "emotions": {
+        "disappointment": 0.65,
+        "empathy": 0.3,
+        "remorse": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "consequences_awareness": "aware",
+      "personal_values": "selfish",
+      "emotions": {
+        "regret": 0.9,
+        "guilt": 0.05,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "consequences_awareness": "aware",
+      "personal_values": "altruistic",
+      "emotions": {
+        "disappointment": 0.7,
+        "empathy": 0.25,
+        "remorse": 0.05
+      }
+    }
+  ]
+}

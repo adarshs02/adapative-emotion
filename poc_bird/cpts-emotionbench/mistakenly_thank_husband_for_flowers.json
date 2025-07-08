@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "surprise_level": [
+      "expected",
+      "unexpected"
+    ],
+    "romantic_intent": [
+      "romantic",
+      "non-romantic"
+    ],
+    "context_clarity": [
+      "clear",
+      "unclear"
+    ]
+  },
+  "cpt": [
+    {
+      "surprise_level": "expected",
+      "romantic_intent": "romantic",
+      "context_clarity": "clear",
+      "emotions": {
+        "joy": 0.6000000000000001,
+        "disappointment": 0.30000000000000004,
+        "confusion": 0.10000000000000002
+      }
+    },
+    {
+      "surprise_level": "expected",
+      "romantic_intent": "romantic",
+      "context_clarity": "unclear",
+      "emotions": {
+        "frustration": 0.4,
+        "disappointment": 0.35,
+        "confusion": 0.25
+      }
+    },
+    {
+      "surprise_level": "expected",
+      "romantic_intent": "non-romantic",
+      "context_clarity": "clear",
+      "emotions": {
+        "surprise": 0.7,
+        "confusion": 0.25,
+        "amusement": 0.05
+      }
+    },
+    {
+      "surprise_level": "expected",
+      "romantic_intent": "non-romantic",
+      "context_clarity": "unclear",
+      "emotions": {
+        "frustration": 0.5789473684210527,
+        "confusion": 0.36842105263157887,
+        "amusement": 0.05263157894736842
+      }
+    },
+    {
+      "surprise_level": "unexpected",
+      "romantic_intent": "romantic",
+      "context_clarity": "clear",
+      "emotions": {
+        "joy": 0.75,
+        "surprise": 0.2,
+        "gratitude": 0.05
+      }
+    },
+    {
+      "surprise_level": "unexpected",
+      "romantic_intent": "romantic",
+      "context_clarity": "unclear",
+      "emotions": {
+        "joy": 0.6000000000000001,
+        "surprise": 0.30000000000000004,
+        "gratitude": 0.10000000000000002
+      }
+    },
+    {
+      "surprise_level": "unexpected",
+      "romantic_intent": "non-romantic",
+      "context_clarity": "clear",
+      "emotions": {
+        "surprise": 0.8,
+        "amusement": 0.15,
+        "confusion": 0.05
+      }
+    },
+    {
+      "surprise_level": "unexpected",
+      "romantic_intent": "non-romantic",
+      "context_clarity": "unclear",
+      "emotions": {
+        "surprise": 0.7000000000000001,
+        "amusement": 0.20000000000000004,
+        "confusion": 0.10000000000000002
+      }
+    }
+  ]
+}

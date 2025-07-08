@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "apartment_condition",
-      "values": [
-        "good",
-        "bad"
-      ]
-    },
-    {
-      "name": "relationship_with_landlord",
-      "values": [
-        "good",
-        "bad"
-      ]
-    }
-  ],
+  "factors": {
+    "sentiment_towards_apartment": [
+      "positive",
+      "negative"
+    ],
+    "memories_associated": [
+      "fond",
+      "bitter"
+    ],
+    "moving_reasons": [
+      "voluntary",
+      "involuntary"
+    ]
+  },
   "cpt": [
     {
-      "offence_history": "first_time",
-      "apartment_condition": "good",
-      "relationship_with_landlord": "good",
+      "sentiment_towards_apartment": "positive",
+      "memories_associated": "fond",
+      "moving_reasons": "voluntary",
       "emotions": {
-        "nostalgia": 0.7,
-        "relief": 0.2,
-        "frustration": 0.1
+        "happy": 0.7,
+        "sad": 0.25,
+        "relieved": 0.05
       }
     },
     {
-      "offence_history": "first_time",
-      "apartment_condition": "good",
-      "relationship_with_landlord": "bad",
+      "sentiment_towards_apartment": "positive",
+      "memories_associated": "fond",
+      "moving_reasons": "involuntary",
       "emotions": {
-        "relief": 0.6,
-        "frustration": 0.3,
-        "disappointment": 0.1
+        "sad": 0.6,
+        "angry": 0.3,
+        "relieved": 0.1
       }
     },
     {
-      "offence_history": "first_time",
-      "apartment_condition": "bad",
-      "relationship_with_landlord": "good",
+      "sentiment_towards_apartment": "positive",
+      "memories_associated": "bitter",
+      "moving_reasons": "voluntary",
       "emotions": {
-        "nostalgia": 0.5,
-        "frustration": 0.4,
-        "relief": 0.1
+        "sad": 0.55,
+        "angry": 0.3,
+        "relieved": 0.15
       }
     },
     {
-      "offence_history": "first_time",
-      "apartment_condition": "bad",
-      "relationship_with_landlord": "bad",
+      "sentiment_towards_apartment": "positive",
+      "memories_associated": "bitter",
+      "moving_reasons": "involuntary",
       "emotions": {
-        "frustration": 0.7,
-        "disappointment": 0.2,
-        "relief": 0.1
+        "sad": 0.65,
+        "angry": 0.3,
+        "relieved": 0.05
       }
     },
     {
-      "offence_history": "repeated",
-      "apartment_condition": "good",
-      "relationship_with_landlord": "good",
+      "sentiment_towards_apartment": "negative",
+      "memories_associated": "fond",
+      "moving_reasons": "voluntary",
       "emotions": {
-        "frustration": 0.4,
-        "relief": 0.3,
-        "bitterness": 0.3
+        "sad": 0.7,
+        "happy": 0.2,
+        "relieved": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "apartment_condition": "good",
-      "relationship_with_landlord": "bad",
+      "sentiment_towards_apartment": "negative",
+      "memories_associated": "fond",
+      "moving_reasons": "involuntary",
       "emotions": {
-        "anger": 0.6,
-        "frustration": 0.3,
-        "disappointment": 0.1
+        "sad": 0.8,
+        "angry": 0.15,
+        "relieved": 0.05
       }
     },
     {
-      "offence_history": "repeated",
-      "apartment_condition": "bad",
-      "relationship_with_landlord": "good",
+      "sentiment_towards_apartment": "negative",
+      "memories_associated": "bitter",
+      "moving_reasons": "voluntary",
       "emotions": {
-        "bitterness": 0.6,
-        "frustration": 0.3,
-        "relief": 0.1
+        "angry": 0.7,
+        "sad": 0.25,
+        "relieved": 0.05
       }
     },
     {
-      "offence_history": "repeated",
-      "apartment_condition": "bad",
-      "relationship_with_landlord": "bad",
+      "sentiment_towards_apartment": "negative",
+      "memories_associated": "bitter",
+      "moving_reasons": "involuntary",
       "emotions": {
-        "anger": 0.7,
-        "disappointment": 0.2,
-        "frustration": 0.1
+        "angry": 0.8,
+        "sad": 0.15,
+        "relieved": 0.05
       }
     }
   ]

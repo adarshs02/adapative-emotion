@@ -1,0 +1,106 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "intent": [
+      "unintentional",
+      "intentional"
+    ],
+    "consequences_discovered": [
+      "not_discovered",
+      "discovered"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "intent": "unintentional",
+      "consequences_discovered": "not_discovered",
+      "emotions": {
+        "regret": 0.7,
+        "guilt": 0.25,
+        "anger": 0.05,
+        "relief": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intent": "unintentional",
+      "consequences_discovered": "discovered",
+      "emotions": {
+        "regret": 0.6,
+        "guilt": 0.3,
+        "anger": 0.05,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intent": "intentional",
+      "consequences_discovered": "not_discovered",
+      "emotions": {
+        "regret": 0.5,
+        "guilt": 0.35,
+        "anger": 0.1,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intent": "intentional",
+      "consequences_discovered": "discovered",
+      "emotions": {
+        "regret": 0.4,
+        "guilt": 0.45,
+        "anger": 0.1,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intent": "unintentional",
+      "consequences_discovered": "not_discovered",
+      "emotions": {
+        "regret": 0.65,
+        "guilt": 0.25,
+        "anger": 0.05,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intent": "unintentional",
+      "consequences_discovered": "discovered",
+      "emotions": {
+        "regret": 0.7,
+        "guilt": 0.2,
+        "anger": 0.05,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intent": "intentional",
+      "consequences_discovered": "not_discovered",
+      "emotions": {
+        "regret": 0.6000000000000001,
+        "guilt": 0.30000000000000004,
+        "anger": 0.10000000000000002,
+        "relief": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intent": "intentional",
+      "consequences_discovered": "discovered",
+      "emotions": {
+        "regret": 0.55,
+        "guilt": 0.35,
+        "anger": 0.05,
+        "relief": 0.05
+      }
+    }
+  ]
+}

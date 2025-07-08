@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "audience_size",
-      "values": [
-        "small",
-        "large"
-      ]
-    },
-    {
-      "name": "self_confidence",
-      "values": [
-        "high",
-        "low"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "audience_reaction": [
+      "supportive",
+      "unsupportive"
+    ],
+    "self_confidence": [
+      "high",
+      "low"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "audience_size": "small",
-      "self_confidence": "high",
-      "emotions": {
-        "shame": 0.7,
-        "embarrassment": 0.2,
-        "frustration": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "audience_size": "small",
-      "self_confidence": "low",
-      "emotions": {
-        "shame": 0.8,
-        "embarrassment": 0.15,
-        "frustration": 0.05
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "audience_size": "large",
+      "audience_reaction": "supportive",
       "self_confidence": "high",
       "emotions": {
         "embarrassment": 0.6,
-        "shame": 0.3,
-        "frustration": 0.1
+        "relief": 0.3,
+        "shame": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "audience_size": "large",
-      "self_confidence": "low",
-      "emotions": {
-        "embarrassment": 0.7,
-        "shame": 0.25,
-        "frustration": 0.05
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "audience_size": "small",
+      "audience_reaction": "unsupportive",
       "self_confidence": "high",
       "emotions": {
-        "anger": 0.4,
-        "frustration": 0.3,
-        "helplessness": 0.3
+        "embarrassment": 0.75,
+        "anger": 0.2,
+        "shame": 0.05
       }
     },
     {
-      "offence_history": "repeated",
-      "audience_size": "small",
+      "offence_history": "first_time",
+      "audience_reaction": "supportive",
       "self_confidence": "low",
       "emotions": {
-        "anger": 0.55,
-        "frustration": 0.25,
-        "helplessness": 0.2
+        "embarrassment": 0.8,
+        "anxiety": 0.15,
+        "shame": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "audience_reaction": "unsupportive",
+      "self_confidence": "low",
+      "emotions": {
+        "embarrassment": 0.9,
+        "anger": 0.05,
+        "shame": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "audience_size": "large",
+      "audience_reaction": "supportive",
       "self_confidence": "high",
       "emotions": {
-        "anger": 0.6,
-        "frustration": 0.25,
-        "helplessness": 0.15
+        "embarrassment": 0.4,
+        "anger": 0.45,
+        "frustration": 0.15
       }
     },
     {
       "offence_history": "repeated",
-      "audience_size": "large",
+      "audience_reaction": "unsupportive",
+      "self_confidence": "high",
+      "emotions": {
+        "embarrassment": 0.55,
+        "anger": 0.35,
+        "shame": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "audience_reaction": "supportive",
       "self_confidence": "low",
       "emotions": {
-        "anger": 0.65,
-        "frustration": 0.25,
-        "helplessness": 0.1
+        "embarrassment": 0.6,
+        "anxiety": 0.25,
+        "shame": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "audience_reaction": "unsupportive",
+      "self_confidence": "low",
+      "emotions": {
+        "embarrassment": 0.75,
+        "anger": 0.2,
+        "shame": 0.05
       }
     }
   ]

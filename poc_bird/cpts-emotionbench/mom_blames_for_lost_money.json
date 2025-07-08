@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "evidence": [
+      "found_money",
+      "no_found_money"
+    ],
+    "communication": [
+      "apologetic",
+      "defensive"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "evidence": "found_money",
+      "communication": "apologetic",
+      "emotions": {
+        "surprise": 0.3,
+        "relief": 0.4,
+        "guilt": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "evidence": "found_money",
+      "communication": "defensive",
+      "emotions": {
+        "surprise": 0.2,
+        "frustration": 0.5,
+        "anger": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "evidence": "found_money",
+      "communication": "apologetic",
+      "emotions": {
+        "surprise": 0.15,
+        "guilt": 0.6,
+        "anger": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "evidence": "found_money",
+      "communication": "defensive",
+      "emotions": {
+        "surprise": 0.1,
+        "frustration": 0.45,
+        "anger": 0.45
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "evidence": "no_found_money",
+      "communication": "apologetic",
+      "emotions": {
+        "suspicion": 0.35,
+        "frustration": 0.4,
+        "concern": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "evidence": "no_found_money",
+      "communication": "defensive",
+      "emotions": {
+        "suspicion": 0.45,
+        "anger": 0.4,
+        "confusion": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "evidence": "no_found_money",
+      "communication": "apologetic",
+      "emotions": {
+        "suspicion": 0.5,
+        "guilt": 0.4,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "evidence": "no_found_money",
+      "communication": "defensive",
+      "emotions": {
+        "suspicion": 0.6,
+        "anger": 0.35,
+        "defiance": 0.05
+      }
+    }
+  ]
+}

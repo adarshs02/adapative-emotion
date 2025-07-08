@@ -1,0 +1,107 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "driver_attitude": [
+      "cooperative",
+      "aggressive"
+    ],
+    "visibility": [
+      "clear",
+      "poor"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "driver_attitude": "cooperative",
+      "visibility": "clear",
+      "emotions": {
+        "frustration": 0.3,
+        "surprise": 0.4,
+        "indifference": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driver_attitude": "cooperative",
+      "visibility": "poor",
+      "emotions": {
+        "frustration": 0.4,
+        "anxiety": 0.35,
+        "indifference": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driver_attitude": "aggressive",
+      "visibility": "clear",
+      "emotions": {
+        "anger": 0.55,
+        "frustration": 0.35,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driver_attitude": "aggressive",
+      "visibility": "poor",
+      "emotions": {
+        "anger": 0.325,
+        "fear": 0.1,
+        "indifference": 0.075,
+        "angry": 0.3,
+        "frustrated": 0.1,
+        "anxious": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driver_attitude": "cooperative",
+      "visibility": "clear",
+      "emotions": {
+        "frustration": 0.6000000000000001,
+        "anger": 0.30000000000000004,
+        "indifference": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driver_attitude": "cooperative",
+      "visibility": "poor",
+      "emotions": {
+        "frustration": 0.35000000000000003,
+        "anxiety": 0.10000000000000002,
+        "indifference": 0.05000000000000001,
+        "frustrated": 0.15000000000000002,
+        "anxious": 0.20000000000000004,
+        "angry": 0.15000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driver_attitude": "aggressive",
+      "visibility": "clear",
+      "emotions": {
+        "anger": 0.8,
+        "fear": 0.15,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driver_attitude": "aggressive",
+      "visibility": "poor",
+      "emotions": {
+        "anger": 0.45,
+        "fear": 0.025,
+        "indifference": 0.025,
+        "angry": 0.4,
+        "frustrated": 0.05,
+        "anxious": 0.05
+      }
+    }
+  ]
+}

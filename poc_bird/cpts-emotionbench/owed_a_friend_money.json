@@ -1,0 +1,102 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "friend_reaction": [
+      "understanding",
+      "angry"
+    ],
+    "amount_owed": [
+      "small",
+      "large"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "friend_reaction": "understanding",
+      "amount_owed": "small",
+      "emotions": {
+        "relief": 0.6499999999999999,
+        "gratitude": 0.275,
+        "anxiety": 0.07500000000000001
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_reaction": "angry",
+      "amount_owed": "small",
+      "emotions": {
+        "embarrassment": 0.35,
+        "apology": 0.25,
+        "regret": 0.35,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reaction": "understanding",
+      "amount_owed": "small",
+      "emotions": {
+        "relief": 0.35,
+        "gratitude": 0.35,
+        "anxiety": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reaction": "angry",
+      "amount_owed": "small",
+      "emotions": {
+        "embarrassment": 0.325,
+        "apology": 0.2,
+        "regret": 0.45,
+        "anxiety": 0.025
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_reaction": "understanding",
+      "amount_owed": "large",
+      "emotions": {
+        "relief": 0.35,
+        "gratitude": 0.44999999999999996,
+        "anxiety": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_reaction": "angry",
+      "amount_owed": "large",
+      "emotions": {
+        "embarrassment": 0.30000000000000004,
+        "apology": 0.25,
+        "regret": 0.425,
+        "anxiety": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reaction": "understanding",
+      "amount_owed": "large",
+      "emotions": {
+        "relief": 0.2,
+        "gratitude": 0.25,
+        "anxiety": 0.55
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reaction": "angry",
+      "amount_owed": "large",
+      "emotions": {
+        "embarrassment": 0.275,
+        "apology": 0.2,
+        "regret": 0.5,
+        "anxiety": 0.025
+      }
+    }
+  ]
+}

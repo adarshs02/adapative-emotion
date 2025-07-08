@@ -1,106 +1,113 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "self_confidence",
-      "values": [
-        "high",
-        "low"
-      ]
-    },
-    {
-      "name": "emotional_control",
-      "values": [
-        "good",
-        "poor"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "perceived_justice": [
+      "justified",
+      "unjustified"
+    ],
+    "support_from_colleagues": [
+      "yes",
+      "no"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "self_confidence": "high",
-      "emotional_control": "good",
-      "emotions": {
-        "anger": 0.0,
-        "frustration": 0.2,
-        "sadness": 0.8
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "self_confidence": "high",
-      "emotional_control": "poor",
+      "perceived_justice": "justified",
+      "support_from_colleagues": "yes",
       "emotions": {
         "anger": 0.1,
-        "frustration": 0.4,
-        "sadness": 0.5
+        "frustration": 0.3,
+        "disappointment": 0.4,
+        "resignation": 0.05,
+        "determination": 0.15
       }
     },
     {
       "offence_history": "first_time",
-      "self_confidence": "low",
-      "emotional_control": "good",
+      "perceived_justice": "justified",
+      "support_from_colleagues": "no",
       "emotions": {
         "anger": 0.2,
-        "frustration": 0.6,
-        "sadness": 0.2
+        "frustration": 0.4,
+        "disappointment": 0.25,
+        "resignation": 0.05,
+        "determination": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "self_confidence": "low",
-      "emotional_control": "poor",
+      "perceived_justice": "unjustified",
+      "support_from_colleagues": "yes",
       "emotions": {
         "anger": 0.3,
-        "frustration": 0.5,
-        "sadness": 0.2
+        "frustration": 0.4,
+        "disappointment": 0.2,
+        "resignation": 0.05,
+        "determination": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "perceived_justice": "unjustified",
+      "support_from_colleagues": "no",
+      "emotions": {
+        "anger": 0.4,
+        "frustration": 0.45,
+        "disappointment": 0.1,
+        "resignation": 0.05,
+        "determination": 0.0
       }
     },
     {
       "offence_history": "repeated",
-      "self_confidence": "high",
-      "emotional_control": "good",
+      "perceived_justice": "justified",
+      "support_from_colleagues": "yes",
       "emotions": {
-        "anger": 0.5,
-        "frustration": 0.3,
-        "sadness": 0.2
+        "anger": 0.25,
+        "frustration": 0.4,
+        "disappointment": 0.25,
+        "resignation": 0.05,
+        "determination": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "self_confidence": "high",
-      "emotional_control": "poor",
+      "perceived_justice": "justified",
+      "support_from_colleagues": "no",
       "emotions": {
-        "anger": 0.7,
-        "frustration": 0.2,
-        "sadness": 0.1
+        "anger": 0.35,
+        "frustration": 0.45,
+        "disappointment": 0.15,
+        "resignation": 0.05,
+        "determination": 0.0
       }
     },
     {
       "offence_history": "repeated",
-      "self_confidence": "low",
-      "emotional_control": "good",
+      "perceived_justice": "unjustified",
+      "support_from_colleagues": "yes",
       "emotions": {
-        "anger": 0.8,
-        "frustration": 0.1,
-        "sadness": 0.1
+        "anger": 0.45,
+        "frustration": 0.4,
+        "disappointment": 0.1,
+        "resignation": 0.05,
+        "determination": 0.0
       }
     },
     {
       "offence_history": "repeated",
-      "self_confidence": "low",
-      "emotional_control": "poor",
+      "perceived_justice": "unjustified",
+      "support_from_colleagues": "no",
       "emotions": {
-        "anger": 0.9,
-        "frustration": 0.08,
-        "sadness": 0.02
+        "anger": 0.55,
+        "frustration": 0.35,
+        "disappointment": 0.05,
+        "resignation": 0.05,
+        "determination": 0.0
       }
     }
   ]

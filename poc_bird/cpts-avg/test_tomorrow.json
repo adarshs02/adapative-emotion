@@ -1,0 +1,105 @@
+{
+  "factors": {
+    "preparation_level": [
+      "well_prepared",
+      "poorly_prepared"
+    ],
+    "exam_history": [
+      "good_history",
+      "bad_history"
+    ],
+    "confidence_level": [
+      "high",
+      "low"
+    ]
+  },
+  "cpt": [
+    {
+      "preparation_level": "well_prepared",
+      "exam_history": "good_history",
+      "confidence_level": "high",
+      "emotions": {
+        "confident": 0.48333333333333334,
+        "anxious": 0.26666666666666666,
+        "relaxed": 0.21666666666666667,
+        "excited": 0.016666666666666666,
+        "nervous": 0.016666666666666666
+      }
+    },
+    {
+      "preparation_level": "well_prepared",
+      "exam_history": "good_history",
+      "confidence_level": "low",
+      "emotions": {
+        "anxious": 0.5333333333333333,
+        "confident": 0.15,
+        "nervous": 0.3,
+        "stressed": 0.016666666666666666
+      }
+    },
+    {
+      "preparation_level": "well_prepared",
+      "exam_history": "bad_history",
+      "confidence_level": "high",
+      "emotions": {
+        "anxious": 0.75,
+        "nervous": 0.2,
+        "confident": 0.05
+      }
+    },
+    {
+      "preparation_level": "well_prepared",
+      "exam_history": "bad_history",
+      "confidence_level": "low",
+      "emotions": {
+        "anxious": 0.85,
+        "nervous": 0.1,
+        "confident": 0.05
+      }
+    },
+    {
+      "preparation_level": "poorly_prepared",
+      "exam_history": "good_history",
+      "confidence_level": "high",
+      "emotions": {
+        "anxious": 0.8166666666666665,
+        "nervous": 0.1333333333333333,
+        "confident": 0.016666666666666663,
+        "frustrated": 0.016666666666666663,
+        "stressed": 0.016666666666666663
+      }
+    },
+    {
+      "preparation_level": "poorly_prepared",
+      "exam_history": "good_history",
+      "confidence_level": "low",
+      "emotions": {
+        "anxious": 0.8333333333333331,
+        "nervous": 0.11666666666666663,
+        "confident": 0.016666666666666663,
+        "frustrated": 0.016666666666666663,
+        "stressed": 0.016666666666666663
+      }
+    },
+    {
+      "preparation_level": "poorly_prepared",
+      "exam_history": "bad_history",
+      "confidence_level": "high",
+      "emotions": {
+        "anxious": 0.95,
+        "nervous": 0.03,
+        "confident": 0.02
+      }
+    },
+    {
+      "preparation_level": "poorly_prepared",
+      "exam_history": "bad_history",
+      "confidence_level": "low",
+      "emotions": {
+        "anxious": 1.0,
+        "nervous": 0.0,
+        "confident": 0.0
+      }
+    }
+  ]
+}

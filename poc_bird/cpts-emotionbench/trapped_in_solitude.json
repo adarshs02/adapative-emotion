@@ -1,0 +1,111 @@
+{
+  "factors": {
+    "social_isolation_level": [
+      "alone",
+      "with_pet"
+    ],
+    "sound_of_happiness_intensity": [
+      "subtle",
+      "loud"
+    ],
+    "self_perception_of_belonging": [
+      "marginalized",
+      "accepted"
+    ]
+  },
+  "cpt": [
+    {
+      "social_isolation_level": "alone",
+      "sound_of_happiness_intensity": "subtle",
+      "self_perception_of_belonging": "marginalized",
+      "emotions": {
+        "sadness": 0.725,
+        "longing": 0.1,
+        "frustration": 0.025,
+        "jealousy": 0.1,
+        "resentment": 0.05
+      }
+    },
+    {
+      "social_isolation_level": "alone",
+      "sound_of_happiness_intensity": "loud",
+      "self_perception_of_belonging": "marginalized",
+      "emotions": {
+        "sadness": 0.625,
+        "envy": 0.15,
+        "bitterness": 0.05,
+        "longing": 0.125,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "social_isolation_level": "alone",
+      "sound_of_happiness_intensity": "subtle",
+      "self_perception_of_belonging": "accepted",
+      "emotions": {
+        "melancholy": 0.375,
+        "reflection": 0.35,
+        "acceptance": 0.075,
+        "sadness": 0.2
+      }
+    },
+    {
+      "social_isolation_level": "alone",
+      "sound_of_happiness_intensity": "loud",
+      "self_perception_of_belonging": "accepted",
+      "emotions": {
+        "melancholy": 0.15,
+        "regret": 0.35,
+        "determination": 0.125,
+        "sadness": 0.175,
+        "wistfulness": 0.2
+      }
+    },
+    {
+      "social_isolation_level": "with_pet",
+      "sound_of_happiness_intensity": "subtle",
+      "self_perception_of_belonging": "marginalized",
+      "emotions": {
+        "sadness": 0.6,
+        "longing": 0.15,
+        "loneliness": 0.05,
+        "lonely": 0.15,
+        "despair": 0.05
+      }
+    },
+    {
+      "social_isolation_level": "with_pet",
+      "sound_of_happiness_intensity": "loud",
+      "self_perception_of_belonging": "marginalized",
+      "emotions": {
+        "sadness": 0.525,
+        "envy": 0.32499999999999996,
+        "bitterness": 0.15
+      }
+    },
+    {
+      "social_isolation_level": "with_pet",
+      "sound_of_happiness_intensity": "subtle",
+      "self_perception_of_belonging": "accepted",
+      "emotions": {
+        "melancholy": 0.15,
+        "reflection": 0.225,
+        "contentment": 0.325,
+        "sadness": 0.175,
+        "peace": 0.125
+      }
+    },
+    {
+      "social_isolation_level": "with_pet",
+      "sound_of_happiness_intensity": "loud",
+      "self_perception_of_belonging": "accepted",
+      "emotions": {
+        "melancholy": 0.125,
+        "regret": 0.2,
+        "gratitude": 0.35,
+        "happiness": 0.2,
+        "joy": 0.125
+      }
+    }
+  ]
+}

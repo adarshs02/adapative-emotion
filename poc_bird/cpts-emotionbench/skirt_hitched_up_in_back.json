@@ -1,0 +1,109 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "public_attention": [
+      "minimal",
+      "high"
+    ],
+    "embarrassment_level": [
+      "minimal",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "public_attention": "minimal",
+      "embarrassment_level": "minimal",
+      "emotions": {
+        "amusement": 0.05,
+        "frustration": 0.1,
+        "embarrassment": 0.55,
+        "surprise": 0.15,
+        "annoyance": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "public_attention": "minimal",
+      "embarrassment_level": "high",
+      "emotions": {
+        "shame": 0.15384615384615383,
+        "embarrassment": 0.641025641025641,
+        "anger": 0.05128205128205128,
+        "surprise": 0.1282051282051282,
+        "discomfort": 0.02564102564102564
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "public_attention": "high",
+      "embarrassment_level": "minimal",
+      "emotions": {
+        "surprise": 0.225,
+        "frustration": 0.2,
+        "embarrassment": 0.4,
+        "anger": 0.175
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "public_attention": "high",
+      "embarrassment_level": "high",
+      "emotions": {
+        "shame": 0.2,
+        "embarrassment": 0.55,
+        "anger": 0.175,
+        "surprise": 0.075
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "public_attention": "minimal",
+      "embarrassment_level": "minimal",
+      "emotions": {
+        "frustration": 0.35,
+        "embarrassment": 0.45,
+        "anger": 0.1,
+        "surprise": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "public_attention": "minimal",
+      "embarrassment_level": "high",
+      "emotions": {
+        "shame": 0.25,
+        "embarrassment": 0.47500000000000003,
+        "anger": 0.05,
+        "surprise": 0.075,
+        "frustration": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "public_attention": "high",
+      "embarrassment_level": "minimal",
+      "emotions": {
+        "surprise": 0.15000000000000002,
+        "frustration": 0.225,
+        "anger": 0.425,
+        "embarrassment": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "public_attention": "high",
+      "embarrassment_level": "high",
+      "emotions": {
+        "shame": 0.3,
+        "embarrassment": 0.4,
+        "anger": 0.275,
+        "surprise": 0.025
+      }
+    }
+  ]
+}

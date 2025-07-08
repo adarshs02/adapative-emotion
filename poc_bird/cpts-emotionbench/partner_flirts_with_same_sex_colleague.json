@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "intimacy_level_with_colleague": [
+      "casual",
+      "close"
+    ],
+    "spouse_reaction": [
+      "accepting",
+      "confrontational"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "intimacy_level_with_colleague": "casual",
+      "spouse_reaction": "accepting",
+      "emotions": {
+        "surprised": 0.3,
+        "concerned": 0.4,
+        "angry": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intimacy_level_with_colleague": "close",
+      "spouse_reaction": "accepting",
+      "emotions": {
+        "surprised": 0.2,
+        "hurt": 0.5,
+        "trusting": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intimacy_level_with_colleague": "casual",
+      "spouse_reaction": "confrontational",
+      "emotions": {
+        "angry": 0.6000000000000001,
+        "suspicious": 0.30000000000000004,
+        "anxious": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intimacy_level_with_colleague": "close",
+      "spouse_reaction": "confrontational",
+      "emotions": {
+        "angry": 0.7000000000000001,
+        "hurt": 0.20000000000000004,
+        "suspicious": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intimacy_level_with_colleague": "casual",
+      "spouse_reaction": "accepting",
+      "emotions": {
+        "angry": 0.5789473684210527,
+        "disappointed": 0.36842105263157887,
+        "suspicious": 0.05263157894736842
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intimacy_level_with_colleague": "close",
+      "spouse_reaction": "accepting",
+      "emotions": {
+        "angry": 0.7000000000000001,
+        "hurt": 0.20000000000000004,
+        "disappointed": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intimacy_level_with_colleague": "casual",
+      "spouse_reaction": "confrontational",
+      "emotions": {
+        "angry": 0.8,
+        "disappointed": 0.15,
+        "suspicious": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intimacy_level_with_colleague": "close",
+      "spouse_reaction": "confrontational",
+      "emotions": {
+        "angry": 0.9,
+        "hurt": 0.05,
+        "disappointed": 0.05
+      }
+    }
+  ]
+}

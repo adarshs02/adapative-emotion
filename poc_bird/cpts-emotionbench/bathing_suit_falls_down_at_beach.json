@@ -1,0 +1,97 @@
+{
+  "factors": {
+    "swimming_experience": [
+      "first_time",
+      "repeated"
+    ],
+    "public_exposure": [
+      "accepting",
+      "embarrassed"
+    ],
+    "offence_history": [
+      "no_previous_offence",
+      "previous_offence"
+    ]
+  },
+  "cpt": [
+    {
+      "swimming_experience": "first_time",
+      "public_exposure": "accepting",
+      "offence_history": "no_previous_offence",
+      "emotions": {
+        "happiness": 0.7,
+        "surprise": 0.25,
+        "embarrassment": 0.05
+      }
+    },
+    {
+      "swimming_experience": "first_time",
+      "public_exposure": "embarrassed",
+      "offence_history": "no_previous_offence",
+      "emotions": {
+        "embarrassment": 0.9,
+        "shyness": 0.1
+      }
+    },
+    {
+      "swimming_experience": "repeated",
+      "public_exposure": "accepting",
+      "offence_history": "no_previous_offence",
+      "emotions": {
+        "happiness": 0.6000000000000001,
+        "relaxation": 0.30000000000000004,
+        "surprise": 0.10000000000000002
+      }
+    },
+    {
+      "swimming_experience": "repeated",
+      "public_exposure": "embarrassed",
+      "offence_history": "no_previous_offence",
+      "emotions": {
+        "embarrassment": 0.75,
+        "shyness": 0.2,
+        "anger": 0.05
+      }
+    },
+    {
+      "swimming_experience": "first_time",
+      "public_exposure": "accepting",
+      "offence_history": "previous_offence",
+      "emotions": {
+        "embarrassment": 0.6000000000000001,
+        "shyness": 0.30000000000000004,
+        "anxiety": 0.10000000000000002
+      }
+    },
+    {
+      "swimming_experience": "first_time",
+      "public_exposure": "embarrassed",
+      "offence_history": "previous_offence",
+      "emotions": {
+        "embarrassment": 0.85,
+        "shyness": 0.1,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "swimming_experience": "repeated",
+      "public_exposure": "accepting",
+      "offence_history": "previous_offence",
+      "emotions": {
+        "anxiety": 0.6000000000000001,
+        "anger": 0.30000000000000004,
+        "embarrassment": 0.10000000000000002
+      }
+    },
+    {
+      "swimming_experience": "repeated",
+      "public_exposure": "embarrassed",
+      "offence_history": "previous_offence",
+      "emotions": {
+        "anger": 0.75,
+        "embarrassment": 0.2,
+        "anxiety": 0.05
+      }
+    }
+  ]
+}

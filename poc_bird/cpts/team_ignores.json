@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "team_size",
-      "values": [
-        "small",
-        "large"
-      ]
-    },
-    {
-      "name": "contribution_importance",
-      "values": [
-        "minor",
-        "major"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "team_response": [
+      "acknowledged",
+      "ignored"
+    ],
+    "personal_value": [
+      "low",
+      "high"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "team_size": "small",
-      "contribution_importance": "minor",
+      "team_response": "acknowledged",
+      "personal_value": "low",
       "emotions": {
-        "frustration": 0.7,
-        "disappointment": 0.2,
-        "indifference": 0.1
+        "frustration": 0.4,
+        "disappointment": 0.5,
+        "confusion": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "team_size": "small",
-      "contribution_importance": "major",
+      "team_response": "ignored",
+      "personal_value": "low",
       "emotions": {
         "frustration": 0.6,
-        "disappointment": 0.3,
-        "indifference": 0.1
+        "disappointment": 0.35,
+        "confusion": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "team_size": "large",
-      "contribution_importance": "minor",
+      "team_response": "acknowledged",
+      "personal_value": "high",
       "emotions": {
-        "frustration": 0.5,
-        "disappointment": 0.3,
-        "indifference": 0.2
+        "gratitude": 0.3,
+        "relief": 0.5,
+        "pride": 0.2
       }
     },
     {
       "offence_history": "first_time",
-      "team_size": "large",
-      "contribution_importance": "major",
+      "team_response": "ignored",
+      "personal_value": "high",
       "emotions": {
-        "frustration": 0.4,
-        "disappointment": 0.4,
-        "indifference": 0.2
+        "frustration": 0.7,
+        "disappointment": 0.25,
+        "confusion": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "team_size": "small",
-      "contribution_importance": "minor",
+      "team_response": "acknowledged",
+      "personal_value": "low",
       "emotions": {
         "anger": 0.6,
-        "frustration": 0.3,
-        "disappointment": 0.1
+        "frustration": 0.35,
+        "disappointment": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "team_size": "small",
-      "contribution_importance": "major",
+      "team_response": "ignored",
+      "personal_value": "low",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.15,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "team_response": "acknowledged",
+      "personal_value": "high",
       "emotions": {
         "anger": 0.7,
-        "frustration": 0.2,
-        "disappointment": 0.1
+        "frustration": 0.25,
+        "disappointment": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "team_size": "large",
-      "contribution_importance": "minor",
+      "team_response": "ignored",
+      "personal_value": "high",
       "emotions": {
-        "anger": 0.5,
-        "frustration": 0.3,
-        "disappointment": 0.2
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "team_size": "large",
-      "contribution_importance": "major",
-      "emotions": {
-        "anger": 0.4,
-        "frustration": 0.4,
-        "disappointment": 0.2
+        "anger": 0.9,
+        "frustration": 0.05,
+        "disappointment": 0.05
       }
     }
   ]

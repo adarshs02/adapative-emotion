@@ -1,0 +1,110 @@
+{
+  "factors": {
+    "friendship_level": [
+      "close",
+      "acquaintance"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "post_context": [
+      "positive",
+      "negative"
+    ]
+  },
+  "cpt": [
+    {
+      "friendship_level": "close",
+      "offence_history": "first_time",
+      "post_context": "positive",
+      "emotions": {
+        "happy": 0.6625,
+        "surprised": 0.21250000000000002,
+        "jealous": 0.1125,
+        "sad": 0.0125
+      }
+    },
+    {
+      "friendship_level": "close",
+      "offence_history": "first_time",
+      "post_context": "negative",
+      "emotions": {
+        "sad": 0.47368421052631576,
+        "concerned": 0.36842105263157887,
+        "angry": 0.15789473684210525
+      }
+    },
+    {
+      "friendship_level": "close",
+      "offence_history": "repeated",
+      "post_context": "positive",
+      "emotions": {
+        "happy": 0.3037974683544304,
+        "surprised": 0.1772151898734177,
+        "angry": 0.24050632911392403,
+        "jealous": 0.08860759493670885,
+        "annoyed": 0.03797468354430379,
+        "hurt": 0.10126582278481013,
+        "sad": 0.05063291139240506
+      }
+    },
+    {
+      "friendship_level": "close",
+      "offence_history": "repeated",
+      "post_context": "negative",
+      "emotions": {
+        "sad": 0.5,
+        "concerned": 0.35,
+        "angry": 0.15
+      }
+    },
+    {
+      "friendship_level": "acquaintance",
+      "offence_history": "first_time",
+      "post_context": "positive",
+      "emotions": {
+        "happy": 0.35000000000000003,
+        "surprised": 0.23750000000000002,
+        "indifferent": 0.2125,
+        "happy_for_them": 0.15000000000000002,
+        "slightly_jealous": 0.025000000000000005,
+        "sad": 0.025000000000000005
+      }
+    },
+    {
+      "friendship_level": "acquaintance",
+      "offence_history": "first_time",
+      "post_context": "negative",
+      "emotions": {
+        "sad": 0.35,
+        "concerned": 0.4,
+        "indifferent": 0.25
+      }
+    },
+    {
+      "friendship_level": "acquaintance",
+      "offence_history": "repeated",
+      "post_context": "positive",
+      "emotions": {
+        "happy": 0.2,
+        "surprised": 0.3375,
+        "indifferent": 0.1875,
+        "annoyed": 0.05,
+        "slightly_hurt": 0.1,
+        "angry": 0.075,
+        "sad": 0.05
+      }
+    },
+    {
+      "friendship_level": "acquaintance",
+      "offence_history": "repeated",
+      "post_context": "negative",
+      "emotions": {
+        "sad": 0.3,
+        "concerned": 0.4,
+        "indifferent": 0.3
+      }
+    }
+  ]
+}

@@ -1,106 +1,105 @@
 {
-  "factors": [
-    {
-      "name": "turbulence_severity",
-      "values": [
-        "mild",
-        "severe"
-      ]
-    },
-    {
-      "name": "flying_experience",
-      "values": [
-        "first_time",
-        "experienced"
-      ]
-    },
-    {
-      "name": "fear_level",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "experience_with_turbulence": [
+      "first_time",
+      "repeated"
+    ],
+    "seat_location": [
+      "window",
+      "aisle"
+    ],
+    "preparedness": [
+      "unprepared",
+      "prepared"
+    ]
+  },
   "cpt": [
     {
-      "turbulence_severity": "mild",
-      "flying_experience": "first_time",
-      "fear_level": "low",
+      "experience_with_turbulence": "first_time",
+      "seat_location": "window",
+      "preparedness": "unprepared",
       "emotions": {
-        "anxiety": 0.2,
-        "relief": 0.8,
-        "excitement": 0.0
+        "anxious": 0.7,
+        "fearful": 0.25,
+        "calm": 0.05,
+        "excited": 0.0
       }
     },
     {
-      "turbulence_severity": "mild",
-      "flying_experience": "first_time",
-      "fear_level": "high",
+      "experience_with_turbulence": "first_time",
+      "seat_location": "window",
+      "preparedness": "prepared",
       "emotions": {
-        "anxiety": 0.7,
-        "relief": 0.2,
-        "excitement": 0.1
+        "anxious": 0.3,
+        "fearful": 0.45,
+        "calm": 0.2,
+        "excited": 0.05
       }
     },
     {
-      "turbulence_severity": "mild",
-      "flying_experience": "experienced",
-      "fear_level": "low",
+      "experience_with_turbulence": "first_time",
+      "seat_location": "aisle",
+      "preparedness": "unprepared",
       "emotions": {
-        "anxiety": 0.1,
-        "relief": 0.8,
-        "excitement": 0.1
+        "anxious": 0.75,
+        "fearful": 0.2,
+        "calm": 0.05,
+        "excited": 0.0
       }
     },
     {
-      "turbulence_severity": "mild",
-      "flying_experience": "experienced",
-      "fear_level": "high",
+      "experience_with_turbulence": "first_time",
+      "seat_location": "aisle",
+      "preparedness": "prepared",
       "emotions": {
-        "anxiety": 0.4,
-        "relief": 0.5,
-        "excitement": 0.1
+        "anxious": 0.5,
+        "fearful": 0.35,
+        "calm": 0.1,
+        "excited": 0.05
       }
     },
     {
-      "turbulence_severity": "severe",
-      "flying_experience": "first_time",
-      "fear_level": "low",
+      "experience_with_turbulence": "repeated",
+      "seat_location": "window",
+      "preparedness": "unprepared",
       "emotions": {
-        "anxiety": 0.9,
-        "relief": 0.05,
-        "excitement": 0.05
+        "anxious": 0.85,
+        "fearful": 0.1,
+        "calm": 0.05,
+        "excited": 0.0
       }
     },
     {
-      "turbulence_severity": "severe",
-      "flying_experience": "first_time",
-      "fear_level": "high",
+      "experience_with_turbulence": "repeated",
+      "seat_location": "window",
+      "preparedness": "prepared",
       "emotions": {
-        "anxiety": 0.95,
-        "relief": 0.03,
-        "excitement": 0.02
+        "anxious": 0.6,
+        "fearful": 0.3,
+        "calm": 0.1,
+        "excited": 0.0
       }
     },
     {
-      "turbulence_severity": "severe",
-      "flying_experience": "experienced",
-      "fear_level": "low",
+      "experience_with_turbulence": "repeated",
+      "seat_location": "aisle",
+      "preparedness": "unprepared",
       "emotions": {
-        "anxiety": 0.6,
-        "relief": 0.3,
-        "excitement": 0.1
+        "anxious": 0.9,
+        "fearful": 0.05,
+        "calm": 0.05,
+        "excited": 0.0
       }
     },
     {
-      "turbulence_severity": "severe",
-      "flying_experience": "experienced",
-      "fear_level": "high",
+      "experience_with_turbulence": "repeated",
+      "seat_location": "aisle",
+      "preparedness": "prepared",
       "emotions": {
-        "anxiety": 0.9,
-        "relief": 0.08,
-        "excitement": 0.02
+        "anxious": 0.75,
+        "fearful": 0.2,
+        "calm": 0.05,
+        "excited": 0.0
       }
     }
   ]

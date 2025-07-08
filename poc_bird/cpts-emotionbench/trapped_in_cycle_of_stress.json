@@ -1,0 +1,107 @@
+{
+  "factors": {
+    "sleep_quality": [
+      "Poor",
+      "Good"
+    ],
+    "work_load": [
+      "High",
+      "Low"
+    ],
+    "personal_responsibilities": [
+      "Many",
+      "Few"
+    ]
+  },
+  "cpt": [
+    {
+      "sleep_quality": "Poor",
+      "work_load": "High",
+      "personal_responsibilities": "Many",
+      "emotions": {
+        "Stress": 0.7000000000000001,
+        "Anxiety": 0.20000000000000004,
+        "Frustration": 0.10000000000000002
+      }
+    },
+    {
+      "sleep_quality": "Poor",
+      "work_load": "High",
+      "personal_responsibilities": "Few",
+      "emotions": {
+        "Stress": 0.6,
+        "Anxiety": 0.3,
+        "Boredom": 0.05,
+        "Despair": 0.05
+      }
+    },
+    {
+      "sleep_quality": "Poor",
+      "work_load": "Low",
+      "personal_responsibilities": "Many",
+      "emotions": {
+        "Stress": 0.5,
+        "Sadness": 0.2,
+        "Frustration": 0.125,
+        "Fatigue": 0.175
+      }
+    },
+    {
+      "sleep_quality": "Poor",
+      "work_load": "Low",
+      "personal_responsibilities": "Few",
+      "emotions": {
+        "Sadness": 0.35,
+        "Boredom": 0.3,
+        "Relief": 0.05,
+        "Fatigue": 0.3
+      }
+    },
+    {
+      "sleep_quality": "Good",
+      "work_load": "High",
+      "personal_responsibilities": "Many",
+      "emotions": {
+        "Stress": 0.42500000000000004,
+        "Anxiety": 0.45,
+        "Frustration": 0.05,
+        "Anger": 0.075
+      }
+    },
+    {
+      "sleep_quality": "Good",
+      "work_load": "High",
+      "personal_responsibilities": "Few",
+      "emotions": {
+        "Stress": 0.35,
+        "Anxiety": 0.475,
+        "Contentment": 0.05,
+        "Satisfaction": 0.125
+      }
+    },
+    {
+      "sleep_quality": "Good",
+      "work_load": "Low",
+      "personal_responsibilities": "Many",
+      "emotions": {
+        "Stress": 0.15,
+        "Sadness": 0.4,
+        "Frustration": 0.1,
+        "Fatigue": 0.15,
+        "Boredom": 0.2
+      }
+    },
+    {
+      "sleep_quality": "Good",
+      "work_load": "Low",
+      "personal_responsibilities": "Few",
+      "emotions": {
+        "Sadness": 0.2,
+        "Contentment": 0.55,
+        "Relief": 0.05,
+        "Relaxation": 0.15,
+        "Happiness": 0.05
+      }
+    }
+  ]
+}

@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "order_importance",
-      "values": [
-        "low",
-        "high"
-      ]
-    },
-    {
-      "name": "delivery_speed",
-      "values": [
-        "slow",
-        "fast"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "order_value": [
+      "low",
+      "high"
+    ],
+    "communication_quality": [
+      "poor",
+      "good"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "order_importance": "low",
-      "delivery_speed": "slow",
+      "order_value": "low",
+      "communication_quality": "poor",
       "emotions": {
-        "frustration": 0.8,
-        "surprise": 0.2,
-        "disgust": 0.0
+        "disappointment": 0.6,
+        "frustration": 0.3,
+        "indifference": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "order_importance": "low",
-      "delivery_speed": "fast",
+      "order_value": "low",
+      "communication_quality": "good",
       "emotions": {
-        "frustration": 0.6,
+        "surprise": 0.4,
+        "disappointment": 0.35,
+        "frustration": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "order_value": "high",
+      "communication_quality": "poor",
+      "emotions": {
+        "anger": 0.55,
+        "disappointment": 0.35,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "order_value": "high",
+      "communication_quality": "good",
+      "emotions": {
         "surprise": 0.3,
-        "disgust": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "order_importance": "high",
-      "delivery_speed": "slow",
-      "emotions": {
-        "frustration": 0.7,
-        "anger": 0.2,
-        "surprise": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "order_importance": "high",
-      "delivery_speed": "fast",
-      "emotions": {
-        "frustration": 0.5,
-        "anger": 0.3,
-        "surprise": 0.2
+        "anger": 0.45,
+        "disappointment": 0.25
       }
     },
     {
       "offence_history": "repeated",
-      "order_importance": "low",
-      "delivery_speed": "slow",
+      "order_value": "low",
+      "communication_quality": "poor",
       "emotions": {
         "anger": 0.7,
-        "frustration": 0.2,
-        "disgust": 0.1
+        "disappointment": 0.25,
+        "frustration": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "order_importance": "low",
-      "delivery_speed": "fast",
+      "order_value": "low",
+      "communication_quality": "good",
       "emotions": {
-        "anger": 0.6,
-        "frustration": 0.3,
-        "disgust": 0.1
+        "frustration": 0.5,
+        "disappointment": 0.4,
+        "anger": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "order_importance": "high",
-      "delivery_speed": "slow",
+      "order_value": "high",
+      "communication_quality": "poor",
       "emotions": {
-        "anger": 0.8,
-        "frustration": 0.1,
-        "disgust": 0.1
+        "anger": 0.85,
+        "disappointment": 0.1,
+        "frustration": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "order_importance": "high",
-      "delivery_speed": "fast",
+      "order_value": "high",
+      "communication_quality": "good",
       "emotions": {
-        "anger": 0.9,
-        "frustration": 0.08,
-        "disgust": 0.02
+        "anger": 0.7,
+        "disappointment": 0.25,
+        "frustration": 0.05
       }
     }
   ]

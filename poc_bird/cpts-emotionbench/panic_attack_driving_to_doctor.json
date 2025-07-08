@@ -1,0 +1,106 @@
+{
+  "factors": {
+    "health_status": [
+      "unsure",
+      "sick"
+    ],
+    "panic_attack_symptoms": [
+      "present",
+      "absent"
+    ],
+    "anxiety_level": [
+      "high",
+      "low"
+    ]
+  },
+  "cpt": [
+    {
+      "health_status": "unsure",
+      "panic_attack_symptoms": "present",
+      "anxiety_level": "high",
+      "emotions": {
+        "fear": 0.425,
+        "anxiety": 0.19999999999999998,
+        "worry": 0.375
+      }
+    },
+    {
+      "health_status": "unsure",
+      "panic_attack_symptoms": "present",
+      "anxiety_level": "low",
+      "emotions": {
+        "fear": 0.375,
+        "anxiety": 0.225,
+        "worry": 0.325,
+        "relief": 0.075
+      }
+    },
+    {
+      "health_status": "unsure",
+      "panic_attack_symptoms": "absent",
+      "anxiety_level": "high",
+      "emotions": {
+        "fear": 0.3,
+        "anxiety": 0.25,
+        "worry": 0.4,
+        "sadness": 0.05
+      }
+    },
+    {
+      "health_status": "unsure",
+      "panic_attack_symptoms": "absent",
+      "anxiety_level": "low",
+      "emotions": {
+        "fear": 0.1,
+        "anxiety": 0.2,
+        "worry": 0.4,
+        "relief": 0.25,
+        "hope": 0.05
+      }
+    },
+    {
+      "health_status": "sick",
+      "panic_attack_symptoms": "present",
+      "anxiety_level": "high",
+      "emotions": {
+        "fear": 0.35000000000000003,
+        "anxiety": 0.19999999999999998,
+        "worry": 0.45
+      }
+    },
+    {
+      "health_status": "sick",
+      "panic_attack_symptoms": "present",
+      "anxiety_level": "low",
+      "emotions": {
+        "fear": 0.35,
+        "anxiety": 0.2,
+        "worry": 0.4,
+        "sadness": 0.05
+      }
+    },
+    {
+      "health_status": "sick",
+      "panic_attack_symptoms": "absent",
+      "anxiety_level": "high",
+      "emotions": {
+        "fear": 0.275,
+        "anxiety": 0.25,
+        "worry": 0.45,
+        "sadness": 0.025
+      }
+    },
+    {
+      "health_status": "sick",
+      "panic_attack_symptoms": "absent",
+      "anxiety_level": "low",
+      "emotions": {
+        "fear": 0.125,
+        "anxiety": 0.2,
+        "worry": 0.45,
+        "relief": 0.175,
+        "hope": 0.05
+      }
+    }
+  ]
+}

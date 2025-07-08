@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "familiarity": [
+      "stranger",
+      "known"
+    ],
+    "initiative": [
+      "uninvited",
+      "requested"
+    ],
+    "context": [
+      "positive",
+      "negative"
+    ]
+  },
+  "cpt": [
+    {
+      "familiarity": "stranger",
+      "initiative": "uninvited",
+      "context": "positive",
+      "emotions": {
+        "surprise": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "curiosity": 0.10000000000000002
+      }
+    },
+    {
+      "familiarity": "stranger",
+      "initiative": "uninvited",
+      "context": "negative",
+      "emotions": {
+        "fear": 0.47368421052631576,
+        "unease": 0.36842105263157887,
+        "confusion": 0.15789473684210525
+      }
+    },
+    {
+      "familiarity": "stranger",
+      "initiative": "requested",
+      "context": "positive",
+      "emotions": {
+        "pleased": 0.5,
+        "surprise": 0.35,
+        "curiosity": 0.15
+      }
+    },
+    {
+      "familiarity": "stranger",
+      "initiative": "requested",
+      "context": "negative",
+      "emotions": {
+        "annoyance": 0.4,
+        "unease": 0.35,
+        "confusion": 0.25
+      }
+    },
+    {
+      "familiarity": "known",
+      "initiative": "uninvited",
+      "context": "positive",
+      "emotions": {
+        "happiness": 0.55,
+        "surprise": 0.3,
+        "gratitude": 0.15
+      }
+    },
+    {
+      "familiarity": "known",
+      "initiative": "uninvited",
+      "context": "negative",
+      "emotions": {
+        "irritation": 0.47368421052631576,
+        "unease": 0.36842105263157887,
+        "frustration": 0.15789473684210525
+      }
+    },
+    {
+      "familiarity": "known",
+      "initiative": "requested",
+      "context": "positive",
+      "emotions": {
+        "pleased": 0.6000000000000001,
+        "happiness": 0.30000000000000004,
+        "gratitude": 0.10000000000000002
+      }
+    },
+    {
+      "familiarity": "known",
+      "initiative": "requested",
+      "context": "negative",
+      "emotions": {
+        "disappointment": 0.4,
+        "unease": 0.35,
+        "frustration": 0.25
+      }
+    }
+  ]
+}

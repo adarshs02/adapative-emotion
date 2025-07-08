@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "apology_given": [
+      "yes",
+      "no"
+    ],
+    "parent_reaction": [
+      "understanding",
+      "angry"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "apology_given": "yes",
+      "parent_reaction": "understanding",
+      "emotions": {
+        "regret": 0.7,
+        "shame": 0.25,
+        "guilt": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_given": "yes",
+      "parent_reaction": "angry",
+      "emotions": {
+        "fear": 0.4,
+        "regret": 0.35,
+        "shame": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_given": "no",
+      "parent_reaction": "understanding",
+      "emotions": {
+        "defensiveness": 0.6000000000000001,
+        "regret": 0.30000000000000004,
+        "shame": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_given": "no",
+      "parent_reaction": "angry",
+      "emotions": {
+        "fear": 0.5,
+        "defensiveness": 0.4,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_given": "yes",
+      "parent_reaction": "understanding",
+      "emotions": {
+        "regret": 0.5,
+        "shame": 0.4,
+        "guilt": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_given": "yes",
+      "parent_reaction": "angry",
+      "emotions": {
+        "fear": 0.3,
+        "anger": 0.5,
+        "regret": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_given": "no",
+      "parent_reaction": "understanding",
+      "emotions": {
+        "defensiveness": 0.6000000000000001,
+        "regret": 0.30000000000000004,
+        "shame": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_given": "no",
+      "parent_reaction": "angry",
+      "emotions": {
+        "fear": 0.4,
+        "anger": 0.5,
+        "defensiveness": 0.1
+      }
+    }
+  ]
+}

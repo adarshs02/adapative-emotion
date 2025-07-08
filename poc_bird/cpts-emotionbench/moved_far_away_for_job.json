@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "distance_from_family": [
+      "short",
+      "long"
+    ],
+    "job_satisfaction": [
+      "satisfied",
+      "dissatisfied"
+    ],
+    "family_adaptation": [
+      "easy",
+      "difficult"
+    ]
+  },
+  "cpt": [
+    {
+      "distance_from_family": "short",
+      "job_satisfaction": "satisfied",
+      "family_adaptation": "easy",
+      "emotions": {
+        "happy": 0.6000000000000001,
+        "sad": 0.30000000000000004,
+        "stressed": 0.10000000000000002
+      }
+    },
+    {
+      "distance_from_family": "short",
+      "job_satisfaction": "satisfied",
+      "family_adaptation": "difficult",
+      "emotions": {
+        "sad": 0.5789473684210527,
+        "stressed": 0.36842105263157887,
+        "angry": 0.05263157894736842
+      }
+    },
+    {
+      "distance_from_family": "short",
+      "job_satisfaction": "dissatisfied",
+      "family_adaptation": "easy",
+      "emotions": {
+        "sad": 0.7000000000000001,
+        "angry": 0.20000000000000004,
+        "stressed": 0.10000000000000002
+      }
+    },
+    {
+      "distance_from_family": "short",
+      "job_satisfaction": "dissatisfied",
+      "family_adaptation": "difficult",
+      "emotions": {
+        "sad": 0.8,
+        "angry": 0.15,
+        "stressed": 0.05
+      }
+    },
+    {
+      "distance_from_family": "long",
+      "job_satisfaction": "satisfied",
+      "family_adaptation": "easy",
+      "emotions": {
+        "sad": 0.4,
+        "stressed": 0.45,
+        "happy": 0.15
+      }
+    },
+    {
+      "distance_from_family": "long",
+      "job_satisfaction": "satisfied",
+      "family_adaptation": "difficult",
+      "emotions": {
+        "sad": 0.5789473684210527,
+        "stressed": 0.36842105263157887,
+        "angry": 0.05263157894736842
+      }
+    },
+    {
+      "distance_from_family": "long",
+      "job_satisfaction": "dissatisfied",
+      "family_adaptation": "easy",
+      "emotions": {
+        "sad": 0.65,
+        "angry": 0.25,
+        "stressed": 0.1
+      }
+    },
+    {
+      "distance_from_family": "long",
+      "job_satisfaction": "dissatisfied",
+      "family_adaptation": "difficult",
+      "emotions": {
+        "sad": 0.75,
+        "angry": 0.15,
+        "stressed": 0.1
+      }
+    }
+  ]
+}

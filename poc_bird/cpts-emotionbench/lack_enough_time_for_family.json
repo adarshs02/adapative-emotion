@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "effort_made": [
+      "high",
+      "low"
+    ],
+    "time_left_for_self": [
+      "enough",
+      "not_enough"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "effort_made": "high",
+      "time_left_for_self": "enough",
+      "offence_history": "first_time",
+      "emotions": {
+        "happy": 0.6000000000000001,
+        "relieved": 0.30000000000000004,
+        "guilty": 0.10000000000000002
+      }
+    },
+    {
+      "effort_made": "high",
+      "time_left_for_self": "not_enough",
+      "offence_history": "first_time",
+      "emotions": {
+        "stressed": 0.5789473684210527,
+        "frustrated": 0.36842105263157887,
+        "disappointed": 0.05263157894736842
+      }
+    },
+    {
+      "effort_made": "high",
+      "time_left_for_self": "enough",
+      "offence_history": "repeated",
+      "emotions": {
+        "angry": 0.6842105263157895,
+        "regretful": 0.2631578947368421,
+        "guilty": 0.05263157894736842
+      }
+    },
+    {
+      "effort_made": "high",
+      "time_left_for_self": "not_enough",
+      "offence_history": "repeated",
+      "emotions": {
+        "angry": 0.7000000000000001,
+        "stressed": 0.20000000000000004,
+        "frustrated": 0.10000000000000002
+      }
+    },
+    {
+      "effort_made": "low",
+      "time_left_for_self": "enough",
+      "offence_history": "first_time",
+      "emotions": {
+        "relieved": 0.47368421052631576,
+        "guilty": 0.36842105263157887,
+        "disappointed": 0.15789473684210525
+      }
+    },
+    {
+      "effort_made": "low",
+      "time_left_for_self": "not_enough",
+      "offence_history": "first_time",
+      "emotions": {
+        "stressed": 0.6000000000000001,
+        "frustrated": 0.30000000000000004,
+        "disappointed": 0.10000000000000002
+      }
+    },
+    {
+      "effort_made": "low",
+      "time_left_for_self": "enough",
+      "offence_history": "repeated",
+      "emotions": {
+        "regretful": 0.5,
+        "angry": 0.35,
+        "guilty": 0.15
+      }
+    },
+    {
+      "effort_made": "low",
+      "time_left_for_self": "not_enough",
+      "offence_history": "repeated",
+      "emotions": {
+        "angry": 0.6842105263157895,
+        "stressed": 0.2631578947368421,
+        "frustrated": 0.05263157894736842
+      }
+    }
+  ]
+}

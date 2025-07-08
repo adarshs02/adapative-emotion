@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "relationship",
-      "values": [
-        "close",
-        "distant"
-      ]
-    },
-    {
-      "name": "urgency",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "message_importance": [
+      "low",
+      "high"
+    ],
+    "recipient_response": [
+      "apologetic",
+      "angry"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "relationship": "close",
-      "urgency": "low",
+      "message_importance": "low",
+      "recipient_response": "apologetic",
       "emotions": {
-        "shame": 0.7,
-        "relief": 0.3,
-        "frustration": 0.0
+        "relief": 0.8,
+        "embarrassment": 0.15,
+        "anxiety": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "relationship": "close",
-      "urgency": "high",
+      "message_importance": "low",
+      "recipient_response": "angry",
       "emotions": {
-        "shame": 0.6,
-        "relief": 0.3,
+        "surprise": 0.6,
+        "embarrassment": 0.3,
         "anxiety": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "relationship": "distant",
-      "urgency": "low",
+      "message_importance": "high",
+      "recipient_response": "apologetic",
       "emotions": {
-        "relief": 0.8,
-        "shame": 0.2,
-        "frustration": 0.0
+        "gratitude": 0.7,
+        "relief": 0.2,
+        "anxiety": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "relationship": "distant",
-      "urgency": "high",
+      "message_importance": "high",
+      "recipient_response": "angry",
       "emotions": {
-        "anxiety": 0.5,
-        "relief": 0.4,
-        "shame": 0.1
+        "surprise": 0.6,
+        "anxiety": 0.3,
+        "fear": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "relationship": "close",
-      "urgency": "low",
+      "message_importance": "low",
+      "recipient_response": "apologetic",
       "emotions": {
-        "frustration": 0.6,
-        "shame": 0.3,
-        "anger": 0.1
+        "relief": 0.5,
+        "embarrassment": 0.4,
+        "anxiety": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "relationship": "close",
-      "urgency": "high",
+      "message_importance": "low",
+      "recipient_response": "angry",
       "emotions": {
-        "anger": 0.7,
-        "frustration": 0.2,
-        "shame": 0.1
+        "regret": 0.7,
+        "anger": 0.25,
+        "anxiety": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "relationship": "distant",
-      "urgency": "low",
+      "message_importance": "high",
+      "recipient_response": "apologetic",
       "emotions": {
-        "anger": 0.8,
-        "frustration": 0.1,
-        "relief": 0.1
+        "gratitude": 0.5,
+        "relief": 0.35,
+        "anxiety": 0.15
       }
     },
     {
       "offence_history": "repeated",
-      "relationship": "distant",
-      "urgency": "high",
+      "message_importance": "high",
+      "recipient_response": "angry",
       "emotions": {
-        "anger": 0.9,
-        "frustration": 0.08,
-        "shame": 0.02
+        "regret": 0.7,
+        "anger": 0.25,
+        "fear": 0.05
       }
     }
   ]

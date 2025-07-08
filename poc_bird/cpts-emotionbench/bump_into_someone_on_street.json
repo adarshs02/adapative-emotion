@@ -1,0 +1,105 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "apology_given": [
+      "no",
+      "yes"
+    ],
+    "other_party_reaction": [
+      "indifferent",
+      "angry"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "apology_given": "no",
+      "other_party_reaction": "indifferent",
+      "emotions": {
+        "surprise": 0.6,
+        "embarrassment": 0.35,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_given": "yes",
+      "other_party_reaction": "indifferent",
+      "emotions": {
+        "relief": 0.7,
+        "gratitude": 0.25,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_given": "no",
+      "other_party_reaction": "angry",
+      "emotions": {
+        "anxiety": 0.55,
+        "regret": 0.175,
+        "fear": 0.225,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_given": "yes",
+      "other_party_reaction": "angry",
+      "emotions": {
+        "regret": 0.6499999999999999,
+        "apology_accepted": 0.125,
+        "shame": 0.025,
+        "anxiety": 0.15,
+        "apology_regret": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_given": "no",
+      "other_party_reaction": "indifferent",
+      "emotions": {
+        "frustration": 0.6,
+        "embarrassment": 0.35,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_given": "yes",
+      "other_party_reaction": "indifferent",
+      "emotions": {
+        "relief": 0.7,
+        "gratitude": 0.25,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_given": "no",
+      "other_party_reaction": "angry",
+      "emotions": {
+        "anger": 0.7,
+        "regret": 0.175,
+        "fear": 0.025,
+        "frustration": 0.075,
+        "anxiety": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_given": "yes",
+      "other_party_reaction": "angry",
+      "emotions": {
+        "regret": 0.725,
+        "apology_accepted": 0.125,
+        "shame": 0.025,
+        "anxiety": 0.1,
+        "fear": 0.025
+      }
+    }
+  ]
+}

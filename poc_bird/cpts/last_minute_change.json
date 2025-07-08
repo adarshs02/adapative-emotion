@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "communication_style",
-      "values": [
-        "open",
-        "closed"
-      ]
-    },
-    {
-      "name": "urgency",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "Preparation_level": [
+      "Well_prepared",
+      "Not_well_prepared"
+    ],
+    "Flexibility": [
+      "Flexible",
+      "Inflexible"
+    ],
+    "Expectation": [
+      "Expected",
+      "Unexpected"
+    ]
+  },
   "cpt": [
     {
-      "offence_history": "first_time",
-      "communication_style": "open",
-      "urgency": "low",
+      "Preparation_level": "Well_prepared",
+      "Flexibility": "Flexible",
+      "Expectation": "Expected",
       "emotions": {
-        "frustration": 0.6,
-        "relief": 0.4,
-        "excitement": 0.0
+        "Contentment": 0.6,
+        "Frustration": 0.3,
+        "Relief": 0.1
       }
     },
     {
-      "offence_history": "first_time",
-      "communication_style": "open",
-      "urgency": "high",
+      "Preparation_level": "Well_prepared",
+      "Flexibility": "Flexible",
+      "Expectation": "Unexpected",
       "emotions": {
-        "frustration": 0.4,
-        "relief": 0.3,
-        "excitement": 0.3
+        "Surprise": 0.4,
+        "Disappointment": 0.35,
+        "Excitement": 0.25
       }
     },
     {
-      "offence_history": "first_time",
-      "communication_style": "closed",
-      "urgency": "low",
+      "Preparation_level": "Well_prepared",
+      "Flexibility": "Inflexible",
+      "Expectation": "Expected",
       "emotions": {
-        "frustration": 0.5,
-        "relief": 0.3,
-        "excitement": 0.2
+        "Anger": 0.5,
+        "Frustration": 0.4,
+        "Disappointment": 0.1
       }
     },
     {
-      "offence_history": "first_time",
-      "communication_style": "closed",
-      "urgency": "high",
+      "Preparation_level": "Well_prepared",
+      "Flexibility": "Inflexible",
+      "Expectation": "Unexpected",
       "emotions": {
-        "frustration": 0.7,
-        "relief": 0.2,
-        "excitement": 0.1
+        "Confusion": 0.4,
+        "Surprise": 0.3,
+        "Anger": 0.3
       }
     },
     {
-      "offence_history": "repeated",
-      "communication_style": "open",
-      "urgency": "low",
+      "Preparation_level": "Not_well_prepared",
+      "Flexibility": "Flexible",
+      "Expectation": "Expected",
       "emotions": {
-        "anger": 0.6,
-        "frustration": 0.3,
-        "relief": 0.1
+        "Relief": 0.3,
+        "Frustration": 0.4,
+        "Contentment": 0.3
       }
     },
     {
-      "offence_history": "repeated",
-      "communication_style": "open",
-      "urgency": "high",
+      "Preparation_level": "Not_well_prepared",
+      "Flexibility": "Flexible",
+      "Expectation": "Unexpected",
       "emotions": {
-        "anger": 0.8,
-        "frustration": 0.2,
-        "relief": 0.0
+        "Surprise": 0.5,
+        "Excitement": 0.3,
+        "Relief": 0.2
       }
     },
     {
-      "offence_history": "repeated",
-      "communication_style": "closed",
-      "urgency": "low",
+      "Preparation_level": "Not_well_prepared",
+      "Flexibility": "Inflexible",
+      "Expectation": "Expected",
       "emotions": {
-        "anger": 0.7,
-        "frustration": 0.2,
-        "relief": 0.1
+        "Anger": 0.6,
+        "Frustration": 0.3,
+        "Disappointment": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "communication_style": "closed",
-      "urgency": "high",
+      "Preparation_level": "Not_well_prepared",
+      "Flexibility": "Inflexible",
+      "Expectation": "Unexpected",
       "emotions": {
-        "anger": 0.9,
-        "frustration": 0.1,
-        "relief": 0.0
+        "Confusion": 0.4,
+        "Surprise": 0.3,
+        "Anger": 0.3
       }
     }
   ]

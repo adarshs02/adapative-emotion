@@ -25,11 +25,11 @@ OUTPUT --- return ONE JSON object, nothing else.
 
 JSON SPEC
 {{
-  "factors":[
-    {{"name":"<factor-1>","values":["<v1>","<v2>"]}},
-    {{"name":"<factor-2>","values":["<v1>","<v2>"]}},
-    {{"name":"<factor-3>","values":["<v1>","<v2>"]}}
-  ],
+  "factors": {{
+    "<factor-1>": ["<v1>", "<v2>"],
+    "<factor-2>": ["<v1>", "<v2>"],
+    "<factor-3>": ["<v1>", "<v2>"]
+  }},
   "cpt":[
     {{"<factor-1>":"v1","<factor-2>":"v1","<factor-3>":"v1", "emotions": {{"<emotion-1>": 0.50, "<emotion-2>": 0.45, "<emotion-3>": 0.05}} }},
     … {num_rows_minus_one} more rows, every combination exactly once …
@@ -84,7 +84,15 @@ def extract_json_from_response(response_text):
         except ValueError:
              raise ValueError("No JSON object found in the response.")
 
-    return json.loads(json_str)
+    try:
+        return json.loads(json_str)
+    except json.JSONDecodeError as e:
+        print("--- ERROR: Failed to parse JSON. ---")
+        print(f"Original Error: {e}")
+        print("--- Faulty JSON String ---")
+        print(json_str)
+        print("--------------------------")
+        raise
 
 def generate_cpt(tokenizer, model, scenario: str, num_factors: int = 3):
     """
@@ -132,15 +140,30 @@ def generate_cpt(tokenizer, model, scenario: str, num_factors: int = 3):
             print(generation_only)
         return None
 
+def get_row_key(row, factor_names):
+    """Creates a canonical, hashable key from a CPT row's factor values."""
+    return tuple(sorted((f, row.get(f)) for f in factor_names))
+
+
 def main():
     """
     Main function to batch-generate CPTs for all scenarios.
+    It generates multiple samples for each scenario and averages the emotion probabilities.
     """
-    cpt_dir = "cpts"
-    scenarios_file = "scenarios.json"
+    cpt_dir = "cpts-emotionbench"
+    scenarios_file = "scenarios-emotionbench.json"
+    num_samples = 2  # Number of samples to generate per scenario
 
-    with open(scenarios_file, 'r') as f:
-        scenarios_data = json.load(f)
+    # Ensure the output directory exists
+    os.makedirs(cpt_dir, exist_ok=True)
+
+    try:
+        with open(scenarios_file, 'r') as f:
+            scenarios_data = json.load(f)
+    except FileNotFoundError:
+        print(f"Error: The file '{scenarios_file}' was not found.")
+        print("Please ensure the scenarios file is in the same directory as this script.")
+        return
 
     tokenizer, model = load_model()
 
@@ -153,16 +176,78 @@ def main():
             print(f"CPT for '{scenario_id}' already exists. Skipping.")
             continue
 
-        print(f"\n--- Generating CPT for '{scenario_id}' ---")
+        print(f"\n--- Generating {num_samples} CPT samples for '{scenario_id}' ---")
         print(f"Scenario: {scenario_desc}")
-        cpt_data = generate_cpt(tokenizer, model, scenario_desc)
 
-        if cpt_data:
+        all_cpts = []
+        for i in range(num_samples):
+            print(f"--- Generating sample {i + 1}/{num_samples} ---")
+            cpt_data = generate_cpt(tokenizer, model, scenario_desc)
+            if cpt_data and "factors" in cpt_data and "cpt" in cpt_data:
+                all_cpts.append(cpt_data)
+            else:
+                print(f"WARNING: Received invalid or empty CPT data for sample {i + 1}. Skipping sample.")
+
+        if not all_cpts:
+            print(f"Failed to generate any valid CPTs for '{scenario_id}'.")
+            continue
+
+        # --- Aggregation Step ---
+        print("--- Aggregating CPT samples ---")
+        
+        reference_cpt = all_cpts[0]
+        factor_names = list(reference_cpt["factors"].keys())
+
+        aggregated_data = {}
+
+        for cpt in all_cpts:
+            if set(factor_names) != set(cpt["factors"].keys()):
+                print(f"WARNING: Factor names in sample mismatch reference: {list(cpt['factors'].keys())}. Skipping sample.")
+                continue
+            
+            for row in cpt["cpt"]:
+                row_key = get_row_key(row, factor_names)
+                if row_key not in aggregated_data:
+                    aggregated_data[row_key] = {"emotion_sums": {}, "count": 0}
+                
+                aggregated_data[row_key]["count"] += 1
+                for emotion, prob in row.get("emotions", {}).items():
+                    sums = aggregated_data[row_key]["emotion_sums"]
+                    sums[emotion] = sums.get(emotion, 0.0) + prob
+
+        final_cpt = {"factors": reference_cpt["factors"], "cpt": []}
+        
+        for ref_row in reference_cpt["cpt"]:
+            row_key = get_row_key(ref_row, factor_names)
+            
+            if row_key in aggregated_data:
+                data = aggregated_data[row_key]
+                count = data["count"]
+                
+                if count == 0: continue
+
+                averaged_emotions = {
+                    emotion: total_prob / count
+                    for emotion, total_prob in data["emotion_sums"].items()
+                }
+
+                total_prob = sum(averaged_emotions.values())
+                if total_prob > 0:
+                    averaged_emotions = {e: p / total_prob for e, p in averaged_emotions.items()}
+                
+                new_row = dict(ref_row)
+                new_row["emotions"] = averaged_emotions
+                final_cpt["cpt"].append(new_row)
+            else:
+                print(f"WARNING: Row {row_key} from reference CPT not found in aggregated data. Using original.")
+                final_cpt["cpt"].append(ref_row)
+
+        if final_cpt["cpt"]:
             with open(output_filename, "w") as f:
-                json.dump(cpt_data, f, indent=2)
-            print(f"Successfully generated and saved CPT to {output_filename}")
+                json.dump(final_cpt, f, indent=2)
+            print(f"Successfully generated and saved aggregated CPT to {output_filename}")
         else:
-            print(f"Failed to generate CPT for '{scenario_id}'.")
+            print(f"Failed to generate aggregated CPT for '{scenario_id}'.")
 
 if __name__ == "__main__":
     main()

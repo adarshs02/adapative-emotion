@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "acquaintance_status": [
+      "close",
+      "casual"
+    ],
+    "vacation_cost_perception": [
+      "expensive",
+      "affordable"
+    ],
+    "vacation_experience_expectation": [
+      "high",
+      "low"
+    ]
+  },
+  "cpt": [
+    {
+      "acquaintance_status": "close",
+      "vacation_cost_perception": "expensive",
+      "vacation_experience_expectation": "high",
+      "emotions": {
+        "jealousy": 0.2,
+        "happiness": 0.5,
+        "surprise": 0.3
+      }
+    },
+    {
+      "acquaintance_status": "close",
+      "vacation_cost_perception": "expensive",
+      "vacation_experience_expectation": "low",
+      "emotions": {
+        "envy": 0.3,
+        "disappointment": 0.5,
+        "admiration": 0.2
+      }
+    },
+    {
+      "acquaintance_status": "close",
+      "vacation_cost_perception": "affordable",
+      "vacation_experience_expectation": "high",
+      "emotions": {
+        "happiness": 0.4,
+        "joy": 0.4,
+        "admiration": 0.2
+      }
+    },
+    {
+      "acquaintance_status": "close",
+      "vacation_cost_perception": "affordable",
+      "vacation_experience_expectation": "low",
+      "emotions": {
+        "disappointment": 0.4,
+        "frustration": 0.3,
+        "sadness": 0.3
+      }
+    },
+    {
+      "acquaintance_status": "casual",
+      "vacation_cost_perception": "expensive",
+      "vacation_experience_expectation": "high",
+      "emotions": {
+        "impression": 0.3,
+        "happiness": 0.4,
+        "envy": 0.3
+      }
+    },
+    {
+      "acquaintance_status": "casual",
+      "vacation_cost_perception": "expensive",
+      "vacation_experience_expectation": "low",
+      "emotions": {
+        "indifference": 0.3,
+        "disappointment": 0.4,
+        "surprise": 0.3
+      }
+    },
+    {
+      "acquaintance_status": "casual",
+      "vacation_cost_perception": "affordable",
+      "vacation_experience_expectation": "high",
+      "emotions": {
+        "happiness": 0.3,
+        "impression": 0.4,
+        "joy": 0.3
+      }
+    },
+    {
+      "acquaintance_status": "casual",
+      "vacation_cost_perception": "affordable",
+      "vacation_experience_expectation": "low",
+      "emotions": {
+        "disappointment": 0.4,
+        "frustration": 0.3,
+        "indifference": 0.3
+      }
+    }
+  ]
+}

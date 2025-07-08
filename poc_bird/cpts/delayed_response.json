@@ -1,105 +1,96 @@
 {
-  "factors": [
-    {
-      "name": "response_importance",
-      "values": [
-        "low",
-        "high"
-      ]
-    },
-    {
-      "name": "response_delay",
-      "values": [
-        "short",
-        "long"
-      ]
-    },
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    }
-  ],
+  "factors": {
+    "time_waited": [
+      "short",
+      "long"
+    ],
+    "importance_response": [
+      "low",
+      "high"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
   "cpt": [
     {
-      "response_importance": "low",
-      "response_delay": "short",
+      "time_waited": "short",
+      "importance_response": "low",
       "offence_history": "first_time",
       "emotions": {
-        "frustration": 0.8,
-        "relief": 0.2,
-        "excitement": 0.0
-      }
-    },
-    {
-      "response_importance": "low",
-      "response_delay": "short",
-      "offence_history": "repeated",
-      "emotions": {
-        "frustration": 0.7,
-        "relief": 0.2,
-        "excitement": 0.1
-      }
-    },
-    {
-      "response_importance": "low",
-      "response_delay": "long",
-      "offence_history": "first_time",
-      "emotions": {
-        "frustration": 0.6,
-        "relief": 0.3,
-        "excitement": 0.1
-      }
-    },
-    {
-      "response_importance": "low",
-      "response_delay": "long",
-      "offence_history": "repeated",
-      "emotions": {
-        "frustration": 0.8,
-        "relief": 0.1,
-        "excitement": 0.1
-      }
-    },
-    {
-      "response_importance": "high",
-      "response_delay": "short",
-      "offence_history": "first_time",
-      "emotions": {
-        "frustration": 0.4,
-        "relief": 0.3,
-        "anxiety": 0.3
-      }
-    },
-    {
-      "response_importance": "high",
-      "response_delay": "short",
-      "offence_history": "repeated",
-      "emotions": {
-        "frustration": 0.7,
-        "relief": 0.2,
+        "relief": 0.6,
+        "frustration": 0.3,
         "anxiety": 0.1
       }
     },
     {
-      "response_importance": "high",
-      "response_delay": "long",
-      "offence_history": "first_time",
+      "time_waited": "short",
+      "importance_response": "low",
+      "offence_history": "repeated",
       "emotions": {
-        "frustration": 0.3,
-        "relief": 0.2,
-        "anxiety": 0.5
+        "frustration": 0.7,
+        "anxiety": 0.2,
+        "anger": 0.1
       }
     },
     {
-      "response_importance": "high",
-      "response_delay": "long",
+      "time_waited": "short",
+      "importance_response": "high",
+      "offence_history": "first_time",
+      "emotions": {
+        "anticipation": 0.4,
+        "anxiety": 0.5,
+        "relief": 0.1
+      }
+    },
+    {
+      "time_waited": "short",
+      "importance_response": "high",
       "offence_history": "repeated",
       "emotions": {
-        "frustration": 0.8,
-        "relief": 0.1,
+        "anxiety": 0.6,
+        "fear": 0.3,
+        "anger": 0.1
+      }
+    },
+    {
+      "time_waited": "long",
+      "importance_response": "low",
+      "offence_history": "first_time",
+      "emotions": {
+        "frustration": 0.7,
+        "anxiety": 0.2,
+        "boredom": 0.1
+      }
+    },
+    {
+      "time_waited": "long",
+      "importance_response": "low",
+      "offence_history": "repeated",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.15,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "time_waited": "long",
+      "importance_response": "high",
+      "offence_history": "first_time",
+      "emotions": {
+        "anxiety": 0.6,
+        "fear": 0.3,
+        "anticipation": 0.1
+      }
+    },
+    {
+      "time_waited": "long",
+      "importance_response": "high",
+      "offence_history": "repeated",
+      "emotions": {
+        "fear": 0.7,
+        "anger": 0.2,
         "anxiety": 0.1
       }
     }

@@ -1,0 +1,107 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "friend_response": [
+      "indifferent",
+      "grateful"
+    ],
+    "self_expectation": [
+      "met",
+      "unmet"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "friend_response": "indifferent",
+      "self_expectation": "met",
+      "emotions": {
+        "contentment": 0.35,
+        "disappointment": 0.275,
+        "frustration": 0.07500000000000001,
+        "happiness": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_response": "indifferent",
+      "self_expectation": "unmet",
+      "emotions": {
+        "disappointment": 0.75,
+        "frustration": 0.2,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_response": "grateful",
+      "self_expectation": "met",
+      "emotions": {
+        "contentment": 0.475,
+        "pride": 0.095,
+        "happiness": 0.405,
+        "relief": 0.025
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_response": "grateful",
+      "self_expectation": "unmet",
+      "emotions": {
+        "disappointment": 0.25000000000000006,
+        "frustration": 0.15000000000000002,
+        "anger": 0.30000000000000004,
+        "surprise": 0.22500000000000003,
+        "relief": 0.07500000000000001
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_response": "indifferent",
+      "self_expectation": "met",
+      "emotions": {
+        "contentment": 0.2,
+        "disappointment": 0.45,
+        "frustration": 0.2,
+        "happiness": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_response": "indifferent",
+      "self_expectation": "unmet",
+      "emotions": {
+        "disappointment": 0.625,
+        "frustration": 0.3,
+        "anger": 0.07500000000000001
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_response": "grateful",
+      "self_expectation": "met",
+      "emotions": {
+        "contentment": 0.2750000000000001,
+        "pride": 0.30000000000000004,
+        "happiness": 0.32500000000000007,
+        "relief": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_response": "grateful",
+      "self_expectation": "unmet",
+      "emotions": {
+        "disappointment": 0.1,
+        "frustration": 0.225,
+        "anger": 0.175,
+        "surprise": 0.25,
+        "gratitude": 0.175,
+        "relief": 0.075
+      }
+    }
+  ]
+}

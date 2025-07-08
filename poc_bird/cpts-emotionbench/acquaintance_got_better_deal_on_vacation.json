@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "vacation_cost_comparison": [
+      "similar_cost",
+      "different_cost"
+    ],
+    "social_media_sharing": [
+      "shared",
+      "did_not_share"
+    ],
+    "friend_vacation_cost": [
+      "similar_price",
+      "lower_price"
+    ]
+  },
+  "cpt": [
+    {
+      "vacation_cost_comparison": "similar_cost",
+      "social_media_sharing": "shared",
+      "friend_vacation_cost": "similar_price",
+      "emotions": {
+        "happy": 0.7000000000000001,
+        "jealous": 0.20000000000000004,
+        "curious": 0.10000000000000002
+      }
+    },
+    {
+      "vacation_cost_comparison": "similar_cost",
+      "social_media_sharing": "shared",
+      "friend_vacation_cost": "lower_price",
+      "emotions": {
+        "happy": 0.5,
+        "surprised": 0.35,
+        "disappointed": 0.15
+      }
+    },
+    {
+      "vacation_cost_comparison": "different_cost",
+      "social_media_sharing": "shared",
+      "friend_vacation_cost": "similar_price",
+      "emotions": {
+        "happy": 0.6000000000000001,
+        "proud": 0.30000000000000004,
+        "envious": 0.10000000000000002
+      }
+    },
+    {
+      "vacation_cost_comparison": "different_cost",
+      "social_media_sharing": "shared",
+      "friend_vacation_cost": "lower_price",
+      "emotions": {
+        "happy": 0.4,
+        "grateful": 0.35,
+        "resentful": 0.25
+      }
+    },
+    {
+      "vacation_cost_comparison": "similar_cost",
+      "social_media_sharing": "did_not_share",
+      "friend_vacation_cost": "similar_price",
+      "emotions": {
+        "happy": 0.8,
+        "jealous": 0.15,
+        "curious": 0.05
+      }
+    },
+    {
+      "vacation_cost_comparison": "similar_cost",
+      "social_media_sharing": "did_not_share",
+      "friend_vacation_cost": "lower_price",
+      "emotions": {
+        "happy": 0.6000000000000001,
+        "surprised": 0.30000000000000004,
+        "disappointed": 0.10000000000000002
+      }
+    },
+    {
+      "vacation_cost_comparison": "different_cost",
+      "social_media_sharing": "did_not_share",
+      "friend_vacation_cost": "similar_price",
+      "emotions": {
+        "happy": 0.7000000000000001,
+        "proud": 0.20000000000000004,
+        "envious": 0.10000000000000002
+      }
+    },
+    {
+      "vacation_cost_comparison": "different_cost",
+      "social_media_sharing": "did_not_share",
+      "friend_vacation_cost": "lower_price",
+      "emotions": {
+        "happy": 0.4,
+        "grateful": 0.35,
+        "resentful": 0.25
+      }
+    }
+  ]
+}

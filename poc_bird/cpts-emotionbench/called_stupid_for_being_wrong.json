@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "support_system": [
+      "none",
+      "present"
+    ],
+    "self_esteem": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "support_system": "none",
+      "self_esteem": "low",
+      "emotions": {
+        "shame": 0.6000000000000001,
+        "anger": 0.30000000000000004,
+        "frustration": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_system": "none",
+      "self_esteem": "high",
+      "emotions": {
+        "surprise": 0.35000000000000003,
+        "confusion": 0.30000000000000004,
+        "disappointment": 0.35000000000000003
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_system": "present",
+      "self_esteem": "low",
+      "emotions": {
+        "shame": 0.5,
+        "anger": 0.38888888888888884,
+        "frustration": 0.11111111111111112
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_system": "present",
+      "self_esteem": "high",
+      "emotions": {
+        "relief": 0.4,
+        "surprise": 0.3,
+        "gratitude": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_system": "none",
+      "self_esteem": "low",
+      "emotions": {
+        "shame": 0.7000000000000001,
+        "anger": 0.20000000000000004,
+        "frustration": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_system": "none",
+      "self_esteem": "high",
+      "emotions": {
+        "anger": 0.55,
+        "frustration": 0.3,
+        "disappointment": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_system": "present",
+      "self_esteem": "low",
+      "emotions": {
+        "shame": 0.65,
+        "anger": 0.25,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_system": "present",
+      "self_esteem": "high",
+      "emotions": {
+        "anger": 0.6000000000000001,
+        "determination": 0.30000000000000004,
+        "frustration": 0.10000000000000002
+      }
+    }
+  ]
+}

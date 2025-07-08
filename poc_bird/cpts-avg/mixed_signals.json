@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "history_of_mixed_signals": [
+      "first_time",
+      "repeated"
+    ],
+    "communication_clarity": [
+      "clear",
+      "unclear"
+    ],
+    "consistency_of_actions": [
+      "consistent",
+      "inconsistent"
+    ]
+  },
+  "cpt": [
+    {
+      "history_of_mixed_signals": "first_time",
+      "communication_clarity": "clear",
+      "consistency_of_actions": "consistent",
+      "emotions": {
+        "confusion": 0.4,
+        "hope": 0.35,
+        "frustration": 0.25
+      }
+    },
+    {
+      "history_of_mixed_signals": "first_time",
+      "communication_clarity": "clear",
+      "consistency_of_actions": "inconsistent",
+      "emotions": {
+        "confusion": 0.5,
+        "frustration": 0.35,
+        "anxiety": 0.15
+      }
+    },
+    {
+      "history_of_mixed_signals": "first_time",
+      "communication_clarity": "unclear",
+      "consistency_of_actions": "consistent",
+      "emotions": {
+        "confusion": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "anxiety": 0.10000000000000002
+      }
+    },
+    {
+      "history_of_mixed_signals": "first_time",
+      "communication_clarity": "unclear",
+      "consistency_of_actions": "inconsistent",
+      "emotions": {
+        "confusion": 0.7,
+        "frustration": 0.25,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "history_of_mixed_signals": "repeated",
+      "communication_clarity": "clear",
+      "consistency_of_actions": "consistent",
+      "emotions": {
+        "frustration": 0.5789473684210527,
+        "disappointment": 0.36842105263157887,
+        "anger": 0.05263157894736842
+      }
+    },
+    {
+      "history_of_mixed_signals": "repeated",
+      "communication_clarity": "clear",
+      "consistency_of_actions": "inconsistent",
+      "emotions": {
+        "frustration": 0.6000000000000001,
+        "disappointment": 0.30000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "history_of_mixed_signals": "repeated",
+      "communication_clarity": "unclear",
+      "consistency_of_actions": "consistent",
+      "emotions": {
+        "frustration": 0.65,
+        "disappointment": 0.25,
+        "anger": 0.1
+      }
+    },
+    {
+      "history_of_mixed_signals": "repeated",
+      "communication_clarity": "unclear",
+      "consistency_of_actions": "inconsistent",
+      "emotions": {
+        "frustration": 0.7000000000000001,
+        "disappointment": 0.20000000000000004,
+        "anger": 0.10000000000000002
+      }
+    }
+  ]
+}

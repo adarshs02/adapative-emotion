@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "communication_context": [
+      "professional",
+      "personal"
+    ],
+    "spouse_awareness": [
+      "aware",
+      "unaware"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "communication_context": "professional",
+      "spouse_awareness": "aware",
+      "emotions": {
+        "trust": 0.9,
+        "suspicion": 0.05,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_context": "professional",
+      "spouse_awareness": "unaware",
+      "emotions": {
+        "surprise": 0.7,
+        "suspicion": 0.25,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_context": "personal",
+      "spouse_awareness": "aware",
+      "emotions": {
+        "relief": 0.6000000000000001,
+        "worry": 0.30000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_context": "personal",
+      "spouse_awareness": "unaware",
+      "emotions": {
+        "surprise": 0.8,
+        "worry": 0.15,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_context": "professional",
+      "spouse_awareness": "aware",
+      "emotions": {
+        "trust": 0.2,
+        "suspicion": 0.6,
+        "anger": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_context": "professional",
+      "spouse_awareness": "unaware",
+      "emotions": {
+        "suspicion": 0.85,
+        "anger": 0.1,
+        "fear": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_context": "personal",
+      "spouse_awareness": "aware",
+      "emotions": {
+        "anger": 0.7,
+        "sadness": 0.25,
+        "fear": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_context": "personal",
+      "spouse_awareness": "unaware",
+      "emotions": {
+        "anger": 0.9,
+        "fear": 0.05,
+        "sadness": 0.05
+      }
+    }
+  ]
+}

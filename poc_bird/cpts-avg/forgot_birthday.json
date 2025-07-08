@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "apology_given": [
+      "no",
+      "yes"
+    ],
+    "preparation_level": [
+      "poor",
+      "good"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "apology_given": "no",
+      "preparation_level": "poor",
+      "emotions": {
+        "regret": 0.7,
+        "embarrassment": 0.25,
+        "anger_towards_self": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_given": "no",
+      "preparation_level": "good",
+      "emotions": {
+        "regret": 0.6000000000000001,
+        "embarrassment": 0.30000000000000004,
+        "anger_towards_self": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_given": "yes",
+      "preparation_level": "poor",
+      "emotions": {
+        "relief": 0.5,
+        "guilt": 0.4,
+        "embarrassment": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_given": "yes",
+      "preparation_level": "good",
+      "emotions": {
+        "relief": 0.6000000000000001,
+        "guilt": 0.30000000000000004,
+        "gratitude": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_given": "no",
+      "preparation_level": "poor",
+      "emotions": {
+        "anger_towards_self": 0.7,
+        "regret": 0.25,
+        "embarrassment": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_given": "no",
+      "preparation_level": "good",
+      "emotions": {
+        "anger_towards_self": 0.6000000000000001,
+        "regret": 0.30000000000000004,
+        "embarrassment": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_given": "yes",
+      "preparation_level": "poor",
+      "emotions": {
+        "anger_towards_self": 0.5,
+        "regret": 0.4,
+        "guilt": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_given": "yes",
+      "preparation_level": "good",
+      "emotions": {
+        "anger_towards_self": 0.6000000000000001,
+        "regret": 0.30000000000000004,
+        "gratitude": 0.10000000000000002
+      }
+    }
+  ]
+}

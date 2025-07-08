@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "test_results",
-      "values": [
-        "positive",
-        "negative"
-      ]
-    },
-    {
-      "name": "medical_history",
-      "values": [
-        "good",
-        "bad"
-      ]
-    },
-    {
-      "name": "previous_diagnosis",
-      "values": [
-        "yes",
-        "no"
-      ]
-    }
-  ],
+  "factors": {
+    "test_type": [
+      "routine",
+      "critical"
+    ],
+    "test_results_wait_time": [
+      "short",
+      "long"
+    ],
+    "previous_health_status": [
+      "good",
+      "poor"
+    ]
+  },
   "cpt": [
     {
-      "test_results": "positive",
-      "medical_history": "good",
-      "previous_diagnosis": "yes",
-      "emotions": {
-        "relief": 0.7,
-        "anxiety": 0.2,
-        "fear": 0.1
-      }
-    },
-    {
-      "test_results": "positive",
-      "medical_history": "good",
-      "previous_diagnosis": "no",
-      "emotions": {
-        "relief": 0.8,
-        "anxiety": 0.1,
-        "hope": 0.1
-      }
-    },
-    {
-      "test_results": "positive",
-      "medical_history": "bad",
-      "previous_diagnosis": "yes",
+      "test_type": "routine",
+      "test_results_wait_time": "short",
+      "previous_health_status": "good",
       "emotions": {
         "relief": 0.6,
         "anxiety": 0.3,
+        "optimism": 0.1
+      }
+    },
+    {
+      "test_type": "routine",
+      "test_results_wait_time": "short",
+      "previous_health_status": "poor",
+      "emotions": {
+        "worry": 0.4,
+        "anxiety": 0.5,
         "fear": 0.1
       }
     },
     {
-      "test_results": "positive",
-      "medical_history": "bad",
-      "previous_diagnosis": "no",
+      "test_type": "routine",
+      "test_results_wait_time": "long",
+      "previous_health_status": "good",
       "emotions": {
-        "relief": 0.7,
-        "anxiety": 0.2,
-        "hope": 0.1
+        "anxiety": 0.7,
+        "impatience": 0.2,
+        "worry": 0.1
       }
     },
     {
-      "test_results": "negative",
-      "medical_history": "good",
-      "previous_diagnosis": "yes",
+      "test_type": "routine",
+      "test_results_wait_time": "long",
+      "previous_health_status": "poor",
       "emotions": {
-        "fear": 0.8,
-        "anxiety": 0.2,
-        "shock": 0.0
+        "fear": 0.55,
+        "anxiety": 0.35,
+        "worry": 0.1
       }
     },
     {
-      "test_results": "negative",
-      "medical_history": "good",
-      "previous_diagnosis": "no",
+      "test_type": "critical",
+      "test_results_wait_time": "short",
+      "previous_health_status": "good",
+      "emotions": {
+        "anxiety": 0.8,
+        "fear": 0.15,
+        "worry": 0.05
+      }
+    },
+    {
+      "test_type": "critical",
+      "test_results_wait_time": "short",
+      "previous_health_status": "poor",
       "emotions": {
         "fear": 0.7,
-        "anxiety": 0.2,
-        "shock": 0.1
+        "anxiety": 0.25,
+        "despair": 0.05
       }
     },
     {
-      "test_results": "negative",
-      "medical_history": "bad",
-      "previous_diagnosis": "yes",
+      "test_type": "critical",
+      "test_results_wait_time": "long",
+      "previous_health_status": "good",
       "emotions": {
-        "fear": 0.9,
-        "anxiety": 0.1,
-        "shock": 0.0
+        "anxiety": 0.9,
+        "fear": 0.05,
+        "despair": 0.05
       }
     },
     {
-      "test_results": "negative",
-      "medical_history": "bad",
-      "previous_diagnosis": "no",
+      "test_type": "critical",
+      "test_results_wait_time": "long",
+      "previous_health_status": "poor",
       "emotions": {
-        "fear": 0.8,
-        "anxiety": 0.2,
-        "shock": 0.0
+        "fear": 0.85,
+        "despair": 0.1,
+        "anxiety": 0.05
       }
     }
   ]

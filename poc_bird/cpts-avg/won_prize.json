@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "past_wins": [
+      "first_win",
+      "repeated_win"
+    ],
+    "expectation": [
+      "unexpected",
+      "expected"
+    ],
+    "financial_needs": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "past_wins": "first_win",
+      "expectation": "unexpected",
+      "financial_needs": "low",
+      "emotions": {
+        "surprise": 0.8,
+        "happiness": 0.15,
+        "disbelief": 0.05
+      }
+    },
+    {
+      "past_wins": "first_win",
+      "expectation": "unexpected",
+      "financial_needs": "high",
+      "emotions": {
+        "happiness": 0.7000000000000001,
+        "relief": 0.20000000000000004,
+        "gratitude": 0.10000000000000002
+      }
+    },
+    {
+      "past_wins": "first_win",
+      "expectation": "expected",
+      "financial_needs": "low",
+      "emotions": {
+        "happiness": 0.6000000000000001,
+        "surprise": 0.30000000000000004,
+        "pride": 0.10000000000000002
+      }
+    },
+    {
+      "past_wins": "first_win",
+      "expectation": "expected",
+      "financial_needs": "high",
+      "emotions": {
+        "happiness": 0.5,
+        "relief": 0.35,
+        "gratitude": 0.15
+      }
+    },
+    {
+      "past_wins": "repeated_win",
+      "expectation": "unexpected",
+      "financial_needs": "low",
+      "emotions": {
+        "surprise": 0.6000000000000001,
+        "happiness": 0.30000000000000004,
+        "disbelief": 0.10000000000000002
+      }
+    },
+    {
+      "past_wins": "repeated_win",
+      "expectation": "unexpected",
+      "financial_needs": "high",
+      "emotions": {
+        "happiness": 0.65,
+        "relief": 0.25,
+        "gratitude": 0.1
+      }
+    },
+    {
+      "past_wins": "repeated_win",
+      "expectation": "expected",
+      "financial_needs": "low",
+      "emotions": {
+        "happiness": 0.5,
+        "pride": 0.35,
+        "surprise": 0.15
+      }
+    },
+    {
+      "past_wins": "repeated_win",
+      "expectation": "expected",
+      "financial_needs": "high",
+      "emotions": {
+        "happiness": 0.47368421052631576,
+        "relief": 0.36842105263157887,
+        "gratitude": 0.15789473684210525
+      }
+    }
+  ]
+}

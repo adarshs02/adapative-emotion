@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "familiarity_with_insects": [
+      "familiar",
+      "unfamiliar"
+    ],
+    "perceived_threat_level": [
+      "low",
+      "high"
+    ],
+    "personal_reaction_history": [
+      "calm",
+      "panicked"
+    ]
+  },
+  "cpt": [
+    {
+      "familiarity_with_insects": "familiar",
+      "perceived_threat_level": "low",
+      "personal_reaction_history": "calm",
+      "emotions": {
+        "disgust": 0.2,
+        "curiosity": 0.4,
+        "relief": 0.4
+      }
+    },
+    {
+      "familiarity_with_insects": "familiar",
+      "perceived_threat_level": "low",
+      "personal_reaction_history": "panicked",
+      "emotions": {
+        "fear": 0.6000000000000001,
+        "disgust": 0.30000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "familiarity_with_insects": "familiar",
+      "perceived_threat_level": "high",
+      "personal_reaction_history": "calm",
+      "emotions": {
+        "fear": 0.5,
+        "disgust": 0.4,
+        "anger": 0.1
+      }
+    },
+    {
+      "familiarity_with_insects": "familiar",
+      "perceived_threat_level": "high",
+      "personal_reaction_history": "panicked",
+      "emotions": {
+        "fear": 0.8,
+        "disgust": 0.15,
+        "anger": 0.05
+      }
+    },
+    {
+      "familiarity_with_insects": "unfamiliar",
+      "perceived_threat_level": "low",
+      "personal_reaction_history": "calm",
+      "emotions": {
+        "fear": 0.3,
+        "disgust": 0.5,
+        "curiosity": 0.2
+      }
+    },
+    {
+      "familiarity_with_insects": "unfamiliar",
+      "perceived_threat_level": "low",
+      "personal_reaction_history": "panicked",
+      "emotions": {
+        "fear": 0.6000000000000001,
+        "disgust": 0.30000000000000004,
+        "confusion": 0.10000000000000002
+      }
+    },
+    {
+      "familiarity_with_insects": "unfamiliar",
+      "perceived_threat_level": "high",
+      "personal_reaction_history": "calm",
+      "emotions": {
+        "fear": 0.5,
+        "disgust": 0.4,
+        "confusion": 0.1
+      }
+    },
+    {
+      "familiarity_with_insects": "unfamiliar",
+      "perceived_threat_level": "high",
+      "personal_reaction_history": "panicked",
+      "emotions": {
+        "fear": 0.8,
+        "disgust": 0.15,
+        "confusion": 0.05
+      }
+    }
+  ]
+}

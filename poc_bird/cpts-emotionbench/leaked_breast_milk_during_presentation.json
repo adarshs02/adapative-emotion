@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "public_exposure": [
+      "private",
+      "public"
+    ],
+    "embarrassment_level": [
+      "low",
+      "high"
+    ],
+    "work_importance": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "public_exposure": "private",
+      "embarrassment_level": "low",
+      "work_importance": "low",
+      "emotions": {
+        "relief": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "shyness": 0.10000000000000002
+      }
+    },
+    {
+      "public_exposure": "private",
+      "embarrassment_level": "low",
+      "work_importance": "high",
+      "emotions": {
+        "focus": 0.7,
+        "embarrassment": 0.25,
+        "shyness": 0.05
+      }
+    },
+    {
+      "public_exposure": "private",
+      "embarrassment_level": "high",
+      "work_importance": "low",
+      "emotions": {
+        "embarrassment": 0.8,
+        "shyness": 0.15,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "public_exposure": "private",
+      "embarrassment_level": "high",
+      "work_importance": "high",
+      "emotions": {
+        "focus": 0.6,
+        "embarrassment": 0.35,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "public_exposure": "public",
+      "embarrassment_level": "low",
+      "work_importance": "low",
+      "emotions": {
+        "shock": 0.6000000000000001,
+        "embarrassment": 0.30000000000000004,
+        "frustration": 0.10000000000000002
+      }
+    },
+    {
+      "public_exposure": "public",
+      "embarrassment_level": "low",
+      "work_importance": "high",
+      "emotions": {
+        "focus": 0.7,
+        "shock": 0.25,
+        "embarrassment": 0.05
+      }
+    },
+    {
+      "public_exposure": "public",
+      "embarrassment_level": "high",
+      "work_importance": "low",
+      "emotions": {
+        "humiliation": 0.8,
+        "anxiety": 0.15,
+        "shock": 0.05
+      }
+    },
+    {
+      "public_exposure": "public",
+      "embarrassment_level": "high",
+      "work_importance": "high",
+      "emotions": {
+        "focus": 0.6,
+        "humiliation": 0.35,
+        "anxiety": 0.05
+      }
+    }
+  ]
+}

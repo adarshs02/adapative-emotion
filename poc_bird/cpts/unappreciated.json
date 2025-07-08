@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "colleague_support",
-      "values": [
-        "low",
-        "high"
-      ]
-    },
-    {
-      "name": "communication_style",
-      "values": [
-        "direct",
-        "indirect"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "communication_with_supervisor": [
+      "open",
+      "closed"
+    ],
+    "performance_feedback": [
+      "positive",
+      "negative"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "colleague_support": "low",
-      "communication_style": "direct",
+      "communication_with_supervisor": "open",
+      "performance_feedback": "positive",
       "emotions": {
-        "frustration": 0.6,
-        "sadness": 0.3,
-        "resentment": 0.1
+        "happy": 0.3,
+        "relieved": 0.4,
+        "confident": 0.3
       }
     },
     {
       "offence_history": "first_time",
-      "colleague_support": "low",
-      "communication_style": "indirect",
+      "communication_with_supervisor": "closed",
+      "performance_feedback": "positive",
       "emotions": {
-        "frustration": 0.5,
-        "sadness": 0.4,
-        "resentment": 0.1
+        "surprised": 0.25,
+        "grateful": 0.45,
+        "anxious": 0.3
       }
     },
     {
       "offence_history": "first_time",
-      "colleague_support": "high",
-      "communication_style": "direct",
+      "communication_with_supervisor": "open",
+      "performance_feedback": "negative",
       "emotions": {
-        "frustration": 0.2,
-        "sadness": 0.6,
-        "resentment": 0.2
+        "disappointed": 0.4,
+        "frustrated": 0.5,
+        "confused": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "colleague_support": "high",
-      "communication_style": "indirect",
+      "communication_with_supervisor": "closed",
+      "performance_feedback": "negative",
       "emotions": {
-        "frustration": 0.1,
-        "sadness": 0.7,
-        "resentment": 0.2
+        "angry": 0.55,
+        "disheartened": 0.35,
+        "helpless": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "colleague_support": "low",
-      "communication_style": "direct",
+      "communication_with_supervisor": "open",
+      "performance_feedback": "positive",
       "emotions": {
-        "frustration": 0.8,
-        "sadness": 0.1,
-        "resentment": 0.1
+        "happy": 0.2,
+        "relieved": 0.4,
+        "confident": 0.4
       }
     },
     {
       "offence_history": "repeated",
-      "colleague_support": "low",
-      "communication_style": "indirect",
+      "communication_with_supervisor": "closed",
+      "performance_feedback": "positive",
       "emotions": {
-        "frustration": 0.7,
-        "sadness": 0.2,
-        "resentment": 0.1
+        "surprised": 0.2,
+        "grateful": 0.45,
+        "anxious": 0.35
       }
     },
     {
       "offence_history": "repeated",
-      "colleague_support": "high",
-      "communication_style": "direct",
+      "communication_with_supervisor": "open",
+      "performance_feedback": "negative",
       "emotions": {
-        "frustration": 0.4,
-        "sadness": 0.3,
-        "resentment": 0.3
+        "disappointed": 0.5,
+        "frustrated": 0.45,
+        "confused": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "colleague_support": "high",
-      "communication_style": "indirect",
+      "communication_with_supervisor": "closed",
+      "performance_feedback": "negative",
       "emotions": {
-        "frustration": 0.3,
-        "sadness": 0.4,
-        "resentment": 0.3
+        "angry": 0.7,
+        "disheartened": 0.25,
+        "helpless": 0.05
       }
     }
   ]

@@ -1,0 +1,106 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "confrontation_attempt": [
+      "attempted",
+      "not_attempted"
+    ],
+    "offence_directness": [
+      "direct",
+      "indirect"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "confrontation_attempt": "attempted",
+      "offence_directness": "direct",
+      "emotions": {
+        "surprise": 0.2,
+        "disappointment": 0.3,
+        "anger": 0.5
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "confrontation_attempt": "attempted",
+      "offence_directness": "indirect",
+      "emotions": {
+        "surprise": 0.25,
+        "disappointment": 0.45,
+        "anger": 0.25,
+        "betrayal": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "confrontation_attempt": "not_attempted",
+      "offence_directness": "direct",
+      "emotions": {
+        "surprise": 0.3,
+        "disappointment": 0.4,
+        "anger": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "confrontation_attempt": "not_attempted",
+      "offence_directness": "indirect",
+      "emotions": {
+        "surprise": 0.35,
+        "disappointment": 0.45,
+        "anger": 0.15,
+        "betrayal": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "confrontation_attempt": "attempted",
+      "offence_directness": "direct",
+      "emotions": {
+        "surprise": 0.1,
+        "disappointment": 0.2,
+        "anger": 0.6,
+        "betrayal": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "confrontation_attempt": "attempted",
+      "offence_directness": "indirect",
+      "emotions": {
+        "surprise": 0.15,
+        "disappointment": 0.3,
+        "anger": 0.45,
+        "betrayal": 0.05,
+        "frustration": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "confrontation_attempt": "not_attempted",
+      "offence_directness": "direct",
+      "emotions": {
+        "surprise": 0.15,
+        "disappointment": 0.25,
+        "anger": 0.5,
+        "betrayal": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "confrontation_attempt": "not_attempted",
+      "offence_directness": "indirect",
+      "emotions": {
+        "surprise": 0.19047619047619047,
+        "disappointment": 0.3333333333333333,
+        "anger": 0.3333333333333333,
+        "betrayal": 0.09523809523809523,
+        "frustration": 0.047619047619047616
+      }
+    }
+  ]
+}

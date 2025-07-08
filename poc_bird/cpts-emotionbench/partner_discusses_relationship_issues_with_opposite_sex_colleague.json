@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "trust_level": [
+      "high",
+      "low"
+    ],
+    "communication": [
+      "open",
+      "closed"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "trust_level": "high",
+      "communication": "open",
+      "emotions": {
+        "trust": 0.9,
+        "anger": 0.05,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "high",
+      "communication": "closed",
+      "emotions": {
+        "surprise": 0.6000000000000001,
+        "confusion": 0.30000000000000004,
+        "anxiety": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "low",
+      "communication": "open",
+      "emotions": {
+        "distrust": 0.7000000000000001,
+        "sadness": 0.20000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "low",
+      "communication": "closed",
+      "emotions": {
+        "distrust": 0.95,
+        "fear": 0.03,
+        "suspicion": 0.02
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "high",
+      "communication": "open",
+      "emotions": {
+        "anger": 0.75,
+        "disappointment": 0.2,
+        "sadness": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "high",
+      "communication": "closed",
+      "emotions": {
+        "anger": 0.9,
+        "frustration": 0.05,
+        "resentment": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "low",
+      "communication": "open",
+      "emotions": {
+        "anger": 0.95,
+        "betrayal": 0.03,
+        "disgust": 0.02
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "low",
+      "communication": "closed",
+      "emotions": {
+        "anger": 1.0,
+        "bitterness": 0.0,
+        "despair": 0.0
+      }
+    }
+  ]
+}

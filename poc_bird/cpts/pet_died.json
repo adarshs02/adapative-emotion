@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "emotional_support",
-      "values": [
-        "available",
-        "unavailable"
-      ]
-    },
-    {
-      "name": "pet_age",
-      "values": [
-        "young",
-        "old"
-      ]
-    }
-  ],
+  "factors": {
+    "pet_age": [
+      "young",
+      "old"
+    ],
+    "pet_type": [
+      "dog",
+      "cat"
+    ],
+    "pet_length_of_time_together": [
+      "short",
+      "long"
+    ]
+  },
   "cpt": [
     {
-      "offence_history": "first_time",
-      "emotional_support": "available",
       "pet_age": "young",
+      "pet_type": "dog",
+      "pet_length_of_time_together": "short",
       "emotions": {
-        "grief": 0.8,
-        "sadness": 0.2,
-        "acceptance": 0.0
+        "sadness": 0.7,
+        "shock": 0.2,
+        "guilt": 0.1
       }
     },
     {
-      "offence_history": "first_time",
-      "emotional_support": "available",
-      "pet_age": "old",
-      "emotions": {
-        "grief": 0.7,
-        "sadness": 0.2,
-        "acceptance": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "emotional_support": "unavailable",
       "pet_age": "young",
+      "pet_type": "dog",
+      "pet_length_of_time_together": "long",
       "emotions": {
-        "grief": 0.9,
-        "sadness": 0.1,
-        "acceptance": 0.0
+        "sadness": 0.6,
+        "regret": 0.25,
+        "relief": 0.15
       }
     },
     {
-      "offence_history": "first_time",
-      "emotional_support": "unavailable",
-      "pet_age": "old",
-      "emotions": {
-        "grief": 0.8,
-        "sadness": 0.2,
-        "acceptance": 0.0
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "emotional_support": "available",
       "pet_age": "young",
+      "pet_type": "cat",
+      "pet_length_of_time_together": "short",
       "emotions": {
-        "grief": 0.4,
-        "anger": 0.3,
-        "sadness": 0.3
+        "sadness": 0.65,
+        "surprise": 0.2,
+        "anger": 0.15
       }
     },
     {
-      "offence_history": "repeated",
-      "emotional_support": "available",
-      "pet_age": "old",
-      "emotions": {
-        "grief": 0.6,
-        "anger": 0.2,
-        "sadness": 0.2
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "emotional_support": "unavailable",
       "pet_age": "young",
+      "pet_type": "cat",
+      "pet_length_of_time_together": "long",
       "emotions": {
-        "grief": 0.7,
-        "anger": 0.2,
-        "sadness": 0.1
+        "sadness": 0.6,
+        "regret": 0.25,
+        "relief": 0.15
       }
     },
     {
-      "offence_history": "repeated",
-      "emotional_support": "unavailable",
       "pet_age": "old",
+      "pet_type": "dog",
+      "pet_length_of_time_together": "short",
       "emotions": {
-        "grief": 0.8,
-        "anger": 0.1,
-        "sadness": 0.1
+        "sadness": 0.8,
+        "shock": 0.1,
+        "guilt": 0.1
+      }
+    },
+    {
+      "pet_age": "old",
+      "pet_type": "dog",
+      "pet_length_of_time_together": "long",
+      "emotions": {
+        "sadness": 0.7,
+        "regret": 0.2,
+        "relief": 0.1
+      }
+    },
+    {
+      "pet_age": "old",
+      "pet_type": "cat",
+      "pet_length_of_time_together": "short",
+      "emotions": {
+        "sadness": 0.85,
+        "surprise": 0.1,
+        "anger": 0.05
+      }
+    },
+    {
+      "pet_age": "old",
+      "pet_type": "cat",
+      "pet_length_of_time_together": "long",
+      "emotions": {
+        "sadness": 0.7,
+        "regret": 0.2,
+        "relief": 0.1
       }
     }
   ]

@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "communication_style",
-      "values": [
-        "open",
-        "closed"
-      ]
-    },
-    {
-      "name": "emotional_involvement",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "communication_from_other": [
+      "none",
+      "some"
+    ],
+    "time_since_offence": [
+      "short",
+      "long"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "communication_style": "open",
-      "emotional_involvement": "low",
+      "communication_from_other": "none",
+      "time_since_offence": "short",
       "emotions": {
-        "sadness": 0.7,
-        "frustration": 0.2,
-        "acceptance": 0.1
+        "sadness": 0.6,
+        "hurt": 0.35,
+        "confusion": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "communication_style": "open",
-      "emotional_involvement": "high",
+      "communication_from_other": "none",
+      "time_since_offence": "long",
       "emotions": {
         "sadness": 0.5,
-        "frustration": 0.3,
-        "guilt": 0.2
+        "anger": 0.35,
+        "frustration": 0.15
       }
     },
     {
       "offence_history": "first_time",
-      "communication_style": "closed",
-      "emotional_involvement": "low",
+      "communication_from_other": "some",
+      "time_since_offence": "short",
       "emotions": {
-        "frustration": 0.6,
-        "sadness": 0.3,
-        "anger": 0.1
+        "relief": 0.4,
+        "hope": 0.35,
+        "suspicion": 0.25
       }
     },
     {
       "offence_history": "first_time",
-      "communication_style": "closed",
-      "emotional_involvement": "high",
+      "communication_from_other": "some",
+      "time_since_offence": "long",
+      "emotions": {
+        "hope": 0.45,
+        "disappointment": 0.35,
+        "suspicion": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_from_other": "none",
+      "time_since_offence": "short",
       "emotions": {
         "anger": 0.7,
-        "frustration": 0.2,
-        "guilt": 0.1
+        "hurt": 0.25,
+        "frustration": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "communication_style": "open",
-      "emotional_involvement": "low",
+      "communication_from_other": "none",
+      "time_since_offence": "long",
       "emotions": {
-        "anger": 0.8,
-        "frustration": 0.1,
-        "helplessness": 0.1
+        "anger": 0.65,
+        "disappointment": 0.25,
+        "despair": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "communication_style": "open",
-      "emotional_involvement": "high",
+      "communication_from_other": "some",
+      "time_since_offence": "short",
       "emotions": {
-        "anger": 0.9,
-        "guilt": 0.05,
-        "helplessness": 0.05
+        "anger": 0.6,
+        "frustration": 0.3,
+        "hurt": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "communication_style": "closed",
-      "emotional_involvement": "low",
+      "communication_from_other": "some",
+      "time_since_offence": "long",
       "emotions": {
-        "anger": 0.9,
-        "frustration": 0.05,
-        "helplessness": 0.05
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "communication_style": "closed",
-      "emotional_involvement": "high",
-      "emotions": {
-        "anger": 0.95,
-        "guilt": 0.03,
-        "helplessness": 0.02
+        "anger": 0.55,
+        "disappointment": 0.3,
+        "hurt": 0.15
       }
     }
   ]

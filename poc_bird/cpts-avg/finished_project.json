@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "personal_investment": [
+      "high",
+      "low"
+    ],
+    "project_difficulty": [
+      "easy",
+      "difficult"
+    ],
+    "collaboration_level": [
+      "solo",
+      "team"
+    ]
+  },
+  "cpt": [
+    {
+      "personal_investment": "high",
+      "project_difficulty": "easy",
+      "collaboration_level": "solo",
+      "emotions": {
+        "pride": 0.7,
+        "relief": 0.25,
+        "satisfaction": 0.05
+      }
+    },
+    {
+      "personal_investment": "high",
+      "project_difficulty": "easy",
+      "collaboration_level": "team",
+      "emotions": {
+        "pride": 0.6000000000000001,
+        "gratitude": 0.30000000000000004,
+        "satisfaction": 0.10000000000000002
+      }
+    },
+    {
+      "personal_investment": "high",
+      "project_difficulty": "difficult",
+      "collaboration_level": "solo",
+      "emotions": {
+        "pride": 0.5,
+        "relief": 0.35,
+        "accomplishment": 0.15
+      }
+    },
+    {
+      "personal_investment": "high",
+      "project_difficulty": "difficult",
+      "collaboration_level": "team",
+      "emotions": {
+        "pride": 0.47368421052631576,
+        "accomplishment": 0.36842105263157887,
+        "gratitude": 0.15789473684210525
+      }
+    },
+    {
+      "personal_investment": "low",
+      "project_difficulty": "easy",
+      "collaboration_level": "solo",
+      "emotions": {
+        "relief": 0.7,
+        "satisfaction": 0.25,
+        "indifference": 0.05
+      }
+    },
+    {
+      "personal_investment": "low",
+      "project_difficulty": "easy",
+      "collaboration_level": "team",
+      "emotions": {
+        "relief": 0.6000000000000001,
+        "gratitude": 0.30000000000000004,
+        "satisfaction": 0.10000000000000002
+      }
+    },
+    {
+      "personal_investment": "low",
+      "project_difficulty": "difficult",
+      "collaboration_level": "solo",
+      "emotions": {
+        "relief": 0.5,
+        "indifference": 0.35,
+        "dissatisfaction": 0.15
+      }
+    },
+    {
+      "personal_investment": "low",
+      "project_difficulty": "difficult",
+      "collaboration_level": "team",
+      "emotions": {
+        "relief": 0.47368421052631576,
+        "dissatisfaction": 0.36842105263157887,
+        "indifference": 0.15789473684210525
+      }
+    }
+  ]
+}

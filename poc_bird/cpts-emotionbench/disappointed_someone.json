@@ -1,0 +1,102 @@
+{
+  "factors": {
+    "Apology": [
+      "Sincere",
+      "Insincere"
+    ],
+    "Impact": [
+      "Understood",
+      "Not Understood"
+    ],
+    "History": [
+      "First Time",
+      "Repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "Apology": "Sincere",
+      "Impact": "Understood",
+      "History": "First Time",
+      "emotions": {
+        "Relief": 0.4000000000000001,
+        "Gratitude": 0.30000000000000004,
+        "Surprise": 0.20000000000000004,
+        "Disappointment": 0.10000000000000002
+      }
+    },
+    {
+      "Apology": "Sincere",
+      "Impact": "Not Understood",
+      "History": "First Time",
+      "emotions": {
+        "Frustration": 0.4000000000000001,
+        "Confusion": 0.30000000000000004,
+        "Disappointment": 0.20000000000000004,
+        "Anger": 0.10000000000000002
+      }
+    },
+    {
+      "Apology": "Insincere",
+      "Impact": "Understood",
+      "History": "First Time",
+      "emotions": {
+        "Disappointment": 0.6000000000000001,
+        "Anger": 0.30000000000000004,
+        "Distrust": 0.10000000000000002
+      }
+    },
+    {
+      "Apology": "Insincere",
+      "Impact": "Not Understood",
+      "History": "First Time",
+      "emotions": {
+        "Anger": 0.7000000000000001,
+        "Disappointment": 0.20000000000000004,
+        "Distrust": 0.10000000000000002
+      }
+    },
+    {
+      "Apology": "Sincere",
+      "Impact": "Understood",
+      "History": "Repeated",
+      "emotions": {
+        "Relief": 0.3,
+        "Gratitude": 0.2,
+        "Surprise": 0.2,
+        "Disappointment": 0.3
+      }
+    },
+    {
+      "Apology": "Sincere",
+      "Impact": "Not Understood",
+      "History": "Repeated",
+      "emotions": {
+        "Frustration": 0.4000000000000001,
+        "Confusion": 0.30000000000000004,
+        "Disappointment": 0.20000000000000004,
+        "Anger": 0.10000000000000002
+      }
+    },
+    {
+      "Apology": "Insincere",
+      "Impact": "Understood",
+      "History": "Repeated",
+      "emotions": {
+        "Disappointment": 0.6000000000000001,
+        "Anger": 0.30000000000000004,
+        "Distrust": 0.10000000000000002
+      }
+    },
+    {
+      "Apology": "Insincere",
+      "Impact": "Not Understood",
+      "History": "Repeated",
+      "emotions": {
+        "Anger": 0.7000000000000001,
+        "Disappointment": 0.20000000000000004,
+        "Distrust": 0.10000000000000002
+      }
+    }
+  ]
+}

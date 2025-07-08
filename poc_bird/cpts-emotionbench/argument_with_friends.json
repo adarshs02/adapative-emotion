@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "apology_given": [
+      "yes",
+      "no"
+    ],
+    "communication_style": [
+      "calm",
+      "aggressive"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "apology_given": "yes",
+      "communication_style": "calm",
+      "emotions": {
+        "happy": 0.6000000000000001,
+        "relieved": 0.30000000000000004,
+        "frustrated": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_given": "yes",
+      "communication_style": "aggressive",
+      "emotions": {
+        "angry": 0.4,
+        "frustrated": 0.35,
+        "hurt": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_given": "no",
+      "communication_style": "calm",
+      "emotions": {
+        "angry": 0.65,
+        "hurt": 0.25,
+        "frustrated": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "apology_given": "no",
+      "communication_style": "aggressive",
+      "emotions": {
+        "angry": 0.8,
+        "hurt": 0.15,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_given": "yes",
+      "communication_style": "calm",
+      "emotions": {
+        "angry": 0.55,
+        "hurt": 0.3,
+        "frustrated": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_given": "yes",
+      "communication_style": "aggressive",
+      "emotions": {
+        "angry": 0.75,
+        "hurt": 0.2,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_given": "no",
+      "communication_style": "calm",
+      "emotions": {
+        "angry": 0.8,
+        "hurt": 0.15,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "apology_given": "no",
+      "communication_style": "aggressive",
+      "emotions": {
+        "angry": 0.9,
+        "hurt": 0.05,
+        "frustrated": 0.05
+      }
+    }
+  ]
+}

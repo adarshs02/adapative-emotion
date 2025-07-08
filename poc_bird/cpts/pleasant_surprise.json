@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "amount_found",
-      "values": [
-        "small",
-        "large"
-      ]
-    },
-    {
-      "name": "urgency",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "value_of_money": [
+      "low",
+      "high"
+    ],
+    "found_in_public": [
+      "yes",
+      "no"
+    ],
+    "previous_income_situation": [
+      "stable",
+      "unstable"
+    ]
+  },
   "cpt": [
     {
-      "offence_history": "first_time",
-      "amount_found": "small",
-      "urgency": "low",
+      "value_of_money": "low",
+      "found_in_public": "yes",
+      "previous_income_situation": "stable",
       "emotions": {
-        "gratitude": 0.9,
-        "surprise": 0.1,
-        "relief": 0.0
+        "happiness": 0.7,
+        "relief": 0.25,
+        "surprise": 0.05
       }
     },
     {
-      "offence_history": "first_time",
-      "amount_found": "small",
-      "urgency": "high",
+      "value_of_money": "low",
+      "found_in_public": "yes",
+      "previous_income_situation": "unstable",
       "emotions": {
-        "gratitude": 0.8,
+        "gratitude": 0.6,
+        "relief": 0.3,
+        "surprise": 0.1
+      }
+    },
+    {
+      "value_of_money": "low",
+      "found_in_public": "no",
+      "previous_income_situation": "stable",
+      "emotions": {
+        "happiness": 0.5,
+        "relief": 0.4,
+        "surprise": 0.1
+      }
+    },
+    {
+      "value_of_money": "low",
+      "found_in_public": "no",
+      "previous_income_situation": "unstable",
+      "emotions": {
+        "gratitude": 0.55,
+        "relief": 0.35,
+        "surprise": 0.05
+      }
+    },
+    {
+      "value_of_money": "high",
+      "found_in_public": "yes",
+      "previous_income_situation": "stable",
+      "emotions": {
+        "happiness": 0.8,
         "surprise": 0.15,
-        "relief": 0.05
+        "excitement": 0.05
       }
     },
     {
-      "offence_history": "first_time",
-      "amount_found": "large",
-      "urgency": "low",
+      "value_of_money": "high",
+      "found_in_public": "yes",
+      "previous_income_situation": "unstable",
       "emotions": {
-        "gratitude": 0.85,
-        "surprise": 0.1,
+        "gratitude": 0.75,
+        "surprise": 0.2,
+        "excitement": 0.05
+      }
+    },
+    {
+      "value_of_money": "high",
+      "found_in_public": "no",
+      "previous_income_situation": "stable",
+      "emotions": {
+        "happiness": 0.7,
+        "surprise": 0.25,
         "relief": 0.05
       }
     },
     {
-      "offence_history": "first_time",
-      "amount_found": "large",
-      "urgency": "high",
+      "value_of_money": "high",
+      "found_in_public": "no",
+      "previous_income_situation": "unstable",
       "emotions": {
         "gratitude": 0.7,
         "surprise": 0.2,
         "relief": 0.1
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "amount_found": "small",
-      "urgency": "low",
-      "emotions": {
-        "gratitude": 0.4,
-        "surprise": 0.3,
-        "relief": 0.3
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "amount_found": "small",
-      "urgency": "high",
-      "emotions": {
-        "gratitude": 0.3,
-        "surprise": 0.4,
-        "relief": 0.3
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "amount_found": "large",
-      "urgency": "low",
-      "emotions": {
-        "gratitude": 0.2,
-        "surprise": 0.4,
-        "relief": 0.4
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "amount_found": "large",
-      "urgency": "high",
-      "emotions": {
-        "gratitude": 0.1,
-        "surprise": 0.5,
-        "relief": 0.4
       }
     }
   ]

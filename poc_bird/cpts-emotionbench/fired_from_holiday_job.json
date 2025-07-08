@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "notice_period": [
+      "short",
+      "long"
+    ],
+    "reason_for_firing": [
+      "poor_performance",
+      "budget_cuts"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "notice_period": "short",
+      "reason_for_firing": "poor_performance",
+      "emotions": {
+        "shock": 0.6,
+        "disappointment": 0.35,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "notice_period": "short",
+      "reason_for_firing": "budget_cuts",
+      "emotions": {
+        "surprise": 0.55,
+        "disappointment": 0.3,
+        "frustration": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "notice_period": "long",
+      "reason_for_firing": "poor_performance",
+      "emotions": {
+        "shock": 0.45,
+        "disappointment": 0.4,
+        "anger": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "notice_period": "long",
+      "reason_for_firing": "budget_cuts",
+      "emotions": {
+        "surprise": 0.5,
+        "disappointment": 0.3,
+        "frustration": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "notice_period": "short",
+      "reason_for_firing": "poor_performance",
+      "emotions": {
+        "shock": 0.35,
+        "disappointment": 0.4,
+        "anger": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "notice_period": "short",
+      "reason_for_firing": "budget_cuts",
+      "emotions": {
+        "surprise": 0.4,
+        "disappointment": 0.3,
+        "frustration": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "notice_period": "long",
+      "reason_for_firing": "poor_performance",
+      "emotions": {
+        "shock": 0.25,
+        "disappointment": 0.4,
+        "anger": 0.35
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "notice_period": "long",
+      "reason_for_firing": "budget_cuts",
+      "emotions": {
+        "surprise": 0.30000000000000004,
+        "disappointment": 0.35000000000000003,
+        "frustration": 0.35000000000000003
+      }
+    }
+  ]
+}

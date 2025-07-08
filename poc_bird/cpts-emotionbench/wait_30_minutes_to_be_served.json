@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "time_waited": [
+      "short",
+      "long"
+    ],
+    "mood_before": [
+      "good",
+      "bad"
+    ],
+    "hunger_level": [
+      "full",
+      "hungry"
+    ]
+  },
+  "cpt": [
+    {
+      "time_waited": "short",
+      "mood_before": "good",
+      "hunger_level": "full",
+      "emotions": {
+        "relaxed": 0.6000000000000001,
+        "frustrated": 0.30000000000000004,
+        "hungry": 0.10000000000000002
+      }
+    },
+    {
+      "time_waited": "short",
+      "mood_before": "good",
+      "hunger_level": "hungry",
+      "emotions": {
+        "frustrated": 0.7,
+        "hungry": 0.25,
+        "relaxed": 0.05
+      }
+    },
+    {
+      "time_waited": "short",
+      "mood_before": "bad",
+      "hunger_level": "full",
+      "emotions": {
+        "frustrated": 0.8,
+        "angry": 0.15,
+        "sad": 0.05
+      }
+    },
+    {
+      "time_waited": "short",
+      "mood_before": "bad",
+      "hunger_level": "hungry",
+      "emotions": {
+        "angry": 0.85,
+        "frustrated": 0.1,
+        "sad": 0.05
+      }
+    },
+    {
+      "time_waited": "long",
+      "mood_before": "good",
+      "hunger_level": "full",
+      "emotions": {
+        "relaxed": 0.4,
+        "frustrated": 0.45,
+        "hungry": 0.15
+      }
+    },
+    {
+      "time_waited": "long",
+      "mood_before": "good",
+      "hunger_level": "hungry",
+      "emotions": {
+        "frustrated": 0.6000000000000001,
+        "hungry": 0.30000000000000004,
+        "relaxed": 0.10000000000000002
+      }
+    },
+    {
+      "time_waited": "long",
+      "mood_before": "bad",
+      "hunger_level": "full",
+      "emotions": {
+        "frustrated": 0.7000000000000001,
+        "angry": 0.20000000000000004,
+        "sad": 0.10000000000000002
+      }
+    },
+    {
+      "time_waited": "long",
+      "mood_before": "bad",
+      "hunger_level": "hungry",
+      "emotions": {
+        "angry": 0.75,
+        "frustrated": 0.15,
+        "sad": 0.1
+      }
+    }
+  ]
+}

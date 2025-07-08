@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "awareness_of_time": [
+      "ignorant",
+      "aware"
+    ],
+    "consequences": [
+      "minor",
+      "major"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "awareness_of_time": "ignorant",
+      "consequences": "minor",
+      "emotions": {
+        "frustration": 0.6000000000000001,
+        "regret": 0.30000000000000004,
+        "relief": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "awareness_of_time": "aware",
+      "consequences": "minor",
+      "emotions": {
+        "frustration": 0.4,
+        "relief": 0.5,
+        "guilt": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "awareness_of_time": "ignorant",
+      "consequences": "minor",
+      "emotions": {
+        "anger": 0.7000000000000001,
+        "frustration": 0.20000000000000004,
+        "regret": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "awareness_of_time": "aware",
+      "consequences": "minor",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.15,
+        "regret": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "awareness_of_time": "ignorant",
+      "consequences": "major",
+      "emotions": {
+        "fear": 0.5,
+        "frustration": 0.4,
+        "regret": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "awareness_of_time": "aware",
+      "consequences": "major",
+      "emotions": {
+        "fear": 0.6000000000000001,
+        "regret": 0.30000000000000004,
+        "anxiety": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "awareness_of_time": "ignorant",
+      "consequences": "major",
+      "emotions": {
+        "anger": 0.8,
+        "fear": 0.15,
+        "regret": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "awareness_of_time": "aware",
+      "consequences": "major",
+      "emotions": {
+        "anger": 0.9,
+        "fear": 0.05,
+        "regret": 0.05
+      }
+    }
+  ]
+}

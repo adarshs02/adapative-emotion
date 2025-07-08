@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "vacation_type": [
+      "relaxing",
+      "adventure"
+    ],
+    "preparation_status": [
+      "well_prepared",
+      "rushed"
+    ],
+    "vacation_frequency": [
+      "first_time",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "vacation_type": "relaxing",
+      "preparation_status": "well_prepared",
+      "vacation_frequency": "first_time",
+      "emotions": {
+        "excitement": 0.6,
+        "anticipation": 0.35,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "vacation_type": "relaxing",
+      "preparation_status": "well_prepared",
+      "vacation_frequency": "repeated",
+      "emotions": {
+        "relief": 0.4,
+        "happiness": 0.5,
+        "anticipation": 0.1
+      }
+    },
+    {
+      "vacation_type": "relaxing",
+      "preparation_status": "rushed",
+      "vacation_frequency": "first_time",
+      "emotions": {
+        "stress": 0.6,
+        "anxiety": 0.35,
+        "excitement": 0.05
+      }
+    },
+    {
+      "vacation_type": "relaxing",
+      "preparation_status": "rushed",
+      "vacation_frequency": "repeated",
+      "emotions": {
+        "stress": 0.5,
+        "frustration": 0.35,
+        "relief": 0.15
+      }
+    },
+    {
+      "vacation_type": "adventure",
+      "preparation_status": "well_prepared",
+      "vacation_frequency": "first_time",
+      "emotions": {
+        "excitement": 0.7,
+        "anticipation": 0.25,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "vacation_type": "adventure",
+      "preparation_status": "well_prepared",
+      "vacation_frequency": "repeated",
+      "emotions": {
+        "happiness": 0.5,
+        "satisfaction": 0.4,
+        "relief": 0.1
+      }
+    },
+    {
+      "vacation_type": "adventure",
+      "preparation_status": "rushed",
+      "vacation_frequency": "first_time",
+      "emotions": {
+        "stress": 0.6,
+        "anxiety": 0.35,
+        "excitement": 0.05
+      }
+    },
+    {
+      "vacation_type": "adventure",
+      "preparation_status": "rushed",
+      "vacation_frequency": "repeated",
+      "emotions": {
+        "stress": 0.5,
+        "frustration": 0.35,
+        "relief": 0.15
+      }
+    }
+  ]
+}

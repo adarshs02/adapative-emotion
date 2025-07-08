@@ -1,0 +1,99 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "meal_size": [
+      "small",
+      "large"
+    ],
+    "drink_count": [
+      "few",
+      "many"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "meal_size": "small",
+      "drink_count": "few",
+      "emotions": {
+        "relief": 0.8,
+        "frustration": 0.15,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "meal_size": "small",
+      "drink_count": "many",
+      "emotions": {
+        "contentment": 0.6000000000000001,
+        "surprise": 0.30000000000000004,
+        "anxiety": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "meal_size": "large",
+      "drink_count": "few",
+      "emotions": {
+        "satisfaction": 0.7000000000000001,
+        "frustration": 0.20000000000000004,
+        "relief": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "meal_size": "large",
+      "drink_count": "many",
+      "emotions": {
+        "enjoyment": 0.625,
+        "surprise": 0.275,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "meal_size": "small",
+      "drink_count": "few",
+      "emotions": {
+        "frustration": 0.7,
+        "anger": 0.225,
+        "anxiety": 0.07500000000000001
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "meal_size": "small",
+      "drink_count": "many",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.22499999999999998,
+        "anxiety": 0.07500000000000001
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "meal_size": "large",
+      "drink_count": "few",
+      "emotions": {
+        "anger": 0.725,
+        "frustration": 0.2,
+        "relief": 0.07500000000000001
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "meal_size": "large",
+      "drink_count": "many",
+      "emotions": {
+        "anger": 0.825,
+        "frustration": 0.125,
+        "anxiety": 0.025,
+        "relief": 0.025
+      }
+    }
+  ]
+}

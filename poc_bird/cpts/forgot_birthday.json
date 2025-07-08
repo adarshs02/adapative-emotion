@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "friendship_depth",
-      "values": [
-        "shallow",
-        "deep"
-      ]
-    },
-    {
-      "name": "apology_status",
-      "values": [
-        "given",
-        "not_given"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "sincerity_of_apology": [
+      "insincere",
+      "sincere"
+    ],
+    "friend_reaction": [
+      "understanding",
+      "angry"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "friendship_depth": "shallow",
-      "apology_status": "given",
+      "sincerity_of_apology": "insincere",
+      "friend_reaction": "understanding",
       "emotions": {
-        "guilt": 0.8,
-        "relief": 0.15,
-        "indifference": 0.05
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "friendship_depth": "shallow",
-      "apology_status": "not_given",
-      "emotions": {
-        "guilt": 0.9,
-        "relief": 0.05,
-        "indifference": 0.05
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "friendship_depth": "deep",
-      "apology_status": "given",
-      "emotions": {
-        "guilt": 0.4,
-        "relief": 0.5,
-        "remorse": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "friendship_depth": "deep",
-      "apology_status": "not_given",
-      "emotions": {
-        "guilt": 0.7,
-        "relief": 0.2,
-        "remorse": 0.1
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "friendship_depth": "shallow",
-      "apology_status": "given",
-      "emotions": {
-        "guilt": 0.6,
-        "anger": 0.3,
-        "indifference": 0.1
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "friendship_depth": "shallow",
-      "apology_status": "not_given",
-      "emotions": {
-        "guilt": 0.8,
-        "anger": 0.15,
-        "indifference": 0.05
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "friendship_depth": "deep",
-      "apology_status": "given",
-      "emotions": {
+        "regret": 0.6,
         "guilt": 0.3,
-        "anger": 0.4,
-        "remorse": 0.3
+        "embarrassment": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "sincerity_of_apology": "sincere",
+      "friend_reaction": "understanding",
+      "emotions": {
+        "relief": 0.7,
+        "gratitude": 0.25,
+        "happiness": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "sincerity_of_apology": "insincere",
+      "friend_reaction": "angry",
+      "emotions": {
+        "fear": 0.4,
+        "anxiety": 0.45,
+        "shame": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "sincerity_of_apology": "sincere",
+      "friend_reaction": "angry",
+      "emotions": {
+        "apology_accepted": 0.2,
+        "forgiveness_hoped": 0.6,
+        "anxiety": 0.2
       }
     },
     {
       "offence_history": "repeated",
-      "friendship_depth": "deep",
-      "apology_status": "not_given",
+      "sincerity_of_apology": "insincere",
+      "friend_reaction": "understanding",
       "emotions": {
-        "guilt": 0.7,
-        "anger": 0.2,
-        "remorse": 0.1
+        "anger": 0.7,
+        "disappointment": 0.25,
+        "frustration": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "sincerity_of_apology": "sincere",
+      "friend_reaction": "understanding",
+      "emotions": {
+        "relief": 0.5,
+        "gratitude": 0.35,
+        "hope": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "sincerity_of_apology": "insincere",
+      "friend_reaction": "angry",
+      "emotions": {
+        "fear": 0.3,
+        "anxiety": 0.5,
+        "regret": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "sincerity_of_apology": "sincere",
+      "friend_reaction": "angry",
+      "emotions": {
+        "apology_accepted": 0.1,
+        "forgiveness_hoped": 0.6,
+        "anxiety": 0.3
       }
     }
   ]

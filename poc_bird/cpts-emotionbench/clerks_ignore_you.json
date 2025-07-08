@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "attention_from_clerk": [
+      "ignored",
+      "acknowledged"
+    ],
+    "time_waiting": [
+      "short",
+      "long"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "attention_from_clerk": "ignored",
+      "time_waiting": "short",
+      "emotions": {
+        "frustration": 0.6,
+        "annoyance": 0.35,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "attention_from_clerk": "ignored",
+      "time_waiting": "long",
+      "emotions": {
+        "frustration": 0.75,
+        "annoyance": 0.2,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "attention_from_clerk": "acknowledged",
+      "time_waiting": "short",
+      "emotions": {
+        "relief": 0.6,
+        "satisfaction": 0.35,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "attention_from_clerk": "acknowledged",
+      "time_waiting": "long",
+      "emotions": {
+        "relief": 0.75,
+        "satisfaction": 0.2,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "attention_from_clerk": "ignored",
+      "time_waiting": "short",
+      "emotions": {
+        "frustration": 0.8,
+        "anger": 0.15,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "attention_from_clerk": "ignored",
+      "time_waiting": "long",
+      "emotions": {
+        "frustration": 0.9,
+        "anger": 0.05,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "attention_from_clerk": "acknowledged",
+      "time_waiting": "short",
+      "emotions": {
+        "relief": 0.5,
+        "anger": 0.35,
+        "disappointment": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "attention_from_clerk": "acknowledged",
+      "time_waiting": "long",
+      "emotions": {
+        "relief": 0.6000000000000001,
+        "anger": 0.30000000000000004,
+        "disappointment": 0.10000000000000002
+      }
+    }
+  ]
+}

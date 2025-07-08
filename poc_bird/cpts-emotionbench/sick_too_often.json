@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "severity": [
+      "mild",
+      "moderate"
+    ],
+    "impact_on_health": [
+      "minimal",
+      "significant"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "severity": "mild",
+      "impact_on_health": "minimal",
+      "emotions": {
+        "relief": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "worry": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "severity": "mild",
+      "impact_on_health": "significant",
+      "emotions": {
+        "concern": 0.5,
+        "frustration": 0.4,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "severity": "moderate",
+      "impact_on_health": "minimal",
+      "emotions": {
+        "frustration": 0.6000000000000001,
+        "worry": 0.30000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "severity": "moderate",
+      "impact_on_health": "significant",
+      "emotions": {
+        "worry": 0.5,
+        "anger": 0.4,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "severity": "mild",
+      "impact_on_health": "minimal",
+      "emotions": {
+        "frustration": 0.7000000000000001,
+        "worry": 0.20000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "severity": "mild",
+      "impact_on_health": "significant",
+      "emotions": {
+        "worry": 0.6000000000000001,
+        "anger": 0.30000000000000004,
+        "anxiety": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "severity": "moderate",
+      "impact_on_health": "minimal",
+      "emotions": {
+        "anger": 0.7000000000000001,
+        "worry": 0.20000000000000004,
+        "frustration": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "severity": "moderate",
+      "impact_on_health": "significant",
+      "emotions": {
+        "anger": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "worry": 0.10000000000000002
+      }
+    }
+  ]
+}

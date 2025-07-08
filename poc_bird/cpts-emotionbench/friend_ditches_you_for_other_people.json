@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "sincerity": [
+      "insincere",
+      "sincere"
+    ],
+    "explanation": [
+      "no_explanation",
+      "reasonable_explanation"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "sincerity": "insincere",
+      "explanation": "no_explanation",
+      "emotions": {
+        "anger": 0.7,
+        "disappointment": 0.25,
+        "confusion": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "sincerity": "insincere",
+      "explanation": "reasonable_explanation",
+      "emotions": {
+        "anger": 0.5,
+        "disappointment": 0.4,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "sincerity": "sincere",
+      "explanation": "no_explanation",
+      "emotions": {
+        "disappointment": 0.6000000000000001,
+        "hurt": 0.30000000000000004,
+        "confusion": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "sincerity": "sincere",
+      "explanation": "reasonable_explanation",
+      "emotions": {
+        "relief": 0.4,
+        "understanding": 0.35,
+        "disappointment": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "sincerity": "insincere",
+      "explanation": "no_explanation",
+      "emotions": {
+        "anger": 0.85,
+        "disappointment": 0.1,
+        "betrayal": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "sincerity": "insincere",
+      "explanation": "reasonable_explanation",
+      "emotions": {
+        "anger": 0.7,
+        "disappointment": 0.25,
+        "betrayal": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "sincerity": "sincere",
+      "explanation": "no_explanation",
+      "emotions": {
+        "anger": 0.65,
+        "disappointment": 0.3,
+        "betrayal": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "sincerity": "sincere",
+      "explanation": "reasonable_explanation",
+      "emotions": {
+        "anger": 0.5,
+        "disappointment": 0.4,
+        "forgiveness": 0.1
+      }
+    }
+  ]
+}

@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "public_setting",
-      "values": [
-        "public",
-        "private"
-      ]
-    },
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "personal_relationship",
-      "values": [
-        "acquaintance",
-        "close"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "question_importance": [
+      "low",
+      "high"
+    ],
+    "confidence_in_answer": [
+      "unsure",
+      "confident"
+    ]
+  },
   "cpt": [
     {
-      "public": "public",
-      "first_time": "first_time",
-      "acquaintance": "acquaintance",
+      "offence_history": "first_time",
+      "question_importance": "low",
+      "confidence_in_answer": "unsure",
       "emotions": {
-        "shame": 0.7,
-        "embarrassment": 0.2,
-        "anxiety": 0.1
+        "anxiety": 0.6,
+        "frustration": 0.3,
+        "relief": 0.1
       }
     },
     {
-      "public": "public",
-      "first_time": "first_time",
-      "close": "acquaintance",
+      "offence_history": "first_time",
+      "question_importance": "low",
+      "confidence_in_answer": "confident",
       "emotions": {
-        "shame": 0.6,
-        "embarrassment": 0.3,
-        "anxiety": 0.1
+        "confidence": 0.8,
+        "relief": 0.15,
+        "anxiety": 0.05
       }
     },
     {
-      "public": "public",
-      "first_time": "repeated",
-      "acquaintance": "acquaintance",
+      "offence_history": "first_time",
+      "question_importance": "high",
+      "confidence_in_answer": "unsure",
       "emotions": {
-        "shame": 0.8,
-        "embarrassment": 0.2,
-        "anxiety": 0.0
+        "anxiety": 0.75,
+        "frustration": 0.2,
+        "dread": 0.05
       }
     },
     {
-      "public": "public",
-      "first_time": "repeated",
-      "close": "acquaintance",
+      "offence_history": "first_time",
+      "question_importance": "high",
+      "confidence_in_answer": "confident",
       "emotions": {
-        "shame": 0.7,
-        "embarrassment": 0.2,
-        "anxiety": 0.1
+        "confidence": 0.85,
+        "pride": 0.1,
+        "relief": 0.05
       }
     },
     {
-      "public": "private",
-      "first_time": "first_time",
-      "acquaintance": "acquaintance",
+      "offence_history": "repeated",
+      "question_importance": "low",
+      "confidence_in_answer": "unsure",
       "emotions": {
-        "shame": 0.4,
-        "embarrassment": 0.5,
-        "anxiety": 0.1
+        "anxiety": 0.55,
+        "frustration": 0.35,
+        "regret": 0.1
       }
     },
     {
-      "public": "private",
-      "first_time": "first_time",
-      "close": "acquaintance",
+      "offence_history": "repeated",
+      "question_importance": "low",
+      "confidence_in_answer": "confident",
       "emotions": {
-        "shame": 0.3,
-        "embarrassment": 0.6,
-        "anxiety": 0.1
+        "anxiety": 0.4,
+        "anger": 0.45,
+        "relief": 0.15
       }
     },
     {
-      "public": "private",
-      "first_time": "repeated",
-      "acquaintance": "acquaintance",
+      "offence_history": "repeated",
+      "question_importance": "high",
+      "confidence_in_answer": "unsure",
       "emotions": {
-        "shame": 0.6,
-        "embarrassment": 0.3,
-        "anxiety": 0.1
+        "anxiety": 0.65,
+        "frustration": 0.25,
+        "regret": 0.1
       }
     },
     {
-      "public": "private",
-      "first_time": "repeated",
-      "close": "acquaintance",
+      "offence_history": "repeated",
+      "question_importance": "high",
+      "confidence_in_answer": "confident",
       "emotions": {
-        "shame": 0.5,
-        "embarrassment": 0.4,
-        "anxiety": 0.1
+        "anger": 0.6,
+        "pride": 0.2,
+        "relief": 0.2
       }
     }
   ]

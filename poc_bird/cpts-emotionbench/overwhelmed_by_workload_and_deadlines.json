@@ -1,0 +1,130 @@
+{
+  "factors": {
+    "workload_level": [
+      "light",
+      "heavy"
+    ],
+    "deadline_pressure": [
+      "low",
+      "high"
+    ],
+    "support_from_colleagues": [
+      "little",
+      "much"
+    ]
+  },
+  "cpt": [
+    {
+      "workload_level": "light",
+      "deadline_pressure": "low",
+      "support_from_colleagues": "little",
+      "emotions": {
+        "stress": 0.35,
+        "frustration": 0.125,
+        "anxiety": 0.025,
+        "happiness": 0.0,
+        "stressed": 0.375,
+        "anxious": 0.1,
+        "frustrated": 0.025
+      }
+    },
+    {
+      "workload_level": "light",
+      "deadline_pressure": "low",
+      "support_from_colleagues": "much",
+      "emotions": {
+        "contentment": 0.3,
+        "relief": 0.15,
+        "happiness": 0.05,
+        "stress": 0.0,
+        "relieved": 0.25,
+        "content": 0.175,
+        "confident": 0.075
+      }
+    },
+    {
+      "workload_level": "light",
+      "deadline_pressure": "high",
+      "support_from_colleagues": "little",
+      "emotions": {
+        "stress": 0.425,
+        "anxiety": 0.05,
+        "frustration": 0.025,
+        "happiness": 0.0,
+        "stressed": 0.425,
+        "anxious": 0.05,
+        "frustrated": 0.025
+      }
+    },
+    {
+      "workload_level": "light",
+      "deadline_pressure": "high",
+      "support_from_colleagues": "much",
+      "emotions": {
+        "stress": 0.35,
+        "anxiety": 0.1,
+        "frustration": 0.05,
+        "happiness": 0.0,
+        "stressed": 0.3,
+        "anxious": 0.15,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "workload_level": "heavy",
+      "deadline_pressure": "low",
+      "support_from_colleagues": "little",
+      "emotions": {
+        "stress": 0.475,
+        "frustration": 0.015,
+        "anxiety": 0.01,
+        "happiness": 0.0,
+        "overwhelmed": 0.45,
+        "stressed": 0.025,
+        "anxious": 0.025
+      }
+    },
+    {
+      "workload_level": "heavy",
+      "deadline_pressure": "low",
+      "support_from_colleagues": "much",
+      "emotions": {
+        "stress": 0.4,
+        "frustration": 0.075,
+        "anxiety": 0.025,
+        "happiness": 0.0,
+        "relieved": 0.1,
+        "content": 0.2,
+        "confident": 0.2
+      }
+    },
+    {
+      "workload_level": "heavy",
+      "deadline_pressure": "high",
+      "support_from_colleagues": "little",
+      "emotions": {
+        "stress": 0.49,
+        "frustration": 0.005,
+        "anxiety": 0.005,
+        "happiness": 0.0,
+        "overwhelmed": 0.475,
+        "stressed": 0.015,
+        "anxious": 0.01
+      }
+    },
+    {
+      "workload_level": "heavy",
+      "deadline_pressure": "high",
+      "support_from_colleagues": "much",
+      "emotions": {
+        "stress": 0.45,
+        "frustration": 0.025,
+        "anxiety": 0.025,
+        "happiness": 0.0,
+        "relieved": 0.05,
+        "content": 0.15,
+        "confident": 0.3
+      }
+    }
+  ]
+}

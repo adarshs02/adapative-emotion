@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "traffic_type",
-      "values": [
-        "heavy",
-        "light"
-      ]
-    },
-    {
-      "name": "time_of_day",
-      "values": [
-        "morning",
-        "afternoon"
-      ]
-    },
-    {
-      "name": "driver_experience",
-      "values": [
-        "experienced",
-        "inexperienced"
-      ]
-    }
-  ],
+  "factors": {
+    "traffic_duration": [
+      "short",
+      "long"
+    ],
+    "reason_for_late": [
+      "unexpected",
+      "foreseeable"
+    ],
+    "traffic_offence_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
   "cpt": [
     {
-      "traffic_type": "heavy",
-      "time_of_day": "morning",
-      "driver_experience": "experienced",
+      "traffic_duration": "short",
+      "reason_for_late": "unexpected",
+      "traffic_offence_history": "first_time",
       "emotions": {
         "frustration": 0.6,
-        "anger": 0.3,
+        "anxiety": 0.3,
+        "relief": 0.1
+      }
+    },
+    {
+      "traffic_duration": "short",
+      "reason_for_late": "unexpected",
+      "traffic_offence_history": "repeated",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.25,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "traffic_duration": "short",
+      "reason_for_late": "foreseeable",
+      "traffic_offence_history": "first_time",
+      "emotions": {
+        "frustration": 0.55,
+        "anxiety": 0.3,
+        "relief": 0.15
+      }
+    },
+    {
+      "traffic_duration": "short",
+      "reason_for_late": "foreseeable",
+      "traffic_offence_history": "repeated",
+      "emotions": {
+        "anger": 0.65,
+        "frustration": 0.25,
         "anxiety": 0.1
       }
     },
     {
-      "traffic_type": "heavy",
-      "time_of_day": "morning",
-      "driver_experience": "inexperienced",
+      "traffic_duration": "long",
+      "reason_for_late": "unexpected",
+      "traffic_offence_history": "first_time",
       "emotions": {
         "frustration": 0.7,
+        "anxiety": 0.25,
+        "anger": 0.05
+      }
+    },
+    {
+      "traffic_duration": "long",
+      "reason_for_late": "unexpected",
+      "traffic_offence_history": "repeated",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.15,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "traffic_duration": "long",
+      "reason_for_late": "foreseeable",
+      "traffic_offence_history": "first_time",
+      "emotions": {
+        "frustration": 0.75,
         "anxiety": 0.2,
-        "fear": 0.1
+        "anger": 0.05
       }
     },
     {
-      "traffic_type": "heavy",
-      "time_of_day": "morning",
-      "driver_experience": "experienced",
+      "traffic_duration": "long",
+      "reason_for_late": "foreseeable",
+      "traffic_offence_history": "repeated",
       "emotions": {
-        "anger": 0.5,
-        "frustration": 0.4,
-        "anxiety": 0.1
-      }
-    },
-    {
-      "traffic_type": "heavy",
-      "time_of_day": "afternoon",
-      "driver_experience": "experienced",
-      "emotions": {
-        "frustration": 0.5,
-        "anger": 0.3,
-        "irritation": 0.2
-      }
-    },
-    {
-      "traffic_type": "heavy",
-      "time_of_day": "afternoon",
-      "driver_experience": "inexperienced",
-      "emotions": {
-        "frustration": 0.8,
-        "anxiety": 0.2,
-        "fear": 0.0
-      }
-    },
-    {
-      "traffic_type": "light",
-      "time_of_day": "morning",
-      "driver_experience": "experienced",
-      "emotions": {
-        "frustration": 0.2,
-        "irritation": 0.6,
-        "anger": 0.2
-      }
-    },
-    {
-      "traffic_type": "light",
-      "time_of_day": "morning",
-      "driver_experience": "inexperienced",
-      "emotions": {
-        "frustration": 0.4,
-        "anxiety": 0.3,
-        "fear": 0.3
-      }
-    },
-    {
-      "traffic_type": "light",
-      "time_of_day": "afternoon",
-      "driver_experience": "experienced",
-      "emotions": {
-        "irritation": 0.7,
-        "frustration": 0.2,
-        "anger": 0.1
+        "anger": 0.85,
+        "frustration": 0.1,
+        "anxiety": 0.05
       }
     }
   ]

@@ -1,0 +1,100 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "presence_of_weapon": [
+      "none",
+      "present"
+    ],
+    "known_intruder": [
+      "unknown",
+      "known"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "presence_of_weapon": "none",
+      "known_intruder": "unknown",
+      "emotions": {
+        "fear": 0.875,
+        "surprise": 0.07500000000000001,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "presence_of_weapon": "none",
+      "known_intruder": "known",
+      "emotions": {
+        "fear": 0.525,
+        "surprise": 0.125,
+        "anger": 0.05,
+        "relief": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "presence_of_weapon": "none",
+      "known_intruder": "unknown",
+      "emotions": {
+        "fear": 0.85,
+        "anger": 0.12000000000000001,
+        "suspicion": 0.030000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "presence_of_weapon": "none",
+      "known_intruder": "known",
+      "emotions": {
+        "fear": 0.55,
+        "anger": 0.39999999999999997,
+        "suspicion": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "presence_of_weapon": "present",
+      "known_intruder": "unknown",
+      "emotions": {
+        "fear": 0.925,
+        "surprise": 0.04,
+        "anger": 0.035
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "presence_of_weapon": "present",
+      "known_intruder": "known",
+      "emotions": {
+        "fear": 0.6,
+        "anger": 0.14,
+        "suspicion": 0.01,
+        "relief": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "presence_of_weapon": "present",
+      "known_intruder": "unknown",
+      "emotions": {
+        "fear": 0.89,
+        "anger": 0.10500000000000001,
+        "suspicion": 0.005
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "presence_of_weapon": "present",
+      "known_intruder": "known",
+      "emotions": {
+        "fear": 0.5499999999999999,
+        "anger": 0.42000000000000004,
+        "suspicion": 0.030000000000000002
+      }
+    }
+  ]
+}

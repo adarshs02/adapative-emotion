@@ -1,0 +1,107 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "injury_level": [
+      "minor",
+      "serious"
+    ],
+    "public_perception": [
+      "ignored",
+      "noticed"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "injury_level": "minor",
+      "public_perception": "ignored",
+      "emotions": {
+        "embarrassment": 0.6666666666666666,
+        "frustration": 0.26666666666666666,
+        "anger": 0.03333333333333333,
+        "relief": 0.03333333333333333
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "injury_level": "minor",
+      "public_perception": "noticed",
+      "emotions": {
+        "embarrassment": 0.5666666666666667,
+        "surprise": 0.3166666666666666,
+        "amusement": 0.08333333333333331,
+        "anxiety": 0.033333333333333326
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "injury_level": "serious",
+      "public_perception": "ignored",
+      "emotions": {
+        "fear": 0.6,
+        "pain": 0.32499999999999996,
+        "embarrassment": 0.025,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "injury_level": "serious",
+      "public_perception": "noticed",
+      "emotions": {
+        "fear": 0.5384615384615384,
+        "pain": 0.3846153846153846,
+        "empathy": 0.05128205128205128,
+        "embarrassment": 0.02564102564102564
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "injury_level": "minor",
+      "public_perception": "ignored",
+      "emotions": {
+        "embarrassment": 0.39999999999999997,
+        "frustration": 0.4833333333333334,
+        "anger": 0.08333333333333333,
+        "relief": 0.03333333333333333
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "injury_level": "minor",
+      "public_perception": "noticed",
+      "emotions": {
+        "embarrassment": 0.3666666666666667,
+        "frustration": 0.18333333333333335,
+        "shame": 0.03333333333333333,
+        "anger": 0.26666666666666666,
+        "surprise": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "injury_level": "serious",
+      "public_perception": "ignored",
+      "emotions": {
+        "fear": 0.575,
+        "anger": 0.35,
+        "embarrassment": 0.025,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "injury_level": "serious",
+      "public_perception": "noticed",
+      "emotions": {
+        "fear": 0.375,
+        "anger": 0.575,
+        "shame": 0.025,
+        "embarrassment": 0.025
+      }
+    }
+  ]
+}

@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "work_importance",
-      "values": [
-        "low",
-        "high"
-      ]
-    },
-    {
-      "name": "feedback_expectation",
-      "values": [
-        "positive",
-        "negative"
-      ]
-    }
-  ],
+  "factors": {
+    "feedback_type": [
+      "positive",
+      "negative"
+    ],
+    "feedback_timing": [
+      "immediate",
+      "delayed"
+    ],
+    "work_importance": [
+      "low",
+      "high"
+    ]
+  },
   "cpt": [
     {
-      "offence_history": "first_time",
+      "feedback_type": "positive",
+      "feedback_timing": "immediate",
       "work_importance": "low",
-      "feedback_expectation": "positive",
       "emotions": {
-        "relieved": 0.8,
-        "anxious": 0.2,
-        "frustrated": 0.0
+        "happy": 0.7,
+        "relieved": 0.25,
+        "satisfied": 0.05
       }
     },
     {
-      "offence_history": "first_time",
-      "work_importance": "low",
-      "feedback_expectation": "negative",
-      "emotions": {
-        "anxious": 0.7,
-        "relieved": 0.2,
-        "frustrated": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
+      "feedback_type": "positive",
+      "feedback_timing": "immediate",
       "work_importance": "high",
-      "feedback_expectation": "positive",
       "emotions": {
-        "confident": 0.6,
-        "anxious": 0.3,
-        "relieved": 0.1
+        "proud": 0.5,
+        "grateful": 0.35,
+        "confident": 0.15
       }
     },
     {
-      "offence_history": "first_time",
-      "work_importance": "high",
-      "feedback_expectation": "negative",
-      "emotions": {
-        "anxious": 0.8,
-        "frustrated": 0.2,
-        "confident": 0.0
-      }
-    },
-    {
-      "offence_history": "repeated",
+      "feedback_type": "positive",
+      "feedback_timing": "delayed",
       "work_importance": "low",
-      "feedback_expectation": "positive",
       "emotions": {
-        "frustrated": 0.6,
-        "anxious": 0.3,
-        "relieved": 0.1
+        "happy": 0.6,
+        "relieved": 0.3,
+        "surprised": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "work_importance": "low",
-      "feedback_expectation": "negative",
-      "emotions": {
-        "angry": 0.7,
-        "frustrated": 0.2,
-        "anxious": 0.1
-      }
-    },
-    {
-      "offence_history": "repeated",
+      "feedback_type": "positive",
+      "feedback_timing": "delayed",
       "work_importance": "high",
-      "feedback_expectation": "positive",
       "emotions": {
-        "angry": 0.4,
+        "proud": 0.4,
+        "grateful": 0.35,
+        "relieved": 0.25
+      }
+    },
+    {
+      "feedback_type": "negative",
+      "feedback_timing": "immediate",
+      "work_importance": "low",
+      "emotions": {
+        "disappointed": 0.6,
         "frustrated": 0.3,
-        "confident": 0.3
+        "upset": 0.1
       }
     },
     {
-      "offence_history": "repeated",
+      "feedback_type": "negative",
+      "feedback_timing": "immediate",
       "work_importance": "high",
-      "feedback_expectation": "negative",
       "emotions": {
-        "angry": 0.9,
-        "frustrated": 0.1,
-        "anxious": 0.0
+        "disappointed": 0.7,
+        "frustrated": 0.25,
+        "angry": 0.05
+      }
+    },
+    {
+      "feedback_type": "negative",
+      "feedback_timing": "delayed",
+      "work_importance": "low",
+      "emotions": {
+        "disappointed": 0.65,
+        "frustrated": 0.25,
+        "upset": 0.1
+      }
+    },
+    {
+      "feedback_type": "negative",
+      "feedback_timing": "delayed",
+      "work_importance": "high",
+      "emotions": {
+        "disappointed": 0.75,
+        "frustrated": 0.2,
+        "angry": 0.05
       }
     }
   ]

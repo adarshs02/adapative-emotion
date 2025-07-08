@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "self_comparison": [
+      "peers_success",
+      "personal_failure"
+    ],
+    "doubts_intensity": [
+      "mild",
+      "intense"
+    ],
+    "goal_importance": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "self_comparison": "peers_success",
+      "doubts_intensity": "mild",
+      "goal_importance": "low",
+      "emotions": {
+        "contentment": 0.6000000000000001,
+        "dissatisfaction": 0.30000000000000004,
+        "anxiety": 0.10000000000000002
+      }
+    },
+    {
+      "self_comparison": "peers_success",
+      "doubts_intensity": "mild",
+      "goal_importance": "high",
+      "emotions": {
+        "disappointment": 0.4,
+        "dissatisfaction": 0.5,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "self_comparison": "peers_success",
+      "doubts_intensity": "intense",
+      "goal_importance": "low",
+      "emotions": {
+        "contentment": 0.2,
+        "dissatisfaction": 0.45,
+        "anxiety": 0.35
+      }
+    },
+    {
+      "self_comparison": "peers_success",
+      "doubts_intensity": "intense",
+      "goal_importance": "high",
+      "emotions": {
+        "disappointment": 0.35,
+        "dissatisfaction": 0.55,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "self_comparison": "personal_failure",
+      "doubts_intensity": "mild",
+      "goal_importance": "low",
+      "emotions": {
+        "contentment": 0.7000000000000001,
+        "dissatisfaction": 0.20000000000000004,
+        "anxiety": 0.10000000000000002
+      }
+    },
+    {
+      "self_comparison": "personal_failure",
+      "doubts_intensity": "mild",
+      "goal_importance": "high",
+      "emotions": {
+        "disappointment": 0.5,
+        "dissatisfaction": 0.45,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "self_comparison": "personal_failure",
+      "doubts_intensity": "intense",
+      "goal_importance": "low",
+      "emotions": {
+        "contentment": 0.1,
+        "dissatisfaction": 0.5,
+        "anxiety": 0.4
+      }
+    },
+    {
+      "self_comparison": "personal_failure",
+      "doubts_intensity": "intense",
+      "goal_importance": "high",
+      "emotions": {
+        "disappointment": 0.4,
+        "dissatisfaction": 0.55,
+        "anxiety": 0.05
+      }
+    }
+  ]
+}

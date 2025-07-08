@@ -1,0 +1,103 @@
+{
+  "factors": {
+    "friend_relationship": [
+      "close",
+      "acquaintance"
+    ],
+    "accident_severity": [
+      "minor",
+      "major"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "friend_relationship": "close",
+      "accident_severity": "minor",
+      "offence_history": "first_time",
+      "emotions": {
+        "sadness": 0.3,
+        "worry": 0.2,
+        "hope": 0.05,
+        "shock": 0.3,
+        "relief": 0.15
+      }
+    },
+    {
+      "friend_relationship": "close",
+      "accident_severity": "minor",
+      "offence_history": "repeated",
+      "emotions": {
+        "anger": 0.4358974358974359,
+        "sadness": 0.23076923076923075,
+        "worry": 0.15384615384615383,
+        "shock": 0.17948717948717946
+      }
+    },
+    {
+      "friend_relationship": "close",
+      "accident_severity": "major",
+      "offence_history": "first_time",
+      "emotions": {
+        "fear": 0.5,
+        "sadness": 0.4,
+        "anger": 0.1
+      }
+    },
+    {
+      "friend_relationship": "close",
+      "accident_severity": "major",
+      "offence_history": "repeated",
+      "emotions": {
+        "anger": 0.6000000000000001,
+        "fear": 0.30000000000000004,
+        "sadness": 0.10000000000000002
+      }
+    },
+    {
+      "friend_relationship": "acquaintance",
+      "accident_severity": "minor",
+      "offence_history": "first_time",
+      "emotions": {
+        "concern": 0.5,
+        "worry": 0.175,
+        "indifference": 0.15,
+        "relief": 0.175
+      }
+    },
+    {
+      "friend_relationship": "acquaintance",
+      "accident_severity": "minor",
+      "offence_history": "repeated",
+      "emotions": {
+        "anger": 0.4,
+        "concern": 0.42500000000000004,
+        "worry": 0.075,
+        "indifference": 0.1
+      }
+    },
+    {
+      "friend_relationship": "acquaintance",
+      "accident_severity": "major",
+      "offence_history": "first_time",
+      "emotions": {
+        "fear": 0.6000000000000001,
+        "concern": 0.30000000000000004,
+        "indifference": 0.10000000000000002
+      }
+    },
+    {
+      "friend_relationship": "acquaintance",
+      "accident_severity": "major",
+      "offence_history": "repeated",
+      "emotions": {
+        "anger": 0.6000000000000001,
+        "fear": 0.30000000000000004,
+        "indifference": 0.10000000000000002
+      }
+    }
+  ]
+}

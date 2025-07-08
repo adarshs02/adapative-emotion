@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "injury_severity",
-      "values": [
-        "minor",
-        "severe"
-      ]
-    },
-    {
-      "name": "public_attention",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "injury_level": [
+      "minor",
+      "serious"
+    ],
+    "public_perception": [
+      "ignored",
+      "noticed"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "injury_severity": "minor",
-      "public_attention": "low",
+      "injury_level": "minor",
+      "public_perception": "ignored",
       "emotions": {
-        "shame": 0.7,
-        "embarrassment": 0.2,
-        "frustration": 0.1
+        "embarrassment": 0.8,
+        "frustration": 0.15,
+        "anger": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "injury_severity": "minor",
-      "public_attention": "high",
+      "injury_level": "minor",
+      "public_perception": "noticed",
       "emotions": {
-        "embarrassment": 0.6,
-        "shame": 0.3,
-        "frustration": 0.1
+        "embarrassment": 0.7,
+        "self_consciousness": 0.2,
+        "anxiety": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "injury_severity": "severe",
-      "public_attention": "low",
+      "injury_level": "serious",
+      "public_perception": "ignored",
       "emotions": {
-        "shame": 0.5,
-        "embarrassment": 0.3,
-        "fear": 0.2
+        "fear": 0.6,
+        "pain": 0.35,
+        "embarrassment": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "injury_severity": "severe",
-      "public_attention": "high",
+      "injury_level": "serious",
+      "public_perception": "noticed",
       "emotions": {
-        "shame": 0.4,
-        "embarrassment": 0.3,
-        "fear": 0.3
+        "fear": 0.7,
+        "pain": 0.25,
+        "anxiety": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "injury_severity": "minor",
-      "public_attention": "low",
+      "injury_level": "minor",
+      "public_perception": "ignored",
       "emotions": {
-        "anger": 0.6,
-        "frustration": 0.3,
-        "shame": 0.1
+        "embarrassment": 0.5,
+        "frustration": 0.4,
+        "anger": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "injury_severity": "minor",
-      "public_attention": "high",
+      "injury_level": "minor",
+      "public_perception": "noticed",
       "emotions": {
-        "anger": 0.7,
-        "frustration": 0.2,
-        "shame": 0.1
+        "embarrassment": 0.4,
+        "self_consciousness": 0.4,
+        "anger": 0.2
       }
     },
     {
       "offence_history": "repeated",
-      "injury_severity": "severe",
-      "public_attention": "low",
+      "injury_level": "serious",
+      "public_perception": "ignored",
       "emotions": {
-        "anger": 0.8,
-        "fear": 0.2,
-        "shame": 0.0
+        "fear": 0.6,
+        "pain": 0.3,
+        "anger": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "injury_severity": "severe",
-      "public_attention": "high",
+      "injury_level": "serious",
+      "public_perception": "noticed",
       "emotions": {
-        "anger": 0.9,
-        "fear": 0.1,
-        "shame": 0.0
+        "fear": 0.7,
+        "pain": 0.2,
+        "anger": 0.1
       }
     }
   ]

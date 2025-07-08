@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "hunger_level",
-      "values": [
-        "low",
-        "high"
-      ]
-    },
-    {
-      "name": "time_since_last_meal",
-      "values": [
-        "recent",
-        "long"
-      ]
-    },
-    {
-      "name": "environmental_stress",
-      "values": [
-        "calm",
-        "chaotic"
-      ]
-    }
-  ],
+  "factors": {
+    "hunger_level": [
+      "low",
+      "high"
+    ],
+    "room_noise_level": [
+      "quiet",
+      "loud"
+    ],
+    "self_awareness": [
+      "unaware",
+      "aware"
+    ]
+  },
   "cpt": [
     {
       "hunger_level": "low",
-      "time_since_last_meal": "recent",
-      "environmental_stress": "calm",
+      "room_noise_level": "quiet",
+      "self_awareness": "unaware",
       "emotions": {
-        "happiness": 0.8,
-        "frustration": 0.2,
-        "anxiety": 0.0
+        "amused": 0.3,
+        "embarrassed": 0.4,
+        "hungry": 0.3
       }
     },
     {
       "hunger_level": "low",
-      "time_since_last_meal": "recent",
-      "environmental_stress": "chaotic",
+      "room_noise_level": "quiet",
+      "self_awareness": "aware",
       "emotions": {
-        "happiness": 0.4,
-        "frustration": 0.3,
-        "anxiety": 0.3
+        "amused": 0.2,
+        "embarrassed": 0.5,
+        "annoyed": 0.3
+      }
+    },
+    {
+      "hunger_level": "high",
+      "room_noise_level": "quiet",
+      "self_awareness": "unaware",
+      "emotions": {
+        "amused": 0.1,
+        "embarrassed": 0.25,
+        "hungry": 0.65
+      }
+    },
+    {
+      "hunger_level": "high",
+      "room_noise_level": "quiet",
+      "self_awareness": "aware",
+      "emotions": {
+        "amused": 0.05,
+        "embarrassed": 0.3,
+        "angry": 0.65
       }
     },
     {
       "hunger_level": "low",
-      "time_since_last_meal": "long",
-      "environmental_stress": "calm",
+      "room_noise_level": "loud",
+      "self_awareness": "unaware",
       "emotions": {
-        "happiness": 0.6,
-        "frustration": 0.2,
-        "anxiety": 0.2
+        "amused": 0.25,
+        "embarrassed": 0.4,
+        "relieved": 0.35
       }
     },
     {
       "hunger_level": "low",
-      "time_since_last_meal": "long",
-      "environmental_stress": "chaotic",
+      "room_noise_level": "loud",
+      "self_awareness": "aware",
       "emotions": {
-        "happiness": 0.2,
-        "frustration": 0.3,
-        "anxiety": 0.5
+        "amused": 0.15,
+        "embarrassed": 0.4,
+        "annoyed": 0.45
       }
     },
     {
       "hunger_level": "high",
-      "time_since_last_meal": "recent",
-      "environmental_stress": "calm",
+      "room_noise_level": "loud",
+      "self_awareness": "unaware",
       "emotions": {
-        "happiness": 0.0,
-        "frustration": 0.5,
-        "anxiety": 0.5
+        "amused": 0.1,
+        "embarrassed": 0.25,
+        "angry": 0.65
       }
     },
     {
       "hunger_level": "high",
-      "time_since_last_meal": "recent",
-      "environmental_stress": "chaotic",
+      "room_noise_level": "loud",
+      "self_awareness": "aware",
       "emotions": {
-        "happiness": 0.0,
-        "frustration": 0.7,
-        "anxiety": 0.3
-      }
-    },
-    {
-      "hunger_level": "high",
-      "time_since_last_meal": "long",
-      "environmental_stress": "calm",
-      "emotions": {
-        "happiness": 0.0,
-        "frustration": 0.4,
-        "anxiety": 0.6
-      }
-    },
-    {
-      "hunger_level": "high",
-      "time_since_last_meal": "long",
-      "environmental_stress": "chaotic",
-      "emotions": {
-        "happiness": 0.0,
-        "frustration": 0.6,
-        "anxiety": 0.4
+        "amused": 0.05,
+        "embarrassed": 0.3,
+        "angry": 0.65
       }
     }
   ]

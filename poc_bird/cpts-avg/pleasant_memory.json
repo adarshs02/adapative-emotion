@@ -1,0 +1,100 @@
+{
+  "factors": {
+    "memory_type": [
+      "personal",
+      "shared"
+    ],
+    "memory_frequency": [
+      "rare",
+      "frequent"
+    ],
+    "memory_intensity": [
+      "subtle",
+      "vivid"
+    ]
+  },
+  "cpt": [
+    {
+      "memory_type": "personal",
+      "memory_frequency": "rare",
+      "memory_intensity": "subtle",
+      "emotions": {
+        "happy": 0.6499999999999999,
+        "nostalgic": 0.3,
+        "content": 0.05
+      }
+    },
+    {
+      "memory_type": "personal",
+      "memory_frequency": "rare",
+      "memory_intensity": "vivid",
+      "emotions": {
+        "happy": 0.8,
+        "nostalgic": 0.15000000000000002,
+        "content": 0.05
+      }
+    },
+    {
+      "memory_type": "personal",
+      "memory_frequency": "frequent",
+      "memory_intensity": "subtle",
+      "emotions": {
+        "happy": 0.5897435897435896,
+        "nostalgic": 0.17948717948717946,
+        "content": 0.17948717948717946,
+        "grateful": 0.05128205128205128
+      }
+    },
+    {
+      "memory_type": "personal",
+      "memory_frequency": "frequent",
+      "memory_intensity": "vivid",
+      "emotions": {
+        "happy": 0.75,
+        "nostalgic": 0.125,
+        "content": 0.1,
+        "grateful": 0.025
+      }
+    },
+    {
+      "memory_type": "shared",
+      "memory_frequency": "rare",
+      "memory_intensity": "subtle",
+      "emotions": {
+        "happy": 0.575,
+        "joyful": 0.3,
+        "content": 0.125
+      }
+    },
+    {
+      "memory_type": "shared",
+      "memory_frequency": "rare",
+      "memory_intensity": "vivid",
+      "emotions": {
+        "happy": 0.7435897435897436,
+        "joyful": 0.20512820512820512,
+        "content": 0.05128205128205128
+      }
+    },
+    {
+      "memory_type": "shared",
+      "memory_frequency": "frequent",
+      "memory_intensity": "subtle",
+      "emotions": {
+        "happy": 0.5128205128205129,
+        "joyful": 0.3333333333333333,
+        "content": 0.15384615384615385
+      }
+    },
+    {
+      "memory_type": "shared",
+      "memory_frequency": "frequent",
+      "memory_intensity": "vivid",
+      "emotions": {
+        "happy": 0.6923076923076923,
+        "joyful": 0.23076923076923075,
+        "content": 0.07692307692307693
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "importance_of_assignment": [
+      "high",
+      "low"
+    ],
+    "backup_strategy": [
+      "none",
+      "exists"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "importance_of_assignment": "high",
+      "backup_strategy": "none",
+      "offence_history": "first_time",
+      "emotions": {
+        "frustration": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "importance_of_assignment": "high",
+      "backup_strategy": "none",
+      "offence_history": "repeated",
+      "emotions": {
+        "frustration": 0.5789473684210527,
+        "anxiety": 0.36842105263157887,
+        "anger": 0.05263157894736842
+      }
+    },
+    {
+      "importance_of_assignment": "high",
+      "backup_strategy": "exists",
+      "offence_history": "first_time",
+      "emotions": {
+        "relief": 0.4,
+        "gratitude": 0.3,
+        "frustration": 0.3
+      }
+    },
+    {
+      "importance_of_assignment": "high",
+      "backup_strategy": "exists",
+      "offence_history": "repeated",
+      "emotions": {
+        "relief": 0.35000000000000003,
+        "gratitude": 0.30000000000000004,
+        "anger": 0.35000000000000003
+      }
+    },
+    {
+      "importance_of_assignment": "low",
+      "backup_strategy": "none",
+      "offence_history": "first_time",
+      "emotions": {
+        "indifference": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "anxiety": 0.10000000000000002
+      }
+    },
+    {
+      "importance_of_assignment": "low",
+      "backup_strategy": "none",
+      "offence_history": "repeated",
+      "emotions": {
+        "indifference": 0.5789473684210527,
+        "frustration": 0.36842105263157887,
+        "anxiety": 0.05263157894736842
+      }
+    },
+    {
+      "importance_of_assignment": "low",
+      "backup_strategy": "exists",
+      "offence_history": "first_time",
+      "emotions": {
+        "indifference": 0.4,
+        "relief": 0.3,
+        "frustration": 0.3
+      }
+    },
+    {
+      "importance_of_assignment": "low",
+      "backup_strategy": "exists",
+      "offence_history": "repeated",
+      "emotions": {
+        "indifference": 0.35000000000000003,
+        "relief": 0.30000000000000004,
+        "anger": 0.35000000000000003
+      }
+    }
+  ]
+}

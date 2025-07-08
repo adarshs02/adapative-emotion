@@ -1,0 +1,107 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "friend_reaction": [
+      "understanding",
+      "disappointed"
+    ],
+    "apology_effort": [
+      "minimal",
+      "sincere"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "friend_reaction": "understanding",
+      "apology_effort": "minimal",
+      "emotions": {
+        "regret": 0.6,
+        "embarrassment": 0.35,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_reaction": "understanding",
+      "apology_effort": "sincere",
+      "emotions": {
+        "relief": 0.4,
+        "gratitude": 0.35,
+        "guilt": 0.125,
+        "empathy": 0.125
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_reaction": "disappointed",
+      "apology_effort": "minimal",
+      "emotions": {
+        "regret": 0.7,
+        "embarrassment": 0.125,
+        "anxiety": 0.15,
+        "shame": 0.025
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_reaction": "disappointed",
+      "apology_effort": "sincere",
+      "emotions": {
+        "relief": 0.15,
+        "gratitude": 0.125,
+        "guilt": 0.275,
+        "regret": 0.3,
+        "empathy": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reaction": "understanding",
+      "apology_effort": "minimal",
+      "emotions": {
+        "regret": 0.6923076923076924,
+        "embarrassment": 0.07692307692307693,
+        "anxiety": 0.20512820512820512,
+        "shame": 0.025641025641025644
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reaction": "understanding",
+      "apology_effort": "sincere",
+      "emotions": {
+        "relief": 0.25,
+        "gratitude": 0.2,
+        "guilt": 0.325,
+        "empathy": 0.225
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reaction": "disappointed",
+      "apology_effort": "minimal",
+      "emotions": {
+        "regret": 0.8499999999999999,
+        "embarrassment": 0.024999999999999994,
+        "anxiety": 0.04999999999999999,
+        "shame": 0.07499999999999998
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reaction": "disappointed",
+      "apology_effort": "sincere",
+      "emotions": {
+        "relief": 0.05,
+        "gratitude": 0.025,
+        "guilt": 0.475,
+        "regret": 0.35,
+        "empathy": 0.1
+      }
+    }
+  ]
+}

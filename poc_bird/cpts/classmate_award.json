@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "relationship_with_winner",
-      "values": [
-        "close",
-        "distant"
-      ]
-    },
-    {
-      "name": "personal_importance",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "desire_level": [
+      "low",
+      "high"
+    ],
+    "self_esteem": [
+      "high",
+      "low"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "relationship_with_winner": "close",
-      "personal_importance": "low",
+      "desire_level": "low",
+      "self_esteem": "high",
       "emotions": {
-        "disappointment": 0.8,
-        "relief": 0.2,
-        "indifference": 0.0
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "relationship_with_winner": "close",
-      "personal_importance": "high",
-      "emotions": {
-        "disappointment": 0.7,
-        "relief": 0.2,
-        "pride": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "relationship_with_winner": "distant",
-      "personal_importance": "low",
-      "emotions": {
-        "disappointment": 0.6,
-        "relief": 0.3,
+        "happiness": 0.6,
+        "jealousy": 0.3,
         "indifference": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "relationship_with_winner": "distant",
-      "personal_importance": "high",
+      "desire_level": "low",
+      "self_esteem": "low",
       "emotions": {
-        "disappointment": 0.5,
-        "relief": 0.3,
-        "pride": 0.2
+        "sadness": 0.5,
+        "regret": 0.35,
+        "indifference": 0.15
       }
     },
     {
-      "offence_history": "repeated",
-      "relationship_with_winner": "close",
-      "personal_importance": "low",
+      "offence_history": "first_time",
+      "desire_level": "high",
+      "self_esteem": "high",
       "emotions": {
-        "anger": 0.7,
-        "disappointment": 0.2,
+        "happiness": 0.7,
+        "pride": 0.2,
         "indifference": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "relationship_with_winner": "close",
-      "personal_importance": "high",
+      "offence_history": "first_time",
+      "desire_level": "high",
+      "self_esteem": "low",
       "emotions": {
-        "anger": 0.6,
-        "disappointment": 0.3,
-        "pride": 0.1
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "relationship_with_winner": "distant",
-      "personal_importance": "low",
-      "emotions": {
-        "anger": 0.5,
-        "disappointment": 0.3,
+        "sadness": 0.4,
+        "disappointment": 0.4,
         "indifference": 0.2
       }
     },
     {
       "offence_history": "repeated",
-      "relationship_with_winner": "distant",
-      "personal_importance": "high",
+      "desire_level": "low",
+      "self_esteem": "high",
       "emotions": {
-        "anger": 0.4,
-        "disappointment": 0.3,
-        "pride": 0.3
+        "anger": 0.6,
+        "jealousy": 0.3,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "desire_level": "low",
+      "self_esteem": "low",
+      "emotions": {
+        "anger": 0.7,
+        "regret": 0.2,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "desire_level": "high",
+      "self_esteem": "high",
+      "emotions": {
+        "anger": 0.8,
+        "pride": 0.1,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "desire_level": "high",
+      "self_esteem": "low",
+      "emotions": {
+        "anger": 0.9,
+        "disappointment": 0.05,
+        "indifference": 0.05
       }
     }
   ]

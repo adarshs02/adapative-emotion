@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "illness_severity": [
+      "mild",
+      "severe"
+    ],
+    "family_member_relationship": [
+      "close",
+      "distant"
+    ],
+    "personal_health_status": [
+      "good",
+      "poor"
+    ]
+  },
+  "cpt": [
+    {
+      "illness_severity": "mild",
+      "family_member_relationship": "close",
+      "personal_health_status": "good",
+      "emotions": {
+        "concern": 0.6,
+        "worry": 0.35,
+        "sadness": 0.05
+      }
+    },
+    {
+      "illness_severity": "mild",
+      "family_member_relationship": "close",
+      "personal_health_status": "poor",
+      "emotions": {
+        "anxiety": 0.55,
+        "worry": 0.4,
+        "sadness": 0.05
+      }
+    },
+    {
+      "illness_severity": "mild",
+      "family_member_relationship": "distant",
+      "personal_health_status": "good",
+      "emotions": {
+        "indifference": 0.4,
+        "concern": 0.35,
+        "sadness": 0.25
+      }
+    },
+    {
+      "illness_severity": "mild",
+      "family_member_relationship": "distant",
+      "personal_health_status": "poor",
+      "emotions": {
+        "apathy": 0.6000000000000001,
+        "indifference": 0.30000000000000004,
+        "sadness": 0.10000000000000002
+      }
+    },
+    {
+      "illness_severity": "severe",
+      "family_member_relationship": "close",
+      "personal_health_status": "good",
+      "emotions": {
+        "fear": 0.6,
+        "worry": 0.35,
+        "sadness": 0.05
+      }
+    },
+    {
+      "illness_severity": "severe",
+      "family_member_relationship": "close",
+      "personal_health_status": "poor",
+      "emotions": {
+        "anxiety": 0.7,
+        "worry": 0.25,
+        "sadness": 0.05
+      }
+    },
+    {
+      "illness_severity": "severe",
+      "family_member_relationship": "distant",
+      "personal_health_status": "good",
+      "emotions": {
+        "concern": 0.4,
+        "fear": 0.35,
+        "sadness": 0.25
+      }
+    },
+    {
+      "illness_severity": "severe",
+      "family_member_relationship": "distant",
+      "personal_health_status": "poor",
+      "emotions": {
+        "apathy": 0.6000000000000001,
+        "concern": 0.30000000000000004,
+        "sadness": 0.10000000000000002
+      }
+    }
+  ]
+}

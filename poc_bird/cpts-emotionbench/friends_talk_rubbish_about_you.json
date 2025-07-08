@@ -1,0 +1,119 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "friend_reputation": [
+      "trustworthy",
+      "untrustworthy"
+    ],
+    "friend_apology": [
+      "apologized",
+      "did_not_apologize"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "friend_reputation": "trustworthy",
+      "friend_apology": "apologized",
+      "emotions": {
+        "happy": 0.15,
+        "surprised": 0.2,
+        "angry": 0.15,
+        "happiness": 0.3,
+        "surprise": 0.15,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_reputation": "trustworthy",
+      "friend_apology": "did_not_apologize",
+      "emotions": {
+        "hurt": 0.6000000000000001,
+        "angry": 0.17500000000000002,
+        "betrayed": 0.07500000000000001,
+        "anger": 0.12500000000000003,
+        "disappointment": 0.025000000000000005
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_reputation": "untrustworthy",
+      "friend_apology": "apologized",
+      "emotions": {
+        "angry": 0.3,
+        "disappointed": 0.15,
+        "confused": 0.05,
+        "distrust": 0.275,
+        "anger": 0.175,
+        "suspicion": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_reputation": "untrustworthy",
+      "friend_apology": "did_not_apologize",
+      "emotions": {
+        "angry": 0.375,
+        "disappointed": 0.1,
+        "betrayed": 0.025,
+        "betrayal": 0.35,
+        "anger": 0.125,
+        "distrust": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reputation": "trustworthy",
+      "friend_apology": "apologized",
+      "emotions": {
+        "angry": 0.35,
+        "hurt": 0.15,
+        "disappointed": 0.025,
+        "anger": 0.4,
+        "disappointment": 0.075
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reputation": "trustworthy",
+      "friend_apology": "did_not_apologize",
+      "emotions": {
+        "angry": 0.425,
+        "hurt": 0.07500000000000001,
+        "betrayed": 0.025,
+        "anger": 0.45,
+        "disappointment": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reputation": "untrustworthy",
+      "friend_apology": "apologized",
+      "emotions": {
+        "angry": 0.45,
+        "disappointed": 0.025,
+        "betrayed": 0.025,
+        "anger": 0.475,
+        "distrust": 0.015,
+        "betrayal": 0.01
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reputation": "untrustworthy",
+      "friend_apology": "did_not_apologize",
+      "emotions": {
+        "angry": 0.475,
+        "disappointed": 0.015,
+        "betrayed": 0.01,
+        "anger": 0.5,
+        "distrust": 0.0,
+        "betrayal": 0.0
+      }
+    }
+  ]
+}

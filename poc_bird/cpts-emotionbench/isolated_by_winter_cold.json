@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "isolation_level": [
+      "low",
+      "high"
+    ],
+    "coldness_level": [
+      "mild",
+      "severe"
+    ],
+    "joy_reminder_level": [
+      "subtle",
+      "prominent"
+    ]
+  },
+  "cpt": [
+    {
+      "isolation_level": "low",
+      "coldness_level": "mild",
+      "joy_reminder_level": "subtle",
+      "emotions": {
+        "contentment": 0.6000000000000001,
+        "sadness": 0.30000000000000004,
+        "frustration": 0.10000000000000002
+      }
+    },
+    {
+      "isolation_level": "low",
+      "coldness_level": "mild",
+      "joy_reminder_level": "prominent",
+      "emotions": {
+        "happiness": 0.7000000000000001,
+        "sadness": 0.20000000000000004,
+        "frustration": 0.10000000000000002
+      }
+    },
+    {
+      "isolation_level": "low",
+      "coldness_level": "severe",
+      "joy_reminder_level": "subtle",
+      "emotions": {
+        "discomfort": 0.7000000000000001,
+        "sadness": 0.20000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "isolation_level": "low",
+      "coldness_level": "severe",
+      "joy_reminder_level": "prominent",
+      "emotions": {
+        "discomfort": 0.6000000000000001,
+        "happiness": 0.30000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "isolation_level": "high",
+      "coldness_level": "mild",
+      "joy_reminder_level": "subtle",
+      "emotions": {
+        "loneliness": 0.8,
+        "sadness": 0.1,
+        "frustration": 0.1
+      }
+    },
+    {
+      "isolation_level": "high",
+      "coldness_level": "mild",
+      "joy_reminder_level": "prominent",
+      "emotions": {
+        "envy": 0.6000000000000001,
+        "happiness": 0.30000000000000004,
+        "sadness": 0.10000000000000002
+      }
+    },
+    {
+      "isolation_level": "high",
+      "coldness_level": "severe",
+      "joy_reminder_level": "subtle",
+      "emotions": {
+        "despair": 0.85,
+        "sadness": 0.1,
+        "anger": 0.05
+      }
+    },
+    {
+      "isolation_level": "high",
+      "coldness_level": "severe",
+      "joy_reminder_level": "prominent",
+      "emotions": {
+        "bitterness": 0.7000000000000001,
+        "happiness": 0.20000000000000004,
+        "anger": 0.10000000000000002
+      }
+    }
+  ]
+}

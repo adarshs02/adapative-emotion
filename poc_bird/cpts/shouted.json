@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "relationship",
-      "values": [
-        "close",
-        "distant"
-      ]
-    },
-    {
-      "name": "provocation_level",
-      "values": [
-        "minor",
-        "severe"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "intent": [
+      "unintentional",
+      "intentional"
+    ],
+    "consequences": [
+      "minor",
+      "major"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "relationship": "close",
-      "provocation_level": "minor",
+      "intent": "unintentional",
+      "consequences": "minor",
       "emotions": {
-        "anger": 0.2,
-        "frustration": 0.6,
-        "surprise": 0.2
+        "surprise": 0.3,
+        "regret": 0.4,
+        "anxiety": 0.3
       }
     },
     {
       "offence_history": "first_time",
-      "relationship": "close",
-      "provocation_level": "severe",
+      "intent": "unintentional",
+      "consequences": "major",
       "emotions": {
-        "anger": 0.4,
-        "frustration": 0.4,
-        "surprise": 0.2
+        "shock": 0.25,
+        "regret": 0.6,
+        "anxiety": 0.15
       }
     },
     {
       "offence_history": "first_time",
-      "relationship": "distant",
-      "provocation_level": "minor",
-      "emotions": {
-        "anger": 0.1,
-        "frustration": 0.7,
-        "surprise": 0.2
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "relationship": "distant",
-      "provocation_level": "severe",
+      "intent": "intentional",
+      "consequences": "minor",
       "emotions": {
         "anger": 0.6,
         "frustration": 0.3,
-        "surprise": 0.1
+        "guilt": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "relationship": "close",
-      "provocation_level": "minor",
+      "offence_history": "first_time",
+      "intent": "intentional",
+      "consequences": "major",
       "emotions": {
-        "anger": 0.8,
-        "frustration": 0.2,
-        "surprise": 0.0
+        "anger": 0.75,
+        "fear": 0.15,
+        "guilt": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "relationship": "close",
-      "provocation_level": "severe",
+      "intent": "unintentional",
+      "consequences": "minor",
       "emotions": {
-        "anger": 0.9,
-        "frustration": 0.1,
-        "surprise": 0.0
+        "surprise": 0.2,
+        "regret": 0.5,
+        "anxiety": 0.3
       }
     },
     {
       "offence_history": "repeated",
-      "relationship": "distant",
-      "provocation_level": "minor",
+      "intent": "unintentional",
+      "consequences": "major",
+      "emotions": {
+        "shock": 0.2,
+        "regret": 0.6,
+        "anxiety": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intent": "intentional",
+      "consequences": "minor",
       "emotions": {
         "anger": 0.7,
         "frustration": 0.2,
-        "surprise": 0.1
+        "guilt": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "relationship": "distant",
-      "provocation_level": "severe",
+      "intent": "intentional",
+      "consequences": "major",
       "emotions": {
-        "anger": 0.95,
-        "frustration": 0.05,
-        "surprise": 0.0
+        "anger": 0.85,
+        "fear": 0.05,
+        "guilt": 0.1
       }
     }
   ]

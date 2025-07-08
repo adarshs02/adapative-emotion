@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "communication_style",
-      "values": [
-        "clear",
-        "vague"
-      ]
-    },
-    {
-      "name": "impact_on_job",
-      "values": [
-        "minor",
-        "major"
-      ]
-    }
-  ],
+  "factors": {
+    "understand_policy": [
+      "understood",
+      "not_understood"
+    ],
+    "impact_on_work": [
+      "minimal",
+      "significant"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
   "cpt": [
     {
+      "understand_policy": "understood",
+      "impact_on_work": "minimal",
       "offence_history": "first_time",
-      "communication_style": "clear",
-      "impact_on_job": "minor",
       "emotions": {
-        "frustration": 0.7,
-        "confusion": 0.2,
-        "relief": 0.1
+        "frustrated": 0.3,
+        "confused": 0.4,
+        "indifferent": 0.3
       }
     },
     {
+      "understand_policy": "understood",
+      "impact_on_work": "minimal",
+      "offence_history": "repeated",
+      "emotions": {
+        "frustrated": 0.4,
+        "angry": 0.5,
+        "confused": 0.1
+      }
+    },
+    {
+      "understand_policy": "not_understood",
+      "impact_on_work": "minimal",
       "offence_history": "first_time",
-      "communication_style": "clear",
-      "impact_on_job": "major",
       "emotions": {
-        "frustration": 0.4,
-        "confusion": 0.3,
-        "relief": 0.3
+        "confused": 0.6,
+        "frustrated": 0.3,
+        "anxious": 0.1
       }
     },
     {
+      "understand_policy": "not_understood",
+      "impact_on_work": "minimal",
+      "offence_history": "repeated",
+      "emotions": {
+        "confused": 0.5,
+        "frustrated": 0.4,
+        "angry": 0.1
+      }
+    },
+    {
+      "understand_policy": "understood",
+      "impact_on_work": "significant",
       "offence_history": "first_time",
-      "communication_style": "vague",
-      "impact_on_job": "minor",
       "emotions": {
-        "frustration": 0.5,
-        "confusion": 0.4,
-        "relief": 0.1
+        "frustrated": 0.5,
+        "stressed": 0.4,
+        "anxious": 0.1
       }
     },
     {
+      "understand_policy": "understood",
+      "impact_on_work": "significant",
+      "offence_history": "repeated",
+      "emotions": {
+        "angry": 0.6,
+        "frustrated": 0.3,
+        "stressed": 0.1
+      }
+    },
+    {
+      "understand_policy": "not_understood",
+      "impact_on_work": "significant",
       "offence_history": "first_time",
-      "communication_style": "vague",
-      "impact_on_job": "major",
       "emotions": {
-        "frustration": 0.6,
-        "confusion": 0.3,
-        "relief": 0.1
+        "confused": 0.6,
+        "frustrated": 0.3,
+        "stressed": 0.1
       }
     },
     {
+      "understand_policy": "not_understood",
+      "impact_on_work": "significant",
       "offence_history": "repeated",
-      "communication_style": "clear",
-      "impact_on_job": "minor",
       "emotions": {
-        "anger": 0.6,
-        "frustration": 0.3,
-        "relief": 0.1
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "communication_style": "clear",
-      "impact_on_job": "major",
-      "emotions": {
-        "anger": 0.8,
-        "frustration": 0.2,
-        "relief": 0.0
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "communication_style": "vague",
-      "impact_on_job": "minor",
-      "emotions": {
-        "anger": 0.7,
-        "frustration": 0.2,
-        "relief": 0.1
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "communication_style": "vague",
-      "impact_on_job": "major",
-      "emotions": {
-        "anger": 0.9,
-        "frustration": 0.1,
-        "relief": 0.0
+        "confused": 0.5,
+        "frustrated": 0.4,
+        "angry": 0.1
       }
     }
   ]

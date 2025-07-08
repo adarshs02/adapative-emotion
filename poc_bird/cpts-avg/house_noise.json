@@ -1,0 +1,105 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "presence_of_family": [
+      "alone",
+      "with_family"
+    ],
+    "night_routine": [
+      "routine_disrupted",
+      "routine_normal"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "presence_of_family": "alone",
+      "night_routine": "routine_disrupted",
+      "emotions": {
+        "fear": 0.7,
+        "curiosity": 0.25,
+        "annoyance": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "presence_of_family": "with_family",
+      "night_routine": "routine_disrupted",
+      "emotions": {
+        "fear": 0.5750000000000001,
+        "concern": 0.325,
+        "annoyance": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "presence_of_family": "alone",
+      "night_routine": "routine_normal",
+      "emotions": {
+        "surprise": 0.25,
+        "curiosity": 0.45,
+        "relief": 0.15000000000000002,
+        "fear": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "presence_of_family": "with_family",
+      "night_routine": "routine_normal",
+      "emotions": {
+        "surprise": 0.2,
+        "relief": 0.425,
+        "happiness": 0.05,
+        "fear": 0.1,
+        "curiosity": 0.225
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "presence_of_family": "alone",
+      "night_routine": "routine_disrupted",
+      "emotions": {
+        "fear": 0.825,
+        "anger": 0.125,
+        "anxiety": 0.025,
+        "caution": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "presence_of_family": "with_family",
+      "night_routine": "routine_disrupted",
+      "emotions": {
+        "fear": 0.75,
+        "anger": 0.2,
+        "anxiety": 0.025,
+        "concern": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "presence_of_family": "alone",
+      "night_routine": "routine_normal",
+      "emotions": {
+        "fear": 0.6000000000000001,
+        "anger": 0.30000000000000004,
+        "anxiety": 0.025000000000000005,
+        "caution": 0.07500000000000001
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "presence_of_family": "with_family",
+      "night_routine": "routine_normal",
+      "emotions": {
+        "fear": 0.5,
+        "anger": 0.375,
+        "anxiety": 0.05,
+        "relief": 0.075
+      }
+    }
+  ]
+}

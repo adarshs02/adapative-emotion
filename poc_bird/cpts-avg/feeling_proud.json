@@ -1,0 +1,142 @@
+{
+  "factors": {
+    "personal_growth": [
+      "significant",
+      "minimal"
+    ],
+    "self_reflection_depth": [
+      "deep",
+      "superficial"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "personal_growth": "significant",
+      "self_reflection_depth": "deep",
+      "offence_history": "first_time",
+      "emotions": {
+        "pride": 0.7,
+        "gratitude": 0.25000000000000006,
+        "satisfaction": 0.05000000000000002,
+        "regret": 0.0,
+        "shame": 0.0,
+        "anger": 0.0
+      }
+    },
+    {
+      "personal_growth": "significant",
+      "self_reflection_depth": "deep",
+      "offence_history": "repeated",
+      "emotions": {
+        "pride": 0.5333333333333332,
+        "regret": 0.2166666666666666,
+        "disappointment": 0.04999999999999998,
+        "gratitude": 0.06666666666666665,
+        "satisfaction": 0.04999999999999998,
+        "shame": 0.016666666666666663,
+        "anger": 0.0,
+        "dissatisfaction": 0.06666666666666665
+      }
+    },
+    {
+      "personal_growth": "significant",
+      "self_reflection_depth": "superficial",
+      "offence_history": "first_time",
+      "emotions": {
+        "pride": 0.6,
+        "contentment": 0.09999999999999999,
+        "relief": 0.03333333333333333,
+        "gratitude": 0.06666666666666667,
+        "satisfaction": 0.03333333333333333,
+        "regret": 0.016666666666666666,
+        "shame": 0.0,
+        "anger": 0.016666666666666666,
+        "arrogance": 0.09999999999999999,
+        "overconfidence": 0.03333333333333333
+      }
+    },
+    {
+      "personal_growth": "significant",
+      "self_reflection_depth": "superficial",
+      "offence_history": "repeated",
+      "emotions": {
+        "pride": 0.43333333333333324,
+        "regret": 0.14999999999999997,
+        "disappointment": 0.06666666666666665,
+        "gratitude": 0.06666666666666665,
+        "satisfaction": 0.04999999999999998,
+        "shame": 0.016666666666666663,
+        "anger": 0.016666666666666663,
+        "arrogance": 0.14999999999999997,
+        "overconfidence": 0.04999999999999998
+      }
+    },
+    {
+      "personal_growth": "minimal",
+      "self_reflection_depth": "deep",
+      "offence_history": "first_time",
+      "emotions": {
+        "pride": 0.2333333333333333,
+        "dissatisfaction": 0.3,
+        "frustration": 0.06666666666666667,
+        "gratitude": 0.06666666666666667,
+        "satisfaction": 0.08333333333333333,
+        "regret": 0.16666666666666666,
+        "shame": 0.016666666666666666,
+        "anger": 0.016666666666666666,
+        "disappointment": 0.049999999999999996
+      }
+    },
+    {
+      "personal_growth": "minimal",
+      "self_reflection_depth": "deep",
+      "offence_history": "repeated",
+      "emotions": {
+        "pride": 0.18644067796610173,
+        "regret": 0.3389830508474576,
+        "disappointment": 0.10169491525423731,
+        "gratitude": 0.06779661016949153,
+        "satisfaction": 0.06779661016949153,
+        "shame": 0.01694915254237288,
+        "anger": 0.01694915254237288,
+        "dissatisfaction": 0.20338983050847456
+      }
+    },
+    {
+      "personal_growth": "minimal",
+      "self_reflection_depth": "superficial",
+      "offence_history": "first_time",
+      "emotions": {
+        "pride": 0.2203389830508474,
+        "dissatisfaction": 0.37288135593220334,
+        "frustration": 0.08474576271186439,
+        "gratitude": 0.06779661016949151,
+        "satisfaction": 0.06779661016949151,
+        "regret": 0.050847457627118633,
+        "shame": 0.016949152542372878,
+        "anger": 0.016949152542372878,
+        "disappointment": 0.10169491525423727
+      }
+    },
+    {
+      "personal_growth": "minimal",
+      "self_reflection_depth": "superficial",
+      "offence_history": "repeated",
+      "emotions": {
+        "pride": 0.15254237288135591,
+        "regret": 0.2542372881355932,
+        "disappointment": 0.15254237288135591,
+        "gratitude": 0.06779661016949153,
+        "satisfaction": 0.06779661016949153,
+        "shame": 0.03389830508474576,
+        "anger": 0.01694915254237288,
+        "dissatisfaction": 0.2372881355932203,
+        "frustration": 0.01694915254237288
+      }
+    }
+  ]
+}

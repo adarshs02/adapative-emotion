@@ -1,0 +1,116 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "initiative_taken": [
+      "none",
+      "some",
+      "full"
+    ],
+    "communication_effort": [
+      "little",
+      "moderate",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "initiative_taken": "none",
+      "communication_effort": "little",
+      "emotions": {
+        "sadness": 0.6,
+        "regret": 0.3,
+        "anger": 0.05,
+        "relief": 0.05,
+        "indifference": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "initiative_taken": "some",
+      "communication_effort": "little",
+      "emotions": {
+        "sadness": 0.45,
+        "regret": 0.35,
+        "anger": 0.1,
+        "relief": 0.05,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "initiative_taken": "full",
+      "communication_effort": "little",
+      "emotions": {
+        "sadness": 0.35,
+        "regret": 0.4,
+        "anger": 0.1,
+        "relief": 0.05,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "initiative_taken": "none",
+      "communication_effort": "moderate",
+      "emotions": {
+        "sadness": 0.5499999999999999,
+        "regret": 0.29999999999999993,
+        "anger": 0.04999999999999999,
+        "relief": 0.04999999999999999,
+        "indifference": 0.04999999999999999
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "initiative_taken": "some",
+      "communication_effort": "moderate",
+      "emotions": {
+        "sadness": 0.4,
+        "regret": 0.4,
+        "anger": 0.1,
+        "relief": 0.05,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "initiative_taken": "full",
+      "communication_effort": "moderate",
+      "emotions": {
+        "sadness": 0.35,
+        "regret": 0.4,
+        "anger": 0.1,
+        "relief": 0.05,
+        "indifference": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "initiative_taken": "none",
+      "communication_effort": "little",
+      "emotions": {
+        "sadness": 0.7,
+        "regret": 0.2,
+        "anger": 0.05,
+        "relief": 0.0,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "initiative_taken": "some",
+      "communication_effort": "little",
+      "emotions": {
+        "sadness": 0.65,
+        "regret": 0.25,
+        "anger": 0.05,
+        "relief": 0.05,
+        "indifference": 0.0
+      }
+    }
+  ]
+}

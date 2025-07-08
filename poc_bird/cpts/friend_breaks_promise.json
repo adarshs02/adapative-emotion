@@ -1,106 +1,103 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "friendship_depth",
-      "values": [
-        "shallow",
-        "deep"
-      ]
-    },
-    {
-      "name": "trust_level",
-      "values": [
-        "high",
-        "low"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "friend_apology": [
+      "sincere",
+      "insincere"
+    ],
+    "friend_explanation": [
+      "valid",
+      "invalid"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "friendship_depth": "shallow",
-      "trust_level": "high",
+      "friend_apology": "sincere",
+      "friend_explanation": "valid",
       "emotions": {
-        "anger": 0.0,
-        "disappointment": 0.8,
-        "hurt": 0.2
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "friendship_depth": "shallow",
-      "trust_level": "low",
-      "emotions": {
-        "anger": 0.2,
+        "surprise": 0.2,
         "disappointment": 0.6,
-        "hurt": 0.2
+        "forgiveness": 0.2
       }
     },
     {
       "offence_history": "first_time",
-      "friendship_depth": "deep",
-      "trust_level": "high",
+      "friend_apology": "sincere",
+      "friend_explanation": "invalid",
       "emotions": {
-        "anger": 0.1,
+        "surprise": 0.2,
         "disappointment": 0.7,
-        "hurt": 0.2
+        "anger": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "friendship_depth": "deep",
-      "trust_level": "low",
+      "friend_apology": "insincere",
+      "friend_explanation": "valid",
       "emotions": {
-        "anger": 0.3,
-        "disappointment": 0.5,
-        "hurt": 0.2
+        "surprise": 0.25,
+        "disappointment": 0.65,
+        "distrust": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_apology": "insincere",
+      "friend_explanation": "invalid",
+      "emotions": {
+        "surprise": 0.25,
+        "disappointment": 0.7,
+        "anger": 0.05,
+        "distrust": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "friendship_depth": "shallow",
-      "trust_level": "high",
+      "friend_apology": "sincere",
+      "friend_explanation": "valid",
       "emotions": {
-        "anger": 0.8,
-        "disappointment": 0.1,
-        "hurt": 0.1
+        "surprise": 0.15,
+        "disappointment": 0.55,
+        "anger": 0.25,
+        "betrayal": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "friendship_depth": "shallow",
-      "trust_level": "low",
+      "friend_apology": "sincere",
+      "friend_explanation": "invalid",
       "emotions": {
-        "anger": 0.9,
-        "disappointment": 0.05,
-        "hurt": 0.05
+        "surprise": 0.15,
+        "disappointment": 0.6,
+        "anger": 0.2,
+        "betrayal": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "friendship_depth": "deep",
-      "trust_level": "high",
+      "friend_apology": "insincere",
+      "friend_explanation": "valid",
       "emotions": {
-        "anger": 0.7,
-        "disappointment": 0.2,
-        "hurt": 0.1
+        "surprise": 0.2,
+        "disappointment": 0.55,
+        "anger": 0.2,
+        "distrust": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "friendship_depth": "deep",
-      "trust_level": "low",
+      "friend_apology": "insincere",
+      "friend_explanation": "invalid",
       "emotions": {
-        "anger": 0.95,
-        "disappointment": 0.03,
-        "hurt": 0.02
+        "surprise": 0.2,
+        "disappointment": 0.6,
+        "anger": 0.2,
+        "betrayal": 0.05,
+        "distrust": 0.05
       }
     }
   ]

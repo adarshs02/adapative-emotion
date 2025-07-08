@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "dream_outcome": [
+      "success",
+      "failure"
+    ],
+    "preparation_time": [
+      "short",
+      "long"
+    ],
+    "self_confidence": [
+      "high",
+      "low"
+    ]
+  },
+  "cpt": [
+    {
+      "dream_outcome": "success",
+      "preparation_time": "short",
+      "self_confidence": "high",
+      "emotions": {
+        "happiness": 0.7,
+        "relief": 0.25,
+        "pride": 0.05
+      }
+    },
+    {
+      "dream_outcome": "success",
+      "preparation_time": "short",
+      "self_confidence": "low",
+      "emotions": {
+        "surprise": 0.3,
+        "disbelief": 0.4,
+        "anxiety": 0.3
+      }
+    },
+    {
+      "dream_outcome": "success",
+      "preparation_time": "long",
+      "self_confidence": "high",
+      "emotions": {
+        "happiness": 0.85,
+        "relief": 0.1,
+        "gratitude": 0.05
+      }
+    },
+    {
+      "dream_outcome": "success",
+      "preparation_time": "long",
+      "self_confidence": "low",
+      "emotions": {
+        "relief": 0.5,
+        "disappointment": 0.3,
+        "anxiety": 0.2
+      }
+    },
+    {
+      "dream_outcome": "failure",
+      "preparation_time": "short",
+      "self_confidence": "high",
+      "emotions": {
+        "disappointment": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "shock": 0.10000000000000002
+      }
+    },
+    {
+      "dream_outcome": "failure",
+      "preparation_time": "short",
+      "self_confidence": "low",
+      "emotions": {
+        "disappointment": 0.75,
+        "shame": 0.2,
+        "anger": 0.05
+      }
+    },
+    {
+      "dream_outcome": "failure",
+      "preparation_time": "long",
+      "self_confidence": "high",
+      "emotions": {
+        "disappointment": 0.8,
+        "frustration": 0.15,
+        "regret": 0.05
+      }
+    },
+    {
+      "dream_outcome": "failure",
+      "preparation_time": "long",
+      "self_confidence": "low",
+      "emotions": {
+        "disappointment": 0.9,
+        "shame": 0.05,
+        "doubt": 0.05
+      }
+    }
+  ]
+}

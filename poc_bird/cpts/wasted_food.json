@@ -1,105 +1,96 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "food_value",
-      "values": [
-        "low",
-        "high"
-      ]
-    },
-    {
-      "name": "personal_responsibility",
-      "values": [
-        "yes",
-        "no"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "intentionality": [
+      "accidental",
+      "intentional"
+    ],
+    "waste_amount": [
+      "small",
+      "large"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "food_value": "low",
-      "personal_responsibility": "yes",
+      "intentionality": "accidental",
+      "waste_amount": "small",
       "emotions": {
-        "shame": 0.8,
-        "frustration": 0.15,
-        "indifference": 0.05
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "food_value": "low",
-      "personal_responsibility": "no",
-      "emotions": {
-        "frustration": 0.6,
-        "shame": 0.3,
-        "indifference": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "food_value": "high",
-      "personal_responsibility": "yes",
-      "emotions": {
-        "shame": 0.7,
-        "frustration": 0.25,
-        "disgust": 0.05
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "food_value": "high",
-      "personal_responsibility": "no",
-      "emotions": {
-        "frustration": 0.5,
-        "shame": 0.35,
-        "disgust": 0.15
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "food_value": "low",
-      "personal_responsibility": "yes",
-      "emotions": {
-        "anger": 0.6,
+        "regret": 0.6,
         "frustration": 0.3,
-        "shame": 0.1
+        "guilt": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "food_value": "low",
-      "personal_responsibility": "no",
+      "offence_history": "first_time",
+      "intentionality": "accidental",
+      "waste_amount": "large",
       "emotions": {
-        "anger": 0.7,
+        "regret": 0.75,
         "frustration": 0.2,
+        "worry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intentionality": "intentional",
+      "waste_amount": "small",
+      "emotions": {
+        "anger": 0.5,
+        "regret": 0.4,
         "shame": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "food_value": "high",
-      "personal_responsibility": "yes",
+      "offence_history": "first_time",
+      "intentionality": "intentional",
+      "waste_amount": "large",
       "emotions": {
-        "anger": 0.8,
-        "disgust": 0.15,
+        "anger": 0.75,
+        "regret": 0.2,
         "shame": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "food_value": "high",
-      "personal_responsibility": "no",
+      "intentionality": "accidental",
+      "waste_amount": "small",
       "emotions": {
-        "anger": 0.9,
-        "disgust": 0.08,
+        "regret": 0.8,
+        "frustration": 0.15,
+        "worry": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intentionality": "accidental",
+      "waste_amount": "large",
+      "emotions": {
+        "regret": 0.9,
+        "frustration": 0.05,
+        "worry": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intentionality": "intentional",
+      "waste_amount": "small",
+      "emotions": {
+        "anger": 0.85,
+        "regret": 0.1,
+        "shame": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intentionality": "intentional",
+      "waste_amount": "large",
+      "emotions": {
+        "anger": 0.95,
+        "regret": 0.03,
         "shame": 0.02
       }
     }

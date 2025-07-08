@@ -1,0 +1,106 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "intent": [
+      "unintentional",
+      "intentional"
+    ],
+    "consequences": [
+      "minimal",
+      "significant"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "intent": "unintentional",
+      "consequences": "minimal",
+      "emotions": {
+        "regret": 0.6666666666666666,
+        "guilt": 0.15,
+        "relief": 0.18333333333333335
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intent": "unintentional",
+      "consequences": "significant",
+      "emotions": {
+        "regret": 0.8166666666666665,
+        "guilt": 0.11666666666666663,
+        "anxiety": 0.049999999999999996,
+        "fear": 0.016666666666666663
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intent": "intentional",
+      "consequences": "minimal",
+      "emotions": {
+        "relief": 0.39999999999999997,
+        "guilt": 0.4166666666666666,
+        "regret": 0.11666666666666663,
+        "fear": 0.06666666666666665
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intent": "intentional",
+      "consequences": "significant",
+      "emotions": {
+        "regret": 0.21666666666666667,
+        "anxiety": 0.11666666666666665,
+        "fear": 0.2833333333333333,
+        "guilt": 0.3833333333333333
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intent": "unintentional",
+      "consequences": "minimal",
+      "emotions": {
+        "regret": 0.6271186440677967,
+        "guilt": 0.1694915254237288,
+        "anger": 0.1694915254237288,
+        "anxiety": 0.03389830508474576
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intent": "unintentional",
+      "consequences": "significant",
+      "emotions": {
+        "regret": 0.7666666666666666,
+        "guilt": 0.08333333333333333,
+        "anger": 0.11666666666666665,
+        "anxiety": 0.016666666666666666,
+        "fear": 0.016666666666666666
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intent": "intentional",
+      "consequences": "minimal",
+      "emotions": {
+        "relief": 0.11666666666666665,
+        "guilt": 0.2833333333333334,
+        "anger": 0.5666666666666667,
+        "fear": 0.03333333333333333
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intent": "intentional",
+      "consequences": "significant",
+      "emotions": {
+        "regret": 0.2,
+        "anger": 0.6833333333333333,
+        "fear": 0.05000000000000002,
+        "guilt": 0.06666666666666668
+      }
+    }
+  ]
+}

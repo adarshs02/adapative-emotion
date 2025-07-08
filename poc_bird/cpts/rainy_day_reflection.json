@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "reflection_depth",
-      "values": [
-        "shallow",
-        "deep"
-      ]
-    },
-    {
-      "name": "life_satisfaction",
-      "values": [
-        "low",
-        "high"
-      ]
-    },
-    {
-      "name": "self_blame",
-      "values": [
-        "yes",
-        "no"
-      ]
-    }
-  ],
+  "factors": {
+    "reflection_depth": [
+      "superficial",
+      "deep"
+    ],
+    "rain_duration": [
+      "short",
+      "long"
+    ],
+    "life_satisfaction": [
+      "dissatisfied",
+      "satisfied"
+    ]
+  },
   "cpt": [
     {
-      "reflection_depth": "shallow",
-      "life_satisfaction": "low",
-      "self_blame": "yes",
+      "reflection_depth": "superficial",
+      "rain_duration": "short",
+      "life_satisfaction": "dissatisfied",
       "emotions": {
-        "melancholy": 0.7,
-        "boredom": 0.2,
-        "apathy": 0.1
+        "sadness": 0.6,
+        "regret": 0.35,
+        "anxiety": 0.05
       }
     },
     {
-      "reflection_depth": "shallow",
-      "life_satisfaction": "low",
-      "self_blame": "no",
+      "reflection_depth": "superficial",
+      "rain_duration": "short",
+      "life_satisfaction": "satisfied",
       "emotions": {
-        "melancholy": 0.4,
-        "boredom": 0.5,
-        "apathy": 0.1
+        "contentment": 0.7,
+        "hope": 0.25,
+        "gratitude": 0.05
       }
     },
     {
-      "reflection_depth": "shallow",
-      "life_satisfaction": "high",
-      "self_blame": "yes",
+      "reflection_depth": "superficial",
+      "rain_duration": "long",
+      "life_satisfaction": "dissatisfied",
       "emotions": {
-        "melancholy": 0.3,
-        "boredom": 0.4,
-        "apathy": 0.3
+        "sadness": 0.75,
+        "frustration": 0.2,
+        "anger": 0.05
       }
     },
     {
-      "reflection_depth": "shallow",
-      "life_satisfaction": "high",
-      "self_blame": "no",
+      "reflection_depth": "superficial",
+      "rain_duration": "long",
+      "life_satisfaction": "satisfied",
       "emotions": {
-        "melancholy": 0.2,
-        "boredom": 0.6,
-        "apathy": 0.2
-      }
-    },
-    {
-      "reflection_depth": "deep",
-      "life_satisfaction": "low",
-      "self_blame": "yes",
-      "emotions": {
-        "melancholy": 0.8,
-        "guilt": 0.2,
-        "bitterness": 0.0
+        "contentment": 0.6,
+        "hope": 0.3,
+        "gratitude": 0.1
       }
     },
     {
       "reflection_depth": "deep",
-      "life_satisfaction": "low",
-      "self_blame": "no",
+      "rain_duration": "short",
+      "life_satisfaction": "dissatisfied",
       "emotions": {
-        "melancholy": 0.5,
-        "guilt": 0.3,
-        "bitterness": 0.2
+        "sadness": 0.8,
+        "regret": 0.15,
+        "anxiety": 0.05
       }
     },
     {
       "reflection_depth": "deep",
-      "life_satisfaction": "high",
-      "self_blame": "yes",
+      "rain_duration": "short",
+      "life_satisfaction": "satisfied",
       "emotions": {
-        "melancholy": 0.5,
-        "guilt": 0.3,
-        "resentment": 0.2
+        "contentment": 0.5,
+        "hope": 0.35,
+        "gratitude": 0.15
       }
     },
     {
       "reflection_depth": "deep",
-      "life_satisfaction": "high",
-      "self_blame": "no",
+      "rain_duration": "long",
+      "life_satisfaction": "dissatisfied",
       "emotions": {
-        "melancholy": 0.3,
-        "guilt": 0.4,
-        "resentment": 0.3
+        "sadness": 0.9,
+        "frustration": 0.05,
+        "anger": 0.05
+      }
+    },
+    {
+      "reflection_depth": "deep",
+      "rain_duration": "long",
+      "life_satisfaction": "satisfied",
+      "emotions": {
+        "contentment": 0.4,
+        "hope": 0.4,
+        "gratitude": 0.2
       }
     }
   ]

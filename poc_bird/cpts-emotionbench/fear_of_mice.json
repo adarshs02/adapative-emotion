@@ -1,0 +1,104 @@
+{
+  "factors": {
+    "familiarity_with_mice": [
+      "familiar",
+      "unfamiliar"
+    ],
+    "reaction_speed": [
+      "quick",
+      "slow"
+    ],
+    "offence_history": [
+      "no_history",
+      "past_encounter"
+    ]
+  },
+  "cpt": [
+    {
+      "familiarity_with_mice": "familiar",
+      "reaction_speed": "quick",
+      "offence_history": "no_history",
+      "emotions": {
+        "surprise": 0.6000000000000001,
+        "amusement": 0.17500000000000002,
+        "fear": 0.225
+      }
+    },
+    {
+      "familiarity_with_mice": "familiar",
+      "reaction_speed": "quick",
+      "offence_history": "past_encounter",
+      "emotions": {
+        "surprise": 0.4,
+        "amusement": 0.125,
+        "fear": 0.45,
+        "anger": 0.025
+      }
+    },
+    {
+      "familiarity_with_mice": "familiar",
+      "reaction_speed": "slow",
+      "offence_history": "no_history",
+      "emotions": {
+        "surprise": 0.47500000000000003,
+        "amusement": 0.2,
+        "fear": 0.325
+      }
+    },
+    {
+      "familiarity_with_mice": "familiar",
+      "reaction_speed": "slow",
+      "offence_history": "past_encounter",
+      "emotions": {
+        "surprise": 0.4,
+        "amusement": 0.1,
+        "fear": 0.475,
+        "anger": 0.025
+      }
+    },
+    {
+      "familiarity_with_mice": "unfamiliar",
+      "reaction_speed": "quick",
+      "offence_history": "no_history",
+      "emotions": {
+        "surprise": 0.725,
+        "fear": 0.225,
+        "disgust": 0.025,
+        "curiosity": 0.025
+      }
+    },
+    {
+      "familiarity_with_mice": "unfamiliar",
+      "reaction_speed": "quick",
+      "offence_history": "past_encounter",
+      "emotions": {
+        "surprise": 0.6499999999999999,
+        "fear": 0.275,
+        "disgust": 0.05,
+        "anger": 0.025
+      }
+    },
+    {
+      "familiarity_with_mice": "unfamiliar",
+      "reaction_speed": "slow",
+      "offence_history": "no_history",
+      "emotions": {
+        "surprise": 0.7,
+        "fear": 0.25,
+        "disgust": 0.025,
+        "curiosity": 0.025
+      }
+    },
+    {
+      "familiarity_with_mice": "unfamiliar",
+      "reaction_speed": "slow",
+      "offence_history": "past_encounter",
+      "emotions": {
+        "surprise": 0.625,
+        "fear": 0.3,
+        "disgust": 0.05,
+        "anger": 0.025
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "risk_level": [
+      "low",
+      "high"
+    ],
+    "preparation": [
+      "well_prepared",
+      "not_well_prepared"
+    ],
+    "outcome": [
+      "positive",
+      "negative"
+    ]
+  },
+  "cpt": [
+    {
+      "risk_level": "low",
+      "preparation": "well_prepared",
+      "outcome": "positive",
+      "emotions": {
+        "curiosity": 0.4,
+        "confidence": 0.5,
+        "relief": 0.1
+      }
+    },
+    {
+      "risk_level": "low",
+      "preparation": "well_prepared",
+      "outcome": "negative",
+      "emotions": {
+        "anxiety": 0.36842105263157887,
+        "frustration": 0.47368421052631576,
+        "regret": 0.15789473684210525
+      }
+    },
+    {
+      "risk_level": "low",
+      "preparation": "not_well_prepared",
+      "outcome": "positive",
+      "emotions": {
+        "curiosity": 0.3,
+        "anxiety": 0.5,
+        "relief": 0.2
+      }
+    },
+    {
+      "risk_level": "low",
+      "preparation": "not_well_prepared",
+      "outcome": "negative",
+      "emotions": {
+        "anxiety": 0.45,
+        "frustration": 0.4,
+        "regret": 0.15
+      }
+    },
+    {
+      "risk_level": "high",
+      "preparation": "well_prepared",
+      "outcome": "positive",
+      "emotions": {
+        "confidence": 0.55,
+        "relief": 0.35,
+        "curiosity": 0.1
+      }
+    },
+    {
+      "risk_level": "high",
+      "preparation": "well_prepared",
+      "outcome": "negative",
+      "emotions": {
+        "frustration": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "regret": 0.10000000000000002
+      }
+    },
+    {
+      "risk_level": "high",
+      "preparation": "not_well_prepared",
+      "outcome": "positive",
+      "emotions": {
+        "frustration": 0.45,
+        "anxiety": 0.4,
+        "relief": 0.15
+      }
+    },
+    {
+      "risk_level": "high",
+      "preparation": "not_well_prepared",
+      "outcome": "negative",
+      "emotions": {
+        "frustration": 0.7000000000000001,
+        "anxiety": 0.20000000000000004,
+        "regret": 0.10000000000000002
+      }
+    }
+  ]
+}

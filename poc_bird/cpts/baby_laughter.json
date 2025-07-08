@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "baby_age",
-      "values": [
-        "infant",
-        "toddler"
-      ]
-    },
-    {
-      "name": "context",
-      "values": [
-        "playtime",
-        "mealtime"
-      ]
-    }
-  ],
+  "factors": {
+    "familiarity_with_baby": [
+      "familiar",
+      "unfamiliar"
+    ],
+    "baby_laugh_quality": [
+      "happy_laugh",
+      "cry_laugh"
+    ],
+    "context": [
+      "personal",
+      "public"
+    ]
+  },
   "cpt": [
     {
-      "offence_history": "first_time",
-      "baby_age": "infant",
-      "context": "playtime",
+      "familiarity_with_baby": "familiar",
+      "baby_laugh_quality": "happy_laugh",
+      "context": "personal",
       "emotions": {
-        "happiness": 0.8,
-        "surprise": 0.15,
-        "curiosity": 0.05
+        "joy": 0.8,
+        "love": 0.15,
+        "surprise": 0.05
       }
     },
     {
-      "offence_history": "first_time",
-      "baby_age": "infant",
-      "context": "mealtime",
+      "familiarity_with_baby": "familiar",
+      "baby_laugh_quality": "happy_laugh",
+      "context": "public",
       "emotions": {
-        "happiness": 0.7,
-        "surprise": 0.2,
-        "curiosity": 0.1
+        "joy": 0.7,
+        "happiness": 0.25,
+        "pride": 0.05
       }
     },
     {
-      "offence_history": "first_time",
-      "baby_age": "toddler",
-      "context": "playtime",
+      "familiarity_with_baby": "familiar",
+      "baby_laugh_quality": "cry_laugh",
+      "context": "personal",
       "emotions": {
-        "happiness": 0.6,
-        "surprise": 0.3,
-        "curiosity": 0.1
+        "confusion": 0.6,
+        "amusement": 0.3,
+        "frustration": 0.1
       }
     },
     {
-      "offence_history": "first_time",
-      "baby_age": "toddler",
-      "context": "mealtime",
+      "familiarity_with_baby": "familiar",
+      "baby_laugh_quality": "cry_laugh",
+      "context": "public",
       "emotions": {
-        "happiness": 0.5,
-        "surprise": 0.4,
-        "curiosity": 0.1
+        "confusion": 0.5,
+        "amusement": 0.35,
+        "embarrassment": 0.15
       }
     },
     {
-      "offence_history": "repeated",
-      "baby_age": "infant",
-      "context": "playtime",
+      "familiarity_with_baby": "unfamiliar",
+      "baby_laugh_quality": "happy_laugh",
+      "context": "personal",
       "emotions": {
-        "happiness": 0.4,
-        "surprise": 0.3,
-        "curiosity": 0.3
+        "joy": 0.4,
+        "curiosity": 0.4,
+        "surprise": 0.2
       }
     },
     {
-      "offence_history": "repeated",
-      "baby_age": "infant",
-      "context": "mealtime",
+      "familiarity_with_baby": "unfamiliar",
+      "baby_laugh_quality": "happy_laugh",
+      "context": "public",
       "emotions": {
+        "joy": 0.35,
         "happiness": 0.3,
-        "surprise": 0.2,
-        "curiosity": 0.5
+        "warmth": 0.35
       }
     },
     {
-      "offence_history": "repeated",
-      "baby_age": "toddler",
-      "context": "playtime",
+      "familiarity_with_baby": "unfamiliar",
+      "baby_laugh_quality": "cry_laugh",
+      "context": "personal",
       "emotions": {
-        "happiness": 0.2,
-        "surprise": 0.2,
-        "curiosity": 0.6
+        "confusion": 0.6,
+        "amusement": 0.3,
+        "alienation": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "baby_age": "toddler",
-      "context": "mealtime",
+      "familiarity_with_baby": "unfamiliar",
+      "baby_laugh_quality": "cry_laugh",
+      "context": "public",
       "emotions": {
-        "happiness": 0.1,
-        "surprise": 0.1,
-        "curiosity": 0.8
+        "confusion": 0.5,
+        "amusement": 0.35,
+        "discomfort": 0.15
       }
     }
   ]

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "personal_outlook": [
+      "optimistic",
+      "pessimistic"
+    ],
+    "cancer_stage": [
+      "early",
+      "advanced"
+    ],
+    "support_system": [
+      "strong",
+      "weak"
+    ]
+  },
+  "cpt": [
+    {
+      "personal_outlook": "optimistic",
+      "cancer_stage": "early",
+      "support_system": "strong",
+      "emotions": {
+        "gratitude": 0.6000000000000001,
+        "relief": 0.30000000000000004,
+        "fear": 0.10000000000000002
+      }
+    },
+    {
+      "personal_outlook": "optimistic",
+      "cancer_stage": "early",
+      "support_system": "weak",
+      "emotions": {
+        "gratitude": 0.4,
+        "anxiety": 0.45,
+        "fear": 0.15
+      }
+    },
+    {
+      "personal_outlook": "pessimistic",
+      "cancer_stage": "early",
+      "support_system": "strong",
+      "emotions": {
+        "regret": 0.4,
+        "anxiety": 0.45,
+        "fear": 0.15
+      }
+    },
+    {
+      "personal_outlook": "pessimistic",
+      "cancer_stage": "early",
+      "support_system": "weak",
+      "emotions": {
+        "regret": 0.55,
+        "anxiety": 0.35,
+        "fear": 0.1
+      }
+    },
+    {
+      "personal_outlook": "optimistic",
+      "cancer_stage": "advanced",
+      "support_system": "strong",
+      "emotions": {
+        "gratitude": 0.3,
+        "determination": 0.45,
+        "fear": 0.25
+      }
+    },
+    {
+      "personal_outlook": "optimistic",
+      "cancer_stage": "advanced",
+      "support_system": "weak",
+      "emotions": {
+        "gratitude": 0.2,
+        "determination": 0.4,
+        "despair": 0.4
+      }
+    },
+    {
+      "personal_outlook": "pessimistic",
+      "cancer_stage": "advanced",
+      "support_system": "strong",
+      "emotions": {
+        "regret": 0.35,
+        "determination": 0.4,
+        "despair": 0.25
+      }
+    },
+    {
+      "personal_outlook": "pessimistic",
+      "cancer_stage": "advanced",
+      "support_system": "weak",
+      "emotions": {
+        "regret": 0.5,
+        "despair": 0.4,
+        "anger": 0.1
+      }
+    }
+  ]
+}

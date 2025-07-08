@@ -1,0 +1,106 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "argument_validity": [
+      "irrelevant",
+      "refuted"
+    ],
+    "confidence_level": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "argument_validity": "irrelevant",
+      "confidence_level": "low",
+      "emotions": {
+        "frustration": 0.6000000000000001,
+        "disappointment": 0.30000000000000004,
+        "confusion": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "argument_validity": "irrelevant",
+      "confidence_level": "high",
+      "emotions": {
+        "frustration": 0.47500000000000003,
+        "disappointment": 0.37500000000000006,
+        "amusement": 0.07500000000000001,
+        "confusion": 0.07500000000000001
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "argument_validity": "refuted",
+      "confidence_level": "low",
+      "emotions": {
+        "anger": 0.35,
+        "frustration": 0.225,
+        "disappointment": 0.22499999999999998,
+        "surprise": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "argument_validity": "refuted",
+      "confidence_level": "high",
+      "emotions": {
+        "anger": 0.3,
+        "frustration": 0.32499999999999996,
+        "embarrassment": 0.05,
+        "surprise": 0.175,
+        "disappointment": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "argument_validity": "irrelevant",
+      "confidence_level": "low",
+      "emotions": {
+        "anger": 0.75,
+        "frustration": 0.175,
+        "disappointment": 0.07500000000000001
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "argument_validity": "irrelevant",
+      "confidence_level": "high",
+      "emotions": {
+        "anger": 0.75,
+        "frustration": 0.175,
+        "amusement": 0.05,
+        "disappointment": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "argument_validity": "refuted",
+      "confidence_level": "low",
+      "emotions": {
+        "anger": 0.625,
+        "frustration": 0.025,
+        "disappointment": 0.225,
+        "surprise": 0.125
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "argument_validity": "refuted",
+      "confidence_level": "high",
+      "emotions": {
+        "anger": 0.625,
+        "frustration": 0.075,
+        "embarrassment": 0.025,
+        "surprise": 0.1,
+        "disappointment": 0.175
+      }
+    }
+  ]
+}

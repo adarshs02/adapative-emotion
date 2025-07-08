@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "communication_style": [
+      "honest",
+      "evasive"
+    ],
+    "store_reputation": [
+      "good",
+      "poor"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "communication_style": "honest",
+      "store_reputation": "good",
+      "emotions": {
+        "happy": 0.6000000000000001,
+        "relieved": 0.30000000000000004,
+        "guilty": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_style": "evasive",
+      "store_reputation": "good",
+      "emotions": {
+        "anxious": 0.4,
+        "guilty": 0.35,
+        "angry": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "honest",
+      "store_reputation": "good",
+      "emotions": {
+        "happy": 0.2,
+        "relieved": 0.45,
+        "angry": 0.35
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "evasive",
+      "store_reputation": "good",
+      "emotions": {
+        "anxious": 0.3,
+        "angry": 0.5,
+        "guilty": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_style": "honest",
+      "store_reputation": "poor",
+      "emotions": {
+        "surprised": 0.3,
+        "sad": 0.45,
+        "relieved": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_style": "evasive",
+      "store_reputation": "poor",
+      "emotions": {
+        "anxious": 0.47368421052631576,
+        "sad": 0.36842105263157887,
+        "angry": 0.15789473684210525
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "honest",
+      "store_reputation": "poor",
+      "emotions": {
+        "surprised": 0.2,
+        "sad": 0.4,
+        "angry": 0.4
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_style": "evasive",
+      "store_reputation": "poor",
+      "emotions": {
+        "anxious": 0.3,
+        "sad": 0.45,
+        "angry": 0.25
+      }
+    }
+  ]
+}

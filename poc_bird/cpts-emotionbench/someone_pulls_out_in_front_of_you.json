@@ -1,0 +1,122 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "driver_attitude": [
+      "calm",
+      "aggressive"
+    ],
+    "traffic_conditions": [
+      "light",
+      "heavy"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "driver_attitude": "calm",
+      "traffic_conditions": "light",
+      "emotions": {
+        "surprise": 0.175,
+        "frustration": 0.2,
+        "anger": 0.125,
+        "happy": 0.3,
+        "surprised": 0.15,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driver_attitude": "aggressive",
+      "traffic_conditions": "light",
+      "emotions": {
+        "frustration": 0.2,
+        "anger": 0.25,
+        "disgust": 0.05,
+        "angry": 0.25,
+        "surprised": 0.2,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driver_attitude": "calm",
+      "traffic_conditions": "heavy",
+      "emotions": {
+        "stress": 0.2,
+        "frustration": 0.25,
+        "anxiety": 0.05,
+        "stressed": 0.3,
+        "anxious": 0.15,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driver_attitude": "aggressive",
+      "traffic_conditions": "heavy",
+      "emotions": {
+        "stress": 0.15,
+        "anger": 0.3,
+        "anxiety": 0.05,
+        "stressed": 0.25,
+        "angry": 0.2,
+        "anxious": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driver_attitude": "calm",
+      "traffic_conditions": "light",
+      "emotions": {
+        "frustration": 0.1,
+        "anger": 0.325,
+        "disappointment": 0.075,
+        "frustrated": 0.3,
+        "angry": 0.15,
+        "disgusted": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driver_attitude": "aggressive",
+      "traffic_conditions": "light",
+      "emotions": {
+        "anger": 0.375,
+        "disgust": 0.1,
+        "contempt": 0.025,
+        "angry": 0.35,
+        "disgusted": 0.1,
+        "furious": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driver_attitude": "calm",
+      "traffic_conditions": "heavy",
+      "emotions": {
+        "stress": 0.175,
+        "anger": 0.3,
+        "anxiety": 0.025,
+        "stressed": 0.35,
+        "angry": 0.1,
+        "disgusted": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driver_attitude": "aggressive",
+      "traffic_conditions": "heavy",
+      "emotions": {
+        "stress": 0.12195121951219513,
+        "anger": 0.3658536585365854,
+        "anxiety": 0.02439024390243903,
+        "stressed": 0.29268292682926833,
+        "angry": 0.14634146341463417,
+        "furious": 0.04878048780487806
+      }
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "distance_to_help": [
+      "near",
+      "far"
+    ],
+    "weapon_type": [
+      "knife",
+      "unarmed"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "distance_to_help": "near",
+      "weapon_type": "knife",
+      "emotions": {
+        "fear": 0.8,
+        "anger": 0.1,
+        "sadness": 0.05,
+        "disgust": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "distance_to_help": "near",
+      "weapon_type": "unarmed",
+      "emotions": {
+        "fear": 0.7,
+        "anger": 0.2,
+        "sadness": 0.05,
+        "disgust": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "distance_to_help": "far",
+      "weapon_type": "knife",
+      "emotions": {
+        "fear": 0.8571428571428571,
+        "anger": 0.047619047619047616,
+        "sadness": 0.047619047619047616,
+        "disgust": 0.047619047619047616
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "distance_to_help": "far",
+      "weapon_type": "unarmed",
+      "emotions": {
+        "fear": 0.8,
+        "anger": 0.1,
+        "sadness": 0.05,
+        "disgust": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "distance_to_help": "near",
+      "weapon_type": "knife",
+      "emotions": {
+        "fear": 0.95,
+        "anger": 0.03,
+        "sadness": 0.02,
+        "disgust": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "distance_to_help": "near",
+      "weapon_type": "unarmed",
+      "emotions": {
+        "fear": 0.9,
+        "anger": 0.05,
+        "sadness": 0.05,
+        "disgust": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "distance_to_help": "far",
+      "weapon_type": "knife",
+      "emotions": {
+        "fear": 0.98,
+        "anger": 0.01,
+        "sadness": 0.01,
+        "disgust": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "distance_to_help": "far",
+      "weapon_type": "unarmed",
+      "emotions": {
+        "fear": 0.95,
+        "anger": 0.03,
+        "sadness": 0.02,
+        "disgust": 0.0
+      }
+    }
+  ]
+}

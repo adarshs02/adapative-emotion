@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "trust_level": [
+      "high",
+      "low"
+    ],
+    "communication_transparency": [
+      "open",
+      "secretive"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "trust_level": "high",
+      "communication_transparency": "open",
+      "emotions": {
+        "trust": 0.9,
+        "suspicion": 0.05,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "high",
+      "communication_transparency": "secretive",
+      "emotions": {
+        "trust": 0.7,
+        "suspicion": 0.25,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "low",
+      "communication_transparency": "open",
+      "emotions": {
+        "suspicion": 0.8,
+        "anger": 0.15,
+        "hurt": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "low",
+      "communication_transparency": "secretive",
+      "emotions": {
+        "suspicion": 0.95,
+        "anger": 0.05,
+        "hurt": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "high",
+      "communication_transparency": "open",
+      "emotions": {
+        "anger": 0.8,
+        "hurt": 0.15,
+        "suspicion": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "high",
+      "communication_transparency": "secretive",
+      "emotions": {
+        "anger": 0.95,
+        "hurt": 0.05,
+        "suspicion": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "low",
+      "communication_transparency": "open",
+      "emotions": {
+        "anger": 0.95,
+        "hurt": 0.05,
+        "betrayal": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "low",
+      "communication_transparency": "secretive",
+      "emotions": {
+        "anger": 1.0,
+        "hurt": 0.0,
+        "betrayal": 0.0
+      }
+    }
+  ]
+}

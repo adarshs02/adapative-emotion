@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "trust_level",
-      "values": [
-        "high",
-        "low"
-      ]
-    },
-    {
-      "name": "apology_given",
-      "values": [
-        "yes",
-        "no"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "intent": [
+      "unintentional",
+      "intentional"
+    ],
+    "consequences": [
+      "minor",
+      "major"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "trust_level": "high",
-      "apology_given": "yes",
+      "intent": "unintentional",
+      "consequences": "minor",
       "emotions": {
-        "guilt": 0.8,
-        "relief": 0.2,
-        "shame": 0.0
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "trust_level": "high",
-      "apology_given": "no",
-      "emotions": {
-        "guilt": 0.7,
-        "relief": 0.2,
-        "shame": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "trust_level": "low",
-      "apology_given": "yes",
-      "emotions": {
-        "guilt": 0.6,
+        "regret": 0.6,
         "relief": 0.3,
-        "shame": 0.1
+        "guilt": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "trust_level": "low",
-      "apology_given": "no",
+      "intent": "unintentional",
+      "consequences": "major",
       "emotions": {
-        "guilt": 0.5,
-        "relief": 0.3,
-        "shame": 0.2
+        "surprise": 0.4,
+        "fear": 0.35,
+        "regret": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intent": "intentional",
+      "consequences": "minor",
+      "emotions": {
+        "pride": 0.2,
+        "relief": 0.4,
+        "regret": 0.4
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intent": "intentional",
+      "consequences": "major",
+      "emotions": {
+        "shock": 0.25,
+        "fear": 0.45,
+        "regret": 0.3
       }
     },
     {
       "offence_history": "repeated",
-      "trust_level": "high",
-      "apology_given": "yes",
+      "intent": "unintentional",
+      "consequences": "minor",
       "emotions": {
-        "guilt": 0.4,
-        "anger": 0.3,
-        "shame": 0.3
+        "regret": 0.5,
+        "anger": 0.35,
+        "guilt": 0.15
       }
     },
     {
       "offence_history": "repeated",
-      "trust_level": "high",
-      "apology_given": "no",
+      "intent": "unintentional",
+      "consequences": "major",
       "emotions": {
-        "guilt": 0.2,
+        "surprise": 0.3,
+        "fear": 0.45,
+        "regret": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intent": "intentional",
+      "consequences": "minor",
+      "emotions": {
+        "pride": 0.1,
         "anger": 0.5,
-        "shame": 0.3
+        "regret": 0.4
       }
     },
     {
       "offence_history": "repeated",
-      "trust_level": "low",
-      "apology_given": "yes",
+      "intent": "intentional",
+      "consequences": "major",
       "emotions": {
-        "guilt": 0.3,
-        "anger": 0.4,
-        "shame": 0.3
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "trust_level": "low",
-      "apology_given": "no",
-      "emotions": {
-        "guilt": 0.1,
-        "anger": 0.6,
-        "shame": 0.3
+        "shock": 0.25,
+        "anger": 0.55,
+        "regret": 0.2
       }
     }
   ]

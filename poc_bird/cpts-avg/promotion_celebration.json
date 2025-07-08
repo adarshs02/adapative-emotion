@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "promotion_type": [
+      "First",
+      "Repeated"
+    ],
+    "colleague_reaction": [
+      "Warm",
+      "Cold"
+    ],
+    "self_expectation": [
+      "Meet",
+      "Exceed"
+    ]
+  },
+  "cpt": [
+    {
+      "promotion_type": "First",
+      "colleague_reaction": "Warm",
+      "self_expectation": "Meet",
+      "emotions": {
+        "Happy": 0.6000000000000001,
+        "Surprised": 0.30000000000000004,
+        "Relieved": 0.10000000000000002
+      }
+    },
+    {
+      "promotion_type": "First",
+      "colleague_reaction": "Warm",
+      "self_expectation": "Exceed",
+      "emotions": {
+        "Proud": 0.7,
+        "Excited": 0.25,
+        "Anxious": 0.05
+      }
+    },
+    {
+      "promotion_type": "First",
+      "colleague_reaction": "Cold",
+      "self_expectation": "Meet",
+      "emotions": {
+        "Confused": 0.4,
+        "Disappointed": 0.35,
+        "Hurt": 0.25
+      }
+    },
+    {
+      "promotion_type": "First",
+      "colleague_reaction": "Cold",
+      "self_expectation": "Exceed",
+      "emotions": {
+        "Dissatisfied": 0.6000000000000001,
+        "Frustrated": 0.30000000000000004,
+        "Offended": 0.10000000000000002
+      }
+    },
+    {
+      "promotion_type": "Repeated",
+      "colleague_reaction": "Warm",
+      "self_expectation": "Meet",
+      "emotions": {
+        "Content": 0.5,
+        "Appreciated": 0.35,
+        "Relieved": 0.15
+      }
+    },
+    {
+      "promotion_type": "Repeated",
+      "colleague_reaction": "Warm",
+      "self_expectation": "Exceed",
+      "emotions": {
+        "Proud": 0.7,
+        "Excited": 0.25,
+        "Confident": 0.05
+      }
+    },
+    {
+      "promotion_type": "Repeated",
+      "colleague_reaction": "Cold",
+      "self_expectation": "Meet",
+      "emotions": {
+        "Unsatisfied": 0.6000000000000001,
+        "Disappointed": 0.30000000000000004,
+        "Disheartened": 0.10000000000000002
+      }
+    },
+    {
+      "promotion_type": "Repeated",
+      "colleague_reaction": "Cold",
+      "self_expectation": "Exceed",
+      "emotions": {
+        "Dissatisfied": 0.7,
+        "Frustrated": 0.25,
+        "Offended": 0.05
+      }
+    }
+  ]
+}

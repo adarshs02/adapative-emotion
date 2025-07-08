@@ -1,0 +1,106 @@
+{
+  "factors": {
+    "gratitude": [
+      "parent_support",
+      "study_effort"
+    ],
+    "regret": [
+      "study_effort",
+      "future_prospects"
+    ],
+    "frustration": [
+      "parent_support",
+      "future_prospects"
+    ]
+  },
+  "cpt": [
+    {
+      "gratitude": "parent_support_high",
+      "regret": "study_effort_high",
+      "frustration": "future_prospects_low",
+      "emotions": {
+        "gratitude": 0.10000000000000002,
+        "regret": 0.6000000000000001,
+        "frustration": 0.20000000000000004,
+        "disappointment": 0.10000000000000002
+      }
+    },
+    {
+      "gratitude": "parent_support_high",
+      "regret": "study_effort_high",
+      "frustration": "future_prospects_medium",
+      "emotions": {
+        "gratitude": 0.05,
+        "regret": 0.7,
+        "frustration": 0.2,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "gratitude": "parent_support_high",
+      "regret": "study_effort_high",
+      "frustration": "future_prospects_high",
+      "emotions": {
+        "gratitude": 0.02,
+        "regret": 0.8,
+        "frustration": 0.15,
+        "disappointment": 0.03
+      }
+    },
+    {
+      "gratitude": "parent_support_high",
+      "regret": "study_effort_medium",
+      "frustration": "future_prospects_low",
+      "emotions": {
+        "gratitude": 0.2,
+        "regret": 0.4,
+        "frustration": 0.25,
+        "disappointment": 0.15
+      }
+    },
+    {
+      "gratitude": "parent_support_high",
+      "regret": "study_effort_medium",
+      "frustration": "future_prospects_medium",
+      "emotions": {
+        "gratitude": 0.15,
+        "regret": 0.5,
+        "frustration": 0.25,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "gratitude": "parent_support_high",
+      "regret": "study_effort_medium",
+      "frustration": "future_prospects_high",
+      "emotions": {
+        "gratitude": 0.1,
+        "regret": 0.55,
+        "frustration": 0.3,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "gratitude": "parent_support_low",
+      "regret": "study_effort_low",
+      "frustration": "future_prospects_low",
+      "emotions": {
+        "gratitude": 0.05,
+        "regret": 0.3,
+        "frustration": 0.25,
+        "disappointment": 0.4
+      }
+    },
+    {
+      "gratitude": "parent_support_low",
+      "regret": "study_effort_low",
+      "frustration": "future_prospects_medium",
+      "emotions": {
+        "gratitude": 0.02,
+        "regret": 0.35,
+        "frustration": 0.3,
+        "disappointment": 0.33
+      }
+    }
+  ]
+}

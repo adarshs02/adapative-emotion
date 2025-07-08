@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "friend_history": [
+      "close_friend",
+      "acquaintance"
+    ],
+    "cancellation_reason": [
+      "emergency",
+      "non_emergency"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "friend_history": "close_friend",
+      "cancellation_reason": "emergency",
+      "offence_history": "first_time",
+      "emotions": {
+        "sadness": 0.6,
+        "concern": 0.35,
+        "frustration": 0.05
+      }
+    },
+    {
+      "friend_history": "close_friend",
+      "cancellation_reason": "emergency",
+      "offence_history": "repeated",
+      "emotions": {
+        "sadness": 0.5789473684210527,
+        "frustration": 0.36842105263157887,
+        "anger": 0.05263157894736842
+      }
+    },
+    {
+      "friend_history": "close_friend",
+      "cancellation_reason": "non_emergency",
+      "offence_history": "first_time",
+      "emotions": {
+        "sadness": 0.4,
+        "disappointment": 0.45,
+        "frustration": 0.15
+      }
+    },
+    {
+      "friend_history": "close_friend",
+      "cancellation_reason": "non_emergency",
+      "offence_history": "repeated",
+      "emotions": {
+        "sadness": 0.47368421052631576,
+        "disappointment": 0.36842105263157887,
+        "anger": 0.15789473684210525
+      }
+    },
+    {
+      "friend_history": "acquaintance",
+      "cancellation_reason": "emergency",
+      "offence_history": "first_time",
+      "emotions": {
+        "sadness": 0.36842105263157887,
+        "concern": 0.47368421052631576,
+        "frustration": 0.15789473684210525
+      }
+    },
+    {
+      "friend_history": "acquaintance",
+      "cancellation_reason": "emergency",
+      "offence_history": "repeated",
+      "emotions": {
+        "sadness": 0.42105263157894735,
+        "frustration": 0.42105263157894735,
+        "anger": 0.15789473684210525
+      }
+    },
+    {
+      "friend_history": "acquaintance",
+      "cancellation_reason": "non_emergency",
+      "offence_history": "first_time",
+      "emotions": {
+        "sadness": 0.2631578947368421,
+        "disappointment": 0.5263157894736842,
+        "frustration": 0.2105263157894737
+      }
+    },
+    {
+      "friend_history": "acquaintance",
+      "cancellation_reason": "non_emergency",
+      "offence_history": "repeated",
+      "emotions": {
+        "sadness": 0.3157894736842105,
+        "disappointment": 0.4210526315789474,
+        "anger": 0.2631578947368421
+      }
+    }
+  ]
+}

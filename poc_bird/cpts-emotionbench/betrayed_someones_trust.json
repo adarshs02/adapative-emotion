@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "remorse": [
+      "shows",
+      "does_not_show"
+    ],
+    "apology": [
+      "given",
+      "not_given"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "remorse": "shows",
+      "apology": "given",
+      "emotions": {
+        "relief": 0.2,
+        "forgiveness": 0.5,
+        "disappointment": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "remorse": "does_not_show",
+      "apology": "given",
+      "emotions": {
+        "anger": 0.6000000000000001,
+        "disappointment": 0.30000000000000004,
+        "betrayal": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "remorse": "shows",
+      "apology": "not_given",
+      "emotions": {
+        "anger": 0.7000000000000001,
+        "disappointment": 0.20000000000000004,
+        "betrayal": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "remorse": "does_not_show",
+      "apology": "not_given",
+      "emotions": {
+        "anger": 0.8,
+        "disgust": 0.1,
+        "betrayal": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "remorse": "shows",
+      "apology": "given",
+      "emotions": {
+        "forgiveness": 0.2,
+        "disappointment": 0.5,
+        "anger": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "remorse": "does_not_show",
+      "apology": "given",
+      "emotions": {
+        "anger": 0.7000000000000001,
+        "disappointment": 0.20000000000000004,
+        "betrayal": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "remorse": "shows",
+      "apology": "not_given",
+      "emotions": {
+        "anger": 0.8,
+        "disgust": 0.1,
+        "betrayal": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "remorse": "does_not_show",
+      "apology": "not_given",
+      "emotions": {
+        "anger": 0.9,
+        "disgust": 0.05,
+        "betrayal": 0.05
+      }
+    }
+  ]
+}

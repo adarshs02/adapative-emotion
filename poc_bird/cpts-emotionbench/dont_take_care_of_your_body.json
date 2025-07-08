@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "self_awareness": [
+      "ignorant",
+      "aware"
+    ],
+    "care_for_health": [
+      "neglectful",
+      "caring"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "self_awareness": "ignorant",
+      "care_for_health": "neglectful",
+      "emotions": {
+        "disappointment": 0.35,
+        "frustration": 0.4,
+        "indifference": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "self_awareness": "ignorant",
+      "care_for_health": "caring",
+      "emotions": {
+        "surprise": 0.25,
+        "confusion": 0.45,
+        "determination": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "self_awareness": "aware",
+      "care_for_health": "neglectful",
+      "emotions": {
+        "disappointment": 0.4,
+        "anger": 0.45,
+        "regret": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "self_awareness": "aware",
+      "care_for_health": "caring",
+      "emotions": {
+        "relief": 0.3,
+        "gratitude": 0.45,
+        "motivation": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "self_awareness": "ignorant",
+      "care_for_health": "neglectful",
+      "emotions": {
+        "anger": 0.5789473684210527,
+        "frustration": 0.36842105263157887,
+        "disappointment": 0.05263157894736842
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "self_awareness": "ignorant",
+      "care_for_health": "caring",
+      "emotions": {
+        "shame": 0.3,
+        "regret": 0.5,
+        "fear": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "self_awareness": "aware",
+      "care_for_health": "neglectful",
+      "emotions": {
+        "anger": 0.6000000000000001,
+        "disappointment": 0.30000000000000004,
+        "frustration": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "self_awareness": "aware",
+      "care_for_health": "caring",
+      "emotions": {
+        "determination": 0.4,
+        "motivation": 0.5,
+        "hope": 0.1
+      }
+    }
+  ]
+}

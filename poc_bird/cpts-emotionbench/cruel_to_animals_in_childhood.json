@@ -1,0 +1,111 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "remorse": [
+      "none",
+      "present"
+    ],
+    "apology": [
+      "none",
+      "given"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "remorse": "none",
+      "apology": "none",
+      "emotions": {
+        "shame": 0.225,
+        "regret": 0.07500000000000001,
+        "indifference": 0.15000000000000002,
+        "surprise": 0.12500000000000003,
+        "disgust": 0.20000000000000004,
+        "guilt": 0.15000000000000002,
+        "shock": 0.07500000000000001
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "remorse": "present",
+      "apology": "none",
+      "emotions": {
+        "shame": 0.275,
+        "regret": 0.275,
+        "guilt": 0.45
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "remorse": "none",
+      "apology": "given",
+      "emotions": {
+        "relief": 0.4,
+        "gratitude": 0.15,
+        "pride": 0.3,
+        "anxiety": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "remorse": "none",
+      "apology": "none",
+      "emotions": {
+        "callousness": 0.1,
+        "defensiveness": 0.25,
+        "indifference": 0.32499999999999996,
+        "anger": 0.275,
+        "guilt": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "remorse": "present",
+      "apology": "none",
+      "emotions": {
+        "shame": 0.175,
+        "regret": 0.25,
+        "guilt": 0.225,
+        "anger": 0.35
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "remorse": "none",
+      "apology": "given",
+      "emotions": {
+        "defensiveness": 0.42500000000000004,
+        "anger": 0.32499999999999996,
+        "pride": 0.15,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "remorse": "none",
+      "apology": "none",
+      "emotions": {
+        "shame": 0.225,
+        "regret": 0.07500000000000001,
+        "indifference": 0.15000000000000002,
+        "surprise": 0.12500000000000003,
+        "disgust": 0.20000000000000004,
+        "guilt": 0.15000000000000002,
+        "shock": 0.07500000000000001
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "remorse": "present",
+      "apology": "given",
+      "emotions": {
+        "relief": 0.4,
+        "gratitude": 0.3,
+        "pride": 0.3
+      }
+    }
+  ]
+}

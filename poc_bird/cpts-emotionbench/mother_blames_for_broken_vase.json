@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "truth": [
+      "admitted",
+      "denied"
+    ],
+    "evidence": [
+      "clear",
+      "unclear"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "truth": "admitted",
+      "evidence": "clear",
+      "emotions": {
+        "surprise": 0.1,
+        "guilt": 0.8,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "truth": "admitted",
+      "evidence": "unclear",
+      "emotions": {
+        "confusion": 0.30000000000000004,
+        "guilt": 0.6000000000000001,
+        "frustration": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "truth": "denied",
+      "evidence": "clear",
+      "emotions": {
+        "defensiveness": 0.8,
+        "denial": 0.15,
+        "sadness": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "truth": "denied",
+      "evidence": "unclear",
+      "emotions": {
+        "defensiveness": 0.6000000000000001,
+        "denial": 0.30000000000000004,
+        "suspicion": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "truth": "admitted",
+      "evidence": "clear",
+      "emotions": {
+        "guilt": 0.5,
+        "anger": 0.4,
+        "regret": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "truth": "admitted",
+      "evidence": "unclear",
+      "emotions": {
+        "guilt": 0.4,
+        "anger": 0.5,
+        "shame": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "truth": "denied",
+      "evidence": "clear",
+      "emotions": {
+        "defensiveness": 0.7000000000000001,
+        "anger": 0.20000000000000004,
+        "denial": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "truth": "denied",
+      "evidence": "unclear",
+      "emotions": {
+        "defensiveness": 0.6000000000000001,
+        "anger": 0.30000000000000004,
+        "despair": 0.10000000000000002
+      }
+    }
+  ]
+}

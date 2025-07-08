@@ -1,0 +1,110 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "visibility": [
+      "clear",
+      "obscured"
+    ],
+    "noise_level": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "visibility": "clear",
+      "noise_level": "low",
+      "emotions": {
+        "relaxed": 0.8,
+        "curious": 0.15,
+        "frustrated": 0.025,
+        "annoyed": 0.025
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "visibility": "clear",
+      "noise_level": "high",
+      "emotions": {
+        "surprised": 0.2,
+        "frustrated": 0.275,
+        "amused": 0.075,
+        "relaxed": 0.3,
+        "annoyed": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "visibility": "obscured",
+      "noise_level": "low",
+      "emotions": {
+        "anxious": 0.3,
+        "curious": 0.25,
+        "relaxed": 0.1,
+        "nervous": 0.35
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "visibility": "obscured",
+      "noise_level": "high",
+      "emotions": {
+        "anxious": 0.4,
+        "frustrated": 0.15000000000000002,
+        "scared": 0.025,
+        "nervous": 0.425
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "visibility": "clear",
+      "noise_level": "low",
+      "emotions": {
+        "frustrated": 0.3,
+        "angry": 0.25,
+        "relaxed": 0.15000000000000002,
+        "annoyed": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "visibility": "clear",
+      "noise_level": "high",
+      "emotions": {
+        "angry": 0.725,
+        "frustrated": 0.1,
+        "amused": 0.025,
+        "relaxed": 0.05,
+        "furious": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "visibility": "obscured",
+      "noise_level": "low",
+      "emotions": {
+        "frustrated": 0.4,
+        "angry": 0.2,
+        "anxious": 0.025,
+        "nervous": 0.075,
+        "annoyed": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "visibility": "obscured",
+      "noise_level": "high",
+      "emotions": {
+        "angry": 0.825,
+        "frustrated": 0.025,
+        "scared": 0.025,
+        "nervous": 0.025,
+        "furious": 0.1
+      }
+    }
+  ]
+}

@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "social_context",
-      "values": [
-        "formal",
-        "informal"
-      ]
-    },
-    {
-      "name": "trust_level",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "familiarity": [
+      "familiar",
+      "unfamiliar"
+    ],
+    "approach_style": [
+      "friendly",
+      "formal"
+    ],
+    "event_type": [
+      "social",
+      "professional"
+    ]
+  },
   "cpt": [
     {
-      "offence_history": "first_time",
-      "social_context": "formal",
-      "trust_level": "low",
+      "familiarity": "familiar",
+      "approach_style": "friendly",
+      "event_type": "social",
       "emotions": {
-        "curiosity": 0.7,
-        "caution": 0.3,
-        "excitement": 0.0
+        "curious": 0.6,
+        "anxious": 0.3,
+        "confident": 0.1
       }
     },
     {
-      "offence_history": "first_time",
-      "social_context": "formal",
-      "trust_level": "high",
+      "familiarity": "familiar",
+      "approach_style": "friendly",
+      "event_type": "professional",
       "emotions": {
-        "curiosity": 0.6,
-        "caution": 0.3,
-        "excitement": 0.1
+        "excited": 0.4,
+        "curious": 0.35,
+        "nervous": 0.25
       }
     },
     {
-      "offence_history": "first_time",
-      "social_context": "informal",
-      "trust_level": "low",
+      "familiarity": "familiar",
+      "approach_style": "formal",
+      "event_type": "social",
       "emotions": {
-        "curiosity": 0.8,
-        "caution": 0.2,
-        "excitement": 0.0
+        "cautious": 0.55,
+        "anxious": 0.3,
+        "impressed": 0.15
       }
     },
     {
-      "offence_history": "first_time",
-      "social_context": "informal",
-      "trust_level": "high",
+      "familiarity": "familiar",
+      "approach_style": "formal",
+      "event_type": "professional",
       "emotions": {
-        "curiosity": 0.7,
-        "caution": 0.2,
-        "excitement": 0.1
+        "impressed": 0.5,
+        "curious": 0.35,
+        "cautious": 0.15
       }
     },
     {
-      "offence_history": "repeated",
-      "social_context": "formal",
-      "trust_level": "low",
+      "familiarity": "unfamiliar",
+      "approach_style": "friendly",
+      "event_type": "social",
       "emotions": {
-        "curiosity": 0.2,
-        "caution": 0.7,
-        "anger": 0.1
+        "curious": 0.7,
+        "anxious": 0.25,
+        "excited": 0.05
       }
     },
     {
-      "offence_history": "repeated",
-      "social_context": "formal",
-      "trust_level": "high",
+      "familiarity": "unfamiliar",
+      "approach_style": "friendly",
+      "event_type": "professional",
       "emotions": {
-        "curiosity": 0.1,
-        "caution": 0.6,
-        "anger": 0.3
+        "curious": 0.55,
+        "nervous": 0.3,
+        "excited": 0.15
       }
     },
     {
-      "offence_history": "repeated",
-      "social_context": "informal",
-      "trust_level": "low",
+      "familiarity": "unfamiliar",
+      "approach_style": "formal",
+      "event_type": "social",
       "emotions": {
-        "curiosity": 0.1,
-        "caution": 0.8,
-        "anger": 0.1
+        "cautious": 0.65,
+        "anxious": 0.25,
+        "impressed": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "social_context": "informal",
-      "trust_level": "high",
+      "familiarity": "unfamiliar",
+      "approach_style": "formal",
+      "event_type": "professional",
       "emotions": {
-        "curiosity": 0.0,
-        "caution": 0.7,
-        "anger": 0.3
+        "cautious": 0.6,
+        "impressed": 0.3,
+        "anxious": 0.1
       }
     }
   ]

@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "colleague_intention",
-      "values": [
-        "accidental",
-        "intentional"
-      ]
-    },
-    {
-      "name": "personal_stake",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "personal_relationship": [
+      "close",
+      "not_close"
+    ],
+    "perceived_fairness": [
+      "fair",
+      "unfair"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "colleague_intention": "accidental",
-      "personal_stake": "low",
+      "personal_relationship": "close",
+      "perceived_fairness": "fair",
       "emotions": {
-        "disappointment": 0.7,
-        "relief": 0.3,
-        "frustration": 0.0
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "colleague_intention": "accidental",
-      "personal_stake": "high",
-      "emotions": {
-        "relief": 0.6,
-        "disappointment": 0.3,
-        "gratitude": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "colleague_intention": "intentional",
-      "personal_stake": "low",
-      "emotions": {
-        "anger": 0.6,
-        "disappointment": 0.3,
+        "happiness": 0.6,
+        "jealousy": 0.3,
         "frustration": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "colleague_intention": "intentional",
-      "personal_stake": "high",
+      "personal_relationship": "not_close",
+      "perceived_fairness": "fair",
       "emotions": {
-        "anger": 0.8,
-        "disappointment": 0.2,
-        "helplessness": 0.0
+        "indifference": 0.55,
+        "frustration": 0.3,
+        "sadness": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "personal_relationship": "close",
+      "perceived_fairness": "unfair",
+      "emotions": {
+        "anger": 0.65,
+        "frustration": 0.25,
+        "sadness": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "personal_relationship": "not_close",
+      "perceived_fairness": "unfair",
+      "emotions": {
+        "indifference": 0.5,
+        "frustration": 0.35,
+        "sadness": 0.15
       }
     },
     {
       "offence_history": "repeated",
-      "colleague_intention": "accidental",
-      "personal_stake": "low",
+      "personal_relationship": "close",
+      "perceived_fairness": "fair",
       "emotions": {
-        "frustration": 0.7,
-        "disappointment": 0.2,
-        "relief": 0.1
+        "anger": 0.7,
+        "frustration": 0.25,
+        "sadness": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "colleague_intention": "accidental",
-      "personal_stake": "high",
+      "personal_relationship": "not_close",
+      "perceived_fairness": "fair",
       "emotions": {
         "frustration": 0.6,
-        "disappointment": 0.3,
-        "gratitude": 0.1
+        "anger": 0.3,
+        "sadness": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "colleague_intention": "intentional",
-      "personal_stake": "low",
+      "personal_relationship": "close",
+      "perceived_fairness": "unfair",
       "emotions": {
-        "anger": 0.8,
-        "frustration": 0.2,
-        "helplessness": 0.0
+        "anger": 0.85,
+        "frustration": 0.1,
+        "sadness": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "colleague_intention": "intentional",
-      "personal_stake": "high",
+      "personal_relationship": "not_close",
+      "perceived_fairness": "unfair",
       "emotions": {
-        "anger": 0.9,
-        "disappointment": 0.1,
-        "helplessness": 0.0
+        "frustration": 0.7,
+        "anger": 0.25,
+        "sadness": 0.05
       }
     }
   ]

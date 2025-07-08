@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "audience_size",
-      "values": [
-        "small",
-        "large"
-      ]
-    },
-    {
-      "name": "speaker_experience",
-      "values": [
-        "inexperienced",
-        "experienced"
-      ]
-    },
-    {
-      "name": "presentation_quality",
-      "values": [
-        "poor",
-        "good"
-      ]
-    }
-  ],
+  "factors": {
+    "presentation_quality": [
+      "excellent",
+      "good"
+    ],
+    "audience_response": [
+      "enthusiastic",
+      "polite"
+    ],
+    "presentation_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
   "cpt": [
     {
-      "audience_size": "small",
-      "speaker_experience": "inexperienced",
-      "presentation_quality": "poor",
+      "presentation_quality": "excellent",
+      "audience_response": "enthusiastic",
+      "presentation_history": "first_time",
       "emotions": {
-        "relief": 0.8,
-        "frustration": 0.2,
-        "disgust": 0.0
-      }
-    },
-    {
-      "audience_size": "small",
-      "speaker_experience": "inexperienced",
-      "presentation_quality": "good",
-      "emotions": {
-        "relief": 0.7,
-        "frustration": 0.2,
+        "pride": 0.6,
+        "relief": 0.3,
         "excitement": 0.1
       }
     },
     {
-      "audience_size": "small",
-      "speaker_experience": "experienced",
-      "presentation_quality": "poor",
+      "presentation_quality": "excellent",
+      "audience_response": "enthusiastic",
+      "presentation_history": "repeated",
       "emotions": {
-        "frustration": 0.6,
-        "disgust": 0.3,
-        "anger": 0.1
-      }
-    },
-    {
-      "audience_size": "small",
-      "speaker_experience": "experienced",
-      "presentation_quality": "good",
-      "emotions": {
-        "excitement": 0.8,
-        "relief": 0.2,
-        "satisfaction": 0.0
-      }
-    },
-    {
-      "audience_size": "large",
-      "speaker_experience": "inexperienced",
-      "presentation_quality": "poor",
-      "emotions": {
-        "disgust": 0.8,
-        "frustration": 0.2,
-        "anger": 0.0
-      }
-    },
-    {
-      "audience_size": "large",
-      "speaker_experience": "inexperienced",
-      "presentation_quality": "good",
-      "emotions": {
-        "relief": 0.6,
-        "excitement": 0.3,
+        "confidence": 0.55,
+        "gratitude": 0.35,
         "satisfaction": 0.1
       }
     },
     {
-      "audience_size": "large",
-      "speaker_experience": "experienced",
-      "presentation_quality": "poor",
+      "presentation_quality": "excellent",
+      "audience_response": "polite",
+      "presentation_history": "first_time",
       "emotions": {
-        "anger": 0.7,
-        "disgust": 0.2,
-        "frustration": 0.1
+        "relief": 0.6,
+        "gratitude": 0.3,
+        "pride": 0.1
       }
     },
     {
-      "audience_size": "large",
-      "speaker_experience": "experienced",
-      "presentation_quality": "good",
+      "presentation_quality": "excellent",
+      "audience_response": "polite",
+      "presentation_history": "repeated",
       "emotions": {
-        "satisfaction": 0.8,
-        "excitement": 0.2,
-        "relief": 0.0
+        "confidence": 0.55,
+        "satisfaction": 0.35,
+        "gratitude": 0.1
+      }
+    },
+    {
+      "presentation_quality": "good",
+      "audience_response": "enthusiastic",
+      "presentation_history": "first_time",
+      "emotions": {
+        "happiness": 0.5,
+        "relief": 0.35,
+        "pride": 0.15
+      }
+    },
+    {
+      "presentation_quality": "good",
+      "audience_response": "enthusiastic",
+      "presentation_history": "repeated",
+      "emotions": {
+        "happiness": 0.45,
+        "confidence": 0.35,
+        "gratitude": 0.15
+      }
+    },
+    {
+      "presentation_quality": "good",
+      "audience_response": "polite",
+      "presentation_history": "first_time",
+      "emotions": {
+        "relief": 0.6,
+        "happiness": 0.3,
+        "gratitude": 0.1
+      }
+    },
+    {
+      "presentation_quality": "good",
+      "audience_response": "polite",
+      "presentation_history": "repeated",
+      "emotions": {
+        "confidence": 0.55,
+        "satisfaction": 0.35,
+        "gratitude": 0.1
       }
     }
   ]

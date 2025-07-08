@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "reason": [
+      "unforeseen_circumstances",
+      "lack_of_effort"
+    ],
+    "deadline_urgency": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "reason": "unforeseen_circumstances",
+      "deadline_urgency": "low",
+      "emotions": {
+        "relief": 0.4,
+        "frustration": 0.35,
+        "guilt": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "reason": "unforeseen_circumstances",
+      "deadline_urgency": "high",
+      "emotions": {
+        "anxiety": 0.4,
+        "frustration": 0.35,
+        "relief": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "reason": "lack_of_effort",
+      "deadline_urgency": "low",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.4,
+        "guilt": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "reason": "lack_of_effort",
+      "deadline_urgency": "high",
+      "emotions": {
+        "anger": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "anxiety": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "reason": "unforeseen_circumstances",
+      "deadline_urgency": "low",
+      "emotions": {
+        "frustration": 0.5,
+        "anxiety": 0.35,
+        "relief": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "reason": "unforeseen_circumstances",
+      "deadline_urgency": "high",
+      "emotions": {
+        "frustration": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "reason": "lack_of_effort",
+      "deadline_urgency": "low",
+      "emotions": {
+        "anger": 0.7000000000000001,
+        "frustration": 0.20000000000000004,
+        "guilt": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "reason": "lack_of_effort",
+      "deadline_urgency": "high",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.15,
+        "anxiety": 0.05
+      }
+    }
+  ]
+}

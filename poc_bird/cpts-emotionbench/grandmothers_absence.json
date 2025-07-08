@@ -1,0 +1,108 @@
+{
+  "factors": {
+    "lighting_condition": [
+      "dim",
+      "bright"
+    ],
+    "memory_presence": [
+      "absent",
+      "present"
+    ],
+    "absence_duration": [
+      "short",
+      "long"
+    ]
+  },
+  "cpt": [
+    {
+      "lighting_condition": "dim",
+      "memory_presence": "absent",
+      "absence_duration": "short",
+      "emotions": {
+        "sadness": 0.5,
+        "nostalgia": 0.45,
+        "acceptance": 0.025,
+        "happiness": 0.025
+      }
+    },
+    {
+      "lighting_condition": "dim",
+      "memory_presence": "absent",
+      "absence_duration": "long",
+      "emotions": {
+        "sadness": 0.7,
+        "nostalgia": 0.265,
+        "longing": 0.025,
+        "happiness": 0.01
+      }
+    },
+    {
+      "lighting_condition": "dim",
+      "memory_presence": "present",
+      "absence_duration": "short",
+      "emotions": {
+        "sadness": 0.5641025641025641,
+        "nostalgia": 0.39487179487179486,
+        "anger": 0.02564102564102564,
+        "happiness": 0.015384615384615382
+      }
+    },
+    {
+      "lighting_condition": "dim",
+      "memory_presence": "present",
+      "absence_duration": "long",
+      "emotions": {
+        "sadness": 0.65,
+        "nostalgia": 0.29500000000000004,
+        "anger": 0.025,
+        "regret": 0.025,
+        "happiness": 0.005
+      }
+    },
+    {
+      "lighting_condition": "bright",
+      "memory_presence": "absent",
+      "absence_duration": "short",
+      "emotions": {
+        "sadness": 0.375,
+        "nostalgia": 0.45,
+        "acceptance": 0.125,
+        "happiness": 0.05
+      }
+    },
+    {
+      "lighting_condition": "bright",
+      "memory_presence": "absent",
+      "absence_duration": "long",
+      "emotions": {
+        "sadness": 0.5384615384615385,
+        "nostalgia": 0.358974358974359,
+        "longing": 0.07692307692307693,
+        "happiness": 0.025641025641025644
+      }
+    },
+    {
+      "lighting_condition": "bright",
+      "memory_presence": "present",
+      "absence_duration": "short",
+      "emotions": {
+        "sadness": 0.4358974358974359,
+        "nostalgia": 0.4461538461538461,
+        "anger": 0.07692307692307691,
+        "happiness": 0.041025641025641026
+      }
+    },
+    {
+      "lighting_condition": "bright",
+      "memory_presence": "present",
+      "absence_duration": "long",
+      "emotions": {
+        "sadness": 0.55,
+        "nostalgia": 0.36,
+        "anger": 0.05,
+        "regret": 0.025,
+        "happiness": 0.015
+      }
+    }
+  ]
+}

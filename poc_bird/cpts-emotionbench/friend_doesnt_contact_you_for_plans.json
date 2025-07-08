@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "communication_method": [
+      "personal_call",
+      "text_message"
+    ],
+    "time_passed": [
+      "less_than_30_minutes",
+      "more_than_30_minutes"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "communication_method": "personal_call",
+      "time_passed": "less_than_30_minutes",
+      "emotions": {
+        "anxiety": 0.2,
+        "frustration": 0.35,
+        "hopefulness": 0.45
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_method": "personal_call",
+      "time_passed": "more_than_30_minutes",
+      "emotions": {
+        "anxiety": 0.3,
+        "frustration": 0.4,
+        "hopefulness": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_method": "text_message",
+      "time_passed": "less_than_30_minutes",
+      "emotions": {
+        "anxiety": 0.25,
+        "frustration": 0.4,
+        "hopefulness": 0.35
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "communication_method": "text_message",
+      "time_passed": "more_than_30_minutes",
+      "emotions": {
+        "anxiety": 0.35,
+        "frustration": 0.45,
+        "hopefulness": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_method": "personal_call",
+      "time_passed": "less_than_30_minutes",
+      "emotions": {
+        "anxiety": 0.1,
+        "frustration": 0.6,
+        "anger": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_method": "personal_call",
+      "time_passed": "more_than_30_minutes",
+      "emotions": {
+        "anxiety": 0.15,
+        "frustration": 0.55,
+        "anger": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_method": "text_message",
+      "time_passed": "less_than_30_minutes",
+      "emotions": {
+        "anxiety": 0.15,
+        "frustration": 0.55,
+        "anger": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "communication_method": "text_message",
+      "time_passed": "more_than_30_minutes",
+      "emotions": {
+        "anxiety": 0.2,
+        "frustration": 0.5,
+        "anger": 0.3
+      }
+    }
+  ]
+}

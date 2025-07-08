@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "ex_partners_attitude",
-      "values": [
-        "positive",
-        "negative"
-      ]
-    },
-    {
-      "name": "partner_reactions",
-      "values": [
-        "calm",
-        "defensive"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "discussion_frequency": [
+      "rare",
+      "frequent"
+    ],
+    "partner_attitude": [
+      "supportive",
+      "defensive"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "ex_partners_attitude": "positive",
-      "partner_reactions": "calm",
+      "discussion_frequency": "rare",
+      "partner_attitude": "supportive",
       "emotions": {
-        "sadness": 0.6,
-        "frustration": 0.3,
-        "guilt": 0.1
+        "happy": 0.6,
+        "curious": 0.35,
+        "suspicious": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "ex_partners_attitude": "positive",
-      "partner_reactions": "defensive",
+      "discussion_frequency": "rare",
+      "partner_attitude": "defensive",
       "emotions": {
-        "surprise": 0.4,
-        "frustration": 0.3,
-        "sadness": 0.3
+        "confused": 0.4,
+        "upset": 0.35,
+        "anxious": 0.25
       }
     },
     {
       "offence_history": "first_time",
-      "ex_partners_attitude": "negative",
-      "partner_reactions": "calm",
+      "discussion_frequency": "frequent",
+      "partner_attitude": "supportive",
       "emotions": {
-        "sadness": 0.7,
-        "guilt": 0.2,
-        "anger": 0.1
+        "hurt": 0.3,
+        "suspicious": 0.4,
+        "angry": 0.3
       }
     },
     {
       "offence_history": "first_time",
-      "ex_partners_attitude": "negative",
-      "partner_reactions": "defensive",
+      "discussion_frequency": "frequent",
+      "partner_attitude": "defensive",
       "emotions": {
-        "anger": 0.5,
-        "frustration": 0.3,
-        "sadness": 0.2
+        "hurt": 0.5,
+        "angry": 0.35,
+        "anxious": 0.15
       }
     },
     {
       "offence_history": "repeated",
-      "ex_partners_attitude": "positive",
-      "partner_reactions": "calm",
+      "discussion_frequency": "rare",
+      "partner_attitude": "supportive",
       "emotions": {
-        "frustration": 0.5,
-        "anger": 0.3,
-        "sadness": 0.2
+        "hurt": 0.6,
+        "angry": 0.3,
+        "suspicious": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "ex_partners_attitude": "positive",
-      "partner_reactions": "defensive",
+      "discussion_frequency": "rare",
+      "partner_attitude": "defensive",
       "emotions": {
-        "anger": 0.6,
-        "frustration": 0.3,
-        "sadness": 0.1
+        "hurt": 0.7,
+        "angry": 0.25,
+        "anxious": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "ex_partners_attitude": "negative",
-      "partner_reactions": "calm",
+      "discussion_frequency": "frequent",
+      "partner_attitude": "supportive",
       "emotions": {
-        "anger": 0.8,
-        "frustration": 0.1,
-        "sadness": 0.1
+        "hurt": 0.8,
+        "angry": 0.15,
+        "sad": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "ex_partners_attitude": "negative",
-      "partner_reactions": "defensive",
+      "discussion_frequency": "frequent",
+      "partner_attitude": "defensive",
       "emotions": {
-        "anger": 0.9,
-        "frustration": 0.08,
-        "sadness": 0.02
+        "hurt": 0.9,
+        "angry": 0.05,
+        "sad": 0.05
       }
     }
   ]

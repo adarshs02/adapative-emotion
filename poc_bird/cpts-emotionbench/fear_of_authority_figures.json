@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "authority_level": [
+      "low",
+      "high"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "personal_confidence": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "authority_level": "low",
+      "offence_history": "first_time",
+      "personal_confidence": "low",
+      "emotions": {
+        "anxiety": 0.6,
+        "fear": 0.35,
+        "anger": 0.05
+      }
+    },
+    {
+      "authority_level": "low",
+      "offence_history": "first_time",
+      "personal_confidence": "high",
+      "emotions": {
+        "relief": 0.4,
+        "pride": 0.35,
+        "confidence": 0.25
+      }
+    },
+    {
+      "authority_level": "low",
+      "offence_history": "repeated",
+      "personal_confidence": "low",
+      "emotions": {
+        "anxiety": 0.7,
+        "fear": 0.25,
+        "anger": 0.05
+      }
+    },
+    {
+      "authority_level": "low",
+      "offence_history": "repeated",
+      "personal_confidence": "high",
+      "emotions": {
+        "regret": 0.5,
+        "anxiety": 0.35,
+        "anger": 0.15
+      }
+    },
+    {
+      "authority_level": "high",
+      "offence_history": "first_time",
+      "personal_confidence": "low",
+      "emotions": {
+        "anxiety": 0.8,
+        "fear": 0.15,
+        "unease": 0.05
+      }
+    },
+    {
+      "authority_level": "high",
+      "offence_history": "first_time",
+      "personal_confidence": "high",
+      "emotions": {
+        "pride": 0.4,
+        "confidence": 0.5,
+        "relief": 0.1
+      }
+    },
+    {
+      "authority_level": "high",
+      "offence_history": "repeated",
+      "personal_confidence": "low",
+      "emotions": {
+        "anxiety": 0.9,
+        "fear": 0.05,
+        "unease": 0.05
+      }
+    },
+    {
+      "authority_level": "high",
+      "offence_history": "repeated",
+      "personal_confidence": "high",
+      "emotions": {
+        "regret": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "anger": 0.10000000000000002
+      }
+    }
+  ]
+}

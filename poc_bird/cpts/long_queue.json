@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "time_of_day",
-      "values": [
-        "morning",
-        "afternoon"
-      ]
-    },
-    {
-      "name": "line_length",
-      "values": [
-        "short",
-        "long"
-      ]
-    },
-    {
-      "name": "personal_goal",
-      "values": [
-        "leisure",
-        "essential"
-      ]
-    }
-  ],
+  "factors": {
+    "line_length": [
+      "short",
+      "long"
+    ],
+    "time_estimate": [
+      "accurate",
+      "inaccurate"
+    ],
+    "line_movement": [
+      "smooth",
+      "jerky"
+    ]
+  },
   "cpt": [
     {
-      "time_of_day": "morning",
       "line_length": "short",
-      "personal_goal": "leisure",
+      "time_estimate": "accurate",
+      "line_movement": "smooth",
       "emotions": {
-        "boredom": 0.7,
-        "frustration": 0.2,
-        "excitement": 0.1
+        "relaxed": 0.7,
+        "bored": 0.25,
+        "frustrated": 0.05
       }
     },
     {
-      "time_of_day": "morning",
       "line_length": "short",
-      "personal_goal": "essential",
+      "time_estimate": "accurate",
+      "line_movement": "jerky",
       "emotions": {
-        "frustration": 0.3,
-        "boredom": 0.5,
-        "relief": 0.2
+        "annoyed": 0.4,
+        "bored": 0.35,
+        "relaxed": 0.25
       }
     },
     {
-      "time_of_day": "morning",
-      "line_length": "long",
-      "personal_goal": "leisure",
-      "emotions": {
-        "frustration": 0.8,
-        "boredom": 0.2,
-        "irritation": 0.0
-      }
-    },
-    {
-      "time_of_day": "morning",
-      "line_length": "long",
-      "personal_goal": "essential",
-      "emotions": {
-        "frustration": 0.9,
-        "boredom": 0.1,
-        "relief": 0.0
-      }
-    },
-    {
-      "time_of_day": "afternoon",
       "line_length": "short",
-      "personal_goal": "leisure",
+      "time_estimate": "inaccurate",
+      "line_movement": "smooth",
       "emotions": {
-        "boredom": 0.4,
-        "frustration": 0.3,
-        "excitement": 0.3
+        "frustrated": 0.6,
+        "annoyed": 0.3,
+        "relaxed": 0.1
       }
     },
     {
-      "time_of_day": "afternoon",
       "line_length": "short",
-      "personal_goal": "essential",
+      "time_estimate": "inaccurate",
+      "line_movement": "jerky",
       "emotions": {
-        "frustration": 0.5,
-        "boredom": 0.3,
-        "relief": 0.2
+        "angry": 0.5,
+        "frustrated": 0.4,
+        "annoyed": 0.1
       }
     },
     {
-      "time_of_day": "afternoon",
       "line_length": "long",
-      "personal_goal": "leisure",
+      "time_estimate": "accurate",
+      "line_movement": "smooth",
       "emotions": {
-        "frustration": 0.9,
-        "boredom": 0.1,
-        "irritation": 0.0
+        "relaxed": 0.2,
+        "bored": 0.6,
+        "frustrated": 0.2
       }
     },
     {
-      "time_of_day": "afternoon",
       "line_length": "long",
-      "personal_goal": "essential",
+      "time_estimate": "accurate",
+      "line_movement": "jerky",
       "emotions": {
-        "frustration": 0.95,
-        "boredom": 0.05,
-        "relief": 0.0
+        "annoyed": 0.45,
+        "bored": 0.4,
+        "frustrated": 0.15
+      }
+    },
+    {
+      "line_length": "long",
+      "time_estimate": "inaccurate",
+      "line_movement": "smooth",
+      "emotions": {
+        "frustrated": 0.7,
+        "angry": 0.25,
+        "annoyed": 0.05
+      }
+    },
+    {
+      "line_length": "long",
+      "time_estimate": "inaccurate",
+      "line_movement": "jerky",
+      "emotions": {
+        "angry": 0.6,
+        "frustrated": 0.35,
+        "annoyed": 0.05
       }
     }
   ]

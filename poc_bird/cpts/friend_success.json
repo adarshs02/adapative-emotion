@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "friendship_depth",
-      "values": [
-        "shallow",
-        "deep"
-      ]
-    },
-    {
-      "name": "self_confidence",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "comparison_level": [
+      "equal",
+      "superior"
+    ],
+    "self_confidence": [
+      "high",
+      "low"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "friendship_depth": "shallow",
-      "self_confidence": "low",
+      "comparison_level": "equal",
+      "self_confidence": "high",
       "emotions": {
-        "jealousy": 0.8,
-        "sadness": 0.15,
-        "resentment": 0.05
+        "pride_for_friend": 0.6,
+        "happiness_for_friend": 0.35,
+        "jealousy": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "friendship_depth": "shallow",
+      "comparison_level": "superior",
       "self_confidence": "high",
       "emotions": {
-        "jealousy": 0.4,
-        "sadness": 0.5,
-        "resentment": 0.1
+        "inspiration": 0.4,
+        "admiration": 0.35,
+        "jealousy": 0.25
       }
     },
     {
       "offence_history": "first_time",
-      "friendship_depth": "deep",
+      "comparison_level": "equal",
       "self_confidence": "low",
       "emotions": {
-        "jealousy": 0.6,
-        "sadness": 0.3,
-        "resentment": 0.1
+        "inferiority": 0.6,
+        "disappointment": 0.3,
+        "envy": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "friendship_depth": "deep",
-      "self_confidence": "high",
-      "emotions": {
-        "jealousy": 0.2,
-        "sadness": 0.7,
-        "resentment": 0.1
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "friendship_depth": "shallow",
+      "comparison_level": "superior",
       "self_confidence": "low",
       "emotions": {
-        "jealousy": 0.9,
-        "sadness": 0.08,
-        "resentment": 0.02
+        "inferiority": 0.7,
+        "disappointment": 0.2,
+        "envy": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "friendship_depth": "shallow",
+      "comparison_level": "equal",
       "self_confidence": "high",
       "emotions": {
-        "jealousy": 0.6,
-        "sadness": 0.35,
-        "resentment": 0.05
+        "inferiority": 0.55,
+        "disappointment": 0.3,
+        "frustration": 0.15
       }
     },
     {
       "offence_history": "repeated",
-      "friendship_depth": "deep",
+      "comparison_level": "superior",
+      "self_confidence": "high",
+      "emotions": {
+        "inferiority": 0.7,
+        "disappointment": 0.2,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "comparison_level": "equal",
       "self_confidence": "low",
       "emotions": {
-        "jealousy": 0.8,
-        "sadness": 0.15,
-        "resentment": 0.05
+        "inferiority": 0.8,
+        "disappointment": 0.15,
+        "frustration": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "friendship_depth": "deep",
-      "self_confidence": "high",
+      "comparison_level": "superior",
+      "self_confidence": "low",
       "emotions": {
-        "jealousy": 0.4,
-        "sadness": 0.55,
-        "resentment": 0.05
+        "inferiority": 0.85,
+        "disappointment": 0.1,
+        "frustration": 0.05
       }
     }
   ]

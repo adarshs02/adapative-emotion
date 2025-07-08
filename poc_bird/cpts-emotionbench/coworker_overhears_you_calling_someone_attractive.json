@@ -1,0 +1,108 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "audience_awareness": [
+      "unaware",
+      "aware"
+    ],
+    "response_type": [
+      "apologetic",
+      "defensive"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "audience_awareness": "unaware",
+      "response_type": "apologetic",
+      "emotions": {
+        "embarrassment": 0.6,
+        "surprise": 0.3,
+        "amusement": 0.05,
+        "happiness": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "audience_awareness": "aware",
+      "response_type": "apologetic",
+      "emotions": {
+        "embarrassment": 0.7,
+        "shyness": 0.2,
+        "amusement": 0.05,
+        "happiness": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "audience_awareness": "unaware",
+      "response_type": "apologetic",
+      "emotions": {
+        "embarrassment": 0.4499999999999999,
+        "regret": 0.19999999999999996,
+        "anxiety": 0.04999999999999999,
+        "shame": 0.19999999999999996,
+        "happiness": 0.09999999999999998
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "audience_awareness": "aware",
+      "response_type": "apologetic",
+      "emotions": {
+        "embarrassment": 0.55,
+        "regret": 0.2,
+        "anxiety": 0.05,
+        "shame": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "audience_awareness": "unaware",
+      "response_type": "defensive",
+      "emotions": {
+        "surprise": 0.35,
+        "defensiveness": 0.55,
+        "amusement": 0.05,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "audience_awareness": "aware",
+      "response_type": "defensive",
+      "emotions": {
+        "surprise": 0.25,
+        "defensiveness": 0.55,
+        "amusement": 0.05,
+        "shyness": 0.1,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "audience_awareness": "unaware",
+      "response_type": "defensive",
+      "emotions": {
+        "surprise": 0.2,
+        "defensiveness": 0.55,
+        "anger": 0.1,
+        "shame": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "audience_awareness": "aware",
+      "response_type": "defensive",
+      "emotions": {
+        "surprise": 0.25,
+        "defensiveness": 0.5,
+        "anger": 0.1,
+        "shame": 0.15
+      }
+    }
+  ]
+}

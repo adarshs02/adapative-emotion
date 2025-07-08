@@ -1,0 +1,104 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "urban_environment": [
+      "calm",
+      "busy"
+    ],
+    "rush": [
+      "no",
+      "yes"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "urban_environment": "calm",
+      "rush": "no",
+      "emotions": {
+        "relief": 0.6,
+        "contentment": 0.35,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "urban_environment": "calm",
+      "rush": "yes",
+      "emotions": {
+        "nervousness": 0.475,
+        "regret": 0.2,
+        "relief": 0.125,
+        "hastiness": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "urban_environment": "busy",
+      "rush": "no",
+      "emotions": {
+        "excitement": 0.4,
+        "curiosity": 0.35,
+        "anxiety": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "urban_environment": "busy",
+      "rush": "yes",
+      "emotions": {
+        "stress": 0.55,
+        "anxiety": 0.25,
+        "excitement": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "urban_environment": "calm",
+      "rush": "no",
+      "emotions": {
+        "regret": 0.6,
+        "anxiety": 0.32499999999999996,
+        "anger": 0.025,
+        "calm": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "urban_environment": "calm",
+      "rush": "yes",
+      "emotions": {
+        "anger": 0.675,
+        "regret": 0.2,
+        "anxiety": 0.025,
+        "nervousness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "urban_environment": "busy",
+      "rush": "no",
+      "emotions": {
+        "anger": 0.2820512820512821,
+        "stress": 0.1794871794871795,
+        "anxiety": 0.20512820512820512,
+        "irritation": 0.23076923076923078,
+        "contentment": 0.10256410256410257
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "urban_environment": "busy",
+      "rush": "yes",
+      "emotions": {
+        "anger": 0.75,
+        "stress": 0.2,
+        "anxiety": 0.025,
+        "irritation": 0.025
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "perceived_disapproval": [
+      "low",
+      "high"
+    ],
+    "self_confidence": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "perceived_disapproval": "low",
+      "self_confidence": "low",
+      "emotions": {
+        "anxiety": 0.6,
+        "nervousness": 0.35,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "perceived_disapproval": "low",
+      "self_confidence": "high",
+      "emotions": {
+        "pride": 0.2,
+        "confidence": 0.5,
+        "satisfaction": 0.1,
+        "curiosity": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "perceived_disapproval": "high",
+      "self_confidence": "low",
+      "emotions": {
+        "anxiety": 0.75,
+        "nervousness": 0.2,
+        "fear": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "perceived_disapproval": "high",
+      "self_confidence": "high",
+      "emotions": {
+        "defensiveness": 0.3,
+        "anger": 0.2,
+        "determination": 0.375,
+        "shyness": 0.125
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "perceived_disapproval": "low",
+      "self_confidence": "low",
+      "emotions": {
+        "anxiety": 0.8,
+        "nervousness": 0.15,
+        "regret": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "perceived_disapproval": "low",
+      "self_confidence": "high",
+      "emotions": {
+        "shame": 0.2,
+        "regret": 0.25,
+        "determination": 0.175,
+        "defiance": 0.15,
+        "resignation": 0.225
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "perceived_disapproval": "high",
+      "self_confidence": "low",
+      "emotions": {
+        "anxiety": 0.9,
+        "fear": 0.05,
+        "regret": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "perceived_disapproval": "high",
+      "self_confidence": "high",
+      "emotions": {
+        "defensiveness": 0.25,
+        "anger": 0.4,
+        "determination": 0.1,
+        "defiance": 0.25
+      }
+    }
+  ]
+}

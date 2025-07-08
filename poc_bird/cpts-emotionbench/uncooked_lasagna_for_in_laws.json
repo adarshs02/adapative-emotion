@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "cooking_experience": [
+      "inexperienced",
+      "experienced"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "social_pressure": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "cooking_experience": "inexperienced",
+      "offence_history": "first_time",
+      "social_pressure": "low",
+      "emotions": {
+        "disappointment": 0.6,
+        "embarrassment": 0.35,
+        "frustration": 0.05
+      }
+    },
+    {
+      "cooking_experience": "inexperienced",
+      "offence_history": "first_time",
+      "social_pressure": "high",
+      "emotions": {
+        "disappointment": 0.7,
+        "embarrassment": 0.25,
+        "frustration": 0.05
+      }
+    },
+    {
+      "cooking_experience": "inexperienced",
+      "offence_history": "repeated",
+      "social_pressure": "low",
+      "emotions": {
+        "disappointment": 0.8,
+        "embarrassment": 0.15,
+        "frustration": 0.05
+      }
+    },
+    {
+      "cooking_experience": "inexperienced",
+      "offence_history": "repeated",
+      "social_pressure": "high",
+      "emotions": {
+        "disappointment": 0.9,
+        "embarrassment": 0.05,
+        "frustration": 0.05
+      }
+    },
+    {
+      "cooking_experience": "experienced",
+      "offence_history": "first_time",
+      "social_pressure": "low",
+      "emotions": {
+        "surprise": 0.3,
+        "relief": 0.5,
+        "frustration": 0.2
+      }
+    },
+    {
+      "cooking_experience": "experienced",
+      "offence_history": "first_time",
+      "social_pressure": "high",
+      "emotions": {
+        "surprise": 0.4,
+        "relief": 0.45,
+        "frustration": 0.15
+      }
+    },
+    {
+      "cooking_experience": "experienced",
+      "offence_history": "repeated",
+      "social_pressure": "low",
+      "emotions": {
+        "surprise": 0.2,
+        "relief": 0.4,
+        "amusement": 0.4
+      }
+    },
+    {
+      "cooking_experience": "experienced",
+      "offence_history": "repeated",
+      "social_pressure": "high",
+      "emotions": {
+        "surprise": 0.30000000000000004,
+        "relief": 0.35000000000000003,
+        "amusement": 0.35000000000000003
+      }
+    }
+  ]
+}

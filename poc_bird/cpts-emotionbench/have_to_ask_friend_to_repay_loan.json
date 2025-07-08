@@ -1,0 +1,107 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "friend_reaction": [
+      "understanding",
+      "uncooperative"
+    ],
+    "financial_situation": [
+      "stable",
+      "unstable"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "friend_reaction": "understanding",
+      "financial_situation": "stable",
+      "emotions": {
+        "relief": 0.6,
+        "hope": 0.15,
+        "frustration": 0.2,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_reaction": "uncooperative",
+      "financial_situation": "stable",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.4,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reaction": "understanding",
+      "financial_situation": "stable",
+      "emotions": {
+        "anger": 0.39999999999999997,
+        "frustration": 0.375,
+        "anxiety": 0.025,
+        "disappointment": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reaction": "uncooperative",
+      "financial_situation": "stable",
+      "emotions": {
+        "anger": 0.725,
+        "frustration": 0.1,
+        "despair": 0.025,
+        "disappointment": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_reaction": "understanding",
+      "financial_situation": "unstable",
+      "emotions": {
+        "worry": 0.55,
+        "anxiety": 0.35,
+        "frustration": 0.05,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_reaction": "uncooperative",
+      "financial_situation": "unstable",
+      "emotions": {
+        "anger": 0.6499999999999999,
+        "anxiety": 0.175,
+        "despair": 0.025,
+        "worry": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reaction": "understanding",
+      "financial_situation": "unstable",
+      "emotions": {
+        "anger": 0.475,
+        "anxiety": 0.05,
+        "despair": 0.025,
+        "disappointment": 0.25,
+        "worry": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reaction": "uncooperative",
+      "financial_situation": "unstable",
+      "emotions": {
+        "anger": 0.825,
+        "despair": 0.025,
+        "fear": 0.0,
+        "disappointment": 0.1,
+        "worry": 0.05
+      }
+    }
+  ]
+}

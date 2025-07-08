@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "intensity": [
+      "low",
+      "high"
+    ],
+    "friendship_level": [
+      "close",
+      "acquaintance"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "intensity": "low",
+      "friendship_level": "close",
+      "emotions": {
+        "happy": 0.05,
+        "surprised": 0.2,
+        "frustrated": 0.75
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intensity": "low",
+      "friendship_level": "acquaintance",
+      "emotions": {
+        "indifferent": 0.3,
+        "surprised": 0.4,
+        "annoyed": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intensity": "high",
+      "friendship_level": "close",
+      "emotions": {
+        "angry": 0.4,
+        "frustrated": 0.5,
+        "upset": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "intensity": "high",
+      "friendship_level": "acquaintance",
+      "emotions": {
+        "angry": 0.6000000000000001,
+        "annoyed": 0.30000000000000004,
+        "indifferent": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intensity": "low",
+      "friendship_level": "close",
+      "emotions": {
+        "frustrated": 0.3,
+        "angry": 0.5,
+        "upset": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intensity": "low",
+      "friendship_level": "acquaintance",
+      "emotions": {
+        "annoyed": 0.4,
+        "angry": 0.5,
+        "indifferent": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intensity": "high",
+      "friendship_level": "close",
+      "emotions": {
+        "angry": 0.7000000000000001,
+        "frustrated": 0.20000000000000004,
+        "upset": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "intensity": "high",
+      "friendship_level": "acquaintance",
+      "emotions": {
+        "angry": 0.8,
+        "annoyed": 0.1,
+        "indifferent": 0.1
+      }
+    }
+  ]
+}

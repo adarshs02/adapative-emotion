@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "effort",
-      "values": [
-        "high",
-        "low"
-      ]
-    },
-    {
-      "name": "improvement",
-      "values": [
-        "significant",
-        "minor"
-      ]
-    },
-    {
-      "name": "confidence",
-      "values": [
-        "high",
-        "low"
-      ]
-    }
-  ],
+  "factors": {
+    "difficulty": [
+      "easy",
+      "hard"
+    ],
+    "practice_time": [
+      "short",
+      "long"
+    ],
+    "previous_attempts": [
+      "few",
+      "many"
+    ]
+  },
   "cpt": [
     {
-      "effort": "high",
-      "improvement": "significant",
-      "confidence": "high",
+      "difficulty": "easy",
+      "practice_time": "short",
+      "previous_attempts": "few",
       "emotions": {
-        "satisfaction": 0.7,
-        "relief": 0.2,
-        "frustration": 0.1
+        "pride": 0.6,
+        "relief": 0.35,
+        "satisfaction": 0.05
       }
     },
     {
-      "effort": "high",
-      "improvement": "significant",
-      "confidence": "low",
+      "difficulty": "easy",
+      "practice_time": "short",
+      "previous_attempts": "many",
       "emotions": {
-        "satisfaction": 0.4,
-        "relief": 0.3,
-        "frustration": 0.3
-      }
-    },
-    {
-      "effort": "high",
-      "improvement": "minor",
-      "confidence": "high",
-      "emotions": {
-        "satisfaction": 0.5,
-        "relief": 0.3,
-        "frustration": 0.2
-      }
-    },
-    {
-      "effort": "high",
-      "improvement": "minor",
-      "confidence": "low",
-      "emotions": {
-        "satisfaction": 0.2,
+        "pride": 0.5,
         "relief": 0.4,
-        "frustration": 0.4
+        "satisfaction": 0.1
       }
     },
     {
-      "effort": "low",
-      "improvement": "significant",
-      "confidence": "high",
+      "difficulty": "easy",
+      "practice_time": "long",
+      "previous_attempts": "few",
       "emotions": {
-        "satisfaction": 0.3,
-        "relief": 0.5,
-        "frustration": 0.2
+        "pride": 0.7,
+        "relief": 0.25,
+        "satisfaction": 0.05
       }
     },
     {
-      "effort": "low",
-      "improvement": "significant",
-      "confidence": "low",
+      "difficulty": "easy",
+      "practice_time": "long",
+      "previous_attempts": "many",
       "emotions": {
-        "satisfaction": 0.1,
-        "relief": 0.2,
-        "frustration": 0.7
-      }
-    },
-    {
-      "effort": "low",
-      "improvement": "minor",
-      "confidence": "high",
-      "emotions": {
-        "satisfaction": 0.1,
-        "relief": 0.4,
-        "frustration": 0.5
-      }
-    },
-    {
-      "effort": "low",
-      "improvement": "minor",
-      "confidence": "low",
-      "emotions": {
-        "satisfaction": 0.0,
+        "pride": 0.6,
         "relief": 0.3,
-        "frustration": 0.7
+        "satisfaction": 0.1
+      }
+    },
+    {
+      "difficulty": "hard",
+      "practice_time": "short",
+      "previous_attempts": "few",
+      "emotions": {
+        "determination": 0.55,
+        "frustration": 0.35,
+        "relief": 0.05
+      }
+    },
+    {
+      "difficulty": "hard",
+      "practice_time": "short",
+      "previous_attempts": "many",
+      "emotions": {
+        "determination": 0.5,
+        "frustration": 0.4,
+        "relief": 0.1
+      }
+    },
+    {
+      "difficulty": "hard",
+      "practice_time": "long",
+      "previous_attempts": "few",
+      "emotions": {
+        "determination": 0.65,
+        "frustration": 0.25,
+        "relief": 0.05
+      }
+    },
+    {
+      "difficulty": "hard",
+      "practice_time": "long",
+      "previous_attempts": "many",
+      "emotions": {
+        "determination": 0.6,
+        "frustration": 0.3,
+        "relief": 0.1
       }
     }
   ]

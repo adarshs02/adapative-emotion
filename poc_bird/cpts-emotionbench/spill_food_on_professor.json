@@ -1,0 +1,104 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "professor_reaction": [
+      "understanding",
+      "annoyed"
+    ],
+    "waitress_reaction": [
+      "apologetic",
+      "defensive"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "professor_reaction": "understanding",
+      "waitress_reaction": "apologetic",
+      "emotions": {
+        "embarrassment": 0.475,
+        "regret": 0.125,
+        "anxiety": 0.025,
+        "relief": 0.35,
+        "frustration": 0.025
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "professor_reaction": "understanding",
+      "waitress_reaction": "defensive",
+      "emotions": {
+        "defensiveness": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "embarrassment": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "professor_reaction": "annoyed",
+      "waitress_reaction": "apologetic",
+      "emotions": {
+        "embarrassment": 0.4,
+        "regret": 0.22499999999999998,
+        "anxiety": 0.075,
+        "shame": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "professor_reaction": "annoyed",
+      "waitress_reaction": "defensive",
+      "emotions": {
+        "defensiveness": 0.65,
+        "anger": 0.25,
+        "embarrassment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "professor_reaction": "understanding",
+      "waitress_reaction": "apologetic",
+      "emotions": {
+        "embarrassment": 0.4,
+        "regret": 0.475,
+        "anxiety": 0.075,
+        "frustration": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "professor_reaction": "understanding",
+      "waitress_reaction": "defensive",
+      "emotions": {
+        "defensiveness": 0.55,
+        "frustration": 0.3,
+        "embarrassment": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "professor_reaction": "annoyed",
+      "waitress_reaction": "apologetic",
+      "emotions": {
+        "embarrassment": 0.17948717948717946,
+        "regret": 0.3846153846153846,
+        "anger": 0.07692307692307691,
+        "shame": 0.30769230769230765,
+        "frustration": 0.05128205128205128
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "professor_reaction": "annoyed",
+      "waitress_reaction": "defensive",
+      "emotions": {
+        "defensiveness": 0.5,
+        "anger": 0.4,
+        "frustration": 0.1
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "remorse": [
+      "immediate",
+      "delayed"
+    ],
+    "apology_effort": [
+      "minimal",
+      "sincere"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "remorse": "immediate",
+      "apology_effort": "minimal",
+      "emotions": {
+        "regret": 0.7,
+        "guilt": 0.25,
+        "shame": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "remorse": "immediate",
+      "apology_effort": "sincere",
+      "emotions": {
+        "regret": 0.6000000000000001,
+        "guilt": 0.30000000000000004,
+        "shame": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "remorse": "delayed",
+      "apology_effort": "minimal",
+      "emotions": {
+        "regret": 0.5,
+        "guilt": 0.35,
+        "shame": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "remorse": "delayed",
+      "apology_effort": "sincere",
+      "emotions": {
+        "regret": 0.45,
+        "guilt": 0.4,
+        "shame": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "remorse": "immediate",
+      "apology_effort": "minimal",
+      "emotions": {
+        "regret": 0.65,
+        "guilt": 0.2,
+        "shame": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "remorse": "immediate",
+      "apology_effort": "sincere",
+      "emotions": {
+        "regret": 0.6000000000000001,
+        "guilt": 0.30000000000000004,
+        "shame": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "remorse": "delayed",
+      "apology_effort": "minimal",
+      "emotions": {
+        "regret": 0.55,
+        "guilt": 0.25,
+        "shame": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "remorse": "delayed",
+      "apology_effort": "sincere",
+      "emotions": {
+        "regret": 0.5,
+        "guilt": 0.35,
+        "shame": 0.15
+      }
+    }
+  ]
+}

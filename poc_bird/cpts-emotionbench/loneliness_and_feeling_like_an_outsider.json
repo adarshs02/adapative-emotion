@@ -1,0 +1,116 @@
+{
+  "factors": {
+    "light_level": [
+      "dim",
+      "bright"
+    ],
+    "phone_notifications": [
+      "none",
+      "present"
+    ],
+    "social_interaction": [
+      "isolated",
+      "connected"
+    ]
+  },
+  "cpt": [
+    {
+      "light_level": "dim",
+      "phone_notifications": "none",
+      "social_interaction": "isolated",
+      "emotions": {
+        "sadness": 0.7,
+        "anxiety": 0.125,
+        "boredom": 0.025,
+        "loneliness": 0.125,
+        "frustration": 0.025
+      }
+    },
+    {
+      "light_level": "dim",
+      "phone_notifications": "none",
+      "social_interaction": "connected",
+      "emotions": {
+        "relief": 0.30000000000000004,
+        "happiness": 0.2,
+        "frustration": 0.2,
+        "hope": 0.1,
+        "envy": 0.2
+      }
+    },
+    {
+      "light_level": "dim",
+      "phone_notifications": "present",
+      "social_interaction": "isolated",
+      "emotions": {
+        "surprise": 0.1,
+        "hope": 0.2,
+        "sadness": 0.4,
+        "disappointment": 0.175,
+        "resentment": 0.125
+      }
+    },
+    {
+      "light_level": "dim",
+      "phone_notifications": "present",
+      "social_interaction": "connected",
+      "emotions": {
+        "excitement": 0.15,
+        "happiness": 0.25,
+        "relief": 0.1,
+        "joy": 0.15,
+        "gratitude": 0.2,
+        "regret": 0.15
+      }
+    },
+    {
+      "light_level": "bright",
+      "phone_notifications": "none",
+      "social_interaction": "isolated",
+      "emotions": {
+        "boredom": 0.5499999999999999,
+        "sadness": 0.14999999999999997,
+        "anxiety": 0.04999999999999999,
+        "melancholy": 0.19999999999999996,
+        "longing": 0.04999999999999999
+      }
+    },
+    {
+      "light_level": "bright",
+      "phone_notifications": "none",
+      "social_interaction": "connected",
+      "emotions": {
+        "happiness": 0.25000000000000006,
+        "relief": 0.20000000000000004,
+        "frustration": 0.05000000000000001,
+        "contentment": 0.20000000000000004,
+        "peace": 0.20000000000000004,
+        "anticipation": 0.10000000000000002
+      }
+    },
+    {
+      "light_level": "bright",
+      "phone_notifications": "present",
+      "social_interaction": "isolated",
+      "emotions": {
+        "surprise": 0.2,
+        "hope": 0.2,
+        "boredom": 0.1,
+        "distraction": 0.2,
+        "anxiety": 0.175,
+        "relief": 0.125
+      }
+    },
+    {
+      "light_level": "bright",
+      "phone_notifications": "present",
+      "social_interaction": "connected",
+      "emotions": {
+        "excitement": 0.22499999999999998,
+        "happiness": 0.55,
+        "relief": 0.05,
+        "satisfaction": 0.175
+      }
+    }
+  ]
+}

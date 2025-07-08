@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "friend_response": [
+      "apologetic",
+      "defensive"
+    ],
+    "regret_level": [
+      "minimal",
+      "sincere"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "friend_response": "apologetic",
+      "regret_level": "minimal",
+      "emotions": {
+        "regret": 0.1,
+        "empathy": 0.3,
+        "guilt": 0.6
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_response": "defensive",
+      "regret_level": "minimal",
+      "emotions": {
+        "anger": 0.225,
+        "regret": 0.4,
+        "empathy": 0.375
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_response": "apologetic",
+      "regret_level": "sincere",
+      "emotions": {
+        "regret": 0.55,
+        "empathy": 0.375,
+        "guilt": 0.07500000000000001
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_response": "defensive",
+      "regret_level": "sincere",
+      "emotions": {
+        "anger": 0.32499999999999996,
+        "regret": 0.5,
+        "empathy": 0.175
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_response": "apologetic",
+      "regret_level": "minimal",
+      "emotions": {
+        "anger": 0.45,
+        "regret": 0.4,
+        "empathy": 0.15000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_response": "defensive",
+      "regret_level": "minimal",
+      "emotions": {
+        "anger": 0.65,
+        "regret": 0.25000000000000006,
+        "empathy": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_response": "apologetic",
+      "regret_level": "sincere",
+      "emotions": {
+        "anger": 0.42500000000000004,
+        "regret": 0.5,
+        "empathy": 0.07500000000000001
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_response": "defensive",
+      "regret_level": "sincere",
+      "emotions": {
+        "anger": 0.6,
+        "regret": 0.325,
+        "empathy": 0.07500000000000001
+      }
+    }
+  ]
+}

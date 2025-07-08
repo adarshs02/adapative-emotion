@@ -1,0 +1,105 @@
+{
+  "factors": {
+    "value_of_money": [
+      "low",
+      "high"
+    ],
+    "found_by_accident": [
+      "yes",
+      "no"
+    ],
+    "offence_history": [
+      "clean",
+      "tainted"
+    ]
+  },
+  "cpt": [
+    {
+      "value_of_money": "low",
+      "found_by_accident": "yes",
+      "offence_history": "clean",
+      "emotions": {
+        "happiness": 0.8,
+        "relief": 0.1,
+        "surprise": 0.1
+      }
+    },
+    {
+      "value_of_money": "low",
+      "found_by_accident": "yes",
+      "offence_history": "tainted",
+      "emotions": {
+        "happiness": 0.6,
+        "relief": 0.125,
+        "guilt": 0.125,
+        "surprise": 0.15
+      }
+    },
+    {
+      "value_of_money": "low",
+      "found_by_accident": "no",
+      "offence_history": "clean",
+      "emotions": {
+        "happiness": 0.6,
+        "surprise": 0.25,
+        "disappointment": 0.05,
+        "relief": 0.1
+      }
+    },
+    {
+      "value_of_money": "low",
+      "found_by_accident": "no",
+      "offence_history": "tainted",
+      "emotions": {
+        "happiness": 0.45,
+        "surprise": 0.175,
+        "guilt": 0.225,
+        "relief": 0.15
+      }
+    },
+    {
+      "value_of_money": "high",
+      "found_by_accident": "yes",
+      "offence_history": "clean",
+      "emotions": {
+        "happiness": 0.825,
+        "relief": 0.1,
+        "surprise": 0.05,
+        "gratitude": 0.025
+      }
+    },
+    {
+      "value_of_money": "high",
+      "found_by_accident": "yes",
+      "offence_history": "tainted",
+      "emotions": {
+        "happiness": 0.65,
+        "relief": 0.12500000000000003,
+        "guilt": 0.12500000000000003,
+        "surprise": 0.10000000000000002
+      }
+    },
+    {
+      "value_of_money": "high",
+      "found_by_accident": "no",
+      "offence_history": "clean",
+      "emotions": {
+        "happiness": 0.725,
+        "surprise": 0.19999999999999998,
+        "disappointment": 0.025,
+        "relief": 0.05
+      }
+    },
+    {
+      "value_of_money": "high",
+      "found_by_accident": "no",
+      "offence_history": "tainted",
+      "emotions": {
+        "happiness": 0.5,
+        "surprise": 0.175,
+        "guilt": 0.175,
+        "relief": 0.15
+      }
+    }
+  ]
+}

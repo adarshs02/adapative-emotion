@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "experience": [
+      "first_time",
+      "repeated"
+    ],
+    "observation": [
+      "same_as_me",
+      "different_from_me"
+    ],
+    "anticipation": [
+      "high",
+      "low"
+    ]
+  },
+  "cpt": [
+    {
+      "experience": "first_time",
+      "observation": "same_as_me",
+      "anticipation": "high",
+      "emotions": {
+        "fear": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "curiosity": 0.10000000000000002
+      }
+    },
+    {
+      "experience": "first_time",
+      "observation": "same_as_me",
+      "anticipation": "low",
+      "emotions": {
+        "fear": 0.4,
+        "anxiety": 0.5,
+        "relief": 0.1
+      }
+    },
+    {
+      "experience": "first_time",
+      "observation": "different_from_me",
+      "anticipation": "high",
+      "emotions": {
+        "fear": 0.7000000000000001,
+        "anxiety": 0.20000000000000004,
+        "surprise": 0.10000000000000002
+      }
+    },
+    {
+      "experience": "first_time",
+      "observation": "different_from_me",
+      "anticipation": "low",
+      "emotions": {
+        "fear": 0.55,
+        "anxiety": 0.35,
+        "curiosity": 0.1
+      }
+    },
+    {
+      "experience": "repeated",
+      "observation": "same_as_me",
+      "anticipation": "high",
+      "emotions": {
+        "fear": 0.45,
+        "anxiety": 0.5,
+        "anger": 0.05
+      }
+    },
+    {
+      "experience": "repeated",
+      "observation": "same_as_me",
+      "anticipation": "low",
+      "emotions": {
+        "fear": 0.3,
+        "anxiety": 0.55,
+        "relief": 0.15
+      }
+    },
+    {
+      "experience": "repeated",
+      "observation": "different_from_me",
+      "anticipation": "high",
+      "emotions": {
+        "fear": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "experience": "repeated",
+      "observation": "different_from_me",
+      "anticipation": "low",
+      "emotions": {
+        "fear": 0.45,
+        "anxiety": 0.45,
+        "anger": 0.1
+      }
+    }
+  ]
+}

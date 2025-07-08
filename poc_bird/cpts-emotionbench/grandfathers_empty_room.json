@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "familiarity_level": [
+      "familiar",
+      "unfamiliar"
+    ],
+    "presence_of_scent": [
+      "present",
+      "absent"
+    ],
+    "room_condition": [
+      "silent",
+      "lively"
+    ]
+  },
+  "cpt": [
+    {
+      "familiarity_level": "familiar",
+      "presence_of_scent": "present",
+      "room_condition": "silent",
+      "emotions": {
+        "sadness": 0.6,
+        "longing": 0.35,
+        "peacefulness": 0.05
+      }
+    },
+    {
+      "familiarity_level": "familiar",
+      "presence_of_scent": "present",
+      "room_condition": "lively",
+      "emotions": {
+        "happiness": 0.4,
+        "nostalgia": 0.45,
+        "confusion": 0.15
+      }
+    },
+    {
+      "familiarity_level": "familiar",
+      "presence_of_scent": "absent",
+      "room_condition": "silent",
+      "emotions": {
+        "sadness": 0.8,
+        "longing": 0.15,
+        "peacefulness": 0.05
+      }
+    },
+    {
+      "familiarity_level": "familiar",
+      "presence_of_scent": "absent",
+      "room_condition": "lively",
+      "emotions": {
+        "happiness": 0.5,
+        "nostalgia": 0.35,
+        "confusion": 0.15
+      }
+    },
+    {
+      "familiarity_level": "unfamiliar",
+      "presence_of_scent": "present",
+      "room_condition": "silent",
+      "emotions": {
+        "surprise": 0.6000000000000001,
+        "curiosity": 0.30000000000000004,
+        "sadness": 0.10000000000000002
+      }
+    },
+    {
+      "familiarity_level": "unfamiliar",
+      "presence_of_scent": "present",
+      "room_condition": "lively",
+      "emotions": {
+        "confusion": 0.6000000000000001,
+        "curiosity": 0.30000000000000004,
+        "happiness": 0.10000000000000002
+      }
+    },
+    {
+      "familiarity_level": "unfamiliar",
+      "presence_of_scent": "absent",
+      "room_condition": "silent",
+      "emotions": {
+        "surprise": 0.8,
+        "curiosity": 0.15,
+        "sadness": 0.05
+      }
+    },
+    {
+      "familiarity_level": "unfamiliar",
+      "presence_of_scent": "absent",
+      "room_condition": "lively",
+      "emotions": {
+        "confusion": 0.6000000000000001,
+        "curiosity": 0.30000000000000004,
+        "happiness": 0.10000000000000002
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "support_system": [
+      "strong",
+      "weak"
+    ],
+    "job_market_conditions": [
+      "good",
+      "bad"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "support_system": "strong",
+      "job_market_conditions": "good",
+      "emotions": {
+        "relief": 0.3,
+        "sadness": 0.45,
+        "fear": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_system": "strong",
+      "job_market_conditions": "bad",
+      "emotions": {
+        "sadness": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "anxiety": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_system": "weak",
+      "job_market_conditions": "good",
+      "emotions": {
+        "sadness": 0.5,
+        "anxiety": 0.35,
+        "anger": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_system": "weak",
+      "job_market_conditions": "bad",
+      "emotions": {
+        "sadness": 0.7000000000000001,
+        "anger": 0.20000000000000004,
+        "fear": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_system": "strong",
+      "job_market_conditions": "good",
+      "emotions": {
+        "sadness": 0.4,
+        "anger": 0.45,
+        "fear": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_system": "strong",
+      "job_market_conditions": "bad",
+      "emotions": {
+        "anger": 0.6000000000000001,
+        "sadness": 0.30000000000000004,
+        "anxiety": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_system": "weak",
+      "job_market_conditions": "good",
+      "emotions": {
+        "anger": 0.5789473684210527,
+        "sadness": 0.36842105263157887,
+        "fear": 0.05263157894736842
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_system": "weak",
+      "job_market_conditions": "bad",
+      "emotions": {
+        "anger": 0.75,
+        "sadness": 0.2,
+        "fear": 0.05
+      }
+    }
+  ]
+}

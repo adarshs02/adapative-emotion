@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "audience_reaction": [
+      "supportive",
+      "unsympathetic"
+    ],
+    "embarrassment_level": [
+      "minimal",
+      "significant"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "audience_reaction": "supportive",
+      "embarrassment_level": "minimal",
+      "offence_history": "first_time",
+      "emotions": {
+        "amusement": 0.30000000000000004,
+        "embarrassment": 0.6000000000000001,
+        "shame": 0.10000000000000002
+      }
+    },
+    {
+      "audience_reaction": "supportive",
+      "embarrassment_level": "minimal",
+      "offence_history": "repeated",
+      "emotions": {
+        "amusement": 0.2,
+        "embarrassment": 0.55,
+        "shame": 0.25
+      }
+    },
+    {
+      "audience_reaction": "supportive",
+      "embarrassment_level": "significant",
+      "offence_history": "first_time",
+      "emotions": {
+        "amusement": 0.1,
+        "embarrassment": 0.8,
+        "shame": 0.1
+      }
+    },
+    {
+      "audience_reaction": "supportive",
+      "embarrassment_level": "significant",
+      "offence_history": "repeated",
+      "emotions": {
+        "amusement": 0.05,
+        "embarrassment": 0.85,
+        "shame": 0.1
+      }
+    },
+    {
+      "audience_reaction": "unsympathetic",
+      "embarrassment_level": "minimal",
+      "offence_history": "first_time",
+      "emotions": {
+        "amusement": 0.25,
+        "anger": 0.5,
+        "shame": 0.25
+      }
+    },
+    {
+      "audience_reaction": "unsympathetic",
+      "embarrassment_level": "minimal",
+      "offence_history": "repeated",
+      "emotions": {
+        "amusement": 0.15,
+        "anger": 0.65,
+        "shame": 0.2
+      }
+    },
+    {
+      "audience_reaction": "unsympathetic",
+      "embarrassment_level": "significant",
+      "offence_history": "first_time",
+      "emotions": {
+        "amusement": 0.1,
+        "anger": 0.7,
+        "shame": 0.2
+      }
+    },
+    {
+      "audience_reaction": "unsympathetic",
+      "embarrassment_level": "significant",
+      "offence_history": "repeated",
+      "emotions": {
+        "amusement": 0.05,
+        "anger": 0.75,
+        "shame": 0.2
+      }
+    }
+  ]
+}

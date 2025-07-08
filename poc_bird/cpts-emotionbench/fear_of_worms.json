@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "familiarity_with_worms": [
+      "familiar",
+      "unfamiliar"
+    ],
+    "reaction_intensity": [
+      "calm",
+      "shocked"
+    ],
+    "worm_size": [
+      "small",
+      "large"
+    ]
+  },
+  "cpt": [
+    {
+      "familiarity_with_worms": "familiar",
+      "reaction_intensity": "calm",
+      "worm_size": "small",
+      "emotions": {
+        "relief": 0.6000000000000001,
+        "disgust": 0.30000000000000004,
+        "fascination": 0.10000000000000002
+      }
+    },
+    {
+      "familiarity_with_worms": "familiar",
+      "reaction_intensity": "calm",
+      "worm_size": "large",
+      "emotions": {
+        "surprise": 0.4,
+        "disgust": 0.5,
+        "fear": 0.1
+      }
+    },
+    {
+      "familiarity_with_worms": "familiar",
+      "reaction_intensity": "shocked",
+      "worm_size": "small",
+      "emotions": {
+        "disgust": 0.7000000000000001,
+        "fear": 0.20000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "familiarity_with_worms": "familiar",
+      "reaction_intensity": "shocked",
+      "worm_size": "large",
+      "emotions": {
+        "disgust": 0.8,
+        "fear": 0.15,
+        "anger": 0.05
+      }
+    },
+    {
+      "familiarity_with_worms": "unfamiliar",
+      "reaction_intensity": "calm",
+      "worm_size": "small",
+      "emotions": {
+        "curiosity": 0.6000000000000001,
+        "disgust": 0.30000000000000004,
+        "fear": 0.10000000000000002
+      }
+    },
+    {
+      "familiarity_with_worms": "unfamiliar",
+      "reaction_intensity": "calm",
+      "worm_size": "large",
+      "emotions": {
+        "awe": 0.4,
+        "disgust": 0.5,
+        "fear": 0.1
+      }
+    },
+    {
+      "familiarity_with_worms": "unfamiliar",
+      "reaction_intensity": "shocked",
+      "worm_size": "small",
+      "emotions": {
+        "disgust": 0.7000000000000001,
+        "fear": 0.20000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "familiarity_with_worms": "unfamiliar",
+      "reaction_intensity": "shocked",
+      "worm_size": "large",
+      "emotions": {
+        "disgust": 0.8,
+        "fear": 0.15,
+        "anger": 0.05
+      }
+    }
+  ]
+}

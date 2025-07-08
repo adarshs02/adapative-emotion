@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "friendship_quality",
-      "values": [
-        "close",
-        "distant"
-      ]
-    },
-    {
-      "name": "self_confidence",
-      "values": [
-        "high",
-        "low"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "friend_relationship": [
+      "close",
+      "casual"
+    ],
+    "performance_comparison": [
+      "similar",
+      "different"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "friendship_quality": "close",
-      "self_confidence": "high",
+      "friend_relationship": "close",
+      "performance_comparison": "similar",
       "emotions": {
-        "anger": 0.0,
-        "disappointment": 0.8,
-        "relief": 0.2
+        "happy_for_friend": 0.7,
+        "jealous": 0.25,
+        "disappointed": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "friendship_quality": "close",
-      "self_confidence": "low",
+      "friend_relationship": "casual",
+      "performance_comparison": "similar",
       "emotions": {
-        "anger": 0.1,
-        "disappointment": 0.7,
-        "relief": 0.2
+        "indifferent": 0.6,
+        "happy_for_friend": 0.3,
+        "disappointed": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "friendship_quality": "distant",
-      "self_confidence": "high",
+      "friend_relationship": "close",
+      "performance_comparison": "different",
       "emotions": {
-        "anger": 0.2,
-        "disappointment": 0.6,
-        "relief": 0.2
+        "hurt": 0.4,
+        "disappointed": 0.35,
+        "happy_for_friend": 0.25
       }
     },
     {
       "offence_history": "first_time",
-      "friendship_quality": "distant",
-      "self_confidence": "low",
+      "friend_relationship": "casual",
+      "performance_comparison": "different",
       "emotions": {
-        "anger": 0.3,
-        "disappointment": 0.5,
-        "relief": 0.2
+        "indifferent": 0.6,
+        "hurt": 0.3,
+        "disappointed": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "friendship_quality": "close",
-      "self_confidence": "high",
+      "friend_relationship": "close",
+      "performance_comparison": "similar",
       "emotions": {
-        "anger": 0.8,
-        "disappointment": 0.2,
-        "relief": 0.0
+        "angry": 0.6,
+        "disappointed": 0.3,
+        "hurt": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "friendship_quality": "close",
-      "self_confidence": "low",
+      "friend_relationship": "casual",
+      "performance_comparison": "similar",
       "emotions": {
-        "anger": 0.9,
-        "disappointment": 0.1,
-        "relief": 0.0
+        "indifferent": 0.4,
+        "angry": 0.4,
+        "disappointed": 0.2
       }
     },
     {
       "offence_history": "repeated",
-      "friendship_quality": "distant",
-      "self_confidence": "high",
+      "friend_relationship": "close",
+      "performance_comparison": "different",
       "emotions": {
-        "anger": 0.9,
-        "disappointment": 0.1,
-        "relief": 0.0
+        "angry": 0.75,
+        "hurt": 0.2,
+        "disappointed": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "friendship_quality": "distant",
-      "self_confidence": "low",
+      "friend_relationship": "casual",
+      "performance_comparison": "different",
       "emotions": {
-        "anger": 0.95,
-        "disappointment": 0.05,
-        "relief": 0.0
+        "indifferent": 0.3,
+        "angry": 0.5,
+        "hurt": 0.2
       }
     }
   ]

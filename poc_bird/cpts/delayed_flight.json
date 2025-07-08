@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "flight_status",
-      "values": [
-        "on_time",
-        "delayed"
-      ]
-    },
-    {
-      "name": "travel_frequency",
-      "values": [
-        "rare",
-        "frequent"
-      ]
-    }
-  ],
+  "factors": {
+    "delay_count": [
+      "First",
+      "Repeated"
+    ],
+    "preparation_time": [
+      "Plenty",
+      "Little"
+    ],
+    "alternatives_available": [
+      "Yes",
+      "No"
+    ]
+  },
   "cpt": [
     {
-      "offence_history": "first_time",
-      "flight_status": "on_time",
-      "travel_frequency": "rare",
+      "delay_count": "First",
+      "preparation_time": "Plenty",
+      "alternatives_available": "Yes",
       "emotions": {
-        "frustration": 0.8,
-        "relief": 0.2,
-        "excitement": 0.0
+        "Relief": 0.3,
+        "Frustration": 0.4,
+        "Anxiety": 0.3
       }
     },
     {
-      "offence_history": "first_time",
-      "flight_status": "on_time",
-      "travel_frequency": "frequent",
+      "delay_count": "First",
+      "preparation_time": "Plenty",
+      "alternatives_available": "No",
       "emotions": {
-        "relief": 0.7,
-        "excitement": 0.2,
-        "frustration": 0.1
+        "Frustration": 0.6,
+        "Anxiety": 0.3,
+        "Impatience": 0.1
       }
     },
     {
-      "offence_history": "first_time",
-      "flight_status": "delayed",
-      "travel_frequency": "rare",
+      "delay_count": "First",
+      "preparation_time": "Little",
+      "alternatives_available": "Yes",
       "emotions": {
-        "frustration": 0.6,
-        "relief": 0.3,
-        "excitement": 0.1
+        "Surprise": 0.25,
+        "Frustration": 0.5,
+        "Anxiety": 0.25
       }
     },
     {
-      "offence_history": "first_time",
-      "flight_status": "delayed",
-      "travel_frequency": "frequent",
+      "delay_count": "First",
+      "preparation_time": "Little",
+      "alternatives_available": "No",
       "emotions": {
-        "frustration": 0.5,
-        "relief": 0.3,
-        "excitement": 0.2
+        "Surprise": 0.3,
+        "Frustration": 0.55,
+        "Anxiety": 0.15
       }
     },
     {
-      "offence_history": "repeated",
-      "flight_status": "on_time",
-      "travel_frequency": "rare",
+      "delay_count": "Repeated",
+      "preparation_time": "Plenty",
+      "alternatives_available": "Yes",
       "emotions": {
-        "frustration": 0.2,
-        "relief": 0.6,
-        "excitement": 0.2
+        "Frustration": 0.55,
+        "Anger": 0.35,
+        "Anxiety": 0.05
       }
     },
     {
-      "offence_history": "repeated",
-      "flight_status": "on_time",
-      "travel_frequency": "frequent",
+      "delay_count": "Repeated",
+      "preparation_time": "Plenty",
+      "alternatives_available": "No",
       "emotions": {
-        "relief": 0.8,
-        "frustration": 0.1,
-        "excitement": 0.1
+        "Anger": 0.65,
+        "Frustration": 0.25,
+        "Disappointment": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "flight_status": "delayed",
-      "travel_frequency": "rare",
+      "delay_count": "Repeated",
+      "preparation_time": "Little",
+      "alternatives_available": "Yes",
       "emotions": {
-        "frustration": 0.8,
-        "relief": 0.1,
-        "excitement": 0.1
+        "Frustration": 0.6,
+        "Anger": 0.3,
+        "Disappointment": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "flight_status": "delayed",
-      "travel_frequency": "frequent",
+      "delay_count": "Repeated",
+      "preparation_time": "Little",
+      "alternatives_available": "No",
       "emotions": {
-        "frustration": 0.9,
-        "relief": 0.05,
-        "excitement": 0.05
+        "Anger": 0.7,
+        "Frustration": 0.2,
+        "Disappointment": 0.1
       }
     }
   ]

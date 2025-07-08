@@ -1,0 +1,103 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "trust_level": [
+      "high",
+      "low"
+    ],
+    "evidence_present": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "trust_level": "high",
+      "evidence_present": "yes",
+      "emotions": {
+        "frustration": 0.38461538461538464,
+        "confusion": 0.48717948717948717,
+        "anger": 0.12820512820512822
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "high",
+      "evidence_present": "no",
+      "emotions": {
+        "frustration": 0.2631578947368421,
+        "confusion": 0.5789473684210527,
+        "anger": 0.15789473684210525
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "low",
+      "evidence_present": "yes",
+      "emotions": {
+        "frustration": 0.10256410256410257,
+        "confusion": 0.23076923076923078,
+        "anger": 0.3076923076923077,
+        "fear": 0.12820512820512822,
+        "anxiety": 0.23076923076923078
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "low",
+      "evidence_present": "no",
+      "emotions": {
+        "frustration": 0.15789473684210525,
+        "confusion": 0.5263157894736842,
+        "anger": 0.3157894736842105
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "high",
+      "evidence_present": "yes",
+      "emotions": {
+        "frustration": 0.358974358974359,
+        "confusion": 0.1794871794871795,
+        "anger": 0.3846153846153847,
+        "disappointment": 0.07692307692307693
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "high",
+      "evidence_present": "no",
+      "emotions": {
+        "frustration": 0.15789473684210525,
+        "confusion": 0.3684210526315789,
+        "anger": 0.4736842105263158
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "low",
+      "evidence_present": "yes",
+      "emotions": {
+        "frustration": 0.052631578947368425,
+        "confusion": 0.15789473684210525,
+        "anger": 0.34210526315789475,
+        "fear": 0.18421052631578946,
+        "anxiety": 0.2631578947368421
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "low",
+      "evidence_present": "no",
+      "emotions": {
+        "frustration": 0.052631578947368425,
+        "confusion": 0.2631578947368421,
+        "anger": 0.6842105263157895
+      }
+    }
+  ]
+}

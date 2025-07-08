@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "familiarity_with_heights": [
+      "first_time",
+      "repeated"
+    ],
+    "perception_of_danger": [
+      "safe",
+      "risky"
+    ],
+    "presence_of_fear_of_heights": [
+      "no_fear",
+      "fear_present"
+    ]
+  },
+  "cpt": [
+    {
+      "familiarity_with_heights": "first_time",
+      "perception_of_danger": "safe",
+      "presence_of_fear_of_heights": "no_fear",
+      "emotions": {
+        "awe": 0.7,
+        "curiosity": 0.25,
+        "boredom": 0.05
+      }
+    },
+    {
+      "familiarity_with_heights": "first_time",
+      "perception_of_danger": "risky",
+      "presence_of_fear_of_heights": "no_fear",
+      "emotions": {
+        "awe": 0.5,
+        "fear": 0.35,
+        "curiosity": 0.15
+      }
+    },
+    {
+      "familiarity_with_heights": "first_time",
+      "perception_of_danger": "safe",
+      "presence_of_fear_of_heights": "fear_present",
+      "emotions": {
+        "fear": 0.8,
+        "awe": 0.15,
+        "discomfort": 0.05
+      }
+    },
+    {
+      "familiarity_with_heights": "first_time",
+      "perception_of_danger": "risky",
+      "presence_of_fear_of_heights": "fear_present",
+      "emotions": {
+        "fear": 0.9,
+        "awe": 0.05,
+        "discomfort": 0.05
+      }
+    },
+    {
+      "familiarity_with_heights": "repeated",
+      "perception_of_danger": "safe",
+      "presence_of_fear_of_heights": "no_fear",
+      "emotions": {
+        "awe": 0.6000000000000001,
+        "familiarity": 0.30000000000000004,
+        "boredom": 0.10000000000000002
+      }
+    },
+    {
+      "familiarity_with_heights": "repeated",
+      "perception_of_danger": "risky",
+      "presence_of_fear_of_heights": "no_fear",
+      "emotions": {
+        "awe": 0.4,
+        "fear": 0.45,
+        "excitement": 0.15
+      }
+    },
+    {
+      "familiarity_with_heights": "repeated",
+      "perception_of_danger": "safe",
+      "presence_of_fear_of_heights": "fear_present",
+      "emotions": {
+        "fear": 0.6000000000000001,
+        "awe": 0.30000000000000004,
+        "discomfort": 0.10000000000000002
+      }
+    },
+    {
+      "familiarity_with_heights": "repeated",
+      "perception_of_danger": "risky",
+      "presence_of_fear_of_heights": "fear_present",
+      "emotions": {
+        "fear": 0.8,
+        "awe": 0.15,
+        "discomfort": 0.05
+      }
+    }
+  ]
+}

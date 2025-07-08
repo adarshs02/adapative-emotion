@@ -1,0 +1,100 @@
+{
+  "factors": {
+    "preparation_level": [
+      "well_prepared",
+      "poorly_prepared"
+    ],
+    "past_presentation_experience": [
+      "experienced",
+      "inexperienced"
+    ],
+    "audience_size": [
+      "small",
+      "large"
+    ]
+  },
+  "cpt": [
+    {
+      "preparation_level": "well_prepared",
+      "past_presentation_experience": "experienced",
+      "audience_size": "small",
+      "emotions": {
+        "confident": 0.75,
+        "anxious": 0.2,
+        "excited": 0.05
+      }
+    },
+    {
+      "preparation_level": "well_prepared",
+      "past_presentation_experience": "experienced",
+      "audience_size": "large",
+      "emotions": {
+        "confident": 0.6,
+        "anxious": 0.35,
+        "excited": 0.05
+      }
+    },
+    {
+      "preparation_level": "well_prepared",
+      "past_presentation_experience": "inexperienced",
+      "audience_size": "small",
+      "emotions": {
+        "confident": 0.35,
+        "anxious": 0.55,
+        "nervous": 0.075,
+        "excited": 0.025
+      }
+    },
+    {
+      "preparation_level": "well_prepared",
+      "past_presentation_experience": "inexperienced",
+      "audience_size": "large",
+      "emotions": {
+        "confident": 0.30000000000000004,
+        "anxious": 0.575,
+        "nervous": 0.1,
+        "excited": 0.025
+      }
+    },
+    {
+      "preparation_level": "poorly_prepared",
+      "past_presentation_experience": "experienced",
+      "audience_size": "small",
+      "emotions": {
+        "anxious": 0.5249999999999999,
+        "nervous": 0.425,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "preparation_level": "poorly_prepared",
+      "past_presentation_experience": "experienced",
+      "audience_size": "large",
+      "emotions": {
+        "anxious": 0.45,
+        "nervous": 0.5,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "preparation_level": "poorly_prepared",
+      "past_presentation_experience": "inexperienced",
+      "audience_size": "small",
+      "emotions": {
+        "anxious": 0.525,
+        "nervous": 0.425,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "preparation_level": "poorly_prepared",
+      "past_presentation_experience": "inexperienced",
+      "audience_size": "large",
+      "emotions": {
+        "anxious": 0.5,
+        "nervous": 0.45,
+        "frustrated": 0.05
+      }
+    }
+  ]
+}

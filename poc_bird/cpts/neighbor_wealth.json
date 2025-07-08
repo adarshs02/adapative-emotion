@@ -1,146 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "neighbor_socioeconomic_status",
-      "values": [
-        "low",
-        "high"
-      ]
-    },
-    {
-      "name": "neighbor_relationship",
-      "values": [
-        "friendly",
-        "distant"
-      ]
-    }
-  ],
+  "factors": {
+    "envy_level": [
+      "yes",
+      "no"
+    ],
+    "financial_status": [
+      "struggling",
+      "stable"
+    ],
+    "car_history": [
+      "yes",
+      "no"
+    ]
+  },
   "cpt": [
     {
-      "offence_history": "first_time",
-      "neighbor_socioeconomic_status": "low",
-      "neighbor_relationship": "friendly",
+      "envy_level": "yes",
+      "financial_status": "struggling",
+      "car_history": "yes",
       "emotions": {
-        "jealousy": 0.0,
-        "envy": 0.0,
-        "anger": 0.0,
-        "disgust": 0.0,
-        "admiration": 0.8,
-        "surprise": 0.2,
-        "curiosity": 0.0,
-        "indifference": 0.0
+        "happiness": 0.05,
+        "jealousy": 0.45,
+        "resentment": 0.5
       }
     },
     {
-      "offence_history": "first_time",
-      "neighbor_socioeconomic_status": "low",
-      "neighbor_relationship": "distant",
+      "envy_level": "yes",
+      "financial_status": "struggling",
+      "car_history": "no",
       "emotions": {
-        "jealousy": 0.0,
-        "envy": 0.0,
-        "anger": 0.0,
-        "disgust": 0.0,
-        "admiration": 0.7,
-        "surprise": 0.3,
-        "curiosity": 0.0,
-        "indifference": 0.0
+        "happiness": 0.1,
+        "jealousy": 0.6,
+        "envy": 0.3
       }
     },
     {
-      "offence_history": "first_time",
-      "neighbor_socioeconomic_status": "high",
-      "neighbor_relationship": "friendly",
+      "envy_level": "yes",
+      "financial_status": "stable",
+      "car_history": "yes",
       "emotions": {
-        "jealousy": 0.0,
-        "envy": 0.0,
-        "anger": 0.0,
-        "disgust": 0.0,
-        "admiration": 0.6,
-        "surprise": 0.4,
-        "curiosity": 0.0,
-        "indifference": 0.0
+        "happiness": 0.2,
+        "envy": 0.4,
+        "disappointment": 0.4
       }
     },
     {
-      "offence_history": "first_time",
-      "neighbor_socioeconomic_status": "high",
-      "neighbor_relationship": "distant",
+      "envy_level": "yes",
+      "financial_status": "stable",
+      "car_history": "no",
       "emotions": {
-        "jealousy": 0.0,
-        "envy": 0.0,
-        "anger": 0.0,
-        "disgust": 0.0,
-        "admiration": 0.5,
-        "surprise": 0.45,
-        "curiosity": 0.05,
-        "indifference": 0.0
+        "happiness": 0.3,
+        "envy": 0.5,
+        "disappointment": 0.2
       }
     },
     {
-      "offence_history": "repeated",
-      "neighbor_socioeconomic_status": "low",
-      "neighbor_relationship": "friendly",
+      "envy_level": "no",
+      "financial_status": "struggling",
+      "car_history": "yes",
       "emotions": {
-        "jealousy": 0.0,
-        "envy": 0.0,
-        "anger": 0.8,
-        "disgust": 0.2,
-        "admiration": 0.0,
-        "surprise": 0.0,
-        "curiosity": 0.0,
-        "indifference": 0.0
+        "happiness": 0.55,
+        "indifference": 0.35,
+        "jealousy": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "neighbor_socioeconomic_status": "low",
-      "neighbor_relationship": "distant",
+      "envy_level": "no",
+      "financial_status": "struggling",
+      "car_history": "no",
       "emotions": {
-        "jealousy": 0.0,
-        "envy": 0.0,
-        "anger": 0.9,
-        "disgust": 0.1,
-        "admiration": 0.0,
-        "surprise": 0.0,
-        "curiosity": 0.0,
-        "indifference": 0.0
+        "happiness": 0.6,
+        "indifference": 0.3,
+        "jealousy": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "neighbor_socioeconomic_status": "high",
-      "neighbor_relationship": "friendly",
+      "envy_level": "no",
+      "financial_status": "stable",
+      "car_history": "yes",
       "emotions": {
-        "jealousy": 0.0,
-        "envy": 0.0,
-        "anger": 0.7,
-        "disgust": 0.3,
-        "admiration": 0.0,
-        "surprise": 0.0,
-        "curiosity": 0.0,
-        "indifference": 0.0
+        "happiness": 0.65,
+        "indifference": 0.25,
+        "admiration": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "neighbor_socioeconomic_status": "high",
-      "neighbor_relationship": "distant",
+      "envy_level": "no",
+      "financial_status": "stable",
+      "car_history": "no",
       "emotions": {
-        "jealousy": 0.0,
-        "envy": 0.0,
-        "anger": 0.85,
-        "disgust": 0.15,
-        "admiration": 0.0,
-        "surprise": 0.0,
-        "curiosity": 0.0,
-        "indifference": 0.0
+        "happiness": 0.7,
+        "indifference": 0.2,
+        "admiration": 0.1
       }
     }
   ]

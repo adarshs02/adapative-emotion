@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "partner_sincerity",
-      "values": [
-        "genuine",
-        "insincere"
-      ]
-    },
-    {
-      "name": "self_confidence",
-      "values": [
-        "high",
-        "low"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "partner_response": [
+      "ignores",
+      "confronts"
+    ],
+    "trust_level": [
+      "high",
+      "low"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "partner_sincerity": "genuine",
-      "self_confidence": "high",
+      "partner_response": "ignores",
+      "trust_level": "high",
       "emotions": {
-        "anger": 0.0,
-        "sadness": 0.8,
-        "hurt": 0.2
+        "surprise": 0.35,
+        "confusion": 0.3,
+        "relief": 0.35
       }
     },
     {
       "offence_history": "first_time",
-      "partner_sincerity": "genuine",
-      "self_confidence": "low",
+      "partner_response": "ignores",
+      "trust_level": "low",
       "emotions": {
-        "anger": 0.1,
-        "sadness": 0.7,
-        "hurt": 0.2
+        "suspicion": 0.4,
+        "hurt": 0.35,
+        "confusion": 0.25
       }
     },
     {
       "offence_history": "first_time",
-      "partner_sincerity": "insincere",
-      "self_confidence": "high",
+      "partner_response": "confronts",
+      "trust_level": "high",
       "emotions": {
-        "anger": 0.5,
-        "sadness": 0.3,
-        "hurt": 0.2
+        "anger": 0.4,
+        "relief": 0.3,
+        "surprise": 0.3
       }
     },
     {
       "offence_history": "first_time",
-      "partner_sincerity": "insincere",
-      "self_confidence": "low",
+      "partner_response": "confronts",
+      "trust_level": "low",
+      "emotions": {
+        "anger": 0.55,
+        "hurt": 0.3,
+        "suspicion": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "partner_response": "ignores",
+      "trust_level": "high",
+      "emotions": {
+        "anger": 0.55,
+        "hurt": 0.3,
+        "sadness": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "partner_response": "ignores",
+      "trust_level": "low",
       "emotions": {
         "anger": 0.7,
-        "sadness": 0.2,
-        "hurt": 0.1
+        "hurt": 0.25,
+        "suspicion": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "partner_sincerity": "genuine",
-      "self_confidence": "high",
+      "partner_response": "confronts",
+      "trust_level": "high",
+      "emotions": {
+        "anger": 0.65,
+        "relief": 0.2,
+        "sadness": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "partner_response": "confronts",
+      "trust_level": "low",
       "emotions": {
         "anger": 0.8,
-        "sadness": 0.1,
-        "hurt": 0.1
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "partner_sincerity": "genuine",
-      "self_confidence": "low",
-      "emotions": {
-        "anger": 0.9,
-        "sadness": 0.08,
-        "hurt": 0.02
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "partner_sincerity": "insincere",
-      "self_confidence": "high",
-      "emotions": {
-        "anger": 0.95,
-        "sadness": 0.04,
-        "hurt": 0.01
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "partner_sincerity": "insincere",
-      "self_confidence": "low",
-      "emotions": {
-        "anger": 0.98,
-        "sadness": 0.01,
-        "hurt": 0.01
+        "hurt": 0.15,
+        "suspicion": 0.05
       }
     }
   ]

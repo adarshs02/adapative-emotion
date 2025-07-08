@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "winning_type",
-      "values": [
-        "unexpected",
-        "expected"
-      ]
-    },
-    {
-      "name": "previous_wins",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "personal_importance",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "win_history": [
+      "first_time",
+      "repeated"
+    ],
+    "expectation": [
+      "surprised",
+      "expected"
+    ],
+    "financial_needs": [
+      "low",
+      "high"
+    ]
+  },
   "cpt": [
     {
-      "winning_type": "unexpected",
-      "previous_wins": "first_time",
-      "personal_importance": "low",
+      "win_history": "first_time",
+      "expectation": "surprised",
+      "financial_needs": "low",
       "emotions": {
-        "excitement": 0.7,
+        "happiness": 0.8,
+        "surprise": 0.15,
+        "excitement": 0.05
+      }
+    },
+    {
+      "win_history": "first_time",
+      "expectation": "surprised",
+      "financial_needs": "high",
+      "emotions": {
+        "happiness": 0.7,
         "relief": 0.2,
-        "boredom": 0.1
-      }
-    },
-    {
-      "winning_type": "unexpected",
-      "previous_wins": "first_time",
-      "personal_importance": "high",
-      "emotions": {
-        "excitement": 0.8,
-        "relief": 0.15,
-        "gratitude": 0.05
-      }
-    },
-    {
-      "winning_type": "unexpected",
-      "previous_wins": "repeated",
-      "personal_importance": "low",
-      "emotions": {
-        "excitement": 0.6,
-        "relief": 0.3,
-        "disappointment": 0.1
-      }
-    },
-    {
-      "winning_type": "unexpected",
-      "previous_wins": "repeated",
-      "personal_importance": "high",
-      "emotions": {
-        "excitement": 0.7,
-        "gratitude": 0.25,
-        "disappointment": 0.05
-      }
-    },
-    {
-      "winning_type": "expected",
-      "previous_wins": "first_time",
-      "personal_importance": "low",
-      "emotions": {
-        "relief": 0.6,
-        "excitement": 0.3,
-        "boredom": 0.1
-      }
-    },
-    {
-      "winning_type": "expected",
-      "previous_wins": "first_time",
-      "personal_importance": "high",
-      "emotions": {
-        "relief": 0.7,
-        "gratitude": 0.2,
         "excitement": 0.1
       }
     },
     {
-      "winning_type": "expected",
-      "previous_wins": "repeated",
-      "personal_importance": "low",
+      "win_history": "first_time",
+      "expectation": "expected",
+      "financial_needs": "low",
       "emotions": {
-        "relief": 0.5,
-        "disappointment": 0.35,
-        "boredom": 0.15
+        "happiness": 0.6,
+        "gratitude": 0.3,
+        "surprise": 0.1
       }
     },
     {
-      "winning_type": "expected",
-      "previous_wins": "repeated",
-      "personal_importance": "high",
+      "win_history": "first_time",
+      "expectation": "expected",
+      "financial_needs": "high",
       "emotions": {
-        "relief": 0.6,
-        "gratitude": 0.25,
-        "disappointment": 0.15
+        "happiness": 0.5,
+        "gratitude": 0.35,
+        "relief": 0.15
+      }
+    },
+    {
+      "win_history": "repeated",
+      "expectation": "surprised",
+      "financial_needs": "low",
+      "emotions": {
+        "happiness": 0.65,
+        "surprise": 0.25,
+        "excitement": 0.1
+      }
+    },
+    {
+      "win_history": "repeated",
+      "expectation": "surprised",
+      "financial_needs": "high",
+      "emotions": {
+        "happiness": 0.6,
+        "relief": 0.25,
+        "excitement": 0.15
+      }
+    },
+    {
+      "win_history": "repeated",
+      "expectation": "expected",
+      "financial_needs": "low",
+      "emotions": {
+        "happiness": 0.55,
+        "gratitude": 0.3,
+        "anticipation": 0.15
+      }
+    },
+    {
+      "win_history": "repeated",
+      "expectation": "expected",
+      "financial_needs": "high",
+      "emotions": {
+        "happiness": 0.5,
+        "gratitude": 0.35,
+        "relief": 0.15
       }
     }
   ]

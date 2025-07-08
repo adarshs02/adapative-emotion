@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "news_type",
-      "values": [
-        "good",
-        "bad"
-      ]
-    },
-    {
-      "name": "relationship",
-      "values": [
-        "close",
-        "distant"
-      ]
-    },
-    {
-      "name": "expectation",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "importance_of_news": [
+      "personal",
+      "professional"
+    ],
+    "expectation_level": [
+      "low",
+      "high"
+    ],
+    "receiver_mood": [
+      "happy",
+      "sad"
+    ]
+  },
   "cpt": [
     {
-      "news_type": "good",
-      "relationship": "close",
-      "expectation": "low",
+      "importance_of_news": "personal",
+      "expectation_level": "low",
+      "receiver_mood": "happy",
       "emotions": {
-        "excitement": 0.7,
-        "relief": 0.2,
-        "suspicion": 0.1
+        "surprise": 0.3,
+        "relief": 0.4,
+        "happiness": 0.3
       }
     },
     {
-      "news_type": "good",
-      "relationship": "close",
-      "expectation": "high",
+      "importance_of_news": "personal",
+      "expectation_level": "low",
+      "receiver_mood": "sad",
       "emotions": {
-        "excitement": 0.6,
-        "anticipation": 0.3,
-        "disappointment": 0.1
+        "disappointment": 0.4,
+        "sadness": 0.5,
+        "relief": 0.1
       }
     },
     {
-      "news_type": "good",
-      "relationship": "distant",
-      "expectation": "low",
+      "importance_of_news": "personal",
+      "expectation_level": "high",
+      "receiver_mood": "happy",
       "emotions": {
-        "surprise": 0.8,
-        "curiosity": 0.2,
-        "indifference": 0
+        "excitement": 0.45,
+        "happiness": 0.45,
+        "gratitude": 0.1
       }
     },
     {
-      "news_type": "good",
-      "relationship": "distant",
-      "expectation": "high",
+      "importance_of_news": "personal",
+      "expectation_level": "high",
+      "receiver_mood": "sad",
       "emotions": {
-        "surprise": 0.7,
-        "disappointment": 0.2,
-        "indifference": 0.1
+        "disappointment": 0.3,
+        "sadness": 0.55,
+        "relief": 0.15
       }
     },
     {
-      "news_type": "bad",
-      "relationship": "close",
-      "expectation": "low",
+      "importance_of_news": "professional",
+      "expectation_level": "low",
+      "receiver_mood": "happy",
       "emotions": {
-        "shock": 0.9,
-        "sadness": 0.1,
-        "anger": 0
+        "relief": 0.4,
+        "happiness": 0.35,
+        "satisfaction": 0.25
       }
     },
     {
-      "news_type": "bad",
-      "relationship": "close",
-      "expectation": "high",
+      "importance_of_news": "professional",
+      "expectation_level": "low",
+      "receiver_mood": "sad",
       "emotions": {
-        "disappointment": 0.8,
-        "anger": 0.2,
-        "frustration": 0
+        "disappointment": 0.45,
+        "sadness": 0.4,
+        "frustration": 0.15
       }
     },
     {
-      "news_type": "bad",
-      "relationship": "distant",
-      "expectation": "low",
+      "importance_of_news": "professional",
+      "expectation_level": "high",
+      "receiver_mood": "happy",
       "emotions": {
-        "shock": 0.8,
-        "concern": 0.2,
-        "indifference": 0
+        "excitement": 0.45,
+        "happiness": 0.4,
+        "pride": 0.15
       }
     },
     {
-      "news_type": "bad",
-      "relationship": "distant",
-      "expectation": "high",
+      "importance_of_news": "professional",
+      "expectation_level": "high",
+      "receiver_mood": "sad",
       "emotions": {
-        "disappointment": 0.7,
-        "concern": 0.2,
-        "indifference": 0.1
+        "disappointment": 0.35,
+        "sadness": 0.5,
+        "frustration": 0.15
       }
     }
   ]

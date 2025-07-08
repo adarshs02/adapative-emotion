@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "severity_of_crime": [
+      "minor",
+      "major"
+    ],
+    "consequences_faced": [
+      "none",
+      "imprisonment"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "severity_of_crime": "minor",
+      "consequences_faced": "none",
+      "emotions": {
+        "surprise": 0.3,
+        "regret": 0.45,
+        "fear": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "severity_of_crime": "minor",
+      "consequences_faced": "imprisonment",
+      "emotions": {
+        "shock": 0.25,
+        "anger": 0.4,
+        "fear": 0.35
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "severity_of_crime": "major",
+      "consequences_faced": "none",
+      "emotions": {
+        "shock": 0.4,
+        "fear": 0.5,
+        "regret": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "severity_of_crime": "major",
+      "consequences_faced": "imprisonment",
+      "emotions": {
+        "shock": 0.3,
+        "anger": 0.55,
+        "fear": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "severity_of_crime": "minor",
+      "consequences_faced": "none",
+      "emotions": {
+        "regret": 0.2631578947368421,
+        "disappointment": 0.4736842105263158,
+        "fear": 0.2631578947368421
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "severity_of_crime": "minor",
+      "consequences_faced": "imprisonment",
+      "emotions": {
+        "anger": 0.4,
+        "fear": 0.5,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "severity_of_crime": "major",
+      "consequences_faced": "none",
+      "emotions": {
+        "anger": 0.5,
+        "fear": 0.4,
+        "regret": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "severity_of_crime": "major",
+      "consequences_faced": "imprisonment",
+      "emotions": {
+        "anger": 0.6000000000000001,
+        "fear": 0.30000000000000004,
+        "regret": 0.10000000000000002
+      }
+    }
+  ]
+}

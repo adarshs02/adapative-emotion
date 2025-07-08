@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "cleanliness_expectation": [
+      "low",
+      "high"
+    ],
+    "communication_level": [
+      "poor",
+      "good"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "cleanliness_expectation": "low",
+      "communication_level": "poor",
+      "emotions": {
+        "frustration": 0.6499999999999999,
+        "disappointment": 0.3,
+        "acceptance": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "cleanliness_expectation": "low",
+      "communication_level": "good",
+      "emotions": {
+        "surprise": 0.4,
+        "frustration": 0.35,
+        "understanding": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "cleanliness_expectation": "high",
+      "communication_level": "poor",
+      "emotions": {
+        "anger": 0.75,
+        "frustration": 0.2,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "cleanliness_expectation": "high",
+      "communication_level": "good",
+      "emotions": {
+        "surprise": 0.375,
+        "anger": 0.32499999999999996,
+        "disappointment": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "cleanliness_expectation": "low",
+      "communication_level": "poor",
+      "emotions": {
+        "anger": 0.8500000000000001,
+        "frustration": 0.125,
+        "disappointment": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "cleanliness_expectation": "low",
+      "communication_level": "good",
+      "emotions": {
+        "frustration": 0.55,
+        "anger": 0.35,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "cleanliness_expectation": "high",
+      "communication_level": "poor",
+      "emotions": {
+        "anger": 0.925,
+        "frustration": 0.07500000000000001,
+        "disappointment": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "cleanliness_expectation": "high",
+      "communication_level": "good",
+      "emotions": {
+        "anger": 0.575,
+        "frustration": 0.4,
+        "disappointment": 0.025
+      }
+    }
+  ]
+}

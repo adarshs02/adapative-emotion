@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "appointment_type",
-      "values": [
-        "cancelled",
-        "confirmed"
-      ]
-    },
-    {
-      "name": "time_availability",
-      "values": [
-        "free",
-        "busy"
-      ]
-    },
-    {
-      "name": "emotional_state",
-      "values": [
-        "stable",
-        "unstable"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "time_of_day": [
+      "morning",
+      "evening"
+    ],
+    "preparation": [
+      "well_prepared",
+      "not_prepared"
+    ]
+  },
   "cpt": [
     {
-      "appointment_type": "cancelled",
-      "time_availability": "free",
-      "emotional_state": "stable",
+      "offence_history": "first_time",
+      "time_of_day": "morning",
+      "preparation": "well_prepared",
       "emotions": {
-        "relieved": 0.7,
-        "excited": 0.2,
-        "frustrated": 0.1
+        "relieved": 0.6,
+        "happy": 0.3,
+        "bored": 0.1
       }
     },
     {
-      "appointment_type": "cancelled",
-      "time_availability": "free",
-      "emotional_state": "unstable",
+      "offence_history": "first_time",
+      "time_of_day": "morning",
+      "preparation": "not_prepared",
       "emotions": {
-        "excited": 0.6,
-        "relieved": 0.3,
-        "anxious": 0.1
+        "frustrated": 0.55,
+        "anxious": 0.35,
+        "bored": 0.1
       }
     },
     {
-      "appointment_type": "cancelled",
-      "time_availability": "busy",
-      "emotional_state": "stable",
+      "offence_history": "first_time",
+      "time_of_day": "evening",
+      "preparation": "well_prepared",
       "emotions": {
-        "frustrated": 0.5,
-        "relieved": 0.4,
-        "disappointed": 0.1
+        "excited": 0.45,
+        "relieved": 0.35,
+        "happy": 0.2
       }
     },
     {
-      "appointment_type": "cancelled",
-      "time_availability": "busy",
-      "emotional_state": "unstable",
+      "offence_history": "first_time",
+      "time_of_day": "evening",
+      "preparation": "not_prepared",
       "emotions": {
-        "anxious": 0.6,
-        "frustrated": 0.3,
-        "disappointed": 0.1
+        "frustrated": 0.6,
+        "anxious": 0.3,
+        "bored": 0.1
       }
     },
     {
-      "appointment_type": "confirmed",
-      "time_availability": "free",
-      "emotional_state": "stable",
+      "offence_history": "repeated",
+      "time_of_day": "morning",
+      "preparation": "well_prepared",
       "emotions": {
-        "excited": 0.1,
-        "relieved": 0.5,
-        "anxious": 0.4
+        "angry": 0.65,
+        "frustrated": 0.25,
+        "relieved": 0.1
       }
     },
     {
-      "appointment_type": "confirmed",
-      "time_availability": "free",
-      "emotional_state": "unstable",
+      "offence_history": "repeated",
+      "time_of_day": "morning",
+      "preparation": "not_prepared",
       "emotions": {
-        "anxious": 0.7,
+        "angry": 0.7,
+        "frustrated": 0.25,
+        "anxious": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "time_of_day": "evening",
+      "preparation": "well_prepared",
+      "emotions": {
+        "angry": 0.75,
         "frustrated": 0.2,
-        "relieved": 0.1
+        "relieved": 0.05
       }
     },
     {
-      "appointment_type": "confirmed",
-      "time_availability": "busy",
-      "emotional_state": "stable",
+      "offence_history": "repeated",
+      "time_of_day": "evening",
+      "preparation": "not_prepared",
       "emotions": {
-        "disappointed": 0.6,
-        "frustrated": 0.3,
-        "relieved": 0.1
-      }
-    },
-    {
-      "appointment_type": "confirmed",
-      "time_availability": "busy",
-      "emotional_state": "unstable",
-      "emotions": {
-        "anxious": 0.8,
-        "frustrated": 0.1,
-        "disappointed": 0.1
+        "angry": 0.8,
+        "frustrated": 0.15,
+        "anxious": 0.05
       }
     }
   ]

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "preparation_level": [
+      "low",
+      "high"
+    ],
+    "expectation_level": [
+      "low",
+      "high"
+    ],
+    "frequency_of_changes": [
+      "first_time",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "preparation_level": "low",
+      "expectation_level": "low",
+      "frequency_of_changes": "first_time",
+      "emotions": {
+        "surprise": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "indifference": 0.10000000000000002
+      }
+    },
+    {
+      "preparation_level": "low",
+      "expectation_level": "low",
+      "frequency_of_changes": "repeated",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.4,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "preparation_level": "low",
+      "expectation_level": "high",
+      "frequency_of_changes": "first_time",
+      "emotions": {
+        "disappointment": 0.55,
+        "frustration": 0.35,
+        "surprise": 0.1
+      }
+    },
+    {
+      "preparation_level": "low",
+      "expectation_level": "high",
+      "frequency_of_changes": "repeated",
+      "emotions": {
+        "anger": 0.6,
+        "disappointment": 0.35,
+        "frustration": 0.05
+      }
+    },
+    {
+      "preparation_level": "high",
+      "expectation_level": "low",
+      "frequency_of_changes": "first_time",
+      "emotions": {
+        "surprise": 0.4,
+        "relief": 0.3,
+        "frustration": 0.3
+      }
+    },
+    {
+      "preparation_level": "high",
+      "expectation_level": "low",
+      "frequency_of_changes": "repeated",
+      "emotions": {
+        "frustration": 0.6000000000000001,
+        "disappointment": 0.30000000000000004,
+        "relief": 0.10000000000000002
+      }
+    },
+    {
+      "preparation_level": "high",
+      "expectation_level": "high",
+      "frequency_of_changes": "first_time",
+      "emotions": {
+        "relief": 0.55,
+        "happiness": 0.35,
+        "surprise": 0.1
+      }
+    },
+    {
+      "preparation_level": "high",
+      "expectation_level": "high",
+      "frequency_of_changes": "repeated",
+      "emotions": {
+        "happiness": 0.6000000000000001,
+        "relief": 0.30000000000000004,
+        "frustration": 0.10000000000000002
+      }
+    }
+  ]
+}

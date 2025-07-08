@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "traffic_conditions": [
+      "light",
+      "heavy"
+    ],
+    "personal_patience": [
+      "high",
+      "low"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "traffic_conditions": "light",
+      "personal_patience": "high",
+      "emotions": {
+        "frustration": 0.2,
+        "annoyance": 0.6,
+        "indifference": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "traffic_conditions": "light",
+      "personal_patience": "low",
+      "emotions": {
+        "frustration": 0.4,
+        "anger": 0.35,
+        "annoyance": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "traffic_conditions": "heavy",
+      "personal_patience": "high",
+      "emotions": {
+        "frustration": 0.3,
+        "annoyance": 0.55,
+        "indifference": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "traffic_conditions": "heavy",
+      "personal_patience": "low",
+      "emotions": {
+        "frustration": 0.5,
+        "anger": 0.3,
+        "annoyance": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "traffic_conditions": "light",
+      "personal_patience": "high",
+      "emotions": {
+        "frustration": 0.36842105263157887,
+        "anger": 0.47368421052631576,
+        "indifference": 0.15789473684210525
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "traffic_conditions": "light",
+      "personal_patience": "low",
+      "emotions": {
+        "frustration": 0.5789473684210527,
+        "anger": 0.36842105263157887,
+        "annoyance": 0.05263157894736842
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "traffic_conditions": "heavy",
+      "personal_patience": "high",
+      "emotions": {
+        "frustration": 0.45,
+        "anger": 0.5,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "traffic_conditions": "heavy",
+      "personal_patience": "low",
+      "emotions": {
+        "frustration": 0.6,
+        "anger": 0.35,
+        "annoyance": 0.05
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "factors": {
+    "reunion_type": [
+      "first_reunion",
+      "repeated_reunion"
+    ],
+    "emotion_history": [
+      "positive",
+      "neutral",
+      "negative"
+    ],
+    "time_since_last_contact": [
+      "less_than_a_year",
+      "more_than_a_year"
+    ]
+  },
+  "cpt": [
+    {
+      "reunion_type": "first_reunion",
+      "emotion_history": "positive",
+      "time_since_last_contact": "less_than_a_year",
+      "emotions": {
+        "joy": 0.7,
+        "surprise": 0.25,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "reunion_type": "first_reunion",
+      "emotion_history": "positive",
+      "time_since_last_contact": "more_than_a_year",
+      "emotions": {
+        "joy": 0.6000000000000001,
+        "gratitude": 0.30000000000000004,
+        "curiosity": 0.10000000000000002
+      }
+    },
+    {
+      "reunion_type": "first_reunion",
+      "emotion_history": "neutral",
+      "time_since_last_contact": "less_than_a_year",
+      "emotions": {
+        "relief": 0.5,
+        "surprise": 0.35,
+        "anxiety": 0.15
+      }
+    },
+    {
+      "reunion_type": "first_reunion",
+      "emotion_history": "neutral",
+      "time_since_last_contact": "more_than_a_year",
+      "emotions": {
+        "relief": 0.47368421052631576,
+        "gratitude": 0.36842105263157887,
+        "curiosity": 0.15789473684210525
+      }
+    },
+    {
+      "reunion_type": "first_reunion",
+      "emotion_history": "negative",
+      "time_since_last_contact": "less_than_a_year",
+      "emotions": {
+        "resentment": 0.6000000000000001,
+        "surprise": 0.30000000000000004,
+        "anxiety": 0.10000000000000002
+      }
+    },
+    {
+      "reunion_type": "first_reunion",
+      "emotion_history": "negative",
+      "time_since_last_contact": "more_than_a_year",
+      "emotions": {
+        "resentment": 0.55,
+        "anger": 0.3,
+        "sadness": 0.15
+      }
+    },
+    {
+      "reunion_type": "repeated_reunion",
+      "emotion_history": "positive",
+      "time_since_last_contact": "less_than_a_year",
+      "emotions": {
+        "joy": 0.6842105263157895,
+        "familiarity": 0.2631578947368421,
+        "anxiety": 0.05263157894736842
+      }
+    },
+    {
+      "reunion_type": "repeated_reunion",
+      "emotion_history": "positive",
+      "time_since_last_contact": "more_than_a_year",
+      "emotions": {
+        "joy": 0.6000000000000001,
+        "gratitude": 0.30000000000000004,
+        "familiarity": 0.10000000000000002
+      }
+    }
+  ]
+}

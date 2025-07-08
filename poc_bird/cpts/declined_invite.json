@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "relationship_with_host",
-      "values": [
-        "close",
-        "distant"
-      ]
-    },
-    {
-      "name": "selfesteem",
-      "values": [
-        "high",
-        "low"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "expectation_level": [
+      "low",
+      "high"
+    ],
+    "communication_received": [
+      "yes",
+      "no"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "relationship_with_host": "close",
-      "selfesteem": "high",
+      "expectation_level": "low",
+      "communication_received": "yes",
       "emotions": {
-        "hurt": 0.7,
-        "anger": 0.2,
-        "disappointment": 0.1
+        "disappointment": 0.6,
+        "indifference": 0.3,
+        "acceptance": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "relationship_with_host": "close",
-      "selfesteem": "low",
+      "expectation_level": "low",
+      "communication_received": "no",
       "emotions": {
-        "hurt": 0.6,
-        "anger": 0.3,
-        "disappointment": 0.1
+        "disappointment": 0.8,
+        "frustration": 0.15,
+        "hurt": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "relationship_with_host": "distant",
-      "selfesteem": "high",
+      "expectation_level": "high",
+      "communication_received": "yes",
       "emotions": {
-        "hurt": 0.5,
-        "anger": 0.3,
-        "disappointment": 0.2
+        "disappointment": 0.75,
+        "jealousy": 0.2,
+        "hurt": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "relationship_with_host": "distant",
-      "selfesteem": "low",
+      "expectation_level": "high",
+      "communication_received": "no",
       "emotions": {
-        "hurt": 0.4,
-        "anger": 0.4,
-        "disappointment": 0.2
+        "disappointment": 0.9,
+        "frustration": 0.05,
+        "jealousy": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "relationship_with_host": "close",
-      "selfesteem": "high",
+      "expectation_level": "low",
+      "communication_received": "yes",
       "emotions": {
-        "anger": 0.6,
-        "hurt": 0.3,
-        "disappointment": 0.1
+        "disappointment": 0.4,
+        "indifference": 0.4,
+        "acceptance": 0.2
       }
     },
     {
       "offence_history": "repeated",
-      "relationship_with_host": "close",
-      "selfesteem": "low",
+      "expectation_level": "low",
+      "communication_received": "no",
       "emotions": {
-        "anger": 0.7,
-        "hurt": 0.2,
-        "disappointment": 0.1
+        "disappointment": 0.6,
+        "frustration": 0.3,
+        "hurt": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "relationship_with_host": "distant",
-      "selfesteem": "high",
+      "expectation_level": "high",
+      "communication_received": "yes",
       "emotions": {
-        "anger": 0.8,
-        "hurt": 0.1,
-        "disappointment": 0.1
+        "disappointment": 0.8,
+        "jealousy": 0.15,
+        "hurt": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "relationship_with_host": "distant",
-      "selfesteem": "low",
+      "expectation_level": "high",
+      "communication_received": "no",
       "emotions": {
-        "anger": 0.9,
-        "hurt": 0.08,
-        "disappointment": 0.02
+        "disappointment": 0.95,
+        "frustration": 0.04,
+        "jealousy": 0.01
       }
     }
   ]

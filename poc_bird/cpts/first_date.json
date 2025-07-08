@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "date_location",
-      "values": [
-        "public",
-        "private"
-      ]
-    },
-    {
-      "name": "date_type",
-      "values": [
-        "casual",
-        "formal"
-      ]
-    }
-  ],
+  "factors": {
+    "date_type": [
+      "First time",
+      "Repeated"
+    ],
+    "preparation": [
+      "Well prepared",
+      "Not well prepared"
+    ],
+    "chemistry": [
+      "Good chemistry",
+      "No chemistry"
+    ]
+  },
   "cpt": [
     {
-      "offence_history": "first_time",
-      "date_location": "public",
-      "date_type": "casual",
+      "date_type": "First time",
+      "preparation": "Well prepared",
+      "chemistry": "Good chemistry",
       "emotions": {
-        "excitement": 0.7,
-        "nervousness": 0.2,
-        "boredom": 0.1
+        "Excited": 0.6,
+        "Nervous": 0.35,
+        "Confident": 0.05
       }
     },
     {
-      "offence_history": "first_time",
-      "date_location": "public",
-      "date_type": "formal",
+      "date_type": "First time",
+      "preparation": "Well prepared",
+      "chemistry": "No chemistry",
       "emotions": {
-        "nervousness": 0.6,
-        "excitement": 0.3,
-        "apprehension": 0.1
+        "Disappointed": 0.4,
+        "Anxious": 0.35,
+        "Relieved": 0.25
       }
     },
     {
-      "offence_history": "first_time",
-      "date_location": "private",
-      "date_type": "casual",
+      "date_type": "First time",
+      "preparation": "Not well prepared",
+      "chemistry": "Good chemistry",
       "emotions": {
-        "excitement": 0.8,
-        "nervousness": 0.1,
-        "intimacy": 0.1
+        "Stressed": 0.5,
+        "Embarrassed": 0.35,
+        "Hopeful": 0.15
       }
     },
     {
-      "offence_history": "first_time",
-      "date_location": "private",
-      "date_type": "formal",
+      "date_type": "First time",
+      "preparation": "Not well prepared",
+      "chemistry": "No chemistry",
       "emotions": {
-        "apprehension": 0.4,
-        "nervousness": 0.3,
-        "excitement": 0.3
+        "Frustrated": 0.5,
+        "Disappointed": 0.35,
+        "Relieved": 0.15
       }
     },
     {
-      "offence_history": "repeated",
-      "date_location": "public",
-      "date_type": "casual",
+      "date_type": "Repeated",
+      "preparation": "Well prepared",
+      "chemistry": "Good chemistry",
       "emotions": {
-        "nervousness": 0.5,
-        "boredom": 0.3,
-        "discomfort": 0.2
+        "Content": 0.45,
+        "Happy": 0.35,
+        "Excited": 0.15
       }
     },
     {
-      "offence_history": "repeated",
-      "date_location": "public",
-      "date_type": "formal",
+      "date_type": "Repeated",
+      "preparation": "Well prepared",
+      "chemistry": "No chemistry",
       "emotions": {
-        "discomfort": 0.6,
-        "nervousness": 0.3,
-        "irritation": 0.1
+        "Disappointed": 0.5,
+        "Frustrated": 0.35,
+        "Relieved": 0.15
       }
     },
     {
-      "offence_history": "repeated",
-      "date_location": "private",
-      "date_type": "casual",
+      "date_type": "Repeated",
+      "preparation": "Not well prepared",
+      "chemistry": "Good chemistry",
       "emotions": {
-        "discomfort": 0.7,
-        "boredom": 0.2,
-        "relief": 0.1
+        "Anxious": 0.5,
+        "Stressed": 0.35,
+        "Embarrassed": 0.15
       }
     },
     {
-      "offence_history": "repeated",
-      "date_location": "private",
-      "date_type": "formal",
+      "date_type": "Repeated",
+      "preparation": "Not well prepared",
+      "chemistry": "No chemistry",
       "emotions": {
-        "irritation": 0.5,
-        "discomfort": 0.3,
-        "relief": 0.2
+        "Disappointed": 0.6,
+        "Frustrated": 0.35,
+        "Angry": 0.05
       }
     }
   ]

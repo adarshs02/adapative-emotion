@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "time_since_last_contact": [
+      "less_than_a_year",
+      "more_than_a_year"
+    ],
+    "reason_for_no_contact": [
+      "unknown",
+      "sibling_dispute"
+    ],
+    "offence_history": [
+      "no_offence",
+      "previous_offence"
+    ]
+  },
+  "cpt": [
+    {
+      "time_since_last_contact": "less_than_a_year",
+      "reason_for_no_contact": "unknown",
+      "offence_history": "no_offence",
+      "emotions": {
+        "sadness": 0.4,
+        "anxiety": 0.35,
+        "neutral": 0.25
+      }
+    },
+    {
+      "time_since_last_contact": "less_than_a_year",
+      "reason_for_no_contact": "unknown",
+      "offence_history": "previous_offence",
+      "emotions": {
+        "anger": 0.5,
+        "sadness": 0.35,
+        "anxiety": 0.15
+      }
+    },
+    {
+      "time_since_last_contact": "less_than_a_year",
+      "reason_for_no_contact": "sibling_dispute",
+      "offence_history": "no_offence",
+      "emotions": {
+        "anger": 0.55,
+        "sadness": 0.3,
+        "anxiety": 0.15
+      }
+    },
+    {
+      "time_since_last_contact": "less_than_a_year",
+      "reason_for_no_contact": "sibling_dispute",
+      "offence_history": "previous_offence",
+      "emotions": {
+        "anger": 0.7,
+        "sadness": 0.25,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "time_since_last_contact": "more_than_a_year",
+      "reason_for_no_contact": "unknown",
+      "offence_history": "no_offence",
+      "emotions": {
+        "sadness": 0.47368421052631576,
+        "anxiety": 0.36842105263157887,
+        "neutral": 0.15789473684210525
+      }
+    },
+    {
+      "time_since_last_contact": "more_than_a_year",
+      "reason_for_no_contact": "unknown",
+      "offence_history": "previous_offence",
+      "emotions": {
+        "anger": 0.55,
+        "sadness": 0.3,
+        "anxiety": 0.15
+      }
+    },
+    {
+      "time_since_last_contact": "more_than_a_year",
+      "reason_for_no_contact": "sibling_dispute",
+      "offence_history": "no_offence",
+      "emotions": {
+        "anger": 0.6,
+        "sadness": 0.25,
+        "anxiety": 0.15
+      }
+    },
+    {
+      "time_since_last_contact": "more_than_a_year",
+      "reason_for_no_contact": "sibling_dispute",
+      "offence_history": "previous_offence",
+      "emotions": {
+        "anger": 0.75,
+        "sadness": 0.2,
+        "anxiety": 0.05
+      }
+    }
+  ]
+}

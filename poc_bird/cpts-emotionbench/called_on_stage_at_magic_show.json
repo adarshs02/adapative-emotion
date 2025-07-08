@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "audience_experience": [
+      "inexperienced",
+      "experienced"
+    ],
+    "comfort_level": [
+      "comfortable",
+      "uncomfortable"
+    ],
+    "magic_expectation": [
+      "excited",
+      "skeptical"
+    ]
+  },
+  "cpt": [
+    {
+      "audience_experience": "inexperienced",
+      "comfort_level": "comfortable",
+      "magic_expectation": "excited",
+      "emotions": {
+        "joy": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "awe": 0.10000000000000002
+      }
+    },
+    {
+      "audience_experience": "inexperienced",
+      "comfort_level": "comfortable",
+      "magic_expectation": "skeptical",
+      "emotions": {
+        "curiosity": 0.4,
+        "anxiety": 0.35,
+        "doubt": 0.25
+      }
+    },
+    {
+      "audience_experience": "inexperienced",
+      "comfort_level": "uncomfortable",
+      "magic_expectation": "excited",
+      "emotions": {
+        "nervousness": 0.55,
+        "joy": 0.35,
+        "awe": 0.1
+      }
+    },
+    {
+      "audience_experience": "inexperienced",
+      "comfort_level": "uncomfortable",
+      "magic_expectation": "skeptical",
+      "emotions": {
+        "nervousness": 0.6000000000000001,
+        "doubt": 0.30000000000000004,
+        "discomfort": 0.10000000000000002
+      }
+    },
+    {
+      "audience_experience": "experienced",
+      "comfort_level": "comfortable",
+      "magic_expectation": "excited",
+      "emotions": {
+        "excitement": 0.65,
+        "joy": 0.25,
+        "awe": 0.1
+      }
+    },
+    {
+      "audience_experience": "experienced",
+      "comfort_level": "comfortable",
+      "magic_expectation": "skeptical",
+      "emotions": {
+        "curiosity": 0.45,
+        "skepticism": 0.4,
+        "amusement": 0.15
+      }
+    },
+    {
+      "audience_experience": "experienced",
+      "comfort_level": "uncomfortable",
+      "magic_expectation": "excited",
+      "emotions": {
+        "nervousness": 0.5,
+        "excitement": 0.35,
+        "awe": 0.15
+      }
+    },
+    {
+      "audience_experience": "experienced",
+      "comfort_level": "uncomfortable",
+      "magic_expectation": "skeptical",
+      "emotions": {
+        "nervousness": 0.6000000000000001,
+        "skepticism": 0.30000000000000004,
+        "discomfort": 0.10000000000000002
+      }
+    }
+  ]
+}

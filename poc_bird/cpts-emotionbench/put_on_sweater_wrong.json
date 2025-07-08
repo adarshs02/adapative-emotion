@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "sweater_fit": [
+      "correct",
+      "incorrect"
+    ],
+    "morning_routine": [
+      "rushed",
+      "relaxed"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "sweater_fit": "correct",
+      "morning_routine": "rushed",
+      "emotions": {
+        "frustration": 0.6,
+        "annoyance": 0.35,
+        "amusement": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "sweater_fit": "correct",
+      "morning_routine": "relaxed",
+      "emotions": {
+        "contentment": 0.75,
+        "relief": 0.2,
+        "amusement": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "sweater_fit": "incorrect",
+      "morning_routine": "rushed",
+      "emotions": {
+        "frustration": 0.8,
+        "annoyance": 0.15,
+        "surprise": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "sweater_fit": "incorrect",
+      "morning_routine": "relaxed",
+      "emotions": {
+        "frustration": 0.65,
+        "annoyance": 0.25,
+        "surprise": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "sweater_fit": "correct",
+      "morning_routine": "rushed",
+      "emotions": {
+        "frustration": 0.75,
+        "annoyance": 0.2,
+        "amusement": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "sweater_fit": "correct",
+      "morning_routine": "relaxed",
+      "emotions": {
+        "contentment": 0.5,
+        "relief": 0.35,
+        "amusement": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "sweater_fit": "incorrect",
+      "morning_routine": "rushed",
+      "emotions": {
+        "frustration": 0.9,
+        "annoyance": 0.05,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "sweater_fit": "incorrect",
+      "morning_routine": "relaxed",
+      "emotions": {
+        "frustration": 0.7000000000000001,
+        "annoyance": 0.20000000000000004,
+        "anger": 0.10000000000000002
+      }
+    }
+  ]
+}

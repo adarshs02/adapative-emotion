@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "financial_impact",
-      "values": [
-        "low",
-        "high"
-      ]
-    },
-    {
-      "name": "personal_relationship",
-      "values": [
-        "close",
-        "distant"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "preparation": [
+      "unprepared",
+      "prepared"
+    ],
+    "impact": [
+      "minimal",
+      "significant"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "financial_impact": "low",
-      "personal_relationship": "close",
+      "preparation": "unprepared",
+      "impact": "minimal",
       "emotions": {
-        "anxiety": 0.7,
-        "anger": 0.2,
-        "helplessness": 0.1
+        "shock": 0.6,
+        "frustration": 0.3,
+        "anxiety": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "financial_impact": "low",
-      "personal_relationship": "distant",
+      "preparation": "prepared",
+      "impact": "minimal",
       "emotions": {
-        "anxiety": 0.6,
-        "anger": 0.3,
-        "helplessness": 0.1
+        "relief": 0.4,
+        "surprise": 0.35,
+        "dismay": 0.25
       }
     },
     {
       "offence_history": "first_time",
-      "financial_impact": "high",
-      "personal_relationship": "close",
+      "preparation": "unprepared",
+      "impact": "significant",
       "emotions": {
-        "anxiety": 0.5,
-        "anger": 0.4,
-        "helplessness": 0.1
+        "shock": 0.7,
+        "anger": 0.25,
+        "anxiety": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "financial_impact": "high",
-      "personal_relationship": "distant",
+      "preparation": "prepared",
+      "impact": "significant",
       "emotions": {
-        "anxiety": 0.4,
-        "anger": 0.5,
-        "helplessness": 0.1
+        "relief": 0.3,
+        "fear": 0.5,
+        "determination": 0.2
       }
     },
     {
       "offence_history": "repeated",
-      "financial_impact": "low",
-      "personal_relationship": "close",
+      "preparation": "unprepared",
+      "impact": "minimal",
       "emotions": {
-        "anger": 0.6,
-        "helplessness": 0.3,
-        "frustration": 0.1
+        "frustration": 0.55,
+        "anger": 0.35,
+        "disbelief": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "financial_impact": "low",
-      "personal_relationship": "distant",
+      "preparation": "prepared",
+      "impact": "minimal",
+      "emotions": {
+        "relief": 0.25,
+        "surprise": 0.4,
+        "dismay": 0.35
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation": "unprepared",
+      "impact": "significant",
       "emotions": {
         "anger": 0.7,
-        "helplessness": 0.2,
-        "frustration": 0.1
+        "fear": 0.2,
+        "disappointment": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "financial_impact": "high",
-      "personal_relationship": "close",
+      "preparation": "prepared",
+      "impact": "significant",
       "emotions": {
-        "anger": 0.8,
-        "helplessness": 0.1,
-        "frustration": 0.1
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "financial_impact": "high",
-      "personal_relationship": "distant",
-      "emotions": {
-        "anger": 0.9,
-        "helplessness": 0.08,
-        "frustration": 0.02
+        "anger": 0.6,
+        "determination": 0.3,
+        "resignation": 0.1
       }
     }
   ]

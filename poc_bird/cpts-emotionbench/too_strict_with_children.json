@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "child_age": [
+      "young",
+      "old"
+    ],
+    "reasonable_expectations": [
+      "met",
+      "not_met"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "child_age": "young",
+      "reasonable_expectations": "met",
+      "emotions": {
+        "happy": 0.7000000000000001,
+        "guilty": 0.20000000000000004,
+        "stressed": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "child_age": "young",
+      "reasonable_expectations": "not_met",
+      "emotions": {
+        "angry": 0.4,
+        "guilty": 0.3,
+        "sad": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "child_age": "old",
+      "reasonable_expectations": "met",
+      "emotions": {
+        "proud": 0.6000000000000001,
+        "relieved": 0.30000000000000004,
+        "happy": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "child_age": "old",
+      "reasonable_expectations": "not_met",
+      "emotions": {
+        "angry": 0.5,
+        "guilty": 0.3,
+        "frustrated": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "child_age": "young",
+      "reasonable_expectations": "met",
+      "emotions": {
+        "guilty": 0.6000000000000001,
+        "stressed": 0.30000000000000004,
+        "sad": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "child_age": "young",
+      "reasonable_expectations": "not_met",
+      "emotions": {
+        "angry": 0.7000000000000001,
+        "guilty": 0.20000000000000004,
+        "frustrated": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "child_age": "old",
+      "reasonable_expectations": "met",
+      "emotions": {
+        "guilty": 0.5,
+        "stressed": 0.3,
+        "sad": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "child_age": "old",
+      "reasonable_expectations": "not_met",
+      "emotions": {
+        "angry": 0.8,
+        "guilty": 0.15,
+        "frustrated": 0.05
+      }
+    }
+  ]
+}

@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "financial_stability",
-      "values": [
-        "stable",
-        "unstable"
-      ]
-    },
-    {
-      "name": "financial_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "support_system",
-      "values": [
-        "available",
-        "unavailable"
-      ]
-    }
-  ],
+  "factors": {
+    "has_savings": [
+      "yes",
+      "no"
+    ],
+    "debt_level": [
+      "low",
+      "high"
+    ],
+    "support_system": [
+      "strong",
+      "weak"
+    ]
+  },
   "cpt": [
     {
-      "financial_stability": "stable",
-      "financial_history": "first_time",
-      "support_system": "available",
+      "has_savings": "yes",
+      "debt_level": "low",
+      "support_system": "strong",
       "emotions": {
-        "frustration": 0.7,
-        "anxiety": 0.2,
-        "desperation": 0.1
+        "relief": 0.6,
+        "worry": 0.3,
+        "anger": 0.1
       }
     },
     {
-      "financial_stability": "stable",
-      "financial_history": "first_time",
-      "support_system": "unavailable",
+      "has_savings": "yes",
+      "debt_level": "low",
+      "support_system": "weak",
       "emotions": {
-        "frustration": 0.6,
-        "anxiety": 0.3,
-        "desperation": 0.1
+        "worry": 0.7,
+        "anger": 0.2,
+        "sadness": 0.1
       }
     },
     {
-      "financial_stability": "stable",
-      "financial_history": "repeated",
-      "support_system": "available",
+      "has_savings": "no",
+      "debt_level": "low",
+      "support_system": "strong",
       "emotions": {
-        "frustration": 0.4,
-        "anxiety": 0.5,
-        "desperation": 0.1
+        "worry": 0.8,
+        "anger": 0.15,
+        "sadness": 0.05
       }
     },
     {
-      "financial_stability": "stable",
-      "financial_history": "repeated",
-      "support_system": "unavailable",
+      "has_savings": "no",
+      "debt_level": "low",
+      "support_system": "weak",
       "emotions": {
-        "frustration": 0.7,
-        "anxiety": 0.2,
-        "desperation": 0.1
+        "worry": 0.9,
+        "anger": 0.05,
+        "sadness": 0.05
       }
     },
     {
-      "financial_stability": "unstable",
-      "financial_history": "first_time",
-      "support_system": "available",
+      "has_savings": "yes",
+      "debt_level": "high",
+      "support_system": "strong",
       "emotions": {
-        "anxiety": 0.8,
-        "frustration": 0.2,
-        "desperation": 0.0
+        "worry": 0.75,
+        "anger": 0.2,
+        "fear": 0.05
       }
     },
     {
-      "financial_stability": "unstable",
-      "financial_history": "first_time",
-      "support_system": "unavailable",
+      "has_savings": "yes",
+      "debt_level": "high",
+      "support_system": "weak",
       "emotions": {
-        "anxiety": 0.9,
-        "frustration": 0.1,
-        "desperation": 0.0
+        "worry": 0.9,
+        "anger": 0.05,
+        "fear": 0.05
       }
     },
     {
-      "financial_stability": "unstable",
-      "financial_history": "repeated",
-      "support_system": "available",
+      "has_savings": "no",
+      "debt_level": "high",
+      "support_system": "strong",
       "emotions": {
-        "desperation": 0.8,
-        "anxiety": 0.2,
-        "frustration": 0.0
+        "worry": 0.95,
+        "anger": 0.03,
+        "fear": 0.02
       }
     },
     {
-      "financial_stability": "unstable",
-      "financial_history": "repeated",
-      "support_system": "unavailable",
+      "has_savings": "no",
+      "debt_level": "high",
+      "support_system": "weak",
       "emotions": {
-        "desperation": 0.9,
-        "anxiety": 0.1,
-        "frustration": 0.0
+        "worry": 0.98,
+        "anger": 0.01,
+        "fear": 0.01
       }
     }
   ]

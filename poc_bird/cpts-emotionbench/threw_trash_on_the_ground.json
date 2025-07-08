@@ -1,0 +1,104 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "awareness": [
+      "unaware",
+      "aware"
+    ],
+    "perception_of_others": [
+      "positive",
+      "negative"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "awareness": "unaware",
+      "perception_of_others": "positive",
+      "emotions": {
+        "regret": 0.5,
+        "embarrassment": 0.3,
+        "indifference": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "awareness": "unaware",
+      "perception_of_others": "negative",
+      "emotions": {
+        "regret": 0.675,
+        "embarrassment": 0.25,
+        "anger": 0.025,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "awareness": "aware",
+      "perception_of_others": "positive",
+      "emotions": {
+        "regret": 0.725,
+        "embarrassment": 0.2,
+        "indifference": 0.07500000000000001
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "awareness": "aware",
+      "perception_of_others": "negative",
+      "emotions": {
+        "regret": 0.825,
+        "embarrassment": 0.125,
+        "anger": 0.025,
+        "indifference": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "awareness": "unaware",
+      "perception_of_others": "positive",
+      "emotions": {
+        "regret": 0.4000000000000001,
+        "embarrassment": 0.17500000000000002,
+        "anger": 0.32500000000000007,
+        "indifference": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "awareness": "unaware",
+      "perception_of_others": "negative",
+      "emotions": {
+        "regret": 0.42500000000000004,
+        "embarrassment": 0.125,
+        "anger": 0.39999999999999997,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "awareness": "aware",
+      "perception_of_others": "positive",
+      "emotions": {
+        "regret": 0.5,
+        "embarrassment": 0.1,
+        "anger": 0.35,
+        "indifference": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "awareness": "aware",
+      "perception_of_others": "negative",
+      "emotions": {
+        "regret": 0.45,
+        "embarrassment": 0.05,
+        "anger": 0.475,
+        "indifference": 0.025
+      }
+    }
+  ]
+}

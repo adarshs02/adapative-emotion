@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "trust_level": [
+      "high",
+      "low"
+    ],
+    "friendship_length": [
+      "long",
+      "short"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "trust_level": "high",
+      "friendship_length": "long",
+      "emotions": {
+        "curiosity": 0.6,
+        "suspicion": 0.35,
+        "jealousy": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "high",
+      "friendship_length": "short",
+      "emotions": {
+        "surprise": 0.4,
+        "curiosity": 0.35,
+        "anxiety": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "low",
+      "friendship_length": "long",
+      "emotions": {
+        "suspicion": 0.7,
+        "anger": 0.25,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "low",
+      "friendship_length": "short",
+      "emotions": {
+        "suspicion": 0.6000000000000001,
+        "anger": 0.30000000000000004,
+        "anxiety": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "high",
+      "friendship_length": "long",
+      "emotions": {
+        "suspicion": 0.8,
+        "anger": 0.15,
+        "betrayal": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "high",
+      "friendship_length": "short",
+      "emotions": {
+        "suspicion": 0.7,
+        "anger": 0.25,
+        "betrayal": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "low",
+      "friendship_length": "long",
+      "emotions": {
+        "anger": 0.8,
+        "betrayal": 0.15,
+        "despair": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "low",
+      "friendship_length": "short",
+      "emotions": {
+        "anger": 0.7,
+        "betrayal": 0.25,
+        "despair": 0.05
+      }
+    }
+  ]
+}

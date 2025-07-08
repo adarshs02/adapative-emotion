@@ -1,0 +1,105 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "trust_level": [
+      "high",
+      "low"
+    ],
+    "communication_about_boundaries": [
+      "open",
+      "closed"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "trust_level": "high",
+      "communication_about_boundaries": "open",
+      "emotions": {
+        "surprised": 0.25,
+        "hurt": 0.35,
+        "confused": 0.4
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "high",
+      "communication_about_boundaries": "closed",
+      "emotions": {
+        "angry": 0.35,
+        "hurt": 0.5,
+        "confused": 0.1,
+        "betrayed": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "low",
+      "communication_about_boundaries": "open",
+      "emotions": {
+        "angry": 0.45,
+        "hurt": 0.45,
+        "suspicious": 0.05,
+        "disappointed": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "low",
+      "communication_about_boundaries": "closed",
+      "emotions": {
+        "angry": 0.6,
+        "hurt": 0.3,
+        "suspicious": 0.05,
+        "disappointed": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "high",
+      "communication_about_boundaries": "open",
+      "emotions": {
+        "angry": 0.575,
+        "hurt": 0.375,
+        "disappointed": 0.025,
+        "betrayed": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "high",
+      "communication_about_boundaries": "closed",
+      "emotions": {
+        "angry": 0.7,
+        "hurt": 0.25,
+        "disappointed": 0.025,
+        "betrayed": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "low",
+      "communication_about_boundaries": "open",
+      "emotions": {
+        "angry": 0.8,
+        "hurt": 0.15,
+        "suspicious": 0.025,
+        "disappointed": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "low",
+      "communication_about_boundaries": "closed",
+      "emotions": {
+        "angry": 0.9,
+        "hurt": 0.05,
+        "suspicious": 0.025,
+        "disappointed": 0.025
+      }
+    }
+  ]
+}

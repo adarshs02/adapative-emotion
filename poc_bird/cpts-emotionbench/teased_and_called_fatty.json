@@ -1,0 +1,112 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "teasing_intensity": [
+      "mild",
+      "severe"
+    ],
+    "support_from_others": [
+      "none",
+      "present"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "teasing_intensity": "mild",
+      "support_from_others": "none",
+      "emotions": {
+        "anger": 0.6,
+        "sadness": 0.15,
+        "embarrassment": 0.05,
+        "hurt": 0.175,
+        "frustration": 0.025
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "teasing_intensity": "mild",
+      "support_from_others": "present",
+      "emotions": {
+        "surprise": 0.2,
+        "amusement": 0.4,
+        "embarrassment": 0.2,
+        "disappointment": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "teasing_intensity": "severe",
+      "support_from_others": "none",
+      "emotions": {
+        "anger": 0.775,
+        "sadness": 0.1,
+        "humiliation": 0.025,
+        "hurt": 0.075,
+        "frustration": 0.025
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "teasing_intensity": "severe",
+      "support_from_others": "present",
+      "emotions": {
+        "anger": 0.55,
+        "sadness": 0.175,
+        "amusement": 0.075,
+        "hurt": 0.15,
+        "frustration": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "teasing_intensity": "mild",
+      "support_from_others": "none",
+      "emotions": {
+        "anger": 0.825,
+        "sadness": 0.075,
+        "frustration": 0.05,
+        "hurt": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "teasing_intensity": "mild",
+      "support_from_others": "present",
+      "emotions": {
+        "anger": 0.55,
+        "sadness": 0.15,
+        "resignation": 0.05,
+        "hurt": 0.175,
+        "frustration": 0.075
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "teasing_intensity": "severe",
+      "support_from_others": "none",
+      "emotions": {
+        "anger": 0.925,
+        "sadness": 0.025,
+        "humiliation": 0.025,
+        "hurt": 0.02,
+        "frustration": 0.005
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "teasing_intensity": "severe",
+      "support_from_others": "present",
+      "emotions": {
+        "anger": 0.775,
+        "sadness": 0.1,
+        "determination": 0.025,
+        "hurt": 0.075,
+        "frustration": 0.025
+      }
+    }
+  ]
+}

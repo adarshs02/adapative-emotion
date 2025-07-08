@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "social_group_size",
-      "values": [
-        "small",
-        "large"
-      ]
-    },
-    {
-      "name": "personal_stakes",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "social_confidence": [
+      "high",
+      "low"
+    ],
+    "clarity_of_rules": [
+      "clear",
+      "unclear"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "social_group_size": "small",
-      "personal_stakes": "low",
+      "social_confidence": "high",
+      "clarity_of_rules": "clear",
       "emotions": {
-        "anxiety": 0.7,
-        "excitement": 0.2,
-        "apathy": 0.1
+        "confident": 0.7,
+        "curious": 0.25,
+        "anxious": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "social_group_size": "small",
-      "personal_stakes": "high",
+      "social_confidence": "high",
+      "clarity_of_rules": "unclear",
       "emotions": {
-        "anxiety": 0.6,
-        "excitement": 0.3,
-        "apathy": 0.1
+        "confused": 0.55,
+        "nervous": 0.35,
+        "frustrated": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "social_group_size": "large",
-      "personal_stakes": "low",
+      "social_confidence": "low",
+      "clarity_of_rules": "clear",
       "emotions": {
-        "anxiety": 0.4,
-        "excitement": 0.3,
-        "apathy": 0.3
+        "anxious": 0.8,
+        "nervous": 0.15,
+        "confident": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "social_group_size": "large",
-      "personal_stakes": "high",
+      "social_confidence": "low",
+      "clarity_of_rules": "unclear",
       "emotions": {
-        "anxiety": 0.5,
-        "excitement": 0.2,
-        "apathy": 0.3
+        "anxious": 0.7,
+        "confused": 0.25,
+        "frustrated": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "social_group_size": "small",
-      "personal_stakes": "low",
+      "social_confidence": "high",
+      "clarity_of_rules": "clear",
       "emotions": {
-        "anger": 0.6,
-        "frustration": 0.3,
-        "apathy": 0.1
+        "confident": 0.4,
+        "arrogant": 0.35,
+        "anxious": 0.25
       }
     },
     {
       "offence_history": "repeated",
-      "social_group_size": "small",
-      "personal_stakes": "high",
+      "social_confidence": "high",
+      "clarity_of_rules": "unclear",
       "emotions": {
-        "anger": 0.8,
-        "frustration": 0.2,
-        "apathy": 0.0
+        "confused": 0.45,
+        "arrogant": 0.35,
+        "frustrated": 0.15
       }
     },
     {
       "offence_history": "repeated",
-      "social_group_size": "large",
-      "personal_stakes": "low",
+      "social_confidence": "low",
+      "clarity_of_rules": "clear",
       "emotions": {
-        "anger": 0.7,
-        "frustration": 0.2,
-        "apathy": 0.1
+        "anxious": 0.6,
+        "guilty": 0.3,
+        "frustrated": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "social_group_size": "large",
-      "personal_stakes": "high",
+      "social_confidence": "low",
+      "clarity_of_rules": "unclear",
       "emotions": {
-        "anger": 0.9,
-        "frustration": 0.1,
-        "apathy": 0.0
+        "anxious": 0.7,
+        "guilty": 0.2,
+        "frustrated": 0.1
       }
     }
   ]

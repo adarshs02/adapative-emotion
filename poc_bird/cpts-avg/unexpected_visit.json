@@ -1,0 +1,117 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "preparation": [
+      "well_prepared",
+      "unprepared"
+    ],
+    "reason_visit": [
+      "routine_inspection",
+      "complaint"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "preparation": "well_prepared",
+      "reason_visit": "routine_inspection",
+      "emotions": {
+        "relaxed": 0.3,
+        "anxious": 0.3,
+        "angry": 0.05,
+        "happy": 0.3,
+        "surprised": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "preparation": "unprepared",
+      "reason_visit": "routine_inspection",
+      "emotions": {
+        "anxious": 0.4666666666666666,
+        "surprised": 0.13333333333333333,
+        "angry": 0.06666666666666667,
+        "surprise": 0.2333333333333333,
+        "anxiety": 0.08333333333333333,
+        "embarrassment": 0.016666666666666666
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation": "well_prepared",
+      "reason_visit": "routine_inspection",
+      "emotions": {
+        "anxious": 0.45,
+        "angry": 0.45,
+        "relaxed": 0.05,
+        "relieved": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation": "unprepared",
+      "reason_visit": "routine_inspection",
+      "emotions": {
+        "anxious": 0.39999999999999997,
+        "angry": 0.19999999999999998,
+        "surprised": 0.03333333333333333,
+        "frustrated": 0.03333333333333333,
+        "anxiety": 0.2333333333333333,
+        "caution": 0.08333333333333333,
+        "embarrassment": 0.016666666666666666
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "preparation": "well_prepared",
+      "reason_visit": "complaint",
+      "emotions": {
+        "surprised": 0.45,
+        "anxious": 0.3,
+        "upset": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "preparation": "unprepared",
+      "reason_visit": "complaint",
+      "emotions": {
+        "surprised": 0.3728813559322034,
+        "anxious": 0.20338983050847453,
+        "upset": 0.06779661016949153,
+        "angry": 0.03389830508474576,
+        "frustration": 0.1864406779661017,
+        "surprise": 0.11864406779661014,
+        "embarrassment": 0.01694915254237288
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation": "well_prepared",
+      "reason_visit": "complaint",
+      "emotions": {
+        "upset": 0.25,
+        "anxious": 0.4,
+        "angry": 0.30000000000000004,
+        "defensive": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "preparation": "unprepared",
+      "reason_visit": "complaint",
+      "emotions": {
+        "upset": 0.19999999999999998,
+        "anxious": 0.3,
+        "angry": 0.13333333333333333,
+        "defensive": 0.03333333333333333,
+        "frustration": 0.25,
+        "anxiety": 0.06666666666666667,
+        "defensiveness": 0.016666666666666666
+      }
+    }
+  ]
+}

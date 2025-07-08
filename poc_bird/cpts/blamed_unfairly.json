@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "apology_from_accuser",
-      "values": [
-        "given",
-        "not_given"
-      ]
-    },
-    {
-      "name": "support_from_others",
-      "values": [
-        "present",
-        "absent"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "evidence_of_fault": [
+      "clear",
+      "unclear"
+    ],
+    "support_from_others": [
+      "yes",
+      "no"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "apology_from_accuser": "given",
-      "support_from_others": "present",
+      "evidence_of_fault": "clear",
+      "support_from_others": "yes",
       "emotions": {
-        "anger": 0.0,
-        "frustration": 0.8,
-        "sadness": 0.2
+        "disbelief": 0.3,
+        "frustration": 0.4,
+        "indignation": 0.3
       }
     },
     {
       "offence_history": "first_time",
-      "apology_from_accuser": "given",
-      "support_from_others": "absent",
+      "evidence_of_fault": "clear",
+      "support_from_others": "no",
       "emotions": {
-        "anger": 0.0,
-        "frustration": 0.7,
-        "sadness": 0.3
+        "shock": 0.4,
+        "disappointment": 0.45,
+        "anger": 0.15
       }
     },
     {
       "offence_history": "first_time",
-      "apology_from_accuser": "not_given",
-      "support_from_others": "present",
+      "evidence_of_fault": "unclear",
+      "support_from_others": "yes",
       "emotions": {
-        "anger": 0.4,
+        "confusion": 0.5,
+        "relief": 0.35,
+        "suspicion": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "evidence_of_fault": "unclear",
+      "support_from_others": "no",
+      "emotions": {
+        "anxiety": 0.4,
+        "doubt": 0.45,
+        "anger": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "evidence_of_fault": "clear",
+      "support_from_others": "yes",
+      "emotions": {
+        "disappointment": 0.3,
         "frustration": 0.5,
-        "sadness": 0.1
+        "indignation": 0.2
       }
     },
     {
-      "offence_history": "first_time",
-      "apology_from_accuser": "not_given",
-      "support_from_others": "absent",
+      "offence_history": "repeated",
+      "evidence_of_fault": "clear",
+      "support_from_others": "no",
       "emotions": {
         "anger": 0.6,
-        "frustration": 0.3,
-        "sadness": 0.1
+        "indignation": 0.3,
+        "disbelief": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "apology_from_accuser": "given",
-      "support_from_others": "present",
+      "evidence_of_fault": "unclear",
+      "support_from_others": "yes",
       "emotions": {
-        "anger": 0.8,
-        "frustration": 0.2,
-        "sadness": 0.0
+        "suspicion": 0.4,
+        "confusion": 0.45,
+        "relief": 0.15
       }
     },
     {
       "offence_history": "repeated",
-      "apology_from_accuser": "given",
-      "support_from_others": "absent",
+      "evidence_of_fault": "unclear",
+      "support_from_others": "no",
       "emotions": {
-        "anger": 0.9,
-        "frustration": 0.1,
-        "sadness": 0.0
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "apology_from_accuser": "not_given",
-      "support_from_others": "present",
-      "emotions": {
-        "anger": 0.9,
-        "frustration": 0.1,
-        "sadness": 0.0
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "apology_from_accuser": "not_given",
-      "support_from_others": "absent",
-      "emotions": {
-        "anger": 0.95,
-        "frustration": 0.05,
-        "sadness": 0.0
+        "doubt": 0.4,
+        "anxiety": 0.45,
+        "anger": 0.15
       }
     }
   ]

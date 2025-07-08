@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "gratitude_received": [
+      "sincere",
+      "insincere"
+    ],
+    "help_frequency": [
+      "first_time",
+      "repeated"
+    ],
+    "personal_connection": [
+      "strong",
+      "weak"
+    ]
+  },
+  "cpt": [
+    {
+      "gratitude_received": "sincere",
+      "help_frequency": "first_time",
+      "personal_connection": "strong",
+      "emotions": {
+        "gratitude": 0.8,
+        "happiness": 0.15,
+        "surprise": 0.05
+      }
+    },
+    {
+      "gratitude_received": "sincere",
+      "help_frequency": "first_time",
+      "personal_connection": "weak",
+      "emotions": {
+        "gratitude": 0.5,
+        "happiness": 0.3,
+        "suspicion": 0.2
+      }
+    },
+    {
+      "gratitude_received": "insincere",
+      "help_frequency": "first_time",
+      "personal_connection": "strong",
+      "emotions": {
+        "distrust": 0.7,
+        "disappointment": 0.25,
+        "suspicion": 0.05
+      }
+    },
+    {
+      "gratitude_received": "insincere",
+      "help_frequency": "first_time",
+      "personal_connection": "weak",
+      "emotions": {
+        "distrust": 0.6000000000000001,
+        "disappointment": 0.30000000000000004,
+        "suspicion": 0.10000000000000002
+      }
+    },
+    {
+      "gratitude_received": "sincere",
+      "help_frequency": "repeated",
+      "personal_connection": "strong",
+      "emotions": {
+        "gratitude": 0.6000000000000001,
+        "happiness": 0.30000000000000004,
+        "appreciation": 0.10000000000000002
+      }
+    },
+    {
+      "gratitude_received": "sincere",
+      "help_frequency": "repeated",
+      "personal_connection": "weak",
+      "emotions": {
+        "gratitude": 0.4,
+        "happiness": 0.3,
+        "resentment": 0.3
+      }
+    },
+    {
+      "gratitude_received": "insincere",
+      "help_frequency": "repeated",
+      "personal_connection": "strong",
+      "emotions": {
+        "distrust": 0.8,
+        "disappointment": 0.2,
+        "anger": 0.0
+      }
+    },
+    {
+      "gratitude_received": "insincere",
+      "help_frequency": "repeated",
+      "personal_connection": "weak",
+      "emotions": {
+        "distrust": 0.7,
+        "disappointment": 0.25,
+        "anger": 0.05
+      }
+    }
+  ]
+}

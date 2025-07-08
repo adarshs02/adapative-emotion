@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "meal_quality": [
+      "delicious",
+      "average"
+    ],
+    "service_quality": [
+      "excellent",
+      "poor"
+    ],
+    "dining_company": [
+      "alone",
+      "with_friends"
+    ]
+  },
+  "cpt": [
+    {
+      "meal_quality": "delicious",
+      "service_quality": "excellent",
+      "dining_company": "alone",
+      "emotions": {
+        "happy": 0.75,
+        "content": 0.2,
+        "relaxed": 0.05
+      }
+    },
+    {
+      "meal_quality": "delicious",
+      "service_quality": "excellent",
+      "dining_company": "with_friends",
+      "emotions": {
+        "happy": 0.8,
+        "content": 0.15,
+        "satisfied": 0.05
+      }
+    },
+    {
+      "meal_quality": "delicious",
+      "service_quality": "poor",
+      "dining_company": "alone",
+      "emotions": {
+        "frustrated": 0.6,
+        "disappointed": 0.35,
+        "angry": 0.05
+      }
+    },
+    {
+      "meal_quality": "delicious",
+      "service_quality": "poor",
+      "dining_company": "with_friends",
+      "emotions": {
+        "frustrated": 0.7,
+        "disappointed": 0.25,
+        "angry": 0.05
+      }
+    },
+    {
+      "meal_quality": "average",
+      "service_quality": "excellent",
+      "dining_company": "alone",
+      "emotions": {
+        "neutral": 0.6000000000000001,
+        "content": 0.30000000000000004,
+        "bored": 0.10000000000000002
+      }
+    },
+    {
+      "meal_quality": "average",
+      "service_quality": "excellent",
+      "dining_company": "with_friends",
+      "emotions": {
+        "neutral": 0.5,
+        "content": 0.35,
+        "bored": 0.15
+      }
+    },
+    {
+      "meal_quality": "average",
+      "service_quality": "poor",
+      "dining_company": "alone",
+      "emotions": {
+        "frustrated": 0.7,
+        "disappointed": 0.25,
+        "angry": 0.05
+      }
+    },
+    {
+      "meal_quality": "average",
+      "service_quality": "poor",
+      "dining_company": "with_friends",
+      "emotions": {
+        "frustrated": 0.8,
+        "disappointed": 0.15,
+        "angry": 0.05
+      }
+    }
+  ]
+}

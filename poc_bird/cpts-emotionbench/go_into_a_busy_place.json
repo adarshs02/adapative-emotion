@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "crowd_size": [
+      "small",
+      "large"
+    ],
+    "noise_level": [
+      "low",
+      "high"
+    ],
+    "personal_space_invasion": [
+      "minimal",
+      "significant"
+    ]
+  },
+  "cpt": [
+    {
+      "crowd_size": "small",
+      "noise_level": "low",
+      "personal_space_invasion": "minimal",
+      "emotions": {
+        "relaxed": 0.8,
+        "anxious": 0.15,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "crowd_size": "small",
+      "noise_level": "low",
+      "personal_space_invasion": "significant",
+      "emotions": {
+        "anxious": 0.7,
+        "frustrated": 0.25,
+        "angry": 0.05
+      }
+    },
+    {
+      "crowd_size": "small",
+      "noise_level": "high",
+      "personal_space_invasion": "minimal",
+      "emotions": {
+        "anxious": 0.6,
+        "frustrated": 0.35,
+        "stressed": 0.05
+      }
+    },
+    {
+      "crowd_size": "small",
+      "noise_level": "high",
+      "personal_space_invasion": "significant",
+      "emotions": {
+        "anxious": 0.8,
+        "frustrated": 0.15,
+        "angry": 0.05
+      }
+    },
+    {
+      "crowd_size": "large",
+      "noise_level": "low",
+      "personal_space_invasion": "minimal",
+      "emotions": {
+        "anxious": 0.85,
+        "frustrated": 0.1,
+        "overwhelmed": 0.05
+      }
+    },
+    {
+      "crowd_size": "large",
+      "noise_level": "low",
+      "personal_space_invasion": "significant",
+      "emotions": {
+        "anxious": 0.9,
+        "frustrated": 0.05,
+        "angry": 0.05
+      }
+    },
+    {
+      "crowd_size": "large",
+      "noise_level": "high",
+      "personal_space_invasion": "minimal",
+      "emotions": {
+        "anxious": 0.95,
+        "frustrated": 0.03,
+        "overwhelmed": 0.02
+      }
+    },
+    {
+      "crowd_size": "large",
+      "noise_level": "high",
+      "personal_space_invasion": "significant",
+      "emotions": {
+        "anxious": 0.98,
+        "frustrated": 0.01,
+        "angry": 0.01
+      }
+    }
+  ]
+}

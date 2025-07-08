@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "driver_awareness": [
+      "distracted",
+      "focused"
+    ],
+    "traffic_conditions": [
+      "light",
+      "heavy"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "driver_awareness": "distracted",
+      "traffic_conditions": "light",
+      "emotions": {
+        "frustration": 0.6000000000000001,
+        "surprise": 0.30000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driver_awareness": "distracted",
+      "traffic_conditions": "heavy",
+      "emotions": {
+        "frustration": 0.7000000000000001,
+        "surprise": 0.20000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driver_awareness": "focused",
+      "traffic_conditions": "light",
+      "emotions": {
+        "frustration": 0.3,
+        "surprise": 0.5,
+        "anger": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driver_awareness": "focused",
+      "traffic_conditions": "heavy",
+      "emotions": {
+        "frustration": 0.4,
+        "surprise": 0.45,
+        "anger": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driver_awareness": "distracted",
+      "traffic_conditions": "light",
+      "emotions": {
+        "frustration": 0.55,
+        "anger": 0.35,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driver_awareness": "distracted",
+      "traffic_conditions": "heavy",
+      "emotions": {
+        "frustration": 0.65,
+        "anger": 0.3,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driver_awareness": "focused",
+      "traffic_conditions": "light",
+      "emotions": {
+        "frustration": 0.45,
+        "anger": 0.45,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driver_awareness": "focused",
+      "traffic_conditions": "heavy",
+      "emotions": {
+        "frustration": 0.55,
+        "anger": 0.35,
+        "disappointment": 0.1
+      }
+    }
+  ]
+}

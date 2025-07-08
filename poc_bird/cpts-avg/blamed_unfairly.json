@@ -1,0 +1,110 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "evidence_present": [
+      "none",
+      "present"
+    ],
+    "support_received": [
+      "none",
+      "some"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "evidence_present": "none",
+      "support_received": "none",
+      "emotions": {
+        "shock": 0.2666666666666667,
+        "frustration": 0.21666666666666667,
+        "confusion": 0.15000000000000002,
+        "indignation": 0.2,
+        "surprise": 0.16666666666666669
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "evidence_present": "none",
+      "support_received": "some",
+      "emotions": {
+        "relief": 0.4473684210526316,
+        "gratitude": 0.36842105263157887,
+        "frustration": 0.13157894736842105,
+        "confusion": 0.05263157894736842
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "evidence_present": "present",
+      "support_received": "none",
+      "emotions": {
+        "shock": 0.2833333333333333,
+        "anger": 0.15,
+        "fear": 0.03333333333333333,
+        "indignation": 0.2333333333333333,
+        "frustration": 0.08333333333333333,
+        "confusion": 0.06666666666666667,
+        "surprise": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "evidence_present": "present",
+      "support_received": "some",
+      "emotions": {
+        "relief": 0.3,
+        "gratitude": 0.25,
+        "anger": 0.45
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "evidence_present": "none",
+      "support_received": "none",
+      "emotions": {
+        "shock": 0.2,
+        "anger": 0.6,
+        "frustration": 0.175,
+        "indignation": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "evidence_present": "none",
+      "support_received": "some",
+      "emotions": {
+        "relief": 0.1,
+        "gratitude": 0.125,
+        "anger": 0.575,
+        "frustration": 0.15,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "evidence_present": "present",
+      "support_received": "none",
+      "emotions": {
+        "shock": 0.225,
+        "anger": 0.65,
+        "fear": 0.025,
+        "frustration": 0.075,
+        "indignation": 0.025
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "evidence_present": "present",
+      "support_received": "some",
+      "emotions": {
+        "relief": 0.15,
+        "gratitude": 0.2,
+        "anger": 0.65
+      }
+    }
+  ]
+}

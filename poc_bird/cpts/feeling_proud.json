@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "self_improvement_progress",
-      "values": [
-        "little",
-        "significant"
-      ]
-    },
-    {
-      "name": "reflection_depth",
-      "values": [
-        "superficial",
-        "deep"
-      ]
-    },
-    {
-      "name": "emotional_state",
-      "values": [
-        "negative",
-        "positive"
-      ]
-    }
-  ],
+  "factors": {
+    "personal_growth": [
+      "significant",
+      "minimal"
+    ],
+    "self_reflection_depth": [
+      "deep",
+      "superficial"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
   "cpt": [
     {
-      "self_improvement_progress": "little",
-      "reflection_depth": "superficial",
-      "emotional_state": "negative",
+      "personal_growth": "significant",
+      "self_reflection_depth": "deep",
+      "offence_history": "first_time",
       "emotions": {
-        "disappointment": 0.8,
-        "boredom": 0.2,
-        "excitement": 0.0
+        "pride": 0.7,
+        "gratitude": 0.25,
+        "satisfaction": 0.05
       }
     },
     {
-      "self_improvement_progress": "little",
-      "reflection_depth": "superficial",
-      "emotional_state": "positive",
+      "personal_growth": "significant",
+      "self_reflection_depth": "deep",
+      "offence_history": "repeated",
       "emotions": {
-        "gratitude": 0.4,
-        "boredom": 0.3,
-        "excitement": 0.3
+        "pride": 0.5,
+        "regret": 0.3,
+        "dissatisfaction": 0.2
       }
     },
     {
-      "self_improvement_progress": "little",
-      "reflection_depth": "deep",
-      "emotional_state": "negative",
+      "personal_growth": "significant",
+      "self_reflection_depth": "superficial",
+      "offence_history": "first_time",
       "emotions": {
-        "disappointment": 0.6,
-        "boredom": 0.2,
-        "excitement": 0.2
+        "pride": 0.4,
+        "happiness": 0.4,
+        "relief": 0.2
       }
     },
     {
-      "self_improvement_progress": "little",
-      "reflection_depth": "deep",
-      "emotional_state": "positive",
+      "personal_growth": "significant",
+      "self_reflection_depth": "superficial",
+      "offence_history": "repeated",
       "emotions": {
-        "gratitude": 0.5,
-        "boredom": 0.3,
-        "excitement": 0.2
+        "pride": 0.3,
+        "regret": 0.4,
+        "disappointment": 0.3
       }
     },
     {
-      "self_improvement_progress": "significant",
-      "reflection_depth": "superficial",
-      "emotional_state": "negative",
+      "personal_growth": "minimal",
+      "self_reflection_depth": "deep",
+      "offence_history": "first_time",
       "emotions": {
-        "disappointment": 0.2,
-        "boredom": 0.6,
-        "excitement": 0.2
+        "surprise": 0.3,
+        "dissatisfaction": 0.4,
+        "frustration": 0.3
       }
     },
     {
-      "self_improvement_progress": "significant",
-      "reflection_depth": "superficial",
-      "emotional_state": "positive",
+      "personal_growth": "minimal",
+      "self_reflection_depth": "deep",
+      "offence_history": "repeated",
       "emotions": {
-        "gratitude": 0.7,
-        "boredom": 0.2,
-        "excitement": 0.1
+        "surprise": 0.2,
+        "regret": 0.5,
+        "disappointment": 0.3
       }
     },
     {
-      "self_improvement_progress": "significant",
-      "reflection_depth": "deep",
-      "emotional_state": "negative",
+      "personal_growth": "minimal",
+      "self_reflection_depth": "superficial",
+      "offence_history": "first_time",
       "emotions": {
-        "disappointment": 0.1,
-        "boredom": 0.4,
-        "excitement": 0.5
+        "surprise": 0.4,
+        "happiness": 0.4,
+        "relief": 0.2
       }
     },
     {
-      "self_improvement_progress": "significant",
-      "reflection_depth": "deep",
-      "emotional_state": "positive",
+      "personal_growth": "minimal",
+      "self_reflection_depth": "superficial",
+      "offence_history": "repeated",
       "emotions": {
-        "gratitude": 0.8,
-        "boredom": 0.1,
-        "excitement": 0.1
+        "surprise": 0.3,
+        "regret": 0.4,
+        "disappointment": 0.3
       }
     }
   ]

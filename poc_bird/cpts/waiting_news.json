@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "news_type",
-      "values": [
-        "good",
-        "bad"
-      ]
-    },
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "personal_stakes",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "news_type": [
+      "good",
+      "bad"
+    ],
+    "wait_time": [
+      "short",
+      "long"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
   "cpt": [
     {
       "news_type": "good",
+      "wait_time": "short",
       "offence_history": "first_time",
-      "personal_stakes": "low",
-      "emotions": {
-        "excitement": 0.7,
-        "relief": 0.2,
-        "boredom": 0.1
-      }
-    },
-    {
-      "news_type": "good",
-      "offence_history": "first_time",
-      "personal_stakes": "high",
-      "emotions": {
-        "excitement": 0.8,
-        "relief": 0.15,
-        "anxiety": 0.05
-      }
-    },
-    {
-      "news_type": "good",
-      "offence_history": "repeated",
-      "personal_stakes": "low",
       "emotions": {
         "relief": 0.6,
-        "excitement": 0.3,
-        "boredom": 0.1
+        "happiness": 0.35,
+        "surprise": 0.05
       }
     },
     {
       "news_type": "good",
+      "wait_time": "short",
       "offence_history": "repeated",
-      "personal_stakes": "high",
       "emotions": {
-        "relief": 0.7,
-        "excitement": 0.25,
-        "anxiety": 0.05
+        "gratitude": 0.4,
+        "relief": 0.35,
+        "happiness": 0.25
       }
     },
     {
-      "news_type": "bad",
+      "news_type": "good",
+      "wait_time": "long",
       "offence_history": "first_time",
-      "personal_stakes": "low",
       "emotions": {
-        "anxiety": 0.7,
-        "sadness": 0.25,
-        "anger": 0.05
+        "anticipation": 0.4,
+        "relief": 0.35,
+        "happiness": 0.25
       }
     },
     {
-      "news_type": "bad",
-      "offence_history": "first_time",
-      "personal_stakes": "high",
-      "emotions": {
-        "anxiety": 0.8,
-        "sadness": 0.15,
-        "anger": 0.05
-      }
-    },
-    {
-      "news_type": "bad",
+      "news_type": "good",
+      "wait_time": "long",
       "offence_history": "repeated",
-      "personal_stakes": "low",
+      "emotions": {
+        "gratitude": 0.5,
+        "relief": 0.35,
+        "happiness": 0.15
+      }
+    },
+    {
+      "news_type": "bad",
+      "wait_time": "short",
+      "offence_history": "first_time",
+      "emotions": {
+        "anxiety": 0.5,
+        "fear": 0.35,
+        "anger": 0.15
+      }
+    },
+    {
+      "news_type": "bad",
+      "wait_time": "short",
+      "offence_history": "repeated",
       "emotions": {
         "anger": 0.6,
-        "sadness": 0.3,
-        "boredom": 0.1
+        "fear": 0.35,
+        "disappointment": 0.05
       }
     },
     {
       "news_type": "bad",
+      "wait_time": "long",
+      "offence_history": "first_time",
+      "emotions": {
+        "anxiety": 0.4,
+        "fear": 0.35,
+        "anger": 0.25
+      }
+    },
+    {
+      "news_type": "bad",
+      "wait_time": "long",
       "offence_history": "repeated",
-      "personal_stakes": "high",
       "emotions": {
         "anger": 0.7,
-        "sadness": 0.25,
-        "anxiety": 0.05
+        "fear": 0.25,
+        "disappointment": 0.05
       }
     }
   ]

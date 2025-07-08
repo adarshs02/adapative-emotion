@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "first_time",
-      "values": [
-        "yes",
-        "no"
-      ]
-    },
-    {
-      "name": "job_type",
-      "values": [
-        "new",
-        "familiar"
-      ]
-    },
-    {
-      "name": "preparation",
-      "values": [
-        "good",
-        "poor"
-      ]
-    }
-  ],
+  "factors": {
+    "experience_level": [
+      "first_time",
+      "repeated"
+    ],
+    "preparation_level": [
+      "well_prepared",
+      "underprepared"
+    ],
+    "colleague_reception": [
+      "warm",
+      "cold"
+    ]
+  },
   "cpt": [
     {
-      "first_time": "yes",
-      "job_type": "new",
-      "preparation": "good",
+      "experience_level": "first_time",
+      "preparation_level": "well_prepared",
+      "colleague_reception": "warm",
       "emotions": {
-        "nervousness": 0.7,
-        "excitement": 0.25,
+        "nerves": 0.6,
+        "excitement": 0.35,
         "confidence": 0.05
       }
     },
     {
-      "first_time": "yes",
-      "job_type": "new",
-      "preparation": "poor",
+      "experience_level": "first_time",
+      "preparation_level": "well_prepared",
+      "colleague_reception": "cold",
       "emotions": {
-        "nervousness": 0.9,
-        "excitement": 0.05,
-        "anxiety": 0.05
+        "anxiety": 0.7,
+        "nervousness": 0.25,
+        "frustration": 0.05
       }
     },
     {
-      "first_time": "yes",
-      "job_type": "familiar",
-      "preparation": "good",
+      "experience_level": "first_time",
+      "preparation_level": "underprepared",
+      "colleague_reception": "warm",
       "emotions": {
-        "nervousness": 0.2,
-        "excitement": 0.6,
-        "confidence": 0.2
+        "nervousness": 0.75,
+        "anxiety": 0.2,
+        "dread": 0.05
       }
     },
     {
-      "first_time": "yes",
-      "job_type": "familiar",
-      "preparation": "poor",
+      "experience_level": "first_time",
+      "preparation_level": "underprepared",
+      "colleague_reception": "cold",
       "emotions": {
-        "nervousness": 0.5,
-        "excitement": 0.3,
-        "anxiety": 0.2
+        "fear": 0.8,
+        "anxiety": 0.15,
+        "dread": 0.05
       }
     },
     {
-      "first_time": "no",
-      "job_type": "new",
-      "preparation": "good",
+      "experience_level": "repeated",
+      "preparation_level": "well_prepared",
+      "colleague_reception": "warm",
       "emotions": {
-        "nervousness": 0.1,
-        "excitement": 0.8,
-        "confidence": 0.1
+        "confidence": 0.6,
+        "excitement": 0.35,
+        "relaxation": 0.05
       }
     },
     {
-      "first_time": "no",
-      "job_type": "new",
-      "preparation": "poor",
+      "experience_level": "repeated",
+      "preparation_level": "well_prepared",
+      "colleague_reception": "cold",
       "emotions": {
-        "nervousness": 0.8,
-        "excitement": 0.1,
-        "anxiety": 0.1
+        "confidence": 0.7,
+        "determination": 0.25,
+        "frustration": 0.05
       }
     },
     {
-      "first_time": "no",
-      "job_type": "familiar",
-      "preparation": "good",
+      "experience_level": "repeated",
+      "preparation_level": "underprepared",
+      "colleague_reception": "warm",
       "emotions": {
-        "nervousness": 0.05,
-        "excitement": 0.9,
-        "confidence": 0.05
+        "nervousness": 0.75,
+        "anxiety": 0.2,
+        "dread": 0.05
       }
     },
     {
-      "first_time": "no",
-      "job_type": "familiar",
-      "preparation": "poor",
+      "experience_level": "repeated",
+      "preparation_level": "underprepared",
+      "colleague_reception": "cold",
       "emotions": {
-        "nervousness": 0.3,
-        "excitement": 0.4,
-        "anxiety": 0.3
+        "fear": 0.8,
+        "anxiety": 0.15,
+        "dread": 0.05
       }
     }
   ]

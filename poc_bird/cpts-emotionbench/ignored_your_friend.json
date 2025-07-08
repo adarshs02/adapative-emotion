@@ -1,0 +1,104 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "awareness_of_impact": [
+      "unaware",
+      "aware"
+    ],
+    "time_passed": [
+      "short",
+      "long"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "awareness_of_impact": "unaware",
+      "time_passed": "short",
+      "emotions": {
+        "surprise": 0.325,
+        "frustration": 0.32500000000000007,
+        "concern": 0.12500000000000003,
+        "disappointment": 0.22500000000000003
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "awareness_of_impact": "unaware",
+      "time_passed": "long",
+      "emotions": {
+        "neglect": 0.45,
+        "hurt": 0.45,
+        "confusion": 0.05,
+        "resentment": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "awareness_of_impact": "aware",
+      "time_passed": "short",
+      "emotions": {
+        "relief": 0.2,
+        "gratitude": 0.45,
+        "distrust": 0.175,
+        "confusion": 0.175
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "awareness_of_impact": "aware",
+      "time_passed": "long",
+      "emotions": {
+        "neglect": 0.275,
+        "hurt": 0.5,
+        "forgiveness": 0.225
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "awareness_of_impact": "unaware",
+      "time_passed": "short",
+      "emotions": {
+        "anger": 0.5384615384615385,
+        "frustration": 0.23076923076923075,
+        "disappointment": 0.23076923076923078
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "awareness_of_impact": "unaware",
+      "time_passed": "long",
+      "emotions": {
+        "anger": 0.625,
+        "hurt": 0.3,
+        "disappointment": 0.025,
+        "resentment": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "awareness_of_impact": "aware",
+      "time_passed": "short",
+      "emotions": {
+        "anger": 0.7,
+        "disappointment": 0.225,
+        "betrayal": 0.025,
+        "frustration": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "awareness_of_impact": "aware",
+      "time_passed": "long",
+      "emotions": {
+        "anger": 0.8,
+        "hurt": 0.125,
+        "betrayal": 0.025,
+        "forgiveness": 0.05
+      }
+    }
+  ]
+}

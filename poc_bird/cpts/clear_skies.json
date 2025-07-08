@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "weather_clearness",
-      "values": [
-        "sunny",
-        "rainy"
-      ]
-    },
-    {
-      "name": "outdoor_plans_importance",
-      "values": [
-        "low",
-        "high"
-      ]
-    },
-    {
-      "name": "personal_happiness",
-      "values": [
-        "low",
-        "high"
-      ]
-    }
-  ],
+  "factors": {
+    "weather_change": [
+      "favorable",
+      "unfavorable"
+    ],
+    "outdoor_plans_importance": [
+      "high",
+      "low"
+    ],
+    "previous_rain_experience": [
+      "positive",
+      "negative"
+    ]
+  },
   "cpt": [
     {
-      "weather_clearness": "sunny",
-      "outdoor_plans_importance": "low",
-      "personal_happiness": "low",
-      "emotions": {
-        "relief": 0.6,
-        "excitement": 0.3,
-        "frustration": 0.1
-      }
-    },
-    {
-      "weather_clearness": "sunny",
-      "outdoor_plans_importance": "low",
-      "personal_happiness": "high",
-      "emotions": {
-        "relief": 0.7,
-        "excitement": 0.2,
-        "gratitude": 0.1
-      }
-    },
-    {
-      "weather_clearness": "sunny",
+      "weather_change": "favorable",
       "outdoor_plans_importance": "high",
-      "personal_happiness": "low",
+      "previous_rain_experience": "positive",
       "emotions": {
-        "relief": 0.4,
-        "excitement": 0.5,
-        "frustration": 0.1
+        "happy": 0.6,
+        "relieved": 0.3,
+        "grateful": 0.1
       }
     },
     {
-      "weather_clearness": "sunny",
+      "weather_change": "favorable",
       "outdoor_plans_importance": "high",
-      "personal_happiness": "high",
+      "previous_rain_experience": "negative",
       "emotions": {
-        "relief": 0.6,
-        "excitement": 0.3,
-        "gratitude": 0.1
+        "frustrated": 0.4,
+        "relieved": 0.35,
+        "disappointed": 0.25
       }
     },
     {
-      "weather_clearness": "rainy",
+      "weather_change": "favorable",
       "outdoor_plans_importance": "low",
-      "personal_happiness": "low",
+      "previous_rain_experience": "positive",
       "emotions": {
-        "frustration": 0.7,
-        "relief": 0.2,
-        "disappointment": 0.1
+        "content": 0.5,
+        "indifferent": 0.4,
+        "grateful": 0.1
       }
     },
     {
-      "weather_clearness": "rainy",
+      "weather_change": "favorable",
       "outdoor_plans_importance": "low",
-      "personal_happiness": "high",
+      "previous_rain_experience": "negative",
       "emotions": {
-        "disappointment": 0.6,
-        "relief": 0.3,
-        "gratitude": 0.1
+        "indifferent": 0.6,
+        "disappointed": 0.3,
+        "frustrated": 0.1
       }
     },
     {
-      "weather_clearness": "rainy",
+      "weather_change": "unfavorable",
       "outdoor_plans_importance": "high",
-      "personal_happiness": "low",
+      "previous_rain_experience": "positive",
       "emotions": {
-        "frustration": 0.5,
-        "anger": 0.3,
-        "disappointment": 0.2
+        "disappointed": 0.5,
+        "frustrated": 0.4,
+        "sad": 0.1
       }
     },
     {
-      "weather_clearness": "rainy",
+      "weather_change": "unfavorable",
       "outdoor_plans_importance": "high",
-      "personal_happiness": "high",
+      "previous_rain_experience": "negative",
       "emotions": {
-        "anger": 0.4,
-        "disappointment": 0.3,
-        "gratitude": 0.3
+        "angry": 0.6,
+        "frustrated": 0.3,
+        "disappointed": 0.1
+      }
+    },
+    {
+      "weather_change": "unfavorable",
+      "outdoor_plans_importance": "low",
+      "previous_rain_experience": "positive",
+      "emotions": {
+        "indifferent": 0.6,
+        "sad": 0.3,
+        "disappointed": 0.1
+      }
+    },
+    {
+      "weather_change": "unfavorable",
+      "outdoor_plans_importance": "low",
+      "previous_rain_experience": "negative",
+      "emotions": {
+        "indifferent": 0.7,
+        "disappointed": 0.2,
+        "frustrated": 0.1
       }
     }
   ]

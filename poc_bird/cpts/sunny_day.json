@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "sunshine_intensity",
-      "values": [
-        "weak",
-        "strong"
-      ]
-    },
-    {
-      "name": "morning_routine",
-      "values": [
-        "chaotic",
-        "smooth"
-      ]
-    },
-    {
-      "name": "sleep_quality",
-      "values": [
-        "poor",
-        "good"
-      ]
-    }
-  ],
+  "factors": {
+    "Weather": [
+      "Sunny",
+      "Cloudy"
+    ],
+    "SleepQuality": [
+      "Good",
+      "Poor"
+    ],
+    "MorningRoutine": [
+      "Relaxed",
+      "Rushed"
+    ]
+  },
   "cpt": [
     {
-      "sunshine_intensity": "weak",
-      "morning_routine": "chaotic",
-      "sleep_quality": "poor",
+      "Weather": "Sunny",
+      "SleepQuality": "Good",
+      "MorningRoutine": "Relaxed",
       "emotions": {
-        "gratitude": 0.2,
-        "boredom": 0.6,
-        "irritation": 0.2
+        "Happy": 0.7,
+        "Relaxed": 0.25,
+        "Excited": 0.05
       }
     },
     {
-      "sunshine_intensity": "weak",
-      "morning_routine": "chaotic",
-      "sleep_quality": "good",
+      "Weather": "Sunny",
+      "SleepQuality": "Good",
+      "MorningRoutine": "Rushed",
       "emotions": {
-        "gratitude": 0.1,
-        "boredom": 0.7,
-        "irritation": 0.2
+        "Stressed": 0.6,
+        "Anxious": 0.3,
+        "Irritated": 0.1
       }
     },
     {
-      "sunshine_intensity": "weak",
-      "morning_routine": "smooth",
-      "sleep_quality": "poor",
+      "Weather": "Sunny",
+      "SleepQuality": "Poor",
+      "MorningRoutine": "Relaxed",
       "emotions": {
-        "gratitude": 0.3,
-        "boredom": 0.5,
-        "irritation": 0.2
+        "Tired": 0.5,
+        "Frustrated": 0.35,
+        "Sad": 0.15
       }
     },
     {
-      "sunshine_intensity": "weak",
-      "morning_routine": "smooth",
-      "sleep_quality": "good",
+      "Weather": "Sunny",
+      "SleepQuality": "Poor",
+      "MorningRoutine": "Rushed",
       "emotions": {
-        "gratitude": 0.4,
-        "boredom": 0.4,
-        "irritation": 0.2
+        "Angry": 0.55,
+        "Overwhelmed": 0.3,
+        "Anxious": 0.15
       }
     },
     {
-      "sunshine_intensity": "strong",
-      "morning_routine": "chaotic",
-      "sleep_quality": "poor",
+      "Weather": "Cloudy",
+      "SleepQuality": "Good",
+      "MorningRoutine": "Relaxed",
       "emotions": {
-        "gratitude": 0.1,
-        "boredom": 0.4,
-        "relaxation": 0.5
+        "Content": 0.6,
+        "Relaxed": 0.3,
+        "Peaceful": 0.1
       }
     },
     {
-      "sunshine_intensity": "strong",
-      "morning_routine": "chaotic",
-      "sleep_quality": "good",
+      "Weather": "Cloudy",
+      "SleepQuality": "Good",
+      "MorningRoutine": "Rushed",
       "emotions": {
-        "gratitude": 0.05,
-        "boredom": 0.7,
-        "relaxation": 0.25
+        "Stressed": 0.65,
+        "Anxious": 0.25,
+        "Irritated": 0.1
       }
     },
     {
-      "sunshine_intensity": "strong",
-      "morning_routine": "smooth",
-      "sleep_quality": "poor",
+      "Weather": "Cloudy",
+      "SleepQuality": "Poor",
+      "MorningRoutine": "Relaxed",
       "emotions": {
-        "gratitude": 0.2,
-        "boredom": 0.3,
-        "relaxation": 0.5
+        "Tired": 0.6,
+        "Frustrated": 0.3,
+        "Sad": 0.1
       }
     },
     {
-      "sunshine_intensity": "strong",
-      "morning_routine": "smooth",
-      "sleep_quality": "good",
+      "Weather": "Cloudy",
+      "SleepQuality": "Poor",
+      "MorningRoutine": "Rushed",
       "emotions": {
-        "gratitude": 0.4,
-        "boredom": 0.3,
-        "relaxation": 0.3
+        "Angry": 0.65,
+        "Overwhelmed": 0.3,
+        "Anxious": 0.05
       }
     }
   ]

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "presence_of_known_neighbors": [
+      "known",
+      "unknown"
+    ],
+    "previous_similar_experiences": [
+      "yes",
+      "no"
+    ],
+    "night_time_routine": [
+      "routine",
+      "disturbed"
+    ]
+  },
+  "cpt": [
+    {
+      "presence_of_known_neighbors": "known",
+      "previous_similar_experiences": "yes",
+      "night_time_routine": "routine",
+      "emotions": {
+        "curiosity": 0.3,
+        "caution": 0.45,
+        "fear": 0.25
+      }
+    },
+    {
+      "presence_of_known_neighbors": "known",
+      "previous_similar_experiences": "yes",
+      "night_time_routine": "disturbed",
+      "emotions": {
+        "anxiety": 0.4,
+        "fear": 0.5,
+        "anger": 0.1
+      }
+    },
+    {
+      "presence_of_known_neighbors": "known",
+      "previous_similar_experiences": "no",
+      "night_time_routine": "routine",
+      "emotions": {
+        "surprise": 0.4,
+        "curiosity": 0.35,
+        "caution": 0.25
+      }
+    },
+    {
+      "presence_of_known_neighbors": "known",
+      "previous_similar_experiences": "no",
+      "night_time_routine": "disturbed",
+      "emotions": {
+        "anxiety": 0.36842105263157887,
+        "fear": 0.47368421052631576,
+        "suspicion": 0.15789473684210525
+      }
+    },
+    {
+      "presence_of_known_neighbors": "unknown",
+      "previous_similar_experiences": "yes",
+      "night_time_routine": "routine",
+      "emotions": {
+        "fear": 0.5789473684210527,
+        "anxiety": 0.36842105263157887,
+        "caution": 0.05263157894736842
+      }
+    },
+    {
+      "presence_of_known_neighbors": "unknown",
+      "previous_similar_experiences": "yes",
+      "night_time_routine": "disturbed",
+      "emotions": {
+        "fear": 0.6842105263157895,
+        "anxiety": 0.2631578947368421,
+        "suspicion": 0.05263157894736842
+      }
+    },
+    {
+      "presence_of_known_neighbors": "unknown",
+      "previous_similar_experiences": "no",
+      "night_time_routine": "routine",
+      "emotions": {
+        "surprise": 0.47368421052631576,
+        "curiosity": 0.36842105263157887,
+        "fear": 0.15789473684210525
+      }
+    },
+    {
+      "presence_of_known_neighbors": "unknown",
+      "previous_similar_experiences": "no",
+      "night_time_routine": "disturbed",
+      "emotions": {
+        "fear": 0.6,
+        "anxiety": 0.25,
+        "suspicion": 0.15
+      }
+    }
+  ]
+}

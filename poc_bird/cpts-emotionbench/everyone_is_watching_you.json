@@ -1,0 +1,106 @@
+{
+  "factors": {
+    "preparation_level": [
+      "well_prepared",
+      "unprepared"
+    ],
+    "audience_expectations": [
+      "high_expectations",
+      "low_expectations"
+    ],
+    "speaking_experience": [
+      "experienced",
+      "inexperienced"
+    ]
+  },
+  "cpt": [
+    {
+      "preparation_level": "well_prepared",
+      "audience_expectations": "high_expectations",
+      "speaking_experience": "experienced",
+      "emotions": {
+        "confidence": 0.75,
+        "anxiety": 0.15,
+        "excitement": 0.05,
+        "nervousness": 0.05
+      }
+    },
+    {
+      "preparation_level": "well_prepared",
+      "audience_expectations": "high_expectations",
+      "speaking_experience": "inexperienced",
+      "emotions": {
+        "confidence": 0.3,
+        "anxiety": 0.55,
+        "nervousness": 0.1,
+        "excitement": 0.05
+      }
+    },
+    {
+      "preparation_level": "well_prepared",
+      "audience_expectations": "low_expectations",
+      "speaking_experience": "experienced",
+      "emotions": {
+        "confidence": 0.8,
+        "relaxation": 0.15,
+        "excitement": 0.05,
+        "nervousness": 0.0
+      }
+    },
+    {
+      "preparation_level": "well_prepared",
+      "audience_expectations": "low_expectations",
+      "speaking_experience": "inexperienced",
+      "emotions": {
+        "confidence": 0.4000000000000001,
+        "relaxation": 0.30000000000000004,
+        "nervousness": 0.20000000000000004,
+        "excitement": 0.10000000000000002
+      }
+    },
+    {
+      "preparation_level": "unprepared",
+      "audience_expectations": "high_expectations",
+      "speaking_experience": "experienced",
+      "emotions": {
+        "anxiety": 0.85,
+        "nervousness": 0.1,
+        "fear": 0.05,
+        "confidence": 0.0
+      }
+    },
+    {
+      "preparation_level": "unprepared",
+      "audience_expectations": "high_expectations",
+      "speaking_experience": "inexperienced",
+      "emotions": {
+        "anxiety": 0.9,
+        "nervousness": 0.05,
+        "fear": 0.05,
+        "confidence": 0.0
+      }
+    },
+    {
+      "preparation_level": "unprepared",
+      "audience_expectations": "low_expectations",
+      "speaking_experience": "experienced",
+      "emotions": {
+        "relaxation": 0.8,
+        "confidence": 0.15,
+        "excitement": 0.05,
+        "nervousness": 0.0
+      }
+    },
+    {
+      "preparation_level": "unprepared",
+      "audience_expectations": "low_expectations",
+      "speaking_experience": "inexperienced",
+      "emotions": {
+        "relaxation": 0.6,
+        "confidence": 0.2,
+        "nervousness": 0.15,
+        "excitement": 0.05
+      }
+    }
+  ]
+}

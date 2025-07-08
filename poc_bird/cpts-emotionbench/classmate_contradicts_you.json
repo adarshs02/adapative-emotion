@@ -1,0 +1,102 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "classmate_attitude": [
+      "supportive",
+      "disrespectful"
+    ],
+    "confidence_level": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "classmate_attitude": "supportive",
+      "confidence_level": "low",
+      "emotions": {
+        "frustration": 0.35000000000000003,
+        "confusion": 0.17500000000000002,
+        "relief": 0.12500000000000003,
+        "doubt": 0.20000000000000004,
+        "disappointment": 0.15000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "classmate_attitude": "disrespectful",
+      "confidence_level": "low",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.35,
+        "confusion": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "classmate_attitude": "supportive",
+      "confidence_level": "low",
+      "emotions": {
+        "anger": 0.65,
+        "frustration": 0.25000000000000006,
+        "disappointment": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "classmate_attitude": "disrespectful",
+      "confidence_level": "low",
+      "emotions": {
+        "anger": 0.75,
+        "frustration": 0.2,
+        "disappointment": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "classmate_attitude": "supportive",
+      "confidence_level": "high",
+      "emotions": {
+        "confidence": 0.3,
+        "pride": 0.44999999999999996,
+        "relief": 0.05,
+        "surprise": 0.15,
+        "frustration": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "classmate_attitude": "disrespectful",
+      "confidence_level": "high",
+      "emotions": {
+        "anger": 0.5789473684210527,
+        "frustration": 0.36842105263157887,
+        "disappointment": 0.05263157894736842
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "classmate_attitude": "supportive",
+      "confidence_level": "high",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.30000000000000004,
+        "disappointment": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "classmate_attitude": "disrespectful",
+      "confidence_level": "high",
+      "emotions": {
+        "anger": 0.8,
+        "frustration": 0.15,
+        "disappointment": 0.05
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "preparation_level": [
+      "poor",
+      "good"
+    ],
+    "call_experience": [
+      "inexperienced",
+      "experienced"
+    ],
+    "nervous_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "preparation_level": "poor",
+      "call_experience": "inexperienced",
+      "nervous_history": "first_time",
+      "emotions": {
+        "anxiety": 0.7000000000000001,
+        "confidence": 0.20000000000000004,
+        "excitement": 0.10000000000000002
+      }
+    },
+    {
+      "preparation_level": "poor",
+      "call_experience": "inexperienced",
+      "nervous_history": "repeated",
+      "emotions": {
+        "anxiety": 0.85,
+        "fear": 0.1,
+        "anger": 0.05
+      }
+    },
+    {
+      "preparation_level": "poor",
+      "call_experience": "experienced",
+      "nervous_history": "first_time",
+      "emotions": {
+        "anxiety": 0.6000000000000001,
+        "confidence": 0.30000000000000004,
+        "nervousness": 0.10000000000000002
+      }
+    },
+    {
+      "preparation_level": "poor",
+      "call_experience": "experienced",
+      "nervous_history": "repeated",
+      "emotions": {
+        "anxiety": 0.8,
+        "fear": 0.15,
+        "anger": 0.05
+      }
+    },
+    {
+      "preparation_level": "good",
+      "call_experience": "inexperienced",
+      "nervous_history": "first_time",
+      "emotions": {
+        "confidence": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "excitement": 0.10000000000000002
+      }
+    },
+    {
+      "preparation_level": "good",
+      "call_experience": "inexperienced",
+      "nervous_history": "repeated",
+      "emotions": {
+        "confidence": 0.5,
+        "anxiety": 0.4,
+        "anger": 0.1
+      }
+    },
+    {
+      "preparation_level": "good",
+      "call_experience": "experienced",
+      "nervous_history": "first_time",
+      "emotions": {
+        "confidence": 0.7000000000000001,
+        "anxiety": 0.20000000000000004,
+        "pride": 0.10000000000000002
+      }
+    },
+    {
+      "preparation_level": "good",
+      "call_experience": "experienced",
+      "nervous_history": "repeated",
+      "emotions": {
+        "confidence": 0.8,
+        "anxiety": 0.15,
+        "pride": 0.05
+      }
+    }
+  ]
+}

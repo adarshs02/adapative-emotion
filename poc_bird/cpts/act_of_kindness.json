@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "intention",
-      "values": [
-        "friendly",
-        "hostile"
-      ]
-    },
-    {
-      "name": "surprise",
-      "values": [
-        "expected",
-        "unexpected"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "door_opener_attitude": [
+      "friendly",
+      "indifferent"
+    ],
+    "personal_mood": [
+      "happy",
+      "neutral"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "intention": "friendly",
-      "surprise": "expected",
+      "door_opener_attitude": "friendly",
+      "personal_mood": "happy",
       "emotions": {
-        "gratitude": 0.8,
-        "happiness": 0.2,
-        "confusion": 0.0
+        "joy": 0.6,
+        "gratitude": 0.35,
+        "surprise": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "intention": "friendly",
-      "surprise": "unexpected",
+      "door_opener_attitude": "friendly",
+      "personal_mood": "neutral",
       "emotions": {
-        "gratitude": 0.7,
-        "surprise": 0.2,
-        "happiness": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "intention": "hostile",
-      "surprise": "expected",
-      "emotions": {
-        "fear": 0.6,
-        "anger": 0.3,
-        "happiness": 0.1
-      }
-    },
-    {
-      "offence_history": "first_time",
-      "intention": "hostile",
-      "surprise": "unexpected",
-      "emotions": {
-        "fear": 0.5,
-        "anger": 0.4,
+        "pleased": 0.5,
+        "gratitude": 0.4,
         "surprise": 0.1
       }
     },
     {
+      "offence_history": "first_time",
+      "door_opener_attitude": "indifferent",
+      "personal_mood": "happy",
+      "emotions": {
+        "confused": 0.3,
+        "surprise": 0.4,
+        "amused": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "door_opener_attitude": "indifferent",
+      "personal_mood": "neutral",
+      "emotions": {
+        "confused": 0.5,
+        "surprise": 0.4,
+        "amused": 0.1
+      }
+    },
+    {
       "offence_history": "repeated",
-      "intention": "friendly",
-      "surprise": "expected",
+      "door_opener_attitude": "friendly",
+      "personal_mood": "happy",
       "emotions": {
         "gratitude": 0.4,
-        "happiness": 0.5,
-        "confusion": 0.1
+        "pleased": 0.35,
+        "joy": 0.25
       }
     },
     {
       "offence_history": "repeated",
-      "intention": "friendly",
-      "surprise": "unexpected",
+      "door_opener_attitude": "friendly",
+      "personal_mood": "neutral",
       "emotions": {
-        "gratitude": 0.3,
-        "surprise": 0.4,
-        "happiness": 0.3
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "intention": "hostile",
-      "surprise": "expected",
-      "emotions": {
-        "fear": 0.2,
-        "anger": 0.6,
-        "happiness": 0.2
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "intention": "hostile",
-      "surprise": "unexpected",
-      "emotions": {
-        "fear": 0.1,
-        "anger": 0.7,
+        "gratitude": 0.5,
+        "pleased": 0.3,
         "surprise": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "door_opener_attitude": "indifferent",
+      "personal_mood": "happy",
+      "emotions": {
+        "annoyed": 0.4,
+        "surprise": 0.3,
+        "amused": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "door_opener_attitude": "indifferent",
+      "personal_mood": "neutral",
+      "emotions": {
+        "annoyed": 0.5,
+        "surprise": 0.3,
+        "amused": 0.2
       }
     }
   ]

@@ -1,114 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "roommate_intent",
-      "values": [
-        "accidental",
-        "intentional"
-      ]
-    },
-    {
-      "name": "emotional_state",
-      "values": [
-        "calm",
-        "frustrated"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "roommate_attitude": [
+      "indifferent",
+      "apologetic"
+    ],
+    "milk_availability": [
+      "plenty",
+      "little"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "roommate_intent": "accidental",
-      "emotional_state": "calm",
+      "roommate_attitude": "indifferent",
+      "milk_availability": "plenty",
       "emotions": {
-        "anger": 0.0,
-        "frustration": 0.0,
-        "relief": 0.9,
-        "sadness": 0.1
+        "surprise": 0.3,
+        "annoyance": 0.6,
+        "indifference": 0.0
       }
     },
     {
       "offence_history": "first_time",
-      "roommate_intent": "accidental",
-      "emotional_state": "frustrated",
+      "roommate_attitude": "apologetic",
+      "milk_availability": "plenty",
       "emotions": {
-        "anger": 0.0,
-        "frustration": 0.8,
-        "relief": 0.1,
-        "sadness": 0.1
+        "surprise": 0.2,
+        "forgiveness": 0.6,
+        "anger": 0.2
       }
     },
     {
-      "offence_history": "first_time",
-      "roommate_intent": "intentional",
-      "emotional_state": "calm",
+      "offence_history": "repeated",
+      "roommate_attitude": "indifferent",
+      "milk_availability": "plenty",
       "emotions": {
-        "anger": 0.2,
-        "frustration": 0.0,
-        "relief": 0.6,
-        "sadness": 0.2
+        "annoyance": 0.7,
+        "anger": 0.25,
+        "frustration": 0.05
       }
     },
     {
-      "offence_history": "first_time",
-      "roommate_intent": "intentional",
-      "emotional_state": "frustrated",
+      "offence_history": "repeated",
+      "roommate_attitude": "apologetic",
+      "milk_availability": "plenty",
       "emotions": {
         "anger": 0.5,
-        "frustration": 0.3,
-        "relief": 0.1,
-        "sadness": 0.1
+        "frustration": 0.4,
+        "forgiveness": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "roommate_intent": "accidental",
-      "emotional_state": "calm",
+      "offence_history": "first_time",
+      "roommate_attitude": "indifferent",
+      "milk_availability": "little",
       "emotions": {
-        "anger": 0.1,
-        "frustration": 0.0,
-        "relief": 0.4,
-        "sadness": 0.5
+        "surprise": 0.2,
+        "annoyance": 0.7,
+        "anger": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "roommate_intent": "accidental",
-      "emotional_state": "frustrated",
+      "offence_history": "first_time",
+      "roommate_attitude": "apologetic",
+      "milk_availability": "little",
       "emotions": {
-        "anger": 0.2,
-        "frustration": 0.6,
-        "relief": 0.1,
-        "sadness": 0.1
+        "surprise": 0.1,
+        "forgiveness": 0.6,
+        "anger": 0.3
       }
     },
     {
       "offence_history": "repeated",
-      "roommate_intent": "intentional",
-      "emotional_state": "calm",
+      "roommate_attitude": "indifferent",
+      "milk_availability": "little",
+      "emotions": {
+        "annoyance": 0.8,
+        "anger": 0.15,
+        "frustration": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "roommate_attitude": "apologetic",
+      "milk_availability": "little",
       "emotions": {
         "anger": 0.6,
-        "frustration": 0.0,
-        "relief": 0.2,
-        "sadness": 0.2
-      }
-    },
-    {
-      "offence_history": "repeated",
-      "roommate_intent": "intentional",
-      "emotional_state": "frustrated",
-      "emotions": {
-        "anger": 0.8,
-        "frustration": 0.1,
-        "relief": 0.0,
-        "sadness": 0.1
+        "frustration": 0.3,
+        "forgiveness": 0.1
       }
     }
   ]

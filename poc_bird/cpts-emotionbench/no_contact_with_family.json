@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_first_time": [
+      "first_time",
+      "repeated"
+    ],
+    "communication_effort": [
+      "low",
+      "high"
+    ],
+    "support_system": [
+      "none",
+      "present"
+    ]
+  },
+  "cpt": [
+    {
+      "is_first_time": "first_time",
+      "communication_effort": "low",
+      "support_system": "none",
+      "emotions": {
+        "sadness": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "frustration": 0.10000000000000002
+      }
+    },
+    {
+      "is_first_time": "first_time",
+      "communication_effort": "low",
+      "support_system": "present",
+      "emotions": {
+        "relief": 0.4,
+        "sadness": 0.3,
+        "frustration": 0.3
+      }
+    },
+    {
+      "is_first_time": "first_time",
+      "communication_effort": "high",
+      "support_system": "none",
+      "emotions": {
+        "sadness": 0.5,
+        "anxiety": 0.35,
+        "anger": 0.15
+      }
+    },
+    {
+      "is_first_time": "first_time",
+      "communication_effort": "high",
+      "support_system": "present",
+      "emotions": {
+        "relief": 0.45,
+        "sadness": 0.3,
+        "anger": 0.25
+      }
+    },
+    {
+      "is_first_time": "repeated",
+      "communication_effort": "low",
+      "support_system": "none",
+      "emotions": {
+        "sadness": 0.47368421052631576,
+        "anxiety": 0.36842105263157887,
+        "anger": 0.15789473684210525
+      }
+    },
+    {
+      "is_first_time": "repeated",
+      "communication_effort": "low",
+      "support_system": "present",
+      "emotions": {
+        "sadness": 0.35,
+        "anxiety": 0.4,
+        "anger": 0.25
+      }
+    },
+    {
+      "is_first_time": "repeated",
+      "communication_effort": "high",
+      "support_system": "none",
+      "emotions": {
+        "sadness": 0.5,
+        "anxiety": 0.3,
+        "anger": 0.2
+      }
+    },
+    {
+      "is_first_time": "repeated",
+      "communication_effort": "high",
+      "support_system": "present",
+      "emotions": {
+        "sadness": 0.35,
+        "anxiety": 0.4,
+        "anger": 0.25
+      }
+    }
+  ]
+}

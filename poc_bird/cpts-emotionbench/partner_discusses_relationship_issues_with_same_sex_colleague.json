@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "trust_level": [
+      "high",
+      "low"
+    ],
+    "communication_style": [
+      "open",
+      "closed"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "trust_level": "high",
+      "communication_style": "open",
+      "emotions": {
+        "trust": 0.9,
+        "suspicion": 0.05,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "high",
+      "communication_style": "closed",
+      "emotions": {
+        "relief": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "frustration": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "low",
+      "communication_style": "open",
+      "emotions": {
+        "doubt": 0.75,
+        "sadness": 0.2,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "trust_level": "low",
+      "communication_style": "closed",
+      "emotions": {
+        "fear": 0.8,
+        "anxiety": 0.15,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "high",
+      "communication_style": "open",
+      "emotions": {
+        "anger": 0.7000000000000001,
+        "sadness": 0.20000000000000004,
+        "frustration": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "high",
+      "communication_style": "closed",
+      "emotions": {
+        "disappointment": 0.6000000000000001,
+        "anxiety": 0.30000000000000004,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "low",
+      "communication_style": "open",
+      "emotions": {
+        "anger": 0.85,
+        "sadness": 0.1,
+        "despair": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "trust_level": "low",
+      "communication_style": "closed",
+      "emotions": {
+        "anger": 0.9047619047619047,
+        "fear": 0.047619047619047616,
+        "despair": 0.047619047619047616
+      }
+    }
+  ]
+}

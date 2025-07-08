@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "evidence_from_others": [
+      "supportive",
+      "contradictory"
+    ],
+    "proof_availability": [
+      "available",
+      "unavailable"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "evidence_from_others": "supportive",
+      "proof_availability": "available",
+      "emotions": {
+        "confidence": 0.7000000000000001,
+        "frustration": 0.20000000000000004,
+        "doubt": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "evidence_from_others": "contradictory",
+      "proof_availability": "available",
+      "emotions": {
+        "defensiveness": 0.4,
+        "doubt": 0.35,
+        "anger": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "evidence_from_others": "supportive",
+      "proof_availability": "available",
+      "emotions": {
+        "confidence": 0.3,
+        "frustration": 0.5,
+        "doubt": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "evidence_from_others": "contradictory",
+      "proof_availability": "available",
+      "emotions": {
+        "defensiveness": 0.5,
+        "anger": 0.4,
+        "doubt": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "evidence_from_others": "supportive",
+      "proof_availability": "unavailable",
+      "emotions": {
+        "confidence": 0.2,
+        "frustration": 0.5,
+        "doubt": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "evidence_from_others": "contradictory",
+      "proof_availability": "unavailable",
+      "emotions": {
+        "defensiveness": 0.4,
+        "doubt": 0.4,
+        "anger": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "evidence_from_others": "supportive",
+      "proof_availability": "unavailable",
+      "emotions": {
+        "confidence": 0.1,
+        "frustration": 0.6,
+        "doubt": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "evidence_from_others": "contradictory",
+      "proof_availability": "unavailable",
+      "emotions": {
+        "defensiveness": 0.5,
+        "anger": 0.4,
+        "doubt": 0.1
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "task_difficulty": [
+      "easy",
+      "difficult"
+    ],
+    "task_progress": [
+      "little_progress",
+      "significant_progress"
+    ],
+    "task_duration": [
+      "short",
+      "long"
+    ]
+  },
+  "cpt": [
+    {
+      "task_difficulty": "easy",
+      "task_progress": "little_progress",
+      "task_duration": "short",
+      "emotions": {
+        "boredom": 0.6000000000000001,
+        "frustration": 0.30000000000000004,
+        "hope": 0.10000000000000002
+      }
+    },
+    {
+      "task_difficulty": "easy",
+      "task_progress": "little_progress",
+      "task_duration": "long",
+      "emotions": {
+        "boredom": 0.7,
+        "frustration": 0.25,
+        "hope": 0.05
+      }
+    },
+    {
+      "task_difficulty": "easy",
+      "task_progress": "significant_progress",
+      "task_duration": "short",
+      "emotions": {
+        "satisfaction": 0.5,
+        "relief": 0.35,
+        "hope": 0.15
+      }
+    },
+    {
+      "task_difficulty": "easy",
+      "task_progress": "significant_progress",
+      "task_duration": "long",
+      "emotions": {
+        "satisfaction": 0.6000000000000001,
+        "relief": 0.30000000000000004,
+        "hope": 0.10000000000000002
+      }
+    },
+    {
+      "task_difficulty": "difficult",
+      "task_progress": "little_progress",
+      "task_duration": "short",
+      "emotions": {
+        "frustration": 0.7000000000000001,
+        "anxiety": 0.20000000000000004,
+        "hope": 0.10000000000000002
+      }
+    },
+    {
+      "task_difficulty": "difficult",
+      "task_progress": "little_progress",
+      "task_duration": "long",
+      "emotions": {
+        "frustration": 0.8,
+        "anxiety": 0.15,
+        "hope": 0.05
+      }
+    },
+    {
+      "task_difficulty": "difficult",
+      "task_progress": "significant_progress",
+      "task_duration": "short",
+      "emotions": {
+        "relief": 0.5,
+        "satisfaction": 0.35,
+        "hope": 0.15
+      }
+    },
+    {
+      "task_difficulty": "difficult",
+      "task_progress": "significant_progress",
+      "task_duration": "long",
+      "emotions": {
+        "relief": 0.6000000000000001,
+        "satisfaction": 0.30000000000000004,
+        "hope": 0.10000000000000002
+      }
+    }
+  ]
+}

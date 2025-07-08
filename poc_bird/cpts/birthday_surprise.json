@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "surprise_type",
-      "values": [
-        "unexpected",
-        "expected"
-      ]
-    },
-    {
-      "name": "friendship_quality",
-      "values": [
-        "close",
-        "distant"
-      ]
-    },
-    {
-      "name": "birthday_feeling",
-      "values": [
-        "excited",
-        "unenthused"
-      ]
-    }
-  ],
+  "factors": {
+    "surprise_level": [
+      "expected",
+      "unexpected"
+    ],
+    "friend_group": [
+      "close",
+      "acquaintance"
+    ],
+    "party_size": [
+      "small",
+      "large"
+    ]
+  },
   "cpt": [
     {
-      "surprise_type": "unexpected",
-      "friendship_quality": "close",
-      "birthday_feeling": "excited",
+      "surprise_level": "expected",
+      "friend_group": "close",
+      "party_size": "small",
       "emotions": {
-        "happiness": 0.7,
-        "surprise": 0.25,
-        "awkwardness": 0.05
+        "happy": 0.75,
+        "surprised": 0.2,
+        "disappointed": 0.05
       }
     },
     {
-      "surprise_type": "unexpected",
-      "friendship_quality": "close",
-      "birthday_feeling": "unenthused",
+      "surprise_level": "expected",
+      "friend_group": "close",
+      "party_size": "large",
       "emotions": {
-        "happiness": 0.2,
-        "surprise": 0.6,
-        "awkwardness": 0.2
+        "happy": 0.8,
+        "surprised": 0.15,
+        "overwhelmed": 0.05
       }
     },
     {
-      "surprise_type": "unexpected",
-      "friendship_quality": "distant",
-      "birthday_feeling": "excited",
+      "surprise_level": "unexpected",
+      "friend_group": "close",
+      "party_size": "small",
       "emotions": {
-        "happiness": 0.4,
-        "surprise": 0.3,
-        "awkwardness": 0.3
+        "happy": 0.6,
+        "surprised": 0.35,
+        "relieved": 0.05
       }
     },
     {
-      "surprise_type": "unexpected",
-      "friendship_quality": "distant",
-      "birthday_feeling": "unenthused",
+      "surprise_level": "unexpected",
+      "friend_group": "close",
+      "party_size": "large",
       "emotions": {
-        "happiness": 0.1,
-        "surprise": 0.4,
-        "awkwardness": 0.5
+        "happy": 0.7,
+        "surprised": 0.25,
+        "overwhelmed": 0.05
       }
     },
     {
-      "surprise_type": "expected",
-      "friendship_quality": "close",
-      "birthday_feeling": "excited",
+      "surprise_level": "expected",
+      "friend_group": "acquaintance",
+      "party_size": "small",
       "emotions": {
-        "happiness": 0.8,
-        "surprise": 0.15,
-        "awkwardness": 0.05
+        "happy": 0.5,
+        "surprised": 0.35,
+        "awkward": 0.15
       }
     },
     {
-      "surprise_type": "expected",
-      "friendship_quality": "close",
-      "birthday_feeling": "unenthused",
+      "surprise_level": "expected",
+      "friend_group": "acquaintance",
+      "party_size": "large",
       "emotions": {
-        "happiness": 0.3,
-        "surprise": 0.5,
-        "awkwardness": 0.2
+        "happy": 0.6,
+        "surprised": 0.3,
+        "overwhelmed": 0.1
       }
     },
     {
-      "surprise_type": "expected",
-      "friendship_quality": "distant",
-      "birthday_feeling": "excited",
+      "surprise_level": "unexpected",
+      "friend_group": "acquaintance",
+      "party_size": "small",
       "emotions": {
-        "happiness": 0.2,
-        "surprise": 0.2,
-        "awkwardness": 0.6
+        "happy": 0.4,
+        "surprised": 0.45,
+        "awkward": 0.15
       }
     },
     {
-      "surprise_type": "expected",
-      "friendship_quality": "distant",
-      "birthday_feeling": "unenthused",
+      "surprise_level": "unexpected",
+      "friend_group": "acquaintance",
+      "party_size": "large",
       "emotions": {
-        "happiness": 0.05,
-        "surprise": 0.3,
-        "awkwardness": 0.65
+        "happy": 0.5,
+        "surprised": 0.35,
+        "overwhelmed": 0.15
       }
     }
   ]

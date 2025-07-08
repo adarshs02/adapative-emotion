@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "sleep_quality": [
+      "Good",
+      "Poor"
+    ],
+    "workload": [
+      "Manageable",
+      "Overwhelming"
+    ],
+    "support_system": [
+      "Strong",
+      "Weak"
+    ]
+  },
+  "cpt": [
+    {
+      "sleep_quality": "Good",
+      "workload": "Manageable",
+      "support_system": "Strong",
+      "emotions": {
+        "Contentment": 0.6000000000000001,
+        "Anxiety": 0.30000000000000004,
+        "Frustration": 0.10000000000000002
+      }
+    },
+    {
+      "sleep_quality": "Good",
+      "workload": "Manageable",
+      "support_system": "Weak",
+      "emotions": {
+        "Anxiety": 0.7,
+        "Frustration": 0.25,
+        "Depression": 0.05
+      }
+    },
+    {
+      "sleep_quality": "Good",
+      "workload": "Overwhelming",
+      "support_system": "Strong",
+      "emotions": {
+        "Stress": 0.8,
+        "Anxiety": 0.15,
+        "Frustration": 0.05
+      }
+    },
+    {
+      "sleep_quality": "Good",
+      "workload": "Overwhelming",
+      "support_system": "Weak",
+      "emotions": {
+        "Stress": 0.9,
+        "Anxiety": 0.05,
+        "Depression": 0.05
+      }
+    },
+    {
+      "sleep_quality": "Poor",
+      "workload": "Manageable",
+      "support_system": "Strong",
+      "emotions": {
+        "Tiredness": 0.6000000000000001,
+        "Anxiety": 0.30000000000000004,
+        "Frustration": 0.10000000000000002
+      }
+    },
+    {
+      "sleep_quality": "Poor",
+      "workload": "Manageable",
+      "support_system": "Weak",
+      "emotions": {
+        "Tiredness": 0.7,
+        "Anxiety": 0.25,
+        "Depression": 0.05
+      }
+    },
+    {
+      "sleep_quality": "Poor",
+      "workload": "Overwhelming",
+      "support_system": "Strong",
+      "emotions": {
+        "Tiredness": 0.8,
+        "Stress": 0.15,
+        "Frustration": 0.05
+      }
+    },
+    {
+      "sleep_quality": "Poor",
+      "workload": "Overwhelming",
+      "support_system": "Weak",
+      "emotions": {
+        "Tiredness": 0.9,
+        "Stress": 0.05,
+        "Depression": 0.05
+      }
+    }
+  ]
+}

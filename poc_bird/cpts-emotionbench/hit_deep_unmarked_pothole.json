@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "damage_to_vehicle": [
+      "minimal",
+      "significant"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "driving_condition": [
+      "good",
+      "poor"
+    ]
+  },
+  "cpt": [
+    {
+      "damage_to_vehicle": "minimal",
+      "offence_history": "first_time",
+      "driving_condition": "good",
+      "emotions": {
+        "surprise": 0.4,
+        "frustration": 0.35,
+        "relief": 0.25
+      }
+    },
+    {
+      "damage_to_vehicle": "minimal",
+      "offence_history": "first_time",
+      "driving_condition": "poor",
+      "emotions": {
+        "surprise": 0.36842105263157887,
+        "frustration": 0.47368421052631576,
+        "anger": 0.15789473684210525
+      }
+    },
+    {
+      "damage_to_vehicle": "significant",
+      "offence_history": "first_time",
+      "driving_condition": "good",
+      "emotions": {
+        "fear": 0.4,
+        "frustration": 0.35,
+        "anger": 0.25
+      }
+    },
+    {
+      "damage_to_vehicle": "significant",
+      "offence_history": "first_time",
+      "driving_condition": "poor",
+      "emotions": {
+        "fear": 0.36842105263157887,
+        "frustration": 0.47368421052631576,
+        "anger": 0.15789473684210525
+      }
+    },
+    {
+      "damage_to_vehicle": "minimal",
+      "offence_history": "repeated",
+      "driving_condition": "good",
+      "emotions": {
+        "frustration": 0.5789473684210527,
+        "anger": 0.36842105263157887,
+        "disappointment": 0.05263157894736842
+      }
+    },
+    {
+      "damage_to_vehicle": "minimal",
+      "offence_history": "repeated",
+      "driving_condition": "poor",
+      "emotions": {
+        "frustration": 0.6000000000000001,
+        "anger": 0.30000000000000004,
+        "disappointment": 0.10000000000000002
+      }
+    },
+    {
+      "damage_to_vehicle": "significant",
+      "offence_history": "repeated",
+      "driving_condition": "good",
+      "emotions": {
+        "anger": 0.6000000000000001,
+        "fear": 0.30000000000000004,
+        "disappointment": 0.10000000000000002
+      }
+    },
+    {
+      "damage_to_vehicle": "significant",
+      "offence_history": "repeated",
+      "driving_condition": "poor",
+      "emotions": {
+        "anger": 0.6842105263157895,
+        "fear": 0.2631578947368421,
+        "disappointment": 0.05263157894736842
+      }
+    }
+  ]
+}

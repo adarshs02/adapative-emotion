@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "understanding_level": [
+      "high",
+      "low"
+    ],
+    "age_perception": [
+      "accurate",
+      "inaccurate"
+    ],
+    "response_from_parents": [
+      "positive",
+      "negative"
+    ]
+  },
+  "cpt": [
+    {
+      "understanding_level": "high",
+      "age_perception": "accurate",
+      "response_from_parents": "positive",
+      "emotions": {
+        "happy": 0.6,
+        "curious": 0.35,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "understanding_level": "high",
+      "age_perception": "accurate",
+      "response_from_parents": "negative",
+      "emotions": {
+        "frustrated": 0.7,
+        "disappointed": 0.25,
+        "curious": 0.05
+      }
+    },
+    {
+      "understanding_level": "high",
+      "age_perception": "inaccurate",
+      "response_from_parents": "positive",
+      "emotions": {
+        "confused": 0.6000000000000001,
+        "hurt": 0.30000000000000004,
+        "curious": 0.10000000000000002
+      }
+    },
+    {
+      "understanding_level": "high",
+      "age_perception": "inaccurate",
+      "response_from_parents": "negative",
+      "emotions": {
+        "hurt": 0.7,
+        "confused": 0.25,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "understanding_level": "low",
+      "age_perception": "accurate",
+      "response_from_parents": "positive",
+      "emotions": {
+        "confused": 0.8,
+        "hurt": 0.15,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "understanding_level": "low",
+      "age_perception": "accurate",
+      "response_from_parents": "negative",
+      "emotions": {
+        "hurt": 0.8,
+        "confused": 0.15,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "understanding_level": "low",
+      "age_perception": "inaccurate",
+      "response_from_parents": "positive",
+      "emotions": {
+        "confused": 0.8,
+        "hurt": 0.15,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "understanding_level": "low",
+      "age_perception": "inaccurate",
+      "response_from_parents": "negative",
+      "emotions": {
+        "hurt": 0.8,
+        "confused": 0.15,
+        "frustrated": 0.05
+      }
+    }
+  ]
+}

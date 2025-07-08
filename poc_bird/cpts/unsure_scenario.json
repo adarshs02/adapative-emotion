@@ -1,116 +1,106 @@
 {
   "factors": [
     {
-      "name": "offence_history",
+      "name": "risk_taking",
       "values": [
-        "first_time",
-        "repeated"
+        "took_risk",
+        "played_it_safe"
       ]
     },
     {
-      "name": "offender_intent",
+      "name": "preparation",
       "values": [
-        "malicious",
-        "accidental"
+        "well_prepared",
+        "unprepared"
       ]
     },
     {
-      "name": "victim_involvement",
+      "name": "outcome",
       "values": [
-        "direct",
-        "indirect"
+        "positive",
+        "negative"
       ]
     }
   ],
   "cpt": [
     {
-      "offence_history": "first_time",
-      "offender_intent": "malicious",
-      "victim_involvement": "direct",
+      "risk_taking": "took_risk",
+      "preparation": "well_prepared",
+      "outcome": "positive",
       "emotions": {
-        "anger": 0.0,
-        "fear": 0.0,
-        "guilt": 0.5,
-        "shame": 0.5
+        "excitement": 0.6,
+        "relief": 0.3,
+        "pride": 0.1
       }
     },
     {
-      "offence_history": "first_time",
-      "offender_intent": "malicious",
-      "victim_involvement": "indirect",
+      "risk_taking": "took_risk",
+      "preparation": "well_prepared",
+      "outcome": "negative",
       "emotions": {
-        "anger": 0.0,
-        "fear": 0.0,
-        "guilt": 0.0,
-        "shame": 0.0,
-        "helplessness": 0.5,
-        "sadness": 0.5
+        "frustration": 0.5,
+        "disappointment": 0.4,
+        "regret": 0.1
       }
     },
     {
-      "offence_history": "first_time",
-      "offender_intent": "accidental",
-      "victim_involvement": "direct",
+      "risk_taking": "took_risk",
+      "preparation": "unprepared",
+      "outcome": "positive",
       "emotions": {
-        "anger": 0.0,
-        "fear": 0.0,
-        "guilt": 0.5,
-        "shame": 0.5
+        "surprise": 0.4,
+        "relief": 0.3,
+        "gratitude": 0.3
       }
     },
     {
-      "offence_history": "first_time",
-      "offender_intent": "accidental",
-      "victim_involvement": "indirect",
+      "risk_taking": "took_risk",
+      "preparation": "unprepared",
+      "outcome": "negative",
       "emotions": {
-        "anger": 0.0,
-        "fear": 0.0,
-        "helplessness": 0.5,
-        "sadness": 0.5
+        "fear": 0.5,
+        "anxiety": 0.4,
+        "shock": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "offender_intent": "malicious",
-      "victim_involvement": "direct",
+      "risk_taking": "played_it_safe",
+      "preparation": "well_prepared",
+      "outcome": "positive",
       "emotions": {
-        "anger": 0.5,
-        "fear": 0.0,
-        "guilt": 0.0,
-        "shame": 0.5
+        "satisfaction": 0.7,
+        "happiness": 0.2,
+        "contentment": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "offender_intent": "malicious",
-      "victim_involvement": "indirect",
+      "risk_taking": "played_it_safe",
+      "preparation": "well_prepared",
+      "outcome": "negative",
       "emotions": {
-        "anger": 0.5,
-        "fear": 0.0,
-        "helplessness": 0.0,
-        "sadness": 0.5
+        "dissatisfaction": 0.6,
+        "sadness": 0.3,
+        "disappointment": 0.1
       }
     },
     {
-      "offence_history": "repeated",
-      "offender_intent": "accidental",
-      "victim_involvement": "direct",
+      "risk_taking": "played_it_safe",
+      "preparation": "unprepared",
+      "outcome": "positive",
       "emotions": {
-        "anger": 0.0,
-        "fear": 0.0,
-        "guilt": 0.5,
-        "shame": 0.5
+        "surprise": 0.4,
+        "happiness": 0.3,
+        "gratitude": 0.3
       }
     },
     {
-      "offence_history": "repeated",
-      "offender_intent": "accidental",
-      "victim_involvement": "indirect",
+      "risk_taking": "played_it_safe",
+      "preparation": "unprepared",
+      "outcome": "negative",
       "emotions": {
-        "anger": 0.0,
-        "fear": 0.0,
-        "helplessness": 0.5,
-        "sadness": 0.5
+        "fear": 0.5,
+        "anxiety": 0.4,
+        "shock": 0.1
       }
     }
   ]

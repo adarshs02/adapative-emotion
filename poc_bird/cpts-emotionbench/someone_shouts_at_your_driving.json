@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "driving_skills": [
+      "good",
+      "poor"
+    ],
+    "reason_for_shouting": [
+      "constructive_criticism",
+      "unreasonable"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "driving_skills": "good",
+      "reason_for_shouting": "constructive_criticism",
+      "emotions": {
+        "surprised": 0.2,
+        "confused": 0.3,
+        "grateful": 0.5
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driving_skills": "good",
+      "reason_for_shouting": "unreasonable",
+      "emotions": {
+        "frustrated": 0.3,
+        "offended": 0.45,
+        "confused": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driving_skills": "poor",
+      "reason_for_shouting": "constructive_criticism",
+      "emotions": {
+        "nervous": 0.4,
+        "embarrassed": 0.45,
+        "determined": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driving_skills": "poor",
+      "reason_for_shouting": "unreasonable",
+      "emotions": {
+        "angry": 0.5,
+        "frustrated": 0.35,
+        "offended": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driving_skills": "good",
+      "reason_for_shouting": "constructive_criticism",
+      "emotions": {
+        "surprised": 0.2,
+        "confused": 0.3,
+        "grateful": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driving_skills": "good",
+      "reason_for_shouting": "unreasonable",
+      "emotions": {
+        "angry": 0.6000000000000001,
+        "frustrated": 0.30000000000000004,
+        "offended": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driving_skills": "poor",
+      "reason_for_shouting": "constructive_criticism",
+      "emotions": {
+        "nervous": 0.4,
+        "embarrassed": 0.45,
+        "determined": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driving_skills": "poor",
+      "reason_for_shouting": "unreasonable",
+      "emotions": {
+        "angry": 0.7,
+        "frustrated": 0.25,
+        "offended": 0.05
+      }
+    }
+  ]
+}

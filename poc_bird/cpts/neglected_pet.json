@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "pet_type",
-      "values": [
-        "small",
-        "large"
-      ]
-    },
-    {
-      "name": "owner_age",
-      "values": [
-        "young",
-        "old"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "pet_affection": [
+      "loves_you",
+      "indifferent"
+    ],
+    "pet_health_status": [
+      "healthy",
+      "sick"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "pet_type": "small",
-      "owner_age": "young",
+      "pet_affection": "loves_you",
+      "pet_health_status": "healthy",
       "emotions": {
-        "guilt": 0.8,
-        "frustration": 0.2,
-        "relief": 0.0
+        "regret": 0.6,
+        "guilt": 0.35,
+        "anxiety": 0.05
       }
     },
     {
       "offence_history": "first_time",
-      "pet_type": "small",
-      "owner_age": "old",
+      "pet_affection": "loves_you",
+      "pet_health_status": "sick",
       "emotions": {
-        "guilt": 0.7,
-        "relief": 0.2,
-        "frustration": 0.1
+        "compassion": 0.45,
+        "worry": 0.4,
+        "regret": 0.15
       }
     },
     {
       "offence_history": "first_time",
-      "pet_type": "large",
-      "owner_age": "young",
+      "pet_affection": "indifferent",
+      "pet_health_status": "healthy",
       "emotions": {
-        "guilt": 0.6,
-        "frustration": 0.3,
-        "relief": 0.1
+        "indifference": 0.55,
+        "surprise": 0.3,
+        "regret": 0.15
       }
     },
     {
       "offence_history": "first_time",
-      "pet_type": "large",
-      "owner_age": "old",
+      "pet_affection": "indifferent",
+      "pet_health_status": "sick",
       "emotions": {
-        "guilt": 0.5,
-        "frustration": 0.4,
-        "relief": 0.1
+        "concern": 0.45,
+        "surprise": 0.35,
+        "regret": 0.2
       }
     },
     {
       "offence_history": "repeated",
-      "pet_type": "small",
-      "owner_age": "young",
+      "pet_affection": "loves_you",
+      "pet_health_status": "healthy",
       "emotions": {
-        "anger": 0.5,
-        "frustration": 0.3,
-        "guilt": 0.2
+        "regret": 0.7,
+        "guilt": 0.25,
+        "anxiety": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "pet_type": "small",
-      "owner_age": "old",
+      "pet_affection": "loves_you",
+      "pet_health_status": "sick",
       "emotions": {
-        "anger": 0.6,
-        "frustration": 0.2,
-        "guilt": 0.2
+        "compassion": 0.35,
+        "worry": 0.5,
+        "regret": 0.15
       }
     },
     {
       "offence_history": "repeated",
-      "pet_type": "large",
-      "owner_age": "young",
+      "pet_affection": "indifferent",
+      "pet_health_status": "healthy",
       "emotions": {
-        "anger": 0.7,
-        "frustration": 0.2,
-        "guilt": 0.1
+        "indifference": 0.45,
+        "surprise": 0.3,
+        "regret": 0.25
       }
     },
     {
       "offence_history": "repeated",
-      "pet_type": "large",
-      "owner_age": "old",
+      "pet_affection": "indifferent",
+      "pet_health_status": "sick",
       "emotions": {
-        "anger": 0.8,
-        "frustration": 0.1,
-        "guilt": 0.1
+        "concern": 0.4,
+        "surprise": 0.4,
+        "regret": 0.2
       }
     }
   ]

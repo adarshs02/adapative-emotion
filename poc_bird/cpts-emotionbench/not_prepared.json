@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "preparation_level": [
+      "well_prepared",
+      "not_prepared"
+    ],
+    "experience_with_task": [
+      "familiar",
+      "unfamiliar"
+    ],
+    "pressure_level": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "preparation_level": "well_prepared",
+      "experience_with_task": "familiar",
+      "pressure_level": "low",
+      "emotions": {
+        "confidence": 0.85,
+        "anxiety": 0.1,
+        "excitement": 0.05
+      }
+    },
+    {
+      "preparation_level": "well_prepared",
+      "experience_with_task": "familiar",
+      "pressure_level": "high",
+      "emotions": {
+        "confidence": 0.7,
+        "anxiety": 0.25,
+        "determination": 0.05
+      }
+    },
+    {
+      "preparation_level": "well_prepared",
+      "experience_with_task": "unfamiliar",
+      "pressure_level": "low",
+      "emotions": {
+        "curiosity": 0.4,
+        "anxiety": 0.5,
+        "frustration": 0.1
+      }
+    },
+    {
+      "preparation_level": "well_prepared",
+      "experience_with_task": "unfamiliar",
+      "pressure_level": "high",
+      "emotions": {
+        "anxiety": 0.7,
+        "determination": 0.25,
+        "frustration": 0.05
+      }
+    },
+    {
+      "preparation_level": "not_prepared",
+      "experience_with_task": "familiar",
+      "pressure_level": "low",
+      "emotions": {
+        "anxiety": 0.6000000000000001,
+        "surprise": 0.30000000000000004,
+        "confidence": 0.10000000000000002
+      }
+    },
+    {
+      "preparation_level": "not_prepared",
+      "experience_with_task": "familiar",
+      "pressure_level": "high",
+      "emotions": {
+        "anxiety": 0.8,
+        "surprise": 0.15,
+        "fear": 0.05
+      }
+    },
+    {
+      "preparation_level": "not_prepared",
+      "experience_with_task": "unfamiliar",
+      "pressure_level": "low",
+      "emotions": {
+        "anxiety": 0.7000000000000001,
+        "surprise": 0.20000000000000004,
+        "frustration": 0.10000000000000002
+      }
+    },
+    {
+      "preparation_level": "not_prepared",
+      "experience_with_task": "unfamiliar",
+      "pressure_level": "high",
+      "emotions": {
+        "anxiety": 0.9,
+        "fear": 0.05,
+        "frustration": 0.05
+      }
+    }
+  ]
+}

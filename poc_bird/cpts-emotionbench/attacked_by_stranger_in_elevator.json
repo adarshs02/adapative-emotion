@@ -1,0 +1,100 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "stranger_appearance": [
+      "non_threatening",
+      "menacing"
+    ],
+    "elevator_location": [
+      "public",
+      "isolated"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "stranger_appearance": "non_threatening",
+      "elevator_location": "public",
+      "emotions": {
+        "surprise": 0.6,
+        "fear": 0.35,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "stranger_appearance": "menacing",
+      "elevator_location": "public",
+      "emotions": {
+        "fear": 0.7,
+        "anger": 0.25,
+        "disbelief": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "stranger_appearance": "non_threatening",
+      "elevator_location": "public",
+      "emotions": {
+        "fear": 0.65,
+        "anger": 0.3,
+        "vigilance": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "stranger_appearance": "menacing",
+      "elevator_location": "public",
+      "emotions": {
+        "fear": 0.8,
+        "anger": 0.15,
+        "vigilance": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "stranger_appearance": "non_threatening",
+      "elevator_location": "isolated",
+      "emotions": {
+        "surprise": 0.7,
+        "fear": 0.25,
+        "curiosity": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "stranger_appearance": "menacing",
+      "elevator_location": "isolated",
+      "emotions": {
+        "fear": 0.8999999999999999,
+        "anger": 0.060000000000000005,
+        "alarm": 0.025,
+        "surprise": 0.015
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "stranger_appearance": "non_threatening",
+      "elevator_location": "isolated",
+      "emotions": {
+        "fear": 0.8,
+        "anger": 0.15,
+        "vigilance": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "stranger_appearance": "menacing",
+      "elevator_location": "isolated",
+      "emotions": {
+        "fear": 0.94,
+        "anger": 0.030000000000000002,
+        "alarm": 0.025,
+        "surprise": 0.005
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "job_experience": [
+      "experienced",
+      "inexperienced"
+    ],
+    "application_quality": [
+      "excellent",
+      "average"
+    ],
+    "offence_history": [
+      "clean",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "job_experience": "experienced",
+      "application_quality": "excellent",
+      "offence_history": "clean",
+      "emotions": {
+        "confident": 0.75,
+        "hopeful": 0.2,
+        "anxious": 0.05
+      }
+    },
+    {
+      "job_experience": "experienced",
+      "application_quality": "excellent",
+      "offence_history": "repeated",
+      "emotions": {
+        "cautious": 0.4,
+        "anxious": 0.45,
+        "frustrated": 0.15
+      }
+    },
+    {
+      "job_experience": "experienced",
+      "application_quality": "average",
+      "offence_history": "clean",
+      "emotions": {
+        "nervous": 0.5,
+        "hopeful": 0.35,
+        "disappointed": 0.15
+      }
+    },
+    {
+      "job_experience": "experienced",
+      "application_quality": "average",
+      "offence_history": "repeated",
+      "emotions": {
+        "disappointed": 0.6000000000000001,
+        "anxious": 0.30000000000000004,
+        "frustrated": 0.10000000000000002
+      }
+    },
+    {
+      "job_experience": "inexperienced",
+      "application_quality": "excellent",
+      "offence_history": "clean",
+      "emotions": {
+        "excited": 0.6000000000000001,
+        "hopeful": 0.30000000000000004,
+        "nervous": 0.10000000000000002
+      }
+    },
+    {
+      "job_experience": "inexperienced",
+      "application_quality": "excellent",
+      "offence_history": "repeated",
+      "emotions": {
+        "anxious": 0.5789473684210527,
+        "cautious": 0.36842105263157887,
+        "frustrated": 0.05263157894736842
+      }
+    },
+    {
+      "job_experience": "inexperienced",
+      "application_quality": "average",
+      "offence_history": "clean",
+      "emotions": {
+        "nervous": 0.7,
+        "disappointed": 0.25,
+        "anxious": 0.05
+      }
+    },
+    {
+      "job_experience": "inexperienced",
+      "application_quality": "average",
+      "offence_history": "repeated",
+      "emotions": {
+        "disappointed": 0.75,
+        "anxious": 0.2,
+        "frustrated": 0.05
+      }
+    }
+  ]
+}

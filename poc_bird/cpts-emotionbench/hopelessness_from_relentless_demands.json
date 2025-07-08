@@ -1,0 +1,106 @@
+{
+  "factors": {
+    "sleep_quality": [
+      "poor",
+      "good"
+    ],
+    "pressure_level": [
+      "high",
+      "low"
+    ],
+    "support_system": [
+      "none",
+      "present"
+    ]
+  },
+  "cpt": [
+    {
+      "sleep_quality": "poor",
+      "pressure_level": "high",
+      "support_system": "none",
+      "emotions": {
+        "happiness": 0.05,
+        "excitement": 0.05,
+        "hopelessness": 0.45,
+        "anger": 0.45
+      }
+    },
+    {
+      "sleep_quality": "poor",
+      "pressure_level": "high",
+      "support_system": "present",
+      "emotions": {
+        "happiness": 0.1,
+        "excitement": 0.15,
+        "hopelessness": 0.3,
+        "anger": 0.45
+      }
+    },
+    {
+      "sleep_quality": "poor",
+      "pressure_level": "low",
+      "support_system": "none",
+      "emotions": {
+        "happiness": 0.052631578947368425,
+        "excitement": 0.10526315789473685,
+        "hopelessness": 0.3684210526315789,
+        "anger": 0.4736842105263158
+      }
+    },
+    {
+      "sleep_quality": "poor",
+      "pressure_level": "low",
+      "support_system": "present",
+      "emotions": {
+        "happiness": 0.1,
+        "excitement": 0.2,
+        "hopelessness": 0.25,
+        "anger": 0.45
+      }
+    },
+    {
+      "sleep_quality": "good",
+      "pressure_level": "high",
+      "support_system": "none",
+      "emotions": {
+        "happiness": 0.1,
+        "excitement": 0.2,
+        "hopelessness": 0.35,
+        "anger": 0.35
+      }
+    },
+    {
+      "sleep_quality": "good",
+      "pressure_level": "high",
+      "support_system": "present",
+      "emotions": {
+        "happiness": 0.2,
+        "excitement": 0.3,
+        "hopelessness": 0.25,
+        "anger": 0.25
+      }
+    },
+    {
+      "sleep_quality": "good",
+      "pressure_level": "low",
+      "support_system": "none",
+      "emotions": {
+        "happiness": 0.15789473684210525,
+        "excitement": 0.2631578947368421,
+        "hopelessness": 0.21052631578947367,
+        "anger": 0.36842105263157887
+      }
+    },
+    {
+      "sleep_quality": "good",
+      "pressure_level": "low",
+      "support_system": "present",
+      "emotions": {
+        "happiness": 0.3,
+        "excitement": 0.3,
+        "hopelessness": 0.2,
+        "anger": 0.2
+      }
+    }
+  ]
+}

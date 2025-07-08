@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "age_group": [
+      "young",
+      "adult"
+    ],
+    "health_status": [
+      "healthy",
+      "unhealthy"
+    ],
+    "smoking_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "age_group": "young",
+      "health_status": "healthy",
+      "smoking_history": "first_time",
+      "emotions": {
+        "surprise": 0.3,
+        "curiosity": 0.4,
+        "disapproval": 0.3
+      }
+    },
+    {
+      "age_group": "young",
+      "health_status": "healthy",
+      "smoking_history": "repeated",
+      "emotions": {
+        "concern": 0.4,
+        "disappointment": 0.4,
+        "anger": 0.2
+      }
+    },
+    {
+      "age_group": "young",
+      "health_status": "unhealthy",
+      "smoking_history": "first_time",
+      "emotions": {
+        "worry": 0.5,
+        "disappointment": 0.3,
+        "frustration": 0.2
+      }
+    },
+    {
+      "age_group": "young",
+      "health_status": "unhealthy",
+      "smoking_history": "repeated",
+      "emotions": {
+        "anger": 0.6000000000000001,
+        "disappointment": 0.30000000000000004,
+        "fear": 0.10000000000000002
+      }
+    },
+    {
+      "age_group": "adult",
+      "health_status": "healthy",
+      "smoking_history": "first_time",
+      "emotions": {
+        "curiosity": 0.4,
+        "indifference": 0.4,
+        "approval": 0.2
+      }
+    },
+    {
+      "age_group": "adult",
+      "health_status": "healthy",
+      "smoking_history": "repeated",
+      "emotions": {
+        "disapproval": 0.5,
+        "frustration": 0.3,
+        "anger": 0.2
+      }
+    },
+    {
+      "age_group": "adult",
+      "health_status": "unhealthy",
+      "smoking_history": "first_time",
+      "emotions": {
+        "worry": 0.6000000000000001,
+        "disappointment": 0.30000000000000004,
+        "fear": 0.10000000000000002
+      }
+    },
+    {
+      "age_group": "adult",
+      "health_status": "unhealthy",
+      "smoking_history": "repeated",
+      "emotions": {
+        "anger": 0.7000000000000001,
+        "disappointment": 0.20000000000000004,
+        "fear": 0.10000000000000002
+      }
+    }
+  ]
+}

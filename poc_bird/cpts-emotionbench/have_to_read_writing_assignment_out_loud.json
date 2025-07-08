@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "public_exposure": [
+      "read_out_loud",
+      "not_read_out_loud"
+    ],
+    "preparation": [
+      "well_prepared",
+      "not_well_prepared"
+    ],
+    "past_experience": [
+      "positive_feedback",
+      "negative_feedback"
+    ]
+  },
+  "cpt": [
+    {
+      "public_exposure": "read_out_loud",
+      "preparation": "well_prepared",
+      "past_experience": "positive_feedback",
+      "emotions": {
+        "confident": 0.6000000000000001,
+        "anxious": 0.30000000000000004,
+        "embarrassed": 0.10000000000000002
+      }
+    },
+    {
+      "public_exposure": "read_out_loud",
+      "preparation": "well_prepared",
+      "past_experience": "negative_feedback",
+      "emotions": {
+        "nervous": 0.47368421052631576,
+        "angry": 0.36842105263157887,
+        "embarrassed": 0.15789473684210525
+      }
+    },
+    {
+      "public_exposure": "read_out_loud",
+      "preparation": "not_well_prepared",
+      "past_experience": "positive_feedback",
+      "emotions": {
+        "nervous": 0.6000000000000001,
+        "anxious": 0.30000000000000004,
+        "embarrassed": 0.10000000000000002
+      }
+    },
+    {
+      "public_exposure": "read_out_loud",
+      "preparation": "not_well_prepared",
+      "past_experience": "negative_feedback",
+      "emotions": {
+        "anxious": 0.5789473684210527,
+        "angry": 0.36842105263157887,
+        "embarrassed": 0.05263157894736842
+      }
+    },
+    {
+      "public_exposure": "not_read_out_loud",
+      "preparation": "well_prepared",
+      "past_experience": "positive_feedback",
+      "emotions": {
+        "relieved": 0.6000000000000001,
+        "confident": 0.30000000000000004,
+        "grateful": 0.10000000000000002
+      }
+    },
+    {
+      "public_exposure": "not_read_out_loud",
+      "preparation": "well_prepared",
+      "past_experience": "negative_feedback",
+      "emotions": {
+        "relieved": 0.47368421052631576,
+        "nervous": 0.36842105263157887,
+        "disappointed": 0.15789473684210525
+      }
+    },
+    {
+      "public_exposure": "not_read_out_loud",
+      "preparation": "not_well_prepared",
+      "past_experience": "positive_feedback",
+      "emotions": {
+        "relieved": 0.6000000000000001,
+        "nervous": 0.30000000000000004,
+        "disappointed": 0.10000000000000002
+      }
+    },
+    {
+      "public_exposure": "not_read_out_loud",
+      "preparation": "not_well_prepared",
+      "past_experience": "negative_feedback",
+      "emotions": {
+        "relieved": 0.47368421052631576,
+        "anxious": 0.36842105263157887,
+        "disappointed": 0.15789473684210525
+      }
+    }
+  ]
+}

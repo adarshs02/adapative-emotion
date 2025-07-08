@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "offence_history",
-      "values": [
-        "first_time",
-        "repeated"
-      ]
-    },
-    {
-      "name": "anniversary_importance",
-      "values": [
-        "low",
-        "high"
-      ]
-    },
-    {
-      "name": "communication_style",
-      "values": [
-        "open",
-        "closed"
-      ]
-    }
-  ],
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "partner_apology": [
+      "sincere",
+      "insincere"
+    ],
+    "partner_explanation": [
+      "reasonable",
+      "unreasonable"
+    ]
+  },
   "cpt": [
     {
       "offence_history": "first_time",
-      "anniversary_importance": "low",
-      "communication_style": "open",
+      "partner_apology": "sincere",
+      "partner_explanation": "reasonable",
       "emotions": {
-        "happiness": 0.8,
-        "sadness": 0.15,
-        "anger": 0.05
+        "hurt": 0.35,
+        "frustrated": 0.4,
+        "forgiving": 0.25
       }
     },
     {
       "offence_history": "first_time",
-      "anniversary_importance": "low",
-      "communication_style": "closed",
+      "partner_apology": "sincere",
+      "partner_explanation": "unreasonable",
       "emotions": {
-        "happiness": 0.6,
-        "sadness": 0.25,
-        "anger": 0.15
+        "hurt": 0.5,
+        "angry": 0.35,
+        "forgiving": 0.15
       }
     },
     {
       "offence_history": "first_time",
-      "anniversary_importance": "high",
-      "communication_style": "open",
+      "partner_apology": "insincere",
+      "partner_explanation": "reasonable",
       "emotions": {
-        "happiness": 0.7,
-        "sadness": 0.2,
-        "anger": 0.1
+        "hurt": 0.6,
+        "angry": 0.3,
+        "disappointed": 0.1
       }
     },
     {
       "offence_history": "first_time",
-      "anniversary_importance": "high",
-      "communication_style": "closed",
+      "partner_apology": "insincere",
+      "partner_explanation": "unreasonable",
       "emotions": {
-        "happiness": 0.4,
-        "sadness": 0.35,
-        "anger": 0.25
+        "hurt": 0.7,
+        "angry": 0.25,
+        "disillusioned": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "anniversary_importance": "low",
-      "communication_style": "open",
+      "partner_apology": "sincere",
+      "partner_explanation": "reasonable",
       "emotions": {
-        "happiness": 0.2,
-        "sadness": 0.3,
-        "anger": 0.5
+        "hurt": 0.4,
+        "angry": 0.5,
+        "disappointed": 0.1
       }
     },
     {
       "offence_history": "repeated",
-      "anniversary_importance": "low",
-      "communication_style": "closed",
+      "partner_apology": "sincere",
+      "partner_explanation": "unreasonable",
       "emotions": {
-        "happiness": 0.1,
-        "sadness": 0.4,
-        "anger": 0.5
+        "hurt": 0.55,
+        "angry": 0.4,
+        "disillusioned": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "anniversary_importance": "high",
-      "communication_style": "open",
+      "partner_apology": "insincere",
+      "partner_explanation": "reasonable",
       "emotions": {
-        "happiness": 0.1,
-        "sadness": 0.2,
-        "anger": 0.7
+        "hurt": 0.65,
+        "angry": 0.3,
+        "disappointed": 0.05
       }
     },
     {
       "offence_history": "repeated",
-      "anniversary_importance": "high",
-      "communication_style": "closed",
+      "partner_apology": "insincere",
+      "partner_explanation": "unreasonable",
       "emotions": {
-        "happiness": 0.0,
-        "sadness": 0.1,
-        "anger": 0.9
+        "hurt": 0.75,
+        "angry": 0.2,
+        "disillusioned": 0.05
       }
     }
   ]

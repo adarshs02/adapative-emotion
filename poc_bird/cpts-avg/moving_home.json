@@ -1,0 +1,122 @@
+{
+  "factors": {
+    "notice_period": [
+      "short",
+      "long"
+    ],
+    "reason_for_move": [
+      "voluntary",
+      "involuntary"
+    ],
+    "relocation_history": [
+      "first_time",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "notice_period": "short",
+      "reason_for_move": "voluntary",
+      "relocation_history": "first_time",
+      "emotions": {
+        "excited": 0.2,
+        "anxious": 0.175,
+        "stressed": 0.125,
+        "excitement": 0.2,
+        "anxiety": 0.175,
+        "happiness": 0.125
+      }
+    },
+    {
+      "notice_period": "short",
+      "reason_for_move": "voluntary",
+      "relocation_history": "repeated",
+      "emotions": {
+        "relieved": 0.15,
+        "anxious": 0.2,
+        "frustrated": 0.15,
+        "stress": 0.25,
+        "anxiety": 0.175,
+        "frustration": 0.075
+      }
+    },
+    {
+      "notice_period": "short",
+      "reason_for_move": "involuntary",
+      "relocation_history": "first_time",
+      "emotions": {
+        "angry": 0.25,
+        "anxious": 0.2,
+        "sad": 0.05,
+        "surprise": 0.2,
+        "fear": 0.175,
+        "anger": 0.125
+      }
+    },
+    {
+      "notice_period": "short",
+      "reason_for_move": "involuntary",
+      "relocation_history": "repeated",
+      "emotions": {
+        "angry": 0.3,
+        "anxious": 0.15,
+        "resigned": 0.05,
+        "anger": 0.3,
+        "fear": 0.15,
+        "sadness": 0.05
+      }
+    },
+    {
+      "notice_period": "long",
+      "reason_for_move": "voluntary",
+      "relocation_history": "first_time",
+      "emotions": {
+        "excited": 0.275,
+        "hopeful": 0.175,
+        "stressed": 0.05,
+        "excitement": 0.25,
+        "happiness": 0.175,
+        "anticipation": 0.075
+      }
+    },
+    {
+      "notice_period": "long",
+      "reason_for_move": "voluntary",
+      "relocation_history": "repeated",
+      "emotions": {
+        "relieved": 0.20512820512820518,
+        "hopeful": 0.20512820512820518,
+        "frustrated": 0.10256410256410259,
+        "stress": 0.2307692307692308,
+        "happiness": 0.1794871794871795,
+        "relief": 0.07692307692307693
+      }
+    },
+    {
+      "notice_period": "long",
+      "reason_for_move": "involuntary",
+      "relocation_history": "first_time",
+      "emotions": {
+        "angry": 0.225,
+        "anxious": 0.2,
+        "sad": 0.075,
+        "relief": 0.2,
+        "fear": 0.175,
+        "sadness": 0.125
+      }
+    },
+    {
+      "notice_period": "long",
+      "reason_for_move": "involuntary",
+      "relocation_history": "repeated",
+      "emotions": {
+        "angry": 0.3,
+        "anxious": 0.15,
+        "resigned": 0.05,
+        "anger": 0.3,
+        "fear": 0.15,
+        "sadness": 0.05
+      }
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "factors": {
+    "speech_preparation": [
+      "well_prepared",
+      "poorly_prepared"
+    ],
+    "speech_experience": [
+      "experienced",
+      "inexperienced"
+    ],
+    "audience_size": [
+      "small",
+      "large"
+    ]
+  },
+  "cpt": [
+    {
+      "speech_preparation": "well_prepared",
+      "speech_experience": "experienced",
+      "audience_size": "small",
+      "emotions": {
+        "confidence": 0.425,
+        "excitement": 0.05,
+        "nervousness": 0.025,
+        "confident": 0.375,
+        "nervous": 0.1,
+        "excited": 0.025
+      }
+    },
+    {
+      "speech_preparation": "well_prepared",
+      "speech_experience": "experienced",
+      "audience_size": "large",
+      "emotions": {
+        "confidence": 0.375,
+        "excitement": 0.1,
+        "nervousness": 0.025,
+        "confident": 0.3,
+        "nervous": 0.15,
+        "anxious": 0.05
+      }
+    },
+    {
+      "speech_preparation": "poorly_prepared",
+      "speech_experience": "experienced",
+      "audience_size": "small",
+      "emotions": {
+        "anxiety": 0.3,
+        "frustration": 0.15,
+        "determination": 0.05,
+        "confident": 0.05,
+        "nervous": 0.25,
+        "anxious": 0.2
+      }
+    },
+    {
+      "speech_preparation": "poorly_prepared",
+      "speech_experience": "experienced",
+      "audience_size": "large",
+      "emotions": {
+        "anxiety": 0.35,
+        "frustration": 0.125,
+        "determination": 0.025,
+        "confident": 0.025,
+        "nervous": 0.3,
+        "anxious": 0.175
+      }
+    },
+    {
+      "speech_preparation": "well_prepared",
+      "speech_experience": "inexperienced",
+      "audience_size": "small",
+      "emotions": {
+        "confidence": 0.25000000000000006,
+        "excitement": 0.20000000000000004,
+        "nervousness": 0.05000000000000001,
+        "confident": 0.10000000000000002,
+        "nervous": 0.30000000000000004,
+        "excited": 0.10000000000000002
+      }
+    },
+    {
+      "speech_preparation": "well_prepared",
+      "speech_experience": "inexperienced",
+      "audience_size": "large",
+      "emotions": {
+        "confidence": 0.2,
+        "excitement": 0.225,
+        "nervousness": 0.075,
+        "confident": 0.05,
+        "nervous": 0.35,
+        "anxious": 0.1
+      }
+    },
+    {
+      "speech_preparation": "poorly_prepared",
+      "speech_experience": "inexperienced",
+      "audience_size": "small",
+      "emotions": {
+        "anxiety": 0.375,
+        "fear": 0.1,
+        "determination": 0.025,
+        "confident": 0.01,
+        "nervous": 0.325,
+        "anxious": 0.165
+      }
+    },
+    {
+      "speech_preparation": "poorly_prepared",
+      "speech_experience": "inexperienced",
+      "audience_size": "large",
+      "emotions": {
+        "anxiety": 0.425,
+        "fear": 0.05,
+        "determination": 0.025,
+        "confident": 0.005,
+        "nervous": 0.35,
+        "anxious": 0.145
+      }
+    }
+  ]
+}

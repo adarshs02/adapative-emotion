@@ -1,106 +1,97 @@
 {
-  "factors": [
-    {
-      "name": "memory_type",
-      "values": [
-        "fond",
-        "unpleasant"
-      ]
-    },
-    {
-      "name": "memory_recency",
-      "values": [
-        "recent",
-        "distant"
-      ]
-    },
-    {
-      "name": "memory_intensity",
-      "values": [
-        "strong",
-        "weak"
-      ]
-    }
-  ],
+  "factors": {
+    "memory_type": [
+      "personal",
+      "shared"
+    ],
+    "memory_quality": [
+      "vivid",
+      "fuzzy"
+    ],
+    "memory_frequency": [
+      "rare",
+      "frequent"
+    ]
+  },
   "cpt": [
     {
-      "memory_type": "fond",
-      "memory_recency": "recent",
-      "memory_intensity": "strong",
+      "memory_type": "personal",
+      "memory_quality": "vivid",
+      "memory_frequency": "rare",
       "emotions": {
-        "happiness": 0.7,
-        "nostalgia": 0.25,
-        "boredom": 0.05
+        "joy": 0.7,
+        "gratitude": 0.25,
+        "nostalgia": 0.05
       }
     },
     {
-      "memory_type": "fond",
-      "memory_recency": "recent",
-      "memory_intensity": "weak",
+      "memory_type": "personal",
+      "memory_quality": "vivid",
+      "memory_frequency": "frequent",
       "emotions": {
         "happiness": 0.6,
-        "nostalgia": 0.35,
-        "boredom": 0.05
+        "contentment": 0.3,
+        "amusement": 0.1
       }
     },
     {
-      "memory_type": "fond",
-      "memory_recency": "distant",
-      "memory_intensity": "strong",
+      "memory_type": "personal",
+      "memory_quality": "fuzzy",
+      "memory_frequency": "rare",
       "emotions": {
-        "nostalgia": 0.7,
-        "happiness": 0.25,
-        "boredom": 0.05
+        "sentimentality": 0.55,
+        "wistfulness": 0.35,
+        "confusion": 0.05
       }
     },
     {
-      "memory_type": "fond",
-      "memory_recency": "distant",
-      "memory_intensity": "weak",
+      "memory_type": "personal",
+      "memory_quality": "fuzzy",
+      "memory_frequency": "frequent",
       "emotions": {
-        "nostalgia": 0.6,
-        "happiness": 0.35,
-        "boredom": 0.05
+        "longing": 0.45,
+        "regret": 0.3,
+        "wistfulness": 0.25
       }
     },
     {
-      "memory_type": "unpleasant",
-      "memory_recency": "recent",
-      "memory_intensity": "strong",
+      "memory_type": "shared",
+      "memory_quality": "vivid",
+      "memory_frequency": "rare",
       "emotions": {
-        "anger": 0.7,
-        "sadness": 0.25,
-        "fear": 0.05
+        "joy": 0.65,
+        "gratitude": 0.2,
+        "happiness": 0.15
       }
     },
     {
-      "memory_type": "unpleasant",
-      "memory_recency": "recent",
-      "memory_intensity": "weak",
+      "memory_type": "shared",
+      "memory_quality": "vivid",
+      "memory_frequency": "frequent",
       "emotions": {
-        "anger": 0.6,
-        "sadness": 0.35,
-        "fear": 0.05
+        "happiness": 0.55,
+        "contentment": 0.3,
+        "amusement": 0.15
       }
     },
     {
-      "memory_type": "unpleasant",
-      "memory_recency": "distant",
-      "memory_intensity": "strong",
+      "memory_type": "shared",
+      "memory_quality": "fuzzy",
+      "memory_frequency": "rare",
       "emotions": {
-        "sadness": 0.7,
-        "anger": 0.25,
-        "fear": 0.05
+        "sentimentality": 0.5,
+        "wistfulness": 0.35,
+        "longing": 0.15
       }
     },
     {
-      "memory_type": "unpleasant",
-      "memory_recency": "distant",
-      "memory_intensity": "weak",
+      "memory_type": "shared",
+      "memory_quality": "fuzzy",
+      "memory_frequency": "frequent",
       "emotions": {
-        "sadness": 0.6,
-        "anger": 0.35,
-        "fear": 0.05
+        "longing": 0.45,
+        "regret": 0.3,
+        "wistfulness": 0.25
       }
     }
   ]

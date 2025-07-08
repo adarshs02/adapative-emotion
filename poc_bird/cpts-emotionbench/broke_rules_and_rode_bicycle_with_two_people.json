@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "risk_taken": [
+      "low",
+      "high"
+    ],
+    "consequences_felt": [
+      "none",
+      "some"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "risk_taken": "low",
+      "consequences_felt": "none",
+      "emotions": {
+        "exhilaration": 0.7,
+        "guilt": 0.25,
+        "fear": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "risk_taken": "low",
+      "consequences_felt": "some",
+      "emotions": {
+        "exhilaration": 0.6000000000000001,
+        "guilt": 0.30000000000000004,
+        "fear": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "risk_taken": "high",
+      "consequences_felt": "none",
+      "emotions": {
+        "exhilaration": 0.5789473684210527,
+        "guilt": 0.36842105263157887,
+        "fear": 0.05263157894736842
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "risk_taken": "high",
+      "consequences_felt": "some",
+      "emotions": {
+        "exhilaration": 0.5,
+        "guilt": 0.4,
+        "fear": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "risk_taken": "low",
+      "consequences_felt": "none",
+      "emotions": {
+        "exhilaration": 0.4,
+        "guilt": 0.5,
+        "anger": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "risk_taken": "low",
+      "consequences_felt": "some",
+      "emotions": {
+        "exhilaration": 0.30000000000000004,
+        "guilt": 0.6000000000000001,
+        "anger": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "risk_taken": "high",
+      "consequences_felt": "none",
+      "emotions": {
+        "exhilaration": 0.36842105263157887,
+        "guilt": 0.5789473684210527,
+        "anger": 0.05263157894736842
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "risk_taken": "high",
+      "consequences_felt": "some",
+      "emotions": {
+        "exhilaration": 0.30000000000000004,
+        "guilt": 0.6000000000000001,
+        "anger": 0.10000000000000002
+      }
+    }
+  ]
+}

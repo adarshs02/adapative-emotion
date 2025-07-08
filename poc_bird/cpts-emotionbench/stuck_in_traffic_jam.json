@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "time_spent": [
+      "short",
+      "long"
+    ],
+    "car_comfort": [
+      "comfortable",
+      "uncomfortable"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "time_spent": "short",
+      "car_comfort": "comfortable",
+      "emotions": {
+        "relaxed": 0.7,
+        "frustrated": 0.25,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "time_spent": "short",
+      "car_comfort": "uncomfortable",
+      "emotions": {
+        "frustrated": 0.6000000000000001,
+        "angry": 0.30000000000000004,
+        "annoyed": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "time_spent": "long",
+      "car_comfort": "comfortable",
+      "emotions": {
+        "frustrated": 0.5,
+        "bored": 0.4,
+        "relaxed": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "time_spent": "long",
+      "car_comfort": "uncomfortable",
+      "emotions": {
+        "angry": 0.5,
+        "frustrated": 0.4,
+        "annoyed": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "time_spent": "short",
+      "car_comfort": "comfortable",
+      "emotions": {
+        "frustrated": 0.4,
+        "angry": 0.5,
+        "disappointed": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "time_spent": "short",
+      "car_comfort": "uncomfortable",
+      "emotions": {
+        "angry": 0.6000000000000001,
+        "frustrated": 0.30000000000000004,
+        "disappointed": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "time_spent": "long",
+      "car_comfort": "comfortable",
+      "emotions": {
+        "angry": 0.6000000000000001,
+        "frustrated": 0.30000000000000004,
+        "disappointed": 0.10000000000000002
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "time_spent": "long",
+      "car_comfort": "uncomfortable",
+      "emotions": {
+        "angry": 0.7,
+        "frustrated": 0.25,
+        "disappointed": 0.05
+      }
+    }
+  ]
+}
