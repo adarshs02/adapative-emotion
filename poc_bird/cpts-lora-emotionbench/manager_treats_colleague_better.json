@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "warning_history": [
+      "first_time",
+      "repeated"
+    ],
+    "meeting_importance": [
+      "unimportant",
+      "important"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "warning_history": "first_time",
+      "meeting_importance": "unimportant",
+      "emotions": {
+        "angry": 0.05,
+        "worried": 0.58,
+        "relieved": 0.37
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "warning_history": "first_time",
+      "meeting_importance": "important",
+      "emotions": {
+        "angry": 0.05,
+        "worried": 0.48,
+        "relieved": 0.47
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "warning_history": "repeated",
+      "meeting_importance": "unimportant",
+      "emotions": {
+        "angry": 0.21,
+        "worried": 0.58,
+        "relieved": 0.21
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "warning_history": "repeated",
+      "meeting_importance": "important",
+      "emotions": {
+        "angry": 0.21,
+        "worried": 0.58,
+        "relieved": 0.21
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "warning_history": "first_time",
+      "meeting_importance": "unimportant",
+      "emotions": {
+        "angry": 0.21,
+        "worried": 0.58,
+        "relieved": 0.21
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "warning_history": "first_time",
+      "meeting_importance": "important",
+      "emotions": {
+        "angry": 0.21,
+        "worried": 0.58,
+        "relieved": 0.21
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "warning_history": "repeated",
+      "meeting_importance": "unimportant",
+      "emotions": {
+        "angry": 0.37,
+        "worried": 0.58,
+        "relieved": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "warning_history": "repeated",
+      "meeting_importance": "important",
+      "emotions": {
+        "angry": 0.37,
+        "worried": 0.58,
+        "relieved": 0.05
+      }
+    }
+  ]
+}

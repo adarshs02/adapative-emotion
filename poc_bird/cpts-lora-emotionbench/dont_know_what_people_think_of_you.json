@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "social_anxiety": [
+      "low",
+      "high"
+    ],
+    "self_esteem": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "social_anxiety": "low",
+      "self_esteem": "high",
+      "emotions": {
+        "happy": 0.55,
+        "curious": 0.33,
+        "anxious": 0.12
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_anxiety": "low",
+      "self_esteem": "low",
+      "emotions": {
+        "happy": 0.45,
+        "curious": 0.4,
+        "anxious": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_anxiety": "high",
+      "self_esteem": "high",
+      "emotions": {
+        "happy": 0.55,
+        "curious": 0.3,
+        "anxious": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "social_anxiety": "high",
+      "self_esteem": "low",
+      "emotions": {
+        "happy": 0.55,
+        "curious": 0.33,
+        "anxious": 0.12
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_anxiety": "low",
+      "self_esteem": "high",
+      "emotions": {
+        "happy": 0.3,
+        "curious": 0.32,
+        "angry": 0.38
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_anxiety": "low",
+      "self_esteem": "low",
+      "emotions": {
+        "happy": 0.25,
+        "curious": 0.3,
+        "angry": 0.45
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_anxiety": "high",
+      "self_esteem": "high",
+      "emotions": {
+        "happy": 0.35,
+        "curious": 0.3,
+        "angry": 0.35
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "social_anxiety": "high",
+      "self_esteem": "low",
+      "emotions": {
+        "happy": 0.3,
+        "curious": 0.32,
+        "angry": 0.38
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "child_age": [
+      "infant",
+      "adolescent"
+    ],
+    "divorce_cause": [
+      "mutual",
+      "abuse"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "child_age": "infant",
+      "divorce_cause": "mutual",
+      "emotions": {
+        "shocked": 0.5,
+        "anxious": 0.45,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "child_age": "infant",
+      "divorce_cause": "abuse",
+      "emotions": {
+        "angry": 0.5,
+        "anxious": 0.45,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "child_age": "adolescent",
+      "divorce_cause": "mutual",
+      "emotions": {
+        "shocked": 0.5,
+        "anxious": 0.45,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "child_age": "adolescent",
+      "divorce_cause": "abuse",
+      "emotions": {
+        "angry": 0.5,
+        "anxious": 0.45,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "child_age": "infant",
+      "divorce_cause": "mutual",
+      "emotions": {
+        "angry": 0.5,
+        "anxious": 0.45,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "child_age": "infant",
+      "divorce_cause": "abuse",
+      "emotions": {
+        "angry": 0.65,
+        "anxious": 0.3,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "child_age": "adolescent",
+      "divorce_cause": "mutual",
+      "emotions": {
+        "angry": 0.65,
+        "anxious": 0.3,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "child_age": "adolescent",
+      "divorce_cause": "abuse",
+      "emotions": {
+        "angry": 0.75,
+        "anxious": 0.2,
+        "happy": 0.05
+      }
+    }
+  ]
+}

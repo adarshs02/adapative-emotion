@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "confident": [
+      "yes",
+      "no"
+    ],
+    "time_off": [
+      "long",
+      "short"
+    ],
+    "support": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "confident": "yes",
+      "time_off": "long",
+      "support": "yes",
+      "emotions": {
+        "happy": 0.5,
+        "stressed": 0.45,
+        "excited": 0.05
+      }
+    },
+    {
+      "confident": "yes",
+      "time_off": "long",
+      "support": "no",
+      "emotions": {
+        "happy": 0.45,
+        "stressed": 0.5,
+        "excited": 0.05
+      }
+    },
+    {
+      "confident": "yes",
+      "time_off": "short",
+      "support": "yes",
+      "emotions": {
+        "happy": 0.45,
+        "stressed": 0.5,
+        "excited": 0.05
+      }
+    },
+    {
+      "confident": "yes",
+      "time_off": "short",
+      "support": "no",
+      "emotions": {
+        "happy": 0.5,
+        "stressed": 0.45,
+        "excited": 0.05
+      }
+    },
+    {
+      "confident": "no",
+      "time_off": "long",
+      "support": "yes",
+      "emotions": {
+        "happy": 0.45,
+        "stressed": 0.5,
+        "excited": 0.05
+      }
+    },
+    {
+      "confident": "no",
+      "time_off": "long",
+      "support": "no",
+      "emotions": {
+        "happy": 0.5,
+        "stressed": 0.45,
+        "excited": 0.05
+      }
+    },
+    {
+      "confident": "no",
+      "time_off": "short",
+      "support": "yes",
+      "emotions": {
+        "happy": 0.5,
+        "stressed": 0.45,
+        "excited": 0.05
+      }
+    },
+    {
+      "confident": "no",
+      "time_off": "short",
+      "support": "no",
+      "emotions": {
+        "happy": 0.45,
+        "stressed": 0.5,
+        "excited": 0.05
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "age": [
+      "young",
+      "old"
+    ],
+    "traffic_conditions": [
+      "good",
+      "bad"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "age": "young",
+      "traffic_conditions": "good",
+      "emotions": {
+        "happy": 0.75,
+        "scared": 0.2,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "age": "young",
+      "traffic_conditions": "bad",
+      "emotions": {
+        "scared": 0.8,
+        "happy": 0.15,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "age": "old",
+      "traffic_conditions": "good",
+      "emotions": {
+        "happy": 0.6,
+        "scared": 0.3,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "age": "old",
+      "traffic_conditions": "bad",
+      "emotions": {
+        "scared": 0.75,
+        "happy": 0.2,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "age": "young",
+      "traffic_conditions": "good",
+      "emotions": {
+        "angry": 0.8,
+        "scared": 0.15,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "age": "young",
+      "traffic_conditions": "bad",
+      "emotions": {
+        "angry": 0.9,
+        "scared": 0.1,
+        "happy": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "age": "old",
+      "traffic_conditions": "good",
+      "emotions": {
+        "angry": 0.7,
+        "scared": 0.2,
+        "happy": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "age": "old",
+      "traffic_conditions": "bad",
+      "emotions": {
+        "angry": 0.85,
+        "scared": 0.1,
+        "happy": 0.05
+      }
+    }
+  ]
+}

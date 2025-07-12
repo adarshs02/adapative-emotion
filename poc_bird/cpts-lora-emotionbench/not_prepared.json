@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "prepared": [
+      "yes",
+      "no"
+    ],
+    "confidence": [
+      "high",
+      "low"
+    ],
+    "experience": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "prepared": "yes",
+      "confidence": "high",
+      "experience": "yes",
+      "emotions": {
+        "confident": 0.85,
+        "anxious": 0.1,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "prepared": "yes",
+      "confidence": "high",
+      "experience": "no",
+      "emotions": {
+        "confident": 0.38,
+        "anxious": 0.54,
+        "frustrated": 0.08
+      }
+    },
+    {
+      "prepared": "yes",
+      "confidence": "low",
+      "experience": "yes",
+      "emotions": {
+        "anxious": 0.85,
+        "confident": 0.1,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "prepared": "yes",
+      "confidence": "low",
+      "experience": "no",
+      "emotions": {
+        "anxious": 0.38,
+        "confident": 0.54,
+        "frustrated": 0.08
+      }
+    },
+    {
+      "prepared": "no",
+      "confidence": "high",
+      "experience": "yes",
+      "emotions": {
+        "confident": 0.38,
+        "anxious": 0.54,
+        "frustrated": 0.08
+      }
+    },
+    {
+      "prepared": "no",
+      "confidence": "high",
+      "experience": "no",
+      "emotions": {
+        "confident": 0.05,
+        "anxious": 0.7,
+        "frustrated": 0.25
+      }
+    },
+    {
+      "prepared": "no",
+      "confidence": "low",
+      "experience": "yes",
+      "emotions": {
+        "anxious": 0.38,
+        "confident": 0.54,
+        "frustrated": 0.08
+      }
+    },
+    {
+      "prepared": "no",
+      "confidence": "low",
+      "experience": "no",
+      "emotions": {
+        "anxious": 0.05,
+        "confident": 0.7,
+        "frustrated": 0.25
+      }
+    }
+  ]
+}

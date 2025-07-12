@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "noise_level": [
+      "low",
+      "high"
+    ],
+    "crowd_size": [
+      "small",
+      "large"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "noise_level": "low",
+      "crowd_size": "small",
+      "emotions": {
+        "happy": 0.69,
+        "nervous": 0.23,
+        "angry": 0.08
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "noise_level": "low",
+      "crowd_size": "large",
+      "emotions": {
+        "happy": 0.35,
+        "nervous": 0.48,
+        "angry": 0.17
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "noise_level": "high",
+      "crowd_size": "small",
+      "emotions": {
+        "nervous": 0.8,
+        "angry": 0.15,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "noise_level": "high",
+      "crowd_size": "large",
+      "emotions": {
+        "nervous": 0.78,
+        "angry": 0.17,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "noise_level": "low",
+      "crowd_size": "small",
+      "emotions": {
+        "angry": 0.54,
+        "nervous": 0.38,
+        "happy": 0.08
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "noise_level": "low",
+      "crowd_size": "large",
+      "emotions": {
+        "angry": 0.52,
+        "nervous": 0.45,
+        "happy": 0.03
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "noise_level": "high",
+      "crowd_size": "small",
+      "emotions": {
+        "angry": 0.57,
+        "nervous": 0.43,
+        "happy": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "noise_level": "high",
+      "crowd_size": "large",
+      "emotions": {
+        "angry": 0.5,
+        "nervous": 0.5,
+        "happy": 0.0
+      }
+    }
+  ]
+}

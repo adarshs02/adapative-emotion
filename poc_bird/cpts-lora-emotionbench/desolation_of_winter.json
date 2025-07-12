@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "temperature": [
+      "cold",
+      "warm"
+    ],
+    "weather": [
+      "snow",
+      "sunny"
+    ],
+    "light": [
+      "dark",
+      "bright"
+    ]
+  },
+  "cpt": [
+    {
+      "temperature": "cold",
+      "weather": "snow",
+      "light": "dark",
+      "emotions": {
+        "lonely": 0.6,
+        "happy": 0.3,
+        "angry": 0.1
+      }
+    },
+    {
+      "temperature": "cold",
+      "weather": "snow",
+      "light": "bright",
+      "emotions": {
+        "lonely": 0.48,
+        "happy": 0.47,
+        "angry": 0.05
+      }
+    },
+    {
+      "temperature": "warm",
+      "weather": "snow",
+      "light": "dark",
+      "emotions": {
+        "lonely": 0.58,
+        "happy": 0.37,
+        "angry": 0.05
+      }
+    },
+    {
+      "temperature": "warm",
+      "weather": "snow",
+      "light": "bright",
+      "emotions": {
+        "lonely": 0.43,
+        "happy": 0.52,
+        "angry": 0.05
+      }
+    },
+    {
+      "temperature": "cold",
+      "weather": "sunny",
+      "light": "dark",
+      "emotions": {
+        "lonely": 0.6900000000000001,
+        "happy": 0.26,
+        "angry": 0.05
+      }
+    },
+    {
+      "temperature": "cold",
+      "weather": "sunny",
+      "light": "bright",
+      "emotions": {
+        "lonely": 0.43,
+        "happy": 0.52,
+        "angry": 0.05
+      }
+    },
+    {
+      "temperature": "warm",
+      "weather": "sunny",
+      "light": "dark",
+      "emotions": {
+        "lonely": 0.55,
+        "happy": 0.4,
+        "angry": 0.05
+      }
+    },
+    {
+      "temperature": "warm",
+      "weather": "sunny",
+      "light": "bright",
+      "emotions": {
+        "lonely": 0.43,
+        "happy": 0.52,
+        "angry": 0.05
+      }
+    }
+  ]
+}

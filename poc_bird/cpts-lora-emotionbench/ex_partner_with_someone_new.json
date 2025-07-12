@@ -1,0 +1,99 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "self_worth": [
+      "high",
+      "low"
+    ],
+    "emotion_response": [
+      "anger",
+      "sadness",
+      "emptiness"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "self_worth": "high",
+      "emotion_response": "anger",
+      "emotions": {
+        "anger": 0.8,
+        "sadness": 0.1,
+        "emptiness": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "self_worth": "low",
+      "emotion_response": "anger",
+      "emotions": {
+        "anger": 0.6,
+        "sadness": 0.35,
+        "emptiness": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "self_worth": "high",
+      "emotion_response": "sadness",
+      "emotions": {
+        "anger": 0.1,
+        "sadness": 0.8,
+        "emptiness": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "self_worth": "low",
+      "emotion_response": "sadness",
+      "emotions": {
+        "anger": 0.15,
+        "sadness": 0.75,
+        "emptiness": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "self_worth": "high",
+      "emotion_response": "emptiness",
+      "emotions": {
+        "anger": 0.1,
+        "sadness": 0.1,
+        "emptiness": 0.8
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "self_worth": "low",
+      "emotion_response": "emptiness",
+      "emotions": {
+        "anger": 0.1,
+        "sadness": 0.15,
+        "emptiness": 0.75
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "self_worth": "high",
+      "emotion_response": "anger",
+      "emotions": {
+        "anger": 0.95,
+        "sadness": 0.05,
+        "emptiness": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "self_worth": "low",
+      "emotion_response": "anger",
+      "emotions": {
+        "anger": 0.9,
+        "sadness": 0.1,
+        "emptiness": 0.0
+      }
+    }
+  ]
+}

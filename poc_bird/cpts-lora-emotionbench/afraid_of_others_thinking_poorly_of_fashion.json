@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "fashion_style": [
+      "trendy",
+      "classic"
+    ],
+    "others_opinion": [
+      "positive",
+      "negative"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "fashion_style": "trendy",
+      "others_opinion": "positive",
+      "emotions": {
+        "happy": 0.8,
+        "excited": 0.15,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "fashion_style": "trendy",
+      "others_opinion": "negative",
+      "emotions": {
+        "happy": 0.5,
+        "excited": 0.25,
+        "angry": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "fashion_style": "classic",
+      "others_opinion": "positive",
+      "emotions": {
+        "happy": 0.75,
+        "excited": 0.2,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "fashion_style": "classic",
+      "others_opinion": "negative",
+      "emotions": {
+        "happy": 0.4,
+        "excited": 0.15,
+        "angry": 0.45
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "fashion_style": "trendy",
+      "others_opinion": "positive",
+      "emotions": {
+        "happy": 0.5,
+        "excited": 0.25,
+        "angry": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "fashion_style": "trendy",
+      "others_opinion": "negative",
+      "emotions": {
+        "happy": 0.3,
+        "excited": 0.1,
+        "angry": 0.6
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "fashion_style": "classic",
+      "others_opinion": "positive",
+      "emotions": {
+        "happy": 0.4,
+        "excited": 0.2,
+        "angry": 0.4
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "fashion_style": "classic",
+      "others_opinion": "negative",
+      "emotions": {
+        "happy": 0.2,
+        "excited": 0.1,
+        "angry": 0.7
+      }
+    }
+  ]
+}

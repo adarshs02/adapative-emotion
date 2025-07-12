@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "friendship_level": [
+      "friend",
+      "acquaintance"
+    ],
+    "price_range": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "friendship_level": "friend",
+      "price_range": "low",
+      "emotions": {
+        "happy": 0.84,
+        "offended": 0.11,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_level": "friend",
+      "price_range": "high",
+      "emotions": {
+        "happy": 0.6900000000000001,
+        "offended": 0.26,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_level": "acquaintance",
+      "price_range": "low",
+      "emotions": {
+        "happy": 0.53,
+        "offended": 0.42,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friendship_level": "acquaintance",
+      "price_range": "high",
+      "emotions": {
+        "happy": 0.37,
+        "offended": 0.52,
+        "angry": 0.11
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_level": "friend",
+      "price_range": "low",
+      "emotions": {
+        "happy": 0.4,
+        "offended": 0.5,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_level": "friend",
+      "price_range": "high",
+      "emotions": {
+        "happy": 0.26,
+        "offended": 0.63,
+        "angry": 0.11
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_level": "acquaintance",
+      "price_range": "low",
+      "emotions": {
+        "happy": 0.3,
+        "offended": 0.6,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friendship_level": "acquaintance",
+      "price_range": "high",
+      "emotions": {
+        "happy": 0.2,
+        "offended": 0.7,
+        "angry": 0.1
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "phone_call_length": [
+      "short",
+      "long"
+    ],
+    "phone_call_voice": [
+      "familiar",
+      "unfamiliar"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "phone_call_length": "short",
+      "phone_call_voice": "familiar",
+      "emotions": {
+        "afraid": 0.1,
+        "excited": 0.7,
+        "angry": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "phone_call_length": "short",
+      "phone_call_voice": "unfamiliar",
+      "emotions": {
+        "afraid": 0.8,
+        "excited": 0.1,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "phone_call_length": "long",
+      "phone_call_voice": "familiar",
+      "emotions": {
+        "afraid": 0.05,
+        "excited": 0.85,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "phone_call_length": "long",
+      "phone_call_voice": "unfamiliar",
+      "emotions": {
+        "afraid": 0.9,
+        "excited": 0.05,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "phone_call_length": "short",
+      "phone_call_voice": "familiar",
+      "emotions": {
+        "afraid": 0.05,
+        "excited": 0.1,
+        "angry": 0.85
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "phone_call_length": "short",
+      "phone_call_voice": "unfamiliar",
+      "emotions": {
+        "afraid": 0.9,
+        "excited": 0.05,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "phone_call_length": "long",
+      "phone_call_voice": "familiar",
+      "emotions": {
+        "afraid": 0.1,
+        "excited": 0.1,
+        "angry": 0.8
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "phone_call_length": "long",
+      "phone_call_voice": "unfamiliar",
+      "emotions": {
+        "afraid": 0.85,
+        "excited": 0.1,
+        "angry": 0.05
+      }
+    }
+  ]
+}

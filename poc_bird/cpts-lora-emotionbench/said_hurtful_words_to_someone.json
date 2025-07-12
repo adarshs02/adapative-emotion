@@ -1,0 +1,139 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "emotion_level": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "apology_given": [
+      "no",
+      "yes"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "emotion_level": "low",
+      "apology_given": "no",
+      "emotions": {
+        "anger": 0.05,
+        "sadness": 0.9,
+        "guilt": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion_level": "medium",
+      "apology_given": "no",
+      "emotions": {
+        "anger": 0.1,
+        "sadness": 0.7,
+        "guilt": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion_level": "high",
+      "apology_given": "no",
+      "emotions": {
+        "anger": 0.3,
+        "sadness": 0.5,
+        "guilt": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion_level": "low",
+      "apology_given": "no",
+      "emotions": {
+        "anger": 0.2,
+        "sadness": 0.7,
+        "guilt": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion_level": "medium",
+      "apology_given": "no",
+      "emotions": {
+        "anger": 0.35,
+        "sadness": 0.55,
+        "guilt": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion_level": "high",
+      "apology_given": "no",
+      "emotions": {
+        "anger": 0.5,
+        "sadness": 0.45,
+        "guilt": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion_level": "low",
+      "apology_given": "yes",
+      "emotions": {
+        "anger": 0.0,
+        "sadness": 0.95,
+        "guilt": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion_level": "medium",
+      "apology_given": "yes",
+      "emotions": {
+        "anger": 0.0,
+        "sadness": 0.8,
+        "guilt": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion_level": "high",
+      "apology_given": "yes",
+      "emotions": {
+        "anger": 0.0,
+        "sadness": 0.7,
+        "guilt": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion_level": "low",
+      "apology_given": "yes",
+      "emotions": {
+        "anger": 0.1,
+        "sadness": 0.7,
+        "guilt": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion_level": "medium",
+      "apology_given": "yes",
+      "emotions": {
+        "anger": 0.15,
+        "sadness": 0.65,
+        "guilt": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion_level": "high",
+      "apology_given": "yes",
+      "emotions": {
+        "anger": 0.2,
+        "sadness": 0.6,
+        "guilt": 0.2
+      }
+    }
+  ]
+}

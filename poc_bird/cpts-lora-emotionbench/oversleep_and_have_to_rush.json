@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "time_management": [
+      "bad",
+      "good"
+    ],
+    "rush": [
+      "yes",
+      "no"
+    ],
+    "sleepiness": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "time_management": "good",
+      "rush": "no",
+      "sleepiness": "no",
+      "emotions": {
+        "happy": 0.85,
+        "angry": 0.05,
+        "sad": 0.1
+      }
+    },
+    {
+      "time_management": "good",
+      "rush": "yes",
+      "sleepiness": "no",
+      "emotions": {
+        "happy": 0.59,
+        "angry": 0.33,
+        "sad": 0.08
+      }
+    },
+    {
+      "time_management": "good",
+      "rush": "no",
+      "sleepiness": "yes",
+      "emotions": {
+        "happy": 0.59,
+        "angry": 0.33,
+        "sad": 0.08
+      }
+    },
+    {
+      "time_management": "good",
+      "rush": "yes",
+      "sleepiness": "yes",
+      "emotions": {
+        "happy": 0.4,
+        "angry": 0.55,
+        "sad": 0.05
+      }
+    },
+    {
+      "time_management": "bad",
+      "rush": "no",
+      "sleepiness": "no",
+      "emotions": {
+        "happy": 0.4,
+        "angry": 0.5,
+        "sad": 0.1
+      }
+    },
+    {
+      "time_management": "bad",
+      "rush": "yes",
+      "sleepiness": "no",
+      "emotions": {
+        "happy": 0.25,
+        "angry": 0.65,
+        "sad": 0.1
+      }
+    },
+    {
+      "time_management": "bad",
+      "rush": "no",
+      "sleepiness": "yes",
+      "emotions": {
+        "happy": 0.25,
+        "angry": 0.65,
+        "sad": 0.1
+      }
+    },
+    {
+      "time_management": "bad",
+      "rush": "yes",
+      "sleepiness": "yes",
+      "emotions": {
+        "happy": 0.15,
+        "angry": 0.8,
+        "sad": 0.05
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "impact": [
+      "low",
+      "high"
+    ],
+    "responsibility": [
+      "high",
+      "low"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "impact": "low",
+      "responsibility": "high",
+      "emotions": {
+        "anger": 0.28,
+        "guilt": 0.47,
+        "shame": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "impact": "low",
+      "responsibility": "low",
+      "emotions": {
+        "anger": 0.15,
+        "guilt": 0.2,
+        "shame": 0.65
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "impact": "high",
+      "responsibility": "high",
+      "emotions": {
+        "anger": 0.4,
+        "guilt": 0.5,
+        "shame": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "impact": "high",
+      "responsibility": "low",
+      "emotions": {
+        "anger": 0.28,
+        "guilt": 0.47,
+        "shame": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "impact": "low",
+      "responsibility": "high",
+      "emotions": {
+        "anger": 0.45,
+        "guilt": 0.45,
+        "shame": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "impact": "low",
+      "responsibility": "low",
+      "emotions": {
+        "anger": 0.3,
+        "guilt": 0.35,
+        "shame": 0.35
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "impact": "high",
+      "responsibility": "high",
+      "emotions": {
+        "anger": 0.55,
+        "guilt": 0.4,
+        "shame": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "impact": "high",
+      "responsibility": "low",
+      "emotions": {
+        "anger": 0.45,
+        "guilt": 0.45,
+        "shame": 0.1
+      }
+    }
+  ]
+}

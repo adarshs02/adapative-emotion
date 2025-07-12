@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "emotional_state": [
+      "guilty",
+      "angry"
+    ],
+    "time_passed": [
+      "short",
+      "long"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "emotional_state": "guilty",
+      "time_passed": "short",
+      "emotions": {
+        "anger": 0.15,
+        "guilt": 0.85,
+        "regret": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_state": "angry",
+      "time_passed": "short",
+      "emotions": {
+        "anger": 0.65,
+        "guilt": 0.35,
+        "regret": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_state": "guilty",
+      "time_passed": "long",
+      "emotions": {
+        "anger": 0.0,
+        "guilt": 0.95,
+        "regret": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_state": "angry",
+      "time_passed": "long",
+      "emotions": {
+        "anger": 0.2,
+        "guilt": 0.7,
+        "regret": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_state": "guilty",
+      "time_passed": "short",
+      "emotions": {
+        "anger": 0.0,
+        "guilt": 0.9,
+        "regret": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_state": "angry",
+      "time_passed": "short",
+      "emotions": {
+        "anger": 0.6,
+        "guilt": 0.4,
+        "regret": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_state": "guilty",
+      "time_passed": "long",
+      "emotions": {
+        "anger": 0.0,
+        "guilt": 0.95,
+        "regret": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_state": "angry",
+      "time_passed": "long",
+      "emotions": {
+        "anger": 0.29,
+        "guilt": 0.66,
+        "regret": 0.05
+      }
+    }
+  ]
+}

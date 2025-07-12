@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "anticipation": [
+      "high",
+      "low"
+    ],
+    "results": [
+      "success",
+      "failure"
+    ],
+    "disappointment": [
+      "deep",
+      "shallow"
+    ]
+  },
+  "cpt": [
+    {
+      "anticipation": "high",
+      "results": "success",
+      "disappointment": "deep",
+      "emotions": {
+        "anger": 0.05,
+        "happiness": 0.95,
+        "anxiety": 0.0
+      }
+    },
+    {
+      "anticipation": "high",
+      "results": "failure",
+      "disappointment": "deep",
+      "emotions": {
+        "anger": 0.5,
+        "happiness": 0.0,
+        "anxiety": 0.5
+      }
+    },
+    {
+      "anticipation": "high",
+      "results": "success",
+      "disappointment": "shallow",
+      "emotions": {
+        "anger": 0.0,
+        "happiness": 0.95,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "anticipation": "high",
+      "results": "failure",
+      "disappointment": "shallow",
+      "emotions": {
+        "anger": 0.05,
+        "happiness": 0.0,
+        "anxiety": 0.95
+      }
+    },
+    {
+      "anticipation": "low",
+      "results": "success",
+      "disappointment": "deep",
+      "emotions": {
+        "anger": 0.0,
+        "happiness": 0.95,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "anticipation": "low",
+      "results": "failure",
+      "disappointment": "deep",
+      "emotions": {
+        "anger": 0.05,
+        "happiness": 0.0,
+        "anxiety": 0.95
+      }
+    },
+    {
+      "anticipation": "low",
+      "results": "success",
+      "disappointment": "shallow",
+      "emotions": {
+        "anger": 0.0,
+        "happiness": 0.95,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "anticipation": "low",
+      "results": "failure",
+      "disappointment": "shallow",
+      "emotions": {
+        "anger": 0.05,
+        "happiness": 0.0,
+        "anxiety": 0.95
+      }
+    }
+  ]
+}

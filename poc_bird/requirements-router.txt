@@ -1,0 +1,8 @@
+# Llama.cpp and embedding dependencies
+vllm>=0.4.0
+hnswlib>=0.8.0
+numpy==1.26.4
+
+# Core utilities
+tqdm
+pytest

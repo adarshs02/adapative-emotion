@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "position_authority": [
+      "yes",
+      "no"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "expected_outcome": [
+      "positive",
+      "negative"
+    ]
+  },
+  "cpt": [
+    {
+      "position_authority": "yes",
+      "offence_history": "first_time",
+      "expected_outcome": "positive",
+      "emotions": {
+        "happy": 0.6,
+        "excited": 0.35,
+        "anxious": 0.05
+      }
+    },
+    {
+      "position_authority": "yes",
+      "offence_history": "first_time",
+      "expected_outcome": "negative",
+      "emotions": {
+        "nervous": 0.6,
+        "anxious": 0.35,
+        "angry": 0.05
+      }
+    },
+    {
+      "position_authority": "yes",
+      "offence_history": "repeated",
+      "expected_outcome": "positive",
+      "emotions": {
+        "anxious": 0.6,
+        "nervous": 0.35,
+        "angry": 0.05
+      }
+    },
+    {
+      "position_authority": "yes",
+      "offence_history": "repeated",
+      "expected_outcome": "negative",
+      "emotions": {
+        "angry": 0.6,
+        "nervous": 0.35,
+        "anxious": 0.05
+      }
+    },
+    {
+      "position_authority": "no",
+      "offence_history": "first_time",
+      "expected_outcome": "positive",
+      "emotions": {
+        "happy": 0.6,
+        "excited": 0.35,
+        "relieved": 0.05
+      }
+    },
+    {
+      "position_authority": "no",
+      "offence_history": "first_time",
+      "expected_outcome": "negative",
+      "emotions": {
+        "nervous": 0.6,
+        "anxious": 0.35,
+        "relieved": 0.05
+      }
+    },
+    {
+      "position_authority": "no",
+      "offence_history": "repeated",
+      "expected_outcome": "positive",
+      "emotions": {
+        "relieved": 0.6,
+        "happy": 0.35,
+        "anxious": 0.05
+      }
+    },
+    {
+      "position_authority": "no",
+      "offence_history": "repeated",
+      "expected_outcome": "negative",
+      "emotions": {
+        "relieved": 0.6,
+        "anxious": 0.35,
+        "angry": 0.05
+      }
+    }
+  ]
+}

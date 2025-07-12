@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "job_search_effort": [
+      "low",
+      "high"
+    ],
+    "job_opportunities": [
+      "abundant",
+      "scarce"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "job_search_effort": "low",
+      "job_opportunities": "abundant",
+      "emotions": {
+        "anger": 0.2,
+        "frustration": 0.3,
+        "hope": 0.5
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "job_search_effort": "low",
+      "job_opportunities": "scarce",
+      "emotions": {
+        "anger": 0.3,
+        "frustration": 0.45,
+        "hope": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "job_search_effort": "high",
+      "job_opportunities": "abundant",
+      "emotions": {
+        "anger": 0.1,
+        "frustration": 0.25,
+        "hope": 0.65
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "job_search_effort": "high",
+      "job_opportunities": "scarce",
+      "emotions": {
+        "anger": 0.25,
+        "frustration": 0.4,
+        "hope": 0.35
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "job_search_effort": "low",
+      "job_opportunities": "abundant",
+      "emotions": {
+        "anger": 0.4,
+        "frustration": 0.5,
+        "hope": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "job_search_effort": "low",
+      "job_opportunities": "scarce",
+      "emotions": {
+        "anger": 0.45,
+        "frustration": 0.5,
+        "hope": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "job_search_effort": "high",
+      "job_opportunities": "abundant",
+      "emotions": {
+        "anger": 0.3,
+        "frustration": 0.45,
+        "hope": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "job_search_effort": "high",
+      "job_opportunities": "scarce",
+      "emotions": {
+        "anger": 0.45,
+        "frustration": 0.5,
+        "hope": 0.05
+      }
+    }
+  ]
+}

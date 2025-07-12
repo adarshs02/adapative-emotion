@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "support_level": [
+      "low",
+      "high"
+    ],
+    "friend_status": [
+      "close",
+      "not_close"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "support_level": "low",
+      "friend_status": "close",
+      "emotions": {
+        "anger": 0.35,
+        "sadness": 0.5,
+        "shame": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_level": "low",
+      "friend_status": "not_close",
+      "emotions": {
+        "anger": 0.4,
+        "sadness": 0.45,
+        "shame": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_level": "high",
+      "friend_status": "close",
+      "emotions": {
+        "anger": 0.2,
+        "sadness": 0.4,
+        "shame": 0.4
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "support_level": "high",
+      "friend_status": "not_close",
+      "emotions": {
+        "anger": 0.26,
+        "sadness": 0.48,
+        "shame": 0.26
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_level": "low",
+      "friend_status": "close",
+      "emotions": {
+        "anger": 0.6,
+        "sadness": 0.3,
+        "shame": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_level": "low",
+      "friend_status": "not_close",
+      "emotions": {
+        "anger": 0.65,
+        "sadness": 0.3,
+        "shame": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_level": "high",
+      "friend_status": "close",
+      "emotions": {
+        "anger": 0.5,
+        "sadness": 0.35,
+        "shame": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "support_level": "high",
+      "friend_status": "not_close",
+      "emotions": {
+        "anger": 0.58,
+        "sadness": 0.37,
+        "shame": 0.05
+      }
+    }
+  ]
+}

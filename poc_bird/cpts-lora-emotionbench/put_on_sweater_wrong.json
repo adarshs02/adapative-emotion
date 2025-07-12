@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "emotion_history": [
+      "first_time",
+      "repeated"
+    ],
+    "self_esteem": [
+      "high",
+      "low"
+    ],
+    "sweater_comfort": [
+      "comfortable",
+      "uncomfortable"
+    ]
+  },
+  "cpt": [
+    {
+      "emotion_history": "first_time",
+      "self_esteem": "high",
+      "sweater_comfort": "comfortable",
+      "emotions": {
+        "happy": 0.75,
+        "angry": 0.2,
+        "sad": 0.05
+      }
+    },
+    {
+      "emotion_history": "first_time",
+      "self_esteem": "high",
+      "sweater_comfort": "uncomfortable",
+      "emotions": {
+        "happy": 0.5,
+        "angry": 0.35,
+        "sad": 0.15
+      }
+    },
+    {
+      "emotion_history": "first_time",
+      "self_esteem": "low",
+      "sweater_comfort": "comfortable",
+      "emotions": {
+        "happy": 0.37,
+        "angry": 0.47,
+        "sad": 0.16
+      }
+    },
+    {
+      "emotion_history": "first_time",
+      "self_esteem": "low",
+      "sweater_comfort": "uncomfortable",
+      "emotions": {
+        "happy": 0.25,
+        "angry": 0.5,
+        "sad": 0.25
+      }
+    },
+    {
+      "emotion_history": "repeated",
+      "self_esteem": "high",
+      "sweater_comfort": "comfortable",
+      "emotions": {
+        "happy": 0.5,
+        "angry": 0.4,
+        "sad": 0.1
+      }
+    },
+    {
+      "emotion_history": "repeated",
+      "self_esteem": "high",
+      "sweater_comfort": "uncomfortable",
+      "emotions": {
+        "happy": 0.37,
+        "angry": 0.58,
+        "sad": 0.05
+      }
+    },
+    {
+      "emotion_history": "repeated",
+      "self_esteem": "low",
+      "sweater_comfort": "comfortable",
+      "emotions": {
+        "happy": 0.2,
+        "angry": 0.6,
+        "sad": 0.2
+      }
+    },
+    {
+      "emotion_history": "repeated",
+      "self_esteem": "low",
+      "sweater_comfort": "uncomfortable",
+      "emotions": {
+        "happy": 0.1,
+        "angry": 0.7,
+        "sad": 0.2
+      }
+    }
+  ]
+}

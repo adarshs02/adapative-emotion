@@ -1,0 +1,99 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "victim_knows_offender": [
+      "yes",
+      "no"
+    ],
+    "emotional_state": [
+      "happy",
+      "angry",
+      "sad"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "victim_knows_offender": "yes",
+      "emotional_state": "happy",
+      "emotions": {
+        "angry": 0.05,
+        "sad": 0.05,
+        "happy": 0.9
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "victim_knows_offender": "no",
+      "emotional_state": "happy",
+      "emotions": {
+        "angry": 0.05,
+        "sad": 0.05,
+        "happy": 0.9
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "victim_knows_offender": "yes",
+      "emotional_state": "happy",
+      "emotions": {
+        "angry": 0.1,
+        "sad": 0.1,
+        "happy": 0.8
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "victim_knows_offender": "no",
+      "emotional_state": "happy",
+      "emotions": {
+        "angry": 0.15,
+        "sad": 0.15,
+        "happy": 0.7
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "victim_knows_offender": "yes",
+      "emotional_state": "angry",
+      "emotions": {
+        "angry": 0.9,
+        "sad": 0.05,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "victim_knows_offender": "no",
+      "emotional_state": "angry",
+      "emotions": {
+        "angry": 0.9,
+        "sad": 0.05,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "victim_knows_offender": "yes",
+      "emotional_state": "angry",
+      "emotions": {
+        "angry": 0.95,
+        "sad": 0.05,
+        "happy": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "victim_knows_offender": "no",
+      "emotional_state": "angry",
+      "emotions": {
+        "angry": 0.95,
+        "sad": 0.05,
+        "happy": 0.0
+      }
+    }
+  ]
+}

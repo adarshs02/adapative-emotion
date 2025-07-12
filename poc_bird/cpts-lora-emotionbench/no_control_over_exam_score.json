@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "control": [
+      "yes",
+      "no"
+    ],
+    "score": [
+      "pass",
+      "fail"
+    ],
+    "history": [
+      "first_time",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "control": "yes",
+      "score": "pass",
+      "history": "first_time",
+      "emotions": {
+        "happy": 0.75,
+        "relieved": 0.25,
+        "angry": 0.0
+      }
+    },
+    {
+      "control": "yes",
+      "score": "pass",
+      "history": "repeated",
+      "emotions": {
+        "grateful": 0.5,
+        "happy": 0.45,
+        "angry": 0.05
+      }
+    },
+    {
+      "control": "yes",
+      "score": "fail",
+      "history": "first_time",
+      "emotions": {
+        "angry": 0.85,
+        "frustrated": 0.15,
+        "happy": 0.0
+      }
+    },
+    {
+      "control": "yes",
+      "score": "fail",
+      "history": "repeated",
+      "emotions": {
+        "frustrated": 0.75,
+        "angry": 0.25,
+        "happy": 0.0
+      }
+    },
+    {
+      "control": "no",
+      "score": "pass",
+      "history": "first_time",
+      "emotions": {
+        "happy": 0.0,
+        "frustrated": 0.5,
+        "angry": 0.5
+      }
+    },
+    {
+      "control": "no",
+      "score": "pass",
+      "history": "repeated",
+      "emotions": {
+        "happy": 0.0,
+        "grateful": 0.5,
+        "angry": 0.5
+      }
+    },
+    {
+      "control": "no",
+      "score": "fail",
+      "history": "first_time",
+      "emotions": {
+        "angry": 0.95,
+        "frustrated": 0.05,
+        "happy": 0.0
+      }
+    },
+    {
+      "control": "no",
+      "score": "fail",
+      "history": "repeated",
+      "emotions": {
+        "angry": 0.95,
+        "frustrated": 0.05,
+        "happy": 0.0
+      }
+    }
+  ]
+}

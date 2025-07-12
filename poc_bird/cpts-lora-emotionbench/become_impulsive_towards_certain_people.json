@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "impulse_type": [
+      "personal",
+      "public"
+    ],
+    "impulse_frequency": [
+      "one_time",
+      "repeated"
+    ],
+    "impulse_target": [
+      "friend",
+      "stranger"
+    ]
+  },
+  "cpt": [
+    {
+      "impulse_type": "personal",
+      "impulse_frequency": "one_time",
+      "impulse_target": "friend",
+      "emotions": {
+        "joy": 0.65,
+        "surprise": 0.3,
+        "anger": 0.05
+      }
+    },
+    {
+      "impulse_type": "personal",
+      "impulse_frequency": "repeated",
+      "impulse_target": "friend",
+      "emotions": {
+        "anger": 0.7,
+        "sadness": 0.25,
+        "joy": 0.05
+      }
+    },
+    {
+      "impulse_type": "personal",
+      "impulse_frequency": "one_time",
+      "impulse_target": "stranger",
+      "emotions": {
+        "fear": 0.6,
+        "anger": 0.35,
+        "joy": 0.05
+      }
+    },
+    {
+      "impulse_type": "personal",
+      "impulse_frequency": "repeated",
+      "impulse_target": "stranger",
+      "emotions": {
+        "anger": 0.7,
+        "fear": 0.25,
+        "joy": 0.05
+      }
+    },
+    {
+      "impulse_type": "public",
+      "impulse_frequency": "one_time",
+      "impulse_target": "friend",
+      "emotions": {
+        "joy": 0.7,
+        "surprise": 0.25,
+        "anger": 0.05
+      }
+    },
+    {
+      "impulse_type": "public",
+      "impulse_frequency": "repeated",
+      "impulse_target": "friend",
+      "emotions": {
+        "anger": 0.7,
+        "sadness": 0.25,
+        "joy": 0.05
+      }
+    },
+    {
+      "impulse_type": "public",
+      "impulse_frequency": "one_time",
+      "impulse_target": "stranger",
+      "emotions": {
+        "fear": 0.6,
+        "anger": 0.35,
+        "joy": 0.05
+      }
+    },
+    {
+      "impulse_type": "public",
+      "impulse_frequency": "repeated",
+      "impulse_target": "stranger",
+      "emotions": {
+        "anger": 0.7,
+        "fear": 0.25,
+        "joy": 0.05
+      }
+    }
+  ]
+}

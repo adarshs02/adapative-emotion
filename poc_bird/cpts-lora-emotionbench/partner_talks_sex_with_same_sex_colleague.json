@@ -1,0 +1,90 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "emotional_response": [
+      "anger",
+      "hurt"
+    ],
+    "spouse_reaction": [
+      "understanding",
+      "angry"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "emotional_response": "anger",
+      "spouse_reaction": "understanding",
+      "emotions": {
+        "anger": 0.7,
+        "hurt": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_response": "hurt",
+      "spouse_reaction": "understanding",
+      "emotions": {
+        "anger": 0.45,
+        "hurt": 0.55
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_response": "anger",
+      "spouse_reaction": "angry",
+      "emotions": {
+        "anger": 0.65,
+        "hurt": 0.35
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_response": "hurt",
+      "spouse_reaction": "angry",
+      "emotions": {
+        "anger": 0.5,
+        "hurt": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_response": "anger",
+      "spouse_reaction": "understanding",
+      "emotions": {
+        "anger": 0.85,
+        "hurt": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_response": "hurt",
+      "spouse_reaction": "understanding",
+      "emotions": {
+        "anger": 0.7,
+        "hurt": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_response": "anger",
+      "spouse_reaction": "angry",
+      "emotions": {
+        "anger": 0.9,
+        "hurt": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_response": "hurt",
+      "spouse_reaction": "angry",
+      "emotions": {
+        "anger": 0.75,
+        "hurt": 0.25
+      }
+    }
+  ]
+}

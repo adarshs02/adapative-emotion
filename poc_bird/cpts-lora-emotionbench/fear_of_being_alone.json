@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "isolation": [
+      "yes",
+      "no"
+    ],
+    "vulnerability": [
+      "yes",
+      "no"
+    ],
+    "company": [
+      "none",
+      "presence"
+    ]
+  },
+  "cpt": [
+    {
+      "isolation": "yes",
+      "vulnerability": "yes",
+      "company": "none",
+      "emotions": {
+        "anxious": 0.6,
+        "lonely": 0.4,
+        "afraid": 0.0
+      }
+    },
+    {
+      "isolation": "yes",
+      "vulnerability": "yes",
+      "company": "presence",
+      "emotions": {
+        "lonely": 0.2,
+        "relieved": 0.6,
+        "afraid": 0.2
+      }
+    },
+    {
+      "isolation": "yes",
+      "vulnerability": "no",
+      "company": "none",
+      "emotions": {
+        "lonely": 0.45,
+        "afraid": 0.45,
+        "vulnerable": 0.1
+      }
+    },
+    {
+      "isolation": "yes",
+      "vulnerability": "no",
+      "company": "presence",
+      "emotions": {
+        "lonely": 0.25,
+        "relieved": 0.6,
+        "afraid": 0.15
+      }
+    },
+    {
+      "isolation": "no",
+      "vulnerability": "yes",
+      "company": "none",
+      "emotions": {
+        "lonely": 0.45,
+        "afraid": 0.45,
+        "vulnerable": 0.1
+      }
+    },
+    {
+      "isolation": "no",
+      "vulnerability": "yes",
+      "company": "presence",
+      "emotions": {
+        "lonely": 0.25,
+        "relieved": 0.6,
+        "afraid": 0.15
+      }
+    },
+    {
+      "isolation": "no",
+      "vulnerability": "no",
+      "company": "none",
+      "emotions": {
+        "lonely": 0.3,
+        "afraid": 0.4,
+        "vulnerable": 0.3
+      }
+    },
+    {
+      "isolation": "no",
+      "vulnerability": "no",
+      "company": "presence",
+      "emotions": {
+        "lonely": 0.2,
+        "relieved": 0.6,
+        "afraid": 0.2
+      }
+    }
+  ]
+}

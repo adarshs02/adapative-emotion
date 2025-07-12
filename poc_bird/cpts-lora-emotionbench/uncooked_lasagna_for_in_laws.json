@@ -1,0 +1,139 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "emotion": [
+      "happy",
+      "angry",
+      "embarrassed"
+    ],
+    "dinner_success": [
+      "success",
+      "failure"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "emotion": "happy",
+      "dinner_success": "success",
+      "emotions": {
+        "happy": 0.9,
+        "angry": 0.05,
+        "embarrassed": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion": "angry",
+      "dinner_success": "success",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.8,
+        "embarrassed": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion": "embarrassed",
+      "dinner_success": "success",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.1,
+        "embarrassed": 0.85
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion": "happy",
+      "dinner_success": "success",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.8,
+        "embarrassed": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion": "angry",
+      "dinner_success": "success",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.9,
+        "embarrassed": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion": "embarrassed",
+      "dinner_success": "success",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.1,
+        "embarrassed": 0.85
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion": "happy",
+      "dinner_success": "failure",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.1,
+        "embarrassed": 0.85
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion": "angry",
+      "dinner_success": "failure",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.8,
+        "embarrassed": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion": "embarrassed",
+      "dinner_success": "failure",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.1,
+        "embarrassed": 0.85
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion": "happy",
+      "dinner_success": "failure",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.1,
+        "embarrassed": 0.85
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion": "angry",
+      "dinner_success": "failure",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.8,
+        "embarrassed": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion": "embarrassed",
+      "dinner_success": "failure",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.1,
+        "embarrassed": 0.85
+      }
+    }
+  ]
+}

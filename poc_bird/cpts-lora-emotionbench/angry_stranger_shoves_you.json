@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "location_familiarity": [
+      "familiar",
+      "unfamiliar"
+    ],
+    "emotion_target": [
+      "self",
+      "other"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "location_familiarity": "familiar",
+      "emotion_target": "self",
+      "emotions": {
+        "anxious": 0.25,
+        "angry": 0.45,
+        "afraid": 0.3
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "location_familiarity": "unfamiliar",
+      "emotion_target": "self",
+      "emotions": {
+        "anxious": 0.4,
+        "angry": 0.35,
+        "afraid": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "location_familiarity": "familiar",
+      "emotion_target": "self",
+      "emotions": {
+        "anxious": 0.3,
+        "angry": 0.55,
+        "afraid": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "location_familiarity": "unfamiliar",
+      "emotion_target": "self",
+      "emotions": {
+        "anxious": 0.35,
+        "angry": 0.5,
+        "afraid": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "location_familiarity": "familiar",
+      "emotion_target": "other",
+      "emotions": {
+        "anxious": 0.2,
+        "angry": 0.4,
+        "afraid": 0.4
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "location_familiarity": "unfamiliar",
+      "emotion_target": "other",
+      "emotions": {
+        "anxious": 0.3,
+        "angry": 0.45,
+        "afraid": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "location_familiarity": "familiar",
+      "emotion_target": "other",
+      "emotions": {
+        "anxious": 0.25,
+        "angry": 0.5,
+        "afraid": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "location_familiarity": "unfamiliar",
+      "emotion_target": "other",
+      "emotions": {
+        "anxious": 0.3,
+        "angry": 0.55,
+        "afraid": 0.15
+      }
+    }
+  ]
+}

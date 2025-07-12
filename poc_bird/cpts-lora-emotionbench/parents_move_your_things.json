@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "frustration_level": [
+      "low",
+      "high"
+    ],
+    "personal_space": [
+      "invaded",
+      "not_invaded"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "frustration_level": "low",
+      "personal_space": "invaded",
+      "emotions": {
+        "angry": 0.33,
+        "frustrated": 0.67,
+        "happy": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "frustration_level": "low",
+      "personal_space": "not_invaded",
+      "emotions": {
+        "angry": 0.22,
+        "frustrated": 0.78,
+        "happy": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "frustration_level": "high",
+      "personal_space": "invaded",
+      "emotions": {
+        "angry": 0.47,
+        "frustrated": 0.53,
+        "happy": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "frustration_level": "high",
+      "personal_space": "not_invaded",
+      "emotions": {
+        "angry": 0.33,
+        "frustrated": 0.67,
+        "happy": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "frustration_level": "low",
+      "personal_space": "invaded",
+      "emotions": {
+        "angry": 0.47,
+        "frustrated": 0.53,
+        "happy": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "frustration_level": "low",
+      "personal_space": "not_invaded",
+      "emotions": {
+        "angry": 0.33,
+        "frustrated": 0.67,
+        "happy": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "frustration_level": "high",
+      "personal_space": "invaded",
+      "emotions": {
+        "angry": 0.58,
+        "frustrated": 0.42,
+        "happy": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "frustration_level": "high",
+      "personal_space": "not_invaded",
+      "emotions": {
+        "angry": 0.4,
+        "frustrated": 0.6,
+        "happy": 0.0
+      }
+    }
+  ]
+}

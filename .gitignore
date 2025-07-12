@@ -43,3 +43,17 @@ Thumbs.db
 
 # Project specific
 results/*.json
+
+# Large data files
+*.pkl
+*.idx
+*.model
+
+# LoRA adapters
+train/lora-adapter/
+poc_bird/logs/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class

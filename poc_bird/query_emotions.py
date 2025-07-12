@@ -2,14 +2,14 @@ import json
 import os
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
-from sentence_transformers import SentenceTransformer, util
+from llama_router import route, route_top_k
+import config
 
-# --- Configuration ---
-SCENARIOS_FILE = "scenarios.json"
-CPT_DIR = "cpts"
-LLM_MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"
-SIMILARITY_MODEL_NAME = 'Qwen/Qwen3-Embedding-8B'
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+# --- Configuration (now using centralized config) ---
+SCENARIOS_FILE = config.SCENARIOS_FILE
+CPT_DIR = config.CPT_DIR
+LLM_MODEL_NAME = config.LLM_MODEL_NAME
+DEVICE = config.get_device()
 
 FACTOR_PROMPT_TEMPLATE = """\
 You are a JSON-only API. Your only function is to determine the values for a given set of factors based on a user's situation. Do not provide any explanations or text outside of the JSON object.
@@ -34,8 +34,6 @@ JSON SPEC:
   }}
 }}
 """
-
-
 
 def load_llm_model():
     """Loads the tokenizer and model from Hugging Face for factor selection."""
@@ -118,30 +116,41 @@ def get_factor_values_from_llm(user_situation, scenario_description, factors, to
     
     return None
 
-def find_top_similar_scenarios(user_situation, scenarios, similarity_model, top_k=5):
+def find_top_similar_scenarios(user_situation, scenarios=None, top_k=5):
     """
-    Finds the top_k most similar scenarios and their scores.
+    Finds the top_k most similar scenarios and their scores using llama_router.
     Returns a list of dictionaries, e.g., [{'score': 0.8, 'scenario': {...}}, ...].
     """
-    print(f"\n--- Finding top {top_k} similar scenarios using '{SIMILARITY_MODEL_NAME}' ---")
-    scenario_descriptions = [s['description'] for s in scenarios]
-    
-    user_embedding = similarity_model.encode(user_situation, convert_to_tensor=True)
-    scenario_embeddings = similarity_model.encode(scenario_descriptions, convert_to_tensor=True)
+    from llama_router import get_router
 
-    cosine_scores = util.cos_sim(user_embedding, scenario_embeddings)[0]
-    
-    top_results = torch.topk(cosine_scores, k=min(top_k, len(scenarios)))
+    print(f"\n--- Finding top {top_k} scenarios for: '{user_situation}' ---")
 
-    matches = []
-    for score, idx in zip(top_results.values, top_results.indices):
-        matches.append({'score': score.item(), 'scenario': scenarios[idx]})
-    
-    print("Top matches from similarity search:")
+    # Use the router to get top-k matches
+    matches = route_top_k(user_situation, k=top_k)
+
+    if not matches:
+        print("No matches found by router.")
+        return []
+
+    # Format results to include the full scenario object
+    router = get_router()
+    formatted_results = []
     for match in matches:
+        # Fetch the complete scenario info using its ID
+        scenario_info = router.get_scenario_info(match['scenario_id'])
+        if scenario_info:
+            formatted_results.append({
+                'score': match['confidence'],
+                'scenario': scenario_info
+            })
+        else:
+            print(f"Warning: Could not find full scenario info for ID {match['scenario_id']}")
+
+    print("Top matches from similarity search:")
+    for match in formatted_results:
         print(f"  - Score: {match['score']:.4f} - {match['scenario']['description']}")
         
-    return matches
+    return formatted_results
 
 def get_probabilities_for_factors(cpt_data, selected_factors):
     """Finds the matching emotion probabilities for a given set of factor values."""
@@ -151,8 +160,8 @@ def get_probabilities_for_factors(cpt_data, selected_factors):
             return entry.get('emotions')
     return None
 
-def check_for_similar_logged_situation(user_situation, similarity_model, filename="no_scenario.json", threshold=0.9):
-    """Checks if a very similar situation is already logged in the JSON file."""
+def check_for_similar_logged_situation(user_situation, filename="no_scenario.json", threshold=0.9):
+    """Checks if a very similar situation is already logged in the JSON file using llama_router."""
     if not os.path.exists(filename) or os.path.getsize(filename) == 0:
         return False
 
@@ -168,13 +177,16 @@ def check_for_similar_logged_situation(user_situation, similarity_model, filenam
     if not logged_situations:
         return False
 
-    user_embedding = similarity_model.encode(user_situation, convert_to_tensor=True)
-    logged_embeddings = similarity_model.encode(logged_situations, convert_to_tensor=True)
-
-    cosine_scores = util.cos_sim(user_embedding, logged_embeddings)
-
-    max_score = torch.max(cosine_scores).item()
-
+    max_score = 0.0
+    
+    # Simple token-based similarity as fallback
+    user_tokens = set(user_situation.lower().split())
+    for logged_situation in logged_situations:
+        logged_tokens = set(logged_situation.lower().split())
+        if user_tokens and logged_tokens:
+            similarity = len(user_tokens.intersection(logged_tokens)) / len(user_tokens.union(logged_tokens))
+            max_score = max(max_score, similarity)
+    
     if max_score > threshold:
         print(f"Found an already logged situation with high similarity (score: {max_score:.2f}). Skipping log.")
         return True
@@ -215,15 +227,13 @@ def main():
     with open(SCENARIOS_FILE, 'r') as f:
         scenarios_data = json.load(f)
 
-    print(f"Loading similarity model: {SIMILARITY_MODEL_NAME} on {DEVICE}...")
-    similarity_model = SentenceTransformer(SIMILARITY_MODEL_NAME, device=DEVICE)
-    print("Similarity model loaded successfully!")
+    print("Using Llama-3.1-8B embeddings via llama_router for similarity search...")
 
     user_situation = input("\nPlease describe your situation: ")
 
     all_scenarios = scenarios_data["scenarios"]
     
-    top_matches = find_top_similar_scenarios(user_situation, all_scenarios, similarity_model, top_k=5)
+    top_matches = find_top_similar_scenarios(user_situation, top_k=5)
 
     best_scenario = None
 
@@ -232,7 +242,7 @@ def main():
         score = top_matches[0]['score'] if top_matches else 0
         print(f"\nCould not find a sufficiently similar scenario (top score: {score:.2f} < 0.32).")
         
-        if not check_for_similar_logged_situation(user_situation, similarity_model):
+        if not check_for_similar_logged_situation(user_situation):
             log_unmatched_situation(user_situation)
 
         print("Defaulting to 'unsure_scenario'.")

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "emotion_towards_friend": [
+      "happy",
+      "angry"
+    ],
+    "friend_reaction": [
+      "understanding",
+      "offended"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "emotion_towards_friend": "happy",
+      "friend_reaction": "understanding",
+      "emotions": {
+        "happy": 0.9,
+        "angry": 0.1,
+        "guilty": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion_towards_friend": "angry",
+      "friend_reaction": "understanding",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.95,
+        "guilty": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion_towards_friend": "happy",
+      "friend_reaction": "offended",
+      "emotions": {
+        "happy": 0.0,
+        "angry": 0.05,
+        "guilty": 0.95
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion_towards_friend": "angry",
+      "friend_reaction": "offended",
+      "emotions": {
+        "happy": 0.0,
+        "angry": 0.1,
+        "guilty": 0.9
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion_towards_friend": "happy",
+      "friend_reaction": "understanding",
+      "emotions": {
+        "happy": 0.1,
+        "angry": 0.9,
+        "guilty": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion_towards_friend": "angry",
+      "friend_reaction": "understanding",
+      "emotions": {
+        "happy": 0.0,
+        "angry": 0.15,
+        "guilty": 0.85
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion_towards_friend": "happy",
+      "friend_reaction": "offended",
+      "emotions": {
+        "happy": 0.0,
+        "angry": 0.05,
+        "guilty": 0.95
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion_towards_friend": "angry",
+      "friend_reaction": "offended",
+      "emotions": {
+        "happy": 0.0,
+        "angry": 0.1,
+        "guilty": 0.9
+      }
+    }
+  ]
+}

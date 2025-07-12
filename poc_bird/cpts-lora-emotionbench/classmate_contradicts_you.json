@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "classmate_perspective": [
+      "agree",
+      "disagree"
+    ],
+    "classmate_emotion": [
+      "happy",
+      "angry"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "classmate_perspective": "agree",
+      "classmate_emotion": "happy",
+      "emotions": {
+        "happy": 0.85,
+        "angry": 0.1,
+        "sad": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "classmate_perspective": "agree",
+      "classmate_emotion": "angry",
+      "emotions": {
+        "happy": 0.15,
+        "angry": 0.75,
+        "sad": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "classmate_perspective": "disagree",
+      "classmate_emotion": "happy",
+      "emotions": {
+        "happy": 0.15,
+        "angry": 0.75,
+        "sad": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "classmate_perspective": "disagree",
+      "classmate_emotion": "angry",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.85,
+        "sad": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "classmate_perspective": "agree",
+      "classmate_emotion": "happy",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.85,
+        "sad": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "classmate_perspective": "agree",
+      "classmate_emotion": "angry",
+      "emotions": {
+        "happy": 0.1,
+        "angry": 0.8,
+        "sad": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "classmate_perspective": "disagree",
+      "classmate_emotion": "happy",
+      "emotions": {
+        "happy": 0.1,
+        "angry": 0.8,
+        "sad": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "classmate_perspective": "disagree",
+      "classmate_emotion": "angry",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.9,
+        "sad": 0.05
+      }
+    }
+  ]
+}

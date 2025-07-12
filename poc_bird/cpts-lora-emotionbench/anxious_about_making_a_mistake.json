@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "stress_level": [
+      "low",
+      "high"
+    ],
+    "responsibility": [
+      "low",
+      "high"
+    ],
+    "consequences": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "stress_level": "low",
+      "responsibility": "low",
+      "consequences": "low",
+      "emotions": {
+        "happy": 0.7,
+        "excited": 0.25,
+        "stressed": 0.05
+      }
+    },
+    {
+      "stress_level": "low",
+      "responsibility": "low",
+      "consequences": "high",
+      "emotions": {
+        "anxious": 0.55,
+        "stressed": 0.4,
+        "angry": 0.05
+      }
+    },
+    {
+      "stress_level": "low",
+      "responsibility": "high",
+      "consequences": "low",
+      "emotions": {
+        "anxious": 0.55,
+        "stressed": 0.4,
+        "angry": 0.05
+      }
+    },
+    {
+      "stress_level": "low",
+      "responsibility": "high",
+      "consequences": "high",
+      "emotions": {
+        "stressed": 0.65,
+        "anxious": 0.33,
+        "angry": 0.02
+      }
+    },
+    {
+      "stress_level": "high",
+      "responsibility": "low",
+      "consequences": "low",
+      "emotions": {
+        "anxious": 0.55,
+        "stressed": 0.4,
+        "angry": 0.05
+      }
+    },
+    {
+      "stress_level": "high",
+      "responsibility": "low",
+      "consequences": "high",
+      "emotions": {
+        "stressed": 0.65,
+        "anxious": 0.33,
+        "angry": 0.02
+      }
+    },
+    {
+      "stress_level": "high",
+      "responsibility": "high",
+      "consequences": "low",
+      "emotions": {
+        "stressed": 0.65,
+        "anxious": 0.33,
+        "angry": 0.02
+      }
+    },
+    {
+      "stress_level": "high",
+      "responsibility": "high",
+      "consequences": "high",
+      "emotions": {
+        "stressed": 1.0,
+        "anxious": 0.0,
+        "angry": 0.0
+      }
+    }
+  ]
+}

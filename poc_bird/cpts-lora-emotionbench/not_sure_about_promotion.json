@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "promotion_decision": [
+      "accepted",
+      "rejected"
+    ],
+    "performance_rating": [
+      "good",
+      "bad"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "promotion_decision": "accepted",
+      "performance_rating": "good",
+      "emotions": {
+        "happy": 0.6,
+        "relieved": 0.35,
+        "confident": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "promotion_decision": "accepted",
+      "performance_rating": "bad",
+      "emotions": {
+        "anxious": 0.6,
+        "upset": 0.35,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "promotion_decision": "rejected",
+      "performance_rating": "good",
+      "emotions": {
+        "disappointed": 0.6,
+        "surprised": 0.35,
+        "confused": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "promotion_decision": "rejected",
+      "performance_rating": "bad",
+      "emotions": {
+        "angry": 0.6,
+        "upset": 0.35,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "promotion_decision": "accepted",
+      "performance_rating": "good",
+      "emotions": {
+        "relieved": 0.6,
+        "confident": 0.35,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "promotion_decision": "accepted",
+      "performance_rating": "bad",
+      "emotions": {
+        "anxious": 0.6,
+        "upset": 0.35,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "promotion_decision": "rejected",
+      "performance_rating": "good",
+      "emotions": {
+        "disappointed": 0.6,
+        "surprised": 0.35,
+        "confused": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "promotion_decision": "rejected",
+      "performance_rating": "bad",
+      "emotions": {
+        "angry": 0.6,
+        "upset": 0.35,
+        "frustrated": 0.05
+      }
+    }
+  ]
+}

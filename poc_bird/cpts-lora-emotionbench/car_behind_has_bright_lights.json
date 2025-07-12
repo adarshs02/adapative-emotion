@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "driving_skills": [
+      "good",
+      "bad"
+    ],
+    "night_vision": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "driving_skills": "good",
+      "night_vision": "yes",
+      "emotions": {
+        "anger": 0.25,
+        "fear": 0.5,
+        "relief": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driving_skills": "good",
+      "night_vision": "no",
+      "emotions": {
+        "anger": 0.35,
+        "fear": 0.55,
+        "relief": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driving_skills": "bad",
+      "night_vision": "yes",
+      "emotions": {
+        "anger": 0.3,
+        "fear": 0.55,
+        "relief": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driving_skills": "bad",
+      "night_vision": "no",
+      "emotions": {
+        "anger": 0.45,
+        "fear": 0.5,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driving_skills": "good",
+      "night_vision": "yes",
+      "emotions": {
+        "anger": 0.5,
+        "fear": 0.45,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driving_skills": "good",
+      "night_vision": "no",
+      "emotions": {
+        "anger": 0.6,
+        "fear": 0.35,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driving_skills": "bad",
+      "night_vision": "yes",
+      "emotions": {
+        "anger": 0.65,
+        "fear": 0.3,
+        "relief": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driving_skills": "bad",
+      "night_vision": "no",
+      "emotions": {
+        "anger": 0.75,
+        "fear": 0.2,
+        "relief": 0.05
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "betrayal_type": [
+      "minor",
+      "major"
+    ],
+    "trust_level": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "betrayal_type": "minor",
+      "trust_level": "low",
+      "emotions": {
+        "anger": 0.35,
+        "sadness": 0.55,
+        "disgust": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "betrayal_type": "major",
+      "trust_level": "low",
+      "emotions": {
+        "anger": 0.6,
+        "sadness": 0.35,
+        "disgust": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "betrayal_type": "minor",
+      "trust_level": "high",
+      "emotions": {
+        "anger": 0.2,
+        "sadness": 0.7,
+        "disgust": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "betrayal_type": "major",
+      "trust_level": "high",
+      "emotions": {
+        "anger": 0.35,
+        "sadness": 0.6,
+        "disgust": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "betrayal_type": "minor",
+      "trust_level": "low",
+      "emotions": {
+        "anger": 0.7,
+        "sadness": 0.25,
+        "disgust": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "betrayal_type": "major",
+      "trust_level": "low",
+      "emotions": {
+        "anger": 0.8,
+        "sadness": 0.15,
+        "disgust": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "betrayal_type": "minor",
+      "trust_level": "high",
+      "emotions": {
+        "anger": 0.5,
+        "sadness": 0.45,
+        "disgust": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "betrayal_type": "major",
+      "trust_level": "high",
+      "emotions": {
+        "anger": 0.65,
+        "sadness": 0.3,
+        "disgust": 0.05
+      }
+    }
+  ]
+}

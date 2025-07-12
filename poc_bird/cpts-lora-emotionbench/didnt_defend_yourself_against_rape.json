@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "victim_age": [
+      "young",
+      "old"
+    ],
+    "defence": [
+      "none",
+      "self"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "victim_age": "young",
+      "defence": "none",
+      "emotions": {
+        "anger": 0.65,
+        "shock": 0.35,
+        "disgust": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "victim_age": "young",
+      "defence": "self",
+      "emotions": {
+        "anger": 0.55,
+        "shock": 0.4,
+        "disgust": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "victim_age": "old",
+      "defence": "none",
+      "emotions": {
+        "anger": 0.6,
+        "shock": 0.4,
+        "disgust": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "victim_age": "old",
+      "defence": "self",
+      "emotions": {
+        "anger": 0.55,
+        "shock": 0.4,
+        "disgust": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "victim_age": "young",
+      "defence": "none",
+      "emotions": {
+        "anger": 0.85,
+        "shock": 0.15,
+        "disgust": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "victim_age": "young",
+      "defence": "self",
+      "emotions": {
+        "anger": 0.75,
+        "shock": 0.25,
+        "disgust": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "victim_age": "old",
+      "defence": "none",
+      "emotions": {
+        "anger": 0.8,
+        "shock": 0.2,
+        "disgust": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "victim_age": "old",
+      "defence": "self",
+      "emotions": {
+        "anger": 0.7,
+        "shock": 0.3,
+        "disgust": 0.0
+      }
+    }
+  ]
+}

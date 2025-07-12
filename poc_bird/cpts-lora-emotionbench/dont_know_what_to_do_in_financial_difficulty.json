@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "financial_situation": [
+      "poor",
+      "rich"
+    ],
+    "financial_experience": [
+      "none",
+      "experienced"
+    ],
+    "financial_support": [
+      "none",
+      "support"
+    ]
+  },
+  "cpt": [
+    {
+      "financial_situation": "poor",
+      "financial_experience": "none",
+      "financial_support": "none",
+      "emotions": {
+        "anger": 0.6,
+        "fear": 0.35,
+        "disgust": 0.05
+      }
+    },
+    {
+      "financial_situation": "poor",
+      "financial_experience": "none",
+      "financial_support": "support",
+      "emotions": {
+        "anger": 0.4,
+        "fear": 0.45,
+        "gratitude": 0.15
+      }
+    },
+    {
+      "financial_situation": "poor",
+      "financial_experience": "experienced",
+      "financial_support": "none",
+      "emotions": {
+        "anger": 0.55,
+        "fear": 0.3,
+        "disgust": 0.15
+      }
+    },
+    {
+      "financial_situation": "poor",
+      "financial_experience": "experienced",
+      "financial_support": "support",
+      "emotions": {
+        "anger": 0.45,
+        "fear": 0.35,
+        "gratitude": 0.2
+      }
+    },
+    {
+      "financial_situation": "rich",
+      "financial_experience": "none",
+      "financial_support": "none",
+      "emotions": {
+        "anger": 0.2,
+        "fear": 0.35,
+        "disgust": 0.45
+      }
+    },
+    {
+      "financial_situation": "rich",
+      "financial_experience": "none",
+      "financial_support": "support",
+      "emotions": {
+        "anger": 0.15,
+        "fear": 0.35,
+        "gratitude": 0.5
+      }
+    },
+    {
+      "financial_situation": "rich",
+      "financial_experience": "experienced",
+      "financial_support": "none",
+      "emotions": {
+        "anger": 0.25,
+        "fear": 0.3,
+        "disgust": 0.45
+      }
+    },
+    {
+      "financial_situation": "rich",
+      "financial_experience": "experienced",
+      "financial_support": "support",
+      "emotions": {
+        "anger": 0.15,
+        "fear": 0.3,
+        "gratitude": 0.55
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "embarrassment_level": [
+      "low",
+      "high"
+    ],
+    "risk_awareness": [
+      "aware",
+      "unaware"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "embarrassment_level": "low",
+      "risk_awareness": "aware",
+      "emotions": {
+        "excitement": 0.6,
+        "nervousness": 0.35,
+        "guilt": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "embarrassment_level": "high",
+      "risk_awareness": "aware",
+      "emotions": {
+        "excitement": 0.4,
+        "nervousness": 0.55,
+        "guilt": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "embarrassment_level": "low",
+      "risk_awareness": "unaware",
+      "emotions": {
+        "excitement": 0.7,
+        "nervousness": 0.25,
+        "guilt": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "embarrassment_level": "high",
+      "risk_awareness": "unaware",
+      "emotions": {
+        "excitement": 0.5,
+        "nervousness": 0.45,
+        "guilt": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "embarrassment_level": "low",
+      "risk_awareness": "aware",
+      "emotions": {
+        "excitement": 0.4,
+        "nervousness": 0.55,
+        "guilt": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "embarrassment_level": "high",
+      "risk_awareness": "aware",
+      "emotions": {
+        "excitement": 0.3,
+        "nervousness": 0.65,
+        "guilt": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "embarrassment_level": "low",
+      "risk_awareness": "unaware",
+      "emotions": {
+        "excitement": 0.5,
+        "nervousness": 0.45,
+        "guilt": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "embarrassment_level": "high",
+      "risk_awareness": "unaware",
+      "emotions": {
+        "excitement": 0.4,
+        "nervousness": 0.55,
+        "guilt": 0.05
+      }
+    }
+  ]
+}

@@ -1,4 +1,11 @@
 transformers
 torch
+numpy<1.25
 accelerate
 sentence-transformers
+tqdm
+peft
+trl
+bitsandbytes
+datasets
+pandas<2.0.0

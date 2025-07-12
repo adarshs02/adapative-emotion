@@ -1,0 +1,59 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "relationship_length": [
+      "new",
+      "established"
+    ],
+    "emotions_felt": [
+      "anger",
+      "sadness",
+      "confusion"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "relationship_length": "new",
+      "emotions_felt": {
+        "anger": 0.2,
+        "sadness": 0.55,
+        "confusion": 0.25
+      },
+      "emotions": {}
+    },
+    {
+      "offence_history": "first_time",
+      "relationship_length": "established",
+      "emotions_felt": {
+        "anger": 0.1,
+        "sadness": 0.45,
+        "confusion": 0.45
+      },
+      "emotions": {}
+    },
+    {
+      "offence_history": "repeated",
+      "relationship_length": "new",
+      "emotions_felt": {
+        "anger": 0.5,
+        "sadness": 0.3,
+        "confusion": 0.2
+      },
+      "emotions": {}
+    },
+    {
+      "offence_history": "repeated",
+      "relationship_length": "established",
+      "emotions_felt": {
+        "anger": 0.6,
+        "sadness": 0.3,
+        "confusion": 0.1
+      },
+      "emotions": {}
+    }
+  ]
+}

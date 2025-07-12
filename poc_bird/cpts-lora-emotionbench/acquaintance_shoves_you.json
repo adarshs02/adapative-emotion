@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "situation_type": [
+      "serious",
+      "playful"
+    ],
+    "gender_of_acquaintance": [
+      "male",
+      "female"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "situation_type": "serious",
+      "gender_of_acquaintance": "male",
+      "emotions": {
+        "anger": 0.85,
+        "confusion": 0.1,
+        "happiness": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "situation_type": "serious",
+      "gender_of_acquaintance": "female",
+      "emotions": {
+        "anger": 0.75,
+        "confusion": 0.2,
+        "happiness": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "situation_type": "serious",
+      "gender_of_acquaintance": "male",
+      "emotions": {
+        "anger": 0.95,
+        "confusion": 0.05,
+        "happiness": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "situation_type": "serious",
+      "gender_of_acquaintance": "female",
+      "emotions": {
+        "anger": 0.9,
+        "confusion": 0.05,
+        "happiness": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "situation_type": "playful",
+      "gender_of_acquaintance": "male",
+      "emotions": {
+        "anger": 0.05,
+        "confusion": 0.1,
+        "happiness": 0.85
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "situation_type": "playful",
+      "gender_of_acquaintance": "female",
+      "emotions": {
+        "anger": 0.05,
+        "confusion": 0.1,
+        "happiness": 0.85
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "situation_type": "playful",
+      "gender_of_acquaintance": "male",
+      "emotions": {
+        "anger": 0.05,
+        "confusion": 0.1,
+        "happiness": 0.85
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "situation_type": "playful",
+      "gender_of_acquaintance": "female",
+      "emotions": {
+        "anger": 0.05,
+        "confusion": 0.1,
+        "happiness": 0.85
+      }
+    }
+  ]
+}

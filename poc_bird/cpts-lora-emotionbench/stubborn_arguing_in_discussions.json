@@ -1,0 +1,90 @@
+{
+  "factors": {
+    "emotion": [
+      "offended",
+      "frustrated"
+    ],
+    "stubbornness": [
+      "first_time",
+      "repeated"
+    ],
+    "evidence": [
+      "none",
+      "enough"
+    ]
+  },
+  "cpt": [
+    {
+      "emotion": "offended",
+      "stubbornness": "first_time",
+      "evidence": "none",
+      "emotions": {
+        "offended": 0.85,
+        "frustrated": 0.15
+      }
+    },
+    {
+      "emotion": "offended",
+      "stubbornness": "repeated",
+      "evidence": "none",
+      "emotions": {
+        "offended": 0.7,
+        "frustrated": 0.3
+      }
+    },
+    {
+      "emotion": "offended",
+      "stubbornness": "first_time",
+      "evidence": "enough",
+      "emotions": {
+        "offended": 0.9,
+        "frustrated": 0.1
+      }
+    },
+    {
+      "emotion": "offended",
+      "stubbornness": "repeated",
+      "evidence": "enough",
+      "emotions": {
+        "offended": 0.85,
+        "frustrated": 0.15
+      }
+    },
+    {
+      "emotion": "frustrated",
+      "stubbornness": "first_time",
+      "evidence": "none",
+      "emotions": {
+        "frustrated": 0.95,
+        "offended": 0.05
+      }
+    },
+    {
+      "emotion": "frustrated",
+      "stubbornness": "repeated",
+      "evidence": "none",
+      "emotions": {
+        "frustrated": 0.9,
+        "offended": 0.1
+      }
+    },
+    {
+      "emotion": "frustrated",
+      "stubbornness": "first_time",
+      "evidence": "enough",
+      "emotions": {
+        "frustrated": 0.95,
+        "offended": 0.05
+      }
+    },
+    {
+      "emotion": "frustrated",
+      "stubbornness": "repeated",
+      "evidence": "enough",
+      "emotions": {
+        "frustrated": 0.95,
+        "offended": 0.05
+      }
+    }
+  ]
+}

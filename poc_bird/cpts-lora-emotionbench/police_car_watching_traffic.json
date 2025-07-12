@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "offence_type": [
+      "minor",
+      "major"
+    ],
+    "officer_presence": [
+      "present",
+      "absent"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "offence_type": "minor",
+      "officer_presence": "present",
+      "emotions": {
+        "happy": 0.45,
+        "surprised": 0.5,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "offence_type": "minor",
+      "officer_presence": "absent",
+      "emotions": {
+        "happy": 0.45,
+        "surprised": 0.5,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offence_type": "minor",
+      "officer_presence": "present",
+      "emotions": {
+        "happy": 0.05,
+        "surprised": 0.45,
+        "angry": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offence_type": "minor",
+      "officer_presence": "absent",
+      "emotions": {
+        "happy": 0.05,
+        "surprised": 0.45,
+        "angry": 0.5
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "offence_type": "major",
+      "officer_presence": "present",
+      "emotions": {
+        "happy": 0.05,
+        "surprised": 0.45,
+        "angry": 0.5
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "offence_type": "major",
+      "officer_presence": "absent",
+      "emotions": {
+        "happy": 0.05,
+        "surprised": 0.45,
+        "angry": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offence_type": "major",
+      "officer_presence": "present",
+      "emotions": {
+        "happy": 0.05,
+        "surprised": 0.45,
+        "angry": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offence_type": "major",
+      "officer_presence": "absent",
+      "emotions": {
+        "happy": 0.05,
+        "surprised": 0.45,
+        "angry": 0.5
+      }
+    }
+  ]
+}

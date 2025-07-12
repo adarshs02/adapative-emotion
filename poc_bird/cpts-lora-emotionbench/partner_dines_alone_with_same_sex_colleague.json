@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "emotion_towards_partner": [
+      "happy",
+      "angry"
+    ],
+    "emotion_towards_colleague": [
+      "happy",
+      "jealous"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "emotion_towards_partner": "happy",
+      "emotion_towards_colleague": "happy",
+      "emotions": {
+        "happy": 0.75,
+        "angry": 0.15,
+        "jealous": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion_towards_partner": "happy",
+      "emotion_towards_colleague": "jealous",
+      "emotions": {
+        "happy": 0.6,
+        "angry": 0.25,
+        "jealous": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion_towards_partner": "angry",
+      "emotion_towards_colleague": "happy",
+      "emotions": {
+        "happy": 0.15,
+        "angry": 0.75,
+        "jealous": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion_towards_partner": "angry",
+      "emotion_towards_colleague": "jealous",
+      "emotions": {
+        "happy": 0.1,
+        "angry": 0.65,
+        "jealous": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion_towards_partner": "happy",
+      "emotion_towards_colleague": "happy",
+      "emotions": {
+        "happy": 0.6,
+        "angry": 0.3,
+        "jealous": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion_towards_partner": "happy",
+      "emotion_towards_colleague": "jealous",
+      "emotions": {
+        "happy": 0.47,
+        "angry": 0.37,
+        "jealous": 0.16
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion_towards_partner": "angry",
+      "emotion_towards_colleague": "happy",
+      "emotions": {
+        "happy": 0.15,
+        "angry": 0.7,
+        "jealous": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion_towards_partner": "angry",
+      "emotion_towards_colleague": "jealous",
+      "emotions": {
+        "happy": 0.1,
+        "angry": 0.7,
+        "jealous": 0.2
+      }
+    }
+  ]
+}

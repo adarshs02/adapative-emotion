@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "difficulty": [
+      "easy",
+      "hard"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "responsibility": [
+      "own",
+      "shared"
+    ]
+  },
+  "cpt": [
+    {
+      "difficulty": "easy",
+      "offence_history": "first_time",
+      "responsibility": "own",
+      "emotions": {
+        "angry": 0.3,
+        "scared": 0.45,
+        "confident": 0.25
+      }
+    },
+    {
+      "difficulty": "easy",
+      "offence_history": "first_time",
+      "responsibility": "shared",
+      "emotions": {
+        "angry": 0.25,
+        "scared": 0.45,
+        "confident": 0.3
+      }
+    },
+    {
+      "difficulty": "easy",
+      "offence_history": "repeated",
+      "responsibility": "own",
+      "emotions": {
+        "angry": 0.45,
+        "scared": 0.3,
+        "confident": 0.25
+      }
+    },
+    {
+      "difficulty": "easy",
+      "offence_history": "repeated",
+      "responsibility": "shared",
+      "emotions": {
+        "angry": 0.35,
+        "scared": 0.4,
+        "confident": 0.25
+      }
+    },
+    {
+      "difficulty": "hard",
+      "offence_history": "first_time",
+      "responsibility": "own",
+      "emotions": {
+        "angry": 0.5,
+        "scared": 0.3,
+        "confident": 0.2
+      }
+    },
+    {
+      "difficulty": "hard",
+      "offence_history": "first_time",
+      "responsibility": "shared",
+      "emotions": {
+        "angry": 0.45,
+        "scared": 0.4,
+        "confident": 0.15
+      }
+    },
+    {
+      "difficulty": "hard",
+      "offence_history": "repeated",
+      "responsibility": "own",
+      "emotions": {
+        "angry": 0.6,
+        "scared": 0.25,
+        "confident": 0.15
+      }
+    },
+    {
+      "difficulty": "hard",
+      "offence_history": "repeated",
+      "responsibility": "shared",
+      "emotions": {
+        "angry": 0.55,
+        "scared": 0.35,
+        "confident": 0.1
+      }
+    }
+  ]
+}

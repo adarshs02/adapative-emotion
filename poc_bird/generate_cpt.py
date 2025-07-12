@@ -4,8 +4,10 @@ import torch
 import re
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
+import config
+
 # --- Model Configuration ---
-MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.3"
+MODEL_NAME = config.LLM_MODEL_NAME
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 # --- Prompt Templates ---
@@ -150,8 +152,8 @@ def main():
     Main function to batch-generate CPTs for all scenarios.
     It generates multiple samples for each scenario and averages the emotion probabilities.
     """
-    cpt_dir = "cpts-emotionbench"
-    scenarios_file = "scenarios-emotionbench.json"
+    cpt_dir = config.CPT_DIR
+    scenarios_file = config.SCENARIOS_FILE
     num_samples = 2  # Number of samples to generate per scenario
 
     # Ensure the output directory exists

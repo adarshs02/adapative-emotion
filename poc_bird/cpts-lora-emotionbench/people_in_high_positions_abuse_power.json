@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "position_power": [
+      "low",
+      "high"
+    ],
+    "abuse_type": [
+      "minor",
+      "major"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "position_power": "low",
+      "abuse_type": "minor",
+      "emotions": {
+        "anger": 0.05,
+        "frustration": 0.35,
+        "shock": 0.6
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "position_power": "low",
+      "abuse_type": "major",
+      "emotions": {
+        "anger": 0.2,
+        "frustration": 0.45,
+        "shock": 0.35
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "position_power": "high",
+      "abuse_type": "minor",
+      "emotions": {
+        "anger": 0.05,
+        "frustration": 0.35,
+        "shock": 0.6
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "position_power": "high",
+      "abuse_type": "major",
+      "emotions": {
+        "anger": 0.2,
+        "frustration": 0.45,
+        "shock": 0.35
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "position_power": "low",
+      "abuse_type": "minor",
+      "emotions": {
+        "anger": 0.1,
+        "frustration": 0.45,
+        "shock": 0.45
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "position_power": "low",
+      "abuse_type": "major",
+      "emotions": {
+        "anger": 0.25,
+        "frustration": 0.5,
+        "shock": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "position_power": "high",
+      "abuse_type": "minor",
+      "emotions": {
+        "anger": 0.1,
+        "frustration": 0.45,
+        "shock": 0.45
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "position_power": "high",
+      "abuse_type": "major",
+      "emotions": {
+        "anger": 0.25,
+        "frustration": 0.5,
+        "shock": 0.25
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "visibility": [
+      "good",
+      "bad"
+    ],
+    "anxiety": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "visibility": "good",
+      "anxiety": "low",
+      "emotions": {
+        "happy": 0.7,
+        "anxious": 0.2,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "visibility": "good",
+      "anxiety": "high",
+      "emotions": {
+        "anxious": 0.8,
+        "angry": 0.1,
+        "frustrated": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "visibility": "bad",
+      "anxiety": "low",
+      "emotions": {
+        "nervous": 0.7,
+        "angry": 0.2,
+        "frustrated": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "visibility": "bad",
+      "anxiety": "high",
+      "emotions": {
+        "nervous": 0.8,
+        "angry": 0.1,
+        "frustrated": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "visibility": "good",
+      "anxiety": "low",
+      "emotions": {
+        "angry": 0.7,
+        "frustrated": 0.2,
+        "anxious": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "visibility": "good",
+      "anxiety": "high",
+      "emotions": {
+        "angry": 0.8,
+        "frustrated": 0.1,
+        "anxious": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "visibility": "bad",
+      "anxiety": "low",
+      "emotions": {
+        "angry": 0.9,
+        "frustrated": 0.1,
+        "anxious": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "visibility": "bad",
+      "anxiety": "high",
+      "emotions": {
+        "angry": 1.0,
+        "frustrated": 0.0,
+        "anxious": 0.0
+      }
+    }
+  ]
+}

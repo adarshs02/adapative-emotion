@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "traffic_time": [
+      "less_than_10mins",
+      "more_than_10mins"
+    ],
+    "traffic_cause": [
+      "accident",
+      "roadworks"
+    ],
+    "traffic_frequency": [
+      "first_time",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "traffic_time": "less_than_10mins",
+      "traffic_cause": "accident",
+      "traffic_frequency": "first_time",
+      "emotions": {
+        "happy": 0.5,
+        "anxious": 0.45,
+        "angry": 0.05
+      }
+    },
+    {
+      "traffic_time": "less_than_10mins",
+      "traffic_cause": "roadworks",
+      "traffic_frequency": "first_time",
+      "emotions": {
+        "happy": 0.3,
+        "anxious": 0.6,
+        "angry": 0.1
+      }
+    },
+    {
+      "traffic_time": "less_than_10mins",
+      "traffic_cause": "accident",
+      "traffic_frequency": "repeated",
+      "emotions": {
+        "happy": 0.2,
+        "anxious": 0.7,
+        "angry": 0.1
+      }
+    },
+    {
+      "traffic_time": "less_than_10mins",
+      "traffic_cause": "roadworks",
+      "traffic_frequency": "repeated",
+      "emotions": {
+        "happy": 0.1,
+        "anxious": 0.8,
+        "angry": 0.1
+      }
+    },
+    {
+      "traffic_time": "more_than_10mins",
+      "traffic_cause": "accident",
+      "traffic_frequency": "first_time",
+      "emotions": {
+        "happy": 0.05,
+        "anxious": 0.9,
+        "angry": 0.05
+      }
+    },
+    {
+      "traffic_time": "more_than_10mins",
+      "traffic_cause": "roadworks",
+      "traffic_frequency": "first_time",
+      "emotions": {
+        "happy": 0.1,
+        "anxious": 0.85,
+        "angry": 0.05
+      }
+    },
+    {
+      "traffic_time": "more_than_10mins",
+      "traffic_cause": "accident",
+      "traffic_frequency": "repeated",
+      "emotions": {
+        "happy": 0.05,
+        "anxious": 0.85,
+        "angry": 0.1
+      }
+    },
+    {
+      "traffic_time": "more_than_10mins",
+      "traffic_cause": "roadworks",
+      "traffic_frequency": "repeated",
+      "emotions": {
+        "happy": 0.05,
+        "anxious": 0.9,
+        "angry": 0.05
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "traffic_signal_location": [
+      "safe",
+      "dangerous"
+    ],
+    "window_status": [
+      "open",
+      "closed"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "traffic_signal_location": "safe",
+      "window_status": "open",
+      "emotions": {
+        "anger": 0.05,
+        "fear": 0.9,
+        "happiness": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "traffic_signal_location": "safe",
+      "window_status": "closed",
+      "emotions": {
+        "anger": 0.11,
+        "fear": 0.84,
+        "happiness": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "traffic_signal_location": "dangerous",
+      "window_status": "open",
+      "emotions": {
+        "anger": 0.15,
+        "fear": 0.85,
+        "happiness": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "traffic_signal_location": "dangerous",
+      "window_status": "closed",
+      "emotions": {
+        "anger": 0.21,
+        "fear": 0.79,
+        "happiness": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "traffic_signal_location": "safe",
+      "window_status": "open",
+      "emotions": {
+        "anger": 0.25,
+        "fear": 0.7,
+        "happiness": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "traffic_signal_location": "safe",
+      "window_status": "closed",
+      "emotions": {
+        "anger": 0.33,
+        "fear": 0.67,
+        "happiness": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "traffic_signal_location": "dangerous",
+      "window_status": "open",
+      "emotions": {
+        "anger": 0.35,
+        "fear": 0.65,
+        "happiness": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "traffic_signal_location": "dangerous",
+      "window_status": "closed",
+      "emotions": {
+        "anger": 0.4,
+        "fear": 0.6,
+        "happiness": 0.0
+      }
+    }
+  ]
+}

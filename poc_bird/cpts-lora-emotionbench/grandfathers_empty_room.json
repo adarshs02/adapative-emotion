@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "room_smell": [
+      "familiar",
+      "unfamiliar"
+    ],
+    "chair_presence": [
+      "empty",
+      "occupied"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "room_smell": "familiar",
+      "chair_presence": "empty",
+      "emotions": {
+        "lonely": 0.65,
+        "happy": 0.25,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "room_smell": "familiar",
+      "chair_presence": "occupied",
+      "emotions": {
+        "lonely": 0.5,
+        "happy": 0.45,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "room_smell": "unfamiliar",
+      "chair_presence": "empty",
+      "emotions": {
+        "lonely": 0.7,
+        "happy": 0.2,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "room_smell": "unfamiliar",
+      "chair_presence": "occupied",
+      "emotions": {
+        "lonely": 0.6,
+        "happy": 0.3,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "room_smell": "familiar",
+      "chair_presence": "empty",
+      "emotions": {
+        "lonely": 0.8,
+        "happy": 0.15,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "room_smell": "familiar",
+      "chair_presence": "occupied",
+      "emotions": {
+        "lonely": 0.7,
+        "happy": 0.25,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "room_smell": "unfamiliar",
+      "chair_presence": "empty",
+      "emotions": {
+        "lonely": 0.9,
+        "happy": 0.05,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "room_smell": "unfamiliar",
+      "chair_presence": "occupied",
+      "emotions": {
+        "lonely": 0.85,
+        "happy": 0.1,
+        "angry": 0.05
+      }
+    }
+  ]
+}

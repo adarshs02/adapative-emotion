@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "emotional_involvement": [
+      "low",
+      "high"
+    ],
+    "emotional_expectation": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "emotional_involvement": "low",
+      "emotional_expectation": "low",
+      "emotions": {
+        "anger": 0.1,
+        "frustration": 0.2,
+        "happiness": 0.7
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_involvement": "low",
+      "emotional_expectation": "high",
+      "emotions": {
+        "anger": 0.29,
+        "frustration": 0.45,
+        "happiness": 0.26
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_involvement": "high",
+      "emotional_expectation": "low",
+      "emotions": {
+        "anger": 0.29,
+        "frustration": 0.45,
+        "happiness": 0.26
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_involvement": "high",
+      "emotional_expectation": "high",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.4,
+        "happiness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_involvement": "low",
+      "emotional_expectation": "low",
+      "emotions": {
+        "anger": 0.35,
+        "frustration": 0.5,
+        "happiness": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_involvement": "low",
+      "emotional_expectation": "high",
+      "emotions": {
+        "anger": 0.45,
+        "frustration": 0.52,
+        "happiness": 0.03
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_involvement": "high",
+      "emotional_expectation": "low",
+      "emotions": {
+        "anger": 0.45,
+        "frustration": 0.52,
+        "happiness": 0.03
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_involvement": "high",
+      "emotional_expectation": "high",
+      "emotions": {
+        "anger": 0.65,
+        "frustration": 0.35,
+        "happiness": 0.0
+      }
+    }
+  ]
+}

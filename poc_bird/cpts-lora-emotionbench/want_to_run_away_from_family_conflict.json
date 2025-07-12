@@ -1,0 +1,104 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "family_support": [
+      "low",
+      "high"
+    ],
+    "conflict_severity": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "family_support": "low",
+      "conflict_severity": "low",
+      "emotions": {
+        "anxious": 0.3,
+        "helpless": 0.65,
+        "resentful": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "family_support": "low",
+      "conflict_severity": "high",
+      "emotions": {
+        "angry": 0.23,
+        "anxious": 0.25,
+        "helpless": 0.03,
+        "happy": 0.15,
+        "grateful": 0.31,
+        "resentful": 0.03
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "family_support": "high",
+      "conflict_severity": "low",
+      "emotions": {
+        "angry": 0.23,
+        "anxious": 0.25,
+        "helpless": 0.03,
+        "happy": 0.15,
+        "grateful": 0.31,
+        "resentful": 0.03
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "family_support": "high",
+      "conflict_severity": "high",
+      "emotions": {
+        "angry": 0.45,
+        "anxious": 0.5,
+        "helpless": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "family_support": "low",
+      "conflict_severity": "low",
+      "emotions": {
+        "angry": 0.5,
+        "anxious": 0.45,
+        "helpless": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "family_support": "low",
+      "conflict_severity": "high",
+      "emotions": {
+        "angry": 0.57,
+        "anxious": 0.38,
+        "helpless": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "family_support": "high",
+      "conflict_severity": "low",
+      "emotions": {
+        "angry": 0.57,
+        "anxious": 0.38,
+        "helpless": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "family_support": "high",
+      "conflict_severity": "high",
+      "emotions": {
+        "angry": 0.65,
+        "anxious": 0.3,
+        "helpless": 0.05
+      }
+    }
+  ]
+}

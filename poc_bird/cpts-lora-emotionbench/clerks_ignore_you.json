@@ -1,0 +1,89 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "service_quality": [
+      "good",
+      "bad"
+    ],
+    "anger": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "service_quality": "good",
+      "anger": "yes",
+      "emotions": {
+        "anger": 0.7,
+        "frustration": 0.25,
+        "happiness": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "service_quality": "good",
+      "anger": "no",
+      "emotions": {
+        "happiness": 1.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "service_quality": "bad",
+      "anger": "yes",
+      "emotions": {
+        "anger": 0.95,
+        "frustration": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "service_quality": "bad",
+      "anger": "no",
+      "emotions": {
+        "frustration": 1.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "service_quality": "good",
+      "anger": "yes",
+      "emotions": {
+        "anger": 0.9,
+        "frustration": 0.05,
+        "happiness": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "service_quality": "good",
+      "anger": "no",
+      "emotions": {
+        "frustration": 1.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "service_quality": "bad",
+      "anger": "yes",
+      "emotions": {
+        "anger": 0.95,
+        "frustration": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "service_quality": "bad",
+      "anger": "no",
+      "emotions": {
+        "anger": 0.95,
+        "frustration": 0.05
+      }
+    }
+  ]
+}

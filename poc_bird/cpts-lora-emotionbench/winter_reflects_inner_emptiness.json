@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "isolation": [
+      "yes",
+      "no"
+    ],
+    "desolation": [
+      "yes",
+      "no"
+    ],
+    "emptiness": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "isolation": "yes",
+      "desolation": "yes",
+      "emptiness": "yes",
+      "emotions": {
+        "sadness": 0.8,
+        "melancholy": 0.15,
+        "anger": 0.05
+      }
+    },
+    {
+      "isolation": "yes",
+      "desolation": "yes",
+      "emptiness": "no",
+      "emotions": {
+        "sadness": 0.74,
+        "anger": 0.23,
+        "happiness": 0.03
+      }
+    },
+    {
+      "isolation": "yes",
+      "desolation": "no",
+      "emptiness": "yes",
+      "emotions": {
+        "sadness": 0.74,
+        "anger": 0.23,
+        "happiness": 0.03
+      }
+    },
+    {
+      "isolation": "yes",
+      "desolation": "no",
+      "emptiness": "no",
+      "emotions": {
+        "sadness": 0.61,
+        "anger": 0.32,
+        "happiness": 0.07
+      }
+    },
+    {
+      "isolation": "no",
+      "desolation": "yes",
+      "emptiness": "yes",
+      "emotions": {
+        "sadness": 0.74,
+        "anger": 0.23,
+        "happiness": 0.03
+      }
+    },
+    {
+      "isolation": "no",
+      "desolation": "yes",
+      "emptiness": "no",
+      "emotions": {
+        "sadness": 0.61,
+        "anger": 0.32,
+        "happiness": 0.07
+      }
+    },
+    {
+      "isolation": "no",
+      "desolation": "no",
+      "emptiness": "yes",
+      "emotions": {
+        "sadness": 0.61,
+        "anger": 0.32,
+        "happiness": 0.07
+      }
+    },
+    {
+      "isolation": "no",
+      "desolation": "no",
+      "emptiness": "no",
+      "emotions": {
+        "sadness": 0.45,
+        "anger": 0.4,
+        "happiness": 0.15
+      }
+    }
+  ]
+}

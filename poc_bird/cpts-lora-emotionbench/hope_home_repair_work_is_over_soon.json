@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "hope_duration": [
+      "short",
+      "long"
+    ],
+    "expected_costs": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "hope_duration": "short",
+      "expected_costs": "low",
+      "emotions": {
+        "happy": 0.6900000000000001,
+        "anxious": 0.26,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "hope_duration": "short",
+      "expected_costs": "high",
+      "emotions": {
+        "happy": 0.5,
+        "anxious": 0.35,
+        "angry": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "hope_duration": "long",
+      "expected_costs": "low",
+      "emotions": {
+        "happy": 0.7,
+        "anxious": 0.2,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "hope_duration": "long",
+      "expected_costs": "high",
+      "emotions": {
+        "happy": 0.58,
+        "anxious": 0.37,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "hope_duration": "short",
+      "expected_costs": "low",
+      "emotions": {
+        "happy": 0.4,
+        "anxious": 0.35,
+        "angry": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "hope_duration": "short",
+      "expected_costs": "high",
+      "emotions": {
+        "happy": 0.3,
+        "anxious": 0.4,
+        "angry": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "hope_duration": "long",
+      "expected_costs": "low",
+      "emotions": {
+        "happy": 0.35,
+        "anxious": 0.4,
+        "angry": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "hope_duration": "long",
+      "expected_costs": "high",
+      "emotions": {
+        "happy": 0.25,
+        "anxious": 0.45,
+        "angry": 0.3
+      }
+    }
+  ]
+}

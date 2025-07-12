@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "truth": [
+      "wrong",
+      "right"
+    ],
+    "belief": [
+      "disbelief",
+      "belief"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "truth": "wrong",
+      "belief": "disbelief",
+      "emotions": {
+        "anger": 0.5,
+        "frustration": 0.45,
+        "sadness": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "truth": "wrong",
+      "belief": "belief",
+      "emotions": {
+        "anger": 0.26,
+        "frustration": 0.37,
+        "sadness": 0.37
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "truth": "right",
+      "belief": "disbelief",
+      "emotions": {
+        "anger": 0.37,
+        "frustration": 0.47,
+        "sadness": 0.16
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "truth": "right",
+      "belief": "belief",
+      "emotions": {
+        "anger": 0.16,
+        "frustration": 0.26,
+        "sadness": 0.58
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "truth": "wrong",
+      "belief": "disbelief",
+      "emotions": {
+        "anger": 0.75,
+        "frustration": 0.2,
+        "sadness": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "truth": "wrong",
+      "belief": "belief",
+      "emotions": {
+        "anger": 0.6900000000000001,
+        "frustration": 0.26,
+        "sadness": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "truth": "right",
+      "belief": "disbelief",
+      "emotions": {
+        "anger": 0.6,
+        "frustration": 0.35,
+        "sadness": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "truth": "right",
+      "belief": "belief",
+      "emotions": {
+        "anger": 0.42,
+        "frustration": 0.32,
+        "sadness": 0.26
+      }
+    }
+  ]
+}

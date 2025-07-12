@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "friends_invited": [
+      "yes",
+      "no"
+    ],
+    "regret": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "friends_invited": "yes",
+      "regret": "yes",
+      "emotions": {
+        "anger": 0.2,
+        "sadness": 0.6,
+        "regret": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friends_invited": "yes",
+      "regret": "no",
+      "emotions": {
+        "anger": 0.25,
+        "sadness": 0.4,
+        "regret": 0.35
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friends_invited": "no",
+      "regret": "yes",
+      "emotions": {
+        "anger": 0.25,
+        "sadness": 0.4,
+        "regret": 0.35
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friends_invited": "no",
+      "regret": "no",
+      "emotions": {
+        "anger": 0.25,
+        "sadness": 0.45,
+        "regret": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friends_invited": "yes",
+      "regret": "yes",
+      "emotions": {
+        "anger": 0.45,
+        "sadness": 0.3,
+        "regret": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friends_invited": "yes",
+      "regret": "no",
+      "emotions": {
+        "anger": 0.44,
+        "sadness": 0.33,
+        "regret": 0.23
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friends_invited": "no",
+      "regret": "yes",
+      "emotions": {
+        "anger": 0.44,
+        "sadness": 0.33,
+        "regret": 0.23
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friends_invited": "no",
+      "regret": "no",
+      "emotions": {
+        "anger": 0.4,
+        "sadness": 0.4,
+        "regret": 0.2
+      }
+    }
+  ]
+}

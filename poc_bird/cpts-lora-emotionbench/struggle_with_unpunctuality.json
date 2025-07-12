@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "offence_type": [
+      "minor",
+      "major"
+    ],
+    "offence_location": [
+      "public",
+      "private"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "offence_type": "minor",
+      "offence_location": "public",
+      "emotions": {
+        "angry": 0.15,
+        "relieved": 0.8,
+        "anxious": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "offence_type": "minor",
+      "offence_location": "private",
+      "emotions": {
+        "angry": 0.2,
+        "relieved": 0.65,
+        "anxious": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "offence_type": "major",
+      "offence_location": "public",
+      "emotions": {
+        "angry": 0.35,
+        "relieved": 0.5,
+        "anxious": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "offence_type": "major",
+      "offence_location": "private",
+      "emotions": {
+        "angry": 0.4,
+        "relieved": 0.45,
+        "anxious": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offence_type": "minor",
+      "offence_location": "public",
+      "emotions": {
+        "angry": 0.5,
+        "relieved": 0.35,
+        "anxious": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offence_type": "minor",
+      "offence_location": "private",
+      "emotions": {
+        "angry": 0.6,
+        "relieved": 0.3,
+        "anxious": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offence_type": "major",
+      "offence_location": "public",
+      "emotions": {
+        "angry": 0.7,
+        "relieved": 0.2,
+        "anxious": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offence_type": "major",
+      "offence_location": "private",
+      "emotions": {
+        "angry": 0.75,
+        "relieved": 0.2,
+        "anxious": 0.05
+      }
+    }
+  ]
+}

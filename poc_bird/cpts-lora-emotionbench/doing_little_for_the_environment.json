@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "consequence": [
+      "minimal",
+      "severe"
+    ],
+    "personal_responsibility": [
+      "accepted",
+      "denied"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "consequence": "minimal",
+      "personal_responsibility": "accepted",
+      "emotions": {
+        "happy": 0.2,
+        "relieved": 0.6,
+        "guilty": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "consequence": "minimal",
+      "personal_responsibility": "denied",
+      "emotions": {
+        "angry": 0.4,
+        "frustrated": 0.6,
+        "guilty": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "consequence": "severe",
+      "personal_responsibility": "accepted",
+      "emotions": {
+        "anxious": 0.6,
+        "ashamed": 0.4,
+        "scared": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "consequence": "severe",
+      "personal_responsibility": "denied",
+      "emotions": {
+        "angry": 0.8,
+        "frustrated": 0.2,
+        "scared": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "consequence": "minimal",
+      "personal_responsibility": "accepted",
+      "emotions": {
+        "guilty": 0.8,
+        "ashamed": 0.2,
+        "frustrated": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "consequence": "minimal",
+      "personal_responsibility": "denied",
+      "emotions": {
+        "angry": 0.9,
+        "frustrated": 0.1,
+        "guilty": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "consequence": "severe",
+      "personal_responsibility": "accepted",
+      "emotions": {
+        "ashamed": 0.9,
+        "guilty": 0.1,
+        "scared": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "consequence": "severe",
+      "personal_responsibility": "denied",
+      "emotions": {
+        "angry": 0.95,
+        "frustrated": 0.05,
+        "guilty": 0.0
+      }
+    }
+  ]
+}

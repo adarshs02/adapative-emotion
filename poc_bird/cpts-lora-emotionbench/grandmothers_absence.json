@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "emotional_state": [
+      "happy",
+      "sad"
+    ],
+    "presence_of_loved_ones": [
+      "present",
+      "absent"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "emotional_state": "happy",
+      "presence_of_loved_ones": "present",
+      "emotions": {
+        "anger": 0.05,
+        "happy": 0.75,
+        "sad": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_state": "happy",
+      "presence_of_loved_ones": "absent",
+      "emotions": {
+        "anger": 0.05,
+        "happy": 0.4,
+        "sad": 0.55
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_state": "sad",
+      "presence_of_loved_ones": "present",
+      "emotions": {
+        "anger": 0.15,
+        "happy": 0.1,
+        "sad": 0.75
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_state": "sad",
+      "presence_of_loved_ones": "absent",
+      "emotions": {
+        "anger": 0.25,
+        "happy": 0.1,
+        "sad": 0.65
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_state": "happy",
+      "presence_of_loved_ones": "present",
+      "emotions": {
+        "anger": 0.15,
+        "happy": 0.5,
+        "sad": 0.35
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_state": "happy",
+      "presence_of_loved_ones": "absent",
+      "emotions": {
+        "anger": 0.2,
+        "happy": 0.3,
+        "sad": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_state": "sad",
+      "presence_of_loved_ones": "present",
+      "emotions": {
+        "anger": 0.35,
+        "happy": 0.15,
+        "sad": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_state": "sad",
+      "presence_of_loved_ones": "absent",
+      "emotions": {
+        "anger": 0.45,
+        "happy": 0.1,
+        "sad": 0.45
+      }
+    }
+  ]
+}

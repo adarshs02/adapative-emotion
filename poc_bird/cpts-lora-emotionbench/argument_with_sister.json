@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "sister_response": [
+      "calm",
+      "angry"
+    ],
+    "outcome": [
+      "apology",
+      "punishment"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "sister_response": "calm",
+      "outcome": "apology",
+      "emotions": {
+        "happy": 0.75,
+        "relieved": 0.25,
+        "angry": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "sister_response": "angry",
+      "outcome": "apology",
+      "emotions": {
+        "happy": 0.25,
+        "angry": 0.75,
+        "relieved": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "sister_response": "calm",
+      "outcome": "punishment",
+      "emotions": {
+        "angry": 0.75,
+        "happy": 0.25,
+        "relieved": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "sister_response": "angry",
+      "outcome": "punishment",
+      "emotions": {
+        "angry": 0.9,
+        "happy": 0.1,
+        "relieved": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "sister_response": "calm",
+      "outcome": "apology",
+      "emotions": {
+        "angry": 0.8,
+        "happy": 0.2,
+        "relieved": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "sister_response": "angry",
+      "outcome": "apology",
+      "emotions": {
+        "angry": 0.95,
+        "happy": 0.05,
+        "relieved": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "sister_response": "calm",
+      "outcome": "punishment",
+      "emotions": {
+        "angry": 0.95,
+        "happy": 0.05,
+        "relieved": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "sister_response": "angry",
+      "outcome": "punishment",
+      "emotions": {
+        "angry": 0.99,
+        "happy": 0.01,
+        "relieved": 0.0
+      }
+    }
+  ]
+}

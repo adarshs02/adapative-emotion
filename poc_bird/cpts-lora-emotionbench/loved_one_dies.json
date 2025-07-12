@@ -1,0 +1,99 @@
+{
+  "factors": {
+    "grief_level": [
+      "first_time",
+      "repeated"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "memories": [
+      "happy",
+      "sad",
+      "angry"
+    ]
+  },
+  "cpt": [
+    {
+      "grief_level": "first_time",
+      "offence_history": "first_time",
+      "memories": "happy",
+      "emotions": {
+        "happy": 0.05,
+        "sad": 0.45,
+        "angry": 0.5
+      }
+    },
+    {
+      "grief_level": "first_time",
+      "offence_history": "repeated",
+      "memories": "happy",
+      "emotions": {
+        "happy": 0.01,
+        "sad": 0.49,
+        "angry": 0.5
+      }
+    },
+    {
+      "grief_level": "repeated",
+      "offence_history": "first_time",
+      "memories": "happy",
+      "emotions": {
+        "happy": 0.01,
+        "sad": 0.49,
+        "angry": 0.5
+      }
+    },
+    {
+      "grief_level": "repeated",
+      "offence_history": "repeated",
+      "memories": "happy",
+      "emotions": {
+        "happy": 0.0,
+        "sad": 0.5,
+        "angry": 0.5
+      }
+    },
+    {
+      "grief_level": "first_time",
+      "offence_history": "first_time",
+      "memories": "sad",
+      "emotions": {
+        "happy": 0.0,
+        "sad": 0.5,
+        "angry": 0.5
+      }
+    },
+    {
+      "grief_level": "first_time",
+      "offence_history": "repeated",
+      "memories": "sad",
+      "emotions": {
+        "happy": 0.01,
+        "sad": 0.49,
+        "angry": 0.5
+      }
+    },
+    {
+      "grief_level": "repeated",
+      "offence_history": "first_time",
+      "memories": "sad",
+      "emotions": {
+        "happy": 0.01,
+        "sad": 0.49,
+        "angry": 0.5
+      }
+    },
+    {
+      "grief_level": "repeated",
+      "offence_history": "repeated",
+      "memories": "sad",
+      "emotions": {
+        "happy": 0.0,
+        "sad": 0.5,
+        "angry": 0.5
+      }
+    }
+  ]
+}

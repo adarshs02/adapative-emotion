@@ -1,0 +1,99 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "emotion": [
+      "angry",
+      "scared",
+      "frustrated"
+    ],
+    "speed_limit_compliance": [
+      "below",
+      "above"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "emotion": "angry",
+      "speed_limit_compliance": "above",
+      "emotions": {
+        "angry": 0.6,
+        "scared": 0.3,
+        "frustrated": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion": "scared",
+      "speed_limit_compliance": "above",
+      "emotions": {
+        "angry": 0.37,
+        "scared": 0.58,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion": "frustrated",
+      "speed_limit_compliance": "above",
+      "emotions": {
+        "angry": 0.2,
+        "scared": 0.3,
+        "frustrated": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion": "angry",
+      "speed_limit_compliance": "above",
+      "emotions": {
+        "angry": 0.7,
+        "scared": 0.25,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion": "scared",
+      "speed_limit_compliance": "above",
+      "emotions": {
+        "angry": 0.45,
+        "scared": 0.5,
+        "frustrated": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion": "frustrated",
+      "speed_limit_compliance": "above",
+      "emotions": {
+        "angry": 0.3,
+        "scared": 0.25,
+        "frustrated": 0.45
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion": "angry",
+      "speed_limit_compliance": "below",
+      "emotions": {
+        "angry": 0.45,
+        "scared": 0.4,
+        "frustrated": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion": "scared",
+      "speed_limit_compliance": "below",
+      "emotions": {
+        "angry": 0.35,
+        "scared": 0.55,
+        "frustrated": 0.1
+      }
+    }
+  ]
+}

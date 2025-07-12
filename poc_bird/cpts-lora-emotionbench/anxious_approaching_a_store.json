@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "heart_rate": [
+      "normal",
+      "high"
+    ],
+    "legs_trembling": [
+      "no",
+      "yes"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "heart_rate": "normal",
+      "legs_trembling": "no",
+      "emotions": {
+        "anxious": 0.65,
+        "confident": 0.35,
+        "angry": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "heart_rate": "normal",
+      "legs_trembling": "yes",
+      "emotions": {
+        "anxious": 0.7,
+        "confident": 0.25,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "heart_rate": "normal",
+      "legs_trembling": "no",
+      "emotions": {
+        "anxious": 0.5,
+        "confident": 0.45,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "heart_rate": "normal",
+      "legs_trembling": "yes",
+      "emotions": {
+        "anxious": 0.55,
+        "confident": 0.35,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "heart_rate": "high",
+      "legs_trembling": "no",
+      "emotions": {
+        "anxious": 0.7,
+        "confident": 0.3,
+        "angry": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "heart_rate": "high",
+      "legs_trembling": "yes",
+      "emotions": {
+        "anxious": 0.75,
+        "confident": 0.25,
+        "angry": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "heart_rate": "high",
+      "legs_trembling": "no",
+      "emotions": {
+        "anxious": 0.6,
+        "confident": 0.35,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "heart_rate": "high",
+      "legs_trembling": "yes",
+      "emotions": {
+        "anxious": 0.65,
+        "confident": 0.3,
+        "angry": 0.05
+      }
+    }
+  ]
+}

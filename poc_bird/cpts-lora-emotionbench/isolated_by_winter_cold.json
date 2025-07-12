@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "light_source": [
+      "sun",
+      "moon"
+    ],
+    "season": [
+      "winter",
+      "spring"
+    ],
+    "emotion_history": [
+      "happy",
+      "sad"
+    ]
+  },
+  "cpt": [
+    {
+      "season": "winter",
+      "emotion_history": "happy",
+      "light_source": "sun",
+      "emotions": {
+        "happy": 0.7,
+        "sad": 0.25,
+        "angry": 0.05
+      }
+    },
+    {
+      "season": "winter",
+      "emotion_history": "happy",
+      "light_source": "moon",
+      "emotions": {
+        "happy": 0.5,
+        "sad": 0.45,
+        "angry": 0.05
+      }
+    },
+    {
+      "season": "winter",
+      "emotion_history": "sad",
+      "light_source": "sun",
+      "emotions": {
+        "happy": 0.05,
+        "sad": 0.85,
+        "angry": 0.1
+      }
+    },
+    {
+      "season": "winter",
+      "emotion_history": "sad",
+      "light_source": "moon",
+      "emotions": {
+        "happy": 0.05,
+        "sad": 0.95,
+        "angry": 0.0
+      }
+    },
+    {
+      "season": "spring",
+      "emotion_history": "happy",
+      "light_source": "sun",
+      "emotions": {
+        "happy": 0.8,
+        "sad": 0.15,
+        "angry": 0.05
+      }
+    },
+    {
+      "season": "spring",
+      "emotion_history": "happy",
+      "light_source": "moon",
+      "emotions": {
+        "happy": 0.6,
+        "sad": 0.35,
+        "angry": 0.05
+      }
+    },
+    {
+      "season": "spring",
+      "emotion_history": "sad",
+      "light_source": "sun",
+      "emotions": {
+        "happy": 0.1,
+        "sad": 0.85,
+        "angry": 0.05
+      }
+    },
+    {
+      "season": "spring",
+      "emotion_history": "sad",
+      "light_source": "moon",
+      "emotions": {
+        "happy": 0.05,
+        "sad": 0.95,
+        "angry": 0.0
+      }
+    }
+  ]
+}

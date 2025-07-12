@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "driving_skills": [
+      "good",
+      "bad"
+    ],
+    "driving_speed": [
+      "slow",
+      "fast"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "driving_skills": "good",
+      "driving_speed": "slow",
+      "emotions": {
+        "angry": 0.05,
+        "frustrated": 0.45,
+        "happy": 0.5
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driving_skills": "good",
+      "driving_speed": "fast",
+      "emotions": {
+        "angry": 0.2,
+        "frustrated": 0.45,
+        "happy": 0.35
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driving_skills": "bad",
+      "driving_speed": "slow",
+      "emotions": {
+        "angry": 0.3,
+        "frustrated": 0.5,
+        "happy": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "driving_skills": "bad",
+      "driving_speed": "fast",
+      "emotions": {
+        "angry": 0.5,
+        "frustrated": 0.45,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driving_skills": "good",
+      "driving_speed": "slow",
+      "emotions": {
+        "angry": 0.45,
+        "frustrated": 0.5,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driving_skills": "good",
+      "driving_speed": "fast",
+      "emotions": {
+        "angry": 0.55,
+        "frustrated": 0.4,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driving_skills": "bad",
+      "driving_speed": "slow",
+      "emotions": {
+        "angry": 0.6,
+        "frustrated": 0.35,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "driving_skills": "bad",
+      "driving_speed": "fast",
+      "emotions": {
+        "angry": 0.7,
+        "frustrated": 0.25,
+        "happy": 0.05
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "animal_type": [
+      "dog",
+      "cat"
+    ],
+    "severity": [
+      "minor",
+      "major"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "animal_type": "dog",
+      "severity": "minor",
+      "emotions": {
+        "anger": 0.15,
+        "empathy": 0.75,
+        "shame": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "animal_type": "dog",
+      "severity": "major",
+      "emotions": {
+        "anger": 0.47,
+        "empathy": 0.37,
+        "shame": 0.16
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "animal_type": "dog",
+      "severity": "minor",
+      "emotions": {
+        "anger": 0.55,
+        "empathy": 0.3,
+        "shame": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "animal_type": "dog",
+      "severity": "major",
+      "emotions": {
+        "anger": 0.75,
+        "empathy": 0.2,
+        "shame": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "animal_type": "cat",
+      "severity": "minor",
+      "emotions": {
+        "anger": 0.1,
+        "empathy": 0.85,
+        "shame": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "animal_type": "cat",
+      "severity": "major",
+      "emotions": {
+        "anger": 0.35,
+        "empathy": 0.55,
+        "shame": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "animal_type": "cat",
+      "severity": "minor",
+      "emotions": {
+        "anger": 0.5,
+        "empathy": 0.45,
+        "shame": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "animal_type": "cat",
+      "severity": "major",
+      "emotions": {
+        "anger": 0.7,
+        "empathy": 0.25,
+        "shame": 0.05
+      }
+    }
+  ]
+}

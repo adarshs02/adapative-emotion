@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "emotional_response": [
+      "calm",
+      "angry"
+    ],
+    "outcome": [
+      "punished",
+      "not_punished"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "emotional_response": "calm",
+      "outcome": "punished",
+      "emotions": {
+        "happy": 0.25,
+        "angry": 0.5,
+        "sad": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_response": "calm",
+      "outcome": "not_punished",
+      "emotions": {
+        "happy": 0.45,
+        "angry": 0.3,
+        "sad": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_response": "angry",
+      "outcome": "punished",
+      "emotions": {
+        "happy": 0.1,
+        "angry": 0.75,
+        "sad": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_response": "angry",
+      "outcome": "not_punished",
+      "emotions": {
+        "happy": 0.15,
+        "angry": 0.6,
+        "sad": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_response": "calm",
+      "outcome": "punished",
+      "emotions": {
+        "happy": 0.1,
+        "angry": 0.65,
+        "sad": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_response": "calm",
+      "outcome": "not_punished",
+      "emotions": {
+        "happy": 0.2,
+        "angry": 0.45,
+        "sad": 0.35
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_response": "angry",
+      "outcome": "punished",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.8,
+        "sad": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_response": "angry",
+      "outcome": "not_punished",
+      "emotions": {
+        "happy": 0.1,
+        "angry": 0.75,
+        "sad": 0.15
+      }
+    }
+  ]
+}

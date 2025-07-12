@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "emotional_response": [
+      "calm",
+      "angry"
+    ],
+    "tailgating_intensity": [
+      "slight",
+      "extreme"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "emotional_response": "calm",
+      "tailgating_intensity": "slight",
+      "emotions": {
+        "calm": 0.75,
+        "angry": 0.25,
+        "frustrated": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_response": "calm",
+      "tailgating_intensity": "extreme",
+      "emotions": {
+        "calm": 0.35,
+        "angry": 0.65,
+        "frustrated": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_response": "angry",
+      "tailgating_intensity": "slight",
+      "emotions": {
+        "calm": 0.0,
+        "angry": 1.0,
+        "frustrated": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_response": "angry",
+      "tailgating_intensity": "extreme",
+      "emotions": {
+        "calm": 0.0,
+        "angry": 0.65,
+        "frustrated": 0.35
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_response": "calm",
+      "tailgating_intensity": "slight",
+      "emotions": {
+        "calm": 0.5,
+        "angry": 0.5,
+        "frustrated": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_response": "calm",
+      "tailgating_intensity": "extreme",
+      "emotions": {
+        "calm": 0.25,
+        "angry": 0.75,
+        "frustrated": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_response": "angry",
+      "tailgating_intensity": "slight",
+      "emotions": {
+        "calm": 0.0,
+        "angry": 1.0,
+        "frustrated": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_response": "angry",
+      "tailgating_intensity": "extreme",
+      "emotions": {
+        "calm": 0.0,
+        "angry": 0.65,
+        "frustrated": 0.35
+      }
+    }
+  ]
+}

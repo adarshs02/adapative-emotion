@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "speech_preparation": [
+      "good",
+      "poor"
+    ],
+    "public_speaking_experience": [
+      "beginner",
+      "experienced"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "speech_preparation": "good",
+      "public_speaking_experience": "beginner",
+      "emotions": {
+        "anxious": 0.8,
+        "excited": 0.15,
+        "confident": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "speech_preparation": "good",
+      "public_speaking_experience": "experienced",
+      "emotions": {
+        "anxious": 0.15,
+        "excited": 0.65,
+        "confident": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "speech_preparation": "poor",
+      "public_speaking_experience": "beginner",
+      "emotions": {
+        "anxious": 0.9,
+        "excited": 0.05,
+        "confident": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "speech_preparation": "poor",
+      "public_speaking_experience": "experienced",
+      "emotions": {
+        "anxious": 0.45,
+        "excited": 0.4,
+        "confident": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "speech_preparation": "good",
+      "public_speaking_experience": "beginner",
+      "emotions": {
+        "anxious": 0.95,
+        "excited": 0.05,
+        "confident": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "speech_preparation": "good",
+      "public_speaking_experience": "experienced",
+      "emotions": {
+        "anxious": 0.6,
+        "excited": 0.35,
+        "confident": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "speech_preparation": "poor",
+      "public_speaking_experience": "beginner",
+      "emotions": {
+        "anxious": 0.98,
+        "excited": 0.01,
+        "confident": 0.01
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "speech_preparation": "poor",
+      "public_speaking_experience": "experienced",
+      "emotions": {
+        "anxious": 0.7,
+        "excited": 0.25,
+        "confident": 0.05
+      }
+    }
+  ]
+}

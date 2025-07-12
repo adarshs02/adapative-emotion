@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "family_relationship": [
+      "close",
+      "distant"
+    ],
+    "emotional_strength": [
+      "strong",
+      "weak"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "family_relationship": "close",
+      "emotional_strength": "strong",
+      "emotions": {
+        "happy": 0.7,
+        "sad": 0.2,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "family_relationship": "distant",
+      "emotional_strength": "strong",
+      "emotions": {
+        "happy": 0.5,
+        "sad": 0.35,
+        "angry": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "family_relationship": "close",
+      "emotional_strength": "weak",
+      "emotions": {
+        "happy": 0.45,
+        "sad": 0.5,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "family_relationship": "distant",
+      "emotional_strength": "weak",
+      "emotions": {
+        "happy": 0.35,
+        "sad": 0.6,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "family_relationship": "close",
+      "emotional_strength": "strong",
+      "emotions": {
+        "happy": 0.4,
+        "sad": 0.45,
+        "angry": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "family_relationship": "distant",
+      "emotional_strength": "strong",
+      "emotions": {
+        "happy": 0.3,
+        "sad": 0.5,
+        "angry": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "family_relationship": "close",
+      "emotional_strength": "weak",
+      "emotions": {
+        "happy": 0.3,
+        "sad": 0.5,
+        "angry": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "family_relationship": "distant",
+      "emotional_strength": "weak",
+      "emotions": {
+        "happy": 0.2,
+        "sad": 0.55,
+        "angry": 0.25
+      }
+    }
+  ]
+}

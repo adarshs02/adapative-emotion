@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "emotional_response": [
+      "indifferent",
+      "hurt"
+    ],
+    "friend_awareness": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "emotional_response": "indifferent",
+      "friend_awareness": "yes",
+      "emotions": {
+        "anger": 0.0,
+        "hurt": 0.0,
+        "relief": 1.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_response": "hurt",
+      "friend_awareness": "yes",
+      "emotions": {
+        "anger": 0.0,
+        "hurt": 1.0,
+        "relief": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_response": "indifferent",
+      "friend_awareness": "no",
+      "emotions": {
+        "anger": 0.0,
+        "hurt": 0.05,
+        "relief": 0.95
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_response": "hurt",
+      "friend_awareness": "no",
+      "emotions": {
+        "anger": 0.0,
+        "hurt": 1.0,
+        "relief": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_response": "indifferent",
+      "friend_awareness": "yes",
+      "emotions": {
+        "anger": 0.05,
+        "hurt": 0.95,
+        "relief": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_response": "hurt",
+      "friend_awareness": "yes",
+      "emotions": {
+        "anger": 0.0,
+        "hurt": 1.0,
+        "relief": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_response": "indifferent",
+      "friend_awareness": "no",
+      "emotions": {
+        "anger": 0.05,
+        "hurt": 0.95,
+        "relief": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_response": "hurt",
+      "friend_awareness": "no",
+      "emotions": {
+        "anger": 0.0,
+        "hurt": 1.0,
+        "relief": 0.0
+      }
+    }
+  ]
+}

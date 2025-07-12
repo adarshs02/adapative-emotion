@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "emotional_exhaustion": [
+      "no",
+      "yes"
+    ],
+    "anger": [
+      "no",
+      "yes"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "emotional_exhaustion": "no",
+      "anger": "no",
+      "emotions": {
+        "happy": 0.85,
+        "sad": 0.15,
+        "angry": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_exhaustion": "no",
+      "anger": "yes",
+      "emotions": {
+        "happy": 0.52,
+        "sad": 0.48,
+        "angry": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_exhaustion": "yes",
+      "anger": "no",
+      "emotions": {
+        "happy": 0.52,
+        "sad": 0.48,
+        "angry": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_exhaustion": "yes",
+      "anger": "yes",
+      "emotions": {
+        "happy": 0.25,
+        "sad": 0.75,
+        "angry": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_exhaustion": "no",
+      "anger": "no",
+      "emotions": {
+        "happy": 0.55,
+        "sad": 0.45,
+        "angry": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_exhaustion": "no",
+      "anger": "yes",
+      "emotions": {
+        "happy": 0.25,
+        "sad": 0.7,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_exhaustion": "yes",
+      "anger": "no",
+      "emotions": {
+        "happy": 0.25,
+        "sad": 0.7,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_exhaustion": "yes",
+      "anger": "yes",
+      "emotions": {
+        "happy": 0.05,
+        "sad": 0.95,
+        "angry": 0.0
+      }
+    }
+  ]
+}

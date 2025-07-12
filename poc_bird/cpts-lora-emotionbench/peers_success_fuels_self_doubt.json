@@ -1,0 +1,106 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "dream_importance": [
+      "low",
+      "high"
+    ],
+    "self_esteem": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "dream_importance": "low",
+      "self_esteem": "low",
+      "emotions": {
+        "sadness": 0.65,
+        "anxiety": 0.2,
+        "anger": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "dream_importance": "low",
+      "self_esteem": "high",
+      "emotions": {
+        "confidence": 0.33999999999999997,
+        "happiness": 0.13,
+        "anger": 0.35,
+        "anxiety": 0.1,
+        "sadness": 0.08
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "dream_importance": "high",
+      "self_esteem": "low",
+      "emotions": {
+        "confidence": 0.33999999999999997,
+        "happiness": 0.13,
+        "anger": 0.35,
+        "anxiety": 0.1,
+        "sadness": 0.08
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "dream_importance": "high",
+      "self_esteem": "high",
+      "emotions": {
+        "anger": 0.7,
+        "confidence": 0.25,
+        "happiness": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "dream_importance": "low",
+      "self_esteem": "low",
+      "emotions": {
+        "anger": 0.8,
+        "anxiety": 0.1,
+        "sadness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "dream_importance": "low",
+      "self_esteem": "high",
+      "emotions": {
+        "anger": 0.84,
+        "confidence": 0.05,
+        "happiness": 0.03,
+        "anxiety": 0.05,
+        "sadness": 0.03
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "dream_importance": "high",
+      "self_esteem": "low",
+      "emotions": {
+        "anger": 0.84,
+        "confidence": 0.05,
+        "happiness": 0.03,
+        "anxiety": 0.05,
+        "sadness": 0.03
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "dream_importance": "high",
+      "self_esteem": "high",
+      "emotions": {
+        "anger": 0.9,
+        "confidence": 0.1,
+        "happiness": 0.0
+      }
+    }
+  ]
+}

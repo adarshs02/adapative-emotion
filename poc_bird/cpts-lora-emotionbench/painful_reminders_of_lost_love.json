@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "melodies": [
+      "cacophony",
+      "melancholic"
+    ],
+    "blooms": [
+      "wither",
+      "fade"
+    ],
+    "memories": [
+      "painful",
+      "whispered"
+    ]
+  },
+  "cpt": [
+    {
+      "melodies": "cacophony",
+      "blooms": "wither",
+      "memories": "painful",
+      "emotions": {
+        "anger": 0.05,
+        "sadness": 0.6900000000000001,
+        "nostalgia": 0.26
+      }
+    },
+    {
+      "melodies": "cacophony",
+      "blooms": "wither",
+      "memories": "whispered",
+      "emotions": {
+        "anger": 0.15,
+        "sadness": 0.55,
+        "nostalgia": 0.3
+      }
+    },
+    {
+      "melodies": "cacophony",
+      "blooms": "fade",
+      "memories": "painful",
+      "emotions": {
+        "anger": 0.11,
+        "sadness": 0.63,
+        "nostalgia": 0.26
+      }
+    },
+    {
+      "melodies": "cacophony",
+      "blooms": "fade",
+      "memories": "whispered",
+      "emotions": {
+        "anger": 0.15,
+        "sadness": 0.55,
+        "nostalgia": 0.3
+      }
+    },
+    {
+      "melodies": "melancholic",
+      "blooms": "wither",
+      "memories": "painful",
+      "emotions": {
+        "anger": 0.05,
+        "sadness": 0.7,
+        "nostalgia": 0.25
+      }
+    },
+    {
+      "melodies": "melancholic",
+      "blooms": "wither",
+      "memories": "whispered",
+      "emotions": {
+        "anger": 0.15,
+        "sadness": 0.65,
+        "nostalgia": 0.2
+      }
+    },
+    {
+      "melodies": "melancholic",
+      "blooms": "fade",
+      "memories": "painful",
+      "emotions": {
+        "anger": 0.1,
+        "sadness": 0.65,
+        "nostalgia": 0.25
+      }
+    },
+    {
+      "melodies": "melancholic",
+      "blooms": "fade",
+      "memories": "whispered",
+      "emotions": {
+        "anger": 0.15,
+        "sadness": 0.6,
+        "nostalgia": 0.25
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "emotional_state": [
+      "happy",
+      "neutral",
+      "angry"
+    ],
+    "classmate_listening": [
+      "listening",
+      "not_listening"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "emotional_state": "happy",
+      "classmate_listening": "listening",
+      "emotions": {
+        "happy": 0.95,
+        "neutral": 0.05,
+        "angry": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_state": "neutral",
+      "classmate_listening": "listening",
+      "emotions": {
+        "happy": 0.05,
+        "neutral": 0.9,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_state": "angry",
+      "classmate_listening": "listening",
+      "emotions": {
+        "happy": 0.0,
+        "neutral": 0.05,
+        "angry": 0.95
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_state": "happy",
+      "classmate_listening": "listening",
+      "emotions": {
+        "happy": 0.0,
+        "neutral": 0.05,
+        "angry": 0.95
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_state": "neutral",
+      "classmate_listening": "listening",
+      "emotions": {
+        "happy": 0.05,
+        "neutral": 0.9,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotional_state": "angry",
+      "classmate_listening": "listening",
+      "emotions": {
+        "happy": 0.0,
+        "neutral": 0.05,
+        "angry": 0.95
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_state": "happy",
+      "classmate_listening": "not_listening",
+      "emotions": {
+        "happy": 0.85,
+        "neutral": 0.1,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotional_state": "neutral",
+      "classmate_listening": "not_listening",
+      "emotions": {
+        "happy": 0.1,
+        "neutral": 0.85,
+        "angry": 0.05
+      }
+    }
+  ]
+}

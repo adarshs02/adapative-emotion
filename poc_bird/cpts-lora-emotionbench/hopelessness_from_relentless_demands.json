@@ -1,0 +1,138 @@
+{
+  "factors": {
+    "sleep_quality": [
+      "good",
+      "bad"
+    ],
+    "emotional_state": [
+      "happy",
+      "angry"
+    ],
+    "day_of_week": [
+      "Monday",
+      "Tuesday"
+    ]
+  },
+  "cpt": [
+    {
+      "sleep_quality": "good",
+      "emotional_state": "happy",
+      "day_of_week": "Monday",
+      "emotions": {
+        "happy": 0.75,
+        "angry": 0.2,
+        "sad": 0.05
+      }
+    },
+    {
+      "sleep_quality": "good",
+      "emotional_state": "angry",
+      "day_of_week": "Monday",
+      "emotions": {
+        "happy": 0.21,
+        "angry": 0.63,
+        "sad": 0.16
+      }
+    },
+    {
+      "sleep_quality": "good",
+      "emotional_state": "sad",
+      "day_of_week": "Monday",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.16,
+        "sad": 0.79
+      }
+    },
+    {
+      "sleep_quality": "bad",
+      "emotional_state": "happy",
+      "day_of_week": "Monday",
+      "emotions": {
+        "happy": 0.42,
+        "angry": 0.32,
+        "sad": 0.26
+      }
+    },
+    {
+      "sleep_quality": "bad",
+      "emotional_state": "angry",
+      "day_of_week": "Monday",
+      "emotions": {
+        "happy": 0.26,
+        "angry": 0.58,
+        "sad": 0.16
+      }
+    },
+    {
+      "sleep_quality": "bad",
+      "emotional_state": "sad",
+      "day_of_week": "Monday",
+      "emotions": {
+        "happy": 0.16,
+        "angry": 0.21,
+        "sad": 0.63
+      }
+    },
+    {
+      "sleep_quality": "good",
+      "emotional_state": "happy",
+      "day_of_week": "Tuesday",
+      "emotions": {
+        "happy": 0.7,
+        "angry": 0.2,
+        "sad": 0.1
+      }
+    },
+    {
+      "sleep_quality": "good",
+      "emotional_state": "angry",
+      "day_of_week": "Tuesday",
+      "emotions": {
+        "happy": 0.2,
+        "angry": 0.55,
+        "sad": 0.25
+      }
+    },
+    {
+      "sleep_quality": "good",
+      "emotional_state": "sad",
+      "day_of_week": "Tuesday",
+      "emotions": {
+        "happy": 0.1,
+        "angry": 0.25,
+        "sad": 0.65
+      }
+    },
+    {
+      "sleep_quality": "bad",
+      "emotional_state": "happy",
+      "day_of_week": "Tuesday",
+      "emotions": {
+        "happy": 0.35,
+        "angry": 0.3,
+        "sad": 0.35
+      }
+    },
+    {
+      "sleep_quality": "bad",
+      "emotional_state": "angry",
+      "day_of_week": "Tuesday",
+      "emotions": {
+        "happy": 0.2,
+        "angry": 0.6,
+        "sad": 0.2
+      }
+    },
+    {
+      "sleep_quality": "bad",
+      "emotional_state": "sad",
+      "day_of_week": "Tuesday",
+      "emotions": {
+        "happy": 0.25,
+        "angry": 0.2,
+        "sad": 0.55
+      }
+    }
+  ]
+}

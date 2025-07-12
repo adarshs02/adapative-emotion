@@ -1,0 +1,99 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "promise_importance": [
+      "low",
+      "high"
+    ],
+    "emotion_towards_child": [
+      "angry",
+      "happy",
+      "guilty"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "promise_importance": "low",
+      "emotion_towards_child": "happy",
+      "emotions": {
+        "emotion_1": 0.95,
+        "emotion_2": 0.05,
+        "emotion_3": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "promise_importance": "high",
+      "emotion_towards_child": "guilty",
+      "emotions": {
+        "emotion_1": 0.0,
+        "emotion_2": 0.5,
+        "emotion_3": 0.5
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "promise_importance": "low",
+      "emotion_towards_child": "happy",
+      "emotions": {
+        "emotion_1": 0.1,
+        "emotion_2": 0.45,
+        "emotion_3": 0.45
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "promise_importance": "high",
+      "emotion_towards_child": "angry",
+      "emotions": {
+        "emotion_1": 0.05,
+        "emotion_2": 0.48,
+        "emotion_3": 0.47
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "promise_importance": "low",
+      "emotion_towards_child": "angry",
+      "emotions": {
+        "emotion_1": 0.0,
+        "emotion_2": 0.45,
+        "emotion_3": 0.55
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "promise_importance": "high",
+      "emotion_towards_child": "happy",
+      "emotions": {
+        "emotion_1": 0.5,
+        "emotion_2": 0.45,
+        "emotion_3": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "promise_importance": "low",
+      "emotion_towards_child": "angry",
+      "emotions": {
+        "emotion_1": 0.05,
+        "emotion_2": 0.48,
+        "emotion_3": 0.47
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "promise_importance": "high",
+      "emotion_towards_child": "guilty",
+      "emotions": {
+        "emotion_1": 0.5,
+        "emotion_2": 0.45,
+        "emotion_3": 0.05
+      }
+    }
+  ]
+}

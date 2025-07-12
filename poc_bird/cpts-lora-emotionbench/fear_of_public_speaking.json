@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "confidence": [
+      "low",
+      "high"
+    ],
+    "preparation": [
+      "poor",
+      "good"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "confidence": "low",
+      "preparation": "poor",
+      "emotions": {
+        "anxiety": 0.84,
+        "anger": 0.11,
+        "confidence": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "confidence": "low",
+      "preparation": "good",
+      "emotions": {
+        "anxiety": 0.63,
+        "anger": 0.21,
+        "confidence": 0.16
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "confidence": "high",
+      "preparation": "poor",
+      "emotions": {
+        "anxiety": 0.52,
+        "anger": 0.32,
+        "confidence": 0.16
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "confidence": "high",
+      "preparation": "good",
+      "emotions": {
+        "anxiety": 0.32,
+        "anger": 0.21,
+        "confidence": 0.47
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "confidence": "low",
+      "preparation": "poor",
+      "emotions": {
+        "anxiety": 0.6,
+        "anger": 0.3,
+        "confidence": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "confidence": "low",
+      "preparation": "good",
+      "emotions": {
+        "anxiety": 0.45,
+        "anger": 0.4,
+        "confidence": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "confidence": "high",
+      "preparation": "poor",
+      "emotions": {
+        "anxiety": 0.58,
+        "anger": 0.37,
+        "confidence": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "confidence": "high",
+      "preparation": "good",
+      "emotions": {
+        "anxiety": 0.32,
+        "anger": 0.47,
+        "confidence": 0.21
+      }
+    }
+  ]
+}

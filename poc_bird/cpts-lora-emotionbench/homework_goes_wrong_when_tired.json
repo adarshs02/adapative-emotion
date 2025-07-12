@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "tiredness": [
+      "yes",
+      "no"
+    ],
+    "homework_load": [
+      "heavy",
+      "light"
+    ],
+    "success": [
+      "failed",
+      "success"
+    ]
+  },
+  "cpt": [
+    {
+      "tiredness": "yes",
+      "homework_load": "heavy",
+      "success": "failed",
+      "emotions": {
+        "angry": 0.75,
+        "stressed": 0.25,
+        "happy": 0.0
+      }
+    },
+    {
+      "tiredness": "yes",
+      "homework_load": "heavy",
+      "success": "success",
+      "emotions": {
+        "happy": 0.5,
+        "stressed": 0.45,
+        "angry": 0.05
+      }
+    },
+    {
+      "tiredness": "yes",
+      "homework_load": "light",
+      "success": "failed",
+      "emotions": {
+        "angry": 0.6,
+        "stressed": 0.35,
+        "happy": 0.05
+      }
+    },
+    {
+      "tiredness": "yes",
+      "homework_load": "light",
+      "success": "success",
+      "emotions": {
+        "happy": 0.55,
+        "stressed": 0.4,
+        "angry": 0.05
+      }
+    },
+    {
+      "tiredness": "no",
+      "homework_load": "heavy",
+      "success": "failed",
+      "emotions": {
+        "angry": 0.6,
+        "stressed": 0.35,
+        "happy": 0.05
+      }
+    },
+    {
+      "tiredness": "no",
+      "homework_load": "heavy",
+      "success": "success",
+      "emotions": {
+        "happy": 0.55,
+        "stressed": 0.4,
+        "angry": 0.05
+      }
+    },
+    {
+      "tiredness": "no",
+      "homework_load": "light",
+      "success": "failed",
+      "emotions": {
+        "angry": 0.45,
+        "stressed": 0.5,
+        "happy": 0.05
+      }
+    },
+    {
+      "tiredness": "no",
+      "homework_load": "light",
+      "success": "success",
+      "emotions": {
+        "happy": 0.55,
+        "stressed": 0.4,
+        "angry": 0.05
+      }
+    }
+  ]
+}

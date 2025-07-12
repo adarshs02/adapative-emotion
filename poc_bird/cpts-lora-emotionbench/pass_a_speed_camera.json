@@ -1,0 +1,55 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "speed_level": [
+      "safe",
+      "dangerous"
+    ],
+    "emotions": [
+      "happy",
+      "angry",
+      "nervous"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "speed_level": "safe",
+      "emotions": {
+        "happy": 0.9,
+        "angry": 0.05,
+        "nervous": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "speed_level": "dangerous",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.75,
+        "nervous": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "speed_level": "safe",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.75,
+        "nervous": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "speed_level": "dangerous",
+      "emotions": {
+        "happy": 0.0,
+        "angry": 0.9,
+        "nervous": 0.1
+      }
+    }
+  ]
+}

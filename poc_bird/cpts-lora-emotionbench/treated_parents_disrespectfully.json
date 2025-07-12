@@ -1,0 +1,200 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "emotion": [
+      "angry",
+      "ashamed",
+      "regretful"
+    ],
+    "parent_reaction": [
+      "forgiving",
+      "angry",
+      "indifferent"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "emotion": "angry",
+      "parent_reaction": "forgiving",
+      "emotions": {
+        "angry": 0.48,
+        "ashamed": 0.47,
+        "regretful": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion": "angry",
+      "parent_reaction": "angry",
+      "emotions": {
+        "angry": 0.5,
+        "ashamed": 0.45,
+        "regretful": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion": "angry",
+      "parent_reaction": "indifferent",
+      "emotions": {
+        "angry": 0.4,
+        "ashamed": 0.5,
+        "regretful": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion": "angry",
+      "parent_reaction": "forgiving",
+      "emotions": {
+        "angry": 0.55,
+        "ashamed": 0.35,
+        "regretful": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion": "angry",
+      "parent_reaction": "angry",
+      "emotions": {
+        "angry": 0.65,
+        "ashamed": 0.25,
+        "regretful": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion": "angry",
+      "parent_reaction": "indifferent",
+      "emotions": {
+        "angry": 0.5,
+        "ashamed": 0.45,
+        "regretful": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion": "ashamed",
+      "parent_reaction": "forgiving",
+      "emotions": {
+        "angry": 0.05,
+        "ashamed": 0.5,
+        "regretful": 0.45
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion": "ashamed",
+      "parent_reaction": "angry",
+      "emotions": {
+        "angry": 0.45,
+        "ashamed": 0.5,
+        "regretful": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion": "ashamed",
+      "parent_reaction": "indifferent",
+      "emotions": {
+        "angry": 0.05,
+        "ashamed": 0.5,
+        "regretful": 0.45
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion": "ashamed",
+      "parent_reaction": "forgiving",
+      "emotions": {
+        "angry": 0.1,
+        "ashamed": 0.5,
+        "regretful": 0.4
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion": "ashamed",
+      "parent_reaction": "angry",
+      "emotions": {
+        "angry": 0.35,
+        "ashamed": 0.5,
+        "regretful": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion": "ashamed",
+      "parent_reaction": "indifferent",
+      "emotions": {
+        "angry": 0.1,
+        "ashamed": 0.5,
+        "regretful": 0.4
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion": "regretful",
+      "parent_reaction": "forgiving",
+      "emotions": {
+        "angry": 0.05,
+        "ashamed": 0.05,
+        "regretful": 0.9
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion": "regretful",
+      "parent_reaction": "angry",
+      "emotions": {
+        "angry": 0.1,
+        "ashamed": 0.1,
+        "regretful": 0.8
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "emotion": "regretful",
+      "parent_reaction": "indifferent",
+      "emotions": {
+        "angry": 0.05,
+        "ashamed": 0.05,
+        "regretful": 0.9
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion": "regretful",
+      "parent_reaction": "forgiving",
+      "emotions": {
+        "angry": 0.1,
+        "ashamed": 0.1,
+        "regretful": 0.8
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion": "regretful",
+      "parent_reaction": "angry",
+      "emotions": {
+        "angry": 0.25,
+        "ashamed": 0.15,
+        "regretful": 0.6
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "emotion": "regretful",
+      "parent_reaction": "indifferent",
+      "emotions": {
+        "angry": 0.1,
+        "ashamed": 0.1,
+        "regretful": 0.8
+      }
+    }
+  ]
+}

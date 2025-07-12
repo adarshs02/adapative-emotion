@@ -1,0 +1,99 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "classmate_reaction": [
+      "apologetic",
+      "angry"
+    ],
+    "emotion": [
+      "happy",
+      "angry",
+      "sad"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "classmate_reaction": "apologetic",
+      "emotion": {
+        "happy": 0.9,
+        "angry": 0.05,
+        "sad": 0.05
+      },
+      "emotions": {}
+    },
+    {
+      "offence_history": "first_time",
+      "classmate_reaction": "angry",
+      "emotion": {
+        "happy": 0.05,
+        "angry": 0.85,
+        "sad": 0.1
+      },
+      "emotions": {}
+    },
+    {
+      "offence_history": "repeated",
+      "classmate_reaction": "apologetic",
+      "emotion": {
+        "happy": 0.05,
+        "angry": 0.85,
+        "sad": 0.1
+      },
+      "emotions": {}
+    },
+    {
+      "offence_history": "repeated",
+      "classmate_reaction": "angry",
+      "emotion": {
+        "happy": 0.05,
+        "angry": 0.95,
+        "sad": 0.0
+      },
+      "emotions": {}
+    },
+    {
+      "offence_history": "first_time",
+      "classmate_reaction": "neutral",
+      "emotion": {
+        "happy": 0.95,
+        "angry": 0.05,
+        "sad": 0.0
+      },
+      "emotions": {}
+    },
+    {
+      "offence_history": "repeated",
+      "classmate_reaction": "neutral",
+      "emotion": {
+        "happy": 0.05,
+        "angry": 0.95,
+        "sad": 0.0
+      },
+      "emotions": {}
+    },
+    {
+      "offence_history": "first_time",
+      "classmate_reaction": "",
+      "emotion": {
+        "happy": 0.9,
+        "angry": 0.05,
+        "sad": 0.05
+      },
+      "emotions": {}
+    },
+    {
+      "offence_history": "repeated",
+      "classmate_reaction": "",
+      "emotion": {
+        "happy": 0.05,
+        "angry": 0.95,
+        "sad": 0.0
+      },
+      "emotions": {}
+    }
+  ]
+}

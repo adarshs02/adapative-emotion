@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "parent_reaction": [
+      "supportive",
+      "angry"
+    ],
+    "resolution_attempted": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "parent_reaction": "supportive",
+      "resolution_attempted": "yes",
+      "emotions": {
+        "happy": 0.7,
+        "angry": 0.2,
+        "sad": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "parent_reaction": "supportive",
+      "resolution_attempted": "no",
+      "emotions": {
+        "happy": 0.5,
+        "angry": 0.35,
+        "sad": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "parent_reaction": "angry",
+      "resolution_attempted": "yes",
+      "emotions": {
+        "happy": 0.2,
+        "angry": 0.6,
+        "sad": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "parent_reaction": "angry",
+      "resolution_attempted": "no",
+      "emotions": {
+        "happy": 0.1,
+        "angry": 0.7,
+        "sad": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "parent_reaction": "supportive",
+      "resolution_attempted": "yes",
+      "emotions": {
+        "happy": 0.3,
+        "angry": 0.55,
+        "sad": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "parent_reaction": "supportive",
+      "resolution_attempted": "no",
+      "emotions": {
+        "happy": 0.2,
+        "angry": 0.6,
+        "sad": 0.2
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "parent_reaction": "angry",
+      "resolution_attempted": "yes",
+      "emotions": {
+        "happy": 0.1,
+        "angry": 0.8,
+        "sad": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "parent_reaction": "angry",
+      "resolution_attempted": "no",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.9,
+        "sad": 0.05
+      }
+    }
+  ]
+}

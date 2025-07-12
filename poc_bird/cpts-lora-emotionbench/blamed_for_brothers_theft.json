@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "blame": [
+      "innocent",
+      "guilty"
+    ],
+    "consequence": [
+      "punishment",
+      "warning"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "blame": "innocent",
+      "consequence": "punishment",
+      "emotions": {
+        "anger": 0.45,
+        "sadness": 0.33,
+        "anxiety": 0.22
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "blame": "guilty",
+      "consequence": "punishment",
+      "emotions": {
+        "anger": 0.35,
+        "sadness": 0.4,
+        "anxiety": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "blame": "innocent",
+      "consequence": "warning",
+      "emotions": {
+        "anger": 0.25,
+        "sadness": 0.3,
+        "anxiety": 0.45
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "blame": "guilty",
+      "consequence": "warning",
+      "emotions": {
+        "anger": 0.3,
+        "sadness": 0.35,
+        "anxiety": 0.35
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "blame": "innocent",
+      "consequence": "punishment",
+      "emotions": {
+        "anger": 0.5,
+        "sadness": 0.4,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "blame": "guilty",
+      "consequence": "punishment",
+      "emotions": {
+        "anger": 0.6,
+        "sadness": 0.3,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "blame": "innocent",
+      "consequence": "warning",
+      "emotions": {
+        "anger": 0.4,
+        "sadness": 0.45,
+        "anxiety": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "blame": "guilty",
+      "consequence": "warning",
+      "emotions": {
+        "anger": 0.5,
+        "sadness": 0.4,
+        "anxiety": 0.1
+      }
+    }
+  ]
+}

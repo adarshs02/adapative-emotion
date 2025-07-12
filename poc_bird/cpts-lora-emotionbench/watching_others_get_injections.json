@@ -1,0 +1,99 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "comfort_level": [
+      "high",
+      "low"
+    ],
+    "emotion_type": [
+      "anger",
+      "anxiety",
+      "fear"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "comfort_level": "high",
+      "emotion_type": "anger",
+      "emotions": {
+        "anger": 0.65,
+        "anxiety": 0.2,
+        "fear": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "comfort_level": "low",
+      "emotion_type": "anger",
+      "emotions": {
+        "anger": 0.5,
+        "anxiety": 0.4,
+        "fear": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "comfort_level": "high",
+      "emotion_type": "anger",
+      "emotions": {
+        "anger": 0.75,
+        "anxiety": 0.2,
+        "fear": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "comfort_level": "low",
+      "emotion_type": "anger",
+      "emotions": {
+        "anger": 0.6,
+        "anxiety": 0.35,
+        "fear": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "comfort_level": "high",
+      "emotion_type": "anxiety",
+      "emotions": {
+        "anger": 0.15,
+        "anxiety": 0.65,
+        "fear": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "comfort_level": "low",
+      "emotion_type": "anxiety",
+      "emotions": {
+        "anger": 0.1,
+        "anxiety": 0.55,
+        "fear": 0.35
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "comfort_level": "high",
+      "emotion_type": "anxiety",
+      "emotions": {
+        "anger": 0.2,
+        "anxiety": 0.65,
+        "fear": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "comfort_level": "low",
+      "emotion_type": "anxiety",
+      "emotions": {
+        "anger": 0.15,
+        "anxiety": 0.55,
+        "fear": 0.3
+      }
+    }
+  ]
+}

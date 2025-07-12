@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "parent_reaction": [
+      "supportive",
+      "disapproving"
+    ],
+    "consequences": [
+      "none",
+      "grounded"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "parent_reaction": "supportive",
+      "consequences": "none",
+      "emotions": {
+        "excitement": 0.6,
+        "defiance": 0.35,
+        "anxiety": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "parent_reaction": "disapproving",
+      "consequences": "none",
+      "emotions": {
+        "regret": 0.6,
+        "defiance": 0.35,
+        "anger": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "parent_reaction": "supportive",
+      "consequences": "grounded",
+      "emotions": {
+        "regret": 0.7,
+        "anger": 0.25,
+        "defiance": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "parent_reaction": "disapproving",
+      "consequences": "grounded",
+      "emotions": {
+        "regret": 0.8,
+        "anger": 0.15,
+        "defiance": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "parent_reaction": "supportive",
+      "consequences": "none",
+      "emotions": {
+        "excitement": 0.4,
+        "defiance": 0.5,
+        "anxiety": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "parent_reaction": "disapproving",
+      "consequences": "none",
+      "emotions": {
+        "regret": 0.4,
+        "anger": 0.5,
+        "defiance": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "parent_reaction": "supportive",
+      "consequences": "grounded",
+      "emotions": {
+        "regret": 0.6,
+        "anger": 0.3,
+        "defiance": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "parent_reaction": "disapproving",
+      "consequences": "grounded",
+      "emotions": {
+        "regret": 0.7,
+        "anger": 0.25,
+        "defiance": 0.05
+      }
+    }
+  ]
+}

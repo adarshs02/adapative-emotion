@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "friend_ill": [
+      "no",
+      "yes"
+    ],
+    "appointment_cancelled": [
+      "no",
+      "yes"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "friend_ill": "no",
+      "appointment_cancelled": "no",
+      "emotions": {
+        "happy": 0.9,
+        "anxious": 0.1,
+        "angry": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_ill": "yes",
+      "appointment_cancelled": "no",
+      "emotions": {
+        "happy": 0.3,
+        "anxious": 0.62,
+        "angry": 0.08
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_ill": "yes",
+      "appointment_cancelled": "yes",
+      "emotions": {
+        "happy": 0.3,
+        "anxious": 0.6,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_ill": "no",
+      "appointment_cancelled": "no",
+      "emotions": {
+        "happy": 0.6,
+        "anxious": 0.3,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_ill": "yes",
+      "appointment_cancelled": "no",
+      "emotions": {
+        "happy": 0.23,
+        "anxious": 0.67,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_ill": "yes",
+      "appointment_cancelled": "yes",
+      "emotions": {
+        "happy": 0.2,
+        "anxious": 0.6,
+        "angry": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_ill": "no",
+      "appointment_cancelled": "yes",
+      "emotions": {
+        "happy": 0.3,
+        "anxious": 0.62,
+        "angry": 0.08
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_ill": "no",
+      "appointment_cancelled": "yes",
+      "emotions": {
+        "happy": 0.23,
+        "anxious": 0.67,
+        "angry": 0.1
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "offence_severity": [
+      "minor",
+      "major"
+    ],
+    "profession_satisfaction": [
+      "satisfied",
+      "unsatisfied"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "offence_severity": "minor",
+      "profession_satisfaction": "satisfied",
+      "emotions": {
+        "happy": 0.85,
+        "angry": 0.05,
+        "sad": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "offence_severity": "major",
+      "profession_satisfaction": "satisfied",
+      "emotions": {
+        "angry": 0.9,
+        "happy": 0.05,
+        "sad": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offence_severity": "minor",
+      "profession_satisfaction": "satisfied",
+      "emotions": {
+        "happy": 0.7,
+        "angry": 0.2,
+        "sad": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offence_severity": "major",
+      "profession_satisfaction": "satisfied",
+      "emotions": {
+        "angry": 0.95,
+        "happy": 0.05,
+        "sad": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "offence_severity": "minor",
+      "profession_satisfaction": "unsatisfied",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.8,
+        "sad": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "offence_severity": "major",
+      "profession_satisfaction": "unsatisfied",
+      "emotions": {
+        "angry": 0.95,
+        "happy": 0.05,
+        "sad": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offence_severity": "minor",
+      "profession_satisfaction": "unsatisfied",
+      "emotions": {
+        "happy": 0.0,
+        "angry": 0.9,
+        "sad": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offence_severity": "major",
+      "profession_satisfaction": "unsatisfied",
+      "emotions": {
+        "angry": 1.0,
+        "happy": 0.0,
+        "sad": 0.0
+      }
+    }
+  ]
+}

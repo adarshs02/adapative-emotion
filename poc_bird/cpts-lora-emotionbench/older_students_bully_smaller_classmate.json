@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "defenselessness": [
+      "yes",
+      "no"
+    ],
+    "anger": [
+      "strong",
+      "weak"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "defenselessness": "yes",
+      "anger": "strong",
+      "emotions": {
+        "anger": 0.7,
+        "empathy": 0.2,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "defenselessness": "yes",
+      "anger": "weak",
+      "emotions": {
+        "anger": 0.3,
+        "empathy": 0.5,
+        "frustration": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "defenselessness": "no",
+      "anger": "strong",
+      "emotions": {
+        "anger": 0.6,
+        "empathy": 0.3,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "defenselessness": "no",
+      "anger": "weak",
+      "emotions": {
+        "anger": 0.4,
+        "empathy": 0.5,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "defenselessness": "yes",
+      "anger": "strong",
+      "emotions": {
+        "anger": 0.8,
+        "empathy": 0.1,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "defenselessness": "yes",
+      "anger": "weak",
+      "emotions": {
+        "anger": 0.5,
+        "empathy": 0.4,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "defenselessness": "no",
+      "anger": "strong",
+      "emotions": {
+        "anger": 0.7,
+        "empathy": 0.2,
+        "frustration": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "defenselessness": "no",
+      "anger": "weak",
+      "emotions": {
+        "anger": 0.4,
+        "empathy": 0.5,
+        "frustration": 0.1
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "age": [
+      "young",
+      "old"
+    ],
+    "income": [
+      "low",
+      "high"
+    ],
+    "attitude": [
+      "positive",
+      "negative"
+    ]
+  },
+  "cpt": [
+    {
+      "age": "young",
+      "income": "low",
+      "attitude": "positive",
+      "emotions": {
+        "happy": 0.8,
+        "angry": 0.15,
+        "sad": 0.05
+      }
+    },
+    {
+      "age": "young",
+      "income": "low",
+      "attitude": "negative",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.75,
+        "sad": 0.2
+      }
+    },
+    {
+      "age": "young",
+      "income": "high",
+      "attitude": "positive",
+      "emotions": {
+        "happy": 0.95,
+        "angry": 0.02,
+        "sad": 0.03
+      }
+    },
+    {
+      "age": "young",
+      "income": "high",
+      "attitude": "negative",
+      "emotions": {
+        "happy": 0.02,
+        "angry": 0.85,
+        "sad": 0.13
+      }
+    },
+    {
+      "age": "old",
+      "income": "low",
+      "attitude": "positive",
+      "emotions": {
+        "happy": 0.75,
+        "angry": 0.1,
+        "sad": 0.15
+      }
+    },
+    {
+      "age": "old",
+      "income": "low",
+      "attitude": "negative",
+      "emotions": {
+        "happy": 0.1,
+        "angry": 0.8,
+        "sad": 0.1
+      }
+    },
+    {
+      "age": "old",
+      "income": "high",
+      "attitude": "positive",
+      "emotions": {
+        "happy": 0.9,
+        "angry": 0.05,
+        "sad": 0.05
+      }
+    },
+    {
+      "age": "old",
+      "income": "high",
+      "attitude": "negative",
+      "emotions": {
+        "happy": 0.05,
+        "angry": 0.85,
+        "sad": 0.1
+      }
+    }
+  ]
+}

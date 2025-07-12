@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "first_time": [
+      "yes",
+      "no"
+    ],
+    "comfort_level": [
+      "low",
+      "high"
+    ],
+    "excitement": [
+      "high",
+      "low"
+    ]
+  },
+  "cpt": [
+    {
+      "first_time": "yes",
+      "comfort_level": "low",
+      "excitement": "high",
+      "emotions": {
+        "anxious": 0.52,
+        "nervous": 0.38,
+        "excited": 0.1
+      }
+    },
+    {
+      "first_time": "yes",
+      "comfort_level": "low",
+      "excitement": "low",
+      "emotions": {
+        "anxious": 0.75,
+        "nervous": 0.2,
+        "excited": 0.05
+      }
+    },
+    {
+      "first_time": "yes",
+      "comfort_level": "high",
+      "excitement": "high",
+      "emotions": {
+        "anxious": 0.3,
+        "nervous": 0.45,
+        "excited": 0.25
+      }
+    },
+    {
+      "first_time": "yes",
+      "comfort_level": "high",
+      "excitement": "low",
+      "emotions": {
+        "anxious": 0.52,
+        "nervous": 0.38,
+        "excited": 0.1
+      }
+    },
+    {
+      "first_time": "no",
+      "comfort_level": "low",
+      "excitement": "high",
+      "emotions": {
+        "anxious": 0.47,
+        "nervous": 0.38,
+        "excited": 0.15
+      }
+    },
+    {
+      "first_time": "no",
+      "comfort_level": "low",
+      "excitement": "low",
+      "emotions": {
+        "anxious": 0.7,
+        "nervous": 0.25,
+        "excited": 0.05
+      }
+    },
+    {
+      "first_time": "no",
+      "comfort_level": "high",
+      "excitement": "high",
+      "emotions": {
+        "anxious": 0.25,
+        "nervous": 0.4,
+        "excited": 0.35
+      }
+    },
+    {
+      "first_time": "no",
+      "comfort_level": "high",
+      "excitement": "low",
+      "emotions": {
+        "anxious": 0.47,
+        "nervous": 0.38,
+        "excited": 0.15
+      }
+    }
+  ]
+}

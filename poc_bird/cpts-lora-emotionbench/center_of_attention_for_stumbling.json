@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "attention": [
+      "yes",
+      "no"
+    ],
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "foolishness": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "attention": "yes",
+      "foolishness": "yes",
+      "emotions": {
+        "happy": 0.5,
+        "nervous": 0.45,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "attention": "yes",
+      "foolishness": "no",
+      "emotions": {
+        "happy": 0.33,
+        "nervous": 0.42,
+        "angry": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "attention": "no",
+      "foolishness": "yes",
+      "emotions": {
+        "happy": 0.33,
+        "nervous": 0.42,
+        "angry": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "attention": "no",
+      "foolishness": "no",
+      "emotions": {
+        "nervous": 0.6,
+        "angry": 0.35,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "attention": "yes",
+      "foolishness": "yes",
+      "emotions": {
+        "angry": 0.5,
+        "nervous": 0.45,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "attention": "yes",
+      "foolishness": "no",
+      "emotions": {
+        "angry": 0.33,
+        "nervous": 0.42,
+        "happy": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "attention": "no",
+      "foolishness": "yes",
+      "emotions": {
+        "angry": 0.33,
+        "nervous": 0.42,
+        "happy": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "attention": "no",
+      "foolishness": "no",
+      "emotions": {
+        "nervous": 0.6,
+        "happy": 0.35,
+        "angry": 0.05
+      }
+    }
+  ]
+}

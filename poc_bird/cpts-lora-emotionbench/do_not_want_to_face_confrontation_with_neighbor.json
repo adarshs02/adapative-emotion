@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "confrontation_approach": [
+      "avoid",
+      "confront"
+    ],
+    "neighbor_attitude": [
+      "friendly",
+      "hostile"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "confrontation_approach": "avoid",
+      "neighbor_attitude": "friendly",
+      "emotions": {
+        "anxious": 0.45,
+        "angry": 0.45,
+        "confident": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "confrontation_approach": "avoid",
+      "neighbor_attitude": "hostile",
+      "emotions": {
+        "anxious": 0.5,
+        "angry": 0.45,
+        "confident": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "confrontation_approach": "confront",
+      "neighbor_attitude": "friendly",
+      "emotions": {
+        "anxious": 0.4,
+        "angry": 0.45,
+        "confident": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "confrontation_approach": "confront",
+      "neighbor_attitude": "hostile",
+      "emotions": {
+        "anxious": 0.45,
+        "angry": 0.45,
+        "confident": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "confrontation_approach": "avoid",
+      "neighbor_attitude": "friendly",
+      "emotions": {
+        "anxious": 0.5,
+        "angry": 0.45,
+        "confident": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "confrontation_approach": "avoid",
+      "neighbor_attitude": "hostile",
+      "emotions": {
+        "anxious": 0.55,
+        "angry": 0.4,
+        "confident": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "confrontation_approach": "confront",
+      "neighbor_attitude": "friendly",
+      "emotions": {
+        "anxious": 0.45,
+        "angry": 0.45,
+        "confident": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "confrontation_approach": "confront",
+      "neighbor_attitude": "hostile",
+      "emotions": {
+        "anxious": 0.5,
+        "angry": 0.45,
+        "confident": 0.05
+      }
+    }
+  ]
+}

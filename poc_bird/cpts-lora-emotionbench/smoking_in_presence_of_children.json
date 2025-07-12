@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "age": [
+      "young",
+      "old"
+    ],
+    "children_age": [
+      "babies",
+      "teenagers"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "age": "young",
+      "children_age": "babies",
+      "emotions": {
+        "anger": 0.01,
+        "shock": 0.95,
+        "sadness": 0.04
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "age": "young",
+      "children_age": "teenagers",
+      "emotions": {
+        "anger": 0.03,
+        "shock": 0.89,
+        "sadness": 0.08
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "age": "old",
+      "children_age": "babies",
+      "emotions": {
+        "anger": 0.02,
+        "shock": 0.91,
+        "sadness": 0.07
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "age": "old",
+      "children_age": "teenagers",
+      "emotions": {
+        "anger": 0.04,
+        "shock": 0.88,
+        "sadness": 0.08
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "age": "young",
+      "children_age": "babies",
+      "emotions": {
+        "anger": 0.1,
+        "shock": 0.85,
+        "sadness": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "age": "young",
+      "children_age": "teenagers",
+      "emotions": {
+        "anger": 0.15,
+        "shock": 0.75,
+        "sadness": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "age": "old",
+      "children_age": "babies",
+      "emotions": {
+        "anger": 0.12,
+        "shock": 0.82,
+        "sadness": 0.06
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "age": "old",
+      "children_age": "teenagers",
+      "emotions": {
+        "anger": 0.18,
+        "shock": 0.75,
+        "sadness": 0.07
+      }
+    }
+  ]
+}

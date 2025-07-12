@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "family_distance": [
+      "close",
+      "far"
+    ],
+    "family_contact": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "family_distance": "close",
+      "family_contact": "yes",
+      "emotions": {
+        "sad": 0.45,
+        "angry": 0.4,
+        "happy": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "family_distance": "close",
+      "family_contact": "no",
+      "emotions": {
+        "sad": 0.6,
+        "angry": 0.3,
+        "happy": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "family_distance": "far",
+      "family_contact": "yes",
+      "emotions": {
+        "sad": 0.5,
+        "angry": 0.35,
+        "happy": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "family_distance": "far",
+      "family_contact": "no",
+      "emotions": {
+        "sad": 0.65,
+        "angry": 0.25,
+        "happy": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "family_distance": "close",
+      "family_contact": "yes",
+      "emotions": {
+        "sad": 0.35,
+        "angry": 0.55,
+        "happy": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "family_distance": "close",
+      "family_contact": "no",
+      "emotions": {
+        "sad": 0.45,
+        "angry": 0.5,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "family_distance": "far",
+      "family_contact": "yes",
+      "emotions": {
+        "sad": 0.4,
+        "angry": 0.55,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "family_distance": "far",
+      "family_contact": "no",
+      "emotions": {
+        "sad": 0.5,
+        "angry": 0.5,
+        "happy": 0.0
+      }
+    }
+  ]
+}

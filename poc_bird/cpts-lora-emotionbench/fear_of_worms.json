@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "worm_size": [
+      "small",
+      "large"
+    ],
+    "worm_type": [
+      "common",
+      "poisonous"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "worm_size": "small",
+      "worm_type": "common",
+      "emotions": {
+        "anger": 0.1,
+        "disgust": 0.9,
+        "fear": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "worm_size": "small",
+      "worm_type": "poisonous",
+      "emotions": {
+        "anger": 0.05,
+        "disgust": 0.95,
+        "fear": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "worm_size": "large",
+      "worm_type": "common",
+      "emotions": {
+        "anger": 0.15,
+        "disgust": 0.85,
+        "fear": 0.0
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "worm_size": "large",
+      "worm_type": "poisonous",
+      "emotions": {
+        "anger": 0.2,
+        "disgust": 0.8,
+        "fear": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "worm_size": "small",
+      "worm_type": "common",
+      "emotions": {
+        "anger": 0.25,
+        "disgust": 0.75,
+        "fear": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "worm_size": "small",
+      "worm_type": "poisonous",
+      "emotions": {
+        "anger": 0.3,
+        "disgust": 0.65,
+        "fear": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "worm_size": "large",
+      "worm_type": "common",
+      "emotions": {
+        "anger": 0.35,
+        "disgust": 0.65,
+        "fear": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "worm_size": "large",
+      "worm_type": "poisonous",
+      "emotions": {
+        "anger": 0.4,
+        "disgust": 0.6,
+        "fear": 0.0
+      }
+    }
+  ]
+}

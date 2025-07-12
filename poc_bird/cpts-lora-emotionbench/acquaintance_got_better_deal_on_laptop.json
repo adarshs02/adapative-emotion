@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "price_comparison": [
+      "cheaper",
+      "more_expensive"
+    ],
+    "social_media_sharing": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "price_comparison": "cheaper",
+      "social_media_sharing": "yes",
+      "emotions": {
+        "happy": 0.67,
+        "offended": 0.22,
+        "sad": 0.11
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "price_comparison": "cheaper",
+      "social_media_sharing": "no",
+      "emotions": {
+        "happy": 0.4,
+        "offended": 0.1,
+        "sad": 0.5
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "price_comparison": "more_expensive",
+      "social_media_sharing": "yes",
+      "emotions": {
+        "happy": 0.6,
+        "offended": 0.15,
+        "sad": 0.25
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "price_comparison": "more_expensive",
+      "social_media_sharing": "no",
+      "emotions": {
+        "happy": 0.4,
+        "offended": 0.15,
+        "sad": 0.45
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "price_comparison": "cheaper",
+      "social_media_sharing": "yes",
+      "emotions": {
+        "happy": 0.5,
+        "offended": 0.25,
+        "sad": 0.25
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "price_comparison": "cheaper",
+      "social_media_sharing": "no",
+      "emotions": {
+        "happy": 0.4,
+        "offended": 0.3,
+        "sad": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "price_comparison": "more_expensive",
+      "social_media_sharing": "yes",
+      "emotions": {
+        "happy": 0.3,
+        "offended": 0.4,
+        "sad": 0.3
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "price_comparison": "more_expensive",
+      "social_media_sharing": "no",
+      "emotions": {
+        "happy": 0.2,
+        "offended": 0.5,
+        "sad": 0.3
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "rejection_history": [
+      "first_time",
+      "repeated"
+    ],
+    "love_intensity": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "rejection_history": "first_time",
+      "love_intensity": "low",
+      "emotions": {
+        "sad": 0.8,
+        "angry": 0.15,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "rejection_history": "first_time",
+      "love_intensity": "high",
+      "emotions": {
+        "happy": 0.8,
+        "sad": 0.15,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "rejection_history": "repeated",
+      "love_intensity": "low",
+      "emotions": {
+        "angry": 0.8,
+        "sad": 0.15,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "rejection_history": "repeated",
+      "love_intensity": "high",
+      "emotions": {
+        "happy": 0.8,
+        "angry": 0.15,
+        "sad": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "rejection_history": "first_time",
+      "love_intensity": "low",
+      "emotions": {
+        "angry": 0.8,
+        "sad": 0.15,
+        "happy": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "rejection_history": "first_time",
+      "love_intensity": "high",
+      "emotions": {
+        "happy": 0.8,
+        "angry": 0.15,
+        "sad": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "rejection_history": "repeated",
+      "love_intensity": "low",
+      "emotions": {
+        "angry": 0.95,
+        "sad": 0.05,
+        "happy": 0.0
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "rejection_history": "repeated",
+      "love_intensity": "high",
+      "emotions": {
+        "happy": 0.95,
+        "angry": 0.05,
+        "sad": 0.0
+      }
+    }
+  ]
+}

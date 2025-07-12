@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "friend_reaction": [
+      "forgiving",
+      "angry"
+    ],
+    "friend_expectation": [
+      "high",
+      "low"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "friend_reaction": "forgiving",
+      "friend_expectation": "high",
+      "emotions": {
+        "happy": 0.5,
+        "guilty": 0.45,
+        "relieved": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_reaction": "forgiving",
+      "friend_expectation": "low",
+      "emotions": {
+        "happy": 0.3,
+        "guilty": 0.6,
+        "relieved": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_reaction": "angry",
+      "friend_expectation": "high",
+      "emotions": {
+        "happy": 0.2,
+        "guilty": 0.75,
+        "relieved": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "friend_reaction": "angry",
+      "friend_expectation": "low",
+      "emotions": {
+        "happy": 0.1,
+        "guilty": 0.8,
+        "relieved": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reaction": "forgiving",
+      "friend_expectation": "high",
+      "emotions": {
+        "happy": 0.1,
+        "guilty": 0.75,
+        "relieved": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reaction": "forgiving",
+      "friend_expectation": "low",
+      "emotions": {
+        "happy": 0.05,
+        "guilty": 0.9,
+        "relieved": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reaction": "angry",
+      "friend_expectation": "high",
+      "emotions": {
+        "happy": 0.05,
+        "guilty": 0.85,
+        "relieved": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "friend_reaction": "angry",
+      "friend_expectation": "low",
+      "emotions": {
+        "happy": 0.05,
+        "guilty": 0.95,
+        "relieved": 0.0
+      }
+    }
+  ]
+}

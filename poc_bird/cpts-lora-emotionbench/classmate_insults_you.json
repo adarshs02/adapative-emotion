@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "offence_justification": [
+      "unjustified",
+      "justified"
+    ],
+    "offence_direction": [
+      "self",
+      "others"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "offence_justification": "unjustified",
+      "offence_direction": "self",
+      "emotions": {
+        "Anger": 0.58,
+        "Happiness": 0.37,
+        "Guilt": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "offence_justification": "unjustified",
+      "offence_direction": "others",
+      "emotions": {
+        "Anger": 0.47,
+        "Happiness": 0.37,
+        "Guilt": 0.16
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offence_justification": "unjustified",
+      "offence_direction": "self",
+      "emotions": {
+        "Anger": 0.6900000000000001,
+        "Happiness": 0.26,
+        "Guilt": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offence_justification": "unjustified",
+      "offence_direction": "others",
+      "emotions": {
+        "Anger": 0.55,
+        "Happiness": 0.35,
+        "Guilt": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "offence_justification": "justified",
+      "offence_direction": "self",
+      "emotions": {
+        "Happiness": 0.74,
+        "Anger": 0.21,
+        "Guilt": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "offence_justification": "justified",
+      "offence_direction": "others",
+      "emotions": {
+        "Happiness": 0.6,
+        "Anger": 0.25,
+        "Guilt": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offence_justification": "justified",
+      "offence_direction": "self",
+      "emotions": {
+        "Happiness": 0.68,
+        "Anger": 0.21,
+        "Guilt": 0.11
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "offence_justification": "justified",
+      "offence_direction": "others",
+      "emotions": {
+        "Happiness": 0.58,
+        "Anger": 0.26,
+        "Guilt": 0.16
+      }
+    }
+  ]
+}

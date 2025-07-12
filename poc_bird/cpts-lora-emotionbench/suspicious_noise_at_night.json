@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "situation": [
+      "dark_alone",
+      "dark_with_people"
+    ],
+    "suspicious_noise": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "situation": "dark_alone",
+      "suspicious_noise": "yes",
+      "emotions": {
+        "anxious": 0.8,
+        "scared": 0.15,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "situation": "dark_alone",
+      "suspicious_noise": "no",
+      "emotions": {
+        "anxious": 0.5,
+        "scared": 0.35,
+        "angry": 0.15
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "situation": "dark_with_people",
+      "suspicious_noise": "yes",
+      "emotions": {
+        "anxious": 0.7,
+        "scared": 0.2,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "situation": "dark_with_people",
+      "suspicious_noise": "no",
+      "emotions": {
+        "anxious": 0.4,
+        "scared": 0.25,
+        "angry": 0.35
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "situation": "dark_alone",
+      "suspicious_noise": "yes",
+      "emotions": {
+        "anxious": 0.6,
+        "scared": 0.3,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "situation": "dark_alone",
+      "suspicious_noise": "no",
+      "emotions": {
+        "anxious": 0.35,
+        "scared": 0.55,
+        "angry": 0.1
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "situation": "dark_with_people",
+      "suspicious_noise": "yes",
+      "emotions": {
+        "anxious": 0.75,
+        "scared": 0.2,
+        "angry": 0.05
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "situation": "dark_with_people",
+      "suspicious_noise": "no",
+      "emotions": {
+        "anxious": 0.45,
+        "scared": 0.4,
+        "angry": 0.15
+      }
+    }
+  ]
+}

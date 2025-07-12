@@ -1,0 +1,59 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "empathy": [
+      "low",
+      "high"
+    ],
+    "emotion": [
+      "anger",
+      "sadness",
+      "sympathy"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "empathy": "low",
+      "emotion": {
+        "anger": 0.75,
+        "sadness": 0.2,
+        "sympathy": 0.05
+      },
+      "emotions": {}
+    },
+    {
+      "offence_history": "first_time",
+      "empathy": "high",
+      "emotion": {
+        "anger": 0.5,
+        "sadness": 0.45,
+        "sympathy": 0.05
+      },
+      "emotions": {}
+    },
+    {
+      "offence_history": "repeated",
+      "empathy": "low",
+      "emotion": {
+        "anger": 0.95,
+        "sadness": 0.05,
+        "sympathy": 0.0
+      },
+      "emotions": {}
+    },
+    {
+      "offence_history": "repeated",
+      "empathy": "high",
+      "emotion": {
+        "anger": 0.9,
+        "sadness": 0.05,
+        "sympathy": 0.05
+      },
+      "emotions": {}
+    }
+  ]
+}

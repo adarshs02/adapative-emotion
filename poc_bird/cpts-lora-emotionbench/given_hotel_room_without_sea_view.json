@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "offence_history": [
+      "first_time",
+      "repeated"
+    ],
+    "hotel_quality": [
+      "low",
+      "high"
+    ],
+    "room_view": [
+      "sea",
+      "no_sea"
+    ]
+  },
+  "cpt": [
+    {
+      "offence_history": "first_time",
+      "hotel_quality": "low",
+      "room_view": "sea",
+      "emotions": {
+        "anger": 0.37,
+        "surprise": 0.47,
+        "frustration": 0.16
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "hotel_quality": "low",
+      "room_view": "no_sea",
+      "emotions": {
+        "anger": 0.4,
+        "surprise": 0.4,
+        "frustration": 0.2
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "hotel_quality": "high",
+      "room_view": "sea",
+      "emotions": {
+        "anger": 0.2,
+        "surprise": 0.45,
+        "frustration": 0.35
+      }
+    },
+    {
+      "offence_history": "first_time",
+      "hotel_quality": "high",
+      "room_view": "no_sea",
+      "emotions": {
+        "anger": 0.26,
+        "surprise": 0.48,
+        "frustration": 0.26
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "hotel_quality": "low",
+      "room_view": "sea",
+      "emotions": {
+        "anger": 0.5,
+        "surprise": 0.35,
+        "frustration": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "hotel_quality": "low",
+      "room_view": "no_sea",
+      "emotions": {
+        "anger": 0.55,
+        "surprise": 0.3,
+        "frustration": 0.15
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "hotel_quality": "high",
+      "room_view": "sea",
+      "emotions": {
+        "anger": 0.47,
+        "surprise": 0.37,
+        "frustration": 0.16
+      }
+    },
+    {
+      "offence_history": "repeated",
+      "hotel_quality": "high",
+      "room_view": "no_sea",
+      "emotions": {
+        "anger": 0.5,
+        "surprise": 0.35,
+        "frustration": 0.15
+      }
+    }
+  ]
+}
