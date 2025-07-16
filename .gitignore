@@ -57,3 +57,6 @@ poc_bird/logs/
 __pycache__/
 *.py[cod]
 *$py.class
+train/*.json
+train/eval_dataset.json
+train/train_dataset.json

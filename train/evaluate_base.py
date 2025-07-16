@@ -1,35 +1,24 @@
 import os
 import json
 import torch
-import argparse
 from tqdm import tqdm
 from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
 )
-from peft import PeftModel
 
 # --- 1. Configuration ---
 MODEL_NAME = "meta-llama/Meta-Llama-3.1-8B-Instruct"
 DATA_PATH = "./eval_dataset.json"
-DEFAULT_LORA_PATH = "./lora-adapter"
-RESULTS_FILE = "./eval_results_lora.json"
+RESULTS_FILE = "./eval_results_base.json"
 
 def format_prompt(sample):
     """Formats a sample into a simplified prompt for the model."""
     return f"What is the primary emotion in the following tweet? Respond with a single word.\nTweet: {sample['tweet']}\nEmotion:"
 
-def parse_args():
-    """Parses command-line arguments."""
-    parser = argparse.ArgumentParser(description="Evaluate a LoRA-finetuned model.")
-    parser.add_argument("--lora_adapter_path", type=str, default=DEFAULT_LORA_PATH, help="Path to the LoRA adapter directory.")
-    return parser.parse_args()
-
 def main():
-    """Main evaluation function for the LoRA-finetuned model."""
-    args = parse_args()
-    print(f"--- Evaluating Model: {MODEL_NAME} with LoRA Adapter ---")
-    print(f"Using LoRA adapter from: {args.lora_adapter_path}")
+    """Main evaluation function for the base model."""
+    print(f"--- Evaluating Base Model: {MODEL_NAME} ---")
 
     # --- 2. Load Dataset ---
     if not os.path.exists(DATA_PATH):
@@ -50,13 +39,6 @@ def main():
         trust_remote_code=True,
         attn_implementation="flash_attention_2",
     )
-
-    # Load the LoRA adapter
-    if not os.path.exists(args.lora_adapter_path):
-        print(f"\u274c LoRA adapter not found at {args.lora_adapter_path}. Please train the model first.")
-        return
-        
-    model = PeftModel.from_pretrained(model, args.lora_adapter_path)
 
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
     tokenizer.pad_token = tokenizer.eos_token

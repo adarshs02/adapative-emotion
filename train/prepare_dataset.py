@@ -1,53 +1,63 @@
 import pandas as pd
-from datasets import Dataset
+import json
 import os
+from emotions import EMOTION_LIST
 
 # --- Configuration ---
 DATA_PATH = "/mnt/shared/adarsh/data/emoknow/EMO-KNOW.pkl"
 TRAIN_FILE = "./train_dataset.json"
 EVAL_FILE = "./eval_dataset.json"
 
-def format_prompt(sample):
-    """Formats a sample from the EmoKnow dataset into a training prompt."""
-    return f"<s>[INST] Given the tweet: '{sample['tweet']}', identify the emotion. [/INST] Emotion: {sample['emotion']}</s>"
+
+def format_training_sample(sample):
+    """Formats a single sample for SFTTrainer."""
+    # Create the target JSON object for the response
+    emotion_distribution = {emotion: 0.0 for emotion in EMOTION_LIST}
+    if sample['emotion'] in emotion_distribution:
+        emotion_distribution[sample['emotion']] = 1.0
+
+    prompt = f"Given the tweet, generate a JSON object with the probability for each emotion.\nTweet: {sample['tweet']}"
+    response = json.dumps(emotion_distribution)
+
+    # This specific format is crucial for the trainer
+    return f"<s>[INST] {prompt} [/INST] {response}</s>"
+
 
 def main():
-    """Loads, splits, and formats the EmoKnow dataset for training and evaluation."""
+    """Loads, splits, and formats the EmoKnow dataset."""
     print("--- Starting Dataset Preparation ---")
-    
-    # --- 1. Load Raw Data ---
+
     if not os.path.exists(DATA_PATH):
-        print(f"\u274c EMO-KNOW.pkl not found at {DATA_PATH}. Please check the path.")
+        print(f"\u274c EMO-KNOW.pkl not found at {DATA_PATH}.")
         return
 
     print(f"Loading raw data from {DATA_PATH}...")
     df = pd.read_pickle(DATA_PATH)
 
-    # --- 2. Shuffle and Split ---
     print("Shuffling and splitting data...")
     df = df.sample(frac=1, random_state=42).reset_index(drop=True)
 
     train_df = df.head(10000)
-    eval_df = df.iloc[10000:12000]
+    eval_df = df.iloc[10000:10500]
 
     print(f"- {len(train_df)} samples for training")
     print(f"- {len(eval_df)} samples for evaluation")
 
-    # --- 3. Format and Save Training Set ---
     print(f"Formatting and saving training set to {TRAIN_FILE}...")
-    train_dataset = Dataset.from_pandas(train_df)
-    # We need to format the prompt for the SFTTrainer's text field
-    formatted_train_dataset = train_dataset.map(lambda sample: {"text": format_prompt(sample)})
-    formatted_train_dataset.to_json(TRAIN_FILE, orient='records', lines=True)
+    with open(TRAIN_FILE, 'w') as f:
+        for _, row in train_df.iterrows():
+            if row['emotion'] in EMOTION_LIST:
+                formatted_text = format_training_sample(row)
+                # The trainer expects a JSON object with a 'text' key
+                f.write(json.dumps({"text": formatted_text}) + "\n")
 
-    # --- 4. Save Evaluation Set ---
     print(f"Saving evaluation set to {EVAL_FILE}...")
-    # The evaluation script will handle its own formatting, so we save the raw records
+    # For evaluation, we save the raw data. The eval script will format it.
     eval_df.to_json(EVAL_FILE, orient='records', lines=True)
 
     print("\n\u2728 Dataset preparation complete! \u2728")
-    print(f"Training data saved to: {TRAIN_FILE}")
-    print(f"Evaluation data saved to: {EVAL_FILE}")
+    print(f"Training data: {TRAIN_FILE}")
+    print(f"Evaluation data: {EVAL_FILE}")
     print("-------------------------------------")
 
 if __name__ == "__main__":

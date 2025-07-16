@@ -27,21 +27,17 @@ dataset = Dataset.from_json(TRAIN_DATA_PATH)
 # --- 3. Model & Tokenizer Loading ---
 print(f"Loading model: {MODEL_NAME}")
 
-# Use 4-bit quantization to save memory
-quant_config = BitsAndBytesConfig(
-    load_in_4bit=True,
-    bnb_4bit_quant_type="nf4",
-    bnb_4bit_compute_dtype=torch.bfloat16,
-    bnb_4bit_use_double_quant=False,
-)
+# --- 3. Model & Tokenizer Loading (Optimized for H100/H200) ---
+print(f"Loading model: {MODEL_NAME} with bfloat16 and Flash Attention 2...")
 
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_NAME,
-    quantization_config=quant_config,
+    torch_dtype=torch.bfloat16,
     device_map="auto",
     trust_remote_code=True,
+    attn_implementation="flash_attention_2",
 )
-model.config.use_cache = False
+model.config.use_cache = False # Required for gradient checkpointing
 model.config.pretraining_tp = 1
 
 # Load tokenizer
