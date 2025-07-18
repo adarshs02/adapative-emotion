@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm excited because I was looking forward to it": [
+      "true",
+      "false"
+    ],
+    "I'm disappointed because I was looking forward to it": [
+      "true",
+      "false"
+    ],
+    "I'm anxious because I don't like the weather": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm excited because I was looking forward to it": "true",
+      "I'm disappointed because I was looking forward to it": "true",
+      "I'm anxious because I don't like the weather": "true",
+      "emotions": {
+        "anxious": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm excited because I was looking forward to it": "true",
+      "I'm disappointed because I was looking forward to it": "true",
+      "I'm anxious because I don't like the weather": "false",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm excited because I was looking forward to it": "true",
+      "I'm disappointed because I was looking forward to it": "false",
+      "I'm anxious because I don't like the weather": "true",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm excited because I was looking forward to it": "true",
+      "I'm disappointed because I was looking forward to it": "false",
+      "I'm anxious because I don't like the weather": "false",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm excited because I was looking forward to it": "false",
+      "I'm disappointed because I was looking forward to it": "true",
+      "I'm anxious because I don't like the weather": "true",
+      "emotions": {
+        "anxious": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm excited because I was looking forward to it": "false",
+      "I'm disappointed because I was looking forward to it": "true",
+      "I'm anxious because I don't like the weather": "false",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm excited because I was looking forward to it": "false",
+      "I'm disappointed because I was looking forward to it": "false",
+      "I'm anxious because I don't like the weather": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm excited because I was looking forward to it": "false",
+      "I'm disappointed because I was looking forward to it": "false",
+      "I'm anxious because I don't like the weather": "false",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

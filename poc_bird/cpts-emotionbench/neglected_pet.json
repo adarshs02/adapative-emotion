@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "guilt_level": [
+      "high",
+      "low"
+    ],
+    "anxiety_level": [
+      "high",
+      "low"
+    ],
+    "regret_level": [
+      "high",
+      "low"
+    ]
+  },
+  "cpt": [
+    {
+      "guilt_level": "high",
+      "anxiety_level": "high",
+      "regret_level": "high",
+      "emotions": {
+        "anxiety_level": 0.333,
+        "guilt_level": 0.334,
+        "regret_level": 0.333
+      }
+    },
+    {
+      "guilt_level": "high",
+      "anxiety_level": "high",
+      "regret_level": "low",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilt_level": "high",
+      "anxiety_level": "low",
+      "regret_level": "high",
+      "emotions": {
+        "anxiety_level": 0.333,
+        "guilt_level": 0.334,
+        "regret_level": 0.333
+      }
+    },
+    {
+      "guilt_level": "high",
+      "anxiety_level": "low",
+      "regret_level": "low",
+      "emotions": {
+        "angry": 0.333,
+        "low": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "guilt_level": "low",
+      "anxiety_level": "high",
+      "regret_level": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "guilt_level": "low",
+      "anxiety_level": "high",
+      "regret_level": "low",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilt_level": "low",
+      "anxiety_level": "low",
+      "regret_level": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "guilt_level": "low",
+      "anxiety_level": "low",
+      "regret_level": "low",
+      "emotions": {
+        "anxiety_level": 0.333,
+        "guilt_level": 0.334,
+        "regret_level": 0.333
+      }
+    }
+  ]
+}

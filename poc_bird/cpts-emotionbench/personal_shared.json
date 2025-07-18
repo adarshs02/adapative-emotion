@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "person_telling": [
+      "friend",
+      "family_member"
+    ],
+    "reason_for_sharing": [
+      "positive",
+      "negative"
+    ],
+    "my_feeling_about_sharing": [
+      "comfortable",
+      "uncomfortable"
+    ]
+  },
+  "cpt": [
+    {
+      "person_telling": "friend",
+      "reason_for_sharing": "positive",
+      "my_feeling_about_sharing": "comfortable",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "person_telling": "friend",
+      "reason_for_sharing": "positive",
+      "my_feeling_about_sharing": "uncomfortable",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "person_telling": "friend",
+      "reason_for_sharing": "negative",
+      "my_feeling_about_sharing": "comfortable",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "person_telling": "friend",
+      "reason_for_sharing": "negative",
+      "my_feeling_about_sharing": "uncomfortable",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "person_telling": "family_member",
+      "reason_for_sharing": "positive",
+      "my_feeling_about_sharing": "comfortable",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "person_telling": "family_member",
+      "reason_for_sharing": "positive",
+      "my_feeling_about_sharing": "uncomfortable",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "person_telling": "family_member",
+      "reason_for_sharing": "negative",
+      "my_feeling_about_sharing": "comfortable",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "person_telling": "family_member",
+      "reason_for_sharing": "negative",
+      "my_feeling_about_sharing": "uncomfortable",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    }
+  ]
+}

@@ -10,17 +10,18 @@ EVAL_FILE = "./eval_dataset.json"
 
 
 def format_training_sample(sample):
-    """Formats a single sample for SFTTrainer."""
+    """Formats a single sample for SFTTrainer with a simplified prompt."""
     # Create the target JSON object for the response
     emotion_distribution = {emotion: 0.0 for emotion in EMOTION_LIST}
     if sample['emotion'] in emotion_distribution:
         emotion_distribution[sample['emotion']] = 1.0
 
-    prompt = f"Given the tweet, generate a JSON object with the probability for each emotion.\nTweet: {sample['tweet']}"
+    # Simplified prompt and response structure
+    prompt = f"PROMPT: Given the tweet, generate a JSON object with the probability for each emotion.\nTweet: {sample['tweet']}\nRESPONSE:"
     response = json.dumps(emotion_distribution)
 
-    # This specific format is crucial for the trainer
-    return f"<s>[INST] {prompt} [/INST] {response}</s>"
+    # The SFTTrainer expects a single 'text' field containing both prompt and response.
+    return f"{prompt} {response}"
 
 
 def main():

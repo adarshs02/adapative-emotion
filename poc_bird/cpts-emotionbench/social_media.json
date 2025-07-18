@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I feel left out because of the post": [
+      "yes",
+      "no"
+    ],
+    "I'm happy because of the post": [
+      "yes",
+      "no"
+    ],
+    "I'm angry because of the post": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I feel left out because of the post": "yes",
+      "I'm happy because of the post": "yes",
+      "I'm angry because of the post": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "happy": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel left out because of the post": "yes",
+      "I'm happy because of the post": "yes",
+      "I'm angry because of the post": "no",
+      "emotions": {
+        "angry": 0.333,
+        "happy": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel left out because of the post": "yes",
+      "I'm happy because of the post": "no",
+      "I'm angry because of the post": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "happy": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel left out because of the post": "yes",
+      "I'm happy because of the post": "no",
+      "I'm angry because of the post": "no",
+      "emotions": {
+        "happy": 0.334,
+        "sad": 0.333,
+        "upset": 0.333
+      }
+    },
+    {
+      "I feel left out because of the post": "no",
+      "I'm happy because of the post": "yes",
+      "I'm angry because of the post": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "happy": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel left out because of the post": "no",
+      "I'm happy because of the post": "yes",
+      "I'm angry because of the post": "no",
+      "emotions": {
+        "angry": 0.333,
+        "happy": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel left out because of the post": "no",
+      "I'm happy because of the post": "no",
+      "I'm angry because of the post": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "happy": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel left out because of the post": "no",
+      "I'm happy because of the post": "no",
+      "I'm angry because of the post": "no",
+      "emotions": {
+        "happy": 0.334,
+        "sad": 0.333,
+        "upset": 0.333
+      }
+    }
+  ]
+}

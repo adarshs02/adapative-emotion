@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_anxious_about_driver": [
+      "yes",
+      "no"
+    ],
+    "is_angry_because_of_traffic": [
+      "yes",
+      "no"
+    ],
+    "is_frustrated_because_of_waiting": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_anxious_about_driver": "yes",
+      "is_angry_because_of_traffic": "yes",
+      "is_frustrated_because_of_waiting": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "frustrated": 0.333
+      }
+    },
+    {
+      "is_anxious_about_driver": "yes",
+      "is_angry_because_of_traffic": "yes",
+      "is_frustrated_because_of_waiting": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_anxious_about_driver": "yes",
+      "is_angry_because_of_traffic": "no",
+      "is_frustrated_because_of_waiting": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "frustrated": 0.333
+      }
+    },
+    {
+      "is_anxious_about_driver": "yes",
+      "is_angry_because_of_traffic": "no",
+      "is_frustrated_because_of_waiting": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_anxious_about_driver": "no",
+      "is_angry_because_of_traffic": "yes",
+      "is_frustrated_because_of_waiting": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "is_anxious_about_driver": "no",
+      "is_angry_because_of_traffic": "yes",
+      "is_frustrated_because_of_waiting": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "is_anxious_about_driver": "no",
+      "is_angry_because_of_traffic": "no",
+      "is_frustrated_because_of_waiting": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_anxious_about_driver": "no",
+      "is_angry_because_of_traffic": "no",
+      "is_frustrated_because_of_waiting": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    }
+  ]
+}

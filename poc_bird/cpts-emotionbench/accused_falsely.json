@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "guilty": [
+      "guilty",
+      "innocent"
+    ],
+    "accuser_reliable": [
+      "reliable",
+      "unreliable"
+    ],
+    "emotional_state": [
+      "anxious",
+      "calm"
+    ]
+  },
+  "cpt": [
+    {
+      "guilty": "guilty",
+      "accuser_reliable": "reliable",
+      "emotional_state": "anxious",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilty": "guilty",
+      "accuser_reliable": "reliable",
+      "emotional_state": "calm",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilty": "guilty",
+      "accuser_reliable": "unreliable",
+      "emotional_state": "anxious",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilty": "guilty",
+      "accuser_reliable": "unreliable",
+      "emotional_state": "calm",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilty": "innocent",
+      "accuser_reliable": "reliable",
+      "emotional_state": "anxious",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilty": "innocent",
+      "accuser_reliable": "reliable",
+      "emotional_state": "calm",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "guilty": "innocent",
+      "accuser_reliable": "unreliable",
+      "emotional_state": "anxious",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilty": "innocent",
+      "accuser_reliable": "unreliable",
+      "emotional_state": "calm",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_familiar_with_the_custom": [
+      "yes",
+      "no"
+    ],
+    "I_am_confident_about_the_custom": [
+      "yes",
+      "no"
+    ],
+    "I_am_comfortable_with_the_custom": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_familiar_with_the_custom": "yes",
+      "I_am_confident_about_the_custom": "yes",
+      "I_am_comfortable_with_the_custom": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "I_am_familiar_with_the_custom": "yes",
+      "I_am_confident_about_the_custom": "yes",
+      "I_am_comfortable_with_the_custom": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "I_am_familiar_with_the_custom": "yes",
+      "I_am_confident_about_the_custom": "no",
+      "I_am_comfortable_with_the_custom": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "I_am_familiar_with_the_custom": "yes",
+      "I_am_confident_about_the_custom": "no",
+      "I_am_comfortable_with_the_custom": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "I_am_familiar_with_the_custom": "no",
+      "I_am_confident_about_the_custom": "yes",
+      "I_am_comfortable_with_the_custom": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "I_am_familiar_with_the_custom": "no",
+      "I_am_confident_about_the_custom": "yes",
+      "I_am_comfortable_with_the_custom": "no",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_familiar_with_the_custom": "no",
+      "I_am_confident_about_the_custom": "no",
+      "I_am_comfortable_with_the_custom": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "I_am_familiar_with_the_custom": "no",
+      "I_am_confident_about_the_custom": "no",
+      "I_am_comfortable_with_the_custom": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    }
+  ]
+}

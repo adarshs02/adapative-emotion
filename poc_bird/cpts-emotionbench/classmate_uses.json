@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_feel_angry_because_they_asked_before": [
+      "yes",
+      "no"
+    ],
+    "I_feel_angry_because_it_was_a_purposeful_action": [
+      "yes",
+      "no"
+    ],
+    "I_feel_angry_because_they_are_a_close_friend": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_feel_angry_because_they_asked_before": "yes",
+      "I_feel_angry_because_it_was_a_purposeful_action": "yes",
+      "I_feel_angry_because_they_are_a_close_friend": "yes",
+      "emotions": {
+        "angry": 0.5,
+        "frustrated": 0.25,
+        "sad": 0.25
+      }
+    },
+    {
+      "I_feel_angry_because_they_asked_before": "yes",
+      "I_feel_angry_because_it_was_a_purposeful_action": "yes",
+      "I_feel_angry_because_they_are_a_close_friend": "no",
+      "emotions": {
+        "angry": 0.5,
+        "frustrated": 0.25,
+        "sad": 0.25
+      }
+    },
+    {
+      "I_feel_angry_because_they_asked_before": "yes",
+      "I_feel_angry_because_it_was_a_purposeful_action": "no",
+      "I_feel_angry_because_they_are_a_close_friend": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_angry_because_they_asked_before": "yes",
+      "I_feel_angry_because_it_was_a_purposeful_action": "no",
+      "I_feel_angry_because_they_are_a_close_friend": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_angry_because_they_asked_before": "no",
+      "I_feel_angry_because_it_was_a_purposeful_action": "yes",
+      "I_feel_angry_because_they_are_a_close_friend": "yes",
+      "emotions": {
+        "angry": 0.5,
+        "frustrated": 0.25,
+        "sad": 0.25
+      }
+    },
+    {
+      "I_feel_angry_because_they_asked_before": "no",
+      "I_feel_angry_because_it_was_a_purposeful_action": "yes",
+      "I_feel_angry_because_they_are_a_close_friend": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_angry_because_they_asked_before": "no",
+      "I_feel_angry_because_it_was_a_purposeful_action": "no",
+      "I_feel_angry_because_they_are_a_close_friend": "yes",
+      "emotions": {
+        "angry": 0.25,
+        "sad": 0.25,
+        "upset": 0.5
+      }
+    },
+    {
+      "I_feel_angry_because_they_asked_before": "no",
+      "I_feel_angry_because_it_was_a_purposeful_action": "no",
+      "I_feel_angry_because_they_are_a_close_friend": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

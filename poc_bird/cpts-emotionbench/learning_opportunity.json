@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "excitement_level": [
+      "low",
+      "high"
+    ],
+    "motivation": [
+      "low",
+      "high"
+    ],
+    "confidence": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "excitement_level": "low",
+      "motivation": "low",
+      "confidence": "low",
+      "emotions": {
+        "angry": 0.333,
+        "low": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "excitement_level": "low",
+      "motivation": "low",
+      "confidence": "high",
+      "emotions": {
+        "angry": 0.333,
+        "low": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "excitement_level": "low",
+      "motivation": "high",
+      "confidence": "low",
+      "emotions": {
+        "angry": 0.333,
+        "low": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "excitement_level": "low",
+      "motivation": "high",
+      "confidence": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "excitement_level": "high",
+      "motivation": "low",
+      "confidence": "low",
+      "emotions": {
+        "angry": 0.333,
+        "low": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "excitement_level": "high",
+      "motivation": "low",
+      "confidence": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "excitement_level": "high",
+      "motivation": "high",
+      "confidence": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "excitement_level": "high",
+      "motivation": "high",
+      "confidence": "high",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

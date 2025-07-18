@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_feel_confident": [
+      "yes",
+      "no"
+    ],
+    "I_am_in_charge": [
+      "yes",
+      "no"
+    ],
+    "I_am_upset_because_of_rejection": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_feel_confident": "yes",
+      "I_am_in_charge": "yes",
+      "I_am_upset_because_of_rejection": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I_feel_confident": "yes",
+      "I_am_in_charge": "yes",
+      "I_am_upset_because_of_rejection": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I_feel_confident": "yes",
+      "I_am_in_charge": "no",
+      "I_am_upset_because_of_rejection": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I_feel_confident": "yes",
+      "I_am_in_charge": "no",
+      "I_am_upset_because_of_rejection": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I_feel_confident": "no",
+      "I_am_in_charge": "yes",
+      "I_am_upset_because_of_rejection": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I_feel_confident": "no",
+      "I_am_in_charge": "yes",
+      "I_am_upset_because_of_rejection": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I_feel_confident": "no",
+      "I_am_in_charge": "no",
+      "I_am_upset_because_of_rejection": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I_feel_confident": "no",
+      "I_am_in_charge": "no",
+      "I_am_upset_because_of_rejection": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    }
+  ]
+}

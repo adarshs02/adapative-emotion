@@ -13,7 +13,7 @@ from trl import SFTTrainer
 
 # --- 1. Configuration ---
 MODEL_NAME = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-TRAIN_DATA_PATH = "./train_dataset.json"
+TRAIN_DATA_PATH = "./train_dataset2_converted.json"
 OUTPUT_DIR = "./lora-adapter"
 
 # --- 2. Data Preparation ---
@@ -60,8 +60,8 @@ print("Setting up training arguments...")
 training_args = TrainingArguments(
     output_dir=OUTPUT_DIR,
     num_train_epochs=1,
-    per_device_train_batch_size=64,
-    gradient_accumulation_steps=1,
+    per_device_train_batch_size=1,  # Reduced from 64 to 1 for memory efficiency
+    gradient_accumulation_steps=16,  # Increased to maintain effective batch size of 16
     optim="paged_adamw_32bit",
     save_steps=25,
     logging_steps=25,
@@ -74,7 +74,9 @@ training_args = TrainingArguments(
     warmup_ratio=0.03,
     group_by_length=True,
     lr_scheduler_type="constant",
-    report_to="tensorboard"
+    report_to="tensorboard",
+    gradient_checkpointing=True,  # Enable gradient checkpointing to save memory
+    dataloader_pin_memory=False,  # Disable pin memory to save GPU memory
 )
 
 # Initialize the SFTTrainer

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_child_asking_for_attention": [
+      "yes",
+      "no"
+    ],
+    "is_child_hungry_because_of_me": [
+      "yes",
+      "no"
+    ],
+    "is_restaurant_noisy": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_child_asking_for_attention": "yes",
+      "is_child_hungry_because_of_me": "yes",
+      "is_restaurant_noisy": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_child_asking_for_attention": "yes",
+      "is_child_hungry_because_of_me": "yes",
+      "is_restaurant_noisy": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_child_asking_for_attention": "yes",
+      "is_child_hungry_because_of_me": "no",
+      "is_restaurant_noisy": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_child_asking_for_attention": "yes",
+      "is_child_hungry_because_of_me": "no",
+      "is_restaurant_noisy": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_child_asking_for_attention": "no",
+      "is_child_hungry_because_of_me": "yes",
+      "is_restaurant_noisy": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_child_asking_for_attention": "no",
+      "is_child_hungry_because_of_me": "yes",
+      "is_restaurant_noisy": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_child_asking_for_attention": "no",
+      "is_child_hungry_because_of_me": "no",
+      "is_restaurant_noisy": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_child_asking_for_attention": "no",
+      "is_child_hungry_because_of_me": "no",
+      "is_restaurant_noisy": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

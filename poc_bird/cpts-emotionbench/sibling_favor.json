@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I feel sorry because of the situation": [
+      "true",
+      "false"
+    ],
+    "I feel angry because of the situation": [
+      "true",
+      "false"
+    ],
+    "I'm upset because of the situation": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "I feel sorry because of the situation": "true",
+      "I feel angry because of the situation": "true",
+      "I'm upset because of the situation": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sorry": 0.334
+      }
+    },
+    {
+      "I feel sorry because of the situation": "true",
+      "I feel angry because of the situation": "true",
+      "I'm upset because of the situation": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sorry": 0.334
+      }
+    },
+    {
+      "I feel sorry because of the situation": "true",
+      "I feel angry because of the situation": "false",
+      "I'm upset because of the situation": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sorry": 0.334
+      }
+    },
+    {
+      "I feel sorry because of the situation": "true",
+      "I feel angry because of the situation": "false",
+      "I'm upset because of the situation": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sorry": 0.334
+      }
+    },
+    {
+      "I feel sorry because of the situation": "false",
+      "I feel angry because of the situation": "true",
+      "I'm upset because of the situation": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sorry": 0.334
+      }
+    },
+    {
+      "I feel sorry because of the situation": "false",
+      "I feel angry because of the situation": "true",
+      "I'm upset because of the situation": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sorry": 0.334
+      }
+    },
+    {
+      "I feel sorry because of the situation": "false",
+      "I feel angry because of the situation": "false",
+      "I'm upset because of the situation": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sorry": 0.334
+      }
+    },
+    {
+      "I feel sorry because of the situation": "false",
+      "I feel angry because of the situation": "false",
+      "I'm upset because of the situation": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sorry": 0.334
+      }
+    }
+  ]
+}

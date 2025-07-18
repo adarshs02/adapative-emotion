@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I feel guilty because I wasted food": [
+      "yes",
+      "no"
+    ],
+    "I feel frustrated because I wasted food": [
+      "yes",
+      "no"
+    ],
+    "I feel angry because I wasted food": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I feel guilty because I wasted food": "yes",
+      "I feel frustrated because I wasted food": "yes",
+      "I feel angry because I wasted food": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "guilty": 0.334
+      }
+    },
+    {
+      "I feel guilty because I wasted food": "yes",
+      "I feel frustrated because I wasted food": "yes",
+      "I feel angry because I wasted food": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "guilty": 0.334
+      }
+    },
+    {
+      "I feel guilty because I wasted food": "yes",
+      "I feel frustrated because I wasted food": "no",
+      "I feel angry because I wasted food": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "guilty": 0.334
+      }
+    },
+    {
+      "I feel guilty because I wasted food": "yes",
+      "I feel frustrated because I wasted food": "no",
+      "I feel angry because I wasted food": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "guilty": 0.334
+      }
+    },
+    {
+      "I feel guilty because I wasted food": "no",
+      "I feel frustrated because I wasted food": "yes",
+      "I feel angry because I wasted food": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "guilty": 0.334
+      }
+    },
+    {
+      "I feel guilty because I wasted food": "no",
+      "I feel frustrated because I wasted food": "yes",
+      "I feel angry because I wasted food": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "guilty": 0.334
+      }
+    },
+    {
+      "I feel guilty because I wasted food": "no",
+      "I feel frustrated because I wasted food": "no",
+      "I feel angry because I wasted food": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I feel guilty because I wasted food": "no",
+      "I feel frustrated because I wasted food": "no",
+      "I feel angry because I wasted food": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    }
+  ]
+}

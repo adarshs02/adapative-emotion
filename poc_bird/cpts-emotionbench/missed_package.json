@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_responsible_for_the_delivery": [
+      "yes",
+      "no"
+    ],
+    "I_have_time_to_resend_the_package": [
+      "yes",
+      "no"
+    ],
+    "I_need_the_delivery": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_responsible_for_the_delivery": "yes",
+      "I_have_time_to_resend_the_package": "yes",
+      "I_need_the_delivery": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_responsible_for_the_delivery": "yes",
+      "I_have_time_to_resend_the_package": "yes",
+      "I_need_the_delivery": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_responsible_for_the_delivery": "yes",
+      "I_have_time_to_resend_the_package": "no",
+      "I_need_the_delivery": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_responsible_for_the_delivery": "yes",
+      "I_have_time_to_resend_the_package": "no",
+      "I_need_the_delivery": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_responsible_for_the_delivery": "no",
+      "I_have_time_to_resend_the_package": "yes",
+      "I_need_the_delivery": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_responsible_for_the_delivery": "no",
+      "I_have_time_to_resend_the_package": "yes",
+      "I_need_the_delivery": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_responsible_for_the_delivery": "no",
+      "I_have_time_to_resend_the_package": "no",
+      "I_need_the_delivery": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_responsible_for_the_delivery": "no",
+      "I_have_time_to_resend_the_package": "no",
+      "I_need_the_delivery": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

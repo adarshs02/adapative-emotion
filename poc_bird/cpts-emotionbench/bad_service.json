@@ -1,0 +1,139 @@
+{
+  "factors": {
+    "time_of_day": [
+      "lunch",
+      "dinner"
+    ],
+    "type_of_food": [
+      "breakfast",
+      "lunch",
+      "dinner"
+    ],
+    "staff_friendliness": [
+      "unfriendly",
+      "friendly"
+    ]
+  },
+  "cpt": [
+    {
+      "time_of_day": "lunch",
+      "type_of_food": "breakfast",
+      "staff_friendliness": "unfriendly",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "terrible": 0.334
+      }
+    },
+    {
+      "time_of_day": "lunch",
+      "type_of_food": "breakfast",
+      "staff_friendliness": "friendly",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "lunch",
+      "type_of_food": "lunch",
+      "staff_friendliness": "unfriendly",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "terrible": 0.334
+      }
+    },
+    {
+      "time_of_day": "lunch",
+      "type_of_food": "lunch",
+      "staff_friendliness": "friendly",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "lunch",
+      "type_of_food": "dinner",
+      "staff_friendliness": "unfriendly",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "lunch",
+      "type_of_food": "dinner",
+      "staff_friendliness": "friendly",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "dinner",
+      "type_of_food": "breakfast",
+      "staff_friendliness": "unfriendly",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "terrible": 0.334
+      }
+    },
+    {
+      "time_of_day": "dinner",
+      "type_of_food": "breakfast",
+      "staff_friendliness": "friendly",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "dinner",
+      "type_of_food": "lunch",
+      "staff_friendliness": "unfriendly",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "terrible": 0.334
+      }
+    },
+    {
+      "time_of_day": "dinner",
+      "type_of_food": "lunch",
+      "staff_friendliness": "friendly",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "dinner",
+      "type_of_food": "dinner",
+      "staff_friendliness": "unfriendly",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "terrible": 0.334
+      }
+    },
+    {
+      "time_of_day": "dinner",
+      "type_of_food": "dinner",
+      "staff_friendliness": "friendly",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

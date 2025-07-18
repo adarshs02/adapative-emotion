@@ -1,0 +1,139 @@
+{
+  "factors": {
+    "apology_given": [
+      "true",
+      "false"
+    ],
+    "emotional_state_before": [
+      "calm",
+      "angry"
+    ],
+    "relationship_with_person": [
+      "friend",
+      "family",
+      "stranger"
+    ]
+  },
+  "cpt": [
+    {
+      "apology_given": "true",
+      "emotional_state_before": "calm",
+      "relationship_with_person": "friend",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "apology_given": "true",
+      "emotional_state_before": "calm",
+      "relationship_with_person": "family",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "apology_given": "true",
+      "emotional_state_before": "calm",
+      "relationship_with_person": "stranger",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "apology_given": "true",
+      "emotional_state_before": "angry",
+      "relationship_with_person": "friend",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "apology_given": "true",
+      "emotional_state_before": "angry",
+      "relationship_with_person": "family",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "apology_given": "true",
+      "emotional_state_before": "angry",
+      "relationship_with_person": "stranger",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "apology_given": "false",
+      "emotional_state_before": "calm",
+      "relationship_with_person": "friend",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "apology_given": "false",
+      "emotional_state_before": "calm",
+      "relationship_with_person": "family",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "apology_given": "false",
+      "emotional_state_before": "calm",
+      "relationship_with_person": "stranger",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "apology_given": "false",
+      "emotional_state_before": "angry",
+      "relationship_with_person": "friend",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "apology_given": "false",
+      "emotional_state_before": "angry",
+      "relationship_with_person": "family",
+      "emotions": {
+        "angry": 0.334,
+        "emotional": 0.333,
+        "sad": 0.333
+      }
+    },
+    {
+      "apology_given": "false",
+      "emotional_state_before": "angry",
+      "relationship_with_person": "stranger",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

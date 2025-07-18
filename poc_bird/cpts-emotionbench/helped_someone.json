@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "helping_a_familiar_person": [
+      "true",
+      "false"
+    ],
+    "helping_in_a_critical_situation": [
+      "true",
+      "false"
+    ],
+    "helping_somewhat_effortlessly": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "helping_a_familiar_person": "true",
+      "helping_in_a_critical_situation": "true",
+      "helping_somewhat_effortlessly": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "helping_a_familiar_person": "true",
+      "helping_in_a_critical_situation": "true",
+      "helping_somewhat_effortlessly": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "helping_a_familiar_person": "true",
+      "helping_in_a_critical_situation": "false",
+      "helping_somewhat_effortlessly": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "helping_a_familiar_person": "true",
+      "helping_in_a_critical_situation": "false",
+      "helping_somewhat_effortlessly": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "helping_a_familiar_person": "false",
+      "helping_in_a_critical_situation": "true",
+      "helping_somewhat_effortlessly": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "helping_a_familiar_person": "false",
+      "helping_in_a_critical_situation": "true",
+      "helping_somewhat_effortlessly": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "helping_a_familiar_person": "false",
+      "helping_in_a_critical_situation": "false",
+      "helping_somewhat_effortlessly": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "helping_a_familiar_person": "false",
+      "helping_in_a_critical_situation": "false",
+      "helping_somewhat_effortlessly": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

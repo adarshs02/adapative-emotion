@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_feel_relieved_because_I_was_overwhelmed": [
+      "yes",
+      "no"
+    ],
+    "I_was_looking_forward_to_the_appointment": [
+      "yes",
+      "no"
+    ],
+    "I_was_expecting_the_appointment_to_be_cancelled": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_feel_relieved_because_I_was_overwhelmed": "yes",
+      "I_was_looking_forward_to_the_appointment": "yes",
+      "I_was_expecting_the_appointment_to_be_cancelled": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_feel_relieved_because_I_was_overwhelmed": "yes",
+      "I_was_looking_forward_to_the_appointment": "yes",
+      "I_was_expecting_the_appointment_to_be_cancelled": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_feel_relieved_because_I_was_overwhelmed": "yes",
+      "I_was_looking_forward_to_the_appointment": "no",
+      "I_was_expecting_the_appointment_to_be_cancelled": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_feel_relieved_because_I_was_overwhelmed": "yes",
+      "I_was_looking_forward_to_the_appointment": "no",
+      "I_was_expecting_the_appointment_to_be_cancelled": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_feel_relieved_because_I_was_overwhelmed": "no",
+      "I_was_looking_forward_to_the_appointment": "yes",
+      "I_was_expecting_the_appointment_to_be_cancelled": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_feel_relieved_because_I_was_overwhelmed": "no",
+      "I_was_looking_forward_to_the_appointment": "yes",
+      "I_was_expecting_the_appointment_to_be_cancelled": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_feel_relieved_because_I_was_overwhelmed": "no",
+      "I_was_looking_forward_to_the_appointment": "no",
+      "I_was_expecting_the_appointment_to_be_cancelled": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_feel_relieved_because_I_was_overwhelmed": "no",
+      "I_was_looking_forward_to_the_appointment": "no",
+      "I_was_expecting_the_appointment_to_be_cancelled": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

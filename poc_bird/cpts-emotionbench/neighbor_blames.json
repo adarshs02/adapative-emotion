@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_apologetic": [
+      "yes",
+      "no"
+    ],
+    "is_repeated": [
+      "yes",
+      "no"
+    ],
+    "is_anxious_about_deadline": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_apologetic": "yes",
+      "is_repeated": "yes",
+      "is_anxious_about_deadline": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_apologetic": "yes",
+      "is_repeated": "yes",
+      "is_anxious_about_deadline": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_apologetic": "yes",
+      "is_repeated": "no",
+      "is_anxious_about_deadline": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_apologetic": "yes",
+      "is_repeated": "no",
+      "is_anxious_about_deadline": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_apologetic": "no",
+      "is_repeated": "yes",
+      "is_anxious_about_deadline": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_apologetic": "no",
+      "is_repeated": "yes",
+      "is_anxious_about_deadline": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_apologetic": "no",
+      "is_repeated": "no",
+      "is_anxious_about_deadline": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_apologetic": "no",
+      "is_repeated": "no",
+      "is_anxious_about_deadline": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

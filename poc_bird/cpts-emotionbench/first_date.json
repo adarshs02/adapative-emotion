@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "IsItATiredDate": [
+      "yes",
+      "no"
+    ],
+    "AmIDressedWell": [
+      "yes",
+      "no"
+    ],
+    "AmIShoppingWithHim": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "IsItATiredDate": "yes",
+      "AmIDressedWell": "yes",
+      "AmIShoppingWithHim": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "IsItATiredDate": "yes",
+      "AmIDressedWell": "yes",
+      "AmIShoppingWithHim": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "IsItATiredDate": "yes",
+      "AmIDressedWell": "no",
+      "AmIShoppingWithHim": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "IsItATiredDate": "yes",
+      "AmIDressedWell": "no",
+      "AmIShoppingWithHim": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "IsItATiredDate": "no",
+      "AmIDressedWell": "yes",
+      "AmIShoppingWithHim": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "IsItATiredDate": "no",
+      "AmIDressedWell": "yes",
+      "AmIShoppingWithHim": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "IsItATiredDate": "no",
+      "AmIDressedWell": "no",
+      "AmIShoppingWithHim": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "IsItATiredDate": "no",
+      "AmIDressedWell": "no",
+      "AmIShoppingWithHim": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_anxious_about_the_presentation": [
+      "yes",
+      "no"
+    ],
+    "is_hungry": [
+      "yes",
+      "no"
+    ],
+    "is_feeling_stressed": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_anxious_about_the_presentation": "yes",
+      "is_hungry": "yes",
+      "is_feeling_stressed": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_anxious_about_the_presentation": "yes",
+      "is_hungry": "yes",
+      "is_feeling_stressed": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_anxious_about_the_presentation": "yes",
+      "is_hungry": "no",
+      "is_feeling_stressed": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_anxious_about_the_presentation": "yes",
+      "is_hungry": "no",
+      "is_feeling_stressed": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_anxious_about_the_presentation": "no",
+      "is_hungry": "yes",
+      "is_feeling_stressed": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_anxious_about_the_presentation": "no",
+      "is_hungry": "yes",
+      "is_feeling_stressed": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_anxious_about_the_presentation": "no",
+      "is_hungry": "no",
+      "is_feeling_stressed": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_anxious_about_the_presentation": "no",
+      "is_hungry": "no",
+      "is_feeling_stressed": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

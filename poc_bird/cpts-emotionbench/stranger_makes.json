@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_joke_about_sickness": [
+      "true",
+      "false"
+    ],
+    "is_stranger_really_knowing_me": [
+      "true",
+      "false"
+    ],
+    "is_joke_mean_spirited": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "is_joke_about_sickness": "true",
+      "is_stranger_really_knowing_me": "true",
+      "is_joke_mean_spirited": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "is_joke_about_sickness": "true",
+      "is_stranger_really_knowing_me": "true",
+      "is_joke_mean_spirited": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "is_joke_about_sickness": "true",
+      "is_stranger_really_knowing_me": "false",
+      "is_joke_mean_spirited": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "is_joke_about_sickness": "true",
+      "is_stranger_really_knowing_me": "false",
+      "is_joke_mean_spirited": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "is_joke_about_sickness": "false",
+      "is_stranger_really_knowing_me": "true",
+      "is_joke_mean_spirited": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "is_joke_about_sickness": "false",
+      "is_stranger_really_knowing_me": "true",
+      "is_joke_mean_spirited": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "is_joke_about_sickness": "false",
+      "is_stranger_really_knowing_me": "false",
+      "is_joke_mean_spirited": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "is_joke_about_sickness": "false",
+      "is_stranger_really_knowing_me": "false",
+      "is_joke_mean_spirited": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    }
+  ]
+}

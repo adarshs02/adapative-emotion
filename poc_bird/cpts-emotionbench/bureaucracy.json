@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "time_of_day": [
+      "morning",
+      "afternoon"
+    ],
+    "level_of_familiarity": [
+      "first_time",
+      "repeated"
+    ],
+    "type_of_bureaucracy": [
+      "simple",
+      "complex"
+    ]
+  },
+  "cpt": [
+    {
+      "time_of_day": "morning",
+      "level_of_familiarity": "first_time",
+      "type_of_bureaucracy": "simple",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "level_of_familiarity": "first_time",
+      "type_of_bureaucracy": "complex",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "level_of_familiarity": "repeated",
+      "type_of_bureaucracy": "simple",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "level_of_familiarity": "repeated",
+      "type_of_bureaucracy": "complex",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "afternoon",
+      "level_of_familiarity": "first_time",
+      "type_of_bureaucracy": "simple",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "afternoon",
+      "level_of_familiarity": "first_time",
+      "type_of_bureaucracy": "complex",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "afternoon",
+      "level_of_familiarity": "repeated",
+      "type_of_bureaucracy": "simple",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "afternoon",
+      "level_of_familiarity": "repeated",
+      "type_of_bureaucracy": "complex",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

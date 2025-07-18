@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "time_to_relocate": [
+      "short",
+      "long"
+    ],
+    "reason_for_relocation": [
+      "positive",
+      "negative"
+    ],
+    "current_location": [
+      "familiar",
+      "unfamiliar"
+    ]
+  },
+  "cpt": [
+    {
+      "time_to_relocate": "short",
+      "reason_for_relocation": "positive",
+      "current_location": "familiar",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_to_relocate": "short",
+      "reason_for_relocation": "positive",
+      "current_location": "unfamiliar",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_to_relocate": "short",
+      "reason_for_relocation": "negative",
+      "current_location": "familiar",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_to_relocate": "short",
+      "reason_for_relocation": "negative",
+      "current_location": "unfamiliar",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "time_to_relocate": "long",
+      "reason_for_relocation": "positive",
+      "current_location": "familiar",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_to_relocate": "long",
+      "reason_for_relocation": "positive",
+      "current_location": "unfamiliar",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_to_relocate": "long",
+      "reason_for_relocation": "negative",
+      "current_location": "familiar",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_to_relocate": "long",
+      "reason_for_relocation": "negative",
+      "current_location": "unfamiliar",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

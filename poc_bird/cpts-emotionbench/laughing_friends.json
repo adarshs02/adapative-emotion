@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_hungry": [
+      "yes",
+      "no"
+    ],
+    "I_feel_tired": [
+      "yes",
+      "no"
+    ],
+    "I_am_drunk": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_hungry": "yes",
+      "I_feel_tired": "yes",
+      "I_am_drunk": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I_am_hungry": "yes",
+      "I_feel_tired": "yes",
+      "I_am_drunk": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I_am_hungry": "yes",
+      "I_feel_tired": "no",
+      "I_am_drunk": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I_am_hungry": "yes",
+      "I_feel_tired": "no",
+      "I_am_drunk": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I_am_hungry": "no",
+      "I_feel_tired": "yes",
+      "I_am_drunk": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I_am_hungry": "no",
+      "I_feel_tired": "yes",
+      "I_am_drunk": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I_am_hungry": "no",
+      "I_feel_tired": "no",
+      "I_am_drunk": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I_am_hungry": "no",
+      "I_feel_tired": "no",
+      "I_am_drunk": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    }
+  ]
+}

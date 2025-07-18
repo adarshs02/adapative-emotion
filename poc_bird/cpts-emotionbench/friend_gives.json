@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_offended": [
+      "yes",
+      "no"
+    ],
+    "I_feel_sincere": [
+      "yes",
+      "no"
+    ],
+    "I_feel_grateful": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_offended": "yes",
+      "I_feel_sincere": "yes",
+      "I_feel_grateful": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "grateful": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_offended": "yes",
+      "I_feel_sincere": "yes",
+      "I_feel_grateful": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_offended": "yes",
+      "I_feel_sincere": "no",
+      "I_feel_grateful": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "grateful": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_offended": "yes",
+      "I_feel_sincere": "no",
+      "I_feel_grateful": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_offended": "no",
+      "I_feel_sincere": "yes",
+      "I_feel_grateful": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "grateful": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I_am_offended": "no",
+      "I_feel_sincere": "yes",
+      "I_feel_grateful": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_offended": "no",
+      "I_feel_sincere": "no",
+      "I_feel_grateful": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "grateful": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_offended": "no",
+      "I_feel_sincere": "no",
+      "I_feel_grateful": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

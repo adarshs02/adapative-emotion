@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_feel_confident_because_I_can_trust_my_friend": [
+      "yes",
+      "no"
+    ],
+    "I_feel_anxious_because_I_might_have_to_keep_the_secret": [
+      "yes",
+      "no"
+    ],
+    "I_feel_guilty_because_I_shouldnt_have_shared": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_feel_confident_because_I_can_trust_my_friend": "yes",
+      "I_feel_anxious_because_I_might_have_to_keep_the_secret": "yes",
+      "I_feel_guilty_because_I_shouldnt_have_shared": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_confident_because_I_can_trust_my_friend": "yes",
+      "I_feel_anxious_because_I_might_have_to_keep_the_secret": "yes",
+      "I_feel_guilty_because_I_shouldnt_have_shared": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "confident": 0.333
+      }
+    },
+    {
+      "I_feel_confident_because_I_can_trust_my_friend": "yes",
+      "I_feel_anxious_because_I_might_have_to_keep_the_secret": "no",
+      "I_feel_guilty_because_I_shouldnt_have_shared": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "I_feel_confident_because_I_can_trust_my_friend": "yes",
+      "I_feel_anxious_because_I_might_have_to_keep_the_secret": "no",
+      "I_feel_guilty_because_I_shouldnt_have_shared": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_confident_because_I_can_trust_my_friend": "no",
+      "I_feel_anxious_because_I_might_have_to_keep_the_secret": "yes",
+      "I_feel_guilty_because_I_shouldnt_have_shared": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_confident_because_I_can_trust_my_friend": "no",
+      "I_feel_anxious_because_I_might_have_to_keep_the_secret": "yes",
+      "I_feel_guilty_because_I_shouldnt_have_shared": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_confident_because_I_can_trust_my_friend": "no",
+      "I_feel_anxious_because_I_might_have_to_keep_the_secret": "no",
+      "I_feel_guilty_because_I_shouldnt_have_shared": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_confident_because_I_can_trust_my_friend": "no",
+      "I_feel_anxious_because_I_might_have_to_keep_the_secret": "no",
+      "I_feel_guilty_because_I_shouldnt_have_shared": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

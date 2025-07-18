@@ -58,5 +58,5 @@ __pycache__/
 *.py[cod]
 *$py.class
 train/*.json
-train/eval_dataset.json
 train/train_dataset.json
+train/eval_dataset.json

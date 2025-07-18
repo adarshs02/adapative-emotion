@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "event_type": [
+      "party",
+      "meeting"
+    ],
+    "relationship_with_others": [
+      "stranger",
+      "friend"
+    ],
+    "current_mood": [
+      "anxious",
+      "confident"
+    ]
+  },
+  "cpt": [
+    {
+      "event_type": "party",
+      "relationship_with_others": "stranger",
+      "current_mood": "anxious",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "event_type": "party",
+      "relationship_with_others": "stranger",
+      "current_mood": "confident",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "scared": 0.334
+      }
+    },
+    {
+      "event_type": "party",
+      "relationship_with_others": "friend",
+      "current_mood": "anxious",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "event_type": "party",
+      "relationship_with_others": "friend",
+      "current_mood": "confident",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "scared": 0.334
+      }
+    },
+    {
+      "event_type": "meeting",
+      "relationship_with_others": "stranger",
+      "current_mood": "anxious",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "event_type": "meeting",
+      "relationship_with_others": "stranger",
+      "current_mood": "confident",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "scared": 0.334
+      }
+    },
+    {
+      "event_type": "meeting",
+      "relationship_with_others": "friend",
+      "current_mood": "anxious",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "event_type": "meeting",
+      "relationship_with_others": "friend",
+      "current_mood": "confident",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "scared": 0.334
+      }
+    }
+  ]
+}

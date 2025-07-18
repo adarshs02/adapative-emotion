@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_feel_grateful": [
+      "yes",
+      "no"
+    ],
+    "I_am_in_a_hurry": [
+      "yes",
+      "no"
+    ],
+    "I_know_the_person": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_feel_grateful": "yes",
+      "I_am_in_a_hurry": "yes",
+      "I_know_the_person": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "grateful": 0.333
+      }
+    },
+    {
+      "I_feel_grateful": "yes",
+      "I_am_in_a_hurry": "yes",
+      "I_know_the_person": "no",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "grateful": 0.333
+      }
+    },
+    {
+      "I_feel_grateful": "yes",
+      "I_am_in_a_hurry": "no",
+      "I_know_the_person": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "grateful": 0.333
+      }
+    },
+    {
+      "I_feel_grateful": "yes",
+      "I_am_in_a_hurry": "no",
+      "I_know_the_person": "no",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "grateful": 0.333
+      }
+    },
+    {
+      "I_feel_grateful": "no",
+      "I_am_in_a_hurry": "yes",
+      "I_know_the_person": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "grateful": 0.333
+      }
+    },
+    {
+      "I_feel_grateful": "no",
+      "I_am_in_a_hurry": "yes",
+      "I_know_the_person": "no",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "grateful": 0.333
+      }
+    },
+    {
+      "I_feel_grateful": "no",
+      "I_am_in_a_hurry": "no",
+      "I_know_the_person": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "grateful": 0.333
+      }
+    },
+    {
+      "I_feel_grateful": "no",
+      "I_am_in_a_hurry": "no",
+      "I_know_the_person": "no",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "grateful": 0.333
+      }
+    }
+  ]
+}

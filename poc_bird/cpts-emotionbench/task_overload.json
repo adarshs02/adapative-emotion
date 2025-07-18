@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_overwhelmed": [
+      "yes",
+      "no"
+    ],
+    "I_feel_stressed_because_of_task_overload": [
+      "yes",
+      "no"
+    ],
+    "I_am_confident_to_handle_tasks": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_overwhelmed": "yes",
+      "I_feel_stressed_because_of_task_overload": "yes",
+      "I_am_confident_to_handle_tasks": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_overwhelmed": "yes",
+      "I_feel_stressed_because_of_task_overload": "yes",
+      "I_am_confident_to_handle_tasks": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_overwhelmed": "yes",
+      "I_feel_stressed_because_of_task_overload": "no",
+      "I_am_confident_to_handle_tasks": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_overwhelmed": "yes",
+      "I_feel_stressed_because_of_task_overload": "no",
+      "I_am_confident_to_handle_tasks": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_overwhelmed": "no",
+      "I_feel_stressed_because_of_task_overload": "yes",
+      "I_am_confident_to_handle_tasks": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_overwhelmed": "no",
+      "I_feel_stressed_because_of_task_overload": "yes",
+      "I_am_confident_to_handle_tasks": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_overwhelmed": "no",
+      "I_feel_stressed_because_of_task_overload": "no",
+      "I_am_confident_to_handle_tasks": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_overwhelmed": "no",
+      "I_feel_stressed_because_of_task_overload": "no",
+      "I_am_confident_to_handle_tasks": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "response_type": [
+      "positive",
+      "negative"
+    ],
+    "urgency": [
+      "low",
+      "high"
+    ],
+    "my_expectation": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "response_type": "positive",
+      "urgency": "low",
+      "my_expectation": "low",
+      "emotions": {
+        "angry": 0.333,
+        "low": 0.334,
+        "positive": 0.333
+      }
+    },
+    {
+      "response_type": "positive",
+      "urgency": "low",
+      "my_expectation": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "response_type": "positive",
+      "urgency": "high",
+      "my_expectation": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "response_type": "positive",
+      "urgency": "high",
+      "my_expectation": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "response_type": "negative",
+      "urgency": "low",
+      "my_expectation": "low",
+      "emotions": {
+        "angry": 0.333,
+        "low": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "response_type": "negative",
+      "urgency": "low",
+      "my_expectation": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "response_type": "negative",
+      "urgency": "high",
+      "my_expectation": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "response_type": "negative",
+      "urgency": "high",
+      "my_expectation": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm feeling tired because I'm hungry": [
+      "yes",
+      "no"
+    ],
+    "I'm in a rush": [
+      "yes",
+      "no"
+    ],
+    "I'm feeling frustrated because I've had a long day": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm feeling tired because I'm hungry": "yes",
+      "I'm in a rush": "yes",
+      "I'm feeling frustrated because I've had a long day": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm feeling tired because I'm hungry": "yes",
+      "I'm in a rush": "yes",
+      "I'm feeling frustrated because I've had a long day": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm feeling tired because I'm hungry": "yes",
+      "I'm in a rush": "no",
+      "I'm feeling frustrated because I've had a long day": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm feeling tired because I'm hungry": "yes",
+      "I'm in a rush": "no",
+      "I'm feeling frustrated because I've had a long day": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling tired because I'm hungry": "no",
+      "I'm in a rush": "yes",
+      "I'm feeling frustrated because I've had a long day": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm feeling tired because I'm hungry": "no",
+      "I'm in a rush": "yes",
+      "I'm feeling frustrated because I've had a long day": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm feeling tired because I'm hungry": "no",
+      "I'm in a rush": "no",
+      "I'm feeling frustrated because I've had a long day": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling tired because I'm hungry": "no",
+      "I'm in a rush": "no",
+      "I'm feeling frustrated because I've had a long day": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    }
+  ]
+}

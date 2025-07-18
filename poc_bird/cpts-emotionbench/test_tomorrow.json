@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "exam_status": [
+      "passed",
+      "failed"
+    ],
+    "exam_type": [
+      "easy",
+      "hard"
+    ],
+    "study_progress": [
+      "good",
+      "bad"
+    ]
+  },
+  "cpt": [
+    {
+      "exam_status": "passed",
+      "exam_type": "easy",
+      "study_progress": "good",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "exam_status": "passed",
+      "exam_type": "easy",
+      "study_progress": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "exam_status": "passed",
+      "exam_type": "hard",
+      "study_progress": "good",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "exam_status": "passed",
+      "exam_type": "hard",
+      "study_progress": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "exam_status": "failed",
+      "exam_type": "easy",
+      "study_progress": "good",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "exam_status": "failed",
+      "exam_type": "easy",
+      "study_progress": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "exam_status": "failed",
+      "exam_type": "hard",
+      "study_progress": "good",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "exam_status": "failed",
+      "exam_type": "hard",
+      "study_progress": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

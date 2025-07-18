@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_invited": [
+      "yes",
+      "no"
+    ],
+    "I_know_the_people": [
+      "yes",
+      "no"
+    ],
+    "I_feel_left_out": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_invited": "yes",
+      "I_know_the_people": "yes",
+      "I_feel_left_out": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_invited": "yes",
+      "I_know_the_people": "yes",
+      "I_feel_left_out": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_invited": "yes",
+      "I_know_the_people": "no",
+      "I_feel_left_out": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_invited": "yes",
+      "I_know_the_people": "no",
+      "I_feel_left_out": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_invited": "no",
+      "I_know_the_people": "yes",
+      "I_feel_left_out": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_invited": "no",
+      "I_know_the_people": "yes",
+      "I_feel_left_out": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_invited": "no",
+      "I_know_the_people": "no",
+      "I_feel_left_out": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_invited": "no",
+      "I_know_the_people": "no",
+      "I_feel_left_out": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

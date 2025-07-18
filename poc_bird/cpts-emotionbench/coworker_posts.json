@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm close to the coworker": [
+      "true",
+      "false"
+    ],
+    "I'm the one who posted the photo": [
+      "true",
+      "false"
+    ],
+    "I'm upset because of the photo": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm close to the coworker": "true",
+      "I'm the one who posted the photo": "true",
+      "I'm upset because of the photo": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm close to the coworker": "true",
+      "I'm the one who posted the photo": "true",
+      "I'm upset because of the photo": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm close to the coworker": "true",
+      "I'm the one who posted the photo": "false",
+      "I'm upset because of the photo": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm close to the coworker": "true",
+      "I'm the one who posted the photo": "false",
+      "I'm upset because of the photo": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm close to the coworker": "false",
+      "I'm the one who posted the photo": "true",
+      "I'm upset because of the photo": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm close to the coworker": "false",
+      "I'm the one who posted the photo": "true",
+      "I'm upset because of the photo": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm close to the coworker": "false",
+      "I'm the one who posted the photo": "false",
+      "I'm upset because of the photo": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm close to the coworker": "false",
+      "I'm the one who posted the photo": "false",
+      "I'm upset because of the photo": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

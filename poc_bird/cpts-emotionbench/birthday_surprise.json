@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm feeling lonely because I don't have many friends": [
+      "yes",
+      "no"
+    ],
+    "I'm excited because it's a surprise": [
+      "yes",
+      "no"
+    ],
+    "I'm stressed because of the pressure to have fun": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm feeling lonely because I don't have many friends": "yes",
+      "I'm excited because it's a surprise": "yes",
+      "I'm stressed because of the pressure to have fun": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm feeling lonely because I don't have many friends": "yes",
+      "I'm excited because it's a surprise": "yes",
+      "I'm stressed because of the pressure to have fun": "no",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm feeling lonely because I don't have many friends": "yes",
+      "I'm excited because it's a surprise": "no",
+      "I'm stressed because of the pressure to have fun": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm feeling lonely because I don't have many friends": "yes",
+      "I'm excited because it's a surprise": "no",
+      "I'm stressed because of the pressure to have fun": "no",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm feeling lonely because I don't have many friends": "no",
+      "I'm excited because it's a surprise": "yes",
+      "I'm stressed because of the pressure to have fun": "yes",
+      "emotions": {
+        "excited": 0.333,
+        "lonely": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm feeling lonely because I don't have many friends": "no",
+      "I'm excited because it's a surprise": "yes",
+      "I'm stressed because of the pressure to have fun": "no",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm feeling lonely because I don't have many friends": "no",
+      "I'm excited because it's a surprise": "no",
+      "I'm stressed because of the pressure to have fun": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm feeling lonely because I don't have many friends": "no",
+      "I'm excited because it's a surprise": "no",
+      "I'm stressed because of the pressure to have fun": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

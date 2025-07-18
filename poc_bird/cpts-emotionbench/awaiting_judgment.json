@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_confident_in_my_work": [
+      "yes",
+      "no"
+    ],
+    "I_have_control_over_the_feedback": [
+      "yes",
+      "no"
+    ],
+    "I_am_anxious_about_the_feedback": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_confident_in_my_work": "yes",
+      "I_have_control_over_the_feedback": "yes",
+      "I_am_anxious_about_the_feedback": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_confident_in_my_work": "yes",
+      "I_have_control_over_the_feedback": "yes",
+      "I_am_anxious_about_the_feedback": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_confident_in_my_work": "yes",
+      "I_have_control_over_the_feedback": "no",
+      "I_am_anxious_about_the_feedback": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_confident_in_my_work": "yes",
+      "I_have_control_over_the_feedback": "no",
+      "I_am_anxious_about_the_feedback": "no",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_confident_in_my_work": "no",
+      "I_have_control_over_the_feedback": "yes",
+      "I_am_anxious_about_the_feedback": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_confident_in_my_work": "no",
+      "I_have_control_over_the_feedback": "yes",
+      "I_am_anxious_about_the_feedback": "no",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_confident_in_my_work": "no",
+      "I_have_control_over_the_feedback": "no",
+      "I_am_anxious_about_the_feedback": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_confident_in_my_work": "no",
+      "I_have_control_over_the_feedback": "no",
+      "I_am_anxious_about_the_feedback": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

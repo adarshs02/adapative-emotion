@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "person_was_familiar": [
+      "yes",
+      "no"
+    ],
+    "person_was_anonymous": [
+      "yes",
+      "no"
+    ],
+    "was_permanent_change": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "person_was_familiar": "yes",
+      "person_was_anonymous": "yes",
+      "was_permanent_change": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_was_familiar": "yes",
+      "person_was_anonymous": "yes",
+      "was_permanent_change": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_was_familiar": "yes",
+      "person_was_anonymous": "no",
+      "was_permanent_change": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "person_was_familiar": "yes",
+      "person_was_anonymous": "no",
+      "was_permanent_change": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "person_was_familiar": "no",
+      "person_was_anonymous": "yes",
+      "was_permanent_change": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_was_familiar": "no",
+      "person_was_anonymous": "yes",
+      "was_permanent_change": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_was_familiar": "no",
+      "person_was_anonymous": "no",
+      "was_permanent_change": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_was_familiar": "no",
+      "person_was_anonymous": "no",
+      "was_permanent_change": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

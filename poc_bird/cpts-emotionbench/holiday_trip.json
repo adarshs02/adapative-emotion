@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "excitement_level": [
+      "low",
+      "high"
+    ],
+    "time_of_year": [
+      "bad",
+      "good"
+    ],
+    "budget": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "excitement_level": "low",
+      "time_of_year": "bad",
+      "budget": "low",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "excitement_level": "low",
+      "time_of_year": "bad",
+      "budget": "high",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "excitement_level": "low",
+      "time_of_year": "good",
+      "budget": "low",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "excitement_level": "low",
+      "time_of_year": "good",
+      "budget": "high",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "excitement_level": "high",
+      "time_of_year": "bad",
+      "budget": "low",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "excitement_level": "high",
+      "time_of_year": "bad",
+      "budget": "high",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "excitement_level": "high",
+      "time_of_year": "good",
+      "budget": "low",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "excitement_level": "high",
+      "time_of_year": "good",
+      "budget": "high",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

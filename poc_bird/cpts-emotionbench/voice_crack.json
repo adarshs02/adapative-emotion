@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "public_place": [
+      "yes",
+      "no"
+    ],
+    "talking_to_specific_person": [
+      "yes",
+      "no"
+    ],
+    "being_nervous": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "public_place": "yes",
+      "talking_to_specific_person": "yes",
+      "being_nervous": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "public_place": "yes",
+      "talking_to_specific_person": "yes",
+      "being_nervous": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "scared": 0.334
+      }
+    },
+    {
+      "public_place": "yes",
+      "talking_to_specific_person": "no",
+      "being_nervous": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "public_place": "yes",
+      "talking_to_specific_person": "no",
+      "being_nervous": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "public_place": "no",
+      "talking_to_specific_person": "yes",
+      "being_nervous": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "public_place": "no",
+      "talking_to_specific_person": "yes",
+      "being_nervous": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "public_place": "no",
+      "talking_to_specific_person": "no",
+      "being_nervous": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "public_place": "no",
+      "talking_to_specific_person": "no",
+      "being_nervous": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

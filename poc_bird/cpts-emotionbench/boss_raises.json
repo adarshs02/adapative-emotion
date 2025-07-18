@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "was_prepared": [
+      "yes",
+      "no"
+    ],
+    "is_sure_of_the_content": [
+      "yes",
+      "no"
+    ],
+    "has_good_relationship_with_boss": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "was_prepared": "yes",
+      "is_sure_of_the_content": "yes",
+      "has_good_relationship_with_boss": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "was_prepared": "yes",
+      "is_sure_of_the_content": "yes",
+      "has_good_relationship_with_boss": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "was_prepared": "yes",
+      "is_sure_of_the_content": "no",
+      "has_good_relationship_with_boss": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "was_prepared": "yes",
+      "is_sure_of_the_content": "no",
+      "has_good_relationship_with_boss": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "was_prepared": "no",
+      "is_sure_of_the_content": "yes",
+      "has_good_relationship_with_boss": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "was_prepared": "no",
+      "is_sure_of_the_content": "yes",
+      "has_good_relationship_with_boss": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "was_prepared": "no",
+      "is_sure_of_the_content": "no",
+      "has_good_relationship_with_boss": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "was_prepared": "no",
+      "is_sure_of_the_content": "no",
+      "has_good_relationship_with_boss": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

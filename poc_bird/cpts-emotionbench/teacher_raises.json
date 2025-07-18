@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm feeling guilty because I'm sick": [
+      "yes",
+      "no"
+    ],
+    "I'm scared because I'm being yelled at": [
+      "yes",
+      "no"
+    ],
+    "I'm frustrated because I'm being yelled at while sick": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm feeling guilty because I'm sick": "yes",
+      "I'm scared because I'm being yelled at": "yes",
+      "I'm frustrated because I'm being yelled at while sick": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling guilty because I'm sick": "yes",
+      "I'm scared because I'm being yelled at": "yes",
+      "I'm frustrated because I'm being yelled at while sick": "no",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling guilty because I'm sick": "yes",
+      "I'm scared because I'm being yelled at": "no",
+      "I'm frustrated because I'm being yelled at while sick": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I'm feeling guilty because I'm sick": "yes",
+      "I'm scared because I'm being yelled at": "no",
+      "I'm frustrated because I'm being yelled at while sick": "no",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling guilty because I'm sick": "no",
+      "I'm scared because I'm being yelled at": "yes",
+      "I'm frustrated because I'm being yelled at while sick": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm feeling guilty because I'm sick": "no",
+      "I'm scared because I'm being yelled at": "yes",
+      "I'm frustrated because I'm being yelled at while sick": "no",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling guilty because I'm sick": "no",
+      "I'm scared because I'm being yelled at": "no",
+      "I'm frustrated because I'm being yelled at while sick": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling guilty because I'm sick": "no",
+      "I'm scared because I'm being yelled at": "no",
+      "I'm frustrated because I'm being yelled at while sick": "no",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

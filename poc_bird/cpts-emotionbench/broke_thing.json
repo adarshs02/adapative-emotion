@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_knew_it_was_mine": [
+      "true",
+      "false"
+    ],
+    "it_was_an_accident": [
+      "true",
+      "false"
+    ],
+    "I_feel_responsible": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "I_knew_it_was_mine": "true",
+      "it_was_an_accident": "true",
+      "I_feel_responsible": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_knew_it_was_mine": "true",
+      "it_was_an_accident": "true",
+      "I_feel_responsible": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_knew_it_was_mine": "true",
+      "it_was_an_accident": "false",
+      "I_feel_responsible": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_knew_it_was_mine": "true",
+      "it_was_an_accident": "false",
+      "I_feel_responsible": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_knew_it_was_mine": "false",
+      "it_was_an_accident": "true",
+      "I_feel_responsible": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_knew_it_was_mine": "false",
+      "it_was_an_accident": "true",
+      "I_feel_responsible": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_knew_it_was_mine": "false",
+      "it_was_an_accident": "false",
+      "I_feel_responsible": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_knew_it_was_mine": "false",
+      "it_was_an_accident": "false",
+      "I_feel_responsible": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

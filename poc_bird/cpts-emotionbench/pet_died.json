@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "previous_experience": [
+      "first_time",
+      "repeated"
+    ],
+    "relationship": [
+      "close",
+      "distant"
+    ],
+    "age_of_pet": [
+      "young",
+      "old"
+    ]
+  },
+  "cpt": [
+    {
+      "previous_experience": "first_time",
+      "relationship": "close",
+      "age_of_pet": "young",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "previous_experience": "first_time",
+      "relationship": "close",
+      "age_of_pet": "old",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "previous_experience": "first_time",
+      "relationship": "distant",
+      "age_of_pet": "young",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "previous_experience": "first_time",
+      "relationship": "distant",
+      "age_of_pet": "old",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "previous_experience": "repeated",
+      "relationship": "close",
+      "age_of_pet": "young",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "previous_experience": "repeated",
+      "relationship": "close",
+      "age_of_pet": "old",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "previous_experience": "repeated",
+      "relationship": "distant",
+      "age_of_pet": "young",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "previous_experience": "repeated",
+      "relationship": "distant",
+      "age_of_pet": "old",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

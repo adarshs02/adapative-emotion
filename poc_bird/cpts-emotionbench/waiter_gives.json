@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_receiving_compliment": [
+      "true",
+      "false"
+    ],
+    "is_in_celebration": [
+      "true",
+      "false"
+    ],
+    "is_waiter_friendly": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "is_receiving_compliment": "true",
+      "is_in_celebration": "true",
+      "is_waiter_friendly": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_receiving_compliment": "true",
+      "is_in_celebration": "true",
+      "is_waiter_friendly": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_receiving_compliment": "true",
+      "is_in_celebration": "false",
+      "is_waiter_friendly": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_receiving_compliment": "true",
+      "is_in_celebration": "false",
+      "is_waiter_friendly": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_receiving_compliment": "false",
+      "is_in_celebration": "true",
+      "is_waiter_friendly": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_receiving_compliment": "false",
+      "is_in_celebration": "true",
+      "is_waiter_friendly": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_receiving_compliment": "false",
+      "is_in_celebration": "false",
+      "is_waiter_friendly": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_receiving_compliment": "false",
+      "is_in_celebration": "false",
+      "is_waiter_friendly": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

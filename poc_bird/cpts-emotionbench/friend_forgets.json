@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "Friendship_quality": [
+      "good",
+      "bad"
+    ],
+    "Frequency_of_travel": [
+      "first_time",
+      "repeated"
+    ],
+    "Distance_from_friend": [
+      "close",
+      "far"
+    ]
+  },
+  "cpt": [
+    {
+      "Friendship_quality": "good",
+      "Frequency_of_travel": "first_time",
+      "Distance_from_friend": "close",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Friendship_quality": "good",
+      "Frequency_of_travel": "first_time",
+      "Distance_from_friend": "far",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Friendship_quality": "good",
+      "Frequency_of_travel": "repeated",
+      "Distance_from_friend": "close",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Friendship_quality": "good",
+      "Frequency_of_travel": "repeated",
+      "Distance_from_friend": "far",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Friendship_quality": "bad",
+      "Frequency_of_travel": "first_time",
+      "Distance_from_friend": "close",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Friendship_quality": "bad",
+      "Frequency_of_travel": "first_time",
+      "Distance_from_friend": "far",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Friendship_quality": "bad",
+      "Frequency_of_travel": "repeated",
+      "Distance_from_friend": "close",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Friendship_quality": "bad",
+      "Frequency_of_travel": "repeated",
+      "Distance_from_friend": "far",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_upset_because_I_wasnt_invited": [
+      "true",
+      "false"
+    ],
+    "was_expected_to_be_invited": [
+      "true",
+      "false"
+    ],
+    "was_invited_before": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "is_upset_because_I_wasnt_invited": "true",
+      "was_expected_to_be_invited": "true",
+      "was_invited_before": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_upset_because_I_wasnt_invited": "true",
+      "was_expected_to_be_invited": "true",
+      "was_invited_before": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_upset_because_I_wasnt_invited": "true",
+      "was_expected_to_be_invited": "false",
+      "was_invited_before": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_upset_because_I_wasnt_invited": "true",
+      "was_expected_to_be_invited": "false",
+      "was_invited_before": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_upset_because_I_wasnt_invited": "false",
+      "was_expected_to_be_invited": "true",
+      "was_invited_before": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_upset_because_I_wasnt_invited": "false",
+      "was_expected_to_be_invited": "true",
+      "was_invited_before": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_upset_because_I_wasnt_invited": "false",
+      "was_expected_to_be_invited": "false",
+      "was_invited_before": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_upset_because_I_wasnt_invited": "false",
+      "was_expected_to_be_invited": "false",
+      "was_invited_before": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "news_type": [
+      "good",
+      "bad"
+    ],
+    "importance": [
+      "high",
+      "low"
+    ],
+    "personal_stake": [
+      "high",
+      "low"
+    ]
+  },
+  "cpt": [
+    {
+      "news_type": "good",
+      "importance": "high",
+      "personal_stake": "high",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "news_type": "good",
+      "importance": "high",
+      "personal_stake": "low",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "news_type": "good",
+      "importance": "low",
+      "personal_stake": "high",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "news_type": "good",
+      "importance": "low",
+      "personal_stake": "low",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "news_type": "bad",
+      "importance": "high",
+      "personal_stake": "high",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "news_type": "bad",
+      "importance": "high",
+      "personal_stake": "low",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "news_type": "bad",
+      "importance": "low",
+      "personal_stake": "high",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "news_type": "bad",
+      "importance": "low",
+      "personal_stake": "low",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "person_is_apologizing": [
+      "yes",
+      "no"
+    ],
+    "time_since_last_communication": [
+      "recent",
+      "long"
+    ],
+    "type_of_relationship": [
+      "close",
+      "distant"
+    ]
+  },
+  "cpt": [
+    {
+      "person_is_apologizing": "yes",
+      "time_since_last_communication": "recent",
+      "type_of_relationship": "close",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_is_apologizing": "yes",
+      "time_since_last_communication": "recent",
+      "type_of_relationship": "distant",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_is_apologizing": "yes",
+      "time_since_last_communication": "long",
+      "type_of_relationship": "close",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_is_apologizing": "yes",
+      "time_since_last_communication": "long",
+      "type_of_relationship": "distant",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_is_apologizing": "no",
+      "time_since_last_communication": "recent",
+      "type_of_relationship": "close",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_is_apologizing": "no",
+      "time_since_last_communication": "recent",
+      "type_of_relationship": "distant",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_is_apologizing": "no",
+      "time_since_last_communication": "long",
+      "type_of_relationship": "close",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_is_apologizing": "no",
+      "time_since_last_communication": "long",
+      "type_of_relationship": "distant",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

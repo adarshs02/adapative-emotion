@@ -1,0 +1,95 @@
+{
+  "factors": {
+    "I_am_upset_because_I_did_something_wrong": [
+      "yes",
+      "no"
+    ],
+    "I_feel_hurt_because_I_was_attacked": [
+      "yes",
+      "no"
+    ],
+    "I_am_anxious_because_I_might_get_in_trouble": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_upset_because_I_did_something_wrong": "yes",
+      "I_feel_hurt_because_I_was_attacked": "yes",
+      "I_am_anxious_because_I_might_get_in_trouble": "yes",
+      "emotions": {
+        "sad": 0.4992503748125937,
+        "upset": 0.5007496251874063
+      }
+    },
+    {
+      "I_am_upset_because_I_did_something_wrong": "yes",
+      "I_feel_hurt_because_I_was_attacked": "yes",
+      "I_am_anxious_because_I_might_get_in_trouble": "no",
+      "emotions": {
+        "sad": 0.4992503748125937,
+        "upset": 0.5007496251874063
+      }
+    },
+    {
+      "I_am_upset_because_I_did_something_wrong": "yes",
+      "I_feel_hurt_because_I_was_attacked": "no",
+      "I_am_anxious_because_I_might_get_in_trouble": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_upset_because_I_did_something_wrong": "yes",
+      "I_feel_hurt_because_I_was_attacked": "no",
+      "I_am_anxious_because_I_might_get_in_trouble": "no",
+      "emotions": {
+        "sad": 0.4992503748125937,
+        "upset": 0.5007496251874063
+      }
+    },
+    {
+      "I_am_upset_because_I_did_something_wrong": "no",
+      "I_feel_hurt_because_I_was_attacked": "yes",
+      "I_am_anxious_because_I_might_get_in_trouble": "yes",
+      "emotions": {
+        "anxious": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_upset_because_I_did_something_wrong": "no",
+      "I_feel_hurt_because_I_was_attacked": "yes",
+      "I_am_anxious_because_I_might_get_in_trouble": "no",
+      "emotions": {
+        "angry": 0.25,
+        "sad": 0.25,
+        "upset": 0.5
+      }
+    },
+    {
+      "I_am_upset_because_I_did_something_wrong": "no",
+      "I_feel_hurt_because_I_was_attacked": "no",
+      "I_am_anxious_because_I_might_get_in_trouble": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_upset_because_I_did_something_wrong": "no",
+      "I_feel_hurt_because_I_was_attacked": "no",
+      "I_am_anxious_because_I_might_get_in_trouble": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

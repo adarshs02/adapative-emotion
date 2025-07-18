@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "feedback_type": [
+      "positive",
+      "negative"
+    ],
+    "source": [
+      "colleague",
+      "manager"
+    ],
+    "timing": [
+      "unexpected",
+      "expected"
+    ]
+  },
+  "cpt": [
+    {
+      "feedback_type": "positive",
+      "source": "colleague",
+      "timing": "unexpected",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "feedback_type": "positive",
+      "source": "colleague",
+      "timing": "expected",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "feedback_type": "positive",
+      "source": "manager",
+      "timing": "unexpected",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "feedback_type": "positive",
+      "source": "manager",
+      "timing": "expected",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "feedback_type": "negative",
+      "source": "colleague",
+      "timing": "unexpected",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "feedback_type": "negative",
+      "source": "colleague",
+      "timing": "expected",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "feedback_type": "negative",
+      "source": "manager",
+      "timing": "unexpected",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "feedback_type": "negative",
+      "source": "manager",
+      "timing": "expected",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

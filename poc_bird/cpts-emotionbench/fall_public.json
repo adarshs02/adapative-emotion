@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "alone": [
+      "yes",
+      "no"
+    ],
+    "injury": [
+      "yes",
+      "no"
+    ],
+    "location_type": [
+      "private",
+      "public"
+    ]
+  },
+  "cpt": [
+    {
+      "alone": "yes",
+      "injury": "yes",
+      "location_type": "private",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "alone": "yes",
+      "injury": "yes",
+      "location_type": "public",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "alone": "yes",
+      "injury": "no",
+      "location_type": "private",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "alone": "yes",
+      "injury": "no",
+      "location_type": "public",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "alone": "no",
+      "injury": "yes",
+      "location_type": "private",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "alone": "no",
+      "injury": "yes",
+      "location_type": "public",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "alone": "no",
+      "injury": "no",
+      "location_type": "private",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "alone": "no",
+      "injury": "no",
+      "location_type": "public",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

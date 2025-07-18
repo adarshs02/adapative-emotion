@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I am alone": [
+      "yes",
+      "no"
+    ],
+    "I am confident in my style": [
+      "yes",
+      "no"
+    ],
+    "I am expecting a compliment": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I am alone": "yes",
+      "I am confident in my style": "yes",
+      "I am expecting a compliment": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am alone": "yes",
+      "I am confident in my style": "yes",
+      "I am expecting a compliment": "no",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am alone": "yes",
+      "I am confident in my style": "no",
+      "I am expecting a compliment": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am alone": "yes",
+      "I am confident in my style": "no",
+      "I am expecting a compliment": "no",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am alone": "no",
+      "I am confident in my style": "yes",
+      "I am expecting a compliment": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am alone": "no",
+      "I am confident in my style": "yes",
+      "I am expecting a compliment": "no",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am alone": "no",
+      "I am confident in my style": "no",
+      "I am expecting a compliment": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am alone": "no",
+      "I am confident in my style": "no",
+      "I am expecting a compliment": "no",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

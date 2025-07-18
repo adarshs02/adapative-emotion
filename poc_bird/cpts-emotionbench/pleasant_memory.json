@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "memory_type": [
+      "good",
+      "bad"
+    ],
+    "memory_recency": [
+      "recent",
+      "old"
+    ],
+    "memory_intensity": [
+      "strong",
+      "weak"
+    ]
+  },
+  "cpt": [
+    {
+      "memory_type": "good",
+      "memory_recency": "recent",
+      "memory_intensity": "strong",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "memory_type": "good",
+      "memory_recency": "recent",
+      "memory_intensity": "weak",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "memory_type": "good",
+      "memory_recency": "old",
+      "memory_intensity": "strong",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "happy": 0.333
+      }
+    },
+    {
+      "memory_type": "good",
+      "memory_recency": "old",
+      "memory_intensity": "weak",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "happy": 0.333
+      }
+    },
+    {
+      "memory_type": "bad",
+      "memory_recency": "recent",
+      "memory_intensity": "strong",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "memory_type": "bad",
+      "memory_recency": "recent",
+      "memory_intensity": "weak",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "memory_type": "bad",
+      "memory_recency": "old",
+      "memory_intensity": "strong",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "memory_type": "bad",
+      "memory_recency": "old",
+      "memory_intensity": "weak",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

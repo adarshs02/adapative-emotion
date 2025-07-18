@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "type_of_contest": [
+      "local",
+      "online"
+    ],
+    "importance_to_me": [
+      "low",
+      "high"
+    ],
+    "probability_of_winning": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "type_of_contest": "local",
+      "importance_to_me": "low",
+      "probability_of_winning": "low",
+      "emotions": {
+        "angry": 0.333,
+        "low": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "type_of_contest": "local",
+      "importance_to_me": "low",
+      "probability_of_winning": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "type_of_contest": "local",
+      "importance_to_me": "high",
+      "probability_of_winning": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "type_of_contest": "local",
+      "importance_to_me": "high",
+      "probability_of_winning": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "type_of_contest": "online",
+      "importance_to_me": "low",
+      "probability_of_winning": "low",
+      "emotions": {
+        "angry": 0.333,
+        "low": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "type_of_contest": "online",
+      "importance_to_me": "low",
+      "probability_of_winning": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "type_of_contest": "online",
+      "importance_to_me": "high",
+      "probability_of_winning": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "type_of_contest": "online",
+      "importance_to_me": "high",
+      "probability_of_winning": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

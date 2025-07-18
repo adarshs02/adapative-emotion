@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "confidence": [
+      "low",
+      "high"
+    ],
+    "effort": [
+      "low",
+      "high"
+    ],
+    "result": [
+      "positive",
+      "negative"
+    ]
+  },
+  "cpt": [
+    {
+      "confidence": "low",
+      "effort": "low",
+      "result": "positive",
+      "emotions": {
+        "angry": 0.333,
+        "low": 0.334,
+        "positive": 0.333
+      }
+    },
+    {
+      "confidence": "low",
+      "effort": "low",
+      "result": "negative",
+      "emotions": {
+        "angry": 0.333,
+        "low": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "confidence": "low",
+      "effort": "high",
+      "result": "positive",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "confidence": "low",
+      "effort": "high",
+      "result": "negative",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "confidence": "high",
+      "effort": "low",
+      "result": "positive",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "confidence": "high",
+      "effort": "low",
+      "result": "negative",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "confidence": "high",
+      "effort": "high",
+      "result": "positive",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "confidence": "high",
+      "effort": "high",
+      "result": "negative",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

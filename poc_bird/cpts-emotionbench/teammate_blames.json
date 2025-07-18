@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "i_feel_responsible": [
+      "yes",
+      "no"
+    ],
+    "i_feel_angry_because_i_was_blamed": [
+      "yes",
+      "no"
+    ],
+    "i_feel_helpless": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "i_feel_responsible": "yes",
+      "i_feel_angry_because_i_was_blamed": "yes",
+      "i_feel_helpless": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "helpless": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "i_feel_responsible": "yes",
+      "i_feel_angry_because_i_was_blamed": "yes",
+      "i_feel_helpless": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "i_feel_responsible": "yes",
+      "i_feel_angry_because_i_was_blamed": "no",
+      "i_feel_helpless": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "helpless": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "i_feel_responsible": "yes",
+      "i_feel_angry_because_i_was_blamed": "no",
+      "i_feel_helpless": "no",
+      "emotions": {
+        "angry": 0.333,
+        "helpless": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "i_feel_responsible": "no",
+      "i_feel_angry_because_i_was_blamed": "yes",
+      "i_feel_helpless": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "helpless": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "i_feel_responsible": "no",
+      "i_feel_angry_because_i_was_blamed": "yes",
+      "i_feel_helpless": "no",
+      "emotions": {
+        "angry": 0.333,
+        "helpless": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "i_feel_responsible": "no",
+      "i_feel_angry_because_i_was_blamed": "no",
+      "i_feel_helpless": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "helpless": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "i_feel_responsible": "no",
+      "i_feel_angry_because_i_was_blamed": "no",
+      "i_feel_helpless": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "i_am_angry_because": [
+      "they're late",
+      "it's not the first time"
+    ],
+    "i_am_anxious_because": [
+      "i'm worried about their safety",
+      "i'm worried about their well-being"
+    ],
+    "i_feel_ashamed_because": [
+      "i'm the one who's late",
+      "it's not my fault"
+    ]
+  },
+  "cpt": [
+    {
+      "i_am_angry_because": "they're late",
+      "i_am_anxious_because": "i'm worried about their safety",
+      "i_feel_ashamed_because": "i'm the one who's late",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "ashamed": 0.333
+      }
+    },
+    {
+      "i_am_angry_because": "they're late",
+      "i_am_anxious_because": "i'm worried about their safety",
+      "i_feel_ashamed_because": "it's not my fault",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "ashamed": 0.333
+      }
+    },
+    {
+      "i_am_angry_because": "they're late",
+      "i_am_anxious_because": "i'm worried about their well-being",
+      "i_feel_ashamed_because": "i'm the one who's late",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "ashamed": 0.333
+      }
+    },
+    {
+      "i_am_angry_because": "they're late",
+      "i_am_anxious_because": "i'm worried about their well-being",
+      "i_feel_ashamed_because": "it's not my fault",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "ashamed": 0.333
+      }
+    },
+    {
+      "i_am_angry_because": "it's not the first time",
+      "i_am_anxious_because": "i'm worried about their safety",
+      "i_feel_ashamed_because": "i'm the one who's late",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "ashamed": 0.333
+      }
+    },
+    {
+      "i_am_angry_because": "it's not the first time",
+      "i_am_anxious_because": "i'm worried about their safety",
+      "i_feel_ashamed_because": "it's not my fault",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "ashamed": 0.333
+      }
+    },
+    {
+      "i_am_angry_because": "it's not the first time",
+      "i_am_anxious_because": "i'm worried about their well-being",
+      "i_feel_ashamed_because": "i'm the one who's late",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "ashamed": 0.333
+      }
+    },
+    {
+      "i_am_angry_because": "it's not the first time",
+      "i_am_anxious_because": "i'm worried about their well-being",
+      "i_feel_ashamed_because": "it's not my fault",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "ashamed": 0.333
+      }
+    }
+  ]
+}

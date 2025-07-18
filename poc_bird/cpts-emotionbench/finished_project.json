@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "project_difficulty": [
+      "easy",
+      "hard"
+    ],
+    "project_importance": [
+      "low",
+      "high"
+    ],
+    "personal_stakes": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "project_difficulty": "easy",
+      "project_importance": "low",
+      "personal_stakes": "low",
+      "emotions": {
+        "angry": 0.333,
+        "low": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "project_difficulty": "easy",
+      "project_importance": "low",
+      "personal_stakes": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "project_difficulty": "easy",
+      "project_importance": "high",
+      "personal_stakes": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "project_difficulty": "easy",
+      "project_importance": "high",
+      "personal_stakes": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "project_difficulty": "hard",
+      "project_importance": "low",
+      "personal_stakes": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "project_difficulty": "hard",
+      "project_importance": "low",
+      "personal_stakes": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "project_difficulty": "hard",
+      "project_importance": "high",
+      "personal_stakes": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "project_difficulty": "hard",
+      "project_importance": "high",
+      "personal_stakes": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

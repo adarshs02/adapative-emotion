@@ -1,0 +1,180 @@
+{
+  "factors": {
+    "time_of_day": [
+      "morning",
+      "afternoon",
+      "evening",
+      "night"
+    ],
+    "my_expectations": [
+      "high",
+      "low"
+    ],
+    "my_relationship_with_person": [
+      "close",
+      "distant"
+    ]
+  },
+  "cpt": [
+    {
+      "time_of_day": "morning",
+      "my_expectations": "high",
+      "my_relationship_with_person": "close",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "my_expectations": "high",
+      "my_relationship_with_person": "distant",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "my_expectations": "low",
+      "my_relationship_with_person": "close",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "my_expectations": "low",
+      "my_relationship_with_person": "distant",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "afternoon",
+      "my_expectations": "high",
+      "my_relationship_with_person": "close",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "afternoon",
+      "my_expectations": "high",
+      "my_relationship_with_person": "distant",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "afternoon",
+      "my_expectations": "low",
+      "my_relationship_with_person": "close",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "afternoon",
+      "my_expectations": "low",
+      "my_relationship_with_person": "distant",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "evening",
+      "my_expectations": "high",
+      "my_relationship_with_person": "close",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "evening",
+      "my_expectations": "high",
+      "my_relationship_with_person": "distant",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "evening",
+      "my_expectations": "low",
+      "my_relationship_with_person": "close",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "evening",
+      "my_expectations": "low",
+      "my_relationship_with_person": "distant",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "night",
+      "my_expectations": "high",
+      "my_relationship_with_person": "close",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "night",
+      "my_expectations": "high",
+      "my_relationship_with_person": "distant",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "night",
+      "my_expectations": "low",
+      "my_relationship_with_person": "close",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "night",
+      "my_expectations": "low",
+      "my_relationship_with_person": "distant",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

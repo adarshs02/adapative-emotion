@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_feel_anxious_because_I'm_awkward": [
+      "yes",
+      "no"
+    ],
+    "I_feel_angry_because_I'm_not_in_the_photo": [
+      "yes",
+      "no"
+    ],
+    "I_feel_hurt_because_I_was_tagged": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_feel_anxious_because_I'm_awkward": "yes",
+      "I_feel_angry_because_I'm_not_in_the_photo": "yes",
+      "I_feel_hurt_because_I_was_tagged": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_anxious_because_I'm_awkward": "yes",
+      "I_feel_angry_because_I'm_not_in_the_photo": "yes",
+      "I_feel_hurt_because_I_was_tagged": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_anxious_because_I'm_awkward": "yes",
+      "I_feel_angry_because_I'm_not_in_the_photo": "no",
+      "I_feel_hurt_because_I_was_tagged": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_anxious_because_I'm_awkward": "yes",
+      "I_feel_angry_because_I'm_not_in_the_photo": "no",
+      "I_feel_hurt_because_I_was_tagged": "no",
+      "emotions": {
+        "anxious": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "I_feel_anxious_because_I'm_awkward": "no",
+      "I_feel_angry_because_I'm_not_in_the_photo": "yes",
+      "I_feel_hurt_because_I_was_tagged": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_anxious_because_I'm_awkward": "no",
+      "I_feel_angry_because_I'm_not_in_the_photo": "yes",
+      "I_feel_hurt_because_I_was_tagged": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "I_feel_anxious_because_I'm_awkward": "no",
+      "I_feel_angry_because_I'm_not_in_the_photo": "no",
+      "I_feel_hurt_because_I_was_tagged": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_anxious_because_I'm_awkward": "no",
+      "I_feel_angry_because_I'm_not_in_the_photo": "no",
+      "I_feel_hurt_because_I_was_tagged": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    }
+  ]
+}

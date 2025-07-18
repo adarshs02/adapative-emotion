@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm feeling frustrated because I'm waiting": [
+      "yes",
+      "no"
+    ],
+    "I'm feeling anxious because I'm not sure why they're late": [
+      "yes",
+      "no"
+    ],
+    "I'm feeling stressed because I have a lot to do": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm feeling frustrated because I'm waiting": "yes",
+      "I'm feeling anxious because I'm not sure why they're late": "yes",
+      "I'm feeling stressed because I have a lot to do": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling frustrated because I'm waiting": "yes",
+      "I'm feeling anxious because I'm not sure why they're late": "yes",
+      "I'm feeling stressed because I have a lot to do": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling frustrated because I'm waiting": "yes",
+      "I'm feeling anxious because I'm not sure why they're late": "no",
+      "I'm feeling stressed because I have a lot to do": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling frustrated because I'm waiting": "yes",
+      "I'm feeling anxious because I'm not sure why they're late": "no",
+      "I'm feeling stressed because I have a lot to do": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling frustrated because I'm waiting": "no",
+      "I'm feeling anxious because I'm not sure why they're late": "yes",
+      "I'm feeling stressed because I have a lot to do": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling frustrated because I'm waiting": "no",
+      "I'm feeling anxious because I'm not sure why they're late": "yes",
+      "I'm feeling stressed because I have a lot to do": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling frustrated because I'm waiting": "no",
+      "I'm feeling anxious because I'm not sure why they're late": "no",
+      "I'm feeling stressed because I have a lot to do": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling frustrated because I'm waiting": "no",
+      "I'm feeling anxious because I'm not sure why they're late": "no",
+      "I'm feeling stressed because I have a lot to do": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

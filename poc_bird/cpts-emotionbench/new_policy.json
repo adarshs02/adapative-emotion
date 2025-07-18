@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_understand_the_policy": [
+      "yes",
+      "no"
+    ],
+    "I_am_affected_by_the_policy": [
+      "yes",
+      "no"
+    ],
+    "I_trust_the_company": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_understand_the_policy": "yes",
+      "I_am_affected_by_the_policy": "yes",
+      "I_trust_the_company": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_understand_the_policy": "yes",
+      "I_am_affected_by_the_policy": "yes",
+      "I_trust_the_company": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_understand_the_policy": "yes",
+      "I_am_affected_by_the_policy": "no",
+      "I_trust_the_company": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_understand_the_policy": "yes",
+      "I_am_affected_by_the_policy": "no",
+      "I_trust_the_company": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_understand_the_policy": "no",
+      "I_am_affected_by_the_policy": "yes",
+      "I_trust_the_company": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_understand_the_policy": "no",
+      "I_am_affected_by_the_policy": "yes",
+      "I_trust_the_company": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_understand_the_policy": "no",
+      "I_am_affected_by_the_policy": "no",
+      "I_trust_the_company": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_understand_the_policy": "no",
+      "I_am_affected_by_the_policy": "no",
+      "I_trust_the_company": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

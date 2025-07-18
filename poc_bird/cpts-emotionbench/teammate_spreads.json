@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_was_the_one_spreading_the_rumor": [
+      "true",
+      "false"
+    ],
+    "I_believe_the_rumor": [
+      "true",
+      "false"
+    ],
+    "I_feel_confident_about_the_situation": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "I_was_the_one_spreading_the_rumor": "true",
+      "I_believe_the_rumor": "true",
+      "I_feel_confident_about_the_situation": "true",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I_was_the_one_spreading_the_rumor": "true",
+      "I_believe_the_rumor": "true",
+      "I_feel_confident_about_the_situation": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_was_the_one_spreading_the_rumor": "true",
+      "I_believe_the_rumor": "false",
+      "I_feel_confident_about_the_situation": "true",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_was_the_one_spreading_the_rumor": "true",
+      "I_believe_the_rumor": "false",
+      "I_feel_confident_about_the_situation": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_was_the_one_spreading_the_rumor": "false",
+      "I_believe_the_rumor": "true",
+      "I_feel_confident_about_the_situation": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_was_the_one_spreading_the_rumor": "false",
+      "I_believe_the_rumor": "true",
+      "I_feel_confident_about_the_situation": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_was_the_one_spreading_the_rumor": "false",
+      "I_believe_the_rumor": "false",
+      "I_feel_confident_about_the_situation": "true",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_was_the_one_spreading_the_rumor": "false",
+      "I_believe_the_rumor": "false",
+      "I_feel_confident_about_the_situation": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

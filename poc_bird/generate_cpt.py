@@ -3,17 +3,48 @@ import json
 import torch
 import re
 from transformers import AutoTokenizer, AutoModelForCausalLM
+from peft import PeftModel
 
 import config
 
 # --- Model Configuration ---
 MODEL_NAME = config.LLM_MODEL_NAME
+LORA_ADAPTER_PATH = "/mnt/shared/adarsh/train/lora-adapter"  # Path to your fine-tuned LoRA adapter
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 # --- Prompt Templates ---
 SYSTEM_PROMPT = """\
 You are an expert at converting everyday situations into a Bayesian-emotion table.
 """
+
+# Template for factor generation (base model)
+FACTOR_GENERATION_PROMPT = """\
+SCENARIO
+"{scenario}"
+
+GOAL
+Identify {num_factors} binary factors that would influence emotions in this scenario.
+
+OUTPUT --- return ONE JSON object, nothing else.
+
+JSON SPEC
+{{
+  "factors": {{
+    "<factor-1>": ["<value1>", "<value2>"],
+    "<factor-2>": ["<value1>", "<value2>"],
+    "<factor-3>": ["<value1>", "<value2>"]
+  }}
+}}
+
+RULES
+1. Pick factors that obviously influence emotions in this scenario.
+2. Use clear, mutually-exclusive binary values (e.g. "first_time"/"repeated").
+3. Make factors relevant and meaningful to the scenario.
+4. Do **not** include comments or extra keys.
+"""
+
+# Template for emotion generation (LoRA adapter)
+EMOTION_GENERATION_PROMPT = "PROMPT: Given the tweet, generate a JSON object with the probability for each emotion.\nTweet: {context_description}\nRESPONSE:"
 
 USER_PROMPT_TEMPLATE = """\
 SCENARIO
@@ -52,20 +83,30 @@ RULES
 END
 """
 
-def load_model():
-    """Loads the tokenizer and model from Hugging Face.
+def load_models():
+    """Loads both base model and LoRA adapter for hybrid CPT generation.
     """
-    print(f"Loading model: {MODEL_NAME} on {DEVICE}...")
+    print(f"Loading base model: {MODEL_NAME} on {DEVICE}...")
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-    model = AutoModelForCausalLM.from_pretrained(
+    
+    # Load base model with optimized settings
+    base_model = AutoModelForCausalLM.from_pretrained(
         MODEL_NAME,
         torch_dtype=torch.bfloat16 if DEVICE == "cuda" else torch.float32,
         device_map="auto",
         trust_remote_code=True,
+        attn_implementation="flash_attention_2",  # For H200 optimization
     )
-    model.eval()
-    print("Model loaded successfully!")
-    return tokenizer, model
+    
+    # Load LoRA adapter for emotion probability distributions
+    print(f"Loading LoRA adapter from: {LORA_ADAPTER_PATH}...")
+    lora_model = PeftModel.from_pretrained(base_model, LORA_ADAPTER_PATH)
+    
+    base_model.eval()
+    lora_model.eval()
+    
+    print("Both base model and LoRA adapter loaded successfully!")
+    return tokenizer, base_model, lora_model
 
 def extract_json_from_response(response_text):
     """Extracts a JSON object from the model's text response.
@@ -96,51 +137,152 @@ def extract_json_from_response(response_text):
         print("--------------------------")
         raise
 
-def generate_cpt(tokenizer, model, scenario: str, num_factors: int = 3):
-    """
-    Generates a Conditional Probability Table (CPT) for a given scenario using a local LLM.
-    """
-    num_rows = 2**num_factors
-    num_rows_minus_one = num_rows - 1
-    user_prompt = USER_PROMPT_TEMPLATE.format(
-        scenario=scenario, num_factors=num_factors, num_rows=num_rows, num_rows_minus_one=num_rows_minus_one
+def generate_factors_for_scenario(tokenizer, base_model, scenario, num_factors):
+    """Generate factors for a scenario using the base model."""
+    factor_prompt = FACTOR_GENERATION_PROMPT.format(
+        scenario=scenario, num_factors=num_factors
     )
-
+    
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},
-        {"role": "user", "content": user_prompt},
+        {"role": "user", "content": factor_prompt},
     ]
-
-    # Apply the chat template for the specific model
-    full_prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     
+    full_prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     inputs = tokenizer(full_prompt, return_tensors="pt").to(DEVICE)
-
-    print("--- Sending request to LLM ---")
+    
+    print("--- Generating factors with base model ---")
     try:
         with torch.no_grad():
-            outputs = model.generate(
+            outputs = base_model.generate(
                 **inputs,
-                max_new_tokens=1024,
-                temperature=0.2,
+                max_new_tokens=512,
+                temperature=0.6,
                 do_sample=True,
                 pad_token_id=tokenizer.eos_token_id
             )
         
-        # The output includes the prompt, so we need to decode only the generated tokens
         input_length = inputs['input_ids'].shape[1]
         generated_tokens = outputs[0][input_length:]
         generation_only = tokenizer.decode(generated_tokens, skip_special_tokens=True)
-
-        print("--- LLM Response Received ---")
-        cpt_data = extract_json_from_response(generation_only)
-        return cpt_data
+        
+        factors_data = extract_json_from_response(generation_only)
+        return factors_data
     except Exception as e:
-        print(f"An error occurred: {e}")
-        if "generation_only" in locals():
-            print("--- Raw LLM Response ---")
-            print(generation_only)
+        print(f"Factor generation error: {e}")
         return None
+
+def generate_emotions_for_context(tokenizer, lora_model, context_description):
+    """Generate emotion probabilities for a context using the LoRA adapter."""
+    # Use EXACT format that LoRA adapter was trained on
+    emotion_prompt = f"PROMPT: Given the tweet, generate a JSON object with the probability for each emotion.\nTweet: {context_description}\nRESPONSE:"
+    
+    inputs = tokenizer(emotion_prompt, return_tensors="pt").to(DEVICE)
+    
+    try:
+        with torch.no_grad():
+            outputs = lora_model.generate(
+                **inputs,
+                max_new_tokens=512,  # Increased for full emotion dictionary
+                temperature=0.1,
+                do_sample=True,
+                pad_token_id=tokenizer.eos_token_id
+            )
+        
+        input_length = inputs['input_ids'].shape[1]
+        generated_tokens = outputs[0][input_length:]
+        generation_only = tokenizer.decode(generated_tokens, skip_special_tokens=True)
+        
+        # Debug output
+        print(f"🔍 LoRA Raw Output: {repr(generation_only)}")
+        
+        emotion_data = extract_json_from_response(generation_only)
+        if emotion_data:
+            # Filter out emotions with zero probability to reduce CPT complexity
+            filtered_emotions = {emotion: prob for emotion, prob in emotion_data.items() if prob > 0.0}
+            
+            if filtered_emotions:
+                print(f"✅ Parsed JSON: {len(filtered_emotions)} non-zero emotions")
+                print(f"   Emotions: {list(filtered_emotions.keys())}")
+                return filtered_emotions
+            else:
+                print(f"❌ No non-zero emotions found in: {emotion_data}")
+                return None
+        else:
+            print(f"❌ Failed to parse JSON from: {generation_only}")
+            return None
+    except Exception as e:
+        print(f"Emotion generation error: {e}")
+        return None
+
+def generate_hybrid_cpt_for_scenario(tokenizer, base_model, lora_model, scenario, num_factors=3):
+    """
+    Generates a Conditional Probability Table (CPT) using hybrid approach:
+    - Base model generates factors
+    - LoRA adapter generates emotion probabilities for each factor combination
+    """
+    print(f"\n=== HYBRID CPT GENERATION FOR: {scenario} ===")
+    
+    # Step 1: Generate factors using base model
+    print("Step 1: Generating factors...")
+    factors_data = generate_factors_for_scenario(tokenizer, base_model, scenario, num_factors)
+    
+    if not factors_data or "factors" not in factors_data:
+        print("❌ Failed to generate factors")
+        return None
+    
+    factors = factors_data["factors"]
+    print(f"✅ Generated factors: {list(factors.keys())}")
+    
+    # Step 2: Generate all factor combinations
+    import itertools
+    factor_names = list(factors.keys())
+    factor_values = [factors[name] for name in factor_names]
+    
+    combinations = list(itertools.product(*factor_values))
+    print(f"Step 2: Generated {len(combinations)} factor combinations")
+    
+    # Step 3: Generate emotion probabilities for each combination
+    print("Step 3: Generating emotion probabilities...")
+    cpt_rows = []
+    
+    for i, combination in enumerate(combinations):
+        # Create a factor combination dictionary
+        factor_dict = {}
+        context_parts = []
+        
+        for j, factor_name in enumerate(factor_names):
+            factor_value = combination[j]
+            factor_dict[factor_name] = factor_value
+            context_parts.append(f"{factor_name} is {factor_value}")
+        
+        # Create a tweet-like description that matches LoRA training format
+        tweet_like_description = f"Feeling {scenario.lower()} when {', '.join(context_parts)}"
+        
+        # Use LoRA adapter to generate emotion probabilities
+        emotion_probs = generate_emotions_for_context(tokenizer, lora_model, tweet_like_description)
+        
+        if emotion_probs:
+            # Create CPT row
+            cpt_row = factor_dict.copy()
+            cpt_row["emotions"] = emotion_probs
+            cpt_rows.append(cpt_row)
+            print(f"  ✅ Combination {i+1}/{len(combinations)} complete")
+        else:
+            print(f"  ❌ Failed to generate emotions for combination {i+1}")
+    
+    if not cpt_rows:
+        print("❌ Failed to generate any CPT rows")
+        return None
+    
+    # Step 4: Assemble final CPT
+    final_cpt = {
+        "factors": factors,
+        "cpt": cpt_rows
+    }
+    
+    print(f"✅ Hybrid CPT generation complete: {len(cpt_rows)} rows generated")
+    return final_cpt
 
 def get_row_key(row, factor_names):
     """Creates a canonical, hashable key from a CPT row's factor values."""
@@ -167,7 +309,7 @@ def main():
         print("Please ensure the scenarios file is in the same directory as this script.")
         return
 
-    tokenizer, model = load_model()
+    tokenizer, base_model, lora_model = load_models()
 
     for scenario_item in scenarios_data['scenarios']:
         scenario_id = scenario_item['id']
@@ -184,7 +326,7 @@ def main():
         all_cpts = []
         for i in range(num_samples):
             print(f"--- Generating sample {i + 1}/{num_samples} ---")
-            cpt_data = generate_cpt(tokenizer, model, scenario_desc)
+            cpt_data = generate_hybrid_cpt_for_scenario(tokenizer, base_model, lora_model, scenario_desc)
             if cpt_data and "factors" in cpt_data and "cpt" in cpt_data:
                 all_cpts.append(cpt_data)
             else:

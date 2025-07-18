@@ -1,0 +1,100 @@
+{
+  "factors": {
+    "I'm alone when I call the wrong name": [
+      "angry",
+      "not angry"
+    ],
+    "The person knows I called them the wrong name": [
+      "embarrassed",
+      "not embarrassed"
+    ],
+    "I apologize after calling the wrong name": [
+      "guilty",
+      "not guilty"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm alone when I call the wrong name": "angry",
+      "The person knows I called them the wrong name": "embarrassed",
+      "I apologize after calling the wrong name": "guilty",
+      "emotions": {
+        "angry": 0.25,
+        "guilty": 0.5,
+        "sad": 0.25
+      }
+    },
+    {
+      "I'm alone when I call the wrong name": "angry",
+      "The person knows I called them the wrong name": "embarrassed",
+      "I apologize after calling the wrong name": "not guilty",
+      "emotions": {
+        "angry": 0.3333333333333333,
+        "guilty": 0.3333333333333333,
+        "sad": 0.3333333333333333
+      }
+    },
+    {
+      "I'm alone when I call the wrong name": "angry",
+      "The person knows I called them the wrong name": "not embarrassed",
+      "I apologize after calling the wrong name": "guilty",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm alone when I call the wrong name": "angry",
+      "The person knows I called them the wrong name": "not embarrassed",
+      "I apologize after calling the wrong name": "not guilty",
+      "emotions": {
+        "angry": 0.25,
+        "guilty": 0.25,
+        "sad": 0.25,
+        "upset": 0.25
+      }
+    },
+    {
+      "I'm alone when I call the wrong name": "not angry",
+      "The person knows I called them the wrong name": "embarrassed",
+      "I apologize after calling the wrong name": "guilty",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm alone when I call the wrong name": "not angry",
+      "The person knows I called them the wrong name": "embarrassed",
+      "I apologize after calling the wrong name": "not guilty",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm alone when I call the wrong name": "not angry",
+      "The person knows I called them the wrong name": "not embarrassed",
+      "I apologize after calling the wrong name": "guilty",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm alone when I call the wrong name": "not angry",
+      "The person knows I called them the wrong name": "not embarrassed",
+      "I apologize after calling the wrong name": "not guilty",
+      "emotions": {
+        "angry": 0.25,
+        "guilty": 0.25,
+        "sad": 0.25,
+        "upset": 0.25
+      }
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "factors": {
+    "I am angry because of my partner's flirting": [
+      "yes",
+      "no"
+    ],
+    "I feel insecure because of my partner's flirting": [
+      "yes",
+      "no"
+    ],
+    "I feel hurt because of my partner's flirting": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I am angry because of my partner's flirting": "yes",
+      "I feel insecure because of my partner's flirting": "yes",
+      "I feel hurt because of my partner's flirting": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I am angry because of my partner's flirting": "yes",
+      "I feel insecure because of my partner's flirting": "yes",
+      "I feel hurt because of my partner's flirting": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I am angry because of my partner's flirting": "yes",
+      "I feel insecure because of my partner's flirting": "no",
+      "I feel hurt because of my partner's flirting": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I am angry because of my partner's flirting": "yes",
+      "I feel insecure because of my partner's flirting": "no",
+      "I feel hurt because of my partner's flirting": "no",
+      "emotions": {
+        "angry": 0.25,
+        "insecure": 0.25,
+        "sad": 0.25,
+        "upset": 0.25
+      }
+    },
+    {
+      "I am angry because of my partner's flirting": "no",
+      "I feel insecure because of my partner's flirting": "yes",
+      "I feel hurt because of my partner's flirting": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I am angry because of my partner's flirting": "no",
+      "I feel insecure because of my partner's flirting": "yes",
+      "I feel hurt because of my partner's flirting": "no",
+      "emotions": {
+        "angry": 0.25,
+        "sad": 0.25,
+        "upset": 0.5
+      }
+    },
+    {
+      "I am angry because of my partner's flirting": "no",
+      "I feel insecure because of my partner's flirting": "no",
+      "I feel hurt because of my partner's flirting": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I am angry because of my partner's flirting": "no",
+      "I feel insecure because of my partner's flirting": "no",
+      "I feel hurt because of my partner's flirting": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

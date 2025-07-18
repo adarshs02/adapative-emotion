@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm_complimenting_because_I'm_nervous": [
+      "true",
+      "false"
+    ],
+    "I'm_complimenting_because_I'm_proud": [
+      "true",
+      "false"
+    ],
+    "I'm_complimenting_because_I'm_sincere": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm_complimenting_because_I'm_nervous": "true",
+      "I'm_complimenting_because_I'm_proud": "true",
+      "I'm_complimenting_because_I'm_sincere": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm_complimenting_because_I'm_nervous": "true",
+      "I'm_complimenting_because_I'm_proud": "true",
+      "I'm_complimenting_because_I'm_sincere": "false",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm_complimenting_because_I'm_nervous": "true",
+      "I'm_complimenting_because_I'm_proud": "false",
+      "I'm_complimenting_because_I'm_sincere": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm_complimenting_because_I'm_nervous": "true",
+      "I'm_complimenting_because_I'm_proud": "false",
+      "I'm_complimenting_because_I'm_sincere": "false",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm_complimenting_because_I'm_nervous": "false",
+      "I'm_complimenting_because_I'm_proud": "true",
+      "I'm_complimenting_because_I'm_sincere": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm_complimenting_because_I'm_nervous": "false",
+      "I'm_complimenting_because_I'm_proud": "true",
+      "I'm_complimenting_because_I'm_sincere": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm_complimenting_because_I'm_nervous": "false",
+      "I'm_complimenting_because_I'm_proud": "false",
+      "I'm_complimenting_because_I'm_sincere": "true",
+      "emotions": {
+        "I'm_complimenting_because_I'm_nervous": 0.333,
+        "I'm_complimenting_because_I'm_proud": 0.334,
+        "I'm_complimenting_because_I'm_sincere": 0.333
+      }
+    },
+    {
+      "I'm_complimenting_because_I'm_nervous": "false",
+      "I'm_complimenting_because_I'm_proud": "false",
+      "I'm_complimenting_because_I'm_sincere": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "feeling_bored": [
+      "yes",
+      "no"
+    ],
+    "frustrated_because_of_time": [
+      "yes",
+      "no"
+    ],
+    "tired": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "feeling_bored": "yes",
+      "frustrated_because_of_time": "yes",
+      "tired": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "feeling_bored": "yes",
+      "frustrated_because_of_time": "yes",
+      "tired": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "feeling_bored": "yes",
+      "frustrated_because_of_time": "no",
+      "tired": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "feeling_bored": "yes",
+      "frustrated_because_of_time": "no",
+      "tired": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "feeling_bored": "no",
+      "frustrated_because_of_time": "yes",
+      "tired": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "feeling_bored": "no",
+      "frustrated_because_of_time": "yes",
+      "tired": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "feeling_bored": "no",
+      "frustrated_because_of_time": "no",
+      "tired": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "feeling_bored": "no",
+      "frustrated_because_of_time": "no",
+      "tired": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    }
+  ]
+}

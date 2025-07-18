@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm tired because of the project": [
+      "yes",
+      "no"
+    ],
+    "I feel confident in my abilities": [
+      "yes",
+      "no"
+    ],
+    "The project is very important to me": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm tired because of the project": "yes",
+      "I feel confident in my abilities": "yes",
+      "The project is very important to me": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I'm tired because of the project": "yes",
+      "I feel confident in my abilities": "yes",
+      "The project is very important to me": "no",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of the project": "yes",
+      "I feel confident in my abilities": "no",
+      "The project is very important to me": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I'm tired because of the project": "yes",
+      "I feel confident in my abilities": "no",
+      "The project is very important to me": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I'm tired because of the project": "no",
+      "I feel confident in my abilities": "yes",
+      "The project is very important to me": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I'm tired because of the project": "no",
+      "I feel confident in my abilities": "yes",
+      "The project is very important to me": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I'm tired because of the project": "no",
+      "I feel confident in my abilities": "no",
+      "The project is very important to me": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I'm tired because of the project": "no",
+      "I feel confident in my abilities": "no",
+      "The project is very important to me": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    }
+  ]
+}

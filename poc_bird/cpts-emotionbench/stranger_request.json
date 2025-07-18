@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_a_friend": [
+      "true",
+      "false"
+    ],
+    "is_anonymous": [
+      "true",
+      "false"
+    ],
+    "is_in_a_hurry": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "is_a_friend": "true",
+      "is_anonymous": "true",
+      "is_in_a_hurry": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_a_friend": "true",
+      "is_anonymous": "true",
+      "is_in_a_hurry": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_a_friend": "true",
+      "is_anonymous": "false",
+      "is_in_a_hurry": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_a_friend": "true",
+      "is_anonymous": "false",
+      "is_in_a_hurry": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_a_friend": "false",
+      "is_anonymous": "true",
+      "is_in_a_hurry": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_a_friend": "false",
+      "is_anonymous": "true",
+      "is_in_a_hurry": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_a_friend": "false",
+      "is_anonymous": "false",
+      "is_in_a_hurry": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_a_friend": "false",
+      "is_anonymous": "false",
+      "is_in_a_hurry": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

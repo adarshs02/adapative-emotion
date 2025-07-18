@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "time_of_day": [
+      "morning",
+      "afternoon/evening"
+    ],
+    "reason_for_reunion": [
+      "accidental",
+      "planned"
+    ],
+    "emotional_state": [
+      "nervous",
+      "excited"
+    ]
+  },
+  "cpt": [
+    {
+      "time_of_day": "morning",
+      "reason_for_reunion": "accidental",
+      "emotional_state": "nervous",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "reason_for_reunion": "accidental",
+      "emotional_state": "excited",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "reason_for_reunion": "planned",
+      "emotional_state": "nervous",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "reason_for_reunion": "planned",
+      "emotional_state": "excited",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "afternoon/evening",
+      "reason_for_reunion": "accidental",
+      "emotional_state": "nervous",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "afternoon/evening",
+      "reason_for_reunion": "accidental",
+      "emotional_state": "excited",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "excited": 0.333
+      }
+    },
+    {
+      "time_of_day": "afternoon/evening",
+      "reason_for_reunion": "planned",
+      "emotional_state": "nervous",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "afternoon/evening",
+      "reason_for_reunion": "planned",
+      "emotional_state": "excited",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "excited": 0.333
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm alone": [
+      "yes",
+      "no"
+    ],
+    "I'm in a hurry": [
+      "yes",
+      "no"
+    ],
+    "I'm stressed because of traffic": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm alone": "yes",
+      "I'm in a hurry": "yes",
+      "I'm stressed because of traffic": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm alone": "yes",
+      "I'm in a hurry": "yes",
+      "I'm stressed because of traffic": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm alone": "yes",
+      "I'm in a hurry": "no",
+      "I'm stressed because of traffic": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm alone": "yes",
+      "I'm in a hurry": "no",
+      "I'm stressed because of traffic": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm alone": "no",
+      "I'm in a hurry": "yes",
+      "I'm stressed because of traffic": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm alone": "no",
+      "I'm in a hurry": "yes",
+      "I'm stressed because of traffic": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm alone": "no",
+      "I'm in a hurry": "no",
+      "I'm stressed because of traffic": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm alone": "no",
+      "I'm in a hurry": "no",
+      "I'm stressed because of traffic": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}
