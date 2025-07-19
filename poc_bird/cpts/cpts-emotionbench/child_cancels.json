@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "child_age": [
+      "young",
+      "old"
+    ],
+    "reason_for_cancellation": [
+      "sudden_illness",
+      "pre-planned"
+    ],
+    "my_emotional_state": [
+      "angry",
+      "calm"
+    ]
+  },
+  "cpt": [
+    {
+      "child_age": "young",
+      "reason_for_cancellation": "sudden_illness",
+      "my_emotional_state": "angry",
+      "emotions": {
+        "angry": 0.334,
+        "emotional": 0.333,
+        "sad": 0.333
+      }
+    },
+    {
+      "child_age": "young",
+      "reason_for_cancellation": "sudden_illness",
+      "my_emotional_state": "calm",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "child_age": "young",
+      "reason_for_cancellation": "pre-planned",
+      "my_emotional_state": "angry",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "child_age": "young",
+      "reason_for_cancellation": "pre-planned",
+      "my_emotional_state": "calm",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "child_age": "old",
+      "reason_for_cancellation": "sudden_illness",
+      "my_emotional_state": "angry",
+      "emotions": {
+        "angry": 0.334,
+        "emotional": 0.333,
+        "sad": 0.333
+      }
+    },
+    {
+      "child_age": "old",
+      "reason_for_cancellation": "sudden_illness",
+      "my_emotional_state": "calm",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "child_age": "old",
+      "reason_for_cancellation": "pre-planned",
+      "my_emotional_state": "angry",
+      "emotions": {
+        "angry": 0.334,
+        "emotional": 0.333,
+        "sad": 0.333
+      }
+    },
+    {
+      "child_age": "old",
+      "reason_for_cancellation": "pre-planned",
+      "my_emotional_state": "calm",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

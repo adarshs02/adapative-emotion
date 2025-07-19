@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "partner's intention": [
+      "insensitive",
+      "not insensitive"
+    ],
+    "my mood before": [
+      "good",
+      "bad"
+    ],
+    "my previous relationship with the partner": [
+      "good",
+      "bad"
+    ]
+  },
+  "cpt": [
+    {
+      "partner's intention": "insensitive",
+      "my mood before": "good",
+      "my previous relationship with the partner": "good",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "partner's intention": "insensitive",
+      "my mood before": "good",
+      "my previous relationship with the partner": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "partner's intention": "insensitive",
+      "my mood before": "bad",
+      "my previous relationship with the partner": "good",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "partner's intention": "insensitive",
+      "my mood before": "bad",
+      "my previous relationship with the partner": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "partner's intention": "not insensitive",
+      "my mood before": "good",
+      "my previous relationship with the partner": "good",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "partner's intention": "not insensitive",
+      "my mood before": "good",
+      "my previous relationship with the partner": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "partner's intention": "not insensitive",
+      "my mood before": "bad",
+      "my previous relationship with the partner": "good",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "partner's intention": "not insensitive",
+      "my mood before": "bad",
+      "my previous relationship with the partner": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

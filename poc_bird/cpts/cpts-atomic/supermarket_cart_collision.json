@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "apology_given": [
+      "yes",
+      "no"
+    ],
+    "cart_value": [
+      "low",
+      "high"
+    ],
+    "time_of_day": [
+      "morning",
+      "afternoon"
+    ]
+  },
+  "cpt": [
+    {
+      "apology_given": "yes",
+      "cart_value": "low",
+      "time_of_day": "morning",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "apology_given": "yes",
+      "cart_value": "low",
+      "time_of_day": "afternoon",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "apology_given": "yes",
+      "cart_value": "high",
+      "time_of_day": "morning",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "apology_given": "yes",
+      "cart_value": "high",
+      "time_of_day": "afternoon",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "apology_given": "no",
+      "cart_value": "low",
+      "time_of_day": "morning",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "apology_given": "no",
+      "cart_value": "low",
+      "time_of_day": "afternoon",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "apology_given": "no",
+      "cart_value": "high",
+      "time_of_day": "morning",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "apology_given": "no",
+      "cart_value": "high",
+      "time_of_day": "afternoon",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

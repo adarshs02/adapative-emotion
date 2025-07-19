@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "i_feel_ignored_because_they_unfollowed_me": [
+      "yes",
+      "no"
+    ],
+    "i_am_upset_because_i_miss_their_content": [
+      "yes",
+      "no"
+    ],
+    "i_wondered_if_something_is_wrong_with_us": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "i_feel_ignored_because_they_unfollowed_me": "yes",
+      "i_am_upset_because_i_miss_their_content": "yes",
+      "i_wondered_if_something_is_wrong_with_us": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "i_feel_ignored_because_they_unfollowed_me": "yes",
+      "i_am_upset_because_i_miss_their_content": "yes",
+      "i_wondered_if_something_is_wrong_with_us": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "i_feel_ignored_because_they_unfollowed_me": "yes",
+      "i_am_upset_because_i_miss_their_content": "no",
+      "i_wondered_if_something_is_wrong_with_us": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "i_feel_ignored_because_they_unfollowed_me": "yes",
+      "i_am_upset_because_i_miss_their_content": "no",
+      "i_wondered_if_something_is_wrong_with_us": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "i_feel_ignored_because_they_unfollowed_me": "no",
+      "i_am_upset_because_i_miss_their_content": "yes",
+      "i_wondered_if_something_is_wrong_with_us": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "i_feel_ignored_because_they_unfollowed_me": "no",
+      "i_am_upset_because_i_miss_their_content": "yes",
+      "i_wondered_if_something_is_wrong_with_us": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "i_feel_ignored_because_they_unfollowed_me": "no",
+      "i_am_upset_because_i_miss_their_content": "no",
+      "i_wondered_if_something_is_wrong_with_us": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "i_feel_ignored_because_they_unfollowed_me": "no",
+      "i_am_upset_because_i_miss_their_content": "no",
+      "i_wondered_if_something_is_wrong_with_us": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

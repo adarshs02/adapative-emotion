@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_expected_call_from_important_person": [
+      "true",
+      "false"
+    ],
+    "is_first_time_it_happened": [
+      "true",
+      "false"
+    ],
+    "is_phone_brought_as_an_emergency_device": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "is_expected_call_from_important_person": "true",
+      "is_first_time_it_happened": "true",
+      "is_phone_brought_as_an_emergency_device": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_expected_call_from_important_person": "true",
+      "is_first_time_it_happened": "true",
+      "is_phone_brought_as_an_emergency_device": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_expected_call_from_important_person": "true",
+      "is_first_time_it_happened": "false",
+      "is_phone_brought_as_an_emergency_device": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_expected_call_from_important_person": "true",
+      "is_first_time_it_happened": "false",
+      "is_phone_brought_as_an_emergency_device": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_expected_call_from_important_person": "false",
+      "is_first_time_it_happened": "true",
+      "is_phone_brought_as_an_emergency_device": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_expected_call_from_important_person": "false",
+      "is_first_time_it_happened": "true",
+      "is_phone_brought_as_an_emergency_device": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_expected_call_from_important_person": "false",
+      "is_first_time_it_happened": "false",
+      "is_phone_brought_as_an_emergency_device": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_expected_call_from_important_person": "false",
+      "is_first_time_it_happened": "false",
+      "is_phone_brought_as_an_emergency_device": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

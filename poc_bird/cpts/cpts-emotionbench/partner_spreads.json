@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "my_trust_in_their_words": [
+      "low",
+      "high"
+    ],
+    "my_trust_in_our_relationship": [
+      "low",
+      "high"
+    ],
+    "how_much_i_care_about_my_job": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "my_trust_in_their_words": "low",
+      "my_trust_in_our_relationship": "low",
+      "how_much_i_care_about_my_job": "low",
+      "emotions": {
+        "angry": 0.333,
+        "low": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "my_trust_in_their_words": "low",
+      "my_trust_in_our_relationship": "low",
+      "how_much_i_care_about_my_job": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "my_trust_in_their_words": "low",
+      "my_trust_in_our_relationship": "high",
+      "how_much_i_care_about_my_job": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "my_trust_in_their_words": "low",
+      "my_trust_in_our_relationship": "high",
+      "how_much_i_care_about_my_job": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "my_trust_in_their_words": "high",
+      "my_trust_in_our_relationship": "low",
+      "how_much_i_care_about_my_job": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "my_trust_in_their_words": "high",
+      "my_trust_in_our_relationship": "low",
+      "how_much_i_care_about_my_job": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "my_trust_in_their_words": "high",
+      "my_trust_in_our_relationship": "high",
+      "how_much_i_care_about_my_job": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "my_trust_in_their_words": "high",
+      "my_trust_in_our_relationship": "high",
+      "how_much_i_care_about_my_job": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

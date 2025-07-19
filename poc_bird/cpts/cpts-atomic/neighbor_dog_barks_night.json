@@ -1,0 +1,1829 @@
+{
+  "factors": {
+    "I'm tired because of lack of sleep": [
+      "true",
+      "false"
+    ],
+    "I feel angry because I can't sleep": [
+      "true",
+      "false"
+    ],
+    "The noise is loud": [
+      "true",
+      "false"
+    ],
+    "The noise is coming from my own pet": [
+      "true",
+      "false"
+    ],
+    "I know why the dog is barking": [
+      "true",
+      "false"
+    ],
+    "I'm frustrated because I need to work tomorrow": [
+      "true",
+      "false"
+    ],
+    "It's not the first time this has happened": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "true",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.25,
+        "frustrated": 0.25,
+        "sad": 0.25,
+        "tired": 0.25
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.25,
+        "frustrated": 0.25,
+        "sad": 0.25,
+        "tired": 0.25
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.25,
+        "frustrated": 0.5,
+        "sad": 0.25
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.25,
+        "frustrated": 0.25,
+        "sad": 0.25,
+        "tired": 0.25
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "true",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.25,
+        "frustrated": 0.5,
+        "sad": 0.25
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "true",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "true",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "true",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "true",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of lack of sleep": "false",
+      "I feel angry because I can't sleep": "false",
+      "The noise is loud": "false",
+      "The noise is coming from my own pet": "false",
+      "I know why the dog is barking": "false",
+      "I'm frustrated because I need to work tomorrow": "false",
+      "It's not the first time this has happened": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

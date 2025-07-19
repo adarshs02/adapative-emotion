@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "Parent's Intent": [
+      "Intentional",
+      "Accidental"
+    ],
+    "My Expectations": [
+      "High",
+      "Low"
+    ],
+    "My Relationship with Parent": [
+      "Good",
+      "Bad"
+    ]
+  },
+  "cpt": [
+    {
+      "Parent's Intent": "Intentional",
+      "My Expectations": "High",
+      "My Relationship with Parent": "Good",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Parent's Intent": "Intentional",
+      "My Expectations": "High",
+      "My Relationship with Parent": "Bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Parent's Intent": "Intentional",
+      "My Expectations": "Low",
+      "My Relationship with Parent": "Good",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Parent's Intent": "Intentional",
+      "My Expectations": "Low",
+      "My Relationship with Parent": "Bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Parent's Intent": "Accidental",
+      "My Expectations": "High",
+      "My Relationship with Parent": "Good",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Parent's Intent": "Accidental",
+      "My Expectations": "High",
+      "My Relationship with Parent": "Bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Parent's Intent": "Accidental",
+      "My Expectations": "Low",
+      "My Relationship with Parent": "Good",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Parent's Intent": "Accidental",
+      "My Expectations": "Low",
+      "My Relationship with Parent": "Bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

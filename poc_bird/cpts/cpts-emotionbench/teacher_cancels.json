@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "reason_for_cancellation": [
+      "personal",
+      "school"
+    ],
+    "my_previous_relationship_with_teacher": [
+      "good",
+      "bad"
+    ],
+    "my_current_mood": [
+      "good",
+      "bad"
+    ]
+  },
+  "cpt": [
+    {
+      "reason_for_cancellation": "personal",
+      "my_previous_relationship_with_teacher": "good",
+      "my_current_mood": "good",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "reason_for_cancellation": "personal",
+      "my_previous_relationship_with_teacher": "good",
+      "my_current_mood": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "reason_for_cancellation": "personal",
+      "my_previous_relationship_with_teacher": "bad",
+      "my_current_mood": "good",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "reason_for_cancellation": "personal",
+      "my_previous_relationship_with_teacher": "bad",
+      "my_current_mood": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "reason_for_cancellation": "school",
+      "my_previous_relationship_with_teacher": "good",
+      "my_current_mood": "good",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "reason_for_cancellation": "school",
+      "my_previous_relationship_with_teacher": "good",
+      "my_current_mood": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "reason_for_cancellation": "school",
+      "my_previous_relationship_with_teacher": "bad",
+      "my_current_mood": "good",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "reason_for_cancellation": "school",
+      "my_previous_relationship_with_teacher": "bad",
+      "my_current_mood": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

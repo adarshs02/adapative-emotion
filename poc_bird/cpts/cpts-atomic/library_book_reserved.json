@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_feel_confident_because_I_had_a_plan": [
+      "yes",
+      "no"
+    ],
+    "I_am_anxious_about_the_consequences_of_my_action": [
+      "yes",
+      "no"
+    ],
+    "I_feel_stressed_because_of_time_constraints": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_feel_confident_because_I_had_a_plan": "yes",
+      "I_am_anxious_about_the_consequences_of_my_action": "yes",
+      "I_feel_stressed_because_of_time_constraints": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_confident_because_I_had_a_plan": "yes",
+      "I_am_anxious_about_the_consequences_of_my_action": "yes",
+      "I_feel_stressed_because_of_time_constraints": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_confident_because_I_had_a_plan": "yes",
+      "I_am_anxious_about_the_consequences_of_my_action": "no",
+      "I_feel_stressed_because_of_time_constraints": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_feel_confident_because_I_had_a_plan": "yes",
+      "I_am_anxious_about_the_consequences_of_my_action": "no",
+      "I_feel_stressed_because_of_time_constraints": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_confident_because_I_had_a_plan": "no",
+      "I_am_anxious_about_the_consequences_of_my_action": "yes",
+      "I_feel_stressed_because_of_time_constraints": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_confident_because_I_had_a_plan": "no",
+      "I_am_anxious_about_the_consequences_of_my_action": "yes",
+      "I_feel_stressed_because_of_time_constraints": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_confident_because_I_had_a_plan": "no",
+      "I_am_anxious_about_the_consequences_of_my_action": "no",
+      "I_feel_stressed_because_of_time_constraints": "yes",
+      "emotions": {
+        "angry": 0.3333333333333333,
+        "confident": 0.3333333333333333,
+        "sad": 0.3333333333333333
+      }
+    },
+    {
+      "I_feel_confident_because_I_had_a_plan": "no",
+      "I_am_anxious_about_the_consequences_of_my_action": "no",
+      "I_feel_stressed_because_of_time_constraints": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

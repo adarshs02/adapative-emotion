@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "hearing_from_acquaintance": [
+      "true",
+      "false"
+    ],
+    "number_of_people_talking": [
+      "one",
+      "more_than_one"
+    ],
+    "time_since_occurrence": [
+      "recently",
+      "long_time_ago"
+    ]
+  },
+  "cpt": [
+    {
+      "hearing_from_acquaintance": "true",
+      "number_of_people_talking": "one",
+      "time_since_occurrence": "recently",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "hearing_from_acquaintance": "true",
+      "number_of_people_talking": "one",
+      "time_since_occurrence": "long_time_ago",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "hearing_from_acquaintance": "true",
+      "number_of_people_talking": "more_than_one",
+      "time_since_occurrence": "recently",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "hearing_from_acquaintance": "true",
+      "number_of_people_talking": "more_than_one",
+      "time_since_occurrence": "long_time_ago",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "hearing_from_acquaintance": "false",
+      "number_of_people_talking": "one",
+      "time_since_occurrence": "recently",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "hearing_from_acquaintance": "false",
+      "number_of_people_talking": "one",
+      "time_since_occurrence": "long_time_ago",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "hearing_from_acquaintance": "false",
+      "number_of_people_talking": "more_than_one",
+      "time_since_occurrence": "recently",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "hearing_from_acquaintance": "false",
+      "number_of_people_talking": "more_than_one",
+      "time_since_occurrence": "long_time_ago",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "guilt": [
+      "yes",
+      "no"
+    ],
+    "anger": [
+      "yes",
+      "no"
+    ],
+    "frustration": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "guilt": "yes",
+      "anger": "yes",
+      "frustration": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "guilty": 0.334
+      }
+    },
+    {
+      "guilt": "yes",
+      "anger": "yes",
+      "frustration": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "guilt": "yes",
+      "anger": "no",
+      "frustration": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "guilty": 0.334
+      }
+    },
+    {
+      "guilt": "yes",
+      "anger": "no",
+      "frustration": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "guilty": 0.334
+      }
+    },
+    {
+      "guilt": "no",
+      "anger": "yes",
+      "frustration": "yes",
+      "emotions": {
+        "angry": 0.334,
+        "frustrated": 0.333,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilt": "no",
+      "anger": "yes",
+      "frustration": "no",
+      "emotions": {
+        "angry": 0.334,
+        "frustrated": 0.333,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilt": "no",
+      "anger": "no",
+      "frustration": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilt": "no",
+      "anger": "no",
+      "frustration": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    }
+  ]
+}

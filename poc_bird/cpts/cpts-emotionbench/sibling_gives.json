@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "i_feel_undeserving": [
+      "yes",
+      "no"
+    ],
+    "i_am_upset_because_i_expected_more": [
+      "yes",
+      "no"
+    ],
+    "i_am_angry_because_i_feel_insulted": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "i_feel_undeserving": "yes",
+      "i_am_upset_because_i_expected_more": "yes",
+      "i_am_angry_because_i_feel_insulted": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "i_feel_undeserving": "yes",
+      "i_am_upset_because_i_expected_more": "yes",
+      "i_am_angry_because_i_feel_insulted": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "i_feel_undeserving": "yes",
+      "i_am_upset_because_i_expected_more": "no",
+      "i_am_angry_because_i_feel_insulted": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "i_feel_undeserving": "yes",
+      "i_am_upset_because_i_expected_more": "no",
+      "i_am_angry_because_i_feel_insulted": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "i_feel_undeserving": "no",
+      "i_am_upset_because_i_expected_more": "yes",
+      "i_am_angry_because_i_feel_insulted": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "i_feel_undeserving": "no",
+      "i_am_upset_because_i_expected_more": "yes",
+      "i_am_angry_because_i_feel_insulted": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "i_feel_undeserving": "no",
+      "i_am_upset_because_i_expected_more": "no",
+      "i_am_angry_because_i_feel_insulted": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "i_feel_undeserving": "no",
+      "i_am_upset_because_i_expected_more": "no",
+      "i_am_angry_because_i_feel_insulted": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

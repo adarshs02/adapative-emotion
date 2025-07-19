@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm late": [
+      "yes",
+      "no"
+    ],
+    "I'm stressed because of the deadline": [
+      "yes",
+      "no"
+    ],
+    "I'm angry at the driver": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm late": "yes",
+      "I'm stressed because of the deadline": "yes",
+      "I'm angry at the driver": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm late": "yes",
+      "I'm stressed because of the deadline": "yes",
+      "I'm angry at the driver": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm late": "yes",
+      "I'm stressed because of the deadline": "no",
+      "I'm angry at the driver": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm late": "yes",
+      "I'm stressed because of the deadline": "no",
+      "I'm angry at the driver": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm late": "no",
+      "I'm stressed because of the deadline": "yes",
+      "I'm angry at the driver": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm late": "no",
+      "I'm stressed because of the deadline": "yes",
+      "I'm angry at the driver": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm late": "no",
+      "I'm stressed because of the deadline": "no",
+      "I'm angry at the driver": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm late": "no",
+      "I'm stressed because of the deadline": "no",
+      "I'm angry at the driver": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

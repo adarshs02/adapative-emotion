@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I am alone": [
+      "yes",
+      "no"
+    ],
+    "I am stressed because of time constraints": [
+      "yes",
+      "no"
+    ],
+    "I have cash": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I am alone": "yes",
+      "I am stressed because of time constraints": "yes",
+      "I have cash": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am alone": "yes",
+      "I am stressed because of time constraints": "yes",
+      "I have cash": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am alone": "yes",
+      "I am stressed because of time constraints": "no",
+      "I have cash": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am alone": "yes",
+      "I am stressed because of time constraints": "no",
+      "I have cash": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am alone": "no",
+      "I am stressed because of time constraints": "yes",
+      "I have cash": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am alone": "no",
+      "I am stressed because of time constraints": "yes",
+      "I have cash": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am alone": "no",
+      "I am stressed because of time constraints": "no",
+      "I have cash": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am alone": "no",
+      "I am stressed because of time constraints": "no",
+      "I have cash": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "asked": [
+      "yes",
+      "no"
+    ],
+    "relationship_with_tagger": [
+      "close",
+      "distant"
+    ],
+    "type_of_content": [
+      "positive",
+      "negative"
+    ]
+  },
+  "cpt": [
+    {
+      "asked": "yes",
+      "relationship_with_tagger": "close",
+      "type_of_content": "positive",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "asked": "yes",
+      "relationship_with_tagger": "close",
+      "type_of_content": "negative",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "asked": "yes",
+      "relationship_with_tagger": "distant",
+      "type_of_content": "positive",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "asked": "yes",
+      "relationship_with_tagger": "distant",
+      "type_of_content": "negative",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "asked": "no",
+      "relationship_with_tagger": "close",
+      "type_of_content": "positive",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "asked": "no",
+      "relationship_with_tagger": "close",
+      "type_of_content": "negative",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "asked": "no",
+      "relationship_with_tagger": "distant",
+      "type_of_content": "positive",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "asked": "no",
+      "relationship_with_tagger": "distant",
+      "type_of_content": "negative",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

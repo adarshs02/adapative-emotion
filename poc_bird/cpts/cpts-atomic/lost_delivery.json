@@ -1,0 +1,180 @@
+{
+  "factors": {
+    "is_important": [
+      "true",
+      "false"
+    ],
+    "was_on_time": [
+      "yes",
+      "no"
+    ],
+    "expected_delivery_method": [
+      "email",
+      "sms",
+      "in_person",
+      "other"
+    ]
+  },
+  "cpt": [
+    {
+      "is_important": "true",
+      "was_on_time": "yes",
+      "expected_delivery_method": "email",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_important": "true",
+      "was_on_time": "yes",
+      "expected_delivery_method": "sms",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_important": "true",
+      "was_on_time": "yes",
+      "expected_delivery_method": "in_person",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_important": "true",
+      "was_on_time": "yes",
+      "expected_delivery_method": "other",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_important": "true",
+      "was_on_time": "no",
+      "expected_delivery_method": "email",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_important": "true",
+      "was_on_time": "no",
+      "expected_delivery_method": "sms",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_important": "true",
+      "was_on_time": "no",
+      "expected_delivery_method": "in_person",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_important": "true",
+      "was_on_time": "no",
+      "expected_delivery_method": "other",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_important": "false",
+      "was_on_time": "yes",
+      "expected_delivery_method": "email",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_important": "false",
+      "was_on_time": "yes",
+      "expected_delivery_method": "sms",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_important": "false",
+      "was_on_time": "yes",
+      "expected_delivery_method": "in_person",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_important": "false",
+      "was_on_time": "yes",
+      "expected_delivery_method": "other",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_important": "false",
+      "was_on_time": "no",
+      "expected_delivery_method": "email",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_important": "false",
+      "was_on_time": "no",
+      "expected_delivery_method": "sms",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_important": "false",
+      "was_on_time": "no",
+      "expected_delivery_method": "in_person",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_important": "false",
+      "was_on_time": "no",
+      "expected_delivery_method": "other",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

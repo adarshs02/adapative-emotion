@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm tired because I didn't sleep well": [
+      "yes",
+      "no"
+    ],
+    "The person is rude": [
+      "yes",
+      "no"
+    ],
+    "I have enough legroom left": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm tired because I didn't sleep well": "yes",
+      "The person is rude": "yes",
+      "I have enough legroom left": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I'm tired because I didn't sleep well": "yes",
+      "The person is rude": "yes",
+      "I have enough legroom left": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I'm tired because I didn't sleep well": "yes",
+      "The person is rude": "no",
+      "I have enough legroom left": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I'm tired because I didn't sleep well": "yes",
+      "The person is rude": "no",
+      "I have enough legroom left": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I'm tired because I didn't sleep well": "no",
+      "The person is rude": "yes",
+      "I have enough legroom left": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I'm tired because I didn't sleep well": "no",
+      "The person is rude": "yes",
+      "I have enough legroom left": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I'm tired because I didn't sleep well": "no",
+      "The person is rude": "no",
+      "I have enough legroom left": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    },
+    {
+      "I'm tired because I didn't sleep well": "no",
+      "The person is rude": "no",
+      "I have enough legroom left": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "tired": 0.334
+      }
+    }
+  ]
+}

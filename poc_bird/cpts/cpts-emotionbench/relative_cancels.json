@@ -1,0 +1,94 @@
+{
+  "factors": {
+    "cancelled_by_relative": [
+      "yes",
+      "no"
+    ],
+    "cancelled_at_convenient_time": [
+      "yes",
+      "no"
+    ],
+    "feeling_of_disappointment": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "cancelled_by_relative": "yes",
+      "cancelled_at_convenient_time": "yes",
+      "feeling_of_disappointment": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "cancelled_by_relative": "yes",
+      "cancelled_at_convenient_time": "yes",
+      "feeling_of_disappointment": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "cancelled_by_relative": "yes",
+      "cancelled_at_convenient_time": "no",
+      "feeling_of_disappointment": "yes",
+      "emotions": {
+        "cancelled_by_relative": 0.4992503748125937,
+        "feeling_of_disappointment": 0.5007496251874063
+      }
+    },
+    {
+      "cancelled_by_relative": "yes",
+      "cancelled_at_convenient_time": "no",
+      "feeling_of_disappointment": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "cancelled_by_relative": "no",
+      "cancelled_at_convenient_time": "yes",
+      "feeling_of_disappointment": "yes",
+      "emotions": {
+        "cancelled_at_convenient_time": 0.4992503748125937,
+        "feeling_of_disappointment": 0.5007496251874063
+      }
+    },
+    {
+      "cancelled_by_relative": "no",
+      "cancelled_at_convenient_time": "yes",
+      "feeling_of_disappointment": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "cancelled_by_relative": "no",
+      "cancelled_at_convenient_time": "no",
+      "feeling_of_disappointment": "yes",
+      "emotions": {
+        "feeling_of_disappointment": 1.0
+      }
+    },
+    {
+      "cancelled_by_relative": "no",
+      "cancelled_at_convenient_time": "no",
+      "feeling_of_disappointment": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

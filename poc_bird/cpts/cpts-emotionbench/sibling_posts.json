@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_jealous": [
+      "yes",
+      "no"
+    ],
+    "I_feel_responsible": [
+      "yes",
+      "no"
+    ],
+    "I_feel_hurt": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_jealous": "yes",
+      "I_feel_responsible": "yes",
+      "I_feel_hurt": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_jealous": "yes",
+      "I_feel_responsible": "yes",
+      "I_feel_hurt": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_jealous": "yes",
+      "I_feel_responsible": "no",
+      "I_feel_hurt": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_jealous": "yes",
+      "I_feel_responsible": "no",
+      "I_feel_hurt": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_jealous": "no",
+      "I_feel_responsible": "yes",
+      "I_feel_hurt": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_jealous": "no",
+      "I_feel_responsible": "yes",
+      "I_feel_hurt": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_jealous": "no",
+      "I_feel_responsible": "no",
+      "I_feel_hurt": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_jealous": "no",
+      "I_feel_responsible": "no",
+      "I_feel_hurt": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

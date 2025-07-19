@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_feel_hurt_because_I_wasnt_finished_speaking": [
+      "true",
+      "false"
+    ],
+    "I_am_angry_because_the_other_person_didnt_care_about_my_point": [
+      "true",
+      "false"
+    ],
+    "I_am_confused_because_I_dont_understand_why_they_changed_the_subject": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "I_feel_hurt_because_I_wasnt_finished_speaking": "true",
+      "I_am_angry_because_the_other_person_didnt_care_about_my_point": "true",
+      "I_am_confused_because_I_dont_understand_why_they_changed_the_subject": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_hurt_because_I_wasnt_finished_speaking": "true",
+      "I_am_angry_because_the_other_person_didnt_care_about_my_point": "true",
+      "I_am_confused_because_I_dont_understand_why_they_changed_the_subject": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_hurt_because_I_wasnt_finished_speaking": "true",
+      "I_am_angry_because_the_other_person_didnt_care_about_my_point": "false",
+      "I_am_confused_because_I_dont_understand_why_they_changed_the_subject": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_hurt_because_I_wasnt_finished_speaking": "true",
+      "I_am_angry_because_the_other_person_didnt_care_about_my_point": "false",
+      "I_am_confused_because_I_dont_understand_why_they_changed_the_subject": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_hurt_because_I_wasnt_finished_speaking": "false",
+      "I_am_angry_because_the_other_person_didnt_care_about_my_point": "true",
+      "I_am_confused_because_I_dont_understand_why_they_changed_the_subject": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_hurt_because_I_wasnt_finished_speaking": "false",
+      "I_am_angry_because_the_other_person_didnt_care_about_my_point": "true",
+      "I_am_confused_because_I_dont_understand_why_they_changed_the_subject": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_hurt_because_I_wasnt_finished_speaking": "false",
+      "I_am_angry_because_the_other_person_didnt_care_about_my_point": "false",
+      "I_am_confused_because_I_dont_understand_why_they_changed_the_subject": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_hurt_because_I_wasnt_finished_speaking": "false",
+      "I_am_angry_because_the_other_person_didnt_care_about_my_point": "false",
+      "I_am_confused_because_I_dont_understand_why_they_changed_the_subject": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

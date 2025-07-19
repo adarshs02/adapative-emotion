@@ -84,18 +84,21 @@ END
 """
 
 def load_models():
-    """Loads both base model and LoRA adapter for hybrid CPT generation.
+    """Loads both base model and LoRA adapter with H200 optimizations.
     """
     print(f"Loading base model: {MODEL_NAME} on {DEVICE}...")
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
     
-    # Load base model with optimized settings
+    # H200-optimized settings for maximum throughput
     base_model = AutoModelForCausalLM.from_pretrained(
         MODEL_NAME,
         torch_dtype=torch.bfloat16 if DEVICE == "cuda" else torch.float32,
         device_map="auto",
         trust_remote_code=True,
-        attn_implementation="flash_attention_2",  # For H200 optimization
+        attn_implementation="flash_attention_2",  # H200 optimization
+        max_memory={0: "110GB"},  # Use most of H200's 141GB memory
+        low_cpu_mem_usage=True,
+        use_cache=True,  # Enable KV cache for faster sequential generation
     )
     
     # Load LoRA adapter for emotion probability distributions
@@ -105,7 +108,13 @@ def load_models():
     base_model.eval()
     lora_model.eval()
     
-    print("Both base model and LoRA adapter loaded successfully!")
+    # Enable optimizations
+    if hasattr(base_model, 'enable_model_cpu_offload'):
+        base_model.enable_model_cpu_offload()
+    if hasattr(lora_model, 'enable_model_cpu_offload'):
+        lora_model.enable_model_cpu_offload()
+    
+    print("Both base model and LoRA adapter loaded successfully with H200 optimizations!")
     return tokenizer, base_model, lora_model
 
 def extract_json_from_response(response_text):
@@ -138,7 +147,7 @@ def extract_json_from_response(response_text):
         raise
 
 def generate_factors_for_scenario(tokenizer, base_model, scenario, num_factors):
-    """Generate factors for a scenario using the base model."""
+    """Generate factors for a scenario using the base model with H200 optimizations."""
     factor_prompt = FACTOR_GENERATION_PROMPT.format(
         scenario=scenario, num_factors=num_factors
     )
@@ -151,7 +160,7 @@ def generate_factors_for_scenario(tokenizer, base_model, scenario, num_factors):
     full_prompt = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     inputs = tokenizer(full_prompt, return_tensors="pt").to(DEVICE)
     
-    print("--- Generating factors with base model ---")
+    print("--- Generating factors with base model (H200 optimized) ---")
     try:
         with torch.no_grad():
             outputs = base_model.generate(
@@ -159,7 +168,13 @@ def generate_factors_for_scenario(tokenizer, base_model, scenario, num_factors):
                 max_new_tokens=512,
                 temperature=0.6,
                 do_sample=True,
-                pad_token_id=tokenizer.eos_token_id
+                pad_token_id=tokenizer.eos_token_id,
+                # H200 optimizations
+                use_cache=True,
+                repetition_penalty=1.1,
+                top_k=50,
+                top_p=0.9,
+                num_beams=1,  # Use sampling instead of beam search for speed
             )
         
         input_length = inputs['input_ids'].shape[1]
@@ -173,7 +188,7 @@ def generate_factors_for_scenario(tokenizer, base_model, scenario, num_factors):
         return None
 
 def generate_emotions_for_context(tokenizer, lora_model, context_description):
-    """Generate emotion probabilities for a context using the LoRA adapter."""
+    """Generate emotion probabilities for a context using the LoRA adapter with H200 optimizations."""
     # Use EXACT format that LoRA adapter was trained on
     emotion_prompt = f"PROMPT: Given the tweet, generate a JSON object with the probability for each emotion.\nTweet: {context_description}\nRESPONSE:"
     
@@ -186,15 +201,21 @@ def generate_emotions_for_context(tokenizer, lora_model, context_description):
                 max_new_tokens=512,  # Increased for full emotion dictionary
                 temperature=0.1,
                 do_sample=True,
-                pad_token_id=tokenizer.eos_token_id
+                pad_token_id=tokenizer.eos_token_id,
+                # H200 optimizations
+                use_cache=True,
+                repetition_penalty=1.05,
+                top_k=40,
+                top_p=0.95,
+                num_beams=1,  # Use sampling for speed
             )
         
         input_length = inputs['input_ids'].shape[1]
         generated_tokens = outputs[0][input_length:]
         generation_only = tokenizer.decode(generated_tokens, skip_special_tokens=True)
         
-        # Debug output
-        print(f"🔍 LoRA Raw Output: {repr(generation_only)}")
+        # Debug output (reduced for performance)
+        print(f"🔍 LoRA Output Length: {len(generation_only)} chars")
         
         emotion_data = extract_json_from_response(generation_only)
         if emotion_data:
@@ -203,17 +224,69 @@ def generate_emotions_for_context(tokenizer, lora_model, context_description):
             
             if filtered_emotions:
                 print(f"✅ Parsed JSON: {len(filtered_emotions)} non-zero emotions")
-                print(f"   Emotions: {list(filtered_emotions.keys())}")
                 return filtered_emotions
             else:
-                print(f"❌ No non-zero emotions found in: {emotion_data}")
+                print(f"❌ No non-zero emotions found")
                 return None
         else:
-            print(f"❌ Failed to parse JSON from: {generation_only}")
+            print(f"❌ Failed to parse JSON")
             return None
     except Exception as e:
         print(f"Emotion generation error: {e}")
         return None
+
+def generate_emotions_batch(tokenizer, lora_model, context_descriptions, batch_size=32):
+    """Generate emotion probabilities for multiple contexts in batches - H200 optimized."""
+    all_results = []
+    
+    for i in range(0, len(context_descriptions), batch_size):
+        batch_contexts = context_descriptions[i:i+batch_size]
+        batch_prompts = [f"PROMPT: Given the tweet, generate a JSON object with the probability for each emotion.\nTweet: {ctx}\nRESPONSE:" for ctx in batch_contexts]
+        
+        # Tokenize batch
+        inputs = tokenizer(batch_prompts, return_tensors="pt", padding=True, truncation=True).to(DEVICE)
+        
+        try:
+            with torch.no_grad():
+                outputs = lora_model.generate(
+                    **inputs,
+                    max_new_tokens=512,
+                    temperature=0.6,
+                    do_sample=True,
+                    pad_token_id=tokenizer.eos_token_id,
+                    # H200 batch optimizations
+                    use_cache=True,
+                    repetition_penalty=1.05,
+                    top_k=40,
+                    top_p=0.95,
+                    num_beams=1,
+                )
+            
+            # Process batch results
+            batch_results = []
+            for j, output in enumerate(outputs):
+                input_length = inputs['input_ids'][j].shape[0]
+                generated_tokens = output[input_length:]
+                generation_only = tokenizer.decode(generated_tokens, skip_special_tokens=True)
+                
+                emotion_data = extract_json_from_response(generation_only)
+                if emotion_data:
+                    filtered_emotions = {emotion: prob for emotion, prob in emotion_data.items() if prob > 0.0}
+                    batch_results.append(filtered_emotions if filtered_emotions else None)
+                else:
+                    batch_results.append(None)
+            
+            all_results.extend(batch_results)
+            print(f"✅ Batch {i//batch_size + 1}: {len([r for r in batch_results if r])} successful generations")
+            
+        except Exception as e:
+            print(f"Batch generation error: {e}")
+            # Fallback to individual processing for this batch
+            for ctx in batch_contexts:
+                result = generate_emotions_for_context(tokenizer, lora_model, ctx)
+                all_results.append(result)
+    
+    return all_results
 
 def generate_hybrid_cpt_for_scenario(tokenizer, base_model, lora_model, scenario, num_factors=3):
     """
@@ -296,6 +369,8 @@ def main():
     """
     cpt_dir = config.CPT_DIR
     scenarios_file = config.SCENARIOS_FILE
+    print("cpt_dir:", cpt_dir)
+    print("scenarios_file:", scenarios_file)
     num_samples = 2  # Number of samples to generate per scenario
 
     # Ensure the output directory exists

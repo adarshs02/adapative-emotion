@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_stressed_because_of_other_reasons": [
+      "yes",
+      "no"
+    ],
+    "the_relative_is_my_parent": [
+      "yes",
+      "no"
+    ],
+    "the_relative_is_a_close_friend": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_stressed_because_of_other_reasons": "yes",
+      "the_relative_is_my_parent": "yes",
+      "the_relative_is_a_close_friend": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_stressed_because_of_other_reasons": "yes",
+      "the_relative_is_my_parent": "yes",
+      "the_relative_is_a_close_friend": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_stressed_because_of_other_reasons": "yes",
+      "the_relative_is_my_parent": "no",
+      "the_relative_is_a_close_friend": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_stressed_because_of_other_reasons": "yes",
+      "the_relative_is_my_parent": "no",
+      "the_relative_is_a_close_friend": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_stressed_because_of_other_reasons": "no",
+      "the_relative_is_my_parent": "yes",
+      "the_relative_is_a_close_friend": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_stressed_because_of_other_reasons": "no",
+      "the_relative_is_my_parent": "yes",
+      "the_relative_is_a_close_friend": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_stressed_because_of_other_reasons": "no",
+      "the_relative_is_my_parent": "no",
+      "the_relative_is_a_close_friend": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_stressed_because_of_other_reasons": "no",
+      "the_relative_is_my_parent": "no",
+      "the_relative_is_a_close_friend": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

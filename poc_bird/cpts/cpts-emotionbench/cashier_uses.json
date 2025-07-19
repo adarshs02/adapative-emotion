@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_familiar_with_cashier": [
+      "yes",
+      "no"
+    ],
+    "I_trust_cashier": [
+      "yes",
+      "no"
+    ],
+    "I_am_angry_because_of_previous_experiences": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_familiar_with_cashier": "yes",
+      "I_trust_cashier": "yes",
+      "I_am_angry_because_of_previous_experiences": "yes",
+      "emotions": {
+        "angry": 0.334,
+        "frustrated": 0.333,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_familiar_with_cashier": "yes",
+      "I_trust_cashier": "yes",
+      "I_am_angry_because_of_previous_experiences": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_familiar_with_cashier": "yes",
+      "I_trust_cashier": "no",
+      "I_am_angry_because_of_previous_experiences": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_familiar_with_cashier": "yes",
+      "I_trust_cashier": "no",
+      "I_am_angry_because_of_previous_experiences": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_familiar_with_cashier": "no",
+      "I_trust_cashier": "yes",
+      "I_am_angry_because_of_previous_experiences": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_familiar_with_cashier": "no",
+      "I_trust_cashier": "yes",
+      "I_am_angry_because_of_previous_experiences": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_familiar_with_cashier": "no",
+      "I_trust_cashier": "no",
+      "I_am_angry_because_of_previous_experiences": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_familiar_with_cashier": "no",
+      "I_trust_cashier": "no",
+      "I_am_angry_because_of_previous_experiences": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

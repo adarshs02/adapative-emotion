@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_was_loyal_to_my_boss": [
+      "yes",
+      "no"
+    ],
+    "I_feel_trusted_by_my_boss": [
+      "yes",
+      "no"
+    ],
+    "I_am_confident_in_my_job": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_was_loyal_to_my_boss": "yes",
+      "I_feel_trusted_by_my_boss": "yes",
+      "I_am_confident_in_my_job": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_was_loyal_to_my_boss": "yes",
+      "I_feel_trusted_by_my_boss": "yes",
+      "I_am_confident_in_my_job": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_was_loyal_to_my_boss": "yes",
+      "I_feel_trusted_by_my_boss": "no",
+      "I_am_confident_in_my_job": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I_was_loyal_to_my_boss": "yes",
+      "I_feel_trusted_by_my_boss": "no",
+      "I_am_confident_in_my_job": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_was_loyal_to_my_boss": "no",
+      "I_feel_trusted_by_my_boss": "yes",
+      "I_am_confident_in_my_job": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_was_loyal_to_my_boss": "no",
+      "I_feel_trusted_by_my_boss": "yes",
+      "I_am_confident_in_my_job": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_was_loyal_to_my_boss": "no",
+      "I_feel_trusted_by_my_boss": "no",
+      "I_am_confident_in_my_job": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_was_loyal_to_my_boss": "no",
+      "I_feel_trusted_by_my_boss": "no",
+      "I_am_confident_in_my_job": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

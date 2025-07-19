@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I feel guilty because": [
+      "I used my sibling's belongings before",
+      "my sibling used my belongings before"
+    ],
+    "I feel upset because": [
+      "I really need the item",
+      "I don't need the item"
+    ],
+    "I feel angry because": [
+      "I asked my sibling to return the item",
+      "I didn't ask my sibling to return the item"
+    ]
+  },
+  "cpt": [
+    {
+      "I feel guilty because": "I used my sibling's belongings before",
+      "I feel upset because": "I really need the item",
+      "I feel angry because": "I asked my sibling to return the item",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I feel guilty because": "I used my sibling's belongings before",
+      "I feel upset because": "I really need the item",
+      "I feel angry because": "I didn't ask my sibling to return the item",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel guilty because": "I used my sibling's belongings before",
+      "I feel upset because": "I don't need the item",
+      "I feel angry because": "I asked my sibling to return the item",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I feel guilty because": "I used my sibling's belongings before",
+      "I feel upset because": "I don't need the item",
+      "I feel angry because": "I didn't ask my sibling to return the item",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel guilty because": "my sibling used my belongings before",
+      "I feel upset because": "I really need the item",
+      "I feel angry because": "I asked my sibling to return the item",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I feel guilty because": "my sibling used my belongings before",
+      "I feel upset because": "I really need the item",
+      "I feel angry because": "I didn't ask my sibling to return the item",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I feel guilty because": "my sibling used my belongings before",
+      "I feel upset because": "I don't need the item",
+      "I feel angry because": "I asked my sibling to return the item",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I feel guilty because": "my sibling used my belongings before",
+      "I feel upset because": "I don't need the item",
+      "I feel angry because": "I didn't ask my sibling to return the item",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    }
+  ]
+}

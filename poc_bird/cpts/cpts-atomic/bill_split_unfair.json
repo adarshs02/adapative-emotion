@@ -1,0 +1,97 @@
+{
+  "factors": {
+    "i_feel_angry_because_i_ordered_less_than_others": [
+      true,
+      false
+    ],
+    "i_feel_anxious_because_they_insisted_on_splitting_the_bill_evenly": [
+      true,
+      false
+    ],
+    "i_feel_guilty_because_i_ordered_less_than_others": [
+      true,
+      false
+    ]
+  },
+  "cpt": [
+    {
+      "i_feel_angry_because_i_ordered_less_than_others": true,
+      "i_feel_anxious_because_they_insisted_on_splitting_the_bill_evenly": true,
+      "i_feel_guilty_because_i_ordered_less_than_others": true,
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "i_feel_angry_because_i_ordered_less_than_others": true,
+      "i_feel_anxious_because_they_insisted_on_splitting_the_bill_evenly": true,
+      "i_feel_guilty_because_i_ordered_less_than_others": false,
+      "emotions": {
+        "angry": 0.5,
+        "anxious": 0.5
+      }
+    },
+    {
+      "i_feel_angry_because_i_ordered_less_than_others": true,
+      "i_feel_anxious_because_they_insisted_on_splitting_the_bill_evenly": false,
+      "i_feel_guilty_because_i_ordered_less_than_others": true,
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "i_feel_angry_because_i_ordered_less_than_others": true,
+      "i_feel_anxious_because_they_insisted_on_splitting_the_bill_evenly": false,
+      "i_feel_guilty_because_i_ordered_less_than_others": false,
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "i_feel_angry_because_i_ordered_less_than_others": false,
+      "i_feel_anxious_because_they_insisted_on_splitting_the_bill_evenly": true,
+      "i_feel_guilty_because_i_ordered_less_than_others": true,
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "i_feel_angry_because_i_ordered_less_than_others": false,
+      "i_feel_anxious_because_they_insisted_on_splitting_the_bill_evenly": true,
+      "i_feel_guilty_because_i_ordered_less_than_others": false,
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "i_feel_angry_because_i_ordered_less_than_others": false,
+      "i_feel_anxious_because_they_insisted_on_splitting_the_bill_evenly": false,
+      "i_feel_guilty_because_i_ordered_less_than_others": true,
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "i_feel_angry_because_i_ordered_less_than_others": false,
+      "i_feel_anxious_because_they_insisted_on_splitting_the_bill_evenly": false,
+      "i_feel_guilty_because_i_ordered_less_than_others": false,
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

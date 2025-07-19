@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_colleague_a_newbie": [
+      "true",
+      "false"
+    ],
+    "am_i_frustrated_because_I_know_the_task": [
+      "yes",
+      "no"
+    ],
+    "have_we_worked_together_before": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_colleague_a_newbie": "true",
+      "am_i_frustrated_because_I_know_the_task": "yes",
+      "have_we_worked_together_before": "yes",
+      "emotions": {
+        "am_i_frustrated_because_I_know_the_task": 0.5,
+        "frustrated": 0.25,
+        "sad": 0.25
+      }
+    },
+    {
+      "is_colleague_a_newbie": "true",
+      "am_i_frustrated_because_I_know_the_task": "yes",
+      "have_we_worked_together_before": "no",
+      "emotions": {
+        "am_i_frustrated_because_I_know_the_task": 0.5,
+        "frustrated": 0.25,
+        "sad": 0.25
+      }
+    },
+    {
+      "is_colleague_a_newbie": "true",
+      "am_i_frustrated_because_I_know_the_task": "no",
+      "have_we_worked_together_before": "yes",
+      "emotions": {
+        "am_i_frustrated_because_I_know_the_task": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_colleague_a_newbie": "true",
+      "am_i_frustrated_because_I_know_the_task": "no",
+      "have_we_worked_together_before": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_colleague_a_newbie": "false",
+      "am_i_frustrated_because_I_know_the_task": "yes",
+      "have_we_worked_together_before": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_colleague_a_newbie": "false",
+      "am_i_frustrated_because_I_know_the_task": "yes",
+      "have_we_worked_together_before": "no",
+      "emotions": {
+        "am_i_frustrated_because_I_know_the_task": 0.5,
+        "frustrated": 0.25,
+        "sad": 0.25
+      }
+    },
+    {
+      "is_colleague_a_newbie": "false",
+      "am_i_frustrated_because_I_know_the_task": "no",
+      "have_we_worked_together_before": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_colleague_a_newbie": "false",
+      "am_i_frustrated_because_I_know_the_task": "no",
+      "have_we_worked_together_before": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

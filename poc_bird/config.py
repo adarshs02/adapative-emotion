@@ -18,9 +18,9 @@ SIMILARITY_THRESHOLD = 0.70
 TOP_K_SCENARIOS = 5
 
 # File paths
-SCENARIOS_FILE = "scenarios.json"
+SCENARIOS_FILE = "atomic-scenarios.json"
 SCENARIO_MAPPING_PATH = "scenario_mapping.json"
-CPT_DIR = "cpts-emotionbench"
+CPT_DIR = "cpts/cpts-atomic"
 
 # LLM configuration (for factor extraction)
 LLM_MODEL_NAME = "meta-llama/Llama-3.1-8B-Instruct"

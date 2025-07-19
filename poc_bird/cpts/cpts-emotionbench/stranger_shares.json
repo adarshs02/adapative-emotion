@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_trusted": [
+      "yes",
+      "no"
+    ],
+    "is_secret_large": [
+      "yes",
+      "no"
+    ],
+    "is_meeting_formal": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_trusted": "yes",
+      "is_secret_large": "yes",
+      "is_meeting_formal": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_trusted": "yes",
+      "is_secret_large": "yes",
+      "is_meeting_formal": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_trusted": "yes",
+      "is_secret_large": "no",
+      "is_meeting_formal": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_trusted": "yes",
+      "is_secret_large": "no",
+      "is_meeting_formal": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_trusted": "no",
+      "is_secret_large": "yes",
+      "is_meeting_formal": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_trusted": "no",
+      "is_secret_large": "yes",
+      "is_meeting_formal": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_trusted": "no",
+      "is_secret_large": "no",
+      "is_meeting_formal": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_trusted": "no",
+      "is_secret_large": "no",
+      "is_meeting_formal": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "Teamwork": [
+      "helped",
+      "not helped"
+    ],
+    "AggressiveDriving": [
+      "yes",
+      "no"
+    ],
+    "Relationship": [
+      "good",
+      "bad"
+    ]
+  },
+  "cpt": [
+    {
+      "Teamwork": "helped",
+      "AggressiveDriving": "yes",
+      "Relationship": "good",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Teamwork": "helped",
+      "AggressiveDriving": "yes",
+      "Relationship": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Teamwork": "helped",
+      "AggressiveDriving": "no",
+      "Relationship": "good",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Teamwork": "helped",
+      "AggressiveDriving": "no",
+      "Relationship": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Teamwork": "not helped",
+      "AggressiveDriving": "yes",
+      "Relationship": "good",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Teamwork": "not helped",
+      "AggressiveDriving": "yes",
+      "Relationship": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Teamwork": "not helped",
+      "AggressiveDriving": "no",
+      "Relationship": "good",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Teamwork": "not helped",
+      "AggressiveDriving": "no",
+      "Relationship": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

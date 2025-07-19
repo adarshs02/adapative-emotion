@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "alone": [
+      "yes",
+      "no"
+    ],
+    "connected_to_family": [
+      "yes",
+      "no"
+    ],
+    "prepared_for_trip": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "alone": "yes",
+      "connected_to_family": "yes",
+      "prepared_for_trip": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "alone": "yes",
+      "connected_to_family": "yes",
+      "prepared_for_trip": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "alone": "yes",
+      "connected_to_family": "no",
+      "prepared_for_trip": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "alone": "yes",
+      "connected_to_family": "no",
+      "prepared_for_trip": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "alone": "no",
+      "connected_to_family": "yes",
+      "prepared_for_trip": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "alone": "no",
+      "connected_to_family": "yes",
+      "prepared_for_trip": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "alone": "no",
+      "connected_to_family": "no",
+      "prepared_for_trip": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "alone": "no",
+      "connected_to_family": "no",
+      "prepared_for_trip": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

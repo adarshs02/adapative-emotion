@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "guilty": [
+      "yes",
+      "no"
+    ],
+    "apologetic": [
+      "yes",
+      "no"
+    ],
+    "intentional": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "guilty": "yes",
+      "apologetic": "yes",
+      "intentional": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilty": "yes",
+      "apologetic": "yes",
+      "intentional": "no",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilty": "yes",
+      "apologetic": "no",
+      "intentional": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilty": "yes",
+      "apologetic": "no",
+      "intentional": "no",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilty": "no",
+      "apologetic": "yes",
+      "intentional": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilty": "no",
+      "apologetic": "yes",
+      "intentional": "no",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilty": "no",
+      "apologetic": "no",
+      "intentional": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilty": "no",
+      "apologetic": "no",
+      "intentional": "no",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

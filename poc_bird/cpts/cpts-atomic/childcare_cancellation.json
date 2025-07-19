@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_able_to_find_last_minute_coverage": [
+      "yes",
+      "no"
+    ],
+    "I_have_a_backup_plan": [
+      "yes",
+      "no"
+    ],
+    "I_feel_stressed_because_of_this": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_able_to_find_last_minute_coverage": "yes",
+      "I_have_a_backup_plan": "yes",
+      "I_feel_stressed_because_of_this": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_able_to_find_last_minute_coverage": "yes",
+      "I_have_a_backup_plan": "yes",
+      "I_feel_stressed_because_of_this": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_able_to_find_last_minute_coverage": "yes",
+      "I_have_a_backup_plan": "no",
+      "I_feel_stressed_because_of_this": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_able_to_find_last_minute_coverage": "yes",
+      "I_have_a_backup_plan": "no",
+      "I_feel_stressed_because_of_this": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_able_to_find_last_minute_coverage": "no",
+      "I_have_a_backup_plan": "yes",
+      "I_feel_stressed_because_of_this": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_able_to_find_last_minute_coverage": "no",
+      "I_have_a_backup_plan": "yes",
+      "I_feel_stressed_because_of_this": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_able_to_find_last_minute_coverage": "no",
+      "I_have_a_backup_plan": "no",
+      "I_feel_stressed_because_of_this": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_able_to_find_last_minute_coverage": "no",
+      "I_have_a_backup_plan": "no",
+      "I_feel_stressed_because_of_this": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

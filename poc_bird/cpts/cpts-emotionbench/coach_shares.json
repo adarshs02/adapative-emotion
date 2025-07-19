@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_anonymous": [
+      "true",
+      "false"
+    ],
+    "is_confidential": [
+      "true",
+      "false"
+    ],
+    "is_misinterpreted": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "is_anonymous": "true",
+      "is_confidential": "true",
+      "is_misinterpreted": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous": "true",
+      "is_confidential": "true",
+      "is_misinterpreted": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous": "true",
+      "is_confidential": "false",
+      "is_misinterpreted": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous": "true",
+      "is_confidential": "false",
+      "is_misinterpreted": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous": "false",
+      "is_confidential": "true",
+      "is_misinterpreted": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous": "false",
+      "is_confidential": "true",
+      "is_misinterpreted": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous": "false",
+      "is_confidential": "false",
+      "is_misinterpreted": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous": "false",
+      "is_confidential": "false",
+      "is_misinterpreted": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    }
+  ]
+}

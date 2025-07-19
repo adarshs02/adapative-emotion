@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm stressed because I have no money": [
+      "true",
+      "false"
+    ],
+    "I feel frustrated because of the time it takes to resolve": [
+      "true",
+      "false"
+    ],
+    "I've had issues with this company before": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm stressed because I have no money": "true",
+      "I feel frustrated because of the time it takes to resolve": "true",
+      "I've had issues with this company before": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm stressed because I have no money": "true",
+      "I feel frustrated because of the time it takes to resolve": "true",
+      "I've had issues with this company before": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm stressed because I have no money": "true",
+      "I feel frustrated because of the time it takes to resolve": "false",
+      "I've had issues with this company before": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm stressed because I have no money": "true",
+      "I feel frustrated because of the time it takes to resolve": "false",
+      "I've had issues with this company before": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm stressed because I have no money": "false",
+      "I feel frustrated because of the time it takes to resolve": "true",
+      "I've had issues with this company before": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm stressed because I have no money": "false",
+      "I feel frustrated because of the time it takes to resolve": "true",
+      "I've had issues with this company before": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm stressed because I have no money": "false",
+      "I feel frustrated because of the time it takes to resolve": "false",
+      "I've had issues with this company before": "true",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm stressed because I have no money": "false",
+      "I feel frustrated because of the time it takes to resolve": "false",
+      "I've had issues with this company before": "false",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

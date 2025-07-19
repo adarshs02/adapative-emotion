@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm tired because of it": [
+      "yes",
+      "no"
+    ],
+    "I feel frustrated because of it": [
+      "yes",
+      "no"
+    ],
+    "I feel stressed because of it": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm tired because of it": "yes",
+      "I feel frustrated because of it": "yes",
+      "I feel stressed because of it": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of it": "yes",
+      "I feel frustrated because of it": "yes",
+      "I feel stressed because of it": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of it": "yes",
+      "I feel frustrated because of it": "no",
+      "I feel stressed because of it": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of it": "yes",
+      "I feel frustrated because of it": "no",
+      "I feel stressed because of it": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of it": "no",
+      "I feel frustrated because of it": "yes",
+      "I feel stressed because of it": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of it": "no",
+      "I feel frustrated because of it": "yes",
+      "I feel stressed because of it": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of it": "no",
+      "I feel frustrated because of it": "no",
+      "I feel stressed because of it": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of it": "no",
+      "I feel frustrated because of it": "no",
+      "I feel stressed because of it": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

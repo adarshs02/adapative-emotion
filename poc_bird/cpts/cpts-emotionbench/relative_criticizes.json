@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_first_time_criticized": [
+      "yes",
+      "no"
+    ],
+    "is_in_front_of_a_large_audience": [
+      "yes",
+      "no"
+    ],
+    "is_from_a_close_relative": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_first_time_criticized": "yes",
+      "is_in_front_of_a_large_audience": "yes",
+      "is_from_a_close_relative": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_first_time_criticized": "yes",
+      "is_in_front_of_a_large_audience": "yes",
+      "is_from_a_close_relative": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_first_time_criticized": "yes",
+      "is_in_front_of_a_large_audience": "no",
+      "is_from_a_close_relative": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_first_time_criticized": "yes",
+      "is_in_front_of_a_large_audience": "no",
+      "is_from_a_close_relative": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_first_time_criticized": "no",
+      "is_in_front_of_a_large_audience": "yes",
+      "is_from_a_close_relative": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_first_time_criticized": "no",
+      "is_in_front_of_a_large_audience": "yes",
+      "is_from_a_close_relative": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_first_time_criticized": "no",
+      "is_in_front_of_a_large_audience": "no",
+      "is_from_a_close_relative": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_first_time_criticized": "no",
+      "is_in_front_of_a_large_audience": "no",
+      "is_from_a_close_relative": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

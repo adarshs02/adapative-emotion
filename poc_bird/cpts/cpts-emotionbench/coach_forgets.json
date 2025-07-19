@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_first_time": [
+      "yes",
+      "no"
+    ],
+    "is_official_birthday": [
+      "yes",
+      "no"
+    ],
+    "is_coach_apologetic": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_first_time": "yes",
+      "is_official_birthday": "yes",
+      "is_coach_apologetic": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_first_time": "yes",
+      "is_official_birthday": "yes",
+      "is_coach_apologetic": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_first_time": "yes",
+      "is_official_birthday": "no",
+      "is_coach_apologetic": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_first_time": "yes",
+      "is_official_birthday": "no",
+      "is_coach_apologetic": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_first_time": "no",
+      "is_official_birthday": "yes",
+      "is_coach_apologetic": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_first_time": "no",
+      "is_official_birthday": "yes",
+      "is_coach_apologetic": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_first_time": "no",
+      "is_official_birthday": "no",
+      "is_coach_apologetic": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_first_time": "no",
+      "is_official_birthday": "no",
+      "is_coach_apologetic": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm_angry_because_of_their_attitude": [
+      "yes",
+      "no"
+    ],
+    "I_feel_helpless": [
+      "yes",
+      "no"
+    ],
+    "I_feel_frustrated_because_of_their_inaction": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm_angry_because_of_their_attitude": "yes",
+      "I_feel_helpless": "yes",
+      "I_feel_frustrated_because_of_their_inaction": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm_angry_because_of_their_attitude": "yes",
+      "I_feel_helpless": "yes",
+      "I_feel_frustrated_because_of_their_inaction": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm_angry_because_of_their_attitude": "yes",
+      "I_feel_helpless": "no",
+      "I_feel_frustrated_because_of_their_inaction": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm_angry_because_of_their_attitude": "yes",
+      "I_feel_helpless": "no",
+      "I_feel_frustrated_because_of_their_inaction": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm_angry_because_of_their_attitude": "no",
+      "I_feel_helpless": "yes",
+      "I_feel_frustrated_because_of_their_inaction": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm_angry_because_of_their_attitude": "no",
+      "I_feel_helpless": "yes",
+      "I_feel_frustrated_because_of_their_inaction": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm_angry_because_of_their_attitude": "no",
+      "I_feel_helpless": "no",
+      "I_feel_frustrated_because_of_their_inaction": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm_angry_because_of_their_attitude": "no",
+      "I_feel_helpless": "no",
+      "I_feel_frustrated_because_of_their_inaction": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_feel_hurt": [
+      "yes",
+      "no"
+    ],
+    "I_believe_the_compliment_is_insincere": [
+      "yes",
+      "no"
+    ],
+    "I_am_confident_in_myself": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_feel_hurt": "yes",
+      "I_believe_the_compliment_is_insincere": "yes",
+      "I_am_confident_in_myself": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_hurt": "yes",
+      "I_believe_the_compliment_is_insincere": "yes",
+      "I_am_confident_in_myself": "no",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_hurt": "yes",
+      "I_believe_the_compliment_is_insincere": "no",
+      "I_am_confident_in_myself": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_hurt": "yes",
+      "I_believe_the_compliment_is_insincere": "no",
+      "I_am_confident_in_myself": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_hurt": "no",
+      "I_believe_the_compliment_is_insincere": "yes",
+      "I_am_confident_in_myself": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_hurt": "no",
+      "I_believe_the_compliment_is_insincere": "yes",
+      "I_am_confident_in_myself": "no",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_hurt": "no",
+      "I_believe_the_compliment_is_insincere": "no",
+      "I_am_confident_in_myself": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_hurt": "no",
+      "I_believe_the_compliment_is_insincere": "no",
+      "I_am_confident_in_myself": "no",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "factors": {
+    "is_interruption_prolonged": [
+      "yes",
+      "no"
+    ],
+    "am_i_angry_because_of_interruption": [
+      "yes",
+      "no"
+    ],
+    "did_i_explain_my_point": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_interruption_prolonged": "yes",
+      "am_i_angry_because_of_interruption": "yes",
+      "did_i_explain_my_point": "yes",
+      "emotions": {
+        "am_i_angry_because_of_interruption": 0.5,
+        "sad": 0.25,
+        "upset": 0.25
+      }
+    },
+    {
+      "is_interruption_prolonged": "yes",
+      "am_i_angry_because_of_interruption": "yes",
+      "did_i_explain_my_point": "no",
+      "emotions": {
+        "am_i_angry_because_of_interruption": 0.5,
+        "is_interruption_prolonged": 0.5
+      }
+    },
+    {
+      "is_interruption_prolonged": "yes",
+      "am_i_angry_because_of_interruption": "no",
+      "did_i_explain_my_point": "yes",
+      "emotions": {
+        "am_i_angry_because_of_interruption": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_interruption_prolonged": "yes",
+      "am_i_angry_because_of_interruption": "no",
+      "did_i_explain_my_point": "no",
+      "emotions": {
+        "am_i_angry_because_of_interruption": 0.4992503748125937,
+        "is_interruption_prolonged": 0.5007496251874063
+      }
+    },
+    {
+      "is_interruption_prolonged": "no",
+      "am_i_angry_because_of_interruption": "yes",
+      "did_i_explain_my_point": "yes",
+      "emotions": {
+        "am_i_angry_because_of_interruption": 0.5,
+        "did_i_explain_my_point": 0.5
+      }
+    },
+    {
+      "is_interruption_prolonged": "no",
+      "am_i_angry_because_of_interruption": "yes",
+      "did_i_explain_my_point": "no",
+      "emotions": {
+        "am_i_angry_because_of_interruption": 1.0
+      }
+    },
+    {
+      "is_interruption_prolonged": "no",
+      "am_i_angry_because_of_interruption": "no",
+      "did_i_explain_my_point": "yes",
+      "emotions": {
+        "did_i_explain_my_point": 1.0
+      }
+    },
+    {
+      "is_interruption_prolonged": "no",
+      "am_i_angry_because_of_interruption": "no",
+      "did_i_explain_my_point": "no",
+      "emotions": {
+        "am_i_angry_because_of_interruption": 1.0
+      }
+    }
+  ]
+}

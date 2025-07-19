@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm excited because I wanted to see it first": [
+      "yes",
+      "no"
+    ],
+    "The plot twist is surprising": [
+      "yes",
+      "no"
+    ],
+    "The friend's intention was helpful": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm excited because I wanted to see it first": "yes",
+      "The plot twist is surprising": "yes",
+      "The friend's intention was helpful": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm excited because I wanted to see it first": "yes",
+      "The plot twist is surprising": "yes",
+      "The friend's intention was helpful": "no",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm excited because I wanted to see it first": "yes",
+      "The plot twist is surprising": "no",
+      "The friend's intention was helpful": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm excited because I wanted to see it first": "yes",
+      "The plot twist is surprising": "no",
+      "The friend's intention was helpful": "no",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm excited because I wanted to see it first": "no",
+      "The plot twist is surprising": "yes",
+      "The friend's intention was helpful": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm excited because I wanted to see it first": "no",
+      "The plot twist is surprising": "yes",
+      "The friend's intention was helpful": "no",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm excited because I wanted to see it first": "no",
+      "The plot twist is surprising": "no",
+      "The friend's intention was helpful": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm excited because I wanted to see it first": "no",
+      "The plot twist is surprising": "no",
+      "The friend's intention was helpful": "no",
+      "emotions": {
+        "angry": 0.333,
+        "excited": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

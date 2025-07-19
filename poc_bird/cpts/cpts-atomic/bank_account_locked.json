@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "urgency_of_needs": [
+      "low",
+      "high"
+    ],
+    "amount_frozen": [
+      "small",
+      "large"
+    ],
+    "account_type": [
+      "primary",
+      "secondary"
+    ]
+  },
+  "cpt": [
+    {
+      "urgency_of_needs": "low",
+      "amount_frozen": "small",
+      "account_type": "primary",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "urgency_of_needs": "low",
+      "amount_frozen": "small",
+      "account_type": "secondary",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "urgency_of_needs": "low",
+      "amount_frozen": "large",
+      "account_type": "primary",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "urgency_of_needs": "low",
+      "amount_frozen": "large",
+      "account_type": "secondary",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "urgency_of_needs": "high",
+      "amount_frozen": "small",
+      "account_type": "primary",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "urgency_of_needs": "high",
+      "amount_frozen": "small",
+      "account_type": "secondary",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "urgency_of_needs": "high",
+      "amount_frozen": "large",
+      "account_type": "primary",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "urgency_of_needs": "high",
+      "amount_frozen": "large",
+      "account_type": "secondary",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

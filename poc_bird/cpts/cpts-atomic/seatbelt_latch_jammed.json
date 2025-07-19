@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm frustrated because I'm late": [
+      "yes",
+      "no"
+    ],
+    "The problem is easy to solve": [
+      "yes",
+      "no"
+    ],
+    "It's the first time this has happened": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm frustrated because I'm late": "yes",
+      "The problem is easy to solve": "yes",
+      "It's the first time this has happened": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm frustrated because I'm late": "yes",
+      "The problem is easy to solve": "yes",
+      "It's the first time this has happened": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm frustrated because I'm late": "yes",
+      "The problem is easy to solve": "no",
+      "It's the first time this has happened": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm frustrated because I'm late": "yes",
+      "The problem is easy to solve": "no",
+      "It's the first time this has happened": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm frustrated because I'm late": "no",
+      "The problem is easy to solve": "yes",
+      "It's the first time this has happened": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm frustrated because I'm late": "no",
+      "The problem is easy to solve": "yes",
+      "It's the first time this has happened": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm frustrated because I'm late": "no",
+      "The problem is easy to solve": "no",
+      "It's the first time this has happened": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm frustrated because I'm late": "no",
+      "The problem is easy to solve": "no",
+      "It's the first time this has happened": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

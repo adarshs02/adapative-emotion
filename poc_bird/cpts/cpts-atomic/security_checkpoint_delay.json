@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "anxious_about_arrival_time": [
+      "yes",
+      "no"
+    ],
+    "concerned_for_connection": [
+      "yes",
+      "no"
+    ],
+    "stressed_because_of_delay": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "anxious_about_arrival_time": "yes",
+      "concerned_for_connection": "yes",
+      "stressed_because_of_delay": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "anxious_about_arrival_time": "yes",
+      "concerned_for_connection": "yes",
+      "stressed_because_of_delay": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "anxious_about_arrival_time": "yes",
+      "concerned_for_connection": "no",
+      "stressed_because_of_delay": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "anxious_about_arrival_time": "yes",
+      "concerned_for_connection": "no",
+      "stressed_because_of_delay": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "anxious_about_arrival_time": "no",
+      "concerned_for_connection": "yes",
+      "stressed_because_of_delay": "yes",
+      "emotions": {
+        "anxious_about_arrival_time": 0.333,
+        "concerned_for_connection": 0.334,
+        "stressed_because_of_delay": 0.333
+      }
+    },
+    {
+      "anxious_about_arrival_time": "no",
+      "concerned_for_connection": "yes",
+      "stressed_because_of_delay": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "anxious_about_arrival_time": "no",
+      "concerned_for_connection": "no",
+      "stressed_because_of_delay": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "anxious_about_arrival_time": "no",
+      "concerned_for_connection": "no",
+      "stressed_because_of_delay": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

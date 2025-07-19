@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "trainer_remembers_before": [
+      "yes",
+      "no"
+    ],
+    "how_close_is_birthday": [
+      "close",
+      "far"
+    ],
+    "previous_experiences": [
+      "good",
+      "bad"
+    ]
+  },
+  "cpt": [
+    {
+      "trainer_remembers_before": "yes",
+      "how_close_is_birthday": "close",
+      "previous_experiences": "good",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "trainer_remembers_before": "yes",
+      "how_close_is_birthday": "close",
+      "previous_experiences": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "trainer_remembers_before": "yes",
+      "how_close_is_birthday": "far",
+      "previous_experiences": "good",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "trainer_remembers_before": "yes",
+      "how_close_is_birthday": "far",
+      "previous_experiences": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "trainer_remembers_before": "no",
+      "how_close_is_birthday": "close",
+      "previous_experiences": "good",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "trainer_remembers_before": "no",
+      "how_close_is_birthday": "close",
+      "previous_experiences": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "trainer_remembers_before": "no",
+      "how_close_is_birthday": "far",
+      "previous_experiences": "good",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "trainer_remembers_before": "no",
+      "how_close_is_birthday": "far",
+      "previous_experiences": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

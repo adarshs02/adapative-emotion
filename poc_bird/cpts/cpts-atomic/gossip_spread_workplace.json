@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_the_rumor_good": [
+      "true",
+      "false"
+    ],
+    "is_it_spread_by_a_friend": [
+      "true",
+      "false"
+    ],
+    "do_i_feel_confident_in_my_relationships_at_work": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "is_the_rumor_good": "true",
+      "is_it_spread_by_a_friend": "true",
+      "do_i_feel_confident_in_my_relationships_at_work": "true",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_the_rumor_good": "true",
+      "is_it_spread_by_a_friend": "true",
+      "do_i_feel_confident_in_my_relationships_at_work": "false",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_the_rumor_good": "true",
+      "is_it_spread_by_a_friend": "false",
+      "do_i_feel_confident_in_my_relationships_at_work": "true",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_the_rumor_good": "true",
+      "is_it_spread_by_a_friend": "false",
+      "do_i_feel_confident_in_my_relationships_at_work": "false",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_the_rumor_good": "false",
+      "is_it_spread_by_a_friend": "true",
+      "do_i_feel_confident_in_my_relationships_at_work": "true",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_the_rumor_good": "false",
+      "is_it_spread_by_a_friend": "true",
+      "do_i_feel_confident_in_my_relationships_at_work": "false",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_the_rumor_good": "false",
+      "is_it_spread_by_a_friend": "false",
+      "do_i_feel_confident_in_my_relationships_at_work": "true",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_the_rumor_good": "false",
+      "is_it_spread_by_a_friend": "false",
+      "do_i_feel_confident_in_my_relationships_at_work": "false",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

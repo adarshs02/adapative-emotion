@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm hungry because I was expecting the snack": [
+      "yes",
+      "no"
+    ],
+    "I'm frustrated because I lost my money": [
+      "yes",
+      "no"
+    ],
+    "It's not the first time this has happened": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm hungry because I was expecting the snack": "yes",
+      "I'm frustrated because I lost my money": "yes",
+      "It's not the first time this has happened": "yes",
+      "emotions": {
+        "angry": 0.25,
+        "frustrated": 0.5,
+        "sad": 0.25
+      }
+    },
+    {
+      "I'm hungry because I was expecting the snack": "yes",
+      "I'm frustrated because I lost my money": "yes",
+      "It's not the first time this has happened": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm hungry because I was expecting the snack": "yes",
+      "I'm frustrated because I lost my money": "no",
+      "It's not the first time this has happened": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm hungry because I was expecting the snack": "yes",
+      "I'm frustrated because I lost my money": "no",
+      "It's not the first time this has happened": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm hungry because I was expecting the snack": "no",
+      "I'm frustrated because I lost my money": "yes",
+      "It's not the first time this has happened": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm hungry because I was expecting the snack": "no",
+      "I'm frustrated because I lost my money": "yes",
+      "It's not the first time this has happened": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm hungry because I was expecting the snack": "no",
+      "I'm frustrated because I lost my money": "no",
+      "It's not the first time this has happened": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm hungry because I was expecting the snack": "no",
+      "I'm frustrated because I lost my money": "no",
+      "It's not the first time this has happened": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

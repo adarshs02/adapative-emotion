@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_aware_of_my_card_location_before_checkout": [
+      "yes",
+      "no"
+    ],
+    "I_am_in_a_hurry_to_finish_shopping": [
+      "yes",
+      "no"
+    ],
+    "I_am_alone_at_checkout": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_aware_of_my_card_location_before_checkout": "yes",
+      "I_am_in_a_hurry_to_finish_shopping": "yes",
+      "I_am_alone_at_checkout": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_aware_of_my_card_location_before_checkout": "yes",
+      "I_am_in_a_hurry_to_finish_shopping": "yes",
+      "I_am_alone_at_checkout": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_aware_of_my_card_location_before_checkout": "yes",
+      "I_am_in_a_hurry_to_finish_shopping": "no",
+      "I_am_alone_at_checkout": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_aware_of_my_card_location_before_checkout": "yes",
+      "I_am_in_a_hurry_to_finish_shopping": "no",
+      "I_am_alone_at_checkout": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_aware_of_my_card_location_before_checkout": "no",
+      "I_am_in_a_hurry_to_finish_shopping": "yes",
+      "I_am_alone_at_checkout": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_aware_of_my_card_location_before_checkout": "no",
+      "I_am_in_a_hurry_to_finish_shopping": "yes",
+      "I_am_alone_at_checkout": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_aware_of_my_card_location_before_checkout": "no",
+      "I_am_in_a_hurry_to_finish_shopping": "no",
+      "I_am_alone_at_checkout": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_aware_of_my_card_location_before_checkout": "no",
+      "I_am_in_a_hurry_to_finish_shopping": "no",
+      "I_am_alone_at_checkout": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

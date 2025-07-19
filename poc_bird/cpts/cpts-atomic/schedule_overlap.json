@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "conflict_severity": [
+      "low",
+      "high"
+    ],
+    "decision_difficulty": [
+      "easy",
+      "hard"
+    ],
+    "emotional_involvement": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "conflict_severity": "low",
+      "decision_difficulty": "easy",
+      "emotional_involvement": "low",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "conflict_severity": "low",
+      "decision_difficulty": "easy",
+      "emotional_involvement": "high",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "conflict_severity": "low",
+      "decision_difficulty": "hard",
+      "emotional_involvement": "low",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "conflict_severity": "low",
+      "decision_difficulty": "hard",
+      "emotional_involvement": "high",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "conflict_severity": "high",
+      "decision_difficulty": "easy",
+      "emotional_involvement": "low",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "conflict_severity": "high",
+      "decision_difficulty": "easy",
+      "emotional_involvement": "high",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "conflict_severity": "high",
+      "decision_difficulty": "hard",
+      "emotional_involvement": "low",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "conflict_severity": "high",
+      "decision_difficulty": "hard",
+      "emotional_involvement": "high",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

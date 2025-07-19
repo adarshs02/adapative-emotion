@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "urgency": [
+      "high",
+      "low"
+    ],
+    "importance_of_data": [
+      "critical",
+      "non_critical"
+    ],
+    "previous_experience": [
+      "first_time",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "urgency": "high",
+      "importance_of_data": "critical",
+      "previous_experience": "first_time",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "urgency": "high",
+      "importance_of_data": "critical",
+      "previous_experience": "repeated",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "urgency": "high",
+      "importance_of_data": "non_critical",
+      "previous_experience": "first_time",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "urgency": "high",
+      "importance_of_data": "non_critical",
+      "previous_experience": "repeated",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "urgency": "low",
+      "importance_of_data": "critical",
+      "previous_experience": "first_time",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "urgency": "low",
+      "importance_of_data": "critical",
+      "previous_experience": "repeated",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "urgency": "low",
+      "importance_of_data": "non_critical",
+      "previous_experience": "first_time",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "urgency": "low",
+      "importance_of_data": "non_critical",
+      "previous_experience": "repeated",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

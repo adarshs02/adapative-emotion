@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm in a rush": [
+      "yes",
+      "no"
+    ],
+    "I know the person": [
+      "yes",
+      "no"
+    ],
+    "I'm angry because of a long day": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm in a rush": "yes",
+      "I know the person": "yes",
+      "I'm angry because of a long day": "yes",
+      "emotions": {
+        "angry": 0.5,
+        "frustrated": 0.25,
+        "sad": 0.25
+      }
+    },
+    {
+      "I'm in a rush": "yes",
+      "I know the person": "yes",
+      "I'm angry because of a long day": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm in a rush": "yes",
+      "I know the person": "no",
+      "I'm angry because of a long day": "yes",
+      "emotions": {
+        "angry": 0.5,
+        "frustrated": 0.25,
+        "sad": 0.25
+      }
+    },
+    {
+      "I'm in a rush": "yes",
+      "I know the person": "no",
+      "I'm angry because of a long day": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm in a rush": "no",
+      "I know the person": "yes",
+      "I'm angry because of a long day": "yes",
+      "emotions": {
+        "angry": 0.5,
+        "frustrated": 0.25,
+        "sad": 0.25
+      }
+    },
+    {
+      "I'm in a rush": "no",
+      "I know the person": "yes",
+      "I'm angry because of a long day": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm in a rush": "no",
+      "I know the person": "no",
+      "I'm angry because of a long day": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm in a rush": "no",
+      "I know the person": "no",
+      "I'm angry because of a long day": "no",
+      "emotions": {
+        "angry": 0.334,
+        "frustrated": 0.333,
+        "sad": 0.333
+      }
+    }
+  ]
+}

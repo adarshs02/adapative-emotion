@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm feeling stressed because I have to reschedule": [
+      "yes",
+      "no"
+    ],
+    "I've had a medical appointment rescheduled before": [
+      "yes",
+      "no"
+    ],
+    "The reason for the rescheduling is serious": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm feeling stressed because I have to reschedule": "yes",
+      "I've had a medical appointment rescheduled before": "yes",
+      "The reason for the rescheduling is serious": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm feeling stressed because I have to reschedule": "yes",
+      "I've had a medical appointment rescheduled before": "yes",
+      "The reason for the rescheduling is serious": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I'm feeling stressed because I have to reschedule": "yes",
+      "I've had a medical appointment rescheduled before": "no",
+      "The reason for the rescheduling is serious": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I'm feeling stressed because I have to reschedule": "yes",
+      "I've had a medical appointment rescheduled before": "no",
+      "The reason for the rescheduling is serious": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I'm feeling stressed because I have to reschedule": "no",
+      "I've had a medical appointment rescheduled before": "yes",
+      "The reason for the rescheduling is serious": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I'm feeling stressed because I have to reschedule": "no",
+      "I've had a medical appointment rescheduled before": "yes",
+      "The reason for the rescheduling is serious": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I'm feeling stressed because I have to reschedule": "no",
+      "I've had a medical appointment rescheduled before": "no",
+      "The reason for the rescheduling is serious": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I'm feeling stressed because I have to reschedule": "no",
+      "I've had a medical appointment rescheduled before": "no",
+      "The reason for the rescheduling is serious": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    }
+  ]
+}

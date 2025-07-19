@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_proud_of_sibling": [
+      "yes",
+      "no"
+    ],
+    "I_feel_confident_in_my_work": [
+      "yes",
+      "no"
+    ],
+    "I_trust_sibling": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_proud_of_sibling": "yes",
+      "I_feel_confident_in_my_work": "yes",
+      "I_trust_sibling": "yes",
+      "emotions": {
+        "angry": 0.3333333333333333,
+        "confident": 0.3333333333333333,
+        "sad": 0.3333333333333333
+      }
+    },
+    {
+      "I_am_proud_of_sibling": "yes",
+      "I_feel_confident_in_my_work": "yes",
+      "I_trust_sibling": "no",
+      "emotions": {
+        "angry": 0.3333333333333333,
+        "confident": 0.3333333333333333,
+        "sad": 0.3333333333333333
+      }
+    },
+    {
+      "I_am_proud_of_sibling": "yes",
+      "I_feel_confident_in_my_work": "no",
+      "I_trust_sibling": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_proud_of_sibling": "yes",
+      "I_feel_confident_in_my_work": "no",
+      "I_trust_sibling": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_proud_of_sibling": "no",
+      "I_feel_confident_in_my_work": "yes",
+      "I_trust_sibling": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_proud_of_sibling": "no",
+      "I_feel_confident_in_my_work": "yes",
+      "I_trust_sibling": "no",
+      "emotions": {
+        "angry": 0.3333333333333333,
+        "confident": 0.3333333333333333,
+        "sad": 0.3333333333333333
+      }
+    },
+    {
+      "I_am_proud_of_sibling": "no",
+      "I_feel_confident_in_my_work": "no",
+      "I_trust_sibling": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_proud_of_sibling": "no",
+      "I_feel_confident_in_my_work": "no",
+      "I_trust_sibling": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

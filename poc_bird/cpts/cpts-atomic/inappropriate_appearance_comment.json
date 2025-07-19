@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_anonymous_commenter": [
+      "true",
+      "false"
+    ],
+    "comment_is_from_friend": [
+      "true",
+      "false"
+    ],
+    "am_i_confident_in_my_appearance": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "is_anonymous_commenter": "true",
+      "comment_is_from_friend": "true",
+      "am_i_confident_in_my_appearance": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous_commenter": "true",
+      "comment_is_from_friend": "true",
+      "am_i_confident_in_my_appearance": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous_commenter": "true",
+      "comment_is_from_friend": "false",
+      "am_i_confident_in_my_appearance": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous_commenter": "true",
+      "comment_is_from_friend": "false",
+      "am_i_confident_in_my_appearance": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous_commenter": "false",
+      "comment_is_from_friend": "true",
+      "am_i_confident_in_my_appearance": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous_commenter": "false",
+      "comment_is_from_friend": "true",
+      "am_i_confident_in_my_appearance": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous_commenter": "false",
+      "comment_is_from_friend": "false",
+      "am_i_confident_in_my_appearance": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous_commenter": "false",
+      "comment_is_from_friend": "false",
+      "am_i_confident_in_my_appearance": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    }
+  ]
+}

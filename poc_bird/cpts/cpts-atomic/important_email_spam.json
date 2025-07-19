@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "EmailImportance": [
+      "low",
+      "high"
+    ],
+    "TimeToReact": [
+      "early",
+      "late"
+    ],
+    "FrequencyOfMissingDeadlines": [
+      "first_time",
+      "repeated"
+    ]
+  },
+  "cpt": [
+    {
+      "EmailImportance": "low",
+      "TimeToReact": "early",
+      "FrequencyOfMissingDeadlines": "first_time",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "EmailImportance": "low",
+      "TimeToReact": "early",
+      "FrequencyOfMissingDeadlines": "repeated",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "EmailImportance": "low",
+      "TimeToReact": "late",
+      "FrequencyOfMissingDeadlines": "first_time",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "EmailImportance": "low",
+      "TimeToReact": "late",
+      "FrequencyOfMissingDeadlines": "repeated",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "EmailImportance": "high",
+      "TimeToReact": "early",
+      "FrequencyOfMissingDeadlines": "first_time",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "EmailImportance": "high",
+      "TimeToReact": "early",
+      "FrequencyOfMissingDeadlines": "repeated",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "EmailImportance": "high",
+      "TimeToReact": "late",
+      "FrequencyOfMissingDeadlines": "first_time",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "EmailImportance": "high",
+      "TimeToReact": "late",
+      "FrequencyOfMissingDeadlines": "repeated",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm feeling stressed because of the delay": [
+      "yes",
+      "no"
+    ],
+    "The reason for the delay is unknown": [
+      "yes",
+      "no"
+    ],
+    "I have time to adjust my plans": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm feeling stressed because of the delay": "yes",
+      "The reason for the delay is unknown": "yes",
+      "I have time to adjust my plans": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm feeling stressed because of the delay": "yes",
+      "The reason for the delay is unknown": "yes",
+      "I have time to adjust my plans": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm feeling stressed because of the delay": "yes",
+      "The reason for the delay is unknown": "no",
+      "I have time to adjust my plans": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm feeling stressed because of the delay": "yes",
+      "The reason for the delay is unknown": "no",
+      "I have time to adjust my plans": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm feeling stressed because of the delay": "no",
+      "The reason for the delay is unknown": "yes",
+      "I have time to adjust my plans": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm feeling stressed because of the delay": "no",
+      "The reason for the delay is unknown": "yes",
+      "I have time to adjust my plans": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm feeling stressed because of the delay": "no",
+      "The reason for the delay is unknown": "no",
+      "I have time to adjust my plans": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm feeling stressed because of the delay": "no",
+      "The reason for the delay is unknown": "no",
+      "I have time to adjust my plans": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

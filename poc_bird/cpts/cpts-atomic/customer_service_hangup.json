@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "time_of_day": [
+      "morning",
+      "afternoon/evening"
+    ],
+    "issue_severity": [
+      "minor",
+      "major"
+    ],
+    "relationship_with_agent": [
+      "new",
+      "known"
+    ]
+  },
+  "cpt": [
+    {
+      "time_of_day": "morning",
+      "issue_severity": "minor",
+      "relationship_with_agent": "new",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "issue_severity": "minor",
+      "relationship_with_agent": "known",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "issue_severity": "major",
+      "relationship_with_agent": "new",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "issue_severity": "major",
+      "relationship_with_agent": "known",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "afternoon/evening",
+      "issue_severity": "minor",
+      "relationship_with_agent": "new",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "afternoon/evening",
+      "issue_severity": "minor",
+      "relationship_with_agent": "known",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "afternoon/evening",
+      "issue_severity": "major",
+      "relationship_with_agent": "new",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "time_of_day": "afternoon/evening",
+      "issue_severity": "major",
+      "relationship_with_agent": "known",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_aware_of_the_call": [
+      "yes",
+      "no"
+    ],
+    "I_was_prepared_for_the_call": [
+      "yes",
+      "no"
+    ],
+    "I_have_other_commitments_at_this_time": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_aware_of_the_call": "yes",
+      "I_was_prepared_for_the_call": "yes",
+      "I_have_other_commitments_at_this_time": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_aware_of_the_call": "yes",
+      "I_was_prepared_for_the_call": "yes",
+      "I_have_other_commitments_at_this_time": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_aware_of_the_call": "yes",
+      "I_was_prepared_for_the_call": "no",
+      "I_have_other_commitments_at_this_time": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_aware_of_the_call": "yes",
+      "I_was_prepared_for_the_call": "no",
+      "I_have_other_commitments_at_this_time": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_aware_of_the_call": "no",
+      "I_was_prepared_for_the_call": "yes",
+      "I_have_other_commitments_at_this_time": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_aware_of_the_call": "no",
+      "I_was_prepared_for_the_call": "yes",
+      "I_have_other_commitments_at_this_time": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_aware_of_the_call": "no",
+      "I_was_prepared_for_the_call": "no",
+      "I_have_other_commitments_at_this_time": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_aware_of_the_call": "no",
+      "I_was_prepared_for_the_call": "no",
+      "I_have_other_commitments_at_this_time": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

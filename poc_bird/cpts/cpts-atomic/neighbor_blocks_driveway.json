@@ -1,0 +1,139 @@
+{
+  "factors": {
+    "is_anonymous_neighbor": [
+      "yes",
+      "no"
+    ],
+    "day_of_week": [
+      "weekend",
+      "weekday"
+    ],
+    "time_of_day": [
+      "morning",
+      "afternoon",
+      "evening"
+    ]
+  },
+  "cpt": [
+    {
+      "is_anonymous_neighbor": "yes",
+      "day_of_week": "weekend",
+      "time_of_day": "morning",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_anonymous_neighbor": "yes",
+      "day_of_week": "weekend",
+      "time_of_day": "afternoon",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_anonymous_neighbor": "yes",
+      "day_of_week": "weekend",
+      "time_of_day": "evening",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_anonymous_neighbor": "yes",
+      "day_of_week": "weekday",
+      "time_of_day": "morning",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_anonymous_neighbor": "yes",
+      "day_of_week": "weekday",
+      "time_of_day": "afternoon",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_anonymous_neighbor": "yes",
+      "day_of_week": "weekday",
+      "time_of_day": "evening",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous_neighbor": "no",
+      "day_of_week": "weekend",
+      "time_of_day": "morning",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_anonymous_neighbor": "no",
+      "day_of_week": "weekend",
+      "time_of_day": "afternoon",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_anonymous_neighbor": "no",
+      "day_of_week": "weekend",
+      "time_of_day": "evening",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_anonymous_neighbor": "no",
+      "day_of_week": "weekday",
+      "time_of_day": "morning",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_anonymous_neighbor": "no",
+      "day_of_week": "weekday",
+      "time_of_day": "afternoon",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_anonymous_neighbor": "no",
+      "day_of_week": "weekday",
+      "time_of_day": "evening",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "apology_given": [
+      "yes",
+      "no"
+    ],
+    "injury_severity": [
+      "minor",
+      "major"
+    ],
+    "relationship_to_person": [
+      "friend",
+      "stranger"
+    ]
+  },
+  "cpt": [
+    {
+      "apology_given": "yes",
+      "injury_severity": "minor",
+      "relationship_to_person": "friend",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "apology_given": "yes",
+      "injury_severity": "minor",
+      "relationship_to_person": "stranger",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "apology_given": "yes",
+      "injury_severity": "major",
+      "relationship_to_person": "friend",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "apology_given": "yes",
+      "injury_severity": "major",
+      "relationship_to_person": "stranger",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "apology_given": "no",
+      "injury_severity": "minor",
+      "relationship_to_person": "friend",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "apology_given": "no",
+      "injury_severity": "minor",
+      "relationship_to_person": "stranger",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "apology_given": "no",
+      "injury_severity": "major",
+      "relationship_to_person": "friend",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "apology_given": "no",
+      "injury_severity": "major",
+      "relationship_to_person": "stranger",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

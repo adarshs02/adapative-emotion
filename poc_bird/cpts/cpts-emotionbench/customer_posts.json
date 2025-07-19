@@ -1,0 +1,139 @@
+{
+  "factors": {
+    "travel_purpose": [
+      "leisure",
+      "business"
+    ],
+    "time_of_day": [
+      "day",
+      "night"
+    ],
+    "relationship_with_customer": [
+      "colleague",
+      "friend",
+      "family"
+    ]
+  },
+  "cpt": [
+    {
+      "travel_purpose": "leisure",
+      "time_of_day": "day",
+      "relationship_with_customer": "colleague",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "travel_purpose": "leisure",
+      "time_of_day": "day",
+      "relationship_with_customer": "friend",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "travel_purpose": "leisure",
+      "time_of_day": "day",
+      "relationship_with_customer": "family",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "travel_purpose": "leisure",
+      "time_of_day": "night",
+      "relationship_with_customer": "colleague",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "travel_purpose": "leisure",
+      "time_of_day": "night",
+      "relationship_with_customer": "friend",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "travel_purpose": "leisure",
+      "time_of_day": "night",
+      "relationship_with_customer": "family",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "travel_purpose": "business",
+      "time_of_day": "day",
+      "relationship_with_customer": "colleague",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "travel_purpose": "business",
+      "time_of_day": "day",
+      "relationship_with_customer": "friend",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "travel_purpose": "business",
+      "time_of_day": "day",
+      "relationship_with_customer": "family",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "travel_purpose": "business",
+      "time_of_day": "night",
+      "relationship_with_customer": "colleague",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "travel_purpose": "business",
+      "time_of_day": "night",
+      "relationship_with_customer": "friend",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "travel_purpose": "business",
+      "time_of_day": "night",
+      "relationship_with_customer": "family",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

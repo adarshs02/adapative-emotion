@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "customer_type": [
+      "regular",
+      "new"
+    ],
+    "damage_type": [
+      "minor",
+      "major"
+    ],
+    "my_emotional_state": [
+      "angry",
+      "calm"
+    ]
+  },
+  "cpt": [
+    {
+      "customer_type": "regular",
+      "damage_type": "minor",
+      "my_emotional_state": "angry",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "customer_type": "regular",
+      "damage_type": "minor",
+      "my_emotional_state": "calm",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "customer_type": "regular",
+      "damage_type": "major",
+      "my_emotional_state": "angry",
+      "emotions": {
+        "angry": 0.334,
+        "emotional": 0.333,
+        "sad": 0.333
+      }
+    },
+    {
+      "customer_type": "regular",
+      "damage_type": "major",
+      "my_emotional_state": "calm",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "customer_type": "new",
+      "damage_type": "minor",
+      "my_emotional_state": "angry",
+      "emotions": {
+        "angry": 0.334,
+        "emotional": 0.333,
+        "sad": 0.333
+      }
+    },
+    {
+      "customer_type": "new",
+      "damage_type": "minor",
+      "my_emotional_state": "calm",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "customer_type": "new",
+      "damage_type": "major",
+      "my_emotional_state": "angry",
+      "emotions": {
+        "angry": 0.334,
+        "emotional": 0.333,
+        "sad": 0.333
+      }
+    },
+    {
+      "customer_type": "new",
+      "damage_type": "major",
+      "my_emotional_state": "calm",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

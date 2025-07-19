@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_in_a_hurry": [
+      "yes",
+      "no"
+    ],
+    "am_i_losing_data": [
+      "yes",
+      "no"
+    ],
+    "was_call_emotional": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_in_a_hurry": "yes",
+      "am_i_losing_data": "yes",
+      "was_call_emotional": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_in_a_hurry": "yes",
+      "am_i_losing_data": "yes",
+      "was_call_emotional": "no",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_in_a_hurry": "yes",
+      "am_i_losing_data": "no",
+      "was_call_emotional": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_in_a_hurry": "yes",
+      "am_i_losing_data": "no",
+      "was_call_emotional": "no",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_in_a_hurry": "no",
+      "am_i_losing_data": "yes",
+      "was_call_emotional": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_in_a_hurry": "no",
+      "am_i_losing_data": "yes",
+      "was_call_emotional": "no",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_in_a_hurry": "no",
+      "am_i_losing_data": "no",
+      "was_call_emotional": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_in_a_hurry": "no",
+      "am_i_losing_data": "no",
+      "was_call_emotional": "no",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

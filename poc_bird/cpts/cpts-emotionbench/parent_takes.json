@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "Parent's intention": [
+      "intentional",
+      "unintentional"
+    ],
+    "My relationship with my parent": [
+      "close",
+      "distant"
+    ],
+    "My emotional sensitivity": [
+      "high",
+      "low"
+    ]
+  },
+  "cpt": [
+    {
+      "Parent's intention": "intentional",
+      "My relationship with my parent": "close",
+      "My emotional sensitivity": "high",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Parent's intention": "intentional",
+      "My relationship with my parent": "close",
+      "My emotional sensitivity": "low",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Parent's intention": "intentional",
+      "My relationship with my parent": "distant",
+      "My emotional sensitivity": "high",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Parent's intention": "intentional",
+      "My relationship with my parent": "distant",
+      "My emotional sensitivity": "low",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Parent's intention": "unintentional",
+      "My relationship with my parent": "close",
+      "My emotional sensitivity": "high",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Parent's intention": "unintentional",
+      "My relationship with my parent": "close",
+      "My emotional sensitivity": "low",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Parent's intention": "unintentional",
+      "My relationship with my parent": "distant",
+      "My emotional sensitivity": "high",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "Parent's intention": "unintentional",
+      "My relationship with my parent": "distant",
+      "My emotional sensitivity": "low",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

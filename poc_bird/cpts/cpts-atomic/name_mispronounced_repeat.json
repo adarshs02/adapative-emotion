@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "person_is_familiar_with_my_name": [
+      "yes",
+      "no"
+    ],
+    "my_emotional_state_before_correction": [
+      "calm",
+      "angry"
+    ],
+    "I_am_upset_because_of_the_mispronunciation": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "person_is_familiar_with_my_name": "yes",
+      "my_emotional_state_before_correction": "calm",
+      "I_am_upset_because_of_the_mispronunciation": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_is_familiar_with_my_name": "yes",
+      "my_emotional_state_before_correction": "calm",
+      "I_am_upset_because_of_the_mispronunciation": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_is_familiar_with_my_name": "yes",
+      "my_emotional_state_before_correction": "angry",
+      "I_am_upset_because_of_the_mispronunciation": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_is_familiar_with_my_name": "yes",
+      "my_emotional_state_before_correction": "angry",
+      "I_am_upset_because_of_the_mispronunciation": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_is_familiar_with_my_name": "no",
+      "my_emotional_state_before_correction": "calm",
+      "I_am_upset_because_of_the_mispronunciation": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_is_familiar_with_my_name": "no",
+      "my_emotional_state_before_correction": "calm",
+      "I_am_upset_because_of_the_mispronunciation": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_is_familiar_with_my_name": "no",
+      "my_emotional_state_before_correction": "angry",
+      "I_am_upset_because_of_the_mispronunciation": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "person_is_familiar_with_my_name": "no",
+      "my_emotional_state_before_correction": "angry",
+      "I_am_upset_because_of_the_mispronunciation": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

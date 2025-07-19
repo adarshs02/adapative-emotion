@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_confident_in_my_suggestion": [
+      "yes",
+      "no"
+    ],
+    "I_feel_hurt_because_no_one_listened": [
+      "yes",
+      "no"
+    ],
+    "I_am_disappointed_being_ignored": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_confident_in_my_suggestion": "yes",
+      "I_feel_hurt_because_no_one_listened": "yes",
+      "I_am_disappointed_being_ignored": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_confident_in_my_suggestion": "yes",
+      "I_feel_hurt_because_no_one_listened": "yes",
+      "I_am_disappointed_being_ignored": "no",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_confident_in_my_suggestion": "yes",
+      "I_feel_hurt_because_no_one_listened": "no",
+      "I_am_disappointed_being_ignored": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_confident_in_my_suggestion": "yes",
+      "I_feel_hurt_because_no_one_listened": "no",
+      "I_am_disappointed_being_ignored": "no",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_confident_in_my_suggestion": "no",
+      "I_feel_hurt_because_no_one_listened": "yes",
+      "I_am_disappointed_being_ignored": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_confident_in_my_suggestion": "no",
+      "I_feel_hurt_because_no_one_listened": "yes",
+      "I_am_disappointed_being_ignored": "no",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_confident_in_my_suggestion": "no",
+      "I_feel_hurt_because_no_one_listened": "no",
+      "I_am_disappointed_being_ignored": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_confident_in_my_suggestion": "no",
+      "I_feel_hurt_because_no_one_listened": "no",
+      "I_am_disappointed_being_ignored": "no",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

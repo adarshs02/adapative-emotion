@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_feel_ashamed_because_of_my_role_in_the_mistake": [
+      "yes",
+      "no"
+    ],
+    "I_am_able_to_correct_the_mistake_quickly": [
+      "yes",
+      "no"
+    ],
+    "I_trust_the_coworker_not_to_make_this_kind_of_mistake_again": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_feel_ashamed_because_of_my_role_in_the_mistake": "yes",
+      "I_am_able_to_correct_the_mistake_quickly": "yes",
+      "I_trust_the_coworker_not_to_make_this_kind_of_mistake_again": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_ashamed_because_of_my_role_in_the_mistake": "yes",
+      "I_am_able_to_correct_the_mistake_quickly": "yes",
+      "I_trust_the_coworker_not_to_make_this_kind_of_mistake_again": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_ashamed_because_of_my_role_in_the_mistake": "yes",
+      "I_am_able_to_correct_the_mistake_quickly": "no",
+      "I_trust_the_coworker_not_to_make_this_kind_of_mistake_again": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_ashamed_because_of_my_role_in_the_mistake": "yes",
+      "I_am_able_to_correct_the_mistake_quickly": "no",
+      "I_trust_the_coworker_not_to_make_this_kind_of_mistake_again": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_ashamed_because_of_my_role_in_the_mistake": "no",
+      "I_am_able_to_correct_the_mistake_quickly": "yes",
+      "I_trust_the_coworker_not_to_make_this_kind_of_mistake_again": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_ashamed_because_of_my_role_in_the_mistake": "no",
+      "I_am_able_to_correct_the_mistake_quickly": "yes",
+      "I_trust_the_coworker_not_to_make_this_kind_of_mistake_again": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_ashamed_because_of_my_role_in_the_mistake": "no",
+      "I_am_able_to_correct_the_mistake_quickly": "no",
+      "I_trust_the_coworker_not_to_make_this_kind_of_mistake_again": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_ashamed_because_of_my_role_in_the_mistake": "no",
+      "I_am_able_to_correct_the_mistake_quickly": "no",
+      "I_trust_the_coworker_not_to_make_this_kind_of_mistake_again": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

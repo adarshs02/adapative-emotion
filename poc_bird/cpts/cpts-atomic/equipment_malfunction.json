@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "device_importance": [
+      "low",
+      "high"
+    ],
+    "break_type": [
+      "minor",
+      "major"
+    ],
+    "preparedness": [
+      "unprepared",
+      "prepared"
+    ]
+  },
+  "cpt": [
+    {
+      "device_importance": "low",
+      "break_type": "minor",
+      "preparedness": "unprepared",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "device_importance": "low",
+      "break_type": "minor",
+      "preparedness": "prepared",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "device_importance": "low",
+      "break_type": "major",
+      "preparedness": "unprepared",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "device_importance": "low",
+      "break_type": "major",
+      "preparedness": "prepared",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "device_importance": "high",
+      "break_type": "minor",
+      "preparedness": "unprepared",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "device_importance": "high",
+      "break_type": "minor",
+      "preparedness": "prepared",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "device_importance": "high",
+      "break_type": "major",
+      "preparedness": "unprepared",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "device_importance": "high",
+      "break_type": "major",
+      "preparedness": "prepared",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

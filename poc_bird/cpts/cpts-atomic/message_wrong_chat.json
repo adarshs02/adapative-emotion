@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_public_group": [
+      "true",
+      "false"
+    ],
+    "is_emergency_group": [
+      "true",
+      "false"
+    ],
+    "am_i_ashamed_because_of_mistake": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_public_group": "true",
+      "is_emergency_group": "true",
+      "am_i_ashamed_because_of_mistake": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_public_group": "true",
+      "is_emergency_group": "true",
+      "am_i_ashamed_because_of_mistake": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_public_group": "true",
+      "is_emergency_group": "false",
+      "am_i_ashamed_because_of_mistake": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_public_group": "true",
+      "is_emergency_group": "false",
+      "am_i_ashamed_because_of_mistake": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_public_group": "false",
+      "is_emergency_group": "true",
+      "am_i_ashamed_because_of_mistake": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_public_group": "false",
+      "is_emergency_group": "true",
+      "am_i_ashamed_because_of_mistake": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_public_group": "false",
+      "is_emergency_group": "false",
+      "am_i_ashamed_because_of_mistake": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_public_group": "false",
+      "is_emergency_group": "false",
+      "am_i_ashamed_because_of_mistake": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    }
+  ]
+}

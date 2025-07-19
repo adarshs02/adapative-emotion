@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "apology": [
+      "yes",
+      "no"
+    ],
+    "friendship_status": [
+      "close",
+      "distant"
+    ],
+    "trust_level": [
+      "high",
+      "low"
+    ]
+  },
+  "cpt": [
+    {
+      "apology": "yes",
+      "friendship_status": "close",
+      "trust_level": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "apology": "yes",
+      "friendship_status": "close",
+      "trust_level": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "apology": "yes",
+      "friendship_status": "distant",
+      "trust_level": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "apology": "yes",
+      "friendship_status": "distant",
+      "trust_level": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "apology": "no",
+      "friendship_status": "close",
+      "trust_level": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "apology": "no",
+      "friendship_status": "close",
+      "trust_level": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "apology": "no",
+      "friendship_status": "distant",
+      "trust_level": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "apology": "no",
+      "friendship_status": "distant",
+      "trust_level": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

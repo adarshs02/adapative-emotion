@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_the_comment_positive": [
+      "yes",
+      "no"
+    ],
+    "am_i_close_to_my_parent": [
+      "yes",
+      "no"
+    ],
+    "did_I_expect_this_to_happen": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_the_comment_positive": "yes",
+      "am_i_close_to_my_parent": "yes",
+      "did_I_expect_this_to_happen": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_the_comment_positive": "yes",
+      "am_i_close_to_my_parent": "yes",
+      "did_I_expect_this_to_happen": "no",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_the_comment_positive": "yes",
+      "am_i_close_to_my_parent": "no",
+      "did_I_expect_this_to_happen": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_the_comment_positive": "yes",
+      "am_i_close_to_my_parent": "no",
+      "did_I_expect_this_to_happen": "no",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_the_comment_positive": "no",
+      "am_i_close_to_my_parent": "yes",
+      "did_I_expect_this_to_happen": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_the_comment_positive": "no",
+      "am_i_close_to_my_parent": "yes",
+      "did_I_expect_this_to_happen": "no",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_the_comment_positive": "no",
+      "am_i_close_to_my_parent": "no",
+      "did_I_expect_this_to_happen": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_the_comment_positive": "no",
+      "am_i_close_to_my_parent": "no",
+      "did_I_expect_this_to_happen": "no",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

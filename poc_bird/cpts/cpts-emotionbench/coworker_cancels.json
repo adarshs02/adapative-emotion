@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_disappointed_because_I_was_looking_forward_to_it": [
+      "yes",
+      "no"
+    ],
+    "I_feel_abandoned_because_they_didnt_respond": [
+      "yes",
+      "no"
+    ],
+    "I_am_frustrated_because_it_affects_my_game": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_disappointed_because_I_was_looking_forward_to_it": "yes",
+      "I_feel_abandoned_because_they_didnt_respond": "yes",
+      "I_am_frustrated_because_it_affects_my_game": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I_am_disappointed_because_I_was_looking_forward_to_it": "yes",
+      "I_feel_abandoned_because_they_didnt_respond": "yes",
+      "I_am_frustrated_because_it_affects_my_game": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I_am_disappointed_because_I_was_looking_forward_to_it": "yes",
+      "I_feel_abandoned_because_they_didnt_respond": "no",
+      "I_am_frustrated_because_it_affects_my_game": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I_am_disappointed_because_I_was_looking_forward_to_it": "yes",
+      "I_feel_abandoned_because_they_didnt_respond": "no",
+      "I_am_frustrated_because_it_affects_my_game": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I_am_disappointed_because_I_was_looking_forward_to_it": "no",
+      "I_feel_abandoned_because_they_didnt_respond": "yes",
+      "I_am_frustrated_because_it_affects_my_game": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I_am_disappointed_because_I_was_looking_forward_to_it": "no",
+      "I_feel_abandoned_because_they_didnt_respond": "yes",
+      "I_am_frustrated_because_it_affects_my_game": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I_am_disappointed_because_I_was_looking_forward_to_it": "no",
+      "I_feel_abandoned_because_they_didnt_respond": "no",
+      "I_am_frustrated_because_it_affects_my_game": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I_am_disappointed_because_I_was_looking_forward_to_it": "no",
+      "I_feel_abandoned_because_they_didnt_respond": "no",
+      "I_am_frustrated_because_it_affects_my_game": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    }
+  ]
+}

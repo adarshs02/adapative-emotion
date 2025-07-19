@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_know_the_person": [
+      "yes",
+      "no"
+    ],
+    "I_am_familiar_with_their_habits": [
+      "yes",
+      "no"
+    ],
+    "I_am_angry_because_of_their_habits": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_know_the_person": "yes",
+      "I_am_familiar_with_their_habits": "yes",
+      "I_am_angry_because_of_their_habits": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_know_the_person": "yes",
+      "I_am_familiar_with_their_habits": "yes",
+      "I_am_angry_because_of_their_habits": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_know_the_person": "yes",
+      "I_am_familiar_with_their_habits": "no",
+      "I_am_angry_because_of_their_habits": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_know_the_person": "yes",
+      "I_am_familiar_with_their_habits": "no",
+      "I_am_angry_because_of_their_habits": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_know_the_person": "no",
+      "I_am_familiar_with_their_habits": "yes",
+      "I_am_angry_because_of_their_habits": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_know_the_person": "no",
+      "I_am_familiar_with_their_habits": "yes",
+      "I_am_angry_because_of_their_habits": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_know_the_person": "no",
+      "I_am_familiar_with_their_habits": "no",
+      "I_am_angry_because_of_their_habits": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_know_the_person": "no",
+      "I_am_familiar_with_their_habits": "no",
+      "I_am_angry_because_of_their_habits": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

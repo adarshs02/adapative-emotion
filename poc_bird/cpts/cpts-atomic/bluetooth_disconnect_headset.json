@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "connection_quality": [
+      "good",
+      "bad"
+    ],
+    "confidence_level": [
+      "high",
+      "low"
+    ],
+    "importance_of_call": [
+      "critical",
+      "non_critical"
+    ]
+  },
+  "cpt": [
+    {
+      "connection_quality": "good",
+      "confidence_level": "high",
+      "importance_of_call": "critical",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "connection_quality": "good",
+      "confidence_level": "high",
+      "importance_of_call": "non_critical",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "connection_quality": "good",
+      "confidence_level": "low",
+      "importance_of_call": "critical",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "connection_quality": "good",
+      "confidence_level": "low",
+      "importance_of_call": "non_critical",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "connection_quality": "bad",
+      "confidence_level": "high",
+      "importance_of_call": "critical",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "connection_quality": "bad",
+      "confidence_level": "high",
+      "importance_of_call": "non_critical",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "connection_quality": "bad",
+      "confidence_level": "low",
+      "importance_of_call": "critical",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "connection_quality": "bad",
+      "confidence_level": "low",
+      "importance_of_call": "non_critical",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

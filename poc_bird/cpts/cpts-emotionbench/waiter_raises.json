@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "was_it_busy": [
+      "yes",
+      "no"
+    ],
+    "was_i_asking_for_help": [
+      "yes",
+      "no"
+    ],
+    "was_i_being_persistent": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "was_it_busy": "yes",
+      "was_i_asking_for_help": "yes",
+      "was_i_being_persistent": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "was_it_busy": "yes",
+      "was_i_asking_for_help": "yes",
+      "was_i_being_persistent": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "was_it_busy": "yes",
+      "was_i_asking_for_help": "no",
+      "was_i_being_persistent": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "was_it_busy": "yes",
+      "was_i_asking_for_help": "no",
+      "was_i_being_persistent": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "was_it_busy": "no",
+      "was_i_asking_for_help": "yes",
+      "was_i_being_persistent": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "was_it_busy": "no",
+      "was_i_asking_for_help": "yes",
+      "was_i_being_persistent": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "was_it_busy": "no",
+      "was_i_asking_for_help": "no",
+      "was_i_being_persistent": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "was_it_busy": "no",
+      "was_i_asking_for_help": "no",
+      "was_i_being_persistent": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

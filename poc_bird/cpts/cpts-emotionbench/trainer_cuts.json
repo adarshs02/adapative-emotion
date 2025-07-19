@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "trainer_is_friendly": [
+      "yes",
+      "no"
+    ],
+    "project_is_critical": [
+      "yes",
+      "no"
+    ],
+    "i_am_hungry": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "trainer_is_friendly": "yes",
+      "project_is_critical": "yes",
+      "i_am_hungry": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "trainer_is_friendly": "yes",
+      "project_is_critical": "yes",
+      "i_am_hungry": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "trainer_is_friendly": "yes",
+      "project_is_critical": "no",
+      "i_am_hungry": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "trainer_is_friendly": "yes",
+      "project_is_critical": "no",
+      "i_am_hungry": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "trainer_is_friendly": "no",
+      "project_is_critical": "yes",
+      "i_am_hungry": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "trainer_is_friendly": "no",
+      "project_is_critical": "yes",
+      "i_am_hungry": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "trainer_is_friendly": "no",
+      "project_is_critical": "no",
+      "i_am_hungry": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "trainer_is_friendly": "no",
+      "project_is_critical": "no",
+      "i_am_hungry": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "time_of_day": [
+      "morning",
+      "afternoon/evening"
+    ],
+    "weather": [
+      "cold",
+      "warm"
+    ],
+    "location": [
+      "indoor",
+      "outdoor"
+    ]
+  },
+  "cpt": [
+    {
+      "time_of_day": "morning",
+      "weather": "cold",
+      "location": "indoor",
+      "emotions": {
+        "angry": 0.333,
+        "cold": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "weather": "cold",
+      "location": "outdoor",
+      "emotions": {
+        "angry": 0.333,
+        "cold": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "weather": "warm",
+      "location": "indoor",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "weather": "warm",
+      "location": "outdoor",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "time_of_day": "afternoon/evening",
+      "weather": "cold",
+      "location": "indoor",
+      "emotions": {
+        "angry": 0.333,
+        "cold": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "afternoon/evening",
+      "weather": "cold",
+      "location": "outdoor",
+      "emotions": {
+        "angry": 0.333,
+        "cold": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "afternoon/evening",
+      "weather": "warm",
+      "location": "indoor",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "time_of_day": "afternoon/evening",
+      "weather": "warm",
+      "location": "outdoor",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    }
+  ]
+}

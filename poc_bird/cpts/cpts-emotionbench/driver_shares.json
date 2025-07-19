@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_confident_in_driver": [
+      "yes",
+      "no"
+    ],
+    "is_secret_negative": [
+      "yes",
+      "no"
+    ],
+    "is_secret_shared_before": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_confident_in_driver": "yes",
+      "is_secret_negative": "yes",
+      "is_secret_shared_before": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_confident_in_driver": "yes",
+      "is_secret_negative": "yes",
+      "is_secret_shared_before": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_confident_in_driver": "yes",
+      "is_secret_negative": "no",
+      "is_secret_shared_before": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_confident_in_driver": "yes",
+      "is_secret_negative": "no",
+      "is_secret_shared_before": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_confident_in_driver": "no",
+      "is_secret_negative": "yes",
+      "is_secret_shared_before": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_confident_in_driver": "no",
+      "is_secret_negative": "yes",
+      "is_secret_shared_before": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_confident_in_driver": "no",
+      "is_secret_negative": "no",
+      "is_secret_shared_before": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_confident_in_driver": "no",
+      "is_secret_negative": "no",
+      "is_secret_shared_before": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    }
+  ]
+}

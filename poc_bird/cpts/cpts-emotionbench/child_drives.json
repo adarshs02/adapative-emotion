@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm tired because I didn't sleep well": [
+      "yes",
+      "no"
+    ],
+    "I'm stressed because of work": [
+      "yes",
+      "no"
+    ],
+    "I'm frustrated because of the situation": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm tired because I didn't sleep well": "yes",
+      "I'm stressed because of work": "yes",
+      "I'm frustrated because of the situation": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm tired because I didn't sleep well": "yes",
+      "I'm stressed because of work": "yes",
+      "I'm frustrated because of the situation": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm tired because I didn't sleep well": "yes",
+      "I'm stressed because of work": "no",
+      "I'm frustrated because of the situation": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm tired because I didn't sleep well": "yes",
+      "I'm stressed because of work": "no",
+      "I'm frustrated because of the situation": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm tired because I didn't sleep well": "no",
+      "I'm stressed because of work": "yes",
+      "I'm frustrated because of the situation": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm tired because I didn't sleep well": "no",
+      "I'm stressed because of work": "yes",
+      "I'm frustrated because of the situation": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm tired because I didn't sleep well": "no",
+      "I'm stressed because of work": "no",
+      "I'm frustrated because of the situation": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm tired because I didn't sleep well": "no",
+      "I'm stressed because of work": "no",
+      "I'm frustrated because of the situation": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

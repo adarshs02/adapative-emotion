@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "weather_type": [
+      "bad",
+      "good"
+    ],
+    "plan_importance": [
+      "low",
+      "high"
+    ],
+    "personal_preference": [
+      "favorable",
+      "unfavorable"
+    ]
+  },
+  "cpt": [
+    {
+      "weather_type": "bad",
+      "plan_importance": "low",
+      "personal_preference": "favorable",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "weather_type": "bad",
+      "plan_importance": "low",
+      "personal_preference": "unfavorable",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "weather_type": "bad",
+      "plan_importance": "high",
+      "personal_preference": "favorable",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "weather_type": "bad",
+      "plan_importance": "high",
+      "personal_preference": "unfavorable",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "weather_type": "good",
+      "plan_importance": "low",
+      "personal_preference": "favorable",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "weather_type": "good",
+      "plan_importance": "low",
+      "personal_preference": "unfavorable",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "weather_type": "good",
+      "plan_importance": "high",
+      "personal_preference": "favorable",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "weather_type": "good",
+      "plan_importance": "high",
+      "personal_preference": "unfavorable",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

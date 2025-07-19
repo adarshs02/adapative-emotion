@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_angry_because_I_needed_it": [
+      "yes",
+      "no"
+    ],
+    "I_trust_them": [
+      "yes",
+      "no"
+    ],
+    "I_feel_hurt_because_I_expected_it": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_angry_because_I_needed_it": "yes",
+      "I_trust_them": "yes",
+      "I_feel_hurt_because_I_expected_it": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_angry_because_I_needed_it": "yes",
+      "I_trust_them": "yes",
+      "I_feel_hurt_because_I_expected_it": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_angry_because_I_needed_it": "yes",
+      "I_trust_them": "no",
+      "I_feel_hurt_because_I_expected_it": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_angry_because_I_needed_it": "yes",
+      "I_trust_them": "no",
+      "I_feel_hurt_because_I_expected_it": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_angry_because_I_needed_it": "no",
+      "I_trust_them": "yes",
+      "I_feel_hurt_because_I_expected_it": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_angry_because_I_needed_it": "no",
+      "I_trust_them": "yes",
+      "I_feel_hurt_because_I_expected_it": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_angry_because_I_needed_it": "no",
+      "I_trust_them": "no",
+      "I_feel_hurt_because_I_expected_it": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_angry_because_I_needed_it": "no",
+      "I_trust_them": "no",
+      "I_feel_hurt_because_I_expected_it": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

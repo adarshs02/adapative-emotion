@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_responsible_for_covering_their_work": [
+      "yes",
+      "no"
+    ],
+    "I_am_familiar_with_their_travel_plans": [
+      "yes",
+      "no"
+    ],
+    "I_am_stressed_because_of_their_late_arrival": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_responsible_for_covering_their_work": "yes",
+      "I_am_familiar_with_their_travel_plans": "yes",
+      "I_am_stressed_because_of_their_late_arrival": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_responsible_for_covering_their_work": "yes",
+      "I_am_familiar_with_their_travel_plans": "yes",
+      "I_am_stressed_because_of_their_late_arrival": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_responsible_for_covering_their_work": "yes",
+      "I_am_familiar_with_their_travel_plans": "no",
+      "I_am_stressed_because_of_their_late_arrival": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_responsible_for_covering_their_work": "yes",
+      "I_am_familiar_with_their_travel_plans": "no",
+      "I_am_stressed_because_of_their_late_arrival": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_responsible_for_covering_their_work": "no",
+      "I_am_familiar_with_their_travel_plans": "yes",
+      "I_am_stressed_because_of_their_late_arrival": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_responsible_for_covering_their_work": "no",
+      "I_am_familiar_with_their_travel_plans": "yes",
+      "I_am_stressed_because_of_their_late_arrival": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_responsible_for_covering_their_work": "no",
+      "I_am_familiar_with_their_travel_plans": "no",
+      "I_am_stressed_because_of_their_late_arrival": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_responsible_for_covering_their_work": "no",
+      "I_am_familiar_with_their_travel_plans": "no",
+      "I_am_stressed_because_of_their_late_arrival": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

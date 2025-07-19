@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "asked_by_acquaintance": [
+      "stranger",
+      "acquaintance"
+    ],
+    "nature_of_question": [
+      "personal",
+      "non-personal"
+    ],
+    "time_and_place": [
+      "daytime/public",
+      "nighttime/private"
+    ]
+  },
+  "cpt": [
+    {
+      "asked_by_acquaintance": "stranger",
+      "nature_of_question": "personal",
+      "time_and_place": "daytime/public",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "asked_by_acquaintance": "stranger",
+      "nature_of_question": "personal",
+      "time_and_place": "nighttime/private",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "asked_by_acquaintance": "stranger",
+      "nature_of_question": "non-personal",
+      "time_and_place": "daytime/public",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "asked_by_acquaintance": "stranger",
+      "nature_of_question": "non-personal",
+      "time_and_place": "nighttime/private",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "asked_by_acquaintance": "acquaintance",
+      "nature_of_question": "personal",
+      "time_and_place": "daytime/public",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "asked_by_acquaintance": "acquaintance",
+      "nature_of_question": "personal",
+      "time_and_place": "nighttime/private",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "asked_by_acquaintance": "acquaintance",
+      "nature_of_question": "non-personal",
+      "time_and_place": "daytime/public",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "asked_by_acquaintance": "acquaintance",
+      "nature_of_question": "non-personal",
+      "time_and_place": "nighttime/private",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    }
+  ]
+}

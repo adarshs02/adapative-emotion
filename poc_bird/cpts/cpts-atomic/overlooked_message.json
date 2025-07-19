@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_important": [
+      "true",
+      "false"
+    ],
+    "is_from_an_expected_source": [
+      "true",
+      "false"
+    ],
+    "am_i_stressed_because_of_it": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_important": "true",
+      "is_from_an_expected_source": "true",
+      "am_i_stressed_because_of_it": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_important": "true",
+      "is_from_an_expected_source": "true",
+      "am_i_stressed_because_of_it": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_important": "true",
+      "is_from_an_expected_source": "false",
+      "am_i_stressed_because_of_it": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_important": "true",
+      "is_from_an_expected_source": "false",
+      "am_i_stressed_because_of_it": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_important": "false",
+      "is_from_an_expected_source": "true",
+      "am_i_stressed_because_of_it": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_important": "false",
+      "is_from_an_expected_source": "true",
+      "am_i_stressed_because_of_it": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_important": "false",
+      "is_from_an_expected_source": "false",
+      "am_i_stressed_because_of_it": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_important": "false",
+      "is_from_an_expected_source": "false",
+      "am_i_stressed_because_of_it": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

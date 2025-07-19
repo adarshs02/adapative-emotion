@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_important_call": [
+      "true",
+      "false"
+    ],
+    "is_expected": [
+      "true",
+      "false"
+    ],
+    "am_i_stressed_because_of_calls": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "is_important_call": "true",
+      "is_expected": "true",
+      "am_i_stressed_because_of_calls": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_important_call": "true",
+      "is_expected": "true",
+      "am_i_stressed_because_of_calls": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_important_call": "true",
+      "is_expected": "false",
+      "am_i_stressed_because_of_calls": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_important_call": "true",
+      "is_expected": "false",
+      "am_i_stressed_because_of_calls": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_important_call": "false",
+      "is_expected": "true",
+      "am_i_stressed_because_of_calls": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_important_call": "false",
+      "is_expected": "true",
+      "am_i_stressed_because_of_calls": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_important_call": "false",
+      "is_expected": "false",
+      "am_i_stressed_because_of_calls": "true",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "is_important_call": "false",
+      "is_expected": "false",
+      "am_i_stressed_because_of_calls": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

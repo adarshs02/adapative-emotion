@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I feel guilty because I am canceling on someone": [
+      "yes",
+      "no"
+    ],
+    "I'm upset because it's last minute": [
+      "yes",
+      "no"
+    ],
+    "The cancellation affects my social life": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I feel guilty because I am canceling on someone": "yes",
+      "I'm upset because it's last minute": "yes",
+      "The cancellation affects my social life": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel guilty because I am canceling on someone": "yes",
+      "I'm upset because it's last minute": "yes",
+      "The cancellation affects my social life": "no",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel guilty because I am canceling on someone": "yes",
+      "I'm upset because it's last minute": "no",
+      "The cancellation affects my social life": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel guilty because I am canceling on someone": "yes",
+      "I'm upset because it's last minute": "no",
+      "The cancellation affects my social life": "no",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel guilty because I am canceling on someone": "no",
+      "I'm upset because it's last minute": "yes",
+      "The cancellation affects my social life": "yes",
+      "emotions": {
+        "angry": 0.25,
+        "guilty": 0.5,
+        "sad": 0.25
+      }
+    },
+    {
+      "I feel guilty because I am canceling on someone": "no",
+      "I'm upset because it's last minute": "yes",
+      "The cancellation affects my social life": "no",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel guilty because I am canceling on someone": "no",
+      "I'm upset because it's last minute": "no",
+      "The cancellation affects my social life": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel guilty because I am canceling on someone": "no",
+      "I'm upset because it's last minute": "no",
+      "The cancellation affects my social life": "no",
+      "emotions": {
+        "angry": 0.25,
+        "guilty": 0.5,
+        "sad": 0.25
+      }
+    }
+  ]
+}

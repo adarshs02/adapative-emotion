@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm tired because of waiting": [
+      "yes",
+      "no"
+    ],
+    "I feel frustrated because of the delay": [
+      "yes",
+      "no"
+    ],
+    "The delay is impacting my mood": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm tired because of waiting": "yes",
+      "I feel frustrated because of the delay": "yes",
+      "The delay is impacting my mood": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of waiting": "yes",
+      "I feel frustrated because of the delay": "yes",
+      "The delay is impacting my mood": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of waiting": "yes",
+      "I feel frustrated because of the delay": "no",
+      "The delay is impacting my mood": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of waiting": "yes",
+      "I feel frustrated because of the delay": "no",
+      "The delay is impacting my mood": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of waiting": "no",
+      "I feel frustrated because of the delay": "yes",
+      "The delay is impacting my mood": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of waiting": "no",
+      "I feel frustrated because of the delay": "yes",
+      "The delay is impacting my mood": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of waiting": "no",
+      "I feel frustrated because of the delay": "no",
+      "The delay is impacting my mood": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm tired because of waiting": "no",
+      "I feel frustrated because of the delay": "no",
+      "The delay is impacting my mood": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I feel angry because they're late": [
+      "yes",
+      "no"
+    ],
+    "I'm frustrated because I have to wait": [
+      "yes",
+      "no"
+    ],
+    "I'm worried about them being okay": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I feel angry because they're late": "yes",
+      "I'm frustrated because I have to wait": "yes",
+      "I'm worried about them being okay": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I feel angry because they're late": "yes",
+      "I'm frustrated because I have to wait": "yes",
+      "I'm worried about them being okay": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I feel angry because they're late": "yes",
+      "I'm frustrated because I have to wait": "no",
+      "I'm worried about them being okay": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel angry because they're late": "yes",
+      "I'm frustrated because I have to wait": "no",
+      "I'm worried about them being okay": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel angry because they're late": "no",
+      "I'm frustrated because I have to wait": "yes",
+      "I'm worried about them being okay": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel angry because they're late": "no",
+      "I'm frustrated because I have to wait": "yes",
+      "I'm worried about them being okay": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel angry because they're late": "no",
+      "I'm frustrated because I have to wait": "no",
+      "I'm worried about them being okay": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel angry because they're late": "no",
+      "I'm frustrated because I have to wait": "no",
+      "I'm worried about them being okay": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

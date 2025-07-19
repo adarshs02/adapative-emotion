@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "am_i_anxious_because_i_made_friends_with_my_neighbor": [
+      "yes",
+      "no"
+    ],
+    "did_i_expect_the_joke": [
+      "yes",
+      "no"
+    ],
+    "is_the_joke_offensive": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "am_i_anxious_because_i_made_friends_with_my_neighbor": "yes",
+      "did_i_expect_the_joke": "yes",
+      "is_the_joke_offensive": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "am_i_anxious_because_i_made_friends_with_my_neighbor": "yes",
+      "did_i_expect_the_joke": "yes",
+      "is_the_joke_offensive": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "am_i_anxious_because_i_made_friends_with_my_neighbor": "yes",
+      "did_i_expect_the_joke": "no",
+      "is_the_joke_offensive": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "am_i_anxious_because_i_made_friends_with_my_neighbor": "yes",
+      "did_i_expect_the_joke": "no",
+      "is_the_joke_offensive": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "am_i_anxious_because_i_made_friends_with_my_neighbor": "no",
+      "did_i_expect_the_joke": "yes",
+      "is_the_joke_offensive": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "am_i_anxious_because_i_made_friends_with_my_neighbor": "no",
+      "did_i_expect_the_joke": "yes",
+      "is_the_joke_offensive": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "am_i_anxious_because_i_made_friends_with_my_neighbor": "no",
+      "did_i_expect_the_joke": "no",
+      "is_the_joke_offensive": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "am_i_anxious_because_i_made_friends_with_my_neighbor": "no",
+      "did_i_expect_the_joke": "no",
+      "is_the_joke_offensive": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

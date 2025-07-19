@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I feel guilty because I'm not invited": [
+      "yes",
+      "no"
+    ],
+    "I have conflicting plans": [
+      "yes",
+      "no"
+    ],
+    "I miss the friend": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I feel guilty because I'm not invited": "yes",
+      "I have conflicting plans": "yes",
+      "I miss the friend": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel guilty because I'm not invited": "yes",
+      "I have conflicting plans": "yes",
+      "I miss the friend": "no",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel guilty because I'm not invited": "yes",
+      "I have conflicting plans": "no",
+      "I miss the friend": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel guilty because I'm not invited": "yes",
+      "I have conflicting plans": "no",
+      "I miss the friend": "no",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel guilty because I'm not invited": "no",
+      "I have conflicting plans": "yes",
+      "I miss the friend": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel guilty because I'm not invited": "no",
+      "I have conflicting plans": "yes",
+      "I miss the friend": "no",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel guilty because I'm not invited": "no",
+      "I have conflicting plans": "no",
+      "I miss the friend": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel guilty because I'm not invited": "no",
+      "I have conflicting plans": "no",
+      "I miss the friend": "no",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "was_interruption_unexpected": [
+      "yes",
+      "no"
+    ],
+    "interruption_type": [
+      "positive",
+      "negative"
+    ],
+    "current_emotional_state": [
+      "stressed because of the interruption",
+      "relaxed because I'm not focused on my activity"
+    ]
+  },
+  "cpt": [
+    {
+      "was_interruption_unexpected": "yes",
+      "interruption_type": "positive",
+      "current_emotional_state": "stressed because of the interruption",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "was_interruption_unexpected": "yes",
+      "interruption_type": "positive",
+      "current_emotional_state": "relaxed because I'm not focused on my activity",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "was_interruption_unexpected": "yes",
+      "interruption_type": "negative",
+      "current_emotional_state": "stressed because of the interruption",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "was_interruption_unexpected": "yes",
+      "interruption_type": "negative",
+      "current_emotional_state": "relaxed because I'm not focused on my activity",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "was_interruption_unexpected": "no",
+      "interruption_type": "positive",
+      "current_emotional_state": "stressed because of the interruption",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "was_interruption_unexpected": "no",
+      "interruption_type": "positive",
+      "current_emotional_state": "relaxed because I'm not focused on my activity",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "was_interruption_unexpected": "no",
+      "interruption_type": "negative",
+      "current_emotional_state": "stressed because of the interruption",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "was_interruption_unexpected": "no",
+      "interruption_type": "negative",
+      "current_emotional_state": "relaxed because I'm not focused on my activity",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

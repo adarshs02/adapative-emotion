@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_feel_responsible": [
+      "yes",
+      "no"
+    ],
+    "I_have_plans_with_boss": [
+      "yes",
+      "no"
+    ],
+    "I_am_angry_because_boss_is_ignoring_me": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_feel_responsible": "yes",
+      "I_have_plans_with_boss": "yes",
+      "I_am_angry_because_boss_is_ignoring_me": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_responsible": "yes",
+      "I_have_plans_with_boss": "yes",
+      "I_am_angry_because_boss_is_ignoring_me": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_responsible": "yes",
+      "I_have_plans_with_boss": "no",
+      "I_am_angry_because_boss_is_ignoring_me": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_responsible": "yes",
+      "I_have_plans_with_boss": "no",
+      "I_am_angry_because_boss_is_ignoring_me": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_responsible": "no",
+      "I_have_plans_with_boss": "yes",
+      "I_am_angry_because_boss_is_ignoring_me": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_responsible": "no",
+      "I_have_plans_with_boss": "yes",
+      "I_am_angry_because_boss_is_ignoring_me": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_responsible": "no",
+      "I_have_plans_with_boss": "no",
+      "I_am_angry_because_boss_is_ignoring_me": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_responsible": "no",
+      "I_have_plans_with_boss": "no",
+      "I_am_angry_because_boss_is_ignoring_me": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

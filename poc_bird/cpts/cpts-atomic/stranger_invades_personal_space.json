@@ -1,0 +1,96 @@
+{
+  "factors": {
+    "I_am_in_control": [
+      "yes",
+      "no"
+    ],
+    "I_feel_confident_because_I_know_the_queue_rules": [
+      "yes",
+      "no"
+    ],
+    "I_feel_anxious_because_of_the_other_person": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_in_control": "yes",
+      "I_feel_confident_because_I_know_the_queue_rules": "yes",
+      "I_feel_anxious_because_of_the_other_person": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_in_control": "yes",
+      "I_feel_confident_because_I_know_the_queue_rules": "yes",
+      "I_feel_anxious_because_of_the_other_person": "no",
+      "emotions": {
+        "I_am_in_control": 0.5,
+        "I_feel_confident_because_I_know_the_queue_rules": 0.5
+      }
+    },
+    {
+      "I_am_in_control": "yes",
+      "I_feel_confident_because_I_know_the_queue_rules": "no",
+      "I_feel_anxious_because_of_the_other_person": "yes",
+      "emotions": {
+        "I_feel_anxious_because_of_the_other_person": 0.5,
+        "I_am_in_control": 0.5
+      }
+    },
+    {
+      "I_am_in_control": "yes",
+      "I_feel_confident_because_I_know_the_queue_rules": "no",
+      "I_feel_anxious_because_of_the_other_person": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_in_control": "no",
+      "I_feel_confident_because_I_know_the_queue_rules": "yes",
+      "I_feel_anxious_because_of_the_other_person": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_in_control": "no",
+      "I_feel_confident_because_I_know_the_queue_rules": "yes",
+      "I_feel_anxious_because_of_the_other_person": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_in_control": "no",
+      "I_feel_confident_because_I_know_the_queue_rules": "no",
+      "I_feel_anxious_because_of_the_other_person": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_in_control": "no",
+      "I_feel_confident_because_I_know_the_queue_rules": "no",
+      "I_feel_anxious_because_of_the_other_person": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_employed": [
+      "yes",
+      "no"
+    ],
+    "I_have_an_alternative_place_to_live": [
+      "yes",
+      "no"
+    ],
+    "I_feel_secure_about_my_job": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_employed": "yes",
+      "I_have_an_alternative_place_to_live": "yes",
+      "I_feel_secure_about_my_job": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_employed": "yes",
+      "I_have_an_alternative_place_to_live": "yes",
+      "I_feel_secure_about_my_job": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_employed": "yes",
+      "I_have_an_alternative_place_to_live": "no",
+      "I_feel_secure_about_my_job": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_employed": "yes",
+      "I_have_an_alternative_place_to_live": "no",
+      "I_feel_secure_about_my_job": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_employed": "no",
+      "I_have_an_alternative_place_to_live": "yes",
+      "I_feel_secure_about_my_job": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_employed": "no",
+      "I_have_an_alternative_place_to_live": "yes",
+      "I_feel_secure_about_my_job": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_employed": "no",
+      "I_have_an_alternative_place_to_live": "no",
+      "I_feel_secure_about_my_job": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_employed": "no",
+      "I_have_an_alternative_place_to_live": "no",
+      "I_feel_secure_about_my_job": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

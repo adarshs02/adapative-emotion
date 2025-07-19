@@ -1,0 +1,99 @@
+{
+  "factors": {
+    "I_feel_hurt": [
+      "yes",
+      "no"
+    ],
+    "I_feel_angry": [
+      "yes",
+      "no"
+    ],
+    "I_feel_sorry_because_friend_is_having_a_bad_day": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_feel_hurt": "yes",
+      "I_feel_angry": "yes",
+      "I_feel_sorry_because_friend_is_having_a_bad_day": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_hurt": "yes",
+      "I_feel_angry": "yes",
+      "I_feel_sorry_because_friend_is_having_a_bad_day": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_hurt": "yes",
+      "I_feel_angry": "no",
+      "I_feel_sorry_because_friend_is_having_a_bad_day": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sorry": 0.334
+      }
+    },
+    {
+      "I_feel_hurt": "yes",
+      "I_feel_angry": "no",
+      "I_feel_sorry_because_friend_is_having_a_bad_day": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_hurt": "no",
+      "I_feel_angry": "yes",
+      "I_feel_sorry_because_friend_is_having_a_bad_day": "yes",
+      "emotions": {
+        "angry": 0.24981245311327835,
+        "feel": 0.25056264066016504,
+        "friend": 0.24981245311327835,
+        "i_feel_angry": 0.24981245311327835
+      }
+    },
+    {
+      "I_feel_hurt": "no",
+      "I_feel_angry": "yes",
+      "I_feel_sorry_because_friend_is_having_a_bad_day": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_hurt": "no",
+      "I_feel_angry": "no",
+      "I_feel_sorry_because_friend_is_having_a_bad_day": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_hurt": "no",
+      "I_feel_angry": "no",
+      "I_feel_sorry_because_friend_is_having_a_bad_day": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

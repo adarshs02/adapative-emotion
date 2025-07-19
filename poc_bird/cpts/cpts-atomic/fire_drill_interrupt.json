@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_feel_anxious_because_I_dont_know_when_we_will_resume_work": [
+      "yes",
+      "no"
+    ],
+    "I_am_aware_of_the_fire_drill": [
+      "yes",
+      "no"
+    ],
+    "I_was_in_the_middle_of_something_critical": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_feel_anxious_because_I_dont_know_when_we_will_resume_work": "yes",
+      "I_am_aware_of_the_fire_drill": "yes",
+      "I_was_in_the_middle_of_something_critical": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_anxious_because_I_dont_know_when_we_will_resume_work": "yes",
+      "I_am_aware_of_the_fire_drill": "yes",
+      "I_was_in_the_middle_of_something_critical": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_anxious_because_I_dont_know_when_we_will_resume_work": "yes",
+      "I_am_aware_of_the_fire_drill": "no",
+      "I_was_in_the_middle_of_something_critical": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_anxious_because_I_dont_know_when_we_will_resume_work": "yes",
+      "I_am_aware_of_the_fire_drill": "no",
+      "I_was_in_the_middle_of_something_critical": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_anxious_because_I_dont_know_when_we_will_resume_work": "no",
+      "I_am_aware_of_the_fire_drill": "yes",
+      "I_was_in_the_middle_of_something_critical": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_anxious_because_I_dont_know_when_we_will_resume_work": "no",
+      "I_am_aware_of_the_fire_drill": "yes",
+      "I_was_in_the_middle_of_something_critical": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_anxious_because_I_dont_know_when_we_will_resume_work": "no",
+      "I_am_aware_of_the_fire_drill": "no",
+      "I_was_in_the_middle_of_something_critical": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_anxious_because_I_dont_know_when_we_will_resume_work": "no",
+      "I_am_aware_of_the_fire_drill": "no",
+      "I_was_in_the_middle_of_something_critical": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

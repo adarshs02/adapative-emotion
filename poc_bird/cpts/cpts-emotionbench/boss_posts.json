@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_in_the_photo": [
+      "yes",
+      "no"
+    ],
+    "I_am_a_public_figure": [
+      "yes",
+      "no"
+    ],
+    "I_have_a_close_relationship_with_my_boss": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_in_the_photo": "yes",
+      "I_am_a_public_figure": "yes",
+      "I_have_a_close_relationship_with_my_boss": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_in_the_photo": "yes",
+      "I_am_a_public_figure": "yes",
+      "I_have_a_close_relationship_with_my_boss": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_in_the_photo": "yes",
+      "I_am_a_public_figure": "no",
+      "I_have_a_close_relationship_with_my_boss": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_in_the_photo": "yes",
+      "I_am_a_public_figure": "no",
+      "I_have_a_close_relationship_with_my_boss": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_in_the_photo": "no",
+      "I_am_a_public_figure": "yes",
+      "I_have_a_close_relationship_with_my_boss": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_in_the_photo": "no",
+      "I_am_a_public_figure": "yes",
+      "I_have_a_close_relationship_with_my_boss": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_in_the_photo": "no",
+      "I_am_a_public_figure": "no",
+      "I_have_a_close_relationship_with_my_boss": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_in_the_photo": "no",
+      "I_am_a_public_figure": "no",
+      "I_have_a_close_relationship_with_my_boss": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

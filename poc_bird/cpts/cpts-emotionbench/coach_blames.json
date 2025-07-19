@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_feel_hurt": [
+      "true",
+      "false"
+    ],
+    "I_feel_confident": [
+      "true",
+      "false"
+    ],
+    "I_feel_angry": [
+      "true",
+      "false"
+    ]
+  },
+  "cpt": [
+    {
+      "I_feel_hurt": "true",
+      "I_feel_confident": "true",
+      "I_feel_angry": "true",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I_feel_hurt": "true",
+      "I_feel_confident": "true",
+      "I_feel_angry": "false",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I_feel_hurt": "true",
+      "I_feel_confident": "false",
+      "I_feel_angry": "true",
+      "emotions": {
+        "angry": 0.5,
+        "confident": 0.25,
+        "sad": 0.25
+      }
+    },
+    {
+      "I_feel_hurt": "true",
+      "I_feel_confident": "false",
+      "I_feel_angry": "false",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I_feel_hurt": "false",
+      "I_feel_confident": "true",
+      "I_feel_angry": "true",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_hurt": "false",
+      "I_feel_confident": "true",
+      "I_feel_angry": "false",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_hurt": "false",
+      "I_feel_confident": "false",
+      "I_feel_angry": "true",
+      "emotions": {
+        "angry": 0.334,
+        "confident": 0.333,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_hurt": "false",
+      "I_feel_confident": "false",
+      "I_feel_angry": "false",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_feel_confident": [
+      "yes",
+      "no"
+    ],
+    "I_am_a_new_manager": [
+      "yes",
+      "no"
+    ],
+    "I_am_sick": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_feel_confident": "yes",
+      "I_am_a_new_manager": "yes",
+      "I_am_sick": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I_feel_confident": "yes",
+      "I_am_a_new_manager": "yes",
+      "I_am_sick": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I_feel_confident": "yes",
+      "I_am_a_new_manager": "no",
+      "I_am_sick": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I_feel_confident": "yes",
+      "I_am_a_new_manager": "no",
+      "I_am_sick": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I_feel_confident": "no",
+      "I_am_a_new_manager": "yes",
+      "I_am_sick": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I_feel_confident": "no",
+      "I_am_a_new_manager": "yes",
+      "I_am_sick": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I_feel_confident": "no",
+      "I_am_a_new_manager": "no",
+      "I_am_sick": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    },
+    {
+      "I_feel_confident": "no",
+      "I_am_a_new_manager": "no",
+      "I_am_sick": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "sick": 0.334
+      }
+    }
+  ]
+}

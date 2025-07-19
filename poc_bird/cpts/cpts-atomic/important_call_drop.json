@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "urgency_of_call": [
+      "high",
+      "low"
+    ],
+    "importance_of_conversation": [
+      "important",
+      "unimportant"
+    ],
+    "signal_strength": [
+      "strong",
+      "weak"
+    ]
+  },
+  "cpt": [
+    {
+      "urgency_of_call": "high",
+      "importance_of_conversation": "important",
+      "signal_strength": "strong",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "urgency_of_call": "high",
+      "importance_of_conversation": "important",
+      "signal_strength": "weak",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "urgency_of_call": "high",
+      "importance_of_conversation": "unimportant",
+      "signal_strength": "strong",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "urgency_of_call": "high",
+      "importance_of_conversation": "unimportant",
+      "signal_strength": "weak",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "urgency_of_call": "low",
+      "importance_of_conversation": "important",
+      "signal_strength": "strong",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "urgency_of_call": "low",
+      "importance_of_conversation": "important",
+      "signal_strength": "weak",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "urgency_of_call": "low",
+      "importance_of_conversation": "unimportant",
+      "signal_strength": "strong",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "urgency_of_call": "low",
+      "importance_of_conversation": "unimportant",
+      "signal_strength": "weak",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

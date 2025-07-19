@@ -1,0 +1,95 @@
+{
+  "factors": {
+    "is_morning": [
+      "yes",
+      "no"
+    ],
+    "am_i_stressed_because_of_it": [
+      "yes",
+      "no"
+    ],
+    "did_I_feel_happy_before": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_morning": "yes",
+      "am_i_stressed_because_of_it": "yes",
+      "did_I_feel_happy_before": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "happy": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_morning": "yes",
+      "am_i_stressed_because_of_it": "yes",
+      "did_I_feel_happy_before": "no",
+      "emotions": {
+        "angry": 0.333,
+        "happy": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_morning": "yes",
+      "am_i_stressed_because_of_it": "no",
+      "did_I_feel_happy_before": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "happy": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_morning": "yes",
+      "am_i_stressed_because_of_it": "no",
+      "did_I_feel_happy_before": "no",
+      "emotions": {
+        "angry": 0.333,
+        "happy": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_morning": "no",
+      "am_i_stressed_because_of_it": "yes",
+      "did_I_feel_happy_before": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "happy": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_morning": "no",
+      "am_i_stressed_because_of_it": "yes",
+      "did_I_feel_happy_before": "no",
+      "emotions": {
+        "am_i_stressed_because_of_it": 0.6666666666666666,
+        "did_I_feel_happy_before": 0.3333333333333333
+      }
+    },
+    {
+      "is_morning": "no",
+      "am_i_stressed_because_of_it": "no",
+      "did_I_feel_happy_before": "yes",
+      "emotions": {
+        "am_i_stressed_because_of_it": 0.333,
+        "did_I_feel_happy_before": 0.334,
+        "is_morning": 0.333
+      }
+    },
+    {
+      "is_morning": "no",
+      "am_i_stressed_because_of_it": "no",
+      "did_I_feel_happy_before": "no",
+      "emotions": {
+        "am_i_stressed_because_of_it": 1.0
+      }
+    }
+  ]
+}

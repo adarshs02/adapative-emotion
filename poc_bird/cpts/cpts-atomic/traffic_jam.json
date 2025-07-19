@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "travel_purpose": [
+      "work",
+      "leisure"
+    ],
+    "time_of_day": [
+      "morning",
+      "afternoon/evening"
+    ],
+    "weather_conditions": [
+      "good",
+      "bad"
+    ]
+  },
+  "cpt": [
+    {
+      "travel_purpose": "work",
+      "time_of_day": "morning",
+      "weather_conditions": "good",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "travel_purpose": "work",
+      "time_of_day": "morning",
+      "weather_conditions": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "travel_purpose": "work",
+      "time_of_day": "afternoon/evening",
+      "weather_conditions": "good",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "travel_purpose": "work",
+      "time_of_day": "afternoon/evening",
+      "weather_conditions": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "travel_purpose": "leisure",
+      "time_of_day": "morning",
+      "weather_conditions": "good",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "travel_purpose": "leisure",
+      "time_of_day": "morning",
+      "weather_conditions": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "travel_purpose": "leisure",
+      "time_of_day": "afternoon/evening",
+      "weather_conditions": "good",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "travel_purpose": "leisure",
+      "time_of_day": "afternoon/evening",
+      "weather_conditions": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

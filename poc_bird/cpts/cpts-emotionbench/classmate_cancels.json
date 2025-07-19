@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_student": [
+      "angry",
+      "not_affected"
+    ],
+    "is_helpful": [
+      "helpful",
+      "not_helpful"
+    ],
+    "is_responsible": [
+      "irresponsible",
+      "responsible"
+    ]
+  },
+  "cpt": [
+    {
+      "is_student": "angry",
+      "is_helpful": "helpful",
+      "is_responsible": "irresponsible",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_student": "angry",
+      "is_helpful": "helpful",
+      "is_responsible": "responsible",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_student": "angry",
+      "is_helpful": "not_helpful",
+      "is_responsible": "irresponsible",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_student": "angry",
+      "is_helpful": "not_helpful",
+      "is_responsible": "responsible",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_student": "not_affected",
+      "is_helpful": "helpful",
+      "is_responsible": "irresponsible",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_student": "not_affected",
+      "is_helpful": "helpful",
+      "is_responsible": "responsible",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_student": "not_affected",
+      "is_helpful": "not_helpful",
+      "is_responsible": "irresponsible",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_student": "not_affected",
+      "is_helpful": "not_helpful",
+      "is_responsible": "responsible",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

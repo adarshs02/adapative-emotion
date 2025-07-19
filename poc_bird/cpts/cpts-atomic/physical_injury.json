@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "injured_part_of_body": [
+      "head",
+      "other"
+    ],
+    "type_of_activity": [
+      "physical",
+      "mental"
+    ],
+    "level_of_pain": [
+      "low",
+      "high"
+    ]
+  },
+  "cpt": [
+    {
+      "injured_part_of_body": "head",
+      "type_of_activity": "physical",
+      "level_of_pain": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "injured_part_of_body": "head",
+      "type_of_activity": "physical",
+      "level_of_pain": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "injured_part_of_body": "head",
+      "type_of_activity": "mental",
+      "level_of_pain": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "injured_part_of_body": "head",
+      "type_of_activity": "mental",
+      "level_of_pain": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "injured_part_of_body": "other",
+      "type_of_activity": "physical",
+      "level_of_pain": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "injured_part_of_body": "other",
+      "type_of_activity": "physical",
+      "level_of_pain": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "injured_part_of_body": "other",
+      "type_of_activity": "mental",
+      "level_of_pain": "low",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "injured_part_of_body": "other",
+      "type_of_activity": "mental",
+      "level_of_pain": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

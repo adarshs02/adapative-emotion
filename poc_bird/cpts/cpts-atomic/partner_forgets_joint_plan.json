@@ -1,0 +1,78 @@
+{
+  "factors": {
+    "guilt_feelings": [
+      "yes",
+      "no"
+    ],
+    "anxiety_level": [
+      "high",
+      "low"
+    ],
+    "communication_style": [
+      "open",
+      "closed"
+    ]
+  },
+  "cpt": [
+    {
+      "guilt_feelings": "yes",
+      "anxiety_level": "high",
+      "communication_style": "open",
+      "emotions": {
+        "anxiety_level": 0.333,
+        "communication_style": 0.334,
+        "guilt_feelings": 0.333
+      }
+    },
+    {
+      "guilt_feelings": "yes",
+      "anxiety_level": "high",
+      "communication_style": "closed",
+      "emotions": {
+        "anxiety_level": 0.333,
+        "communication_style": 0.334,
+        "guilt_feelings": 0.333
+      }
+    },
+    {
+      "guilt_feelings": "no",
+      "anxiety_level": "high",
+      "communication_style": "open",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilt_feelings": "no",
+      "anxiety_level": "high",
+      "communication_style": "closed",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilt_feelings": "no",
+      "anxiety_level": "low",
+      "communication_style": "open",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "guilt_feelings": "no",
+      "anxiety_level": "low",
+      "communication_style": "closed",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

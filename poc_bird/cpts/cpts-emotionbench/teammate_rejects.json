@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_feel_confident": [
+      "yes",
+      "no"
+    ],
+    "I_am_used_to_rejection": [
+      "yes",
+      "no"
+    ],
+    "I_am_anxious_because_of_the_location": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_feel_confident": "yes",
+      "I_am_used_to_rejection": "yes",
+      "I_am_anxious_because_of_the_location": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_confident": "yes",
+      "I_am_used_to_rejection": "yes",
+      "I_am_anxious_because_of_the_location": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_feel_confident": "yes",
+      "I_am_used_to_rejection": "no",
+      "I_am_anxious_because_of_the_location": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_confident": "yes",
+      "I_am_used_to_rejection": "no",
+      "I_am_anxious_because_of_the_location": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_confident": "no",
+      "I_am_used_to_rejection": "yes",
+      "I_am_anxious_because_of_the_location": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_confident": "no",
+      "I_am_used_to_rejection": "yes",
+      "I_am_anxious_because_of_the_location": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_confident": "no",
+      "I_am_used_to_rejection": "no",
+      "I_am_anxious_because_of_the_location": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_confident": "no",
+      "I_am_used_to_rejection": "no",
+      "I_am_anxious_because_of_the_location": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

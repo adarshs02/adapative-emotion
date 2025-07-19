@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_feel_hungry_because_of_the_lack_of_coffee": [
+      "yes",
+      "no"
+    ],
+    "I_am_stressed_because_I_must_remake_the_coffee": [
+      "yes",
+      "no"
+    ],
+    "I_am_angry_because_it_was_my_turn_to_make_coffee": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_feel_hungry_because_of_the_lack_of_coffee": "yes",
+      "I_am_stressed_because_I_must_remake_the_coffee": "yes",
+      "I_am_angry_because_it_was_my_turn_to_make_coffee": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_feel_hungry_because_of_the_lack_of_coffee": "yes",
+      "I_am_stressed_because_I_must_remake_the_coffee": "yes",
+      "I_am_angry_because_it_was_my_turn_to_make_coffee": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_feel_hungry_because_of_the_lack_of_coffee": "yes",
+      "I_am_stressed_because_I_must_remake_the_coffee": "no",
+      "I_am_angry_because_it_was_my_turn_to_make_coffee": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_feel_hungry_because_of_the_lack_of_coffee": "yes",
+      "I_am_stressed_because_I_must_remake_the_coffee": "no",
+      "I_am_angry_because_it_was_my_turn_to_make_coffee": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_feel_hungry_because_of_the_lack_of_coffee": "no",
+      "I_am_stressed_because_I_must_remake_the_coffee": "yes",
+      "I_am_angry_because_it_was_my_turn_to_make_coffee": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_feel_hungry_because_of_the_lack_of_coffee": "no",
+      "I_am_stressed_because_I_must_remake_the_coffee": "yes",
+      "I_am_angry_because_it_was_my_turn_to_make_coffee": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_feel_hungry_because_of_the_lack_of_coffee": "no",
+      "I_am_stressed_because_I_must_remake_the_coffee": "no",
+      "I_am_angry_because_it_was_my_turn_to_make_coffee": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_feel_hungry_because_of_the_lack_of_coffee": "no",
+      "I_am_stressed_because_I_must_remake_the_coffee": "no",
+      "I_am_angry_because_it_was_my_turn_to_make_coffee": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

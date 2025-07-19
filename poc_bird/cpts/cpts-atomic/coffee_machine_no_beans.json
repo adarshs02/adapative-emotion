@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "morning": [
+      "yes",
+      "no"
+    ],
+    "caffeine_deprivation": [
+      "yes",
+      "no"
+    ],
+    "loneliness": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "morning": "yes",
+      "caffeine_deprivation": "yes",
+      "loneliness": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "morning": "yes",
+      "caffeine_deprivation": "yes",
+      "loneliness": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "morning": "yes",
+      "caffeine_deprivation": "no",
+      "loneliness": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "morning": "yes",
+      "caffeine_deprivation": "no",
+      "loneliness": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "morning": "no",
+      "caffeine_deprivation": "yes",
+      "loneliness": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "morning": "no",
+      "caffeine_deprivation": "yes",
+      "loneliness": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "morning": "no",
+      "caffeine_deprivation": "no",
+      "loneliness": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "morning": "no",
+      "caffeine_deprivation": "no",
+      "loneliness": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

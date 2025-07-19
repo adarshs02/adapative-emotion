@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_anxious_because_of_the_sneezing": [
+      "yes",
+      "no"
+    ],
+    "it_was_a_serious_sneeze": [
+      "yes",
+      "no"
+    ],
+    "sneezes_are_rare_in_class": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_anxious_because_of_the_sneezing": "yes",
+      "it_was_a_serious_sneeze": "yes",
+      "sneezes_are_rare_in_class": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_anxious_because_of_the_sneezing": "yes",
+      "it_was_a_serious_sneeze": "yes",
+      "sneezes_are_rare_in_class": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_anxious_because_of_the_sneezing": "yes",
+      "it_was_a_serious_sneeze": "no",
+      "sneezes_are_rare_in_class": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_anxious_because_of_the_sneezing": "yes",
+      "it_was_a_serious_sneeze": "no",
+      "sneezes_are_rare_in_class": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_anxious_because_of_the_sneezing": "no",
+      "it_was_a_serious_sneeze": "yes",
+      "sneezes_are_rare_in_class": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_anxious_because_of_the_sneezing": "no",
+      "it_was_a_serious_sneeze": "yes",
+      "sneezes_are_rare_in_class": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_anxious_because_of_the_sneezing": "no",
+      "it_was_a_serious_sneeze": "no",
+      "sneezes_are_rare_in_class": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_anxious_because_of_the_sneezing": "no",
+      "it_was_a_serious_sneeze": "no",
+      "sneezes_are_rare_in_class": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

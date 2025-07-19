@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_feel_angry_because_I_have_to_stand_up": [
+      "yes",
+      "no"
+    ],
+    "I_feel_frustrated_because_I_want_a_seat": [
+      "yes",
+      "no"
+    ],
+    "I_feel_sorry_because_the_passenger_is_comfortable": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_feel_angry_because_I_have_to_stand_up": "yes",
+      "I_feel_frustrated_because_I_want_a_seat": "yes",
+      "I_feel_sorry_because_the_passenger_is_comfortable": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I_feel_angry_because_I_have_to_stand_up": "yes",
+      "I_feel_frustrated_because_I_want_a_seat": "yes",
+      "I_feel_sorry_because_the_passenger_is_comfortable": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I_feel_angry_because_I_have_to_stand_up": "yes",
+      "I_feel_frustrated_because_I_want_a_seat": "no",
+      "I_feel_sorry_because_the_passenger_is_comfortable": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_angry_because_I_have_to_stand_up": "yes",
+      "I_feel_frustrated_because_I_want_a_seat": "no",
+      "I_feel_sorry_because_the_passenger_is_comfortable": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I_feel_angry_because_I_have_to_stand_up": "no",
+      "I_feel_frustrated_because_I_want_a_seat": "yes",
+      "I_feel_sorry_because_the_passenger_is_comfortable": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_angry_because_I_have_to_stand_up": "no",
+      "I_feel_frustrated_because_I_want_a_seat": "yes",
+      "I_feel_sorry_because_the_passenger_is_comfortable": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_feel_angry_because_I_have_to_stand_up": "no",
+      "I_feel_frustrated_because_I_want_a_seat": "no",
+      "I_feel_sorry_because_the_passenger_is_comfortable": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I_feel_angry_because_I_have_to_stand_up": "no",
+      "I_feel_frustrated_because_I_want_a_seat": "no",
+      "I_feel_sorry_because_the_passenger_is_comfortable": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "time_of_day": [
+      "morning",
+      "afternoon/evening"
+    ],
+    "weather_conditions": [
+      "good",
+      "bad"
+    ],
+    "my_mood_before_the_event": [
+      "good",
+      "bad"
+    ]
+  },
+  "cpt": [
+    {
+      "time_of_day": "morning",
+      "weather_conditions": "good",
+      "my_mood_before_the_event": "good",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "weather_conditions": "good",
+      "my_mood_before_the_event": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "weather_conditions": "bad",
+      "my_mood_before_the_event": "good",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "morning",
+      "weather_conditions": "bad",
+      "my_mood_before_the_event": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "afternoon/evening",
+      "weather_conditions": "good",
+      "my_mood_before_the_event": "good",
+      "emotions": {
+        "angry": 0.333,
+        "good": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "afternoon/evening",
+      "weather_conditions": "good",
+      "my_mood_before_the_event": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "afternoon/evening",
+      "weather_conditions": "bad",
+      "my_mood_before_the_event": "good",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "time_of_day": "afternoon/evening",
+      "weather_conditions": "bad",
+      "my_mood_before_the_event": "bad",
+      "emotions": {
+        "angry": 0.333,
+        "bad": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "am_I_responsible_for_delay": [
+      "yes",
+      "no"
+    ],
+    "is_it_a_major_disruption": [
+      "yes",
+      "no"
+    ],
+    "how_long_do_i_have_to_wait": [
+      "long",
+      "short"
+    ]
+  },
+  "cpt": [
+    {
+      "am_I_responsible_for_delay": "yes",
+      "is_it_a_major_disruption": "yes",
+      "how_long_do_i_have_to_wait": "long",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "am_I_responsible_for_delay": "yes",
+      "is_it_a_major_disruption": "yes",
+      "how_long_do_i_have_to_wait": "short",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "am_I_responsible_for_delay": "yes",
+      "is_it_a_major_disruption": "no",
+      "how_long_do_i_have_to_wait": "long",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "am_I_responsible_for_delay": "yes",
+      "is_it_a_major_disruption": "no",
+      "how_long_do_i_have_to_wait": "short",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "am_I_responsible_for_delay": "no",
+      "is_it_a_major_disruption": "yes",
+      "how_long_do_i_have_to_wait": "long",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "am_I_responsible_for_delay": "no",
+      "is_it_a_major_disruption": "yes",
+      "how_long_do_i_have_to_wait": "short",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "am_I_responsible_for_delay": "no",
+      "is_it_a_major_disruption": "no",
+      "how_long_do_i_have_to_wait": "long",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "am_I_responsible_for_delay": "no",
+      "is_it_a_major_disruption": "no",
+      "how_long_do_i_have_to_wait": "short",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

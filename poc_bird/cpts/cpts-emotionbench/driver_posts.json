@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm the one in the photo": [
+      "yes",
+      "no"
+    ],
+    "I'm feeling insecure because of the photo": [
+      "yes",
+      "no"
+    ],
+    "I'm upset because of the photo": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm the one in the photo": "yes",
+      "I'm feeling insecure because of the photo": "yes",
+      "I'm upset because of the photo": "yes",
+      "emotions": {
+        "insecure": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm the one in the photo": "yes",
+      "I'm feeling insecure because of the photo": "yes",
+      "I'm upset because of the photo": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm the one in the photo": "yes",
+      "I'm feeling insecure because of the photo": "no",
+      "I'm upset because of the photo": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm the one in the photo": "yes",
+      "I'm feeling insecure because of the photo": "no",
+      "I'm upset because of the photo": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm the one in the photo": "no",
+      "I'm feeling insecure because of the photo": "yes",
+      "I'm upset because of the photo": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm the one in the photo": "no",
+      "I'm feeling insecure because of the photo": "yes",
+      "I'm upset because of the photo": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm the one in the photo": "no",
+      "I'm feeling insecure because of the photo": "no",
+      "I'm upset because of the photo": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I'm the one in the photo": "no",
+      "I'm feeling insecure because of the photo": "no",
+      "I'm upset because of the photo": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_aware_of_error": [
+      "yes",
+      "no"
+    ],
+    "how_others_perceive_me": [
+      "positively",
+      "negatively"
+    ],
+    "my_confidence_level": [
+      "high",
+      "low"
+    ]
+  },
+  "cpt": [
+    {
+      "is_aware_of_error": "yes",
+      "how_others_perceive_me": "positively",
+      "my_confidence_level": "high",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_aware_of_error": "yes",
+      "how_others_perceive_me": "positively",
+      "my_confidence_level": "low",
+      "emotions": {
+        "angry": 0.333,
+        "low": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_aware_of_error": "yes",
+      "how_others_perceive_me": "negatively",
+      "my_confidence_level": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_aware_of_error": "yes",
+      "how_others_perceive_me": "negatively",
+      "my_confidence_level": "low",
+      "emotions": {
+        "angry": 0.333,
+        "low": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_aware_of_error": "no",
+      "how_others_perceive_me": "positively",
+      "my_confidence_level": "high",
+      "emotions": {
+        "angry": 0.333,
+        "positive": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_aware_of_error": "no",
+      "how_others_perceive_me": "positively",
+      "my_confidence_level": "low",
+      "emotions": {
+        "angry": 0.333,
+        "low": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "is_aware_of_error": "no",
+      "how_others_perceive_me": "negatively",
+      "my_confidence_level": "high",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_aware_of_error": "no",
+      "how_others_perceive_me": "negatively",
+      "my_confidence_level": "low",
+      "emotions": {
+        "angry": 0.333,
+        "low": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

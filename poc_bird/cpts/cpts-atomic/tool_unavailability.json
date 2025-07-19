@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I am frustrated because I couldn't accomplish my goal": [
+      "yes",
+      "no"
+    ],
+    "I feel helpless because of the situation": [
+      "yes",
+      "no"
+    ],
+    "I am stressed because of the lack of time": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I am frustrated because I couldn't accomplish my goal": "yes",
+      "I feel helpless because of the situation": "yes",
+      "I am stressed because of the lack of time": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am frustrated because I couldn't accomplish my goal": "yes",
+      "I feel helpless because of the situation": "yes",
+      "I am stressed because of the lack of time": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am frustrated because I couldn't accomplish my goal": "yes",
+      "I feel helpless because of the situation": "no",
+      "I am stressed because of the lack of time": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am frustrated because I couldn't accomplish my goal": "yes",
+      "I feel helpless because of the situation": "no",
+      "I am stressed because of the lack of time": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am frustrated because I couldn't accomplish my goal": "no",
+      "I feel helpless because of the situation": "yes",
+      "I am stressed because of the lack of time": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am frustrated because I couldn't accomplish my goal": "no",
+      "I feel helpless because of the situation": "yes",
+      "I am stressed because of the lack of time": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am frustrated because I couldn't accomplish my goal": "no",
+      "I feel helpless because of the situation": "no",
+      "I am stressed because of the lack of time": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I am frustrated because I couldn't accomplish my goal": "no",
+      "I feel helpless because of the situation": "no",
+      "I am stressed because of the lack of time": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

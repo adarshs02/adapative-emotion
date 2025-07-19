@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_at_work": [
+      "yes",
+      "no"
+    ],
+    "I_feel_responsible_because_I_am_blamed": [
+      "yes",
+      "no"
+    ],
+    "I_am_confident_in_my_abilities": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_at_work": "yes",
+      "I_feel_responsible_because_I_am_blamed": "yes",
+      "I_am_confident_in_my_abilities": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_at_work": "yes",
+      "I_feel_responsible_because_I_am_blamed": "yes",
+      "I_am_confident_in_my_abilities": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_at_work": "yes",
+      "I_feel_responsible_because_I_am_blamed": "no",
+      "I_am_confident_in_my_abilities": "yes",
+      "emotions": {
+        "angry": 0.3333333333333333,
+        "confident": 0.3333333333333333,
+        "sad": 0.3333333333333333
+      }
+    },
+    {
+      "I_am_at_work": "yes",
+      "I_feel_responsible_because_I_am_blamed": "no",
+      "I_am_confident_in_my_abilities": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_at_work": "no",
+      "I_feel_responsible_because_I_am_blamed": "yes",
+      "I_am_confident_in_my_abilities": "yes",
+      "emotions": {
+        "angry": 0.3333333333333333,
+        "confident": 0.3333333333333333,
+        "sad": 0.3333333333333333
+      }
+    },
+    {
+      "I_am_at_work": "no",
+      "I_feel_responsible_because_I_am_blamed": "yes",
+      "I_am_confident_in_my_abilities": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I_am_at_work": "no",
+      "I_feel_responsible_because_I_am_blamed": "no",
+      "I_am_confident_in_my_abilities": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "confident": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I_am_at_work": "no",
+      "I_feel_responsible_because_I_am_blamed": "no",
+      "I_am_confident_in_my_abilities": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

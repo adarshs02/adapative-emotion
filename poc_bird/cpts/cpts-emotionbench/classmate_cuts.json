@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "was_i_hungry": [
+      "yes",
+      "no"
+    ],
+    "was_i_stressed": [
+      "yes",
+      "no"
+    ],
+    "was_classmate_apologetic": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "was_i_hungry": "yes",
+      "was_i_stressed": "yes",
+      "was_classmate_apologetic": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "was_i_hungry": "yes",
+      "was_i_stressed": "yes",
+      "was_classmate_apologetic": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "was_i_hungry": "yes",
+      "was_i_stressed": "no",
+      "was_classmate_apologetic": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "was_i_hungry": "yes",
+      "was_i_stressed": "no",
+      "was_classmate_apologetic": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "was_i_hungry": "no",
+      "was_i_stressed": "yes",
+      "was_classmate_apologetic": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "was_i_hungry": "no",
+      "was_i_stressed": "yes",
+      "was_classmate_apologetic": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "was_i_hungry": "no",
+      "was_i_stressed": "no",
+      "was_classmate_apologetic": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "was_i_hungry": "no",
+      "was_i_stressed": "no",
+      "was_classmate_apologetic": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

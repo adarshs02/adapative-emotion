@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_anonymous": [
+      "yes",
+      "no"
+    ],
+    "is_close_friend": [
+      "yes",
+      "no"
+    ],
+    "is_professor": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_anonymous": "yes",
+      "is_close_friend": "yes",
+      "is_professor": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_anonymous": "yes",
+      "is_close_friend": "yes",
+      "is_professor": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_anonymous": "yes",
+      "is_close_friend": "no",
+      "is_professor": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_anonymous": "yes",
+      "is_close_friend": "no",
+      "is_professor": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_anonymous": "no",
+      "is_close_friend": "yes",
+      "is_professor": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_anonymous": "no",
+      "is_close_friend": "yes",
+      "is_professor": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_anonymous": "no",
+      "is_close_friend": "no",
+      "is_professor": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_anonymous": "no",
+      "is_close_friend": "no",
+      "is_professor": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

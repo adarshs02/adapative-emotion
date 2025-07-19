@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_anonymous": [
+      "yes",
+      "no"
+    ],
+    "is_malicious_intent": [
+      "yes",
+      "no"
+    ],
+    "is_important_information": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_anonymous": "yes",
+      "is_malicious_intent": "yes",
+      "is_important_information": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous": "yes",
+      "is_malicious_intent": "yes",
+      "is_important_information": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous": "yes",
+      "is_malicious_intent": "no",
+      "is_important_information": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous": "yes",
+      "is_malicious_intent": "no",
+      "is_important_information": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous": "no",
+      "is_malicious_intent": "yes",
+      "is_important_information": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous": "no",
+      "is_malicious_intent": "yes",
+      "is_important_information": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous": "no",
+      "is_malicious_intent": "no",
+      "is_important_information": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "is_anonymous": "no",
+      "is_malicious_intent": "no",
+      "is_important_information": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    }
+  ]
+}

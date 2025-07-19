@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "flight_length": [
+      "short",
+      "long"
+    ],
+    "seat_kicking_intensity": [
+      "mild",
+      "harsh"
+    ],
+    "my_sleep_level": [
+      "asleep",
+      "awake"
+    ]
+  },
+  "cpt": [
+    {
+      "flight_length": "short",
+      "seat_kicking_intensity": "mild",
+      "my_sleep_level": "asleep",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "flight_length": "short",
+      "seat_kicking_intensity": "mild",
+      "my_sleep_level": "awake",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "flight_length": "short",
+      "seat_kicking_intensity": "harsh",
+      "my_sleep_level": "asleep",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "flight_length": "short",
+      "seat_kicking_intensity": "harsh",
+      "my_sleep_level": "awake",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "flight_length": "long",
+      "seat_kicking_intensity": "mild",
+      "my_sleep_level": "asleep",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "flight_length": "long",
+      "seat_kicking_intensity": "mild",
+      "my_sleep_level": "awake",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "flight_length": "long",
+      "seat_kicking_intensity": "harsh",
+      "my_sleep_level": "asleep",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    },
+    {
+      "flight_length": "long",
+      "seat_kicking_intensity": "harsh",
+      "my_sleep_level": "awake",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "uncomfortable": 0.334
+      }
+    }
+  ]
+}

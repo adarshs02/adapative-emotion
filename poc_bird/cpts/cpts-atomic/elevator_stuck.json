@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm alone because I was late for work": [
+      "yes",
+      "no"
+    ],
+    "I'm worried about being late": [
+      "yes",
+      "no"
+    ],
+    "I have somewhere important to be": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm alone because I was late for work": "yes",
+      "I'm worried about being late": "yes",
+      "I have somewhere important to be": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm alone because I was late for work": "yes",
+      "I'm worried about being late": "yes",
+      "I have somewhere important to be": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm alone because I was late for work": "yes",
+      "I'm worried about being late": "no",
+      "I have somewhere important to be": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm alone because I was late for work": "yes",
+      "I'm worried about being late": "no",
+      "I have somewhere important to be": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm alone because I was late for work": "no",
+      "I'm worried about being late": "yes",
+      "I have somewhere important to be": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm alone because I was late for work": "no",
+      "I'm worried about being late": "yes",
+      "I have somewhere important to be": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm alone because I was late for work": "no",
+      "I'm worried about being late": "no",
+      "I have somewhere important to be": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm alone because I was late for work": "no",
+      "I'm worried about being late": "no",
+      "I have somewhere important to be": "no",
+      "emotions": {
+        "angry": 0.333,
+        "lonely": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

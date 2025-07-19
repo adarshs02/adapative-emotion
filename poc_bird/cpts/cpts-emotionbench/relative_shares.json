@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I feel embarrassed because of what I did": [
+      "yes",
+      "no"
+    ],
+    "I feel guilty because of what I did": [
+      "yes",
+      "no"
+    ],
+    "I'm upset because they shared a secret": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I feel embarrassed because of what I did": "yes",
+      "I feel guilty because of what I did": "yes",
+      "I'm upset because they shared a secret": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel embarrassed because of what I did": "yes",
+      "I feel guilty because of what I did": "yes",
+      "I'm upset because they shared a secret": "no",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel embarrassed because of what I did": "yes",
+      "I feel guilty because of what I did": "no",
+      "I'm upset because they shared a secret": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I feel embarrassed because of what I did": "yes",
+      "I feel guilty because of what I did": "no",
+      "I'm upset because they shared a secret": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I feel embarrassed because of what I did": "no",
+      "I feel guilty because of what I did": "yes",
+      "I'm upset because they shared a secret": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel embarrassed because of what I did": "no",
+      "I feel guilty because of what I did": "yes",
+      "I'm upset because they shared a secret": "no",
+      "emotions": {
+        "angry": 0.333,
+        "guilty": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I feel embarrassed because of what I did": "no",
+      "I feel guilty because of what I did": "no",
+      "I'm upset because they shared a secret": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "I feel embarrassed because of what I did": "no",
+      "I feel guilty because of what I did": "no",
+      "I'm upset because they shared a secret": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

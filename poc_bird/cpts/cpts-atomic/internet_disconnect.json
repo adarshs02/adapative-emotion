@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_critical_task": [
+      "true",
+      "false"
+    ],
+    "was_prepared_for_disconnection": [
+      "yes",
+      "no"
+    ],
+    "can_reconnect_quickly": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_critical_task": "true",
+      "was_prepared_for_disconnection": "yes",
+      "can_reconnect_quickly": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_critical_task": "true",
+      "was_prepared_for_disconnection": "yes",
+      "can_reconnect_quickly": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_critical_task": "true",
+      "was_prepared_for_disconnection": "no",
+      "can_reconnect_quickly": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_critical_task": "true",
+      "was_prepared_for_disconnection": "no",
+      "can_reconnect_quickly": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_critical_task": "false",
+      "was_prepared_for_disconnection": "yes",
+      "can_reconnect_quickly": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_critical_task": "false",
+      "was_prepared_for_disconnection": "yes",
+      "can_reconnect_quickly": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_critical_task": "false",
+      "was_prepared_for_disconnection": "no",
+      "can_reconnect_quickly": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_critical_task": "false",
+      "was_prepared_for_disconnection": "no",
+      "can_reconnect_quickly": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

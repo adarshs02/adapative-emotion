@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I_am_able_to_recover_the_photo": [
+      "yes",
+      "no"
+    ],
+    "the_photo_was_very_valuable": [
+      "yes",
+      "no"
+    ],
+    "I_feel_stressed_because_of_it": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I_am_able_to_recover_the_photo": "yes",
+      "the_photo_was_very_valuable": "yes",
+      "I_feel_stressed_because_of_it": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_able_to_recover_the_photo": "yes",
+      "the_photo_was_very_valuable": "yes",
+      "I_feel_stressed_because_of_it": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_able_to_recover_the_photo": "yes",
+      "the_photo_was_very_valuable": "no",
+      "I_feel_stressed_because_of_it": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_able_to_recover_the_photo": "yes",
+      "the_photo_was_very_valuable": "no",
+      "I_feel_stressed_because_of_it": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_able_to_recover_the_photo": "no",
+      "the_photo_was_very_valuable": "yes",
+      "I_feel_stressed_because_of_it": "yes",
+      "emotions": {
+        "I feel stressed because of it": 0.333,
+        "I am able to recover the photo": 0.334,
+        "the photo was very valuable": 0.333
+      }
+    },
+    {
+      "I_am_able_to_recover_the_photo": "no",
+      "the_photo_was_very_valuable": "yes",
+      "I_feel_stressed_because_of_it": "no",
+      "emotions": {
+        "I feel stressed because of it": 0.333,
+        "I am able to recover the photo": 0.334,
+        "the photo was very valuable": 0.333
+      }
+    },
+    {
+      "I_am_able_to_recover_the_photo": "no",
+      "the_photo_was_very_valuable": "no",
+      "I_feel_stressed_because_of_it": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I_am_able_to_recover_the_photo": "no",
+      "the_photo_was_very_valuable": "no",
+      "I_feel_stressed_because_of_it": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

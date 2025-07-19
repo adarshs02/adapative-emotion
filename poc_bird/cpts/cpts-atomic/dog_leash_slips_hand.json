@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "emotional_level": [
+      "anxious",
+      "calm"
+    ],
+    "leash_condition": [
+      "lost_control",
+      "still_in_control"
+    ],
+    "my_responsibility": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "emotional_level": "anxious",
+      "leash_condition": "lost_control",
+      "my_responsibility": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "emotional_level": "anxious",
+      "leash_condition": "lost_control",
+      "my_responsibility": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "emotional_level": "anxious",
+      "leash_condition": "still_in_control",
+      "my_responsibility": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "emotional_level": "anxious",
+      "leash_condition": "still_in_control",
+      "my_responsibility": "no",
+      "emotions": {
+        "angry": 0.333,
+        "anxious": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "emotional_level": "calm",
+      "leash_condition": "lost_control",
+      "my_responsibility": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "emotional_level": "calm",
+      "leash_condition": "lost_control",
+      "my_responsibility": "no",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "emotional_level": "calm",
+      "leash_condition": "still_in_control",
+      "my_responsibility": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "emotional_level": "calm",
+      "leash_condition": "still_in_control",
+      "my_responsibility": "no",
+      "emotions": {
+        "angry": 0.333,
+        "emotional": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}

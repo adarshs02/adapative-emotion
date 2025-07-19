@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "is_at_home": [
+      "yes",
+      "no"
+    ],
+    "is_with_familiar_people": [
+      "yes",
+      "no"
+    ],
+    "is_important_belonging": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "is_at_home": "yes",
+      "is_with_familiar_people": "yes",
+      "is_important_belonging": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_at_home": "yes",
+      "is_with_familiar_people": "yes",
+      "is_important_belonging": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_at_home": "yes",
+      "is_with_familiar_people": "no",
+      "is_important_belonging": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_at_home": "yes",
+      "is_with_familiar_people": "no",
+      "is_important_belonging": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_at_home": "no",
+      "is_with_familiar_people": "yes",
+      "is_important_belonging": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_at_home": "no",
+      "is_with_familiar_people": "yes",
+      "is_important_belonging": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_at_home": "no",
+      "is_with_familiar_people": "no",
+      "is_important_belonging": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    },
+    {
+      "is_at_home": "no",
+      "is_with_familiar_people": "no",
+      "is_important_belonging": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "upset": 0.334
+      }
+    }
+  ]
+}

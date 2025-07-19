@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm tired because it's my day off": [
+      "yes",
+      "no"
+    ],
+    "I'm stressed because I have to be somewhere": [
+      "yes",
+      "no"
+    ],
+    "I'm frustrated because I'm not used to driving aggressively": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm tired because it's my day off": "yes",
+      "I'm stressed because I have to be somewhere": "yes",
+      "I'm frustrated because I'm not used to driving aggressively": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm tired because it's my day off": "yes",
+      "I'm stressed because I have to be somewhere": "yes",
+      "I'm frustrated because I'm not used to driving aggressively": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm tired because it's my day off": "yes",
+      "I'm stressed because I have to be somewhere": "no",
+      "I'm frustrated because I'm not used to driving aggressively": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm tired because it's my day off": "yes",
+      "I'm stressed because I have to be somewhere": "no",
+      "I'm frustrated because I'm not used to driving aggressively": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm tired because it's my day off": "no",
+      "I'm stressed because I have to be somewhere": "yes",
+      "I'm frustrated because I'm not used to driving aggressively": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm tired because it's my day off": "no",
+      "I'm stressed because I have to be somewhere": "yes",
+      "I'm frustrated because I'm not used to driving aggressively": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.333,
+        "sad": 0.334
+      }
+    },
+    {
+      "I'm tired because it's my day off": "no",
+      "I'm stressed because I have to be somewhere": "no",
+      "I'm frustrated because I'm not used to driving aggressively": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    },
+    {
+      "I'm tired because it's my day off": "no",
+      "I'm stressed because I have to be somewhere": "no",
+      "I'm frustrated because I'm not used to driving aggressively": "no",
+      "emotions": {
+        "angry": 0.333,
+        "sad": 0.333,
+        "stressed": 0.334
+      }
+    }
+  ]
+}

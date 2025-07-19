@@ -1,0 +1,98 @@
+{
+  "factors": {
+    "I'm feeling frustrated because I need the service": [
+      "yes",
+      "no"
+    ],
+    "I have alternative options for the service": [
+      "yes",
+      "no"
+    ],
+    "The closure was unexpected": [
+      "yes",
+      "no"
+    ]
+  },
+  "cpt": [
+    {
+      "I'm feeling frustrated because I need the service": "yes",
+      "I have alternative options for the service": "yes",
+      "The closure was unexpected": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling frustrated because I need the service": "yes",
+      "I have alternative options for the service": "yes",
+      "The closure was unexpected": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling frustrated because I need the service": "yes",
+      "I have alternative options for the service": "no",
+      "The closure was unexpected": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling frustrated because I need the service": "yes",
+      "I have alternative options for the service": "no",
+      "The closure was unexpected": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling frustrated because I need the service": "no",
+      "I have alternative options for the service": "yes",
+      "The closure was unexpected": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling frustrated because I need the service": "no",
+      "I have alternative options for the service": "yes",
+      "The closure was unexpected": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling frustrated because I need the service": "no",
+      "I have alternative options for the service": "no",
+      "The closure was unexpected": "yes",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    },
+    {
+      "I'm feeling frustrated because I need the service": "no",
+      "I have alternative options for the service": "no",
+      "The closure was unexpected": "no",
+      "emotions": {
+        "angry": 0.333,
+        "frustrated": 0.334,
+        "sad": 0.333
+      }
+    }
+  ]
+}
