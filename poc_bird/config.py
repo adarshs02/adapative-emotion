@@ -3,7 +3,7 @@
 import os
 
 # Embedding model configuration for Llama 3.1 with vLLM
-EMBED_MODEL_NAME = "meta-llama/Meta-Llama-3.1-8B-Instruct" 
+EMBED_MODEL_NAME = "Qwen/Qwen3-Embedding-8B" 
 EMBED_BATCH_SIZE = 64  # Batch size for embedding generation (vLLM can handle larger batches)
 EMBED_DIM = 4096  # Llama 3.1 8B embedding dimension
 

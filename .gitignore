@@ -58,3 +58,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 train/*.json
+poc_bird/*.npy
+poc_bird/*.index
+poc_bird/*.bin

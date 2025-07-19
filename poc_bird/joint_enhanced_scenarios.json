@@ -1,0 +1,3341 @@
+[
+  {
+    "scenario_id": "unexpected_delay",
+    "original_description": "An unforeseen delay forces you to wait and disrupts your schedule.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "minor_inconvenience",
+      "unforeseen_circumstances"
+    ],
+    "joint_text": "An unforeseen delay forces you to wait and disrupts your schedule.. Context: coworker: coworker peer; involving work, sudden; workplace: workplace private; minor: minor inconvenience; unforeseen: unforeseen circumstances. Tags: coworker_peer, work, workplace_private, sudden, minor_inconvenience, unforeseen_circumstances",
+    "embedding_index": 0
+  },
+  {
+    "scenario_id": "personal_property_taken",
+    "original_description": "Someone uses or removes your personal property without permission.",
+    "generated_tags": [
+      "stranger",
+      "taking_property",
+      "personal",
+      "home_private",
+      "sudden",
+      "coworker_peer",
+      "taking_property",
+      "personal"
+    ],
+    "joint_text": "Someone uses or removes your personal property without permission.. Context: involving stranger, personal, sudden, personal; taking: taking property, taking property; home: home private; coworker: coworker peer. Tags: stranger, taking_property, personal, home_private, sudden, coworker_peer, taking_property, personal",
+    "embedding_index": 1
+  },
+  {
+    "scenario_id": "critical_obligation_missed",
+    "original_description": "You fail to fulfill a time\u2011sensitive duty or commitment.",
+    "generated_tags": [
+      "coworker_peer",
+      "peer",
+      "neglect",
+      "breaking_promise",
+      "work",
+      "workplace_private"
+    ],
+    "joint_text": "You fail to fulfill a time\u2011sensitive duty or commitment.. Context: coworker: coworker peer; involving peer, neglect, work; breaking: breaking promise; workplace: workplace private. Tags: coworker_peer, peer, neglect, breaking_promise, work, workplace_private",
+    "embedding_index": 2
+  },
+  {
+    "scenario_id": "essential_item_unavailable",
+    "original_description": "You cannot access or locate something you need immediately.",
+    "generated_tags": [
+      "self",
+      "personal",
+      "home_private",
+      "sudden",
+      "minor_inconvenience",
+      "blocked_goal"
+    ],
+    "joint_text": "You cannot access or locate something you need immediately.. Context: involving self, personal, sudden; home: home private; minor: minor inconvenience; blocked: blocked goal. Tags: self, personal, home_private, sudden, minor_inconvenience, blocked_goal",
+    "embedding_index": 3
+  },
+  {
+    "scenario_id": "hazardous_behavior_from_other",
+    "original_description": "Another person\u2019s reckless action endangers or inconveniences you.",
+    "generated_tags": [
+      "stranger",
+      "physical_harm",
+      "public",
+      "street_public",
+      "sudden",
+      "safety_risk"
+    ],
+    "joint_text": "Another person\u2019s reckless action endangers or inconveniences you.. Context: involving stranger, public, sudden; physical: physical harm; street: street public; safety: safety risk. Tags: stranger, physical_harm, public, street_public, sudden, safety_risk",
+    "embedding_index": 4
+  },
+  {
+    "scenario_id": "unexpected_resource_failure",
+    "original_description": "A tool, service, or piece of technology stops working when required.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "minor_inconvenience",
+      "equipment_failure",
+      "coworker_peer",
+      "work"
+    ],
+    "joint_text": "A tool, service, or piece of technology stops working when required.. Context: coworker: coworker peer, coworker peer; involving work, sudden, work; workplace: workplace private; minor: minor inconvenience; equipment: equipment failure. Tags: coworker_peer, work, workplace_private, sudden, minor_inconvenience, equipment_failure, coworker_peer, work",
+    "embedding_index": 5
+  },
+  {
+    "scenario_id": "commitment_revoked",
+    "original_description": "An agreed\u2011upon plan or promise is canceled at short notice.",
+    "generated_tags": [
+      "coworker_peer",
+      "breaking_promise",
+      "work",
+      "workplace_private",
+      "sudden"
+    ],
+    "joint_text": "An agreed\u2011upon plan or promise is canceled at short notice.. Context: coworker: coworker peer; breaking: breaking promise; involving work, sudden; workplace: workplace private. Tags: coworker_peer, breaking_promise, work, workplace_private, sudden",
+    "embedding_index": 6
+  },
+  {
+    "scenario_id": "public_mistake_exposure",
+    "original_description": "Your error or shortcoming becomes visible to others.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_shared",
+      "sudden",
+      "betrayal",
+      "social_damage",
+      "emotional_damage",
+      "relationship_damage"
+    ],
+    "joint_text": "Your error or shortcoming becomes visible to others.. Context: coworker: coworker peer; involving work, sudden, betrayal; workplace: workplace shared; social: social damage; emotional: emotional damage; relationship: relationship damage. Tags: coworker_peer, work, workplace_shared, sudden, betrayal, social_damage, emotional_damage, relationship_damage",
+    "embedding_index": 7
+  },
+  {
+    "scenario_id": "unforeseen_financial_burden",
+    "original_description": "An unplanned cost arises that strains your budget.",
+    "generated_tags": [
+      "financial",
+      "individual",
+      "unforeseen_circumstances",
+      "sudden",
+      "material_loss_small",
+      "uncontrollable"
+    ],
+    "joint_text": "An unplanned cost arises that strains your budget.. Context: involving financial, individual, sudden, uncontrollable; unforeseen: unforeseen circumstances; material: material loss small. Tags: financial, individual, unforeseen_circumstances, sudden, material_loss_small, uncontrollable",
+    "embedding_index": 8
+  },
+  {
+    "scenario_id": "environmental_disruption",
+    "original_description": "External conditions (noise, weather, etc.) prevent focus or rest.",
+    "generated_tags": [
+      "unrelated",
+      "personal",
+      "home_private",
+      "ongoing",
+      "uncontrollable",
+      "minor_inconvenience"
+    ],
+    "joint_text": "External conditions (noise, weather, etc.) prevent focus or rest.. Context: involving unrelated, personal, ongoing, uncontrollable; home: home private; minor: minor inconvenience. Tags: unrelated, personal, home_private, ongoing, uncontrollable, minor_inconvenience",
+    "embedding_index": 9
+  },
+  {
+    "scenario_id": "communication_breakdown",
+    "original_description": "You cannot reach someone or get a response when it is urgent to do so.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_shared",
+      "sudden",
+      "ignored",
+      "major_inconvenience"
+    ],
+    "joint_text": "You cannot reach someone or get a response when it is urgent to do so.. Context: coworker: coworker peer; involving work, sudden, ignored; workplace: workplace shared; major: major inconvenience. Tags: coworker_peer, work, workplace_shared, sudden, ignored, major_inconvenience",
+    "embedding_index": 10
+  },
+  {
+    "scenario_id": "authority_denial",
+    "original_description": "A formal request or application is unexpectedly rejected by an official body or gatekeeper.",
+    "generated_tags": [
+      "authority_figure",
+      "work",
+      "workplace_private",
+      "sudden",
+      "betrayal",
+      "major_inconvenience",
+      "relationship_damage"
+    ],
+    "joint_text": "A formal request or application is unexpectedly rejected by an official body or gatekeeper.. Context: authority: authority figure; involving work, sudden, betrayal; workplace: workplace private; major: major inconvenience; relationship: relationship damage. Tags: authority_figure, work, workplace_private, sudden, betrayal, major_inconvenience, relationship_damage",
+    "embedding_index": 11
+  },
+  {
+    "scenario_id": "schedule_overlap",
+    "original_description": "Two or more commitments clash, forcing an immediate decision or cancellation.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "blocked_goal",
+      "coworker_peer",
+      "work",
+      "workplace_private"
+    ],
+    "joint_text": "Two or more commitments clash, forcing an immediate decision or cancellation.. Context: coworker: coworker peer, coworker peer; involving work, sudden, work; workplace: workplace private, workplace private; blocked: blocked goal. Tags: coworker_peer, work, workplace_private, sudden, blocked_goal, coworker_peer, work, workplace_private",
+    "embedding_index": 12
+  },
+  {
+    "scenario_id": "lost_opportunity",
+    "original_description": "A beneficial chance or offer passes before you can act on it.",
+    "generated_tags": [
+      "opportunity_missed",
+      "unexpected_circumstances",
+      "personal",
+      "anticipating",
+      "future"
+    ],
+    "joint_text": "A beneficial chance or offer passes before you can act on it.. Context: opportunity: opportunity missed; unexpected: unexpected circumstances; involving personal, anticipating, future. Tags: opportunity_missed, unexpected_circumstances, personal, anticipating, future",
+    "embedding_index": 13
+  },
+  {
+    "scenario_id": "misinformation_received",
+    "original_description": "You act on incorrect information that later causes inconvenience or harm.",
+    "generated_tags": [
+      "self",
+      "betrayal",
+      "personal",
+      "home_private",
+      "past",
+      "minor_inconvenience",
+      "uncontrollable"
+    ],
+    "joint_text": "You act on incorrect information that later causes inconvenience or harm.. Context: involving self, betrayal, personal, past, uncontrollable; home: home private; minor: minor inconvenience. Tags: self, betrayal, personal, home_private, past, minor_inconvenience, uncontrollable",
+    "embedding_index": 14
+  },
+  {
+    "scenario_id": "resource_shortage",
+    "original_description": "Necessary supplies or materials run out sooner than anticipated.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "minor_inconvenience",
+      "unforeseen_circumstances"
+    ],
+    "joint_text": "Necessary supplies or materials run out sooner than anticipated.. Context: coworker: coworker peer; involving work, sudden; workplace: workplace private; minor: minor inconvenience; unforeseen: unforeseen circumstances. Tags: coworker_peer, work, workplace_private, sudden, minor_inconvenience, unforeseen_circumstances",
+    "embedding_index": 15
+  },
+  {
+    "scenario_id": "physical_injury",
+    "original_description": "A sudden minor injury or ailment limits your ability to carry out planned activities.",
+    "generated_tags": [
+      "self",
+      "health",
+      "home_private",
+      "sudden",
+      "minor_inconvenience",
+      "physical_harm"
+    ],
+    "joint_text": "A sudden minor injury or ailment limits your ability to carry out planned activities.. Context: involving self, health, sudden; home: home private; minor: minor inconvenience; physical: physical harm. Tags: self, health, home_private, sudden, minor_inconvenience, physical_harm",
+    "embedding_index": 16
+  },
+  {
+    "scenario_id": "social_exclusion",
+    "original_description": "You are left out of a group activity or decision that matters to you.",
+    "generated_tags": [
+      "exclusion",
+      "social",
+      "group_activity",
+      "peer",
+      "betrayal",
+      "ongoing",
+      "uncontrollable",
+      "relationship_damage"
+    ],
+    "joint_text": "You are left out of a group activity or decision that matters to you.. Context: involving exclusion, social, peer, betrayal, ongoing, uncontrollable; group: group activity; relationship: relationship damage. Tags: exclusion, social, group_activity, peer, betrayal, ongoing, uncontrollable, relationship_damage",
+    "embedding_index": 17
+  },
+  {
+    "scenario_id": "privacy_violation",
+    "original_description": "Your personal or sensitive data is accessed or shared without consent.",
+    "generated_tags": [
+      "stranger",
+      "authority_figure",
+      "service_worker",
+      "betrayal",
+      "work",
+      "personal"
+    ],
+    "joint_text": "Your personal or sensitive data is accessed or shared without consent.. Context: involving stranger, betrayal, work, personal; authority: authority figure; service: service worker. Tags: stranger, authority_figure, service_worker, betrayal, work, personal",
+    "embedding_index": 18
+  },
+  {
+    "scenario_id": "unexpected_responsibility",
+    "original_description": "You are suddenly assigned additional duties beyond your regular workload.",
+    "generated_tags": [
+      "coworker_superior",
+      "work",
+      "workplace_private",
+      "sudden",
+      "unexpected_circumstances",
+      "work",
+      "sudden",
+      "major_inconvenience"
+    ],
+    "joint_text": "You are suddenly assigned additional duties beyond your regular workload.. Context: coworker: coworker superior; involving work, sudden, work, sudden; workplace: workplace private; unexpected: unexpected circumstances; major: major inconvenience. Tags: coworker_superior, work, workplace_private, sudden, unexpected_circumstances, work, sudden, major_inconvenience",
+    "embedding_index": 19
+  },
+  {
+    "scenario_id": "sudden_rule_change",
+    "original_description": "Rules or requirements change abruptly, forcing you to adjust plans.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "breaking_promise",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Rules or requirements change abruptly, forcing you to adjust plans.. Context: coworker: coworker peer; involving work, sudden; workplace: workplace private; breaking: breaking promise; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, sudden, breaking_promise, minor_inconvenience",
+    "embedding_index": 20
+  },
+  {
+    "scenario_id": "payment_processing_issue",
+    "original_description": "A payment fails or is delayed, postponing access to a product or service.",
+    "generated_tags": [
+      "financial",
+      "customer",
+      "online_group",
+      "blocked_goal",
+      "ongoing",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A payment fails or is delayed, postponing access to a product or service.. Context: involving financial, customer, ongoing; online: online group; blocked: blocked goal; minor: minor inconvenience. Tags: financial, customer, online_group, blocked_goal, ongoing, minor_inconvenience",
+    "embedding_index": 21
+  },
+  {
+    "scenario_id": "queue_skipped",
+    "original_description": "Another person bypasses an orderly queue, delaying your turn.",
+    "generated_tags": [
+      "stranger",
+      "breaking_rules",
+      "public",
+      "public_place",
+      "sudden",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Another person bypasses an orderly queue, delaying your turn.. Context: involving stranger, public, sudden; breaking: breaking rules; public: public place; minor: minor inconvenience. Tags: stranger, breaking_rules, public, public_place, sudden, minor_inconvenience",
+    "embedding_index": 22
+  },
+  {
+    "scenario_id": "service_unavailable",
+    "original_description": "An expected service or facility is closed or offline without notice.",
+    "generated_tags": [
+      "service_worker",
+      "public",
+      "public_transport",
+      "sudden",
+      "minor_inconvenience",
+      "customer",
+      "public",
+      "public_transport"
+    ],
+    "joint_text": "An expected service or facility is closed or offline without notice.. Context: service: service worker; involving public, sudden, customer, public; public: public transport, public transport; minor: minor inconvenience. Tags: service_worker, public, public_transport, sudden, minor_inconvenience, customer, public, public_transport",
+    "embedding_index": 23
+  },
+  {
+    "scenario_id": "public_transport_failure",
+    "original_description": "Public transport breaks down or is canceled, leaving you searching for alternatives.",
+    "generated_tags": [
+      "stranger",
+      "work",
+      "public_transport",
+      "sudden",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Public transport breaks down or is canceled, leaving you searching for alternatives.. Context: involving stranger, work, sudden; public: public transport; minor: minor inconvenience. Tags: stranger, work, public_transport, sudden, minor_inconvenience",
+    "embedding_index": 24
+  },
+  {
+    "scenario_id": "incorrect_charge",
+    "original_description": "You are billed the wrong amount for goods or services.",
+    "generated_tags": [
+      "customer",
+      "financial",
+      "workplace_private",
+      "past",
+      "taking_property",
+      "material_loss_small",
+      "service_worker",
+      "financial"
+    ],
+    "joint_text": "You are billed the wrong amount for goods or services.. Context: involving customer, financial, past, financial; workplace: workplace private; taking: taking property; material: material loss small; service: service worker. Tags: customer, financial, workplace_private, past, taking_property, material_loss_small, service_worker, financial",
+    "embedding_index": 25
+  },
+  {
+    "scenario_id": "lost_delivery",
+    "original_description": "An important delivery or message goes missing before reaching you.",
+    "generated_tags": [
+      "customer",
+      "personal",
+      "workplace_private",
+      "past",
+      "minor_inconvenience",
+      "service_worker",
+      "neglect",
+      "work"
+    ],
+    "joint_text": "An important delivery or message goes missing before reaching you.. Context: involving customer, personal, past, neglect, work; workplace: workplace private; minor: minor inconvenience; service: service worker. Tags: customer, personal, workplace_private, past, minor_inconvenience, service_worker, neglect, work",
+    "embedding_index": 26
+  },
+  {
+    "scenario_id": "credential_compromise",
+    "original_description": "Your account credentials are breached, risking unauthorized access.",
+    "generated_tags": [
+      "customer",
+      "service_worker",
+      "betrayal",
+      "neglect",
+      "work",
+      "financial"
+    ],
+    "joint_text": "Your account credentials are breached, risking unauthorized access.. Context: involving customer, betrayal, neglect, work, financial; service: service worker. Tags: customer, service_worker, betrayal, neglect, work, financial",
+    "embedding_index": 27
+  },
+  {
+    "scenario_id": "unfair_criticism",
+    "original_description": "You receive negative feedback you believe is unwarranted.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "ongoing",
+      "criticism",
+      "emotional_damage"
+    ],
+    "joint_text": "You receive negative feedback you believe is unwarranted.. Context: coworker: coworker peer; involving work, ongoing, criticism; workplace: workplace private; emotional: emotional damage. Tags: coworker_peer, work, workplace_private, ongoing, criticism, emotional_damage",
+    "embedding_index": 28
+  },
+  {
+    "scenario_id": "overbooked_event",
+    "original_description": "An event exceeds capacity, preventing your participation.",
+    "generated_tags": [
+      "crowd_member",
+      "exclusion",
+      "event",
+      "public_place",
+      "sudden"
+    ],
+    "joint_text": "An event exceeds capacity, preventing your participation.. Context: crowd: crowd member; involving exclusion, event, sudden; public: public place. Tags: crowd_member, exclusion, event, public_place, sudden",
+    "embedding_index": 29
+  },
+  {
+    "scenario_id": "weather_disruption",
+    "original_description": "Unexpected weather conditions interfere with your plans.",
+    "generated_tags": [
+      "personal",
+      "sudden"
+    ],
+    "joint_text": "Unexpected weather conditions interfere with your plans.. Context: involving personal, sudden. Tags: personal, sudden",
+    "embedding_index": 30
+  },
+  {
+    "scenario_id": "power_outage",
+    "original_description": "Electricity suddenly goes out, disrupting normal activities.",
+    "generated_tags": [
+      "family_member",
+      "home_private",
+      "home_private",
+      "sudden",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Electricity suddenly goes out, disrupting normal activities.. Context: family: family member; home: home private, home private; involving sudden; minor: minor inconvenience. Tags: family_member, home_private, home_private, sudden, minor_inconvenience",
+    "embedding_index": 31
+  },
+  {
+    "scenario_id": "internet_disconnect",
+    "original_description": "Your internet connection fails at a critical moment.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "unforeseen_circumstances",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Your internet connection fails at a critical moment.. Context: coworker: coworker peer; involving work, sudden; workplace: workplace private; unforeseen: unforeseen circumstances; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, sudden, unforeseen_circumstances, minor_inconvenience",
+    "embedding_index": 32
+  },
+  {
+    "scenario_id": "data_loss",
+    "original_description": "Important files or data are lost due to error or malfunction.",
+    "generated_tags": [
+      "coworker_peer",
+      "property_damaged",
+      "work",
+      "workplace_private",
+      "sudden",
+      "material_loss_small"
+    ],
+    "joint_text": "Important files or data are lost due to error or malfunction.. Context: coworker: coworker peer; property: property damaged; involving work, sudden; workplace: workplace private; material: material loss small. Tags: coworker_peer, property_damaged, work, workplace_private, sudden, material_loss_small",
+    "embedding_index": 33
+  },
+  {
+    "scenario_id": "time_zone_conflict",
+    "original_description": "A misunderstanding about time zones causes a missed meeting or deadline.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "misunderstanding",
+      "major_inconvenience"
+    ],
+    "joint_text": "A misunderstanding about time zones causes a missed meeting or deadline.. Context: coworker: coworker peer; involving work, sudden, misunderstanding; workplace: workplace private; major: major inconvenience. Tags: coworker_peer, work, workplace_private, sudden, misunderstanding, major_inconvenience",
+    "embedding_index": 34
+  },
+  {
+    "scenario_id": "traffic_jam",
+    "original_description": "Unexpected traffic significantly delays your travel.",
+    "generated_tags": [
+      "stranger",
+      "personal",
+      "public_transport",
+      "sudden",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Unexpected traffic significantly delays your travel.. Context: involving stranger, personal, sudden; public: public transport; minor: minor inconvenience. Tags: stranger, personal, public_transport, sudden, minor_inconvenience",
+    "embedding_index": 35
+  },
+  {
+    "scenario_id": "emergency_interruption",
+    "original_description": "An urgent situation forces you to abandon what you were doing.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "major_inconvenience",
+      "unforeseen_circumstances",
+      "uncontrollable"
+    ],
+    "joint_text": "An urgent situation forces you to abandon what you were doing.. Context: coworker: coworker peer; involving work, sudden, uncontrollable; workplace: workplace private; major: major inconvenience; unforeseen: unforeseen circumstances. Tags: coworker_peer, work, workplace_private, sudden, major_inconvenience, unforeseen_circumstances, uncontrollable",
+    "embedding_index": 36
+  },
+  {
+    "scenario_id": "healthcare_delay",
+    "original_description": "Medical assistance or appointments are postponed when needed.",
+    "generated_tags": [
+      "patient",
+      "health",
+      "workplace_private",
+      "ongoing",
+      "neglect",
+      "healthcare_provider",
+      "health",
+      "workplace_private"
+    ],
+    "joint_text": "Medical assistance or appointments are postponed when needed.. Context: involving patient, health, ongoing, neglect, health; workplace: workplace private, workplace private; healthcare: healthcare provider. Tags: patient, health, workplace_private, ongoing, neglect, healthcare_provider, health, workplace_private",
+    "embedding_index": 37
+  },
+  {
+    "scenario_id": "overlooked_message",
+    "original_description": "A critical message or email is missed or ignored.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "ongoing",
+      "ignored",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A critical message or email is missed or ignored.. Context: coworker: coworker peer; involving work, ongoing, ignored; workplace: workplace private; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, ongoing, ignored, minor_inconvenience",
+    "embedding_index": 38
+  },
+  {
+    "scenario_id": "incorrect_order",
+    "original_description": "An order arrives with the wrong items or specifications.",
+    "generated_tags": [
+      "customer",
+      "work",
+      "workplace_private",
+      "property_damaged",
+      "sudden",
+      "material_loss_small"
+    ],
+    "joint_text": "An order arrives with the wrong items or specifications.. Context: involving customer, work, sudden; workplace: workplace private; property: property damaged; material: material loss small. Tags: customer, work, workplace_private, property_damaged, sudden, material_loss_small",
+    "embedding_index": 39
+  },
+  {
+    "scenario_id": "access_denied",
+    "original_description": "You cannot enter a location or system you expected to access.",
+    "generated_tags": [
+      "authority_figure",
+      "work",
+      "workplace_private",
+      "sudden",
+      "minor_inconvenience",
+      "coworker_peer",
+      "work",
+      "workplace_private"
+    ],
+    "joint_text": "You cannot enter a location or system you expected to access.. Context: authority: authority figure; involving work, sudden, work; workplace: workplace private, workplace private; minor: minor inconvenience; coworker: coworker peer. Tags: authority_figure, work, workplace_private, sudden, minor_inconvenience, coworker_peer, work, workplace_private",
+    "embedding_index": 40
+  },
+  {
+    "scenario_id": "equipment_malfunction",
+    "original_description": "A device or tool you depend on breaks unexpectedly.",
+    "generated_tags": [
+      "personal",
+      "home_private",
+      "sudden",
+      "minor_inconvenience",
+      "self",
+      "property_damaged",
+      "uncontrollable"
+    ],
+    "joint_text": "A device or tool you depend on breaks unexpectedly.. Context: involving personal, sudden, self, uncontrollable; home: home private; minor: minor inconvenience; property: property damaged. Tags: personal, home_private, sudden, minor_inconvenience, self, property_damaged, uncontrollable",
+    "embedding_index": 41
+  },
+  {
+    "scenario_id": "overhearing_conflict",
+    "original_description": "You overhear negative remarks about yourself from others.",
+    "generated_tags": [
+      "stranger",
+      "humiliation",
+      "social",
+      "public",
+      "ongoing",
+      "crowd_member",
+      "humiliation",
+      "social"
+    ],
+    "joint_text": "You overhear negative remarks about yourself from others.. Context: involving stranger, humiliation, social, public, ongoing, humiliation, social; crowd: crowd member. Tags: stranger, humiliation, social, public, ongoing, crowd_member, humiliation, social",
+    "embedding_index": 42
+  },
+  {
+    "scenario_id": "public_transport_delay",
+    "original_description": "Trains, buses, or flights are delayed beyond reasonable expectations.",
+    "generated_tags": [
+      "crowd_member",
+      "travel",
+      "public_transport",
+      "ongoing",
+      "minor_inconvenience",
+      "unforeseen_circumstances"
+    ],
+    "joint_text": "Trains, buses, or flights are delayed beyond reasonable expectations.. Context: crowd: crowd member; involving travel, ongoing; public: public transport; minor: minor inconvenience; unforeseen: unforeseen circumstances. Tags: crowd_member, travel, public_transport, ongoing, minor_inconvenience, unforeseen_circumstances",
+    "embedding_index": 43
+  },
+  {
+    "scenario_id": "queue_exceeds_time",
+    "original_description": "A line takes much longer than expected, delaying other plans.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_shared",
+      "ongoing",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A line takes much longer than expected, delaying other plans.. Context: coworker: coworker peer; involving work, ongoing; workplace: workplace shared; minor: minor inconvenience. Tags: coworker_peer, work, workplace_shared, ongoing, minor_inconvenience",
+    "embedding_index": 44
+  },
+  {
+    "scenario_id": "policy_confusion",
+    "original_description": "Unclear or contradictory rules make it hard to proceed confidently.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "ongoing",
+      "confusion",
+      "uncontrollable",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Unclear or contradictory rules make it hard to proceed confidently.. Context: coworker: coworker peer; involving work, ongoing, confusion, uncontrollable; workplace: workplace private; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, ongoing, confusion, uncontrollable, minor_inconvenience",
+    "embedding_index": 45
+  },
+  {
+    "scenario_id": "storage_limit_reached",
+    "original_description": "You run out of space on a device or platform at a crucial time.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "blocked_goal",
+      "sudden",
+      "minor_inconvenience"
+    ],
+    "joint_text": "You run out of space on a device or platform at a crucial time.. Context: coworker: coworker peer; involving work, sudden; workplace: workplace private; blocked: blocked goal; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, blocked_goal, sudden, minor_inconvenience",
+    "embedding_index": 46
+  },
+  {
+    "scenario_id": "tool_unavailability",
+    "original_description": "An essential tool is not available when you need it most.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "blocked_goal",
+      "minor_inconvenience"
+    ],
+    "joint_text": "An essential tool is not available when you need it most.. Context: coworker: coworker peer; involving work, sudden; workplace: workplace private; blocked: blocked goal; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, sudden, blocked_goal, minor_inconvenience",
+    "embedding_index": 47
+  },
+  {
+    "scenario_id": "unexpected_noise",
+    "original_description": "A sudden loud or continuous noise disturbs your environment.",
+    "generated_tags": [
+      "crowd_member",
+      "uncontrollable",
+      "personal",
+      "home_private",
+      "sudden",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A sudden loud or continuous noise disturbs your environment.. Context: crowd: crowd member; involving uncontrollable, personal, sudden; home: home private; minor: minor inconvenience. Tags: crowd_member, uncontrollable, personal, home_private, sudden, minor_inconvenience",
+    "embedding_index": 48
+  },
+  {
+    "scenario_id": "unplanned_interruption",
+    "original_description": "Someone interrupts your activity, forcing you to pause or restart.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "interrupting",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Someone interrupts your activity, forcing you to pause or restart.. Context: coworker: coworker peer; involving work, sudden, interrupting; workplace: workplace private; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, sudden, interrupting, minor_inconvenience",
+    "embedding_index": 49
+  },
+  {
+    "scenario_id": "flight_canceled_last_minute",
+    "original_description": "Your scheduled flight is abruptly canceled just before departure, stranding you at the airport.",
+    "generated_tags": [
+      "stranger",
+      "travel",
+      "public_transport",
+      "sudden",
+      "major_inconvenience",
+      "unforeseen_circumstances"
+    ],
+    "joint_text": "Your scheduled flight is abruptly canceled just before departure, stranding you at the airport.. Context: involving stranger, travel, sudden; public: public transport; major: major inconvenience; unforeseen: unforeseen circumstances. Tags: stranger, travel, public_transport, sudden, major_inconvenience, unforeseen_circumstances",
+    "embedding_index": 50
+  },
+  {
+    "scenario_id": "car_breakdown_commute",
+    "original_description": "Your car breaks down on the way to an important appointment, leaving you stuck roadside.",
+    "generated_tags": [
+      "stranger",
+      "personal",
+      "public_transport",
+      "sudden",
+      "property_damaged",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Your car breaks down on the way to an important appointment, leaving you stuck roadside.. Context: involving stranger, personal, sudden; public: public transport; property: property damaged; minor: minor inconvenience. Tags: stranger, personal, public_transport, sudden, property_damaged, minor_inconvenience",
+    "embedding_index": 51
+  },
+  {
+    "scenario_id": "wallet_lost_travel",
+    "original_description": "You misplace your wallet while traveling and have no immediate access to money or ID.",
+    "generated_tags": [
+      "traveler",
+      "personal",
+      "public_transport",
+      "sudden",
+      "minor_inconvenience",
+      "lost_property",
+      "uncontrollable"
+    ],
+    "joint_text": "You misplace your wallet while traveling and have no immediate access to money or ID.. Context: involving traveler, personal, sudden, uncontrollable; public: public transport; minor: minor inconvenience; lost: lost property. Tags: traveler, personal, public_transport, sudden, minor_inconvenience, lost_property, uncontrollable",
+    "embedding_index": 52
+  },
+  {
+    "scenario_id": "coworker_takes_credit",
+    "original_description": "A colleague publicly presents your work as their own without acknowledgment.",
+    "generated_tags": [
+      "coworker_peer",
+      "betrayal",
+      "work",
+      "workplace_shared",
+      "sudden",
+      "relationship_damage",
+      "emotional_damage",
+      "social_damage"
+    ],
+    "joint_text": "A colleague publicly presents your work as their own without acknowledgment.. Context: coworker: coworker peer; involving betrayal, work, sudden; workplace: workplace shared; relationship: relationship damage; emotional: emotional damage; social: social damage. Tags: coworker_peer, betrayal, work, workplace_shared, sudden, relationship_damage, emotional_damage, social_damage",
+    "embedding_index": 53
+  },
+  {
+    "scenario_id": "pet_emergency",
+    "original_description": "Your pet suddenly becomes ill and requires urgent veterinary care.",
+    "generated_tags": [
+      "family_member",
+      "health",
+      "home_private",
+      "sudden",
+      "family_member",
+      "health",
+      "home_private",
+      "sudden"
+    ],
+    "joint_text": "Your pet suddenly becomes ill and requires urgent veterinary care.. Context: family: family member, family member; involving health, sudden, health, sudden; home: home private, home private. Tags: family_member, health, home_private, sudden, family_member, health, home_private, sudden",
+    "embedding_index": 54
+  },
+  {
+    "scenario_id": "bank_account_locked",
+    "original_description": "Suspicious activity causes your bank to freeze your account when you need funds urgently.",
+    "generated_tags": [
+      "customer",
+      "financial",
+      "online_group",
+      "sudden",
+      "unforeseen_circumstances",
+      "authority_figure",
+      "financial",
+      "online_group"
+    ],
+    "joint_text": "Suspicious activity causes your bank to freeze your account when you need funds urgently.. Context: involving customer, financial, sudden, financial; online: online group, online group; unforeseen: unforeseen circumstances; authority: authority figure. Tags: customer, financial, online_group, sudden, unforeseen_circumstances, authority_figure, financial, online_group",
+    "embedding_index": 55
+  },
+  {
+    "scenario_id": "rumor_spread_friend",
+    "original_description": "A friend spreads a false rumor about you, harming your reputation.",
+    "generated_tags": [
+      "friend",
+      "social",
+      "online_group",
+      "ongoing",
+      "betrayal",
+      "social_damage",
+      "friend",
+      "social"
+    ],
+    "joint_text": "A friend spreads a false rumor about you, harming your reputation.. Context: involving friend, social, ongoing, betrayal, friend, social; online: online group; social: social damage. Tags: friend, social, online_group, ongoing, betrayal, social_damage, friend, social",
+    "embedding_index": 56
+  },
+  {
+    "scenario_id": "document_left_home",
+    "original_description": "You arrive at an official appointment only to realize mandatory documents were left at home.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "neglect",
+      "minor_inconvenience"
+    ],
+    "joint_text": "You arrive at an official appointment only to realize mandatory documents were left at home.. Context: coworker: coworker peer; involving work, sudden, neglect; workplace: workplace private; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, sudden, neglect, minor_inconvenience",
+    "embedding_index": 57
+  },
+  {
+    "scenario_id": "unexpected_rent_increase",
+    "original_description": "Your landlord announces a significant rent hike with minimal notice.",
+    "generated_tags": [
+      "authority_figure",
+      "betrayal",
+      "taking_property",
+      "financial",
+      "home_private",
+      "sudden"
+    ],
+    "joint_text": "Your landlord announces a significant rent hike with minimal notice.. Context: authority: authority figure; involving betrayal, financial, sudden; taking: taking property; home: home private. Tags: authority_figure, betrayal, taking_property, financial, home_private, sudden",
+    "embedding_index": 58
+  },
+  {
+    "scenario_id": "childcare_cancellation",
+    "original_description": "Your childcare provider cancels hours before you are due at work, leaving you without coverage.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "home_private",
+      "sudden",
+      "major_inconvenience",
+      "service_worker",
+      "neglect",
+      "personal"
+    ],
+    "joint_text": "Your childcare provider cancels hours before you are due at work, leaving you without coverage.. Context: coworker: coworker peer; involving work, sudden, neglect, personal; home: home private; major: major inconvenience; service: service worker. Tags: coworker_peer, work, home_private, sudden, major_inconvenience, service_worker, neglect, personal",
+    "embedding_index": 59
+  },
+  {
+    "scenario_id": "meeting_canceled_no_notice",
+    "original_description": "A critical meeting is canceled at the last minute without informing attendees in advance.",
+    "generated_tags": [
+      "coworker_peer",
+      "betrayal",
+      "work",
+      "workplace_private",
+      "sudden",
+      "coworker_peer",
+      "work",
+      "workplace_private"
+    ],
+    "joint_text": "A critical meeting is canceled at the last minute without informing attendees in advance.. Context: coworker: coworker peer, coworker peer; involving betrayal, work, sudden, work; workplace: workplace private, workplace private. Tags: coworker_peer, betrayal, work, workplace_private, sudden, coworker_peer, work, workplace_private",
+    "embedding_index": 60
+  },
+  {
+    "scenario_id": "surprise_guest_arrival",
+    "original_description": "Unexpected visitors show up at your home, disrupting your plans.",
+    "generated_tags": [
+      "stranger",
+      "personal",
+      "home_private",
+      "sudden",
+      "unexpected_circumstances",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Unexpected visitors show up at your home, disrupting your plans.. Context: involving stranger, personal, sudden; home: home private; unexpected: unexpected circumstances; minor: minor inconvenience. Tags: stranger, personal, home_private, sudden, unexpected_circumstances, minor_inconvenience",
+    "embedding_index": 61
+  },
+  {
+    "scenario_id": "phone_stolen_public",
+    "original_description": "Your phone is stolen while you are in a public place, cutting off communication.",
+    "generated_tags": [
+      "stranger",
+      "property_damaged",
+      "personal",
+      "public_place",
+      "sudden",
+      "material_loss_small",
+      "communication_cut_off"
+    ],
+    "joint_text": "Your phone is stolen while you are in a public place, cutting off communication.. Context: involving stranger, personal, sudden; property: property damaged; public: public place; material: material loss small; communication: communication cut off. Tags: stranger, property_damaged, personal, public_place, sudden, material_loss_small, communication_cut_off",
+    "embedding_index": 62
+  },
+  {
+    "scenario_id": "forced_system_update",
+    "original_description": "Your computer forces a system update and restarts while you are working on something urgent.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "uncontrollable",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Your computer forces a system update and restarts while you are working on something urgent.. Context: coworker: coworker peer; involving work, sudden, uncontrollable; workplace: workplace private; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, sudden, uncontrollable, minor_inconvenience",
+    "embedding_index": 63
+  },
+  {
+    "scenario_id": "exam_schedule_change",
+    "original_description": "The time or location of an exam is changed on short notice, risking your attendance.",
+    "generated_tags": [
+      "student",
+      "academic",
+      "school",
+      "sudden",
+      "unforeseen_circumstances",
+      "major_inconvenience"
+    ],
+    "joint_text": "The time or location of an exam is changed on short notice, risking your attendance.. Context: involving student, academic, school, sudden; unforeseen: unforeseen circumstances; major: major inconvenience. Tags: student, academic, school, sudden, unforeseen_circumstances, major_inconvenience",
+    "embedding_index": 64
+  },
+  {
+    "scenario_id": "public_transport_strike",
+    "original_description": "A strike halts public transport services, leaving you without your usual commuting option.",
+    "generated_tags": [
+      "stranger",
+      "commuting",
+      "public_transport",
+      "sudden",
+      "major_inconvenience",
+      "unforeseen_circumstances",
+      "uncontrollable"
+    ],
+    "joint_text": "A strike halts public transport services, leaving you without your usual commuting option.. Context: involving stranger, commuting, sudden, uncontrollable; public: public transport; major: major inconvenience; unforeseen: unforeseen circumstances. Tags: stranger, commuting, public_transport, sudden, major_inconvenience, unforeseen_circumstances, uncontrollable",
+    "embedding_index": 65
+  },
+  {
+    "scenario_id": "parking_ticket_mistake",
+    "original_description": "You receive a parking ticket even though you followed the posted rules and paid.",
+    "generated_tags": [
+      "customer",
+      "financial",
+      "public_transport",
+      "sudden",
+      "unexpected_circumstances",
+      "material_loss_small",
+      "authority_figure",
+      "financial"
+    ],
+    "joint_text": "You receive a parking ticket even though you followed the posted rules and paid.. Context: involving customer, financial, sudden, financial; public: public transport; unexpected: unexpected circumstances; material: material loss small; authority: authority figure. Tags: customer, financial, public_transport, sudden, unexpected_circumstances, material_loss_small, authority_figure, financial",
+    "embedding_index": 66
+  },
+  {
+    "scenario_id": "important_email_spam",
+    "original_description": "A vital email lands in your spam folder, causing you to miss an important deadline.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "online_group",
+      "sudden",
+      "blocked_goal",
+      "major_inconvenience"
+    ],
+    "joint_text": "A vital email lands in your spam folder, causing you to miss an important deadline.. Context: coworker: coworker peer; involving work, sudden; online: online group; blocked: blocked goal; major: major inconvenience. Tags: coworker_peer, work, online_group, sudden, blocked_goal, major_inconvenience",
+    "embedding_index": 67
+  },
+  {
+    "scenario_id": "booking_double_charged",
+    "original_description": "Your credit card is charged twice for the same reservation or purchase.",
+    "generated_tags": [
+      "customer",
+      "financial",
+      "online_group",
+      "past",
+      "taking_property",
+      "material_loss_small",
+      "service_worker",
+      "financial"
+    ],
+    "joint_text": "Your credit card is charged twice for the same reservation or purchase.. Context: involving customer, financial, past, financial; online: online group; taking: taking property; material: material loss small; service: service worker. Tags: customer, financial, online_group, past, taking_property, material_loss_small, service_worker, financial",
+    "embedding_index": 68
+  },
+  {
+    "scenario_id": "security_checkpoint_delay",
+    "original_description": "Extra screening at a security checkpoint creates a delay that jeopardizes a tight connection.",
+    "generated_tags": [
+      "traveler",
+      "delay",
+      "travel",
+      "public_transport",
+      "sudden",
+      "traveler",
+      "delay",
+      "travel"
+    ],
+    "joint_text": "Extra screening at a security checkpoint creates a delay that jeopardizes a tight connection.. Context: involving traveler, delay, travel, sudden, traveler, delay, travel; public: public transport. Tags: traveler, delay, travel, public_transport, sudden, traveler, delay, travel",
+    "embedding_index": 69
+  },
+  {
+    "scenario_id": "alarm_failure",
+    "original_description": "Your morning alarm fails to sound, causing you to oversleep.",
+    "generated_tags": [
+      "self",
+      "personal",
+      "home_private",
+      "sudden",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Your morning alarm fails to sound, causing you to oversleep.. Context: involving self, personal, sudden; home: home private; minor: minor inconvenience. Tags: self, personal, home_private, sudden, minor_inconvenience",
+    "embedding_index": 70
+  },
+  {
+    "scenario_id": "password_lockout",
+    "original_description": "Repeated wrong passwords lock you out of an important account.",
+    "generated_tags": [
+      "self",
+      "repeated_wrong_password",
+      "personal",
+      "online_group",
+      "ongoing",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Repeated wrong passwords lock you out of an important account.. Context: involving self, personal, ongoing; repeated: repeated wrong password; online: online group; minor: minor inconvenience. Tags: self, repeated_wrong_password, personal, online_group, ongoing, minor_inconvenience",
+    "embedding_index": 71
+  },
+  {
+    "scenario_id": "card_left_home",
+    "original_description": "You reach checkout and discover your payment card is missing.",
+    "generated_tags": [
+      "customer",
+      "financial",
+      "workplace_private",
+      "sudden",
+      "property_damaged",
+      "customer",
+      "financial",
+      "workplace_private"
+    ],
+    "joint_text": "You reach checkout and discover your payment card is missing.. Context: involving customer, financial, sudden, customer, financial; workplace: workplace private, workplace private; property: property damaged. Tags: customer, financial, workplace_private, sudden, property_damaged, customer, financial, workplace_private",
+    "embedding_index": 72
+  },
+  {
+    "scenario_id": "seat_occupied",
+    "original_description": "Someone is in the seat assigned to you, forcing an awkward dispute.",
+    "generated_tags": [
+      "coworker_peer",
+      "interrupting",
+      "work",
+      "workplace_shared",
+      "sudden",
+      "coworker_peer",
+      "work",
+      "workplace_shared"
+    ],
+    "joint_text": "Someone is in the seat assigned to you, forcing an awkward dispute.. Context: coworker: coworker peer, coworker peer; involving interrupting, work, sudden, work; workplace: workplace shared, workplace shared. Tags: coworker_peer, interrupting, work, workplace_shared, sudden, coworker_peer, work, workplace_shared",
+    "embedding_index": 73
+  },
+  {
+    "scenario_id": "elevator_stuck",
+    "original_description": "The elevator halts between floors and the doors won\u2019t open.",
+    "generated_tags": [
+      "stranger",
+      "work",
+      "workplace_shared",
+      "sudden",
+      "minor_inconvenience"
+    ],
+    "joint_text": "The elevator halts between floors and the doors won\u2019t open.. Context: involving stranger, work, sudden; workplace: workplace shared; minor: minor inconvenience. Tags: stranger, work, workplace_shared, sudden, minor_inconvenience",
+    "embedding_index": 74
+  },
+  {
+    "scenario_id": "printer_out_of_ink",
+    "original_description": "A printer runs out of ink halfway through printing urgent documents.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "property_damaged",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A printer runs out of ink halfway through printing urgent documents.. Context: coworker: coworker peer; involving work, sudden; workplace: workplace private; property: property damaged; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, sudden, property_damaged, minor_inconvenience",
+    "embedding_index": 75
+  },
+  {
+    "scenario_id": "car_battery_dead",
+    "original_description": "Your car won\u2019t start because the battery is completely drained.",
+    "generated_tags": [
+      "self",
+      "personal",
+      "home_private",
+      "ongoing",
+      "uncontrollable",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Your car won\u2019t start because the battery is completely drained.. Context: involving self, personal, ongoing, uncontrollable; home: home private; minor: minor inconvenience. Tags: self, personal, home_private, ongoing, uncontrollable, minor_inconvenience",
+    "embedding_index": 76
+  },
+  {
+    "scenario_id": "photo_deleted",
+    "original_description": "You accidentally delete an important photo before it is backed up.",
+    "generated_tags": [
+      "self",
+      "personal",
+      "home_private",
+      "past",
+      "property_damaged",
+      "material_loss_small",
+      "uncontrollable"
+    ],
+    "joint_text": "You accidentally delete an important photo before it is backed up.. Context: involving self, personal, past, uncontrollable; home: home private; property: property damaged; material: material loss small. Tags: self, personal, home_private, past, property_damaged, material_loss_small, uncontrollable",
+    "embedding_index": 77
+  },
+  {
+    "scenario_id": "package_theft",
+    "original_description": "A delivered parcel is stolen from your doorstep before you retrieve it.",
+    "generated_tags": [
+      "stranger",
+      "personal",
+      "home_private",
+      "past",
+      "property_damaged",
+      "material_loss_small",
+      "sudden"
+    ],
+    "joint_text": "A delivered parcel is stolen from your doorstep before you retrieve it.. Context: involving stranger, personal, past, sudden; home: home private; property: property damaged; material: material loss small. Tags: stranger, personal, home_private, past, property_damaged, material_loss_small, sudden",
+    "embedding_index": 78
+  },
+  {
+    "scenario_id": "phone_dead_urgent",
+    "original_description": "Your phone battery dies just when you need to make an urgent call.",
+    "generated_tags": [
+      "stranger",
+      "personal",
+      "public_transport",
+      "sudden",
+      "uncontrollable",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Your phone battery dies just when you need to make an urgent call.. Context: involving stranger, personal, sudden, uncontrollable; public: public transport; minor: minor inconvenience. Tags: stranger, personal, public_transport, sudden, uncontrollable, minor_inconvenience",
+    "embedding_index": 79
+  },
+  {
+    "scenario_id": "door_key_breaks",
+    "original_description": "Your key snaps off in the lock, leaving you locked out.",
+    "generated_tags": [
+      "self",
+      "personal",
+      "home_private",
+      "sudden",
+      "minor_inconvenience",
+      "property_damaged",
+      "uncontrollable"
+    ],
+    "joint_text": "Your key snaps off in the lock, leaving you locked out.. Context: involving self, personal, sudden, uncontrollable; home: home private; minor: minor inconvenience; property: property damaged. Tags: self, personal, home_private, sudden, minor_inconvenience, property_damaged, uncontrollable",
+    "embedding_index": 80
+  },
+  {
+    "scenario_id": "payment_terminal_down",
+    "original_description": "A store\u2019s card reader is offline, preventing you from paying.",
+    "generated_tags": [
+      "customer",
+      "financial",
+      "workplace_shared",
+      "sudden",
+      "blocked_goal",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A store\u2019s card reader is offline, preventing you from paying.. Context: involving customer, financial, sudden; workplace: workplace shared; blocked: blocked goal; minor: minor inconvenience. Tags: customer, financial, workplace_shared, sudden, blocked_goal, minor_inconvenience",
+    "embedding_index": 81
+  },
+  {
+    "scenario_id": "coffee_spill_on_device",
+    "original_description": "You knock over a drink onto your laptop, risking data loss.",
+    "generated_tags": [
+      "self",
+      "property_damaged",
+      "personal",
+      "home_private",
+      "sudden",
+      "material_loss_small"
+    ],
+    "joint_text": "You knock over a drink onto your laptop, risking data loss.. Context: involving self, personal, sudden; property: property damaged; home: home private; material: material loss small. Tags: self, property_damaged, personal, home_private, sudden, material_loss_small",
+    "embedding_index": 82
+  },
+  {
+    "scenario_id": "meeting_link_invalid",
+    "original_description": "The video\u2011call link for a scheduled meeting fails to open.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "online_group",
+      "sudden",
+      "minor_inconvenience",
+      "unexpected_circumstances"
+    ],
+    "joint_text": "The video\u2011call link for a scheduled meeting fails to open.. Context: coworker: coworker peer; involving work, sudden; online: online group; minor: minor inconvenience; unexpected: unexpected circumstances. Tags: coworker_peer, work, online_group, sudden, minor_inconvenience, unexpected_circumstances",
+    "embedding_index": 83
+  },
+  {
+    "scenario_id": "backup_drive_corrupted",
+    "original_description": "An external backup drive becomes unreadable when you need files.",
+    "generated_tags": [
+      "customer",
+      "personal",
+      "home_private",
+      "sudden",
+      "property_damaged",
+      "material_loss_small",
+      "service_worker",
+      "personal"
+    ],
+    "joint_text": "An external backup drive becomes unreadable when you need files.. Context: involving customer, personal, sudden, personal; home: home private; property: property damaged; material: material loss small; service: service worker. Tags: customer, personal, home_private, sudden, property_damaged, material_loss_small, service_worker, personal",
+    "embedding_index": 84
+  },
+  {
+    "scenario_id": "fire_drill_interrupt",
+    "original_description": "A workplace fire drill forces you to pause an urgent task.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_shared",
+      "sudden",
+      "unexpected_circumstances",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A workplace fire drill forces you to pause an urgent task.. Context: coworker: coworker peer; involving work, sudden; workplace: workplace shared; unexpected: unexpected circumstances; minor: minor inconvenience. Tags: coworker_peer, work, workplace_shared, sudden, unexpected_circumstances, minor_inconvenience",
+    "embedding_index": 85
+  },
+  {
+    "scenario_id": "smoke_alarm_low_battery",
+    "original_description": "A smoke alarm chirps repeatedly at night due to low battery.",
+    "generated_tags": [
+      "home_owner",
+      "home_private",
+      "home_private",
+      "ongoing",
+      "repetitive_noise",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A smoke alarm chirps repeatedly at night due to low battery.. Context: home: home owner, home private, home private; involving ongoing; repetitive: repetitive noise; minor: minor inconvenience. Tags: home_owner, home_private, home_private, ongoing, repetitive_noise, minor_inconvenience",
+    "embedding_index": 86
+  },
+  {
+    "scenario_id": "ride_hailing_no_show",
+    "original_description": "A ride\u2011share driver cancels after the pickup time, leaving you stranded.",
+    "generated_tags": [
+      "customer",
+      "service_worker",
+      "betrayal",
+      "abandonment",
+      "work",
+      "personal"
+    ],
+    "joint_text": "A ride\u2011share driver cancels after the pickup time, leaving you stranded.. Context: involving customer, betrayal, abandonment, work, personal; service: service worker. Tags: customer, service_worker, betrayal, abandonment, work, personal",
+    "embedding_index": 87
+  },
+  {
+    "scenario_id": "auto_update_data_cap",
+    "original_description": "A phone app auto\u2011updates on cellular, exhausting your data plan.",
+    "generated_tags": [
+      "customer",
+      "personal",
+      "online_group",
+      "ongoing",
+      "uncontrollable",
+      "material_loss_small",
+      "service_worker",
+      "personal"
+    ],
+    "joint_text": "A phone app auto\u2011updates on cellular, exhausting your data plan.. Context: involving customer, personal, ongoing, uncontrollable, personal; online: online group; material: material loss small; service: service worker. Tags: customer, personal, online_group, ongoing, uncontrollable, material_loss_small, service_worker, personal",
+    "embedding_index": 88
+  },
+  {
+    "scenario_id": "wardrobe_malfunction_public",
+    "original_description": "Clothing tears or fails in public, causing embarrassment.",
+    "generated_tags": [
+      "stranger",
+      "social",
+      "street_public",
+      "property_damaged",
+      "sudden",
+      "social_damage",
+      "emotional_damage",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Clothing tears or fails in public, causing embarrassment.. Context: involving stranger, social, sudden; street: street public; property: property damaged; social: social damage; emotional: emotional damage; minor: minor inconvenience. Tags: stranger, social, street_public, property_damaged, sudden, social_damage, emotional_damage, minor_inconvenience",
+    "embedding_index": 89
+  },
+  {
+    "scenario_id": "unsaved_work_loss",
+    "original_description": "Your software crashes before you save, erasing recent progress.",
+    "generated_tags": [
+      "user",
+      "property_damaged",
+      "work",
+      "workplace_private",
+      "sudden",
+      "material_loss_small"
+    ],
+    "joint_text": "Your software crashes before you save, erasing recent progress.. Context: involving user, work, sudden; property: property damaged; workplace: workplace private; material: material loss small. Tags: user, property_damaged, work, workplace_private, sudden, material_loss_small",
+    "embedding_index": 90
+  },
+  {
+    "scenario_id": "card_declined_fraud",
+    "original_description": "A legitimate purchase is declined because your bank flags it as suspicious.",
+    "generated_tags": [
+      "customer",
+      "financial",
+      "online_group",
+      "sudden",
+      "blocked_goal",
+      "service_worker",
+      "financial",
+      "online_group"
+    ],
+    "joint_text": "A legitimate purchase is declined because your bank flags it as suspicious.. Context: involving customer, financial, sudden, financial; online: online group, online group; blocked: blocked goal; service: service worker. Tags: customer, financial, online_group, sudden, blocked_goal, service_worker, financial, online_group",
+    "embedding_index": 91
+  },
+  {
+    "scenario_id": "oversold_flight_denied_boarding",
+    "original_description": "You are bumped from an oversold flight despite having a confirmed ticket.",
+    "generated_tags": [
+      "customer",
+      "travel",
+      "public_transport",
+      "sudden",
+      "major_inconvenience",
+      "breaking_promise",
+      "travel",
+      "public_transport"
+    ],
+    "joint_text": "You are bumped from an oversold flight despite having a confirmed ticket.. Context: involving customer, travel, sudden, travel; public: public transport, public transport; major: major inconvenience; breaking: breaking promise. Tags: customer, travel, public_transport, sudden, major_inconvenience, breaking_promise, travel, public_transport",
+    "embedding_index": 92
+  },
+  {
+    "scenario_id": "parking_lot_full",
+    "original_description": "You arrive and find the parking lot full, forcing you to search for alternate parking.",
+    "generated_tags": [
+      "stranger",
+      "personal",
+      "public_transport",
+      "sudden",
+      "unexpected_circumstances",
+      "minor_inconvenience"
+    ],
+    "joint_text": "You arrive and find the parking lot full, forcing you to search for alternate parking.. Context: involving stranger, personal, sudden; public: public transport; unexpected: unexpected circumstances; minor: minor inconvenience. Tags: stranger, personal, public_transport, sudden, unexpected_circumstances, minor_inconvenience",
+    "embedding_index": 93
+  },
+  {
+    "scenario_id": "atm_cash_unavailable",
+    "original_description": "An ATM runs out of cash just as you need to withdraw money.",
+    "generated_tags": [
+      "stranger",
+      "unforeseen_circumstances",
+      "financial",
+      "public_transport",
+      "sudden"
+    ],
+    "joint_text": "An ATM runs out of cash just as you need to withdraw money.. Context: involving stranger, financial, sudden; unforeseen: unforeseen circumstances; public: public transport. Tags: stranger, unforeseen_circumstances, financial, public_transport, sudden",
+    "embedding_index": 94
+  },
+  {
+    "scenario_id": "important_call_drop",
+    "original_description": "A crucial phone call disconnects mid\u2011conversation due to weak signal.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "public_transport",
+      "sudden",
+      "interrupting",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A crucial phone call disconnects mid\u2011conversation due to weak signal.. Context: coworker: coworker peer; involving work, sudden, interrupting; public: public transport; minor: minor inconvenience. Tags: coworker_peer, work, public_transport, sudden, interrupting, minor_inconvenience",
+    "embedding_index": 95
+  },
+  {
+    "scenario_id": "bluetooth_disconnect_audio",
+    "original_description": "Your wireless audio device disconnects mid\u2011call, cutting off communication.",
+    "generated_tags": [
+      "user",
+      "property_damaged",
+      "personal",
+      "home_private",
+      "sudden"
+    ],
+    "joint_text": "Your wireless audio device disconnects mid\u2011call, cutting off communication.. Context: involving user, personal, sudden; property: property damaged; home: home private. Tags: user, property_damaged, personal, home_private, sudden",
+    "embedding_index": 96
+  },
+  {
+    "scenario_id": "food_order_missing_item",
+    "original_description": "A takeaway or delivery meal arrives with a key item missing.",
+    "generated_tags": [
+      "customer",
+      "personal",
+      "home_private",
+      "sudden",
+      "property_damaged",
+      "service_worker",
+      "personal",
+      "home_private"
+    ],
+    "joint_text": "A takeaway or delivery meal arrives with a key item missing.. Context: involving customer, personal, sudden, personal; home: home private, home private; property: property damaged; service: service worker. Tags: customer, personal, home_private, sudden, property_damaged, service_worker, personal, home_private",
+    "embedding_index": 97
+  },
+  {
+    "scenario_id": "access_card_malfunction",
+    "original_description": "Your building access card suddenly stops working, locking you out.",
+    "generated_tags": [
+      "stranger",
+      "personal",
+      "home_private",
+      "sudden",
+      "minor_inconvenience",
+      "none",
+      "personal",
+      "home_private"
+    ],
+    "joint_text": "Your building access card suddenly stops working, locking you out.. Context: involving stranger, personal, sudden, none, personal; home: home private, home private; minor: minor inconvenience. Tags: stranger, personal, home_private, sudden, minor_inconvenience, none, personal, home_private",
+    "embedding_index": 98
+  },
+  {
+    "scenario_id": "printer_paper_jam",
+    "original_description": "A printer jams while producing time\u2011sensitive documents.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "property_damaged",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A printer jams while producing time\u2011sensitive documents.. Context: coworker: coworker peer; involving work, sudden; workplace: workplace private; property: property damaged; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, sudden, property_damaged, minor_inconvenience",
+    "embedding_index": 99
+  },
+  {
+    "scenario_id": "friend_forgets_birthday",
+    "original_description": "A close friend forgets your birthday, offering no greeting or acknowledgment.",
+    "generated_tags": [
+      "friend",
+      "personal",
+      "home_private",
+      "past",
+      "ignoring",
+      "emotional_damage",
+      "friend",
+      "personal"
+    ],
+    "joint_text": "A close friend forgets your birthday, offering no greeting or acknowledgment.. Context: involving friend, personal, past, ignoring, friend, personal; home: home private; emotional: emotional damage. Tags: friend, personal, home_private, past, ignoring, emotional_damage, friend, personal",
+    "embedding_index": 100
+  },
+  {
+    "scenario_id": "coworker_interrupts_presentation",
+    "original_description": "A colleague repeatedly cuts you off while you are presenting to the team.",
+    "generated_tags": [
+      "coworker_peer",
+      "interrupting",
+      "work",
+      "workplace_shared",
+      "ongoing"
+    ],
+    "joint_text": "A colleague repeatedly cuts you off while you are presenting to the team.. Context: coworker: coworker peer; involving interrupting, work, ongoing; workplace: workplace shared. Tags: coworker_peer, interrupting, work, workplace_shared, ongoing",
+    "embedding_index": 101
+  },
+  {
+    "scenario_id": "stranger_spills_coffee",
+    "original_description": "A passerby bumps into you, spilling your drink, then walks away without apologizing.",
+    "generated_tags": [
+      "stranger",
+      "physical_harm",
+      "personal",
+      "street_public",
+      "sudden",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A passerby bumps into you, spilling your drink, then walks away without apologizing.. Context: involving stranger, personal, sudden; physical: physical harm; street: street public; minor: minor inconvenience. Tags: stranger, physical_harm, personal, street_public, sudden, minor_inconvenience",
+    "embedding_index": 102
+  },
+  {
+    "scenario_id": "idea_ignored_meeting",
+    "original_description": "You share a suggestion in a group meeting and everyone moves on without addressing it.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_shared",
+      "ongoing",
+      "ignored",
+      "minor_inconvenience"
+    ],
+    "joint_text": "You share a suggestion in a group meeting and everyone moves on without addressing it.. Context: coworker: coworker peer; involving work, ongoing, ignored; workplace: workplace shared; minor: minor inconvenience. Tags: coworker_peer, work, workplace_shared, ongoing, ignored, minor_inconvenience",
+    "embedding_index": 103
+  },
+  {
+    "scenario_id": "neighbor_loud_music_midnight",
+    "original_description": "Your neighbor blasts loud music late at night, disturbing your sleep.",
+    "generated_tags": [
+      "neighbor",
+      "personal",
+      "home_private",
+      "ongoing",
+      "disturbance",
+      "minor_inconvenience",
+      "uncontrollable"
+    ],
+    "joint_text": "Your neighbor blasts loud music late at night, disturbing your sleep.. Context: involving neighbor, personal, ongoing, disturbance, uncontrollable; home: home private; minor: minor inconvenience. Tags: neighbor, personal, home_private, ongoing, disturbance, minor_inconvenience, uncontrollable",
+    "embedding_index": 104
+  },
+  {
+    "scenario_id": "date_late_no_message",
+    "original_description": "Someone you are meeting for a date arrives very late without notifying you.",
+    "generated_tags": [
+      "romantic_partner",
+      "betrayal",
+      "personal",
+      "public",
+      "sudden",
+      "emotional_damage"
+    ],
+    "joint_text": "Someone you are meeting for a date arrives very late without notifying you.. Context: romantic: romantic partner; involving betrayal, personal, public, sudden; emotional: emotional damage. Tags: romantic_partner, betrayal, personal, public, sudden, emotional_damage",
+    "embedding_index": 105
+  },
+  {
+    "scenario_id": "group_chat_exclusion",
+    "original_description": "Coworkers start a new team chat and leave you out of important discussions.",
+    "generated_tags": [
+      "coworker_peer",
+      "exclusion",
+      "work",
+      "workplace_shared",
+      "ongoing",
+      "uncontrollable",
+      "social_damage",
+      "relationship_damage"
+    ],
+    "joint_text": "Coworkers start a new team chat and leave you out of important discussions.. Context: coworker: coworker peer; involving exclusion, work, ongoing, uncontrollable; workplace: workplace shared; social: social damage; relationship: relationship damage. Tags: coworker_peer, exclusion, work, workplace_shared, ongoing, uncontrollable, social_damage, relationship_damage",
+    "embedding_index": 106
+  },
+  {
+    "scenario_id": "movie_spoiled",
+    "original_description": "A friend reveals a key plot twist of a film you planned to watch soon.",
+    "generated_tags": [
+      "friend",
+      "betrayal",
+      "personal",
+      "home_private",
+      "sudden",
+      "emotional_damage"
+    ],
+    "joint_text": "A friend reveals a key plot twist of a film you planned to watch soon.. Context: involving friend, betrayal, personal, sudden; home: home private; emotional: emotional damage. Tags: friend, betrayal, personal, home_private, sudden, emotional_damage",
+    "embedding_index": 107
+  },
+  {
+    "scenario_id": "seat_recline_invasion",
+    "original_description": "The passenger in front of you reclines their seat abruptly, encroaching on your limited space.",
+    "generated_tags": [
+      "stranger",
+      "public_transport",
+      "public_transport",
+      "sudden",
+      "interrupting",
+      "minor_inconvenience"
+    ],
+    "joint_text": "The passenger in front of you reclines their seat abruptly, encroaching on your limited space.. Context: involving stranger, sudden, interrupting; public: public transport, public transport; minor: minor inconvenience. Tags: stranger, public_transport, public_transport, sudden, interrupting, minor_inconvenience",
+    "embedding_index": 108
+  },
+  {
+    "scenario_id": "unflattering_photo_posted",
+    "original_description": "An acquaintance posts an unflattering photo of you on social media without permission.",
+    "generated_tags": [
+      "social_media_public",
+      "online_group",
+      "social_media_private",
+      "acquaintance",
+      "betrayal",
+      "unexpected_circumstances",
+      "social_damage",
+      "emotional_damage"
+    ],
+    "joint_text": "An acquaintance posts an unflattering photo of you on social media without permission.. Context: social: social media public, social media private, social damage; online: online group; involving acquaintance, betrayal; unexpected: unexpected circumstances; emotional: emotional damage. Tags: social_media_public, online_group, social_media_private, acquaintance, betrayal, unexpected_circumstances, social_damage, emotional_damage",
+    "embedding_index": 109
+  },
+  {
+    "scenario_id": "friend_ghosts_message",
+    "original_description": "A friend reads your text but never replies, leaving you uncertain.",
+    "generated_tags": [
+      "friend",
+      "personal",
+      "online_group",
+      "ongoing",
+      "ignored",
+      "emotional_damage"
+    ],
+    "joint_text": "A friend reads your text but never replies, leaving you uncertain.. Context: involving friend, personal, ongoing, ignored; online: online group; emotional: emotional damage. Tags: friend, personal, online_group, ongoing, ignored, emotional_damage",
+    "embedding_index": 110
+  },
+  {
+    "scenario_id": "coworker_micromanages_task",
+    "original_description": "A colleague continually tells you how to do a task you already know well.",
+    "generated_tags": [
+      "coworker_peer",
+      "ignoring",
+      "work",
+      "workplace_shared",
+      "ongoing"
+    ],
+    "joint_text": "A colleague continually tells you how to do a task you already know well.. Context: coworker: coworker peer; involving ignoring, work, ongoing; workplace: workplace shared. Tags: coworker_peer, ignoring, work, workplace_shared, ongoing",
+    "embedding_index": 111
+  },
+  {
+    "scenario_id": "loud_call_quiet_zone",
+    "original_description": "Someone speaks loudly on a phone in a designated quiet area, disturbing others.",
+    "generated_tags": [
+      "stranger",
+      "public",
+      "public_transport",
+      "ongoing",
+      "disturbance",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Someone speaks loudly on a phone in a designated quiet area, disturbing others.. Context: involving stranger, public, ongoing, disturbance; public: public transport; minor: minor inconvenience. Tags: stranger, public, public_transport, ongoing, disturbance, minor_inconvenience",
+    "embedding_index": 112
+  },
+  {
+    "scenario_id": "walkway_blocked_strangers",
+    "original_description": "Strangers stop to chat in the middle of a pathway, blocking your passage.",
+    "generated_tags": [
+      "stranger",
+      "interrupting",
+      "social",
+      "public_transport",
+      "sudden"
+    ],
+    "joint_text": "Strangers stop to chat in the middle of a pathway, blocking your passage.. Context: involving stranger, interrupting, social, sudden; public: public transport. Tags: stranger, interrupting, social, public_transport, sudden",
+    "embedding_index": 113
+  },
+  {
+    "scenario_id": "name_mispronounced_repeat",
+    "original_description": "After correction, someone keeps mispronouncing your name.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "ongoing",
+      "humiliation",
+      "emotional_damage"
+    ],
+    "joint_text": "After correction, someone keeps mispronouncing your name.. Context: coworker: coworker peer; involving work, ongoing, humiliation; workplace: workplace private; emotional: emotional damage. Tags: coworker_peer, work, workplace_private, ongoing, humiliation, emotional_damage",
+    "embedding_index": 114
+  },
+  {
+    "scenario_id": "bill_split_unfair",
+    "original_description": "At a group meal, others insist on splitting the bill evenly though you ordered less.",
+    "generated_tags": [
+      "coworker_peer",
+      "social",
+      "home_shared",
+      "sudden",
+      "taking_property",
+      "minor_inconvenience"
+    ],
+    "joint_text": "At a group meal, others insist on splitting the bill evenly though you ordered less.. Context: coworker: coworker peer; involving social, sudden; home: home shared; taking: taking property; minor: minor inconvenience. Tags: coworker_peer, social, home_shared, sudden, taking_property, minor_inconvenience",
+    "embedding_index": 115
+  },
+  {
+    "scenario_id": "social_event_overlook",
+    "original_description": "You learn friends held a gathering without inviting you.",
+    "generated_tags": [
+      "friend",
+      "social",
+      "home_private",
+      "past",
+      "exclusion",
+      "friend",
+      "social",
+      "home_private"
+    ],
+    "joint_text": "You learn friends held a gathering without inviting you.. Context: involving friend, social, past, exclusion, friend, social; home: home private, home private. Tags: friend, social, home_private, past, exclusion, friend, social, home_private",
+    "embedding_index": 116
+  },
+  {
+    "scenario_id": "private_message_forwarded",
+    "original_description": "A coworker forwards your private email to others without permission.",
+    "generated_tags": [
+      "coworker_peer",
+      "peer",
+      "betrayal",
+      "work",
+      "social",
+      "workplace_shared"
+    ],
+    "joint_text": "A coworker forwards your private email to others without permission.. Context: coworker: coworker peer; involving peer, betrayal, work, social; workplace: workplace shared. Tags: coworker_peer, peer, betrayal, work, social, workplace_shared",
+    "embedding_index": 117
+  },
+  {
+    "scenario_id": "roommate_shared_space_mess",
+    "original_description": "Your roommate leaves common areas messy and doesn't clean up.",
+    "generated_tags": [
+      "roommate",
+      "personal",
+      "home_shared",
+      "ongoing",
+      "neglect",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Your roommate leaves common areas messy and doesn't clean up.. Context: involving roommate, personal, ongoing, neglect; home: home shared; minor: minor inconvenience. Tags: roommate, personal, home_shared, ongoing, neglect, minor_inconvenience",
+    "embedding_index": 118
+  },
+  {
+    "scenario_id": "unannounced_visit_friend",
+    "original_description": "A friend arrives at your home without notice, disrupting your plans.",
+    "generated_tags": [
+      "friend",
+      "unplanned_visit",
+      "home_private",
+      "sudden",
+      "disruption",
+      "social",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A friend arrives at your home without notice, disrupting your plans.. Context: involving friend, sudden, disruption, social; unplanned: unplanned visit; home: home private; minor: minor inconvenience. Tags: friend, unplanned_visit, home_private, sudden, disruption, social, minor_inconvenience",
+    "embedding_index": 119
+  },
+  {
+    "scenario_id": "conversation_hijacked",
+    "original_description": "Someone abruptly changes the subject while you\u2019re speaking, sidelining your point.",
+    "generated_tags": [
+      "coworker_peer",
+      "interrupting",
+      "work",
+      "workplace_private",
+      "sudden"
+    ],
+    "joint_text": "Someone abruptly changes the subject while you\u2019re speaking, sidelining your point.. Context: coworker: coworker peer; involving interrupting, work, sudden; workplace: workplace private. Tags: coworker_peer, interrupting, work, workplace_private, sudden",
+    "embedding_index": 120
+  },
+  {
+    "scenario_id": "inside_joke_exclusion",
+    "original_description": "People around you share inside jokes that make you feel left out of the conversation.",
+    "generated_tags": [
+      "social",
+      "exclusion",
+      "ongoing",
+      "personal",
+      "social_damage",
+      "emotional_damage",
+      "peer",
+      "humiliation"
+    ],
+    "joint_text": "People around you share inside jokes that make you feel left out of the conversation.. Context: involving social, exclusion, ongoing, personal, peer, humiliation; social: social damage; emotional: emotional damage. Tags: social, exclusion, ongoing, personal, social_damage, emotional_damage, peer, humiliation",
+    "embedding_index": 121
+  },
+  {
+    "scenario_id": "name_forgotten_introduction",
+    "original_description": "During an introduction, the person forgets your name or gets it wrong.",
+    "generated_tags": [
+      "coworker_peer",
+      "betrayal",
+      "social",
+      "workplace_private",
+      "sudden",
+      "coworker_peer",
+      "humiliation",
+      "social"
+    ],
+    "joint_text": "During an introduction, the person forgets your name or gets it wrong.. Context: coworker: coworker peer, coworker peer; involving betrayal, social, sudden, humiliation, social; workplace: workplace private. Tags: coworker_peer, betrayal, social, workplace_private, sudden, coworker_peer, humiliation, social",
+    "embedding_index": 122
+  },
+  {
+    "scenario_id": "backhanded_compliment",
+    "original_description": "A so\u2011called compliment actually contains an insult about you.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_shared",
+      "sudden",
+      "humiliation",
+      "emotional_damage"
+    ],
+    "joint_text": "A so\u2011called compliment actually contains an insult about you.. Context: coworker: coworker peer; involving work, sudden, humiliation; workplace: workplace shared; emotional: emotional damage. Tags: coworker_peer, work, workplace_shared, sudden, humiliation, emotional_damage",
+    "embedding_index": 123
+  },
+  {
+    "scenario_id": "unwanted_photo_tag",
+    "original_description": "You are tagged in a social\u2011media photo you dislike without being asked.",
+    "generated_tags": [
+      "social_media_public",
+      "uncontrollable",
+      "unexpected_circumstances",
+      "social_damage",
+      "emotional_damage",
+      "online_group",
+      "stranger",
+      "anticipated"
+    ],
+    "joint_text": "You are tagged in a social\u2011media photo you dislike without being asked.. Context: social: social media public, social damage; involving uncontrollable, stranger, anticipated; unexpected: unexpected circumstances; emotional: emotional damage; online: online group. Tags: social_media_public, uncontrollable, unexpected_circumstances, social_damage, emotional_damage, online_group, stranger, anticipated",
+    "embedding_index": 124
+  },
+  {
+    "scenario_id": "joke_at_your_expense",
+    "original_description": "Friends make a joke that targets you, causing discomfort.",
+    "generated_tags": [
+      "friend",
+      "humiliation",
+      "social",
+      "public",
+      "ongoing",
+      "uncontrollable",
+      "emotional_damage"
+    ],
+    "joint_text": "Friends make a joke that targets you, causing discomfort.. Context: involving friend, humiliation, social, public, ongoing, uncontrollable; emotional: emotional damage. Tags: friend, humiliation, social, public, ongoing, uncontrollable, emotional_damage",
+    "embedding_index": 125
+  },
+  {
+    "scenario_id": "group_plans_changed_last_minute",
+    "original_description": "Friends move a gathering\u2019s time or place without checking if you can still attend.",
+    "generated_tags": [
+      "friend",
+      "social",
+      "home_private",
+      "sudden",
+      "breaking_promise",
+      "friend",
+      "social",
+      "home_private"
+    ],
+    "joint_text": "Friends move a gathering\u2019s time or place without checking if you can still attend.. Context: involving friend, social, sudden, friend, social; home: home private, home private; breaking: breaking promise. Tags: friend, social, home_private, sudden, breaking_promise, friend, social, home_private",
+    "embedding_index": 126
+  },
+  {
+    "scenario_id": "ignored_handshake",
+    "original_description": "You extend a handshake but the other person ignores it.",
+    "generated_tags": [
+      "stranger",
+      "social",
+      "public",
+      "sudden",
+      "ignored",
+      "minor_inconvenience"
+    ],
+    "joint_text": "You extend a handshake but the other person ignores it.. Context: involving stranger, social, public, sudden, ignored; minor: minor inconvenience. Tags: stranger, social, public, sudden, ignored, minor_inconvenience",
+    "embedding_index": 127
+  },
+  {
+    "scenario_id": "distracted_listener",
+    "original_description": "Someone scrolls on their phone while you are talking, giving little attention.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_shared",
+      "ongoing",
+      "ignoring",
+      "minor_inconvenience",
+      "uncontrollable"
+    ],
+    "joint_text": "Someone scrolls on their phone while you are talking, giving little attention.. Context: coworker: coworker peer; involving work, ongoing, ignoring, uncontrollable; workplace: workplace shared; minor: minor inconvenience. Tags: coworker_peer, work, workplace_shared, ongoing, ignoring, minor_inconvenience, uncontrollable",
+    "embedding_index": 128
+  },
+  {
+    "scenario_id": "broken_favor_promise",
+    "original_description": "A friend who promised to help you backs out at the last moment.",
+    "generated_tags": [
+      "friend",
+      "betrayal",
+      "personal",
+      "relationship_damage",
+      "anticipated",
+      "broken_promises"
+    ],
+    "joint_text": "A friend who promised to help you backs out at the last moment.. Context: involving friend, betrayal, personal, anticipated; relationship: relationship damage; broken: broken promises. Tags: friend, betrayal, personal, relationship_damage, anticipated, broken_promises",
+    "embedding_index": 129
+  },
+  {
+    "scenario_id": "friend_borrowed_item_not_returned",
+    "original_description": "A friend borrows your book and never returns it after the agreed time.",
+    "generated_tags": [
+      "friend",
+      "borrowed_book",
+      "broken_agreement",
+      "betrayal",
+      "personal",
+      "home_private",
+      "ongoing",
+      "uncontrollable"
+    ],
+    "joint_text": "A friend borrows your book and never returns it after the agreed time.. Context: involving friend, betrayal, personal, ongoing, uncontrollable; borrowed: borrowed book; broken: broken agreement; home: home private. Tags: friend, borrowed_book, broken_agreement, betrayal, personal, home_private, ongoing, uncontrollable",
+    "embedding_index": 130
+  },
+  {
+    "scenario_id": "coworker_eats_lunch",
+    "original_description": "A coworker eats your clearly labeled lunch from the office fridge.",
+    "generated_tags": [
+      "coworker_peer",
+      "taking_property",
+      "work",
+      "workplace_shared",
+      "ongoing",
+      "material_loss_small"
+    ],
+    "joint_text": "A coworker eats your clearly labeled lunch from the office fridge.. Context: coworker: coworker peer; taking: taking property; involving work, ongoing; workplace: workplace shared; material: material loss small. Tags: coworker_peer, taking_property, work, workplace_shared, ongoing, material_loss_small",
+    "embedding_index": 131
+  },
+  {
+    "scenario_id": "partner_reads_private_messages",
+    "original_description": "Your partner goes through your private messages without permission.",
+    "generated_tags": [
+      "romantic_partner",
+      "betrayal",
+      "personal",
+      "home_private",
+      "ongoing",
+      "uncontrollable",
+      "emotional_damage",
+      "relationship_damage"
+    ],
+    "joint_text": "Your partner goes through your private messages without permission.. Context: romantic: romantic partner; involving betrayal, personal, ongoing, uncontrollable; home: home private; emotional: emotional damage; relationship: relationship damage. Tags: romantic_partner, betrayal, personal, home_private, ongoing, uncontrollable, emotional_damage, relationship_damage",
+    "embedding_index": 132
+  },
+  {
+    "scenario_id": "stranger_takes_reserved_seat",
+    "original_description": "A stranger sits in your reserved train seat and refuses to move.",
+    "generated_tags": [
+      "stranger",
+      "taking_property",
+      "daily_life",
+      "public_transport",
+      "sudden",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A stranger sits in your reserved train seat and refuses to move.. Context: involving stranger, sudden; taking: taking property; daily: daily life; public: public transport; minor: minor inconvenience. Tags: stranger, taking_property, daily_life, public_transport, sudden, minor_inconvenience",
+    "embedding_index": 133
+  },
+  {
+    "scenario_id": "unsolicited_advice_acquaintance",
+    "original_description": "An acquaintance offers personal advice you didn\u2019t ask for.",
+    "generated_tags": [
+      "acquaintance",
+      "personal",
+      "home_private",
+      "sudden",
+      "unwanted_advice",
+      "minor_inconvenience"
+    ],
+    "joint_text": "An acquaintance offers personal advice you didn\u2019t ask for.. Context: involving acquaintance, personal, sudden; home: home private; unwanted: unwanted advice; minor: minor inconvenience. Tags: acquaintance, personal, home_private, sudden, unwanted_advice, minor_inconvenience",
+    "embedding_index": 134
+  },
+  {
+    "scenario_id": "group_chat_misunderstanding",
+    "original_description": "Your group\u2011chat message is misread, sparking an argument.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "online_group",
+      "sudden",
+      "miscommunication",
+      "emotional_damage"
+    ],
+    "joint_text": "Your group\u2011chat message is misread, sparking an argument.. Context: coworker: coworker peer; involving work, sudden, miscommunication; online: online group; emotional: emotional damage. Tags: coworker_peer, work, online_group, sudden, miscommunication, emotional_damage",
+    "embedding_index": 135
+  },
+  {
+    "scenario_id": "loud_video_public_space",
+    "original_description": "Someone plays a video on speaker in a quiet waiting area.",
+    "generated_tags": [
+      "coworker_peer",
+      "public_setting",
+      "work_domain",
+      "sudden",
+      "minor_inconvenience",
+      "interrupting",
+      "social_damage"
+    ],
+    "joint_text": "Someone plays a video on speaker in a quiet waiting area.. Context: coworker: coworker peer; public: public setting; work: work domain; involving sudden, interrupting; minor: minor inconvenience; social: social damage. Tags: coworker_peer, public_setting, work_domain, sudden, minor_inconvenience, interrupting, social_damage",
+    "embedding_index": 136
+  },
+  {
+    "scenario_id": "friend_arrives_extremely_late",
+    "original_description": "A friend shows up over an hour late to a meetup without notice.",
+    "generated_tags": [
+      "friend",
+      "breaking_promise",
+      "social",
+      "home_private",
+      "sudden"
+    ],
+    "joint_text": "A friend shows up over an hour late to a meetup without notice.. Context: involving friend, social, sudden; breaking: breaking promise; home: home private. Tags: friend, breaking_promise, social, home_private, sudden",
+    "embedding_index": 137
+  },
+  {
+    "scenario_id": "friend_unfollow_social",
+    "original_description": "You discover a close friend has unfollowed you on social media without explanation.",
+    "generated_tags": [
+      "social_media_private",
+      "friend",
+      "betrayal",
+      "unforeseen_circumstances",
+      "social_damage",
+      "emotional_damage"
+    ],
+    "joint_text": "You discover a close friend has unfollowed you on social media without explanation.. Context: social: social media private, social damage; involving friend, betrayal; unforeseen: unforeseen circumstances; emotional: emotional damage. Tags: social_media_private, friend, betrayal, unforeseen_circumstances, social_damage, emotional_damage",
+    "embedding_index": 138
+  },
+  {
+    "scenario_id": "neighbor_smokes_hallway",
+    "original_description": "A neighbor smokes outside your door, filling your hallway with smoke.",
+    "generated_tags": [
+      "neighbor",
+      "smoking",
+      "home_private",
+      "ongoing",
+      "uncontrollable",
+      "health",
+      "social_damage",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A neighbor smokes outside your door, filling your hallway with smoke.. Context: involving neighbor, smoking, ongoing, uncontrollable, health; home: home private; social: social damage; minor: minor inconvenience. Tags: neighbor, smoking, home_private, ongoing, uncontrollable, health, social_damage, minor_inconvenience",
+    "embedding_index": 139
+  },
+  {
+    "scenario_id": "boss_revokes_approved_leave",
+    "original_description": "Your manager cancels your previously approved vacation days at short notice.",
+    "generated_tags": [
+      "coworker_superior",
+      "betrayal",
+      "work",
+      "workplace_private",
+      "sudden",
+      "major_inconvenience"
+    ],
+    "joint_text": "Your manager cancels your previously approved vacation days at short notice.. Context: coworker: coworker superior; involving betrayal, work, sudden; workplace: workplace private; major: major inconvenience. Tags: coworker_superior, betrayal, work, workplace_private, sudden, major_inconvenience",
+    "embedding_index": 140
+  },
+  {
+    "scenario_id": "unexpected_external_attendee",
+    "original_description": "A person you don\u2019t know is invited to a meeting and hears confidential details.",
+    "generated_tags": [
+      "stranger",
+      "work",
+      "workplace_private",
+      "sudden",
+      "betrayal",
+      "social_damage"
+    ],
+    "joint_text": "A person you don\u2019t know is invited to a meeting and hears confidential details.. Context: involving stranger, work, sudden, betrayal; workplace: workplace private; social: social damage. Tags: stranger, work, workplace_private, sudden, betrayal, social_damage",
+    "embedding_index": 141
+  },
+  {
+    "scenario_id": "partner_forgets_joint_plan",
+    "original_description": "Your partner forgets a date night you planned together and makes other plans.",
+    "generated_tags": [
+      "romantic_partner",
+      "betrayal",
+      "personal",
+      "home_private",
+      "sudden",
+      "emotional_damage"
+    ],
+    "joint_text": "Your partner forgets a date night you planned together and makes other plans.. Context: romantic: romantic partner; involving betrayal, personal, sudden; home: home private; emotional: emotional damage. Tags: romantic_partner, betrayal, personal, home_private, sudden, emotional_damage",
+    "embedding_index": 142
+  },
+  {
+    "scenario_id": "project_teammate_no_show",
+    "original_description": "A teammate contributes nothing to a group project, leaving extra work for you.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_shared",
+      "ongoing",
+      "neglect",
+      "major_inconvenience"
+    ],
+    "joint_text": "A teammate contributes nothing to a group project, leaving extra work for you.. Context: coworker: coworker peer; involving work, ongoing, neglect; workplace: workplace shared; major: major inconvenience. Tags: coworker_peer, work, workplace_shared, ongoing, neglect, major_inconvenience",
+    "embedding_index": 143
+  },
+  {
+    "scenario_id": "stranger_intrusive_question",
+    "original_description": "A stranger asks a deeply personal question that makes you uncomfortable.",
+    "generated_tags": [
+      "actor_relationship:stranger",
+      "trigger:betrayal",
+      "domain:personal",
+      "setting:public",
+      "temporal:sudden",
+      "outcome:emotional_damage"
+    ],
+    "joint_text": "A stranger asks a deeply personal question that makes you uncomfortable.. Context: actor: actor relationship:stranger; involving trigger:betrayal, domain:personal, setting:public, temporal:sudden; outcome:emotional: outcome:emotional damage. Tags: actor_relationship:stranger, trigger:betrayal, domain:personal, setting:public, temporal:sudden, outcome:emotional_damage",
+    "embedding_index": 144
+  },
+  {
+    "scenario_id": "unsolicited_physical_contact",
+    "original_description": "An acquaintance touches your hair or body without permission.",
+    "generated_tags": [
+      "unwanted_touch",
+      "acquaintance",
+      "personal",
+      "home_private",
+      "sudden",
+      "uncontrollable",
+      "emotional_damage"
+    ],
+    "joint_text": "An acquaintance touches your hair or body without permission.. Context: unwanted: unwanted touch; involving acquaintance, personal, sudden, uncontrollable; home: home private; emotional: emotional damage. Tags: unwanted_touch, acquaintance, personal, home_private, sudden, uncontrollable, emotional_damage",
+    "embedding_index": 145
+  },
+  {
+    "scenario_id": "stranger_photographs_without_consent",
+    "original_description": "Someone takes your photo in public without asking.",
+    "generated_tags": [
+      "stranger",
+      "taking_property",
+      "personal",
+      "street_public",
+      "sudden"
+    ],
+    "joint_text": "Someone takes your photo in public without asking.. Context: involving stranger, personal, sudden; taking: taking property; street: street public. Tags: stranger, taking_property, personal, street_public, sudden",
+    "embedding_index": 146
+  },
+  {
+    "scenario_id": "language_exclusion_laughter",
+    "original_description": "Colleagues switch to a language you don\u2019t understand and laugh together.",
+    "generated_tags": [
+      "coworker_peer",
+      "ignoring",
+      "social",
+      "workplace_shared",
+      "sudden",
+      "uncontrollable",
+      "social_damage"
+    ],
+    "joint_text": "Colleagues switch to a language you don\u2019t understand and laugh together.. Context: coworker: coworker peer; involving ignoring, social, sudden, uncontrollable; workplace: workplace shared; social: social damage. Tags: coworker_peer, ignoring, social, workplace_shared, sudden, uncontrollable, social_damage",
+    "embedding_index": 147
+  },
+  {
+    "scenario_id": "coworker_reply_all_mistake",
+    "original_description": "A coworker accidentally replies\u2011all with sensitive information to a large mailing list.",
+    "generated_tags": [
+      "coworker_peer",
+      "betrayal",
+      "work",
+      "workplace_shared",
+      "sudden",
+      "social_damage",
+      "emotional_damage"
+    ],
+    "joint_text": "A coworker accidentally replies\u2011all with sensitive information to a large mailing list.. Context: coworker: coworker peer; involving betrayal, work, sudden; workplace: workplace shared; social: social damage; emotional: emotional damage. Tags: coworker_peer, betrayal, work, workplace_shared, sudden, social_damage, emotional_damage",
+    "embedding_index": 148
+  },
+  {
+    "scenario_id": "inappropriate_appearance_comment",
+    "original_description": "Someone makes an invasive comment about your appearance that feels uncomfortable.",
+    "generated_tags": [
+      "stranger",
+      "humiliation",
+      "personal",
+      "public",
+      "sudden",
+      "emotional_damage"
+    ],
+    "joint_text": "Someone makes an invasive comment about your appearance that feels uncomfortable.. Context: involving stranger, humiliation, personal, public, sudden; emotional: emotional damage. Tags: stranger, humiliation, personal, public, sudden, emotional_damage",
+    "embedding_index": 149
+  },
+  {
+    "scenario_id": "supervisor_publicly_scolds",
+    "original_description": "Your supervisor criticizes your work loudly in front of the whole team.",
+    "generated_tags": [
+      "coworker_superior",
+      "criticism",
+      "work",
+      "workplace_shared",
+      "public",
+      "sudden",
+      "emotional_damage",
+      "humiliation"
+    ],
+    "joint_text": "Your supervisor criticizes your work loudly in front of the whole team.. Context: coworker: coworker superior; involving criticism, work, public, sudden, humiliation; workplace: workplace shared; emotional: emotional damage. Tags: coworker_superior, criticism, work, workplace_shared, public, sudden, emotional_damage, humiliation",
+    "embedding_index": 150
+  },
+  {
+    "scenario_id": "coworker_ignores_email",
+    "original_description": "A colleague repeatedly ignores your emails about an urgent shared task.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_shared",
+      "ongoing",
+      "ignoring",
+      "uncontrollable",
+      "major_inconvenience"
+    ],
+    "joint_text": "A colleague repeatedly ignores your emails about an urgent shared task.. Context: coworker: coworker peer; involving work, ongoing, ignoring, uncontrollable; workplace: workplace shared; major: major inconvenience. Tags: coworker_peer, work, workplace_shared, ongoing, ignoring, uncontrollable, major_inconvenience",
+    "embedding_index": 151
+  },
+  {
+    "scenario_id": "friend_shares_confidential_info",
+    "original_description": "A friend tells others a secret you asked them to keep private.",
+    "generated_tags": [
+      "friend",
+      "betrayal",
+      "personal",
+      "social",
+      "past",
+      "social_damage"
+    ],
+    "joint_text": "A friend tells others a secret you asked them to keep private.. Context: involving friend, betrayal, personal, social, past; social: social damage. Tags: friend, betrayal, personal, social, past, social_damage",
+    "embedding_index": 152
+  },
+  {
+    "scenario_id": "neighbor_blocks_driveway",
+    "original_description": "A neighbor parks across your driveway, preventing you from leaving.",
+    "generated_tags": [
+      "neighbor",
+      "personal",
+      "home_private",
+      "ongoing",
+      "obstruction",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A neighbor parks across your driveway, preventing you from leaving.. Context: involving neighbor, personal, ongoing, obstruction; home: home private; minor: minor inconvenience. Tags: neighbor, personal, home_private, ongoing, obstruction, minor_inconvenience",
+    "embedding_index": 153
+  },
+  {
+    "scenario_id": "acquaintance_name_mixup",
+    "original_description": "Someone you\u2019ve met several times still calls you by the wrong name.",
+    "generated_tags": [
+      "trigger:betrayal",
+      "domain:personal",
+      "setting:social",
+      "temporal:ongoing",
+      "control:uncontrollable",
+      "outcome:minor_inconvenience"
+    ],
+    "joint_text": "Someone you\u2019ve met several times still calls you by the wrong name.. Context: involving trigger:betrayal, domain:personal, setting:social, temporal:ongoing, control:uncontrollable; outcome:minor: outcome:minor inconvenience. Tags: trigger:betrayal, domain:personal, setting:social, temporal:ongoing, control:uncontrollable, outcome:minor_inconvenience",
+    "embedding_index": 154
+  },
+  {
+    "scenario_id": "parent_publicly_embarrasses",
+    "original_description": "A parent makes a personal remark about you in front of your friends.",
+    "generated_tags": [
+      "parent",
+      "personal",
+      "public",
+      "humiliation",
+      "parent",
+      "personal",
+      "public",
+      "sudden"
+    ],
+    "joint_text": "A parent makes a personal remark about you in front of your friends.. Context: involving parent, personal, public, humiliation, parent, personal, public, sudden. Tags: parent, personal, public, humiliation, parent, personal, public, sudden",
+    "embedding_index": 155
+  },
+  {
+    "scenario_id": "teammate_blames_mistake",
+    "original_description": "A project teammate blames their error on you during a group review.",
+    "generated_tags": [
+      "coworker_peer",
+      "betrayal",
+      "work",
+      "workplace_shared",
+      "ongoing"
+    ],
+    "joint_text": "A project teammate blames their error on you during a group review.. Context: coworker: coworker peer; involving betrayal, work, ongoing; workplace: workplace shared. Tags: coworker_peer, betrayal, work, workplace_shared, ongoing",
+    "embedding_index": 156
+  },
+  {
+    "scenario_id": "event_host_forgets_dietary_restriction",
+    "original_description": "A host serves food you cannot eat despite being told your restriction.",
+    "generated_tags": [
+      "host_guest",
+      "social",
+      "home_private",
+      "ongoing",
+      "neglect",
+      "minor_inconvenience",
+      "uncontrollable"
+    ],
+    "joint_text": "A host serves food you cannot eat despite being told your restriction.. Context: host: host guest; involving social, ongoing, neglect, uncontrollable; home: home private; minor: minor inconvenience. Tags: host_guest, social, home_private, ongoing, neglect, minor_inconvenience, uncontrollable",
+    "embedding_index": 157
+  },
+  {
+    "scenario_id": "child_interrupts_video_call",
+    "original_description": "A child bursts into the room during your important video meeting.",
+    "generated_tags": [
+      "coworker_peer",
+      "interrupting",
+      "work",
+      "home_private",
+      "sudden",
+      "family_member",
+      "interrupting",
+      "personal"
+    ],
+    "joint_text": "A child bursts into the room during your important video meeting.. Context: coworker: coworker peer; involving interrupting, work, sudden, interrupting, personal; home: home private; family: family member. Tags: coworker_peer, interrupting, work, home_private, sudden, family_member, interrupting, personal",
+    "embedding_index": 158
+  },
+  {
+    "scenario_id": "coworker_reschedules_meeting_without_consult",
+    "original_description": "A colleague moves a meeting time without checking your availability.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "breaking_promise",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A colleague moves a meeting time without checking your availability.. Context: coworker: coworker peer; involving work, sudden; workplace: workplace private; breaking: breaking promise; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, sudden, breaking_promise, minor_inconvenience",
+    "embedding_index": 159
+  },
+  {
+    "scenario_id": "romantic_partner_on_phone_dinner",
+    "original_description": "Your partner scrolls on their phone through an entire dinner date.",
+    "generated_tags": [
+      "romantic_partner",
+      "personal",
+      "home_private",
+      "ongoing",
+      "ignoring",
+      "emotional_damage"
+    ],
+    "joint_text": "Your partner scrolls on their phone through an entire dinner date.. Context: romantic: romantic partner; involving personal, ongoing, ignoring; home: home private; emotional: emotional damage. Tags: romantic_partner, personal, home_private, ongoing, ignoring, emotional_damage",
+    "embedding_index": 160
+  },
+  {
+    "scenario_id": "customer_service_hangup",
+    "original_description": "A support agent hangs up mid\u2011call before resolving your issue.",
+    "generated_tags": [
+      "customer",
+      "work",
+      "phone_call",
+      "sudden",
+      "abandoned",
+      "service_worker",
+      "work",
+      "phone_call"
+    ],
+    "joint_text": "A support agent hangs up mid\u2011call before resolving your issue.. Context: involving customer, work, sudden, abandoned, work; phone: phone call, phone call; service: service worker. Tags: customer, work, phone_call, sudden, abandoned, service_worker, work, phone_call",
+    "embedding_index": 161
+  },
+  {
+    "scenario_id": "gossip_spread_workplace",
+    "original_description": "A rumor about you circulates in the office without your knowledge.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_shared",
+      "ongoing",
+      "betrayal",
+      "social_damage"
+    ],
+    "joint_text": "A rumor about you circulates in the office without your knowledge.. Context: coworker: coworker peer; involving work, ongoing, betrayal; workplace: workplace shared; social: social damage. Tags: coworker_peer, work, workplace_shared, ongoing, betrayal, social_damage",
+    "embedding_index": 162
+  },
+  {
+    "scenario_id": "stranger_invades_personal_space",
+    "original_description": "Someone stands uncomfortably close in a queue despite room to spread out.",
+    "generated_tags": [
+      "social",
+      "public_transport",
+      "uncomfortable",
+      "stranger",
+      "unexpected_circumstances",
+      "sudden",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Someone stands uncomfortably close in a queue despite room to spread out.. Context: involving social, uncomfortable, stranger, sudden; public: public transport; unexpected: unexpected circumstances; minor: minor inconvenience. Tags: social, public_transport, uncomfortable, stranger, unexpected_circumstances, sudden, minor_inconvenience",
+    "embedding_index": 163
+  },
+  {
+    "scenario_id": "stranger_takes_up_two_seats",
+    "original_description": "A passenger uses two bus seats, leaving others standing.",
+    "generated_tags": [
+      "crowd_member",
+      "taking_property",
+      "social",
+      "public_transport",
+      "sudden",
+      "ongoing"
+    ],
+    "joint_text": "A passenger uses two bus seats, leaving others standing.. Context: crowd: crowd member; taking: taking property; involving social, sudden, ongoing; public: public transport. Tags: crowd_member, taking_property, social, public_transport, sudden, ongoing",
+    "embedding_index": 164
+  },
+  {
+    "scenario_id": "seat_kicked_repeat",
+    "original_description": "The person behind you keeps kicking your seat throughout a flight.",
+    "generated_tags": [
+      "stranger",
+      "travel",
+      "public_transport",
+      "ongoing",
+      "physical_harm",
+      "minor_inconvenience"
+    ],
+    "joint_text": "The person behind you keeps kicking your seat throughout a flight.. Context: involving stranger, travel, ongoing; public: public transport; physical: physical harm; minor: minor inconvenience. Tags: stranger, travel, public_transport, ongoing, physical_harm, minor_inconvenience",
+    "embedding_index": 165
+  },
+  {
+    "scenario_id": "coworker_plays_music_no_headphones",
+    "original_description": "A coworker blasts music from their speakers in an open office.",
+    "generated_tags": [
+      "coworker_peer",
+      "workplace_shared",
+      "ongoing",
+      "uncontrollable",
+      "minor_inconvenience",
+      "ignoring",
+      "interrupting"
+    ],
+    "joint_text": "A coworker blasts music from their speakers in an open office.. Context: coworker: coworker peer; workplace: workplace shared; involving ongoing, uncontrollable, ignoring, interrupting; minor: minor inconvenience. Tags: coworker_peer, workplace_shared, ongoing, uncontrollable, minor_inconvenience, ignoring, interrupting",
+    "embedding_index": 166
+  },
+  {
+    "scenario_id": "friend_changes_story_blames_you",
+    "original_description": "A friend alters a shared story to make you appear at fault.",
+    "generated_tags": [
+      "friend",
+      "betrayal",
+      "personal",
+      "home_shared",
+      "sudden",
+      "social_damage"
+    ],
+    "joint_text": "A friend alters a shared story to make you appear at fault.. Context: involving friend, betrayal, personal, sudden; home: home shared; social: social damage. Tags: friend, betrayal, personal, home_shared, sudden, social_damage",
+    "embedding_index": 167
+  },
+  {
+    "scenario_id": "neighbor_dog_barks_night",
+    "original_description": "A neighbor\u2019s dog barks loudly through the night, disrupting sleep.",
+    "generated_tags": [
+      "neighbor",
+      "disrupting_sleep",
+      "ongoing",
+      "home_private",
+      "night",
+      "uncontrollable",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A neighbor\u2019s dog barks loudly through the night, disrupting sleep.. Context: involving neighbor, ongoing, night, uncontrollable; disrupting: disrupting sleep; home: home private; minor: minor inconvenience. Tags: neighbor, disrupting_sleep, ongoing, home_private, night, uncontrollable, minor_inconvenience",
+    "embedding_index": 168
+  },
+  {
+    "scenario_id": "colleague_takes_last_cup_coffee",
+    "original_description": "A coworker finishes the office coffee and leaves the pot empty.",
+    "generated_tags": [
+      "coworker_peer",
+      "workplace_shared",
+      "neglect",
+      "uncontrollable",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A coworker finishes the office coffee and leaves the pot empty.. Context: coworker: coworker peer; workplace: workplace shared; involving neglect, uncontrollable; minor: minor inconvenience. Tags: coworker_peer, workplace_shared, neglect, uncontrollable, minor_inconvenience",
+    "embedding_index": 169
+  },
+  {
+    "scenario_id": "mentor_last_minute_feedback",
+    "original_description": "A mentor returns substantial edits minutes before a deadline.",
+    "generated_tags": [
+      "breaking_promise",
+      "work",
+      "academic",
+      "workplace_private",
+      "sudden"
+    ],
+    "joint_text": "A mentor returns substantial edits minutes before a deadline.. Context: breaking: breaking promise; involving work, academic, sudden; workplace: workplace private. Tags: breaking_promise, work, academic, workplace_private, sudden",
+    "embedding_index": 170
+  },
+  {
+    "scenario_id": "sibling_borrows_clothes_spill",
+    "original_description": "A sibling borrows your clothes and returns them with a stain.",
+    "generated_tags": [
+      "sibling",
+      "personal",
+      "home_private",
+      "ongoing",
+      "taking_property",
+      "material_loss_small"
+    ],
+    "joint_text": "A sibling borrows your clothes and returns them with a stain.. Context: involving sibling, personal, ongoing; home: home private; taking: taking property; material: material loss small. Tags: sibling, personal, home_private, ongoing, taking_property, material_loss_small",
+    "embedding_index": 171
+  },
+  {
+    "scenario_id": "social_media_comment_misunderstood",
+    "original_description": "Your online comment is misinterpreted, sparking hostile replies.",
+    "generated_tags": [
+      "coworker_peer",
+      "misinterpretation",
+      "social",
+      "online_group",
+      "sudden",
+      "stranger",
+      "hostile_reply",
+      "social"
+    ],
+    "joint_text": "Your online comment is misinterpreted, sparking hostile replies.. Context: coworker: coworker peer; involving misinterpretation, social, sudden, stranger, social; online: online group; hostile: hostile reply. Tags: coworker_peer, misinterpretation, social, online_group, sudden, stranger, hostile_reply, social",
+    "embedding_index": 172
+  },
+  {
+    "scenario_id": "group_task_skipped_turn",
+    "original_description": "Team members move ahead without giving you your turn to contribute.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_shared",
+      "ongoing",
+      "blocked_goal",
+      "uncontrollable",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Team members move ahead without giving you your turn to contribute.. Context: coworker: coworker peer; involving work, ongoing, uncontrollable; workplace: workplace shared; blocked: blocked goal; minor: minor inconvenience. Tags: coworker_peer, work, workplace_shared, ongoing, blocked_goal, uncontrollable, minor_inconvenience",
+    "embedding_index": 173
+  },
+  {
+    "scenario_id": "landlord_enters_without_notice",
+    "original_description": "Your landlord enters your apartment unannounced while you\u2019re home.",
+    "generated_tags": [
+      "breaking_promise",
+      "personal",
+      "home_private",
+      "sudden"
+    ],
+    "joint_text": "Your landlord enters your apartment unannounced while you\u2019re home.. Context: breaking: breaking promise; involving personal, sudden; home: home private. Tags: breaking_promise, personal, home_private, sudden",
+    "embedding_index": 174
+  },
+  {
+    "scenario_id": "ride_share_driver_detours",
+    "original_description": "A ride\u2011share driver takes a long detour without explaining why.",
+    "generated_tags": [
+      "service_worker",
+      "taking_property",
+      "personal",
+      "public_transport",
+      "ongoing",
+      "service_worker",
+      "betrayal",
+      "personal"
+    ],
+    "joint_text": "A ride\u2011share driver takes a long detour without explaining why.. Context: service: service worker, service worker; taking: taking property; involving personal, ongoing, betrayal, personal; public: public transport. Tags: service_worker, taking_property, personal, public_transport, ongoing, service_worker, betrayal, personal",
+    "embedding_index": 175
+  },
+  {
+    "scenario_id": "stranger_blocking_photo_spot",
+    "original_description": "Tourists occupy a photo spot for too long, preventing your picture.",
+    "generated_tags": [
+      "stranger",
+      "personal",
+      "public_place",
+      "ongoing",
+      "blocking_goal",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Tourists occupy a photo spot for too long, preventing your picture.. Context: involving stranger, personal, ongoing; public: public place; blocking: blocking goal; minor: minor inconvenience. Tags: stranger, personal, public_place, ongoing, blocking_goal, minor_inconvenience",
+    "embedding_index": 176
+  },
+  {
+    "scenario_id": "colleague_forwards_wrong_attachment",
+    "original_description": "A coworker sends the wrong confidential file to the entire team.",
+    "generated_tags": [
+      "coworker_peer",
+      "betrayal",
+      "work",
+      "workplace_shared",
+      "sudden",
+      "material_loss_small"
+    ],
+    "joint_text": "A coworker sends the wrong confidential file to the entire team.. Context: coworker: coworker peer; involving betrayal, work, sudden; workplace: workplace shared; material: material loss small. Tags: coworker_peer, betrayal, work, workplace_shared, sudden, material_loss_small",
+    "embedding_index": 177
+  },
+  {
+    "scenario_id": "friend_cancels_trip_after_booking",
+    "original_description": "A friend cancels a joint trip after tickets are non\u2011refundable.",
+    "generated_tags": [
+      "friend",
+      "betrayal",
+      "personal",
+      "planned_event",
+      "sudden",
+      "material_loss_small",
+      "uncontrollable"
+    ],
+    "joint_text": "A friend cancels a joint trip after tickets are non\u2011refundable.. Context: involving friend, betrayal, personal, sudden, uncontrollable; planned: planned event; material: material loss small. Tags: friend, betrayal, personal, planned_event, sudden, material_loss_small, uncontrollable",
+    "embedding_index": 178
+  },
+  {
+    "scenario_id": "supermarket_cart_collision",
+    "original_description": "Another shopper rams your cart and walks off without apology.",
+    "generated_tags": [
+      "stranger",
+      "physical_harm",
+      "public",
+      "street_public",
+      "sudden",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Another shopper rams your cart and walks off without apology.. Context: involving stranger, public, sudden; physical: physical harm; street: street public; minor: minor inconvenience. Tags: stranger, physical_harm, public, street_public, sudden, minor_inconvenience",
+    "embedding_index": 179
+  },
+  {
+    "scenario_id": "shoe_lace_snaps",
+    "original_description": "Your shoelace snaps while you are tying it, forcing a knot-on-the-go.",
+    "generated_tags": [
+      "self",
+      "personal",
+      "public",
+      "sudden",
+      "unforeseen_circumstances",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Your shoelace snaps while you are tying it, forcing a knot-on-the-go.. Context: involving self, personal, public, sudden; unforeseen: unforeseen circumstances; minor: minor inconvenience. Tags: self, personal, public, sudden, unforeseen_circumstances, minor_inconvenience",
+    "embedding_index": 180
+  },
+  {
+    "scenario_id": "pen_runs_out_mid_exam",
+    "original_description": "Your pen dries up halfway through writing an exam answer.",
+    "generated_tags": [
+      "student",
+      "academic",
+      "school",
+      "ongoing",
+      "property_damaged",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Your pen dries up halfway through writing an exam answer.. Context: involving student, academic, school, ongoing; property: property damaged; minor: minor inconvenience. Tags: student, academic, school, ongoing, property_damaged, minor_inconvenience",
+    "embedding_index": 181
+  },
+  {
+    "scenario_id": "elevator_full_turn_away",
+    "original_description": "The elevator arrives packed, so you must wait for the next one.",
+    "generated_tags": [
+      "crowd_member",
+      "daily_life",
+      "public_transport",
+      "sudden",
+      "minor_inconvenience"
+    ],
+    "joint_text": "The elevator arrives packed, so you must wait for the next one.. Context: crowd: crowd member; daily: daily life; public: public transport; involving sudden; minor: minor inconvenience. Tags: crowd_member, daily_life, public_transport, sudden, minor_inconvenience",
+    "embedding_index": 182
+  },
+  {
+    "scenario_id": "email_no_attachment",
+    "original_description": "You send an email, then realize you forgot to attach the promised file.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "ongoing",
+      "breaking_promise",
+      "minor_inconvenience"
+    ],
+    "joint_text": "You send an email, then realize you forgot to attach the promised file.. Context: coworker: coworker peer; involving work, ongoing; workplace: workplace private; breaking: breaking promise; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, ongoing, breaking_promise, minor_inconvenience",
+    "embedding_index": 183
+  },
+  {
+    "scenario_id": "voice_cracks_presentation",
+    "original_description": "Your voice cracks audibly during an important presentation line.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "humiliation",
+      "coworker_peer",
+      "work",
+      "workplace_private"
+    ],
+    "joint_text": "Your voice cracks audibly during an important presentation line.. Context: coworker: coworker peer, coworker peer; involving work, sudden, humiliation, work; workplace: workplace private, workplace private. Tags: coworker_peer, work, workplace_private, sudden, humiliation, coworker_peer, work, workplace_private",
+    "embedding_index": 184
+  },
+  {
+    "scenario_id": "message_wrong_chat",
+    "original_description": "You post a private message in the wrong group chat by mistake.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "online_group",
+      "sudden",
+      "taking_property",
+      "minor_inconvenience"
+    ],
+    "joint_text": "You post a private message in the wrong group chat by mistake.. Context: coworker: coworker peer; involving work, sudden; online: online group; taking: taking property; minor: minor inconvenience. Tags: coworker_peer, work, online_group, sudden, taking_property, minor_inconvenience",
+    "embedding_index": 185
+  },
+  {
+    "scenario_id": "friend_talks_during_movie",
+    "original_description": "A friend keeps chatting during a film despite polite hints to stop.",
+    "generated_tags": [
+      "friend",
+      "personal",
+      "home_private",
+      "ongoing",
+      "interrupting",
+      "controllable"
+    ],
+    "joint_text": "A friend keeps chatting during a film despite polite hints to stop.. Context: involving friend, personal, ongoing, interrupting, controllable; home: home private. Tags: friend, personal, home_private, ongoing, interrupting, controllable",
+    "embedding_index": 186
+  },
+  {
+    "scenario_id": "vending_machine_eats_coin",
+    "original_description": "A vending machine takes your money but doesn\u2019t dispense the item.",
+    "generated_tags": [
+      "customer",
+      "financial",
+      "public_transport",
+      "sudden",
+      "taking_property",
+      "material_loss_small",
+      "customer",
+      "financial"
+    ],
+    "joint_text": "A vending machine takes your money but doesn\u2019t dispense the item.. Context: involving customer, financial, sudden, customer, financial; public: public transport; taking: taking property; material: material loss small. Tags: customer, financial, public_transport, sudden, taking_property, material_loss_small, customer, financial",
+    "embedding_index": 187
+  },
+  {
+    "scenario_id": "zipper_stuck_coat",
+    "original_description": "Your coat zipper jams halfway up, trapping you inside the coat.",
+    "generated_tags": [
+      "self",
+      "personal",
+      "home_private",
+      "sudden",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Your coat zipper jams halfway up, trapping you inside the coat.. Context: involving self, personal, sudden; home: home private; minor: minor inconvenience. Tags: self, personal, home_private, sudden, minor_inconvenience",
+    "embedding_index": 188
+  },
+  {
+    "scenario_id": "seat_taken_reservation",
+    "original_description": "Someone is sitting in your pre\u2011assigned seat and hesitates to move.",
+    "generated_tags": [
+      "stranger",
+      "public",
+      "public_transport",
+      "sudden",
+      "ignoring",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Someone is sitting in your pre\u2011assigned seat and hesitates to move.. Context: involving stranger, public, sudden, ignoring; public: public transport; minor: minor inconvenience. Tags: stranger, public, public_transport, sudden, ignoring, minor_inconvenience",
+    "embedding_index": 189
+  },
+  {
+    "scenario_id": "card_reader_contactless_fail",
+    "original_description": "A tap\u2011to\u2011pay terminal refuses multiple attempts, forcing you to swipe.",
+    "generated_tags": [
+      "stranger",
+      "financial",
+      "public_transport",
+      "property_damaged",
+      "sudden",
+      "uncontrollable",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A tap\u2011to\u2011pay terminal refuses multiple attempts, forcing you to swipe.. Context: involving stranger, financial, sudden, uncontrollable; public: public transport; property: property damaged; minor: minor inconvenience. Tags: stranger, financial, public_transport, property_damaged, sudden, uncontrollable, minor_inconvenience",
+    "embedding_index": 190
+  },
+  {
+    "scenario_id": "autocorrect_wrong_name",
+    "original_description": "Phone autocorrect changes someone\u2019s name, sending an awkward text.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "online_group",
+      "sudden",
+      "unexpected_circumstances",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Phone autocorrect changes someone\u2019s name, sending an awkward text.. Context: coworker: coworker peer; involving work, sudden; online: online group; unexpected: unexpected circumstances; minor: minor inconvenience. Tags: coworker_peer, work, online_group, sudden, unexpected_circumstances, minor_inconvenience",
+    "embedding_index": 191
+  },
+  {
+    "scenario_id": "stapler_out_of_staples",
+    "original_description": "The stapler clicks but no staple comes out when compiling papers.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "ongoing",
+      "property_damaged",
+      "minor_inconvenience"
+    ],
+    "joint_text": "The stapler clicks but no staple comes out when compiling papers.. Context: coworker: coworker peer; involving work, ongoing; workplace: workplace private; property: property damaged; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, ongoing, property_damaged, minor_inconvenience",
+    "embedding_index": 192
+  },
+  {
+    "scenario_id": "bookmark_fell_out",
+    "original_description": "Your bookmark slips out, losing the exact page you left off.",
+    "generated_tags": [
+      "self",
+      "personal",
+      "home_private",
+      "sudden",
+      "minor_inconvenience",
+      "property_damaged"
+    ],
+    "joint_text": "Your bookmark slips out, losing the exact page you left off.. Context: involving self, personal, sudden; home: home private; minor: minor inconvenience; property: property damaged. Tags: self, personal, home_private, sudden, minor_inconvenience, property_damaged",
+    "embedding_index": 193
+  },
+  {
+    "scenario_id": "printers_ink_smudge",
+    "original_description": "Freshly printed pages smear ink on your hands and documents.",
+    "generated_tags": [
+      "uncontrollable",
+      "unexpected_circumstances",
+      "material_loss_small",
+      "home_private",
+      "ongoing",
+      "physical_harm",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Freshly printed pages smear ink on your hands and documents.. Context: involving uncontrollable, ongoing; unexpected: unexpected circumstances; material: material loss small; home: home private; physical: physical harm; minor: minor inconvenience. Tags: uncontrollable, unexpected_circumstances, material_loss_small, home_private, ongoing, physical_harm, minor_inconvenience",
+    "embedding_index": 194
+  },
+  {
+    "scenario_id": "coffee_machine_no_beans",
+    "original_description": "The office coffee machine flashes empty\u2011bean warning at brew time.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "ongoing",
+      "unforeseen_circumstances",
+      "uncontrollable",
+      "minor_inconvenience"
+    ],
+    "joint_text": "The office coffee machine flashes empty\u2011bean warning at brew time.. Context: coworker: coworker peer; involving work, ongoing, uncontrollable; workplace: workplace private; unforeseen: unforeseen circumstances; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, ongoing, unforeseen_circumstances, uncontrollable, minor_inconvenience",
+    "embedding_index": 195
+  },
+  {
+    "scenario_id": "seatbelt_latch_jammed",
+    "original_description": "A car seatbelt won\u2019t click into its latch, delaying departure.",
+    "generated_tags": [
+      "driver",
+      "personal",
+      "home_private",
+      "ongoing",
+      "uncontrollable",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A car seatbelt won\u2019t click into its latch, delaying departure.. Context: involving driver, personal, ongoing, uncontrollable; home: home private; minor: minor inconvenience. Tags: driver, personal, home_private, ongoing, uncontrollable, minor_inconvenience",
+    "embedding_index": 196
+  },
+  {
+    "scenario_id": "social_media_unwanted_tag",
+    "original_description": "Someone tags you in a post you\u2019d prefer to stay anonymous in.",
+    "generated_tags": [
+      "social_media_public",
+      "online_group",
+      "social_media_private",
+      "actor_relationship:peer",
+      "trigger:betrayal",
+      "domain:personal",
+      "setting:social_media_public",
+      "temporal:sudden"
+    ],
+    "joint_text": "Someone tags you in a post you\u2019d prefer to stay anonymous in.. Context: social: social media public, social media private; online: online group; actor: actor relationship:peer; involving trigger:betrayal, domain:personal, temporal:sudden; setting:social: setting:social media public. Tags: social_media_public, online_group, social_media_private, actor_relationship:peer, trigger:betrayal, domain:personal, setting:social_media_public, temporal:sudden",
+    "embedding_index": 197
+  },
+  {
+    "scenario_id": "phone_dead_important_call",
+    "original_description": "Your phone battery dies seconds before an expected call.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "unforeseen_circumstances",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Your phone battery dies seconds before an expected call.. Context: coworker: coworker peer; involving work, sudden; workplace: workplace private; unforeseen: unforeseen circumstances; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, sudden, unforeseen_circumstances, minor_inconvenience",
+    "embedding_index": 198
+  },
+  {
+    "scenario_id": "wifi_guest_password_missing",
+    "original_description": "Guests arrive but you can\u2019t recall the Wi\u2011Fi password for them.",
+    "generated_tags": [
+      "host_guest",
+      "personal",
+      "home_private",
+      "sudden",
+      "unexpected_circumstances",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Guests arrive but you can\u2019t recall the Wi\u2011Fi password for them.. Context: host: host guest; involving personal, sudden; home: home private; unexpected: unexpected circumstances; minor: minor inconvenience. Tags: host_guest, personal, home_private, sudden, unexpected_circumstances, minor_inconvenience",
+    "embedding_index": 199
+  },
+  {
+    "scenario_id": "roommate_leaves_light_on",
+    "original_description": "A roommate leaves every light on after leaving home.",
+    "generated_tags": [
+      "roommate",
+      "personal",
+      "home_private",
+      "ongoing",
+      "neglect",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A roommate leaves every light on after leaving home.. Context: involving roommate, personal, ongoing, neglect; home: home private; minor: minor inconvenience. Tags: roommate, personal, home_private, ongoing, neglect, minor_inconvenience",
+    "embedding_index": 200
+  },
+  {
+    "scenario_id": "friend_owes_money_unpaid",
+    "original_description": "A friend promises reimbursement but still hasn\u2019t paid you back.",
+    "generated_tags": [
+      "friend",
+      "betrayal",
+      "personal",
+      "ongoing",
+      "uncontrollable",
+      "blocked_goal",
+      "financial",
+      "anticipated"
+    ],
+    "joint_text": "A friend promises reimbursement but still hasn\u2019t paid you back.. Context: involving friend, betrayal, personal, ongoing, uncontrollable, financial, anticipated; blocked: blocked goal. Tags: friend, betrayal, personal, ongoing, uncontrollable, blocked_goal, financial, anticipated",
+    "embedding_index": 201
+  },
+  {
+    "scenario_id": "loud_sneeze_quiet_room",
+    "original_description": "You sneeze loudly during a silent moment in a lecture hall.",
+    "generated_tags": [
+      "crowd_member",
+      "interrupting",
+      "academic",
+      "school",
+      "sudden"
+    ],
+    "joint_text": "You sneeze loudly during a silent moment in a lecture hall.. Context: crowd: crowd member; involving interrupting, academic, school, sudden. Tags: crowd_member, interrupting, academic, school, sudden",
+    "embedding_index": 202
+  },
+  {
+    "scenario_id": "cupboard_handle_breaks",
+    "original_description": "A cupboard handle snaps off in your hand while opening it.",
+    "generated_tags": [
+      "self",
+      "home_private",
+      "home_private",
+      "sudden",
+      "property_damaged",
+      "material_loss_small"
+    ],
+    "joint_text": "A cupboard handle snaps off in your hand while opening it.. Context: involving self, sudden; home: home private, home private; property: property damaged; material: material loss small. Tags: self, home_private, home_private, sudden, property_damaged, material_loss_small",
+    "embedding_index": 203
+  },
+  {
+    "scenario_id": "usb_cable_frayed",
+    "original_description": "Your charging cable frays, causing intermittent power connection.",
+    "generated_tags": [
+      "self",
+      "personal",
+      "home_private",
+      "ongoing",
+      "property_damaged",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Your charging cable frays, causing intermittent power connection.. Context: involving self, personal, ongoing; home: home private; property: property damaged; minor: minor inconvenience. Tags: self, personal, home_private, ongoing, property_damaged, minor_inconvenience",
+    "embedding_index": 204
+  },
+  {
+    "scenario_id": "printer_overwrites_file",
+    "original_description": "A shared printer queue replaces your document with someone else\u2019s.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_shared",
+      "sudden",
+      "taking_property",
+      "material_loss_small",
+      "emotional_damage"
+    ],
+    "joint_text": "A shared printer queue replaces your document with someone else\u2019s.. Context: coworker: coworker peer; involving work, sudden; workplace: workplace shared; taking: taking property; material: material loss small; emotional: emotional damage. Tags: coworker_peer, work, workplace_shared, sudden, taking_property, material_loss_small, emotional_damage",
+    "embedding_index": 205
+  },
+  {
+    "scenario_id": "stranger_steps_on_shoe",
+    "original_description": "A passerby steps on your heel, scuffing your shoe without apology.",
+    "generated_tags": [
+      "stranger",
+      "physical_harm",
+      "personal",
+      "street_public",
+      "sudden"
+    ],
+    "joint_text": "A passerby steps on your heel, scuffing your shoe without apology.. Context: involving stranger, personal, sudden; physical: physical harm; street: street public. Tags: stranger, physical_harm, personal, street_public, sudden",
+    "embedding_index": 206
+  },
+  {
+    "scenario_id": "dog_leash_slips_hand",
+    "original_description": "Your dog\u2019s leash slips from your grasp for a moment in the park.",
+    "generated_tags": [
+      "parent",
+      "personal",
+      "public_transport",
+      "sudden",
+      "property_damaged",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Your dog\u2019s leash slips from your grasp for a moment in the park.. Context: involving parent, personal, sudden; public: public transport; property: property damaged; minor: minor inconvenience. Tags: parent, personal, public_transport, sudden, property_damaged, minor_inconvenience",
+    "embedding_index": 207
+  },
+  {
+    "scenario_id": "friend_hiccups_speech",
+    "original_description": "A fit of hiccups interrupts you mid\u2011sentence while speaking publicly.",
+    "generated_tags": [
+      "public_speaker",
+      "interrupting",
+      "social",
+      "public_speech",
+      "sudden",
+      "public_speaker",
+      "physical_hiccup",
+      "social"
+    ],
+    "joint_text": "A fit of hiccups interrupts you mid\u2011sentence while speaking publicly.. Context: public: public speaker, public speech, public speaker; involving interrupting, social, sudden, social; physical: physical hiccup. Tags: public_speaker, interrupting, social, public_speech, sudden, public_speaker, physical_hiccup, social",
+    "embedding_index": 208
+  },
+  {
+    "scenario_id": "flashlight_battery_dead",
+    "original_description": "A flashlight won\u2019t turn on because the batteries died unexpectedly.",
+    "generated_tags": [
+      "none",
+      "home_private",
+      "home_private",
+      "sudden",
+      "unforeseen_circumstances",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A flashlight won\u2019t turn on because the batteries died unexpectedly.. Context: involving none, sudden; home: home private, home private; unforeseen: unforeseen circumstances; minor: minor inconvenience. Tags: none, home_private, home_private, sudden, unforeseen_circumstances, minor_inconvenience",
+    "embedding_index": 209
+  },
+  {
+    "scenario_id": "mouse_low_battery",
+    "original_description": "Your wireless mouse stops responding during detailed design work.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "equipment_failure",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Your wireless mouse stops responding during detailed design work.. Context: coworker: coworker peer; involving work, sudden; workplace: workplace private; equipment: equipment failure; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, sudden, equipment_failure, minor_inconvenience",
+    "embedding_index": 210
+  },
+  {
+    "scenario_id": "cash_register_no_change",
+    "original_description": "A cashier runs out of small bills and can\u2019t give proper change.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "blocked_goal",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A cashier runs out of small bills and can\u2019t give proper change.. Context: coworker: coworker peer; involving work, sudden; workplace: workplace private; blocked: blocked goal; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, sudden, blocked_goal, minor_inconvenience",
+    "embedding_index": 211
+  },
+  {
+    "scenario_id": "microwave_cold_center",
+    "original_description": "Microwaved food is hot outside but still cold in the middle.",
+    "generated_tags": [
+      "uncontrollable",
+      "food",
+      "home_private",
+      "unexpected_circumstances",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Microwaved food is hot outside but still cold in the middle.. Context: involving uncontrollable, food; home: home private; unexpected: unexpected circumstances; minor: minor inconvenience. Tags: uncontrollable, food, home_private, unexpected_circumstances, minor_inconvenience",
+    "embedding_index": 212
+  },
+  {
+    "scenario_id": "parking_meter_card_error",
+    "original_description": "A parking meter rejects your card repeatedly, risking a ticket.",
+    "generated_tags": [
+      "customer",
+      "public",
+      "street_public",
+      "ongoing",
+      "blocked_goal",
+      "minor_inconvenience",
+      "customer",
+      "public"
+    ],
+    "joint_text": "A parking meter rejects your card repeatedly, risking a ticket.. Context: involving customer, public, ongoing, customer, public; street: street public; blocked: blocked goal; minor: minor inconvenience. Tags: customer, public, street_public, ongoing, blocked_goal, minor_inconvenience, customer, public",
+    "embedding_index": 213
+  },
+  {
+    "scenario_id": "child_spills_water_counter",
+    "original_description": "A child accidentally knocks a full glass of water across the table.",
+    "generated_tags": [
+      "child",
+      "home_private",
+      "home_private",
+      "sudden",
+      "property_damaged",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A child accidentally knocks a full glass of water across the table.. Context: involving child, sudden; home: home private, home private; property: property damaged; minor: minor inconvenience. Tags: child, home_private, home_private, sudden, property_damaged, minor_inconvenience",
+    "embedding_index": 214
+  },
+  {
+    "scenario_id": "sink_clogs_after_dinner",
+    "original_description": "Kitchen sink water backs up right after washing dishes.",
+    "generated_tags": [
+      "family_member",
+      "home_private",
+      "home_private",
+      "sudden",
+      "property_damaged",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Kitchen sink water backs up right after washing dishes.. Context: family: family member; home: home private, home private; involving sudden; property: property damaged; minor: minor inconvenience. Tags: family_member, home_private, home_private, sudden, property_damaged, minor_inconvenience",
+    "embedding_index": 215
+  },
+  {
+    "scenario_id": "file_download_stuck",
+    "original_description": "A large file stalls at 99\u202f% completion and never finishes.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "ongoing",
+      "blocked_goal",
+      "uncontrollable",
+      "minor_inconvenience"
+    ],
+    "joint_text": "A large file stalls at 99\u202f% completion and never finishes.. Context: coworker: coworker peer; involving work, ongoing, uncontrollable; workplace: workplace private; blocked: blocked goal; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, ongoing, blocked_goal, uncontrollable, minor_inconvenience",
+    "embedding_index": 216
+  },
+  {
+    "scenario_id": "sibling_borrows_charger_missing",
+    "original_description": "Your charger disappears after a sibling borrows it.",
+    "generated_tags": [
+      "sibling",
+      "personal",
+      "home_private",
+      "past",
+      "taking_property",
+      "material_loss_small"
+    ],
+    "joint_text": "Your charger disappears after a sibling borrows it.. Context: involving sibling, personal, past; home: home private; taking: taking property; material: material loss small. Tags: sibling, personal, home_private, past, taking_property, material_loss_small",
+    "embedding_index": 217
+  },
+  {
+    "scenario_id": "ride_share_no_show",
+    "original_description": "Your ride\u2011share driver accepts and then cancels as pickup time arrives.",
+    "generated_tags": [
+      "driver_customer",
+      "transport",
+      "public_transport",
+      "sudden",
+      "betrayal",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Your ride\u2011share driver accepts and then cancels as pickup time arrives.. Context: driver: driver customer; involving transport, sudden, betrayal; public: public transport; minor: minor inconvenience. Tags: driver_customer, transport, public_transport, sudden, betrayal, minor_inconvenience",
+    "embedding_index": 218
+  },
+  {
+    "scenario_id": "bluetooth_disconnect_headset",
+    "original_description": "Wireless headphones drop connection mid\u2011conference call.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "workplace_private",
+      "sudden",
+      "unexpected_circumstances",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Wireless headphones drop connection mid\u2011conference call.. Context: coworker: coworker peer; involving work, sudden; workplace: workplace private; unexpected: unexpected circumstances; minor: minor inconvenience. Tags: coworker_peer, work, workplace_private, sudden, unexpected_circumstances, minor_inconvenience",
+    "embedding_index": 219
+  },
+  {
+    "scenario_id": "bus_pass_misplaced",
+    "original_description": "You reach the station and realize your transit card is missing.",
+    "generated_tags": [
+      "self",
+      "personal",
+      "public_transport",
+      "sudden",
+      "property_damaged",
+      "minor_inconvenience"
+    ],
+    "joint_text": "You reach the station and realize your transit card is missing.. Context: involving self, personal, sudden; public: public transport; property: property damaged; minor: minor inconvenience. Tags: self, personal, public_transport, sudden, property_damaged, minor_inconvenience",
+    "embedding_index": 220
+  },
+  {
+    "scenario_id": "library_book_reserved",
+    "original_description": "A book you need is recalled the day after you check it out.",
+    "generated_tags": [
+      "customer",
+      "personal",
+      "library",
+      "sudden",
+      "minor_inconvenience",
+      "property_damaged",
+      "personal",
+      "library"
+    ],
+    "joint_text": "A book you need is recalled the day after you check it out.. Context: involving customer, personal, library, sudden, personal, library; minor: minor inconvenience; property: property damaged. Tags: customer, personal, library, sudden, minor_inconvenience, property_damaged, personal, library",
+    "embedding_index": 221
+  },
+  {
+    "scenario_id": "dish_slips_sink_breaks",
+    "original_description": "A plate slips from your hands and shatters in the sink.",
+    "generated_tags": [
+      "self",
+      "home_private",
+      "home_private",
+      "sudden",
+      "property_damaged",
+      "material_loss_small"
+    ],
+    "joint_text": "A plate slips from your hands and shatters in the sink.. Context: involving self, sudden; home: home private, home private; property: property damaged; material: material loss small. Tags: self, home_private, home_private, sudden, property_damaged, material_loss_small",
+    "embedding_index": 222
+  },
+  {
+    "scenario_id": "toothbrush_bristles_fall",
+    "original_description": "Bristles shed from your toothbrush while brushing.",
+    "generated_tags": [
+      "personal",
+      "home_private",
+      "uncontrollable",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Bristles shed from your toothbrush while brushing.. Context: involving personal, uncontrollable; home: home private; minor: minor inconvenience. Tags: personal, home_private, uncontrollable, minor_inconvenience",
+    "embedding_index": 223
+  },
+  {
+    "scenario_id": "printer_toner_low_streaks",
+    "original_description": "Low toner causes streaks across an important printout.",
+    "generated_tags": [
+      "none",
+      "work",
+      "workplace_private",
+      "ongoing",
+      "neglect",
+      "minor_inconvenience",
+      "uncontrollable"
+    ],
+    "joint_text": "Low toner causes streaks across an important printout.. Context: involving none, work, ongoing, neglect, uncontrollable; workplace: workplace private; minor: minor inconvenience. Tags: none, work, workplace_private, ongoing, neglect, minor_inconvenience, uncontrollable",
+    "embedding_index": 224
+  },
+  {
+    "scenario_id": "sock_wet_in_puddle",
+    "original_description": "You step in a puddle and soak one sock on the way to work.",
+    "generated_tags": [
+      "stranger",
+      "personal",
+      "street_public",
+      "sudden",
+      "minor_inconvenience",
+      "unforeseen_circumstances"
+    ],
+    "joint_text": "You step in a puddle and soak one sock on the way to work.. Context: involving stranger, personal, sudden; street: street public; minor: minor inconvenience; unforeseen: unforeseen circumstances. Tags: stranger, personal, street_public, sudden, minor_inconvenience, unforeseen_circumstances",
+    "embedding_index": 225
+  },
+  {
+    "scenario_id": "meeting_mute_left_on",
+    "original_description": "You speak for several seconds on a video call while still muted.",
+    "generated_tags": [
+      "coworker_peer",
+      "work",
+      "online_group",
+      "ongoing",
+      "ignoring",
+      "minor_inconvenience"
+    ],
+    "joint_text": "You speak for several seconds on a video call while still muted.. Context: coworker: coworker peer; involving work, ongoing, ignoring; online: online group; minor: minor inconvenience. Tags: coworker_peer, work, online_group, ongoing, ignoring, minor_inconvenience",
+    "embedding_index": 226
+  },
+  {
+    "scenario_id": "spam_call_interrupts_focus",
+    "original_description": "A robocall rings right as you enter a focused workflow.",
+    "generated_tags": [
+      "stranger",
+      "work",
+      "workplace_private",
+      "sudden",
+      "interrupting"
+    ],
+    "joint_text": "A robocall rings right as you enter a focused workflow.. Context: involving stranger, work, sudden, interrupting; workplace: workplace private. Tags: stranger, work, workplace_private, sudden, interrupting",
+    "embedding_index": 227
+  },
+  {
+    "scenario_id": "weather_app_wrong_temp",
+    "original_description": "The weather app forecasts sun but it starts raining unexpectedly.",
+    "generated_tags": [
+      "stranger",
+      "personal",
+      "public_transport",
+      "sudden",
+      "unforeseen_circumstances",
+      "minor_inconvenience"
+    ],
+    "joint_text": "The weather app forecasts sun but it starts raining unexpectedly.. Context: involving stranger, personal, sudden; public: public transport; unforeseen: unforeseen circumstances; minor: minor inconvenience. Tags: stranger, personal, public_transport, sudden, unforeseen_circumstances, minor_inconvenience",
+    "embedding_index": 228
+  },
+  {
+    "scenario_id": "food_overcooks_burns",
+    "original_description": "Food in the oven burns after you misread the timer.",
+    "generated_tags": [
+      "self",
+      "home_private",
+      "home_private",
+      "sudden",
+      "neglect",
+      "material_loss_small"
+    ],
+    "joint_text": "Food in the oven burns after you misread the timer.. Context: involving self, sudden, neglect; home: home private, home private; material: material loss small. Tags: self, home_private, home_private, sudden, neglect, material_loss_small",
+    "embedding_index": 229
+  },
+  {
+    "scenario_id": "wallet_falls_gap_seat",
+    "original_description": "Your wallet slips between car seats, making it hard to retrieve.",
+    "generated_tags": [
+      "stranger",
+      "personal",
+      "public_transport",
+      "sudden",
+      "minor_inconvenience"
+    ],
+    "joint_text": "Your wallet slips between car seats, making it hard to retrieve.. Context: involving stranger, personal, sudden; public: public transport; minor: minor inconvenience. Tags: stranger, personal, public_transport, sudden, minor_inconvenience",
+    "embedding_index": 230
+  }
+]
