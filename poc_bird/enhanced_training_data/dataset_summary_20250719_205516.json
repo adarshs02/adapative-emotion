@@ -1,0 +1,28 @@
+{
+  "dataset_info": {
+    "version": "enhanced_v1.0",
+    "total_scenarios": 231,
+    "total_pairs": 6058,
+    "positive_pairs": 2282,
+    "negative_pairs": 3776,
+    "train_pairs": 4240,
+    "val_pairs": 908,
+    "test_pairs": 910,
+    "tag_groups": 48,
+    "domain_groups": 5
+  },
+  "files": {
+    "train": "enhanced_training_data/train_enhanced_20250719_205516.json",
+    "validation": "enhanced_training_data/validation_enhanced_20250719_205516.json",
+    "test": "enhanced_training_data/test_enhanced_20250719_205516.json"
+  },
+  "training_recommendations": {
+    "embedding_model": "Llama-3.1",
+    "batch_size": 32,
+    "learning_rate": 5e-05,
+    "max_sequence_length": 512,
+    "training_objective": "contrastive_loss",
+    "hard_negative_ratio": 0.3
+  },
+  "created_at": "2025-07-19T20:55:16.775545"
+}

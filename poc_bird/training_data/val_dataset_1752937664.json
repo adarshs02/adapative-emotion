@@ -1,0 +1,3127 @@
+{
+  "metadata": {
+    "created_at": "2025-07-19T08:07:44.877323",
+    "total_pairs": 346,
+    "positive_pairs": 178,
+    "negative_pairs": 168,
+    "scenarios_file": "atomic-scenarios.json",
+    "split": "val",
+    "generation_method": "rule_based_no_llm"
+  },
+  "data": [
+    {
+      "query": "My situation involves a coworker sends the wrong confidential file to the entire team.",
+      "query_joint": "My situation involves a coworker sends the wrong confidential file to the entire team.",
+      "scenario_id": "colleague_forwards_wrong_attachment",
+      "scenario_description": "A coworker sends the wrong confidential file to the entire team.",
+      "scenario_joint": "A coworker sends the wrong confidential file to the entire team.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves your charging cable frays, causing intermittent power connection.",
+      "query_joint": "My situation involves your charging cable frays, causing intermittent power connection.",
+      "scenario_id": "usb_cable_frayed",
+      "scenario_description": "Your charging cable frays, causing intermittent power connection.",
+      "scenario_joint": "Your charging cable frays, causing intermittent power connection.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with important files or data are lost due to error or malfunction.",
+      "query_joint": "Help me with important files or data are lost due to error or malfunction.",
+      "scenario_id": "data_loss",
+      "scenario_description": "Important files or data are lost due to error or malfunction.",
+      "scenario_joint": "Important files or data are lost due to error or malfunction.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Your morning alarm fails to sound, causing you to oversleep.",
+      "query_joint": "Your morning alarm fails to sound, causing you to oversleep.",
+      "scenario_id": "alarm_failure",
+      "scenario_description": "Your morning alarm fails to sound, causing you to oversleep.",
+      "scenario_joint": "Your morning alarm fails to sound, causing you to oversleep.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with extra screening at a security checkpoint creates a delay that jeopardizes a tight connection.",
+      "query_joint": "I'm dealing with extra screening at a security checkpoint creates a delay that jeopardizes a tight connection.",
+      "scenario_id": "neighbor_dog_barks_night",
+      "scenario_description": "A neighbor\u2019s dog barks loudly through the night, disrupting sleep.",
+      "scenario_joint": "A neighbor\u2019s dog barks loudly through the night, disrupting sleep.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with you cannot access or locate something you need immediately.",
+      "query_joint": "Help me with you cannot access or locate something you need immediately.",
+      "scenario_id": "essential_item_unavailable",
+      "scenario_description": "You cannot access or locate something you need immediately.",
+      "scenario_joint": "You cannot access or locate something you need immediately.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing unexpected weather conditions interfere with your plans.",
+      "query_joint": "I am experiencing unexpected weather conditions interfere with your plans.",
+      "scenario_id": "bill_split_unfair",
+      "scenario_description": "At a group meal, others insist on splitting the bill evenly though you ordered less.",
+      "scenario_joint": "At a group meal, others insist on splitting the bill evenly though you ordered less.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with another person bypasses an orderly queue, delaying your turn.",
+      "query_joint": "Help me with another person bypasses an orderly queue, delaying your turn.",
+      "scenario_id": "queue_skipped",
+      "scenario_description": "Another person bypasses an orderly queue, delaying your turn.",
+      "scenario_joint": "Another person bypasses an orderly queue, delaying your turn.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with freshly printed pages smear ink on your hands and documents.",
+      "query_joint": "Help me with freshly printed pages smear ink on your hands and documents.",
+      "scenario_id": "printers_ink_smudge",
+      "scenario_description": "Freshly printed pages smear ink on your hands and documents.",
+      "scenario_joint": "Freshly printed pages smear ink on your hands and documents.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing you speak for several seconds on a video call while still muted.",
+      "query_joint": "I am experiencing you speak for several seconds on a video call while still muted.",
+      "scenario_id": "meeting_mute_left_on",
+      "scenario_description": "You speak for several seconds on a video call while still muted.",
+      "scenario_joint": "You speak for several seconds on a video call while still muted.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves a rumor about you circulates in the office without your knowledge.",
+      "query_joint": "My situation involves a rumor about you circulates in the office without your knowledge.",
+      "scenario_id": "file_download_stuck",
+      "scenario_description": "A large file stalls at 99\u202f% completion and never finishes.",
+      "scenario_joint": "A large file stalls at 99\u202f% completion and never finishes.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves a misunderstanding about time zones causes a missed meeting or deadline.",
+      "query_joint": "My situation involves a misunderstanding about time zones causes a missed meeting or deadline.",
+      "scenario_id": "meeting_mute_left_on",
+      "scenario_description": "You speak for several seconds on a video call while still muted.",
+      "scenario_joint": "You speak for several seconds on a video call while still muted.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "A coworker blasts music from their speakers in an open office.",
+      "query_joint": "A coworker blasts music from their speakers in an open office.",
+      "scenario_id": "coworker_plays_music_no_headphones",
+      "scenario_description": "A coworker blasts music from their speakers in an open office.",
+      "scenario_joint": "A coworker blasts music from their speakers in an open office.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing a critical message or email is missed or ignored.",
+      "query_joint": "I am experiencing a critical message or email is missed or ignored.",
+      "scenario_id": "overlooked_message",
+      "scenario_description": "A critical message or email is missed or ignored.",
+      "scenario_joint": "A critical message or email is missed or ignored.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "A flashlight won\u2019t turn on because the batteries died unexpectedly.",
+      "query_joint": "A flashlight won\u2019t turn on because the batteries died unexpectedly.",
+      "scenario_id": "gossip_spread_workplace",
+      "scenario_description": "A rumor about you circulates in the office without your knowledge.",
+      "scenario_joint": "A rumor about you circulates in the office without your knowledge.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing a child bursts into the room during your important video meeting.",
+      "query_joint": "I am experiencing a child bursts into the room during your important video meeting.",
+      "scenario_id": "smoke_alarm_low_battery",
+      "scenario_description": "A smoke alarm chirps repeatedly at night due to low battery.",
+      "scenario_joint": "A smoke alarm chirps repeatedly at night due to low battery.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with during an introduction, the person forgets your name or gets it wrong.",
+      "query_joint": "Help me with during an introduction, the person forgets your name or gets it wrong.",
+      "scenario_id": "private_message_forwarded",
+      "scenario_description": "A coworker forwards your private email to others without permission.",
+      "scenario_joint": "A coworker forwards your private email to others without permission.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing tourists occupy a photo spot for too long, preventing your picture.",
+      "query_joint": "I am experiencing tourists occupy a photo spot for too long, preventing your picture.",
+      "scenario_id": "queue_exceeds_time",
+      "scenario_description": "A line takes much longer than expected, delaying other plans.",
+      "scenario_joint": "A line takes much longer than expected, delaying other plans.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Important files or data are lost due to error or malfunction.",
+      "query_joint": "Important files or data are lost due to error or malfunction.",
+      "scenario_id": "data_loss",
+      "scenario_description": "Important files or data are lost due to error or malfunction.",
+      "scenario_joint": "Important files or data are lost due to error or malfunction.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing after correction, someone keeps mispronouncing your name.",
+      "query_joint": "I am experiencing after correction, someone keeps mispronouncing your name.",
+      "scenario_id": "wardrobe_malfunction_public",
+      "scenario_description": "Clothing tears or fails in public, causing embarrassment.",
+      "scenario_joint": "Clothing tears or fails in public, causing embarrassment.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves you accidentally delete an important photo before it is backed up.",
+      "query_joint": "My situation involves you accidentally delete an important photo before it is backed up.",
+      "scenario_id": "power_outage",
+      "scenario_description": "Electricity suddenly goes out, disrupting normal activities.",
+      "scenario_joint": "Electricity suddenly goes out, disrupting normal activities.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with you are bumped from an oversold flight despite having a confirmed ticket.",
+      "query_joint": "I'm dealing with you are bumped from an oversold flight despite having a confirmed ticket.",
+      "scenario_id": "oversold_flight_denied_boarding",
+      "scenario_description": "You are bumped from an oversold flight despite having a confirmed ticket.",
+      "scenario_joint": "You are bumped from an oversold flight despite having a confirmed ticket.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing your online comment is misinterpreted, sparking hostile replies.",
+      "query_joint": "I am experiencing your online comment is misinterpreted, sparking hostile replies.",
+      "scenario_id": "mentor_last_minute_feedback",
+      "scenario_description": "A mentor returns substantial edits minutes before a deadline.",
+      "scenario_joint": "A mentor returns substantial edits minutes before a deadline.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves a printer jams while producing time\u2011sensitive documents.",
+      "query_joint": "My situation involves a printer jams while producing time\u2011sensitive documents.",
+      "scenario_id": "printer_paper_jam",
+      "scenario_description": "A printer jams while producing time\u2011sensitive documents.",
+      "scenario_joint": "A printer jams while producing time\u2011sensitive documents.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with a legitimate purchase is declined because your bank flags it as suspicious.",
+      "query_joint": "I'm dealing with a legitimate purchase is declined because your bank flags it as suspicious.",
+      "scenario_id": "traffic_jam",
+      "scenario_description": "Unexpected traffic significantly delays your travel.",
+      "scenario_joint": "Unexpected traffic significantly delays your travel.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Your coat zipper jams halfway up, trapping you inside the coat.",
+      "query_joint": "Your coat zipper jams halfway up, trapping you inside the coat.",
+      "scenario_id": "zipper_stuck_coat",
+      "scenario_description": "Your coat zipper jams halfway up, trapping you inside the coat.",
+      "scenario_joint": "Your coat zipper jams halfway up, trapping you inside the coat.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing a coworker blasts music from their speakers in an open office.",
+      "query_joint": "I am experiencing a coworker blasts music from their speakers in an open office.",
+      "scenario_id": "coworker_plays_music_no_headphones",
+      "scenario_description": "A coworker blasts music from their speakers in an open office.",
+      "scenario_joint": "A coworker blasts music from their speakers in an open office.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with your partner goes through your private messages without permission.",
+      "query_joint": "Help me with your partner goes through your private messages without permission.",
+      "scenario_id": "phone_dead_important_call",
+      "scenario_description": "Your phone battery dies seconds before an expected call.",
+      "scenario_joint": "Your phone battery dies seconds before an expected call.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with an unplanned cost arises that strains your budget.",
+      "query_joint": "I'm dealing with an unplanned cost arises that strains your budget.",
+      "scenario_id": "meeting_link_invalid",
+      "scenario_description": "The video\u2011call link for a scheduled meeting fails to open.",
+      "scenario_joint": "The video\u2011call link for a scheduled meeting fails to open.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with a host serves food you cannot eat despite being told your restriction.",
+      "query_joint": "I'm dealing with a host serves food you cannot eat despite being told your restriction.",
+      "scenario_id": "ride_share_no_show",
+      "scenario_description": "Your ride\u2011share driver accepts and then cancels as pickup time arrives.",
+      "scenario_joint": "Your ride\u2011share driver accepts and then cancels as pickup time arrives.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing during an introduction, the person forgets your name or gets it wrong.",
+      "query_joint": "I am experiencing during an introduction, the person forgets your name or gets it wrong.",
+      "scenario_id": "child_spills_water_counter",
+      "scenario_description": "A child accidentally knocks a full glass of water across the table.",
+      "scenario_joint": "A child accidentally knocks a full glass of water across the table.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with your computer forces a system update and restarts while you are working on something urgent.",
+      "query_joint": "I'm dealing with your computer forces a system update and restarts while you are working on something urgent.",
+      "scenario_id": "unexpected_responsibility",
+      "scenario_description": "You are suddenly assigned additional duties beyond your regular workload.",
+      "scenario_joint": "You are suddenly assigned additional duties beyond your regular workload.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "An acquaintance touches your hair or body without permission.",
+      "query_joint": "An acquaintance touches your hair or body without permission.",
+      "scenario_id": "unsolicited_physical_contact",
+      "scenario_description": "An acquaintance touches your hair or body without permission.",
+      "scenario_joint": "An acquaintance touches your hair or body without permission.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing you share a suggestion in a group meeting and everyone moves on without addressing it.",
+      "query_joint": "I am experiencing you share a suggestion in a group meeting and everyone moves on without addressing it.",
+      "scenario_id": "idea_ignored_meeting",
+      "scenario_description": "You share a suggestion in a group meeting and everyone moves on without addressing it.",
+      "scenario_joint": "You share a suggestion in a group meeting and everyone moves on without addressing it.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves kitchen sink water backs up right after washing dishes.",
+      "query_joint": "My situation involves kitchen sink water backs up right after washing dishes.",
+      "scenario_id": "sink_clogs_after_dinner",
+      "scenario_description": "Kitchen sink water backs up right after washing dishes.",
+      "scenario_joint": "Kitchen sink water backs up right after washing dishes.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Public transport breaks down or is canceled, leaving you searching for alternatives.",
+      "query_joint": "Public transport breaks down or is canceled, leaving you searching for alternatives.",
+      "scenario_id": "unexpected_rent_increase",
+      "scenario_description": "Your landlord announces a significant rent hike with minimal notice.",
+      "scenario_joint": "Your landlord announces a significant rent hike with minimal notice.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves a delivered parcel is stolen from your doorstep before you retrieve it.",
+      "query_joint": "My situation involves a delivered parcel is stolen from your doorstep before you retrieve it.",
+      "scenario_id": "package_theft",
+      "scenario_description": "A delivered parcel is stolen from your doorstep before you retrieve it.",
+      "scenario_joint": "A delivered parcel is stolen from your doorstep before you retrieve it.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves your pen dries up halfway through writing an exam answer.",
+      "query_joint": "My situation involves your pen dries up halfway through writing an exam answer.",
+      "scenario_id": "walkway_blocked_strangers",
+      "scenario_description": "Strangers stop to chat in the middle of a pathway, blocking your passage.",
+      "scenario_joint": "Strangers stop to chat in the middle of a pathway, blocking your passage.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with a critical meeting is canceled at the last minute without informing attendees in advance.",
+      "query_joint": "Help me with a critical meeting is canceled at the last minute without informing attendees in advance.",
+      "scenario_id": "meeting_canceled_no_notice",
+      "scenario_description": "A critical meeting is canceled at the last minute without informing attendees in advance.",
+      "scenario_joint": "A critical meeting is canceled at the last minute without informing attendees in advance.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with a colleague continually tells you how to do a task you already know well.",
+      "query_joint": "Help me with a colleague continually tells you how to do a task you already know well.",
+      "scenario_id": "group_chat_exclusion",
+      "scenario_description": "Coworkers start a new team chat and leave you out of important discussions.",
+      "scenario_joint": "Coworkers start a new team chat and leave you out of important discussions.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with an order arrives with the wrong items or specifications.",
+      "query_joint": "I'm dealing with an order arrives with the wrong items or specifications.",
+      "scenario_id": "incorrect_order",
+      "scenario_description": "An order arrives with the wrong items or specifications.",
+      "scenario_joint": "An order arrives with the wrong items or specifications.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with trains, buses, or flights are delayed beyond reasonable expectations.",
+      "query_joint": "Help me with trains, buses, or flights are delayed beyond reasonable expectations.",
+      "scenario_id": "public_transport_delay",
+      "scenario_description": "Trains, buses, or flights are delayed beyond reasonable expectations.",
+      "scenario_joint": "Trains, buses, or flights are delayed beyond reasonable expectations.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with someone is in the seat assigned to you, forcing an awkward dispute.",
+      "query_joint": "I'm dealing with someone is in the seat assigned to you, forcing an awkward dispute.",
+      "scenario_id": "seat_occupied",
+      "scenario_description": "Someone is in the seat assigned to you, forcing an awkward dispute.",
+      "scenario_joint": "Someone is in the seat assigned to you, forcing an awkward dispute.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing your phone battery dies seconds before an expected call.",
+      "query_joint": "I am experiencing your phone battery dies seconds before an expected call.",
+      "scenario_id": "roommate_shared_space_mess",
+      "scenario_description": "Your roommate leaves common areas messy and doesn't clean up.",
+      "scenario_joint": "Your roommate leaves common areas messy and doesn't clean up.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with a strike halts public transport services, leaving you without your usual commuting option.",
+      "query_joint": "I'm dealing with a strike halts public transport services, leaving you without your usual commuting option.",
+      "scenario_id": "friend_hiccups_speech",
+      "scenario_description": "A fit of hiccups interrupts you mid\u2011sentence while speaking publicly.",
+      "scenario_joint": "A fit of hiccups interrupts you mid\u2011sentence while speaking publicly.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with a coworker finishes the office coffee and leaves the pot empty.",
+      "query_joint": "Help me with a coworker finishes the office coffee and leaves the pot empty.",
+      "scenario_id": "lost_opportunity",
+      "scenario_description": "A beneficial chance or offer passes before you can act on it.",
+      "scenario_joint": "A beneficial chance or offer passes before you can act on it.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing repeated wrong passwords lock you out of an important account.",
+      "query_joint": "I am experiencing repeated wrong passwords lock you out of an important account.",
+      "scenario_id": "event_host_forgets_dietary_restriction",
+      "scenario_description": "A host serves food you cannot eat despite being told your restriction.",
+      "scenario_joint": "A host serves food you cannot eat despite being told your restriction.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves a shared printer queue replaces your document with someone else\u2019s.",
+      "query_joint": "My situation involves a shared printer queue replaces your document with someone else\u2019s.",
+      "scenario_id": "printer_overwrites_file",
+      "scenario_description": "A shared printer queue replaces your document with someone else\u2019s.",
+      "scenario_joint": "A shared printer queue replaces your document with someone else\u2019s.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Your error or shortcoming becomes visible to others.",
+      "query_joint": "Your error or shortcoming becomes visible to others.",
+      "scenario_id": "public_mistake_exposure",
+      "scenario_description": "Your error or shortcoming becomes visible to others.",
+      "scenario_joint": "Your error or shortcoming becomes visible to others.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with your credit card is charged twice for the same reservation or purchase.",
+      "query_joint": "Help me with your credit card is charged twice for the same reservation or purchase.",
+      "scenario_id": "unexpected_responsibility",
+      "scenario_description": "You are suddenly assigned additional duties beyond your regular workload.",
+      "scenario_joint": "You are suddenly assigned additional duties beyond your regular workload.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with wireless headphones drop connection mid\u2011conference call.",
+      "query_joint": "I'm dealing with wireless headphones drop connection mid\u2011conference call.",
+      "scenario_id": "bluetooth_disconnect_headset",
+      "scenario_description": "Wireless headphones drop connection mid\u2011conference call.",
+      "scenario_joint": "Wireless headphones drop connection mid\u2011conference call.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Someone abruptly changes the subject while you\u2019re speaking, sidelining your point.",
+      "query_joint": "Someone abruptly changes the subject while you\u2019re speaking, sidelining your point.",
+      "scenario_id": "car_breakdown_commute",
+      "scenario_description": "Your car breaks down on the way to an important appointment, leaving you stuck roadside.",
+      "scenario_joint": "Your car breaks down on the way to an important appointment, leaving you stuck roadside.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves a neighbor\u2019s dog barks loudly through the night, disrupting sleep.",
+      "query_joint": "My situation involves a neighbor\u2019s dog barks loudly through the night, disrupting sleep.",
+      "scenario_id": "stranger_intrusive_question",
+      "scenario_description": "A stranger asks a deeply personal question that makes you uncomfortable.",
+      "scenario_joint": "A stranger asks a deeply personal question that makes you uncomfortable.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with a large file stalls at 99\u202f% completion and never finishes.",
+      "query_joint": "Help me with a large file stalls at 99\u202f% completion and never finishes.",
+      "scenario_id": "file_download_stuck",
+      "scenario_description": "A large file stalls at 99\u202f% completion and never finishes.",
+      "scenario_joint": "A large file stalls at 99\u202f% completion and never finishes.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with an agreed\u2011upon plan or promise is canceled at short notice.",
+      "query_joint": "Help me with an agreed\u2011upon plan or promise is canceled at short notice.",
+      "scenario_id": "commitment_revoked",
+      "scenario_description": "An agreed\u2011upon plan or promise is canceled at short notice.",
+      "scenario_joint": "An agreed\u2011upon plan or promise is canceled at short notice.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with another person\u2019s reckless action endangers or inconveniences you.",
+      "query_joint": "Help me with another person\u2019s reckless action endangers or inconveniences you.",
+      "scenario_id": "hazardous_behavior_from_other",
+      "scenario_description": "Another person\u2019s reckless action endangers or inconveniences you.",
+      "scenario_joint": "Another person\u2019s reckless action endangers or inconveniences you.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with a neighbor\u2019s dog barks loudly through the night, disrupting sleep.",
+      "query_joint": "I'm dealing with a neighbor\u2019s dog barks loudly through the night, disrupting sleep.",
+      "scenario_id": "neighbor_dog_barks_night",
+      "scenario_description": "A neighbor\u2019s dog barks loudly through the night, disrupting sleep.",
+      "scenario_joint": "A neighbor\u2019s dog barks loudly through the night, disrupting sleep.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with you step in a puddle and soak one sock on the way to work.",
+      "query_joint": "Help me with you step in a puddle and soak one sock on the way to work.",
+      "scenario_id": "sock_wet_in_puddle",
+      "scenario_description": "You step in a puddle and soak one sock on the way to work.",
+      "scenario_joint": "You step in a puddle and soak one sock on the way to work.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with a payment fails or is delayed, postponing access to a product or service.",
+      "query_joint": "I'm dealing with a payment fails or is delayed, postponing access to a product or service.",
+      "scenario_id": "incorrect_order",
+      "scenario_description": "An order arrives with the wrong items or specifications.",
+      "scenario_joint": "An order arrives with the wrong items or specifications.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing the passenger in front of you reclines their seat abruptly, encroaching on your limited space.",
+      "query_joint": "I am experiencing the passenger in front of you reclines their seat abruptly, encroaching on your limited space.",
+      "scenario_id": "friend_arrives_extremely_late",
+      "scenario_description": "A friend shows up over an hour late to a meetup without notice.",
+      "scenario_joint": "A friend shows up over an hour late to a meetup without notice.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Phone autocorrect changes someone\u2019s name, sending an awkward text.",
+      "query_joint": "Phone autocorrect changes someone\u2019s name, sending an awkward text.",
+      "scenario_id": "power_outage",
+      "scenario_description": "Electricity suddenly goes out, disrupting normal activities.",
+      "scenario_joint": "Electricity suddenly goes out, disrupting normal activities.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with guests arrive but you can\u2019t recall the wi\u2011fi password for them.",
+      "query_joint": "Help me with guests arrive but you can\u2019t recall the wi\u2011fi password for them.",
+      "scenario_id": "wifi_guest_password_missing",
+      "scenario_description": "Guests arrive but you can\u2019t recall the Wi\u2011Fi password for them.",
+      "scenario_joint": "Guests arrive but you can\u2019t recall the Wi\u2011Fi password for them.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing you learn friends held a gathering without inviting you.",
+      "query_joint": "I am experiencing you learn friends held a gathering without inviting you.",
+      "scenario_id": "file_download_stuck",
+      "scenario_description": "A large file stalls at 99\u202f% completion and never finishes.",
+      "scenario_joint": "A large file stalls at 99\u202f% completion and never finishes.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with someone tags you in a post you\u2019d prefer to stay anonymous in.",
+      "query_joint": "Help me with someone tags you in a post you\u2019d prefer to stay anonymous in.",
+      "scenario_id": "social_media_unwanted_tag",
+      "scenario_description": "Someone tags you in a post you\u2019d prefer to stay anonymous in.",
+      "scenario_joint": "Someone tags you in a post you\u2019d prefer to stay anonymous in.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with a cashier runs out of small bills and can\u2019t give proper change.",
+      "query_joint": "Help me with a cashier runs out of small bills and can\u2019t give proper change.",
+      "scenario_id": "bill_split_unfair",
+      "scenario_description": "At a group meal, others insist on splitting the bill evenly though you ordered less.",
+      "scenario_joint": "At a group meal, others insist on splitting the bill evenly though you ordered less.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with you cannot access or locate something you need immediately.",
+      "query_joint": "Help me with you cannot access or locate something you need immediately.",
+      "scenario_id": "unfair_criticism",
+      "scenario_description": "You receive negative feedback you believe is unwarranted.",
+      "scenario_joint": "You receive negative feedback you believe is unwarranted.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing team members move ahead without giving you your turn to contribute.",
+      "query_joint": "I am experiencing team members move ahead without giving you your turn to contribute.",
+      "scenario_id": "friend_cancels_trip_after_booking",
+      "scenario_description": "A friend cancels a joint trip after tickets are non\u2011refundable.",
+      "scenario_joint": "A friend cancels a joint trip after tickets are non\u2011refundable.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with you discover a close friend has unfollowed you on social media without explanation.",
+      "query_joint": "I'm dealing with you discover a close friend has unfollowed you on social media without explanation.",
+      "scenario_id": "unexpected_resource_failure",
+      "scenario_description": "A tool, service, or piece of technology stops working when required.",
+      "scenario_joint": "A tool, service, or piece of technology stops working when required.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with you step in a puddle and soak one sock on the way to work.",
+      "query_joint": "Help me with you step in a puddle and soak one sock on the way to work.",
+      "scenario_id": "data_loss",
+      "scenario_description": "Important files or data are lost due to error or malfunction.",
+      "scenario_joint": "Important files or data are lost due to error or malfunction.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with a friend tells others a secret you asked them to keep private.",
+      "query_joint": "Help me with a friend tells others a secret you asked them to keep private.",
+      "scenario_id": "friend_shares_confidential_info",
+      "scenario_description": "A friend tells others a secret you asked them to keep private.",
+      "scenario_joint": "A friend tells others a secret you asked them to keep private.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves a friend keeps chatting during a film despite polite hints to stop.",
+      "query_joint": "My situation involves a friend keeps chatting during a film despite polite hints to stop.",
+      "scenario_id": "friend_talks_during_movie",
+      "scenario_description": "A friend keeps chatting during a film despite polite hints to stop.",
+      "scenario_joint": "A friend keeps chatting during a film despite polite hints to stop.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Your dog\u2019s leash slips from your grasp for a moment in the park.",
+      "query_joint": "Your dog\u2019s leash slips from your grasp for a moment in the park.",
+      "scenario_id": "dog_leash_slips_hand",
+      "scenario_description": "Your dog\u2019s leash slips from your grasp for a moment in the park.",
+      "scenario_joint": "Your dog\u2019s leash slips from your grasp for a moment in the park.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with a vending machine takes your money but doesn\u2019t dispense the item.",
+      "query_joint": "I'm dealing with a vending machine takes your money but doesn\u2019t dispense the item.",
+      "scenario_id": "environmental_disruption",
+      "scenario_description": "External conditions (noise, weather, etc.) prevent focus or rest.",
+      "scenario_joint": "External conditions (noise, weather, etc.) prevent focus or rest.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves you cannot access or locate something you need immediately.",
+      "query_joint": "My situation involves you cannot access or locate something you need immediately.",
+      "scenario_id": "essential_item_unavailable",
+      "scenario_description": "You cannot access or locate something you need immediately.",
+      "scenario_joint": "You cannot access or locate something you need immediately.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with unexpected visitors show up at your home, disrupting your plans.",
+      "query_joint": "Help me with unexpected visitors show up at your home, disrupting your plans.",
+      "scenario_id": "surprise_guest_arrival",
+      "scenario_description": "Unexpected visitors show up at your home, disrupting your plans.",
+      "scenario_joint": "Unexpected visitors show up at your home, disrupting your plans.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with an event exceeds capacity, preventing your participation.",
+      "query_joint": "Help me with an event exceeds capacity, preventing your participation.",
+      "scenario_id": "social_event_overlook",
+      "scenario_description": "You learn friends held a gathering without inviting you.",
+      "scenario_joint": "You learn friends held a gathering without inviting you.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with your account credentials are breached, risking unauthorized access.",
+      "query_joint": "Help me with your account credentials are breached, risking unauthorized access.",
+      "scenario_id": "credential_compromise",
+      "scenario_description": "Your account credentials are breached, risking unauthorized access.",
+      "scenario_joint": "Your account credentials are breached, risking unauthorized access.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves an atm runs out of cash just as you need to withdraw money.",
+      "query_joint": "My situation involves an atm runs out of cash just as you need to withdraw money.",
+      "scenario_id": "atm_cash_unavailable",
+      "scenario_description": "An ATM runs out of cash just as you need to withdraw money.",
+      "scenario_joint": "An ATM runs out of cash just as you need to withdraw money.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "A printer runs out of ink halfway through printing urgent documents.",
+      "query_joint": "A printer runs out of ink halfway through printing urgent documents.",
+      "scenario_id": "password_lockout",
+      "scenario_description": "Repeated wrong passwords lock you out of an important account.",
+      "scenario_joint": "Repeated wrong passwords lock you out of an important account.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing a friend spreads a false rumor about you, harming your reputation.",
+      "query_joint": "I am experiencing a friend spreads a false rumor about you, harming your reputation.",
+      "scenario_id": "rumor_spread_friend",
+      "scenario_description": "A friend spreads a false rumor about you, harming your reputation.",
+      "scenario_joint": "A friend spreads a false rumor about you, harming your reputation.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with a neighbor\u2019s dog barks loudly through the night, disrupting sleep.",
+      "query_joint": "Help me with a neighbor\u2019s dog barks loudly through the night, disrupting sleep.",
+      "scenario_id": "neighbor_dog_barks_night",
+      "scenario_description": "A neighbor\u2019s dog barks loudly through the night, disrupting sleep.",
+      "scenario_joint": "A neighbor\u2019s dog barks loudly through the night, disrupting sleep.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves you fail to fulfill a time\u2011sensitive duty or commitment.",
+      "query_joint": "My situation involves you fail to fulfill a time\u2011sensitive duty or commitment.",
+      "scenario_id": "critical_obligation_missed",
+      "scenario_description": "You fail to fulfill a time\u2011sensitive duty or commitment.",
+      "scenario_joint": "You fail to fulfill a time\u2011sensitive duty or commitment.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing an acquaintance touches your hair or body without permission.",
+      "query_joint": "I am experiencing an acquaintance touches your hair or body without permission.",
+      "scenario_id": "usb_cable_frayed",
+      "scenario_description": "Your charging cable frays, causing intermittent power connection.",
+      "scenario_joint": "Your charging cable frays, causing intermittent power connection.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with public transport breaks down or is canceled, leaving you searching for alternatives.",
+      "query_joint": "I'm dealing with public transport breaks down or is canceled, leaving you searching for alternatives.",
+      "scenario_id": "supervisor_publicly_scolds",
+      "scenario_description": "Your supervisor criticizes your work loudly in front of the whole team.",
+      "scenario_joint": "Your supervisor criticizes your work loudly in front of the whole team.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves you act on incorrect information that later causes inconvenience or harm.",
+      "query_joint": "My situation involves you act on incorrect information that later causes inconvenience or harm.",
+      "scenario_id": "parking_meter_card_error",
+      "scenario_description": "A parking meter rejects your card repeatedly, risking a ticket.",
+      "scenario_joint": "A parking meter rejects your card repeatedly, risking a ticket.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with you sneeze loudly during a silent moment in a lecture hall.",
+      "query_joint": "Help me with you sneeze loudly during a silent moment in a lecture hall.",
+      "scenario_id": "seat_occupied",
+      "scenario_description": "Someone is in the seat assigned to you, forcing an awkward dispute.",
+      "scenario_joint": "Someone is in the seat assigned to you, forcing an awkward dispute.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with your landlord announces a significant rent hike with minimal notice.",
+      "query_joint": "Help me with your landlord announces a significant rent hike with minimal notice.",
+      "scenario_id": "elevator_stuck",
+      "scenario_description": "The elevator halts between floors and the doors won\u2019t open.",
+      "scenario_joint": "The elevator halts between floors and the doors won\u2019t open.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with a beneficial chance or offer passes before you can act on it.",
+      "query_joint": "Help me with a beneficial chance or offer passes before you can act on it.",
+      "scenario_id": "lost_opportunity",
+      "scenario_description": "A beneficial chance or offer passes before you can act on it.",
+      "scenario_joint": "A beneficial chance or offer passes before you can act on it.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves a child accidentally knocks a full glass of water across the table.",
+      "query_joint": "My situation involves a child accidentally knocks a full glass of water across the table.",
+      "scenario_id": "child_spills_water_counter",
+      "scenario_description": "A child accidentally knocks a full glass of water across the table.",
+      "scenario_joint": "A child accidentally knocks a full glass of water across the table.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Public transport breaks down or is canceled, leaving you searching for alternatives.",
+      "query_joint": "Public transport breaks down or is canceled, leaving you searching for alternatives.",
+      "scenario_id": "public_transport_failure",
+      "scenario_description": "Public transport breaks down or is canceled, leaving you searching for alternatives.",
+      "scenario_joint": "Public transport breaks down or is canceled, leaving you searching for alternatives.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with a plate slips from your hands and shatters in the sink.",
+      "query_joint": "I'm dealing with a plate slips from your hands and shatters in the sink.",
+      "scenario_id": "bluetooth_disconnect_audio",
+      "scenario_description": "Your wireless audio device disconnects mid\u2011call, cutting off communication.",
+      "scenario_joint": "Your wireless audio device disconnects mid\u2011call, cutting off communication.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves a store\u2019s card reader is offline, preventing you from paying.",
+      "query_joint": "My situation involves a store\u2019s card reader is offline, preventing you from paying.",
+      "scenario_id": "meeting_mute_left_on",
+      "scenario_description": "You speak for several seconds on a video call while still muted.",
+      "scenario_joint": "You speak for several seconds on a video call while still muted.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with someone takes your photo in public without asking.",
+      "query_joint": "Help me with someone takes your photo in public without asking.",
+      "scenario_id": "resource_shortage",
+      "scenario_description": "Necessary supplies or materials run out sooner than anticipated.",
+      "scenario_joint": "Necessary supplies or materials run out sooner than anticipated.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing you accidentally delete an important photo before it is backed up.",
+      "query_joint": "I am experiencing you accidentally delete an important photo before it is backed up.",
+      "scenario_id": "friend_cancels_trip_after_booking",
+      "scenario_description": "A friend cancels a joint trip after tickets are non\u2011refundable.",
+      "scenario_joint": "A friend cancels a joint trip after tickets are non\u2011refundable.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with bristles shed from your toothbrush while brushing.",
+      "query_joint": "Help me with bristles shed from your toothbrush while brushing.",
+      "scenario_id": "toothbrush_bristles_fall",
+      "scenario_description": "Bristles shed from your toothbrush while brushing.",
+      "scenario_joint": "Bristles shed from your toothbrush while brushing.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with a takeaway or delivery meal arrives with a key item missing.",
+      "query_joint": "Help me with a takeaway or delivery meal arrives with a key item missing.",
+      "scenario_id": "alarm_failure",
+      "scenario_description": "Your morning alarm fails to sound, causing you to oversleep.",
+      "scenario_joint": "Your morning alarm fails to sound, causing you to oversleep.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with you discover a close friend has unfollowed you on social media without explanation.",
+      "query_joint": "Help me with you discover a close friend has unfollowed you on social media without explanation.",
+      "scenario_id": "cash_register_no_change",
+      "scenario_description": "A cashier runs out of small bills and can\u2019t give proper change.",
+      "scenario_joint": "A cashier runs out of small bills and can\u2019t give proper change.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing extra screening at a security checkpoint creates a delay that jeopardizes a tight connection.",
+      "query_joint": "I am experiencing extra screening at a security checkpoint creates a delay that jeopardizes a tight connection.",
+      "scenario_id": "security_checkpoint_delay",
+      "scenario_description": "Extra screening at a security checkpoint creates a delay that jeopardizes a tight connection.",
+      "scenario_joint": "Extra screening at a security checkpoint creates a delay that jeopardizes a tight connection.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing a stranger asks a deeply personal question that makes you uncomfortable.",
+      "query_joint": "I am experiencing a stranger asks a deeply personal question that makes you uncomfortable.",
+      "scenario_id": "stranger_intrusive_question",
+      "scenario_description": "A stranger asks a deeply personal question that makes you uncomfortable.",
+      "scenario_joint": "A stranger asks a deeply personal question that makes you uncomfortable.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "A workplace fire drill forces you to pause an urgent task.",
+      "query_joint": "A workplace fire drill forces you to pause an urgent task.",
+      "scenario_id": "romantic_partner_on_phone_dinner",
+      "scenario_description": "Your partner scrolls on their phone through an entire dinner date.",
+      "scenario_joint": "Your partner scrolls on their phone through an entire dinner date.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with a formal request or application is unexpectedly rejected by an official body or gatekeeper.",
+      "query_joint": "Help me with a formal request or application is unexpectedly rejected by an official body or gatekeeper.",
+      "scenario_id": "printer_paper_jam",
+      "scenario_description": "A printer jams while producing time\u2011sensitive documents.",
+      "scenario_joint": "A printer jams while producing time\u2011sensitive documents.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with your credit card is charged twice for the same reservation or purchase.",
+      "query_joint": "Help me with your credit card is charged twice for the same reservation or purchase.",
+      "scenario_id": "booking_double_charged",
+      "scenario_description": "Your credit card is charged twice for the same reservation or purchase.",
+      "scenario_joint": "Your credit card is charged twice for the same reservation or purchase.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with you post a private message in the wrong group chat by mistake.",
+      "query_joint": "Help me with you post a private message in the wrong group chat by mistake.",
+      "scenario_id": "ride_hailing_no_show",
+      "scenario_description": "A ride\u2011share driver cancels after the pickup time, leaving you stranded.",
+      "scenario_joint": "A ride\u2011share driver cancels after the pickup time, leaving you stranded.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with a roommate leaves every light on after leaving home.",
+      "query_joint": "Help me with a roommate leaves every light on after leaving home.",
+      "scenario_id": "roommate_leaves_light_on",
+      "scenario_description": "A roommate leaves every light on after leaving home.",
+      "scenario_joint": "A roommate leaves every light on after leaving home.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing a parent makes a personal remark about you in front of your friends.",
+      "query_joint": "I am experiencing a parent makes a personal remark about you in front of your friends.",
+      "scenario_id": "password_lockout",
+      "scenario_description": "Repeated wrong passwords lock you out of an important account.",
+      "scenario_joint": "Repeated wrong passwords lock you out of an important account.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing the office coffee machine flashes empty\u2011bean warning at brew time.",
+      "query_joint": "I am experiencing the office coffee machine flashes empty\u2011bean warning at brew time.",
+      "scenario_id": "distracted_listener",
+      "scenario_description": "Someone scrolls on their phone while you are talking, giving little attention.",
+      "scenario_joint": "Someone scrolls on their phone while you are talking, giving little attention.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing an expected service or facility is closed or offline without notice.",
+      "query_joint": "I am experiencing an expected service or facility is closed or offline without notice.",
+      "scenario_id": "atm_cash_unavailable",
+      "scenario_description": "An ATM runs out of cash just as you need to withdraw money.",
+      "scenario_joint": "An ATM runs out of cash just as you need to withdraw money.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "A roommate leaves every light on after leaving home.",
+      "query_joint": "A roommate leaves every light on after leaving home.",
+      "scenario_id": "roommate_leaves_light_on",
+      "scenario_description": "A roommate leaves every light on after leaving home.",
+      "scenario_joint": "A roommate leaves every light on after leaving home.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves your wireless mouse stops responding during detailed design work.",
+      "query_joint": "My situation involves your wireless mouse stops responding during detailed design work.",
+      "scenario_id": "cash_register_no_change",
+      "scenario_description": "A cashier runs out of small bills and can\u2019t give proper change.",
+      "scenario_joint": "A cashier runs out of small bills and can\u2019t give proper change.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "A stranger sits in your reserved train seat and refuses to move.",
+      "query_joint": "A stranger sits in your reserved train seat and refuses to move.",
+      "scenario_id": "storage_limit_reached",
+      "scenario_description": "You run out of space on a device or platform at a crucial time.",
+      "scenario_joint": "You run out of space on a device or platform at a crucial time.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Extra screening at a security checkpoint creates a delay that jeopardizes a tight connection.",
+      "query_joint": "Extra screening at a security checkpoint creates a delay that jeopardizes a tight connection.",
+      "scenario_id": "coworker_ignores_email",
+      "scenario_description": "A colleague repeatedly ignores your emails about an urgent shared task.",
+      "scenario_joint": "A colleague repeatedly ignores your emails about an urgent shared task.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing you discover a close friend has unfollowed you on social media without explanation.",
+      "query_joint": "I am experiencing you discover a close friend has unfollowed you on social media without explanation.",
+      "scenario_id": "friend_unfollow_social",
+      "scenario_description": "You discover a close friend has unfollowed you on social media without explanation.",
+      "scenario_joint": "You discover a close friend has unfollowed you on social media without explanation.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing a coworker blasts music from their speakers in an open office.",
+      "query_joint": "I am experiencing a coworker blasts music from their speakers in an open office.",
+      "scenario_id": "parking_lot_full",
+      "scenario_description": "You arrive and find the parking lot full, forcing you to search for alternate parking.",
+      "scenario_joint": "You arrive and find the parking lot full, forcing you to search for alternate parking.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "A close friend forgets your birthday, offering no greeting or acknowledgment.",
+      "query_joint": "A close friend forgets your birthday, offering no greeting or acknowledgment.",
+      "scenario_id": "atm_cash_unavailable",
+      "scenario_description": "An ATM runs out of cash just as you need to withdraw money.",
+      "scenario_joint": "An ATM runs out of cash just as you need to withdraw money.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with you step in a puddle and soak one sock on the way to work.",
+      "query_joint": "I'm dealing with you step in a puddle and soak one sock on the way to work.",
+      "scenario_id": "sock_wet_in_puddle",
+      "scenario_description": "You step in a puddle and soak one sock on the way to work.",
+      "scenario_joint": "You step in a puddle and soak one sock on the way to work.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with your charging cable frays, causing intermittent power connection.",
+      "query_joint": "I'm dealing with your charging cable frays, causing intermittent power connection.",
+      "scenario_id": "usb_cable_frayed",
+      "scenario_description": "Your charging cable frays, causing intermittent power connection.",
+      "scenario_joint": "Your charging cable frays, causing intermittent power connection.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves a close friend forgets your birthday, offering no greeting or acknowledgment.",
+      "query_joint": "My situation involves a close friend forgets your birthday, offering no greeting or acknowledgment.",
+      "scenario_id": "friend_forgets_birthday",
+      "scenario_description": "A close friend forgets your birthday, offering no greeting or acknowledgment.",
+      "scenario_joint": "A close friend forgets your birthday, offering no greeting or acknowledgment.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "A coworker accidentally replies\u2011all with sensitive information to a large mailing list.",
+      "query_joint": "A coworker accidentally replies\u2011all with sensitive information to a large mailing list.",
+      "scenario_id": "friend_borrowed_item_not_returned",
+      "scenario_description": "A friend borrows your book and never returns it after the agreed time.",
+      "scenario_joint": "A friend borrows your book and never returns it after the agreed time.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing bristles shed from your toothbrush while brushing.",
+      "query_joint": "I am experiencing bristles shed from your toothbrush while brushing.",
+      "scenario_id": "movie_spoiled",
+      "scenario_description": "A friend reveals a key plot twist of a film you planned to watch soon.",
+      "scenario_joint": "A friend reveals a key plot twist of a film you planned to watch soon.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with a parent makes a personal remark about you in front of your friends.",
+      "query_joint": "I'm dealing with a parent makes a personal remark about you in front of your friends.",
+      "scenario_id": "parent_publicly_embarrasses",
+      "scenario_description": "A parent makes a personal remark about you in front of your friends.",
+      "scenario_joint": "A parent makes a personal remark about you in front of your friends.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing an atm runs out of cash just as you need to withdraw money.",
+      "query_joint": "I am experiencing an atm runs out of cash just as you need to withdraw money.",
+      "scenario_id": "atm_cash_unavailable",
+      "scenario_description": "An ATM runs out of cash just as you need to withdraw money.",
+      "scenario_joint": "An ATM runs out of cash just as you need to withdraw money.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Your group\u2011chat message is misread, sparking an argument.",
+      "query_joint": "Your group\u2011chat message is misread, sparking an argument.",
+      "scenario_id": "group_chat_misunderstanding",
+      "scenario_description": "Your group\u2011chat message is misread, sparking an argument.",
+      "scenario_joint": "Your group\u2011chat message is misread, sparking an argument.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing your key snaps off in the lock, leaving you locked out.",
+      "query_joint": "I am experiencing your key snaps off in the lock, leaving you locked out.",
+      "scenario_id": "door_key_breaks",
+      "scenario_description": "Your key snaps off in the lock, leaving you locked out.",
+      "scenario_joint": "Your key snaps off in the lock, leaving you locked out.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with your phone is stolen while you are in a public place, cutting off communication.",
+      "query_joint": "I'm dealing with your phone is stolen while you are in a public place, cutting off communication.",
+      "scenario_id": "phone_stolen_public",
+      "scenario_description": "Your phone is stolen while you are in a public place, cutting off communication.",
+      "scenario_joint": "Your phone is stolen while you are in a public place, cutting off communication.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with someone abruptly changes the subject while you\u2019re speaking, sidelining your point.",
+      "query_joint": "Help me with someone abruptly changes the subject while you\u2019re speaking, sidelining your point.",
+      "scenario_id": "conversation_hijacked",
+      "scenario_description": "Someone abruptly changes the subject while you\u2019re speaking, sidelining your point.",
+      "scenario_joint": "Someone abruptly changes the subject while you\u2019re speaking, sidelining your point.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "A sibling borrows your clothes and returns them with a stain.",
+      "query_joint": "A sibling borrows your clothes and returns them with a stain.",
+      "scenario_id": "sibling_borrows_clothes_spill",
+      "scenario_description": "A sibling borrows your clothes and returns them with a stain.",
+      "scenario_joint": "A sibling borrows your clothes and returns them with a stain.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with a parking meter rejects your card repeatedly, risking a ticket.",
+      "query_joint": "I'm dealing with a parking meter rejects your card repeatedly, risking a ticket.",
+      "scenario_id": "unwanted_photo_tag",
+      "scenario_description": "You are tagged in a social\u2011media photo you dislike without being asked.",
+      "scenario_joint": "You are tagged in a social\u2011media photo you dislike without being asked.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with you receive negative feedback you believe is unwarranted.",
+      "query_joint": "I'm dealing with you receive negative feedback you believe is unwarranted.",
+      "scenario_id": "authority_denial",
+      "scenario_description": "A formal request or application is unexpectedly rejected by an official body or gatekeeper.",
+      "scenario_joint": "A formal request or application is unexpectedly rejected by an official body or gatekeeper.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing an event exceeds capacity, preventing your participation.",
+      "query_joint": "I am experiencing an event exceeds capacity, preventing your participation.",
+      "scenario_id": "parent_publicly_embarrasses",
+      "scenario_description": "A parent makes a personal remark about you in front of your friends.",
+      "scenario_joint": "A parent makes a personal remark about you in front of your friends.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves you speak for several seconds on a video call while still muted.",
+      "query_joint": "My situation involves you speak for several seconds on a video call while still muted.",
+      "scenario_id": "meeting_mute_left_on",
+      "scenario_description": "You speak for several seconds on a video call while still muted.",
+      "scenario_joint": "You speak for several seconds on a video call while still muted.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with coworkers start a new team chat and leave you out of important discussions.",
+      "query_joint": "Help me with coworkers start a new team chat and leave you out of important discussions.",
+      "scenario_id": "group_chat_exclusion",
+      "scenario_description": "Coworkers start a new team chat and leave you out of important discussions.",
+      "scenario_joint": "Coworkers start a new team chat and leave you out of important discussions.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves a colleague repeatedly ignores your emails about an urgent shared task.",
+      "query_joint": "My situation involves a colleague repeatedly ignores your emails about an urgent shared task.",
+      "scenario_id": "coworker_eats_lunch",
+      "scenario_description": "A coworker eats your clearly labeled lunch from the office fridge.",
+      "scenario_joint": "A coworker eats your clearly labeled lunch from the office fridge.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves your childcare provider cancels hours before you are due at work, leaving you without coverage.",
+      "query_joint": "My situation involves your childcare provider cancels hours before you are due at work, leaving you without coverage.",
+      "scenario_id": "childcare_cancellation",
+      "scenario_description": "Your childcare provider cancels hours before you are due at work, leaving you without coverage.",
+      "scenario_joint": "Your childcare provider cancels hours before you are due at work, leaving you without coverage.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing an atm runs out of cash just as you need to withdraw money.",
+      "query_joint": "I am experiencing an atm runs out of cash just as you need to withdraw money.",
+      "scenario_id": "distracted_listener",
+      "scenario_description": "Someone scrolls on their phone while you are talking, giving little attention.",
+      "scenario_joint": "Someone scrolls on their phone while you are talking, giving little attention.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves your software crashes before you save, erasing recent progress.",
+      "query_joint": "My situation involves your software crashes before you save, erasing recent progress.",
+      "scenario_id": "unsaved_work_loss",
+      "scenario_description": "Your software crashes before you save, erasing recent progress.",
+      "scenario_joint": "Your software crashes before you save, erasing recent progress.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with a colleague repeatedly cuts you off while you are presenting to the team.",
+      "query_joint": "I'm dealing with a colleague repeatedly cuts you off while you are presenting to the team.",
+      "scenario_id": "emergency_interruption",
+      "scenario_description": "An urgent situation forces you to abandon what you were doing.",
+      "scenario_joint": "An urgent situation forces you to abandon what you were doing.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves your personal or sensitive data is accessed or shared without consent.",
+      "query_joint": "My situation involves your personal or sensitive data is accessed or shared without consent.",
+      "scenario_id": "privacy_violation",
+      "scenario_description": "Your personal or sensitive data is accessed or shared without consent.",
+      "scenario_joint": "Your personal or sensitive data is accessed or shared without consent.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with a coworker finishes the office coffee and leaves the pot empty.",
+      "query_joint": "I'm dealing with a coworker finishes the office coffee and leaves the pot empty.",
+      "scenario_id": "colleague_takes_last_cup_coffee",
+      "scenario_description": "A coworker finishes the office coffee and leaves the pot empty.",
+      "scenario_joint": "A coworker finishes the office coffee and leaves the pot empty.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Someone scrolls on their phone while you are talking, giving little attention.",
+      "query_joint": "Someone scrolls on their phone while you are talking, giving little attention.",
+      "scenario_id": "distracted_listener",
+      "scenario_description": "Someone scrolls on their phone while you are talking, giving little attention.",
+      "scenario_joint": "Someone scrolls on their phone while you are talking, giving little attention.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "A project teammate blames their error on you during a group review.",
+      "query_joint": "A project teammate blames their error on you during a group review.",
+      "scenario_id": "mouse_low_battery",
+      "scenario_description": "Your wireless mouse stops responding during detailed design work.",
+      "scenario_joint": "Your wireless mouse stops responding during detailed design work.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with you are billed the wrong amount for goods or services.",
+      "query_joint": "Help me with you are billed the wrong amount for goods or services.",
+      "scenario_id": "gossip_spread_workplace",
+      "scenario_description": "A rumor about you circulates in the office without your knowledge.",
+      "scenario_joint": "A rumor about you circulates in the office without your knowledge.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "A coworker eats your clearly labeled lunch from the office fridge.",
+      "query_joint": "A coworker eats your clearly labeled lunch from the office fridge.",
+      "scenario_id": "coworker_eats_lunch",
+      "scenario_description": "A coworker eats your clearly labeled lunch from the office fridge.",
+      "scenario_joint": "A coworker eats your clearly labeled lunch from the office fridge.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves you reach the station and realize your transit card is missing.",
+      "query_joint": "My situation involves you reach the station and realize your transit card is missing.",
+      "scenario_id": "backhanded_compliment",
+      "scenario_description": "A so\u2011called compliment actually contains an insult about you.",
+      "scenario_joint": "A so\u2011called compliment actually contains an insult about you.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with someone makes an invasive comment about your appearance that feels uncomfortable.",
+      "query_joint": "Help me with someone makes an invasive comment about your appearance that feels uncomfortable.",
+      "scenario_id": "group_chat_misunderstanding",
+      "scenario_description": "Your group\u2011chat message is misread, sparking an argument.",
+      "scenario_joint": "Your group\u2011chat message is misread, sparking an argument.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing the stapler clicks but no staple comes out when compiling papers.",
+      "query_joint": "I am experiencing the stapler clicks but no staple comes out when compiling papers.",
+      "scenario_id": "stapler_out_of_staples",
+      "scenario_description": "The stapler clicks but no staple comes out when compiling papers.",
+      "scenario_joint": "The stapler clicks but no staple comes out when compiling papers.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with a friend borrows your book and never returns it after the agreed time.",
+      "query_joint": "Help me with a friend borrows your book and never returns it after the agreed time.",
+      "scenario_id": "weather_app_wrong_temp",
+      "scenario_description": "The weather app forecasts sun but it starts raining unexpectedly.",
+      "scenario_joint": "The weather app forecasts sun but it starts raining unexpectedly.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with microwaved food is hot outside but still cold in the middle.",
+      "query_joint": "I'm dealing with microwaved food is hot outside but still cold in the middle.",
+      "scenario_id": "food_overcooks_burns",
+      "scenario_description": "Food in the oven burns after you misread the timer.",
+      "scenario_joint": "Food in the oven burns after you misread the timer.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing you cannot enter a location or system you expected to access.",
+      "query_joint": "I am experiencing you cannot enter a location or system you expected to access.",
+      "scenario_id": "access_denied",
+      "scenario_description": "You cannot enter a location or system you expected to access.",
+      "scenario_joint": "You cannot enter a location or system you expected to access.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with bristles shed from your toothbrush while brushing.",
+      "query_joint": "Help me with bristles shed from your toothbrush while brushing.",
+      "scenario_id": "access_denied",
+      "scenario_description": "You cannot enter a location or system you expected to access.",
+      "scenario_joint": "You cannot enter a location or system you expected to access.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves a cupboard handle snaps off in your hand while opening it.",
+      "query_joint": "My situation involves a cupboard handle snaps off in your hand while opening it.",
+      "scenario_id": "cupboard_handle_breaks",
+      "scenario_description": "A cupboard handle snaps off in your hand while opening it.",
+      "scenario_joint": "A cupboard handle snaps off in your hand while opening it.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with a plate slips from your hands and shatters in the sink.",
+      "query_joint": "I'm dealing with a plate slips from your hands and shatters in the sink.",
+      "scenario_id": "inside_joke_exclusion",
+      "scenario_description": "People around you share inside jokes that make you feel left out of the conversation.",
+      "scenario_joint": "People around you share inside jokes that make you feel left out of the conversation.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing colleagues switch to a language you don\u2019t understand and laugh together.",
+      "query_joint": "I am experiencing colleagues switch to a language you don\u2019t understand and laugh together.",
+      "scenario_id": "language_exclusion_laughter",
+      "scenario_description": "Colleagues switch to a language you don\u2019t understand and laugh together.",
+      "scenario_joint": "Colleagues switch to a language you don\u2019t understand and laugh together.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "A friend reveals a key plot twist of a film you planned to watch soon.",
+      "query_joint": "A friend reveals a key plot twist of a film you planned to watch soon.",
+      "scenario_id": "movie_spoiled",
+      "scenario_description": "A friend reveals a key plot twist of a film you planned to watch soon.",
+      "scenario_joint": "A friend reveals a key plot twist of a film you planned to watch soon.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "You fail to fulfill a time\u2011sensitive duty or commitment.",
+      "query_joint": "You fail to fulfill a time\u2011sensitive duty or commitment.",
+      "scenario_id": "sudden_rule_change",
+      "scenario_description": "Rules or requirements change abruptly, forcing you to adjust plans.",
+      "scenario_joint": "Rules or requirements change abruptly, forcing you to adjust plans.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Colleagues switch to a language you don\u2019t understand and laugh together.",
+      "query_joint": "Colleagues switch to a language you don\u2019t understand and laugh together.",
+      "scenario_id": "language_exclusion_laughter",
+      "scenario_description": "Colleagues switch to a language you don\u2019t understand and laugh together.",
+      "scenario_joint": "Colleagues switch to a language you don\u2019t understand and laugh together.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves the passenger in front of you reclines their seat abruptly, encroaching on your limited space.",
+      "query_joint": "My situation involves the passenger in front of you reclines their seat abruptly, encroaching on your limited space.",
+      "scenario_id": "coworker_interrupts_presentation",
+      "scenario_description": "A colleague repeatedly cuts you off while you are presenting to the team.",
+      "scenario_joint": "A colleague repeatedly cuts you off while you are presenting to the team.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with your ride\u2011share driver accepts and then cancels as pickup time arrives.",
+      "query_joint": "I'm dealing with your ride\u2011share driver accepts and then cancels as pickup time arrives.",
+      "scenario_id": "ride_share_no_show",
+      "scenario_description": "Your ride\u2011share driver accepts and then cancels as pickup time arrives.",
+      "scenario_joint": "Your ride\u2011share driver accepts and then cancels as pickup time arrives.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with a tap\u2011to\u2011pay terminal refuses multiple attempts, forcing you to swipe.",
+      "query_joint": "Help me with a tap\u2011to\u2011pay terminal refuses multiple attempts, forcing you to swipe.",
+      "scenario_id": "card_reader_contactless_fail",
+      "scenario_description": "A tap\u2011to\u2011pay terminal refuses multiple attempts, forcing you to swipe.",
+      "scenario_joint": "A tap\u2011to\u2011pay terminal refuses multiple attempts, forcing you to swipe.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with a parent makes a personal remark about you in front of your friends.",
+      "query_joint": "Help me with a parent makes a personal remark about you in front of your friends.",
+      "scenario_id": "parent_publicly_embarrasses",
+      "scenario_description": "A parent makes a personal remark about you in front of your friends.",
+      "scenario_joint": "A parent makes a personal remark about you in front of your friends.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with at a group meal, others insist on splitting the bill evenly though you ordered less.",
+      "query_joint": "Help me with at a group meal, others insist on splitting the bill evenly though you ordered less.",
+      "scenario_id": "bill_split_unfair",
+      "scenario_description": "At a group meal, others insist on splitting the bill evenly though you ordered less.",
+      "scenario_joint": "At a group meal, others insist on splitting the bill evenly though you ordered less.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with an atm runs out of cash just as you need to withdraw money.",
+      "query_joint": "I'm dealing with an atm runs out of cash just as you need to withdraw money.",
+      "scenario_id": "weather_disruption",
+      "scenario_description": "Unexpected weather conditions interfere with your plans.",
+      "scenario_joint": "Unexpected weather conditions interfere with your plans.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves a coworker eats your clearly labeled lunch from the office fridge.",
+      "query_joint": "My situation involves a coworker eats your clearly labeled lunch from the office fridge.",
+      "scenario_id": "coworker_eats_lunch",
+      "scenario_description": "A coworker eats your clearly labeled lunch from the office fridge.",
+      "scenario_joint": "A coworker eats your clearly labeled lunch from the office fridge.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "You speak for several seconds on a video call while still muted.",
+      "query_joint": "You speak for several seconds on a video call while still muted.",
+      "scenario_id": "meeting_mute_left_on",
+      "scenario_description": "You speak for several seconds on a video call while still muted.",
+      "scenario_joint": "You speak for several seconds on a video call while still muted.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Your building access card suddenly stops working, locking you out.",
+      "query_joint": "Your building access card suddenly stops working, locking you out.",
+      "scenario_id": "access_card_malfunction",
+      "scenario_description": "Your building access card suddenly stops working, locking you out.",
+      "scenario_joint": "Your building access card suddenly stops working, locking you out.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with a rumor about you circulates in the office without your knowledge.",
+      "query_joint": "I'm dealing with a rumor about you circulates in the office without your knowledge.",
+      "scenario_id": "gossip_spread_workplace",
+      "scenario_description": "A rumor about you circulates in the office without your knowledge.",
+      "scenario_joint": "A rumor about you circulates in the office without your knowledge.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves the video\u2011call link for a scheduled meeting fails to open.",
+      "query_joint": "My situation involves the video\u2011call link for a scheduled meeting fails to open.",
+      "scenario_id": "meeting_link_invalid",
+      "scenario_description": "The video\u2011call link for a scheduled meeting fails to open.",
+      "scenario_joint": "The video\u2011call link for a scheduled meeting fails to open.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "A cashier runs out of small bills and can\u2019t give proper change.",
+      "query_joint": "A cashier runs out of small bills and can\u2019t give proper change.",
+      "scenario_id": "colleague_takes_last_cup_coffee",
+      "scenario_description": "A coworker finishes the office coffee and leaves the pot empty.",
+      "scenario_joint": "A coworker finishes the office coffee and leaves the pot empty.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Someone is in the seat assigned to you, forcing an awkward dispute.",
+      "query_joint": "Someone is in the seat assigned to you, forcing an awkward dispute.",
+      "scenario_id": "broken_favor_promise",
+      "scenario_description": "A friend who promised to help you backs out at the last moment.",
+      "scenario_joint": "A friend who promised to help you backs out at the last moment.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with a passenger uses two bus seats, leaving others standing.",
+      "query_joint": "Help me with a passenger uses two bus seats, leaving others standing.",
+      "scenario_id": "friend_cancels_trip_after_booking",
+      "scenario_description": "A friend cancels a joint trip after tickets are non\u2011refundable.",
+      "scenario_joint": "A friend cancels a joint trip after tickets are non\u2011refundable.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing a printer jams while producing time\u2011sensitive documents.",
+      "query_joint": "I am experiencing a printer jams while producing time\u2011sensitive documents.",
+      "scenario_id": "printer_paper_jam",
+      "scenario_description": "A printer jams while producing time\u2011sensitive documents.",
+      "scenario_joint": "A printer jams while producing time\u2011sensitive documents.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing suspicious activity causes your bank to freeze your account when you need funds urgently.",
+      "query_joint": "I am experiencing suspicious activity causes your bank to freeze your account when you need funds urgently.",
+      "scenario_id": "physical_injury",
+      "scenario_description": "A sudden minor injury or ailment limits your ability to carry out planned activities.",
+      "scenario_joint": "A sudden minor injury or ailment limits your ability to carry out planned activities.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "A car seatbelt won\u2019t click into its latch, delaying departure.",
+      "query_joint": "A car seatbelt won\u2019t click into its latch, delaying departure.",
+      "scenario_id": "unsolicited_advice_acquaintance",
+      "scenario_description": "An acquaintance offers personal advice you didn\u2019t ask for.",
+      "scenario_joint": "An acquaintance offers personal advice you didn\u2019t ask for.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with your neighbor blasts loud music late at night, disturbing your sleep.",
+      "query_joint": "Help me with your neighbor blasts loud music late at night, disturbing your sleep.",
+      "scenario_id": "seatbelt_latch_jammed",
+      "scenario_description": "A car seatbelt won\u2019t click into its latch, delaying departure.",
+      "scenario_joint": "A car seatbelt won\u2019t click into its latch, delaying departure.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "A sudden loud or continuous noise disturbs your environment.",
+      "query_joint": "A sudden loud or continuous noise disturbs your environment.",
+      "scenario_id": "unexpected_noise",
+      "scenario_description": "A sudden loud or continuous noise disturbs your environment.",
+      "scenario_joint": "A sudden loud or continuous noise disturbs your environment.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with you reach the station and realize your transit card is missing.",
+      "query_joint": "Help me with you reach the station and realize your transit card is missing.",
+      "scenario_id": "lost_opportunity",
+      "scenario_description": "A beneficial chance or offer passes before you can act on it.",
+      "scenario_joint": "A beneficial chance or offer passes before you can act on it.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with you accidentally delete an important photo before it is backed up.",
+      "query_joint": "Help me with you accidentally delete an important photo before it is backed up.",
+      "scenario_id": "photo_deleted",
+      "scenario_description": "You accidentally delete an important photo before it is backed up.",
+      "scenario_joint": "You accidentally delete an important photo before it is backed up.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves a smoke alarm chirps repeatedly at night due to low battery.",
+      "query_joint": "My situation involves a smoke alarm chirps repeatedly at night due to low battery.",
+      "scenario_id": "smoke_alarm_low_battery",
+      "scenario_description": "A smoke alarm chirps repeatedly at night due to low battery.",
+      "scenario_joint": "A smoke alarm chirps repeatedly at night due to low battery.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing an agreed\u2011upon plan or promise is canceled at short notice.",
+      "query_joint": "I am experiencing an agreed\u2011upon plan or promise is canceled at short notice.",
+      "scenario_id": "commitment_revoked",
+      "scenario_description": "An agreed\u2011upon plan or promise is canceled at short notice.",
+      "scenario_joint": "An agreed\u2011upon plan or promise is canceled at short notice.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with you run out of space on a device or platform at a crucial time.",
+      "query_joint": "I'm dealing with you run out of space on a device or platform at a crucial time.",
+      "scenario_id": "commitment_revoked",
+      "scenario_description": "An agreed\u2011upon plan or promise is canceled at short notice.",
+      "scenario_joint": "An agreed\u2011upon plan or promise is canceled at short notice.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing someone plays a video on speaker in a quiet waiting area.",
+      "query_joint": "I am experiencing someone plays a video on speaker in a quiet waiting area.",
+      "scenario_id": "loud_video_public_space",
+      "scenario_description": "Someone plays a video on speaker in a quiet waiting area.",
+      "scenario_joint": "Someone plays a video on speaker in a quiet waiting area.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves the person behind you keeps kicking your seat throughout a flight.",
+      "query_joint": "My situation involves the person behind you keeps kicking your seat throughout a flight.",
+      "scenario_id": "pen_runs_out_mid_exam",
+      "scenario_description": "Your pen dries up halfway through writing an exam answer.",
+      "scenario_joint": "Your pen dries up halfway through writing an exam answer.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with a workplace fire drill forces you to pause an urgent task.",
+      "query_joint": "I'm dealing with a workplace fire drill forces you to pause an urgent task.",
+      "scenario_id": "fire_drill_interrupt",
+      "scenario_description": "A workplace fire drill forces you to pause an urgent task.",
+      "scenario_joint": "A workplace fire drill forces you to pause an urgent task.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing a car seatbelt won\u2019t click into its latch, delaying departure.",
+      "query_joint": "I am experiencing a car seatbelt won\u2019t click into its latch, delaying departure.",
+      "scenario_id": "seatbelt_latch_jammed",
+      "scenario_description": "A car seatbelt won\u2019t click into its latch, delaying departure.",
+      "scenario_joint": "A car seatbelt won\u2019t click into its latch, delaying departure.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with your neighbor blasts loud music late at night, disturbing your sleep.",
+      "query_joint": "I'm dealing with your neighbor blasts loud music late at night, disturbing your sleep.",
+      "scenario_id": "important_call_drop",
+      "scenario_description": "A crucial phone call disconnects mid\u2011conversation due to weak signal.",
+      "scenario_joint": "A crucial phone call disconnects mid\u2011conversation due to weak signal.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with an acquaintance posts an unflattering photo of you on social media without permission.",
+      "query_joint": "I'm dealing with an acquaintance posts an unflattering photo of you on social media without permission.",
+      "scenario_id": "bill_split_unfair",
+      "scenario_description": "At a group meal, others insist on splitting the bill evenly though you ordered less.",
+      "scenario_joint": "At a group meal, others insist on splitting the bill evenly though you ordered less.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with someone takes your photo in public without asking.",
+      "query_joint": "I'm dealing with someone takes your photo in public without asking.",
+      "scenario_id": "coworker_takes_credit",
+      "scenario_description": "A colleague publicly presents your work as their own without acknowledgment.",
+      "scenario_joint": "A colleague publicly presents your work as their own without acknowledgment.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves your scheduled flight is abruptly canceled just before departure, stranding you at the airport.",
+      "query_joint": "My situation involves your scheduled flight is abruptly canceled just before departure, stranding you at the airport.",
+      "scenario_id": "social_event_overlook",
+      "scenario_description": "You learn friends held a gathering without inviting you.",
+      "scenario_joint": "You learn friends held a gathering without inviting you.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with another person bypasses an orderly queue, delaying your turn.",
+      "query_joint": "Help me with another person bypasses an orderly queue, delaying your turn.",
+      "scenario_id": "unexpected_rent_increase",
+      "scenario_description": "Your landlord announces a significant rent hike with minimal notice.",
+      "scenario_joint": "Your landlord announces a significant rent hike with minimal notice.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves your voice cracks audibly during an important presentation line.",
+      "query_joint": "My situation involves your voice cracks audibly during an important presentation line.",
+      "scenario_id": "phone_stolen_public",
+      "scenario_description": "Your phone is stolen while you are in a public place, cutting off communication.",
+      "scenario_joint": "Your phone is stolen while you are in a public place, cutting off communication.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with friends make a joke that targets you, causing discomfort.",
+      "query_joint": "Help me with friends make a joke that targets you, causing discomfort.",
+      "scenario_id": "friend_shares_confidential_info",
+      "scenario_description": "A friend tells others a secret you asked them to keep private.",
+      "scenario_joint": "A friend tells others a secret you asked them to keep private.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "You accidentally delete an important photo before it is backed up.",
+      "query_joint": "You accidentally delete an important photo before it is backed up.",
+      "scenario_id": "photo_deleted",
+      "scenario_description": "You accidentally delete an important photo before it is backed up.",
+      "scenario_joint": "You accidentally delete an important photo before it is backed up.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with a friend who promised to help you backs out at the last moment.",
+      "query_joint": "I'm dealing with a friend who promised to help you backs out at the last moment.",
+      "scenario_id": "overlooked_message",
+      "scenario_description": "A critical message or email is missed or ignored.",
+      "scenario_joint": "A critical message or email is missed or ignored.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with a cupboard handle snaps off in your hand while opening it.",
+      "query_joint": "I'm dealing with a cupboard handle snaps off in your hand while opening it.",
+      "scenario_id": "parking_meter_card_error",
+      "scenario_description": "A parking meter rejects your card repeatedly, risking a ticket.",
+      "scenario_joint": "A parking meter rejects your card repeatedly, risking a ticket.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "A sudden minor injury or ailment limits your ability to carry out planned activities.",
+      "query_joint": "A sudden minor injury or ailment limits your ability to carry out planned activities.",
+      "scenario_id": "physical_injury",
+      "scenario_description": "A sudden minor injury or ailment limits your ability to carry out planned activities.",
+      "scenario_joint": "A sudden minor injury or ailment limits your ability to carry out planned activities.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves the time or location of an exam is changed on short notice, risking your attendance.",
+      "query_joint": "My situation involves the time or location of an exam is changed on short notice, risking your attendance.",
+      "scenario_id": "social_event_overlook",
+      "scenario_description": "You learn friends held a gathering without inviting you.",
+      "scenario_joint": "You learn friends held a gathering without inviting you.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with trains, buses, or flights are delayed beyond reasonable expectations.",
+      "query_joint": "I'm dealing with trains, buses, or flights are delayed beyond reasonable expectations.",
+      "scenario_id": "dish_slips_sink_breaks",
+      "scenario_description": "A plate slips from your hands and shatters in the sink.",
+      "scenario_joint": "A plate slips from your hands and shatters in the sink.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "A friend tells others a secret you asked them to keep private.",
+      "query_joint": "A friend tells others a secret you asked them to keep private.",
+      "scenario_id": "unexpected_external_attendee",
+      "scenario_description": "A person you don\u2019t know is invited to a meeting and hears confidential details.",
+      "scenario_joint": "A person you don\u2019t know is invited to a meeting and hears confidential details.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with someone you\u2019ve met several times still calls you by the wrong name.",
+      "query_joint": "I'm dealing with someone you\u2019ve met several times still calls you by the wrong name.",
+      "scenario_id": "acquaintance_name_mixup",
+      "scenario_description": "Someone you\u2019ve met several times still calls you by the wrong name.",
+      "scenario_joint": "Someone you\u2019ve met several times still calls you by the wrong name.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "The stapler clicks but no staple comes out when compiling papers.",
+      "query_joint": "The stapler clicks but no staple comes out when compiling papers.",
+      "scenario_id": "name_mispronounced_repeat",
+      "scenario_description": "After correction, someone keeps mispronouncing your name.",
+      "scenario_joint": "After correction, someone keeps mispronouncing your name.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "A payment fails or is delayed, postponing access to a product or service.",
+      "query_joint": "A payment fails or is delayed, postponing access to a product or service.",
+      "scenario_id": "payment_processing_issue",
+      "scenario_description": "A payment fails or is delayed, postponing access to a product or service.",
+      "scenario_joint": "A payment fails or is delayed, postponing access to a product or service.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Your car breaks down on the way to an important appointment, leaving you stuck roadside.",
+      "query_joint": "Your car breaks down on the way to an important appointment, leaving you stuck roadside.",
+      "scenario_id": "card_left_home",
+      "scenario_description": "You reach checkout and discover your payment card is missing.",
+      "scenario_joint": "You reach checkout and discover your payment card is missing.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves you step in a puddle and soak one sock on the way to work.",
+      "query_joint": "My situation involves you step in a puddle and soak one sock on the way to work.",
+      "scenario_id": "essential_item_unavailable",
+      "scenario_description": "You cannot access or locate something you need immediately.",
+      "scenario_joint": "You cannot access or locate something you need immediately.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with your phone is stolen while you are in a public place, cutting off communication.",
+      "query_joint": "I'm dealing with your phone is stolen while you are in a public place, cutting off communication.",
+      "scenario_id": "shoe_lace_snaps",
+      "scenario_description": "Your shoelace snaps while you are tying it, forcing a knot-on-the-go.",
+      "scenario_joint": "Your shoelace snaps while you are tying it, forcing a knot-on-the-go.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing wireless headphones drop connection mid\u2011conference call.",
+      "query_joint": "I am experiencing wireless headphones drop connection mid\u2011conference call.",
+      "scenario_id": "bluetooth_disconnect_headset",
+      "scenario_description": "Wireless headphones drop connection mid\u2011conference call.",
+      "scenario_joint": "Wireless headphones drop connection mid\u2011conference call.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with medical assistance or appointments are postponed when needed.",
+      "query_joint": "Help me with medical assistance or appointments are postponed when needed.",
+      "scenario_id": "healthcare_delay",
+      "scenario_description": "Medical assistance or appointments are postponed when needed.",
+      "scenario_joint": "Medical assistance or appointments are postponed when needed.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with a colleague repeatedly ignores your emails about an urgent shared task.",
+      "query_joint": "Help me with a colleague repeatedly ignores your emails about an urgent shared task.",
+      "scenario_id": "coworker_ignores_email",
+      "scenario_description": "A colleague repeatedly ignores your emails about an urgent shared task.",
+      "scenario_joint": "A colleague repeatedly ignores your emails about an urgent shared task.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with your group\u2011chat message is misread, sparking an argument.",
+      "query_joint": "Help me with your group\u2011chat message is misread, sparking an argument.",
+      "scenario_id": "dish_slips_sink_breaks",
+      "scenario_description": "A plate slips from your hands and shatters in the sink.",
+      "scenario_joint": "A plate slips from your hands and shatters in the sink.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "People around you share inside jokes that make you feel left out of the conversation.",
+      "query_joint": "People around you share inside jokes that make you feel left out of the conversation.",
+      "scenario_id": "package_theft",
+      "scenario_description": "A delivered parcel is stolen from your doorstep before you retrieve it.",
+      "scenario_joint": "A delivered parcel is stolen from your doorstep before you retrieve it.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing your internet connection fails at a critical moment.",
+      "query_joint": "I am experiencing your internet connection fails at a critical moment.",
+      "scenario_id": "internet_disconnect",
+      "scenario_description": "Your internet connection fails at a critical moment.",
+      "scenario_joint": "Your internet connection fails at a critical moment.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with important files or data are lost due to error or malfunction.",
+      "query_joint": "I'm dealing with important files or data are lost due to error or malfunction.",
+      "scenario_id": "movie_spoiled",
+      "scenario_description": "A friend reveals a key plot twist of a film you planned to watch soon.",
+      "scenario_joint": "A friend reveals a key plot twist of a film you planned to watch soon.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing your group\u2011chat message is misread, sparking an argument.",
+      "query_joint": "I am experiencing your group\u2011chat message is misread, sparking an argument.",
+      "scenario_id": "group_chat_misunderstanding",
+      "scenario_description": "Your group\u2011chat message is misread, sparking an argument.",
+      "scenario_joint": "Your group\u2011chat message is misread, sparking an argument.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing the video\u2011call link for a scheduled meeting fails to open.",
+      "query_joint": "I am experiencing the video\u2011call link for a scheduled meeting fails to open.",
+      "scenario_id": "meeting_link_invalid",
+      "scenario_description": "The video\u2011call link for a scheduled meeting fails to open.",
+      "scenario_joint": "The video\u2011call link for a scheduled meeting fails to open.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with your neighbor blasts loud music late at night, disturbing your sleep.",
+      "query_joint": "I'm dealing with your neighbor blasts loud music late at night, disturbing your sleep.",
+      "scenario_id": "neighbor_loud_music_midnight",
+      "scenario_description": "Your neighbor blasts loud music late at night, disturbing your sleep.",
+      "scenario_joint": "Your neighbor blasts loud music late at night, disturbing your sleep.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with a printer jams while producing time\u2011sensitive documents.",
+      "query_joint": "I'm dealing with a printer jams while producing time\u2011sensitive documents.",
+      "scenario_id": "printer_paper_jam",
+      "scenario_description": "A printer jams while producing time\u2011sensitive documents.",
+      "scenario_joint": "A printer jams while producing time\u2011sensitive documents.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "A colleague moves a meeting time without checking your availability.",
+      "query_joint": "A colleague moves a meeting time without checking your availability.",
+      "scenario_id": "coworker_reschedules_meeting_without_consult",
+      "scenario_description": "A colleague moves a meeting time without checking your availability.",
+      "scenario_joint": "A colleague moves a meeting time without checking your availability.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with your pet suddenly becomes ill and requires urgent veterinary care.",
+      "query_joint": "Help me with your pet suddenly becomes ill and requires urgent veterinary care.",
+      "scenario_id": "pet_emergency",
+      "scenario_description": "Your pet suddenly becomes ill and requires urgent veterinary care.",
+      "scenario_joint": "Your pet suddenly becomes ill and requires urgent veterinary care.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Your charger disappears after a sibling borrows it.",
+      "query_joint": "Your charger disappears after a sibling borrows it.",
+      "scenario_id": "sibling_borrows_charger_missing",
+      "scenario_description": "Your charger disappears after a sibling borrows it.",
+      "scenario_joint": "Your charger disappears after a sibling borrows it.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing the weather app forecasts sun but it starts raining unexpectedly.",
+      "query_joint": "I am experiencing the weather app forecasts sun but it starts raining unexpectedly.",
+      "scenario_id": "weather_app_wrong_temp",
+      "scenario_description": "The weather app forecasts sun but it starts raining unexpectedly.",
+      "scenario_joint": "The weather app forecasts sun but it starts raining unexpectedly.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves a mentor returns substantial edits minutes before a deadline.",
+      "query_joint": "My situation involves a mentor returns substantial edits minutes before a deadline.",
+      "scenario_id": "mentor_last_minute_feedback",
+      "scenario_description": "A mentor returns substantial edits minutes before a deadline.",
+      "scenario_joint": "A mentor returns substantial edits minutes before a deadline.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "A coworker finishes the office coffee and leaves the pot empty.",
+      "query_joint": "A coworker finishes the office coffee and leaves the pot empty.",
+      "scenario_id": "colleague_takes_last_cup_coffee",
+      "scenario_description": "A coworker finishes the office coffee and leaves the pot empty.",
+      "scenario_joint": "A coworker finishes the office coffee and leaves the pot empty.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing your wallet slips between car seats, making it hard to retrieve.",
+      "query_joint": "I am experiencing your wallet slips between car seats, making it hard to retrieve.",
+      "scenario_id": "wallet_falls_gap_seat",
+      "scenario_description": "Your wallet slips between car seats, making it hard to retrieve.",
+      "scenario_joint": "Your wallet slips between car seats, making it hard to retrieve.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with a sudden minor injury or ailment limits your ability to carry out planned activities.",
+      "query_joint": "Help me with a sudden minor injury or ailment limits your ability to carry out planned activities.",
+      "scenario_id": "bill_split_unfair",
+      "scenario_description": "At a group meal, others insist on splitting the bill evenly though you ordered less.",
+      "scenario_joint": "At a group meal, others insist on splitting the bill evenly though you ordered less.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves team members move ahead without giving you your turn to contribute.",
+      "query_joint": "My situation involves team members move ahead without giving you your turn to contribute.",
+      "scenario_id": "unwanted_photo_tag",
+      "scenario_description": "You are tagged in a social\u2011media photo you dislike without being asked.",
+      "scenario_joint": "You are tagged in a social\u2011media photo you dislike without being asked.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with you are tagged in a social\u2011media photo you dislike without being asked.",
+      "query_joint": "I'm dealing with you are tagged in a social\u2011media photo you dislike without being asked.",
+      "scenario_id": "supermarket_cart_collision",
+      "scenario_description": "Another shopper rams your cart and walks off without apology.",
+      "scenario_joint": "Another shopper rams your cart and walks off without apology.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Your childcare provider cancels hours before you are due at work, leaving you without coverage.",
+      "query_joint": "Your childcare provider cancels hours before you are due at work, leaving you without coverage.",
+      "scenario_id": "childcare_cancellation",
+      "scenario_description": "Your childcare provider cancels hours before you are due at work, leaving you without coverage.",
+      "scenario_joint": "Your childcare provider cancels hours before you are due at work, leaving you without coverage.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves a coworker finishes the office coffee and leaves the pot empty.",
+      "query_joint": "My situation involves a coworker finishes the office coffee and leaves the pot empty.",
+      "scenario_id": "meeting_mute_left_on",
+      "scenario_description": "You speak for several seconds on a video call while still muted.",
+      "scenario_joint": "You speak for several seconds on a video call while still muted.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves during an introduction, the person forgets your name or gets it wrong.",
+      "query_joint": "My situation involves during an introduction, the person forgets your name or gets it wrong.",
+      "scenario_id": "public_mistake_exposure",
+      "scenario_description": "Your error or shortcoming becomes visible to others.",
+      "scenario_joint": "Your error or shortcoming becomes visible to others.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with a neighbor parks across your driveway, preventing you from leaving.",
+      "query_joint": "I'm dealing with a neighbor parks across your driveway, preventing you from leaving.",
+      "scenario_id": "document_left_home",
+      "scenario_description": "You arrive at an official appointment only to realize mandatory documents were left at home.",
+      "scenario_joint": "You arrive at an official appointment only to realize mandatory documents were left at home.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing a friend shows up over an hour late to a meetup without notice.",
+      "query_joint": "I am experiencing a friend shows up over an hour late to a meetup without notice.",
+      "scenario_id": "loud_sneeze_quiet_room",
+      "scenario_description": "You sneeze loudly during a silent moment in a lecture hall.",
+      "scenario_joint": "You sneeze loudly during a silent moment in a lecture hall.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Your childcare provider cancels hours before you are due at work, leaving you without coverage.",
+      "query_joint": "Your childcare provider cancels hours before you are due at work, leaving you without coverage.",
+      "scenario_id": "neighbor_loud_music_midnight",
+      "scenario_description": "Your neighbor blasts loud music late at night, disturbing your sleep.",
+      "scenario_joint": "Your neighbor blasts loud music late at night, disturbing your sleep.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves your building access card suddenly stops working, locking you out.",
+      "query_joint": "My situation involves your building access card suddenly stops working, locking you out.",
+      "scenario_id": "access_card_malfunction",
+      "scenario_description": "Your building access card suddenly stops working, locking you out.",
+      "scenario_joint": "Your building access card suddenly stops working, locking you out.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with your bookmark slips out, losing the exact page you left off.",
+      "query_joint": "Help me with your bookmark slips out, losing the exact page you left off.",
+      "scenario_id": "bookmark_fell_out",
+      "scenario_description": "Your bookmark slips out, losing the exact page you left off.",
+      "scenario_joint": "Your bookmark slips out, losing the exact page you left off.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing you reach the station and realize your transit card is missing.",
+      "query_joint": "I am experiencing you reach the station and realize your transit card is missing.",
+      "scenario_id": "bus_pass_misplaced",
+      "scenario_description": "You reach the station and realize your transit card is missing.",
+      "scenario_joint": "You reach the station and realize your transit card is missing.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Your online comment is misinterpreted, sparking hostile replies.",
+      "query_joint": "Your online comment is misinterpreted, sparking hostile replies.",
+      "scenario_id": "mouse_low_battery",
+      "scenario_description": "Your wireless mouse stops responding during detailed design work.",
+      "scenario_joint": "Your wireless mouse stops responding during detailed design work.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing a printer runs out of ink halfway through printing urgent documents.",
+      "query_joint": "I am experiencing a printer runs out of ink halfway through printing urgent documents.",
+      "scenario_id": "printer_out_of_ink",
+      "scenario_description": "A printer runs out of ink halfway through printing urgent documents.",
+      "scenario_joint": "A printer runs out of ink halfway through printing urgent documents.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Someone you\u2019ve met several times still calls you by the wrong name.",
+      "query_joint": "Someone you\u2019ve met several times still calls you by the wrong name.",
+      "scenario_id": "acquaintance_name_mixup",
+      "scenario_description": "Someone you\u2019ve met several times still calls you by the wrong name.",
+      "scenario_joint": "Someone you\u2019ve met several times still calls you by the wrong name.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with during an introduction, the person forgets your name or gets it wrong.",
+      "query_joint": "Help me with during an introduction, the person forgets your name or gets it wrong.",
+      "scenario_id": "name_forgotten_introduction",
+      "scenario_description": "During an introduction, the person forgets your name or gets it wrong.",
+      "scenario_joint": "During an introduction, the person forgets your name or gets it wrong.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Unexpected visitors show up at your home, disrupting your plans.",
+      "query_joint": "Unexpected visitors show up at your home, disrupting your plans.",
+      "scenario_id": "surprise_guest_arrival",
+      "scenario_description": "Unexpected visitors show up at your home, disrupting your plans.",
+      "scenario_joint": "Unexpected visitors show up at your home, disrupting your plans.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing a friend alters a shared story to make you appear at fault.",
+      "query_joint": "I am experiencing a friend alters a shared story to make you appear at fault.",
+      "scenario_id": "friend_changes_story_blames_you",
+      "scenario_description": "A friend alters a shared story to make you appear at fault.",
+      "scenario_joint": "A friend alters a shared story to make you appear at fault.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with a mentor returns substantial edits minutes before a deadline.",
+      "query_joint": "I'm dealing with a mentor returns substantial edits minutes before a deadline.",
+      "scenario_id": "mentor_last_minute_feedback",
+      "scenario_description": "A mentor returns substantial edits minutes before a deadline.",
+      "scenario_joint": "A mentor returns substantial edits minutes before a deadline.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "You misplace your wallet while traveling and have no immediate access to money or ID.",
+      "query_joint": "You misplace your wallet while traveling and have no immediate access to money or ID.",
+      "scenario_id": "unplanned_interruption",
+      "scenario_description": "Someone interrupts your activity, forcing you to pause or restart.",
+      "scenario_joint": "Someone interrupts your activity, forcing you to pause or restart.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with a friend borrows your book and never returns it after the agreed time.",
+      "query_joint": "I'm dealing with a friend borrows your book and never returns it after the agreed time.",
+      "scenario_id": "friend_borrowed_item_not_returned",
+      "scenario_description": "A friend borrows your book and never returns it after the agreed time.",
+      "scenario_joint": "A friend borrows your book and never returns it after the agreed time.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with a child accidentally knocks a full glass of water across the table.",
+      "query_joint": "Help me with a child accidentally knocks a full glass of water across the table.",
+      "scenario_id": "child_spills_water_counter",
+      "scenario_description": "A child accidentally knocks a full glass of water across the table.",
+      "scenario_joint": "A child accidentally knocks a full glass of water across the table.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing unexpected weather conditions interfere with your plans.",
+      "query_joint": "I am experiencing unexpected weather conditions interfere with your plans.",
+      "scenario_id": "internet_disconnect",
+      "scenario_description": "Your internet connection fails at a critical moment.",
+      "scenario_joint": "Your internet connection fails at a critical moment.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "A project teammate blames their error on you during a group review.",
+      "query_joint": "A project teammate blames their error on you during a group review.",
+      "scenario_id": "teammate_blames_mistake",
+      "scenario_description": "A project teammate blames their error on you during a group review.",
+      "scenario_joint": "A project teammate blames their error on you during a group review.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing a sudden minor injury or ailment limits your ability to carry out planned activities.",
+      "query_joint": "I am experiencing a sudden minor injury or ailment limits your ability to carry out planned activities.",
+      "scenario_id": "wallet_falls_gap_seat",
+      "scenario_description": "Your wallet slips between car seats, making it hard to retrieve.",
+      "scenario_joint": "Your wallet slips between car seats, making it hard to retrieve.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with your internet connection fails at a critical moment.",
+      "query_joint": "Help me with your internet connection fails at a critical moment.",
+      "scenario_id": "sibling_borrows_charger_missing",
+      "scenario_description": "Your charger disappears after a sibling borrows it.",
+      "scenario_joint": "Your charger disappears after a sibling borrows it.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with your wallet slips between car seats, making it hard to retrieve.",
+      "query_joint": "Help me with your wallet slips between car seats, making it hard to retrieve.",
+      "scenario_id": "printers_ink_smudge",
+      "scenario_description": "Freshly printed pages smear ink on your hands and documents.",
+      "scenario_joint": "Freshly printed pages smear ink on your hands and documents.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing you are suddenly assigned additional duties beyond your regular workload.",
+      "query_joint": "I am experiencing you are suddenly assigned additional duties beyond your regular workload.",
+      "scenario_id": "unexpected_responsibility",
+      "scenario_description": "You are suddenly assigned additional duties beyond your regular workload.",
+      "scenario_joint": "You are suddenly assigned additional duties beyond your regular workload.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "A cupboard handle snaps off in your hand while opening it.",
+      "query_joint": "A cupboard handle snaps off in your hand while opening it.",
+      "scenario_id": "cupboard_handle_breaks",
+      "scenario_description": "A cupboard handle snaps off in your hand while opening it.",
+      "scenario_joint": "A cupboard handle snaps off in your hand while opening it.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves a robocall rings right as you enter a focused workflow.",
+      "query_joint": "My situation involves a robocall rings right as you enter a focused workflow.",
+      "scenario_id": "spam_call_interrupts_focus",
+      "scenario_description": "A robocall rings right as you enter a focused workflow.",
+      "scenario_joint": "A robocall rings right as you enter a focused workflow.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with your landlord enters your apartment unannounced while you\u2019re home.",
+      "query_joint": "Help me with your landlord enters your apartment unannounced while you\u2019re home.",
+      "scenario_id": "landlord_enters_without_notice",
+      "scenario_description": "Your landlord enters your apartment unannounced while you\u2019re home.",
+      "scenario_joint": "Your landlord enters your apartment unannounced while you\u2019re home.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with necessary supplies or materials run out sooner than anticipated.",
+      "query_joint": "Help me with necessary supplies or materials run out sooner than anticipated.",
+      "scenario_id": "bluetooth_disconnect_headset",
+      "scenario_description": "Wireless headphones drop connection mid\u2011conference call.",
+      "scenario_joint": "Wireless headphones drop connection mid\u2011conference call.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing phone autocorrect changes someone\u2019s name, sending an awkward text.",
+      "query_joint": "I am experiencing phone autocorrect changes someone\u2019s name, sending an awkward text.",
+      "scenario_id": "library_book_reserved",
+      "scenario_description": "A book you need is recalled the day after you check it out.",
+      "scenario_joint": "A book you need is recalled the day after you check it out.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves repeated wrong passwords lock you out of an important account.",
+      "query_joint": "My situation involves repeated wrong passwords lock you out of an important account.",
+      "scenario_id": "password_lockout",
+      "scenario_description": "Repeated wrong passwords lock you out of an important account.",
+      "scenario_joint": "Repeated wrong passwords lock you out of an important account.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing a book you need is recalled the day after you check it out.",
+      "query_joint": "I am experiencing a book you need is recalled the day after you check it out.",
+      "scenario_id": "exam_schedule_change",
+      "scenario_description": "The time or location of an exam is changed on short notice, risking your attendance.",
+      "scenario_joint": "The time or location of an exam is changed on short notice, risking your attendance.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "A book you need is recalled the day after you check it out.",
+      "query_joint": "A book you need is recalled the day after you check it out.",
+      "scenario_id": "parking_meter_card_error",
+      "scenario_description": "A parking meter rejects your card repeatedly, risking a ticket.",
+      "scenario_joint": "A parking meter rejects your card repeatedly, risking a ticket.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with someone abruptly changes the subject while you\u2019re speaking, sidelining your point.",
+      "query_joint": "Help me with someone abruptly changes the subject while you\u2019re speaking, sidelining your point.",
+      "scenario_id": "meeting_link_invalid",
+      "scenario_description": "The video\u2011call link for a scheduled meeting fails to open.",
+      "scenario_joint": "The video\u2011call link for a scheduled meeting fails to open.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with the passenger in front of you reclines their seat abruptly, encroaching on your limited space.",
+      "query_joint": "I'm dealing with the passenger in front of you reclines their seat abruptly, encroaching on your limited space.",
+      "scenario_id": "traffic_jam",
+      "scenario_description": "Unexpected traffic significantly delays your travel.",
+      "scenario_joint": "Unexpected traffic significantly delays your travel.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "The weather app forecasts sun but it starts raining unexpectedly.",
+      "query_joint": "The weather app forecasts sun but it starts raining unexpectedly.",
+      "scenario_id": "weather_app_wrong_temp",
+      "scenario_description": "The weather app forecasts sun but it starts raining unexpectedly.",
+      "scenario_joint": "The weather app forecasts sun but it starts raining unexpectedly.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with public transport breaks down or is canceled, leaving you searching for alternatives.",
+      "query_joint": "Help me with public transport breaks down or is canceled, leaving you searching for alternatives.",
+      "scenario_id": "public_transport_failure",
+      "scenario_description": "Public transport breaks down or is canceled, leaving you searching for alternatives.",
+      "scenario_joint": "Public transport breaks down or is canceled, leaving you searching for alternatives.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves an agreed\u2011upon plan or promise is canceled at short notice.",
+      "query_joint": "My situation involves an agreed\u2011upon plan or promise is canceled at short notice.",
+      "scenario_id": "card_declined_fraud",
+      "scenario_description": "A legitimate purchase is declined because your bank flags it as suspicious.",
+      "scenario_joint": "A legitimate purchase is declined because your bank flags it as suspicious.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "A so\u2011called compliment actually contains an insult about you.",
+      "query_joint": "A so\u2011called compliment actually contains an insult about you.",
+      "scenario_id": "backhanded_compliment",
+      "scenario_description": "A so\u2011called compliment actually contains an insult about you.",
+      "scenario_joint": "A so\u2011called compliment actually contains an insult about you.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing a coworker finishes the office coffee and leaves the pot empty.",
+      "query_joint": "I am experiencing a coworker finishes the office coffee and leaves the pot empty.",
+      "scenario_id": "colleague_takes_last_cup_coffee",
+      "scenario_description": "A coworker finishes the office coffee and leaves the pot empty.",
+      "scenario_joint": "A coworker finishes the office coffee and leaves the pot empty.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with your software crashes before you save, erasing recent progress.",
+      "query_joint": "I'm dealing with your software crashes before you save, erasing recent progress.",
+      "scenario_id": "unsaved_work_loss",
+      "scenario_description": "Your software crashes before you save, erasing recent progress.",
+      "scenario_joint": "Your software crashes before you save, erasing recent progress.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with a parking meter rejects your card repeatedly, risking a ticket.",
+      "query_joint": "I'm dealing with a parking meter rejects your card repeatedly, risking a ticket.",
+      "scenario_id": "parking_meter_card_error",
+      "scenario_description": "A parking meter rejects your card repeatedly, risking a ticket.",
+      "scenario_joint": "A parking meter rejects your card repeatedly, risking a ticket.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves your building access card suddenly stops working, locking you out.",
+      "query_joint": "My situation involves your building access card suddenly stops working, locking you out.",
+      "scenario_id": "vending_machine_eats_coin",
+      "scenario_description": "A vending machine takes your money but doesn\u2019t dispense the item.",
+      "scenario_joint": "A vending machine takes your money but doesn\u2019t dispense the item.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves your landlord announces a significant rent hike with minimal notice.",
+      "query_joint": "My situation involves your landlord announces a significant rent hike with minimal notice.",
+      "scenario_id": "unexpected_rent_increase",
+      "scenario_description": "Your landlord announces a significant rent hike with minimal notice.",
+      "scenario_joint": "Your landlord announces a significant rent hike with minimal notice.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves a passerby bumps into you, spilling your drink, then walks away without apologizing.",
+      "query_joint": "My situation involves a passerby bumps into you, spilling your drink, then walks away without apologizing.",
+      "scenario_id": "group_task_skipped_turn",
+      "scenario_description": "Team members move ahead without giving you your turn to contribute.",
+      "scenario_joint": "Team members move ahead without giving you your turn to contribute.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves a so\u2011called compliment actually contains an insult about you.",
+      "query_joint": "My situation involves a so\u2011called compliment actually contains an insult about you.",
+      "scenario_id": "backhanded_compliment",
+      "scenario_description": "A so\u2011called compliment actually contains an insult about you.",
+      "scenario_joint": "A so\u2011called compliment actually contains an insult about you.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "A takeaway or delivery meal arrives with a key item missing.",
+      "query_joint": "A takeaway or delivery meal arrives with a key item missing.",
+      "scenario_id": "food_order_missing_item",
+      "scenario_description": "A takeaway or delivery meal arrives with a key item missing.",
+      "scenario_joint": "A takeaway or delivery meal arrives with a key item missing.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing a coworker eats your clearly labeled lunch from the office fridge.",
+      "query_joint": "I am experiencing a coworker eats your clearly labeled lunch from the office fridge.",
+      "scenario_id": "coworker_eats_lunch",
+      "scenario_description": "A coworker eats your clearly labeled lunch from the office fridge.",
+      "scenario_joint": "A coworker eats your clearly labeled lunch from the office fridge.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "A passenger uses two bus seats, leaving others standing.",
+      "query_joint": "A passenger uses two bus seats, leaving others standing.",
+      "scenario_id": "friend_hiccups_speech",
+      "scenario_description": "A fit of hiccups interrupts you mid\u2011sentence while speaking publicly.",
+      "scenario_joint": "A fit of hiccups interrupts you mid\u2011sentence while speaking publicly.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves your dog\u2019s leash slips from your grasp for a moment in the park.",
+      "query_joint": "My situation involves your dog\u2019s leash slips from your grasp for a moment in the park.",
+      "scenario_id": "access_card_malfunction",
+      "scenario_description": "Your building access card suddenly stops working, locking you out.",
+      "scenario_joint": "Your building access card suddenly stops working, locking you out.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with the passenger in front of you reclines their seat abruptly, encroaching on your limited space.",
+      "query_joint": "I'm dealing with the passenger in front of you reclines their seat abruptly, encroaching on your limited space.",
+      "scenario_id": "coworker_plays_music_no_headphones",
+      "scenario_description": "A coworker blasts music from their speakers in an open office.",
+      "scenario_joint": "A coworker blasts music from their speakers in an open office.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "A passenger uses two bus seats, leaving others standing.",
+      "query_joint": "A passenger uses two bus seats, leaving others standing.",
+      "scenario_id": "social_exclusion",
+      "scenario_description": "You are left out of a group activity or decision that matters to you.",
+      "scenario_joint": "You are left out of a group activity or decision that matters to you.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves a mentor returns substantial edits minutes before a deadline.",
+      "query_joint": "My situation involves a mentor returns substantial edits minutes before a deadline.",
+      "scenario_id": "child_interrupts_video_call",
+      "scenario_description": "A child bursts into the room during your important video meeting.",
+      "scenario_joint": "A child bursts into the room during your important video meeting.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves a friend borrows your book and never returns it after the agreed time.",
+      "query_joint": "My situation involves a friend borrows your book and never returns it after the agreed time.",
+      "scenario_id": "friend_borrowed_item_not_returned",
+      "scenario_description": "A friend borrows your book and never returns it after the agreed time.",
+      "scenario_joint": "A friend borrows your book and never returns it after the agreed time.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves you are left out of a group activity or decision that matters to you.",
+      "query_joint": "My situation involves you are left out of a group activity or decision that matters to you.",
+      "scenario_id": "friend_talks_during_movie",
+      "scenario_description": "A friend keeps chatting during a film despite polite hints to stop.",
+      "scenario_joint": "A friend keeps chatting during a film despite polite hints to stop.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Your shoelace snaps while you are tying it, forcing a knot-on-the-go.",
+      "query_joint": "Your shoelace snaps while you are tying it, forcing a knot-on-the-go.",
+      "scenario_id": "group_chat_exclusion",
+      "scenario_description": "Coworkers start a new team chat and leave you out of important discussions.",
+      "scenario_joint": "Coworkers start a new team chat and leave you out of important discussions.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "An important delivery or message goes missing before reaching you.",
+      "query_joint": "An important delivery or message goes missing before reaching you.",
+      "scenario_id": "inside_joke_exclusion",
+      "scenario_description": "People around you share inside jokes that make you feel left out of the conversation.",
+      "scenario_joint": "People around you share inside jokes that make you feel left out of the conversation.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing a friend alters a shared story to make you appear at fault.",
+      "query_joint": "I am experiencing a friend alters a shared story to make you appear at fault.",
+      "scenario_id": "fire_drill_interrupt",
+      "scenario_description": "A workplace fire drill forces you to pause an urgent task.",
+      "scenario_joint": "A workplace fire drill forces you to pause an urgent task.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing freshly printed pages smear ink on your hands and documents.",
+      "query_joint": "I am experiencing freshly printed pages smear ink on your hands and documents.",
+      "scenario_id": "social_exclusion",
+      "scenario_description": "You are left out of a group activity or decision that matters to you.",
+      "scenario_joint": "You are left out of a group activity or decision that matters to you.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with your roommate leaves common areas messy and doesn't clean up.",
+      "query_joint": "I'm dealing with your roommate leaves common areas messy and doesn't clean up.",
+      "scenario_id": "roommate_shared_space_mess",
+      "scenario_description": "Your roommate leaves common areas messy and doesn't clean up.",
+      "scenario_joint": "Your roommate leaves common areas messy and doesn't clean up.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing a passerby steps on your heel, scuffing your shoe without apology.",
+      "query_joint": "I am experiencing a passerby steps on your heel, scuffing your shoe without apology.",
+      "scenario_id": "stranger_steps_on_shoe",
+      "scenario_description": "A passerby steps on your heel, scuffing your shoe without apology.",
+      "scenario_joint": "A passerby steps on your heel, scuffing your shoe without apology.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing you arrive at an official appointment only to realize mandatory documents were left at home.",
+      "query_joint": "I am experiencing you arrive at an official appointment only to realize mandatory documents were left at home.",
+      "scenario_id": "document_left_home",
+      "scenario_description": "You arrive at an official appointment only to realize mandatory documents were left at home.",
+      "scenario_joint": "You arrive at an official appointment only to realize mandatory documents were left at home.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "An expected service or facility is closed or offline without notice.",
+      "query_joint": "An expected service or facility is closed or offline without notice.",
+      "scenario_id": "service_unavailable",
+      "scenario_description": "An expected service or facility is closed or offline without notice.",
+      "scenario_joint": "An expected service or facility is closed or offline without notice.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with a delivered parcel is stolen from your doorstep before you retrieve it.",
+      "query_joint": "Help me with a delivered parcel is stolen from your doorstep before you retrieve it.",
+      "scenario_id": "door_key_breaks",
+      "scenario_description": "Your key snaps off in the lock, leaving you locked out.",
+      "scenario_joint": "Your key snaps off in the lock, leaving you locked out.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with your coat zipper jams halfway up, trapping you inside the coat.",
+      "query_joint": "Help me with your coat zipper jams halfway up, trapping you inside the coat.",
+      "scenario_id": "stranger_invades_personal_space",
+      "scenario_description": "Someone stands uncomfortably close in a queue despite room to spread out.",
+      "scenario_joint": "Someone stands uncomfortably close in a queue despite room to spread out.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves a neighbor smokes outside your door, filling your hallway with smoke.",
+      "query_joint": "My situation involves a neighbor smokes outside your door, filling your hallway with smoke.",
+      "scenario_id": "essential_item_unavailable",
+      "scenario_description": "You cannot access or locate something you need immediately.",
+      "scenario_joint": "You cannot access or locate something you need immediately.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with a phone app auto\u2011updates on cellular, exhausting your data plan.",
+      "query_joint": "Help me with a phone app auto\u2011updates on cellular, exhausting your data plan.",
+      "scenario_id": "auto_update_data_cap",
+      "scenario_description": "A phone app auto\u2011updates on cellular, exhausting your data plan.",
+      "scenario_joint": "A phone app auto\u2011updates on cellular, exhausting your data plan.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "A book you need is recalled the day after you check it out.",
+      "query_joint": "A book you need is recalled the day after you check it out.",
+      "scenario_id": "library_book_reserved",
+      "scenario_description": "A book you need is recalled the day after you check it out.",
+      "scenario_joint": "A book you need is recalled the day after you check it out.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with a crucial phone call disconnects mid\u2011conversation due to weak signal.",
+      "query_joint": "Help me with a crucial phone call disconnects mid\u2011conversation due to weak signal.",
+      "scenario_id": "important_call_drop",
+      "scenario_description": "A crucial phone call disconnects mid\u2011conversation due to weak signal.",
+      "scenario_joint": "A crucial phone call disconnects mid\u2011conversation due to weak signal.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves another shopper rams your cart and walks off without apology.",
+      "query_joint": "My situation involves another shopper rams your cart and walks off without apology.",
+      "scenario_id": "supermarket_cart_collision",
+      "scenario_description": "Another shopper rams your cart and walks off without apology.",
+      "scenario_joint": "Another shopper rams your cart and walks off without apology.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves a passenger uses two bus seats, leaving others standing.",
+      "query_joint": "My situation involves a passenger uses two bus seats, leaving others standing.",
+      "scenario_id": "stranger_takes_up_two_seats",
+      "scenario_description": "A passenger uses two bus seats, leaving others standing.",
+      "scenario_joint": "A passenger uses two bus seats, leaving others standing.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Your personal or sensitive data is accessed or shared without consent.",
+      "query_joint": "Your personal or sensitive data is accessed or shared without consent.",
+      "scenario_id": "privacy_violation",
+      "scenario_description": "Your personal or sensitive data is accessed or shared without consent.",
+      "scenario_joint": "Your personal or sensitive data is accessed or shared without consent.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with important files or data are lost due to error or malfunction.",
+      "query_joint": "I'm dealing with important files or data are lost due to error or malfunction.",
+      "scenario_id": "conversation_hijacked",
+      "scenario_description": "Someone abruptly changes the subject while you\u2019re speaking, sidelining your point.",
+      "scenario_joint": "Someone abruptly changes the subject while you\u2019re speaking, sidelining your point.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing a close friend forgets your birthday, offering no greeting or acknowledgment.",
+      "query_joint": "I am experiencing a close friend forgets your birthday, offering no greeting or acknowledgment.",
+      "scenario_id": "friend_forgets_birthday",
+      "scenario_description": "A close friend forgets your birthday, offering no greeting or acknowledgment.",
+      "scenario_joint": "A close friend forgets your birthday, offering no greeting or acknowledgment.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with you are suddenly assigned additional duties beyond your regular workload.",
+      "query_joint": "Help me with you are suddenly assigned additional duties beyond your regular workload.",
+      "scenario_id": "unexpected_responsibility",
+      "scenario_description": "You are suddenly assigned additional duties beyond your regular workload.",
+      "scenario_joint": "You are suddenly assigned additional duties beyond your regular workload.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "A rumor about you circulates in the office without your knowledge.",
+      "query_joint": "A rumor about you circulates in the office without your knowledge.",
+      "scenario_id": "alarm_failure",
+      "scenario_description": "Your morning alarm fails to sound, causing you to oversleep.",
+      "scenario_joint": "Your morning alarm fails to sound, causing you to oversleep.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves a misunderstanding about time zones causes a missed meeting or deadline.",
+      "query_joint": "My situation involves a misunderstanding about time zones causes a missed meeting or deadline.",
+      "scenario_id": "card_left_home",
+      "scenario_description": "You reach checkout and discover your payment card is missing.",
+      "scenario_joint": "You reach checkout and discover your payment card is missing.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing a passerby bumps into you, spilling your drink, then walks away without apologizing.",
+      "query_joint": "I am experiencing a passerby bumps into you, spilling your drink, then walks away without apologizing.",
+      "scenario_id": "mentor_last_minute_feedback",
+      "scenario_description": "A mentor returns substantial edits minutes before a deadline.",
+      "scenario_joint": "A mentor returns substantial edits minutes before a deadline.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "An important delivery or message goes missing before reaching you.",
+      "query_joint": "An important delivery or message goes missing before reaching you.",
+      "scenario_id": "access_card_malfunction",
+      "scenario_description": "Your building access card suddenly stops working, locking you out.",
+      "scenario_joint": "Your building access card suddenly stops working, locking you out.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with the elevator arrives packed, so you must wait for the next one.",
+      "query_joint": "Help me with the elevator arrives packed, so you must wait for the next one.",
+      "scenario_id": "elevator_full_turn_away",
+      "scenario_description": "The elevator arrives packed, so you must wait for the next one.",
+      "scenario_joint": "The elevator arrives packed, so you must wait for the next one.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing you sneeze loudly during a silent moment in a lecture hall.",
+      "query_joint": "I am experiencing you sneeze loudly during a silent moment in a lecture hall.",
+      "scenario_id": "commitment_revoked",
+      "scenario_description": "An agreed\u2011upon plan or promise is canceled at short notice.",
+      "scenario_joint": "An agreed\u2011upon plan or promise is canceled at short notice.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with someone stands uncomfortably close in a queue despite room to spread out.",
+      "query_joint": "I'm dealing with someone stands uncomfortably close in a queue despite room to spread out.",
+      "scenario_id": "oversold_flight_denied_boarding",
+      "scenario_description": "You are bumped from an oversold flight despite having a confirmed ticket.",
+      "scenario_joint": "You are bumped from an oversold flight despite having a confirmed ticket.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing a device or tool you depend on breaks unexpectedly.",
+      "query_joint": "I am experiencing a device or tool you depend on breaks unexpectedly.",
+      "scenario_id": "equipment_malfunction",
+      "scenario_description": "A device or tool you depend on breaks unexpectedly.",
+      "scenario_joint": "A device or tool you depend on breaks unexpectedly.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with your account credentials are breached, risking unauthorized access.",
+      "query_joint": "I'm dealing with your account credentials are breached, risking unauthorized access.",
+      "scenario_id": "credential_compromise",
+      "scenario_description": "Your account credentials are breached, risking unauthorized access.",
+      "scenario_joint": "Your account credentials are breached, risking unauthorized access.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with an external backup drive becomes unreadable when you need files.",
+      "query_joint": "I'm dealing with an external backup drive becomes unreadable when you need files.",
+      "scenario_id": "backup_drive_corrupted",
+      "scenario_description": "An external backup drive becomes unreadable when you need files.",
+      "scenario_joint": "An external backup drive becomes unreadable when you need files.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with your building access card suddenly stops working, locking you out.",
+      "query_joint": "I'm dealing with your building access card suddenly stops working, locking you out.",
+      "scenario_id": "access_card_malfunction",
+      "scenario_description": "Your building access card suddenly stops working, locking you out.",
+      "scenario_joint": "Your building access card suddenly stops working, locking you out.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with an agreed\u2011upon plan or promise is canceled at short notice.",
+      "query_joint": "I'm dealing with an agreed\u2011upon plan or promise is canceled at short notice.",
+      "scenario_id": "commitment_revoked",
+      "scenario_description": "An agreed\u2011upon plan or promise is canceled at short notice.",
+      "scenario_joint": "An agreed\u2011upon plan or promise is canceled at short notice.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with your supervisor criticizes your work loudly in front of the whole team.",
+      "query_joint": "Help me with your supervisor criticizes your work loudly in front of the whole team.",
+      "scenario_id": "social_media_comment_misunderstood",
+      "scenario_description": "Your online comment is misinterpreted, sparking hostile replies.",
+      "scenario_joint": "Your online comment is misinterpreted, sparking hostile replies.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing a child bursts into the room during your important video meeting.",
+      "query_joint": "I am experiencing a child bursts into the room during your important video meeting.",
+      "scenario_id": "card_left_home",
+      "scenario_description": "You reach checkout and discover your payment card is missing.",
+      "scenario_joint": "You reach checkout and discover your payment card is missing.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with your bookmark slips out, losing the exact page you left off.",
+      "query_joint": "I'm dealing with your bookmark slips out, losing the exact page you left off.",
+      "scenario_id": "friend_cancels_trip_after_booking",
+      "scenario_description": "A friend cancels a joint trip after tickets are non\u2011refundable.",
+      "scenario_joint": "A friend cancels a joint trip after tickets are non\u2011refundable.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "A passenger uses two bus seats, leaving others standing.",
+      "query_joint": "A passenger uses two bus seats, leaving others standing.",
+      "scenario_id": "unsolicited_advice_acquaintance",
+      "scenario_description": "An acquaintance offers personal advice you didn\u2019t ask for.",
+      "scenario_joint": "An acquaintance offers personal advice you didn\u2019t ask for.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing you knock over a drink onto your laptop, risking data loss.",
+      "query_joint": "I am experiencing you knock over a drink onto your laptop, risking data loss.",
+      "scenario_id": "elevator_full_turn_away",
+      "scenario_description": "The elevator arrives packed, so you must wait for the next one.",
+      "scenario_joint": "The elevator arrives packed, so you must wait for the next one.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves a sibling borrows your clothes and returns them with a stain.",
+      "query_joint": "My situation involves a sibling borrows your clothes and returns them with a stain.",
+      "scenario_id": "sibling_borrows_clothes_spill",
+      "scenario_description": "A sibling borrows your clothes and returns them with a stain.",
+      "scenario_joint": "A sibling borrows your clothes and returns them with a stain.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with you overhear negative remarks about yourself from others.",
+      "query_joint": "I'm dealing with you overhear negative remarks about yourself from others.",
+      "scenario_id": "social_media_unwanted_tag",
+      "scenario_description": "Someone tags you in a post you\u2019d prefer to stay anonymous in.",
+      "scenario_joint": "Someone tags you in a post you\u2019d prefer to stay anonymous in.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Your partner goes through your private messages without permission.",
+      "query_joint": "Your partner goes through your private messages without permission.",
+      "scenario_id": "acquaintance_name_mixup",
+      "scenario_description": "Someone you\u2019ve met several times still calls you by the wrong name.",
+      "scenario_joint": "Someone you\u2019ve met several times still calls you by the wrong name.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "A beneficial chance or offer passes before you can act on it.",
+      "query_joint": "A beneficial chance or offer passes before you can act on it.",
+      "scenario_id": "lost_opportunity",
+      "scenario_description": "A beneficial chance or offer passes before you can act on it.",
+      "scenario_joint": "A beneficial chance or offer passes before you can act on it.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing you run out of space on a device or platform at a crucial time.",
+      "query_joint": "I am experiencing you run out of space on a device or platform at a crucial time.",
+      "scenario_id": "storage_limit_reached",
+      "scenario_description": "You run out of space on a device or platform at a crucial time.",
+      "scenario_joint": "You run out of space on a device or platform at a crucial time.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with after correction, someone keeps mispronouncing your name.",
+      "query_joint": "I'm dealing with after correction, someone keeps mispronouncing your name.",
+      "scenario_id": "sock_wet_in_puddle",
+      "scenario_description": "You step in a puddle and soak one sock on the way to work.",
+      "scenario_joint": "You step in a puddle and soak one sock on the way to work.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with bristles shed from your toothbrush while brushing.",
+      "query_joint": "I'm dealing with bristles shed from your toothbrush while brushing.",
+      "scenario_id": "elevator_stuck",
+      "scenario_description": "The elevator halts between floors and the doors won\u2019t open.",
+      "scenario_joint": "The elevator halts between floors and the doors won\u2019t open.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing a stranger asks a deeply personal question that makes you uncomfortable.",
+      "query_joint": "I am experiencing a stranger asks a deeply personal question that makes you uncomfortable.",
+      "scenario_id": "rumor_spread_friend",
+      "scenario_description": "A friend spreads a false rumor about you, harming your reputation.",
+      "scenario_joint": "A friend spreads a false rumor about you, harming your reputation.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "Help me with a stranger asks a deeply personal question that makes you uncomfortable.",
+      "query_joint": "Help me with a stranger asks a deeply personal question that makes you uncomfortable.",
+      "scenario_id": "toothbrush_bristles_fall",
+      "scenario_description": "Bristles shed from your toothbrush while brushing.",
+      "scenario_joint": "Bristles shed from your toothbrush while brushing.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing you accidentally delete an important photo before it is backed up.",
+      "query_joint": "I am experiencing you accidentally delete an important photo before it is backed up.",
+      "scenario_id": "photo_deleted",
+      "scenario_description": "You accidentally delete an important photo before it is backed up.",
+      "scenario_joint": "You accidentally delete an important photo before it is backed up.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with someone speaks loudly on a phone in a designated quiet area, disturbing others.",
+      "query_joint": "Help me with someone speaks loudly on a phone in a designated quiet area, disturbing others.",
+      "scenario_id": "loud_call_quiet_zone",
+      "scenario_description": "Someone speaks loudly on a phone in a designated quiet area, disturbing others.",
+      "scenario_joint": "Someone speaks loudly on a phone in a designated quiet area, disturbing others.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I'm dealing with your computer forces a system update and restarts while you are working on something urgent.",
+      "query_joint": "I'm dealing with your computer forces a system update and restarts while you are working on something urgent.",
+      "scenario_id": "forced_system_update",
+      "scenario_description": "Your computer forces a system update and restarts while you are working on something urgent.",
+      "scenario_joint": "Your computer forces a system update and restarts while you are working on something urgent.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves a person you don\u2019t know is invited to a meeting and hears confidential details.",
+      "query_joint": "My situation involves a person you don\u2019t know is invited to a meeting and hears confidential details.",
+      "scenario_id": "unexpected_external_attendee",
+      "scenario_description": "A person you don\u2019t know is invited to a meeting and hears confidential details.",
+      "scenario_joint": "A person you don\u2019t know is invited to a meeting and hears confidential details.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves your coat zipper jams halfway up, trapping you inside the coat.",
+      "query_joint": "My situation involves your coat zipper jams halfway up, trapping you inside the coat.",
+      "scenario_id": "zipper_stuck_coat",
+      "scenario_description": "Your coat zipper jams halfway up, trapping you inside the coat.",
+      "scenario_joint": "Your coat zipper jams halfway up, trapping you inside the coat.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing a colleague repeatedly cuts you off while you are presenting to the team.",
+      "query_joint": "I am experiencing a colleague repeatedly cuts you off while you are presenting to the team.",
+      "scenario_id": "coworker_interrupts_presentation",
+      "scenario_description": "A colleague repeatedly cuts you off while you are presenting to the team.",
+      "scenario_joint": "A colleague repeatedly cuts you off while you are presenting to the team.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "An ATM runs out of cash just as you need to withdraw money.",
+      "query_joint": "An ATM runs out of cash just as you need to withdraw money.",
+      "scenario_id": "atm_cash_unavailable",
+      "scenario_description": "An ATM runs out of cash just as you need to withdraw money.",
+      "scenario_joint": "An ATM runs out of cash just as you need to withdraw money.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with your car won\u2019t start because the battery is completely drained.",
+      "query_joint": "Help me with your car won\u2019t start because the battery is completely drained.",
+      "scenario_id": "partner_reads_private_messages",
+      "scenario_description": "Your partner goes through your private messages without permission.",
+      "scenario_joint": "Your partner goes through your private messages without permission.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing a parent makes a personal remark about you in front of your friends.",
+      "query_joint": "I am experiencing a parent makes a personal remark about you in front of your friends.",
+      "scenario_id": "parent_publicly_embarrasses",
+      "scenario_description": "A parent makes a personal remark about you in front of your friends.",
+      "scenario_joint": "A parent makes a personal remark about you in front of your friends.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Help me with your charger disappears after a sibling borrows it.",
+      "query_joint": "Help me with your charger disappears after a sibling borrows it.",
+      "scenario_id": "sibling_borrows_charger_missing",
+      "scenario_description": "Your charger disappears after a sibling borrows it.",
+      "scenario_joint": "Your charger disappears after a sibling borrows it.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves team members move ahead without giving you your turn to contribute.",
+      "query_joint": "My situation involves team members move ahead without giving you your turn to contribute.",
+      "scenario_id": "group_task_skipped_turn",
+      "scenario_description": "Team members move ahead without giving you your turn to contribute.",
+      "scenario_joint": "Team members move ahead without giving you your turn to contribute.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "Bristles shed from your toothbrush while brushing.",
+      "query_joint": "Bristles shed from your toothbrush while brushing.",
+      "scenario_id": "toothbrush_bristles_fall",
+      "scenario_description": "Bristles shed from your toothbrush while brushing.",
+      "scenario_joint": "Bristles shed from your toothbrush while brushing.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "My situation involves your ride\u2011share driver accepts and then cancels as pickup time arrives.",
+      "query_joint": "My situation involves your ride\u2011share driver accepts and then cancels as pickup time arrives.",
+      "scenario_id": "surprise_guest_arrival",
+      "scenario_description": "Unexpected visitors show up at your home, disrupting your plans.",
+      "scenario_joint": "Unexpected visitors show up at your home, disrupting your plans.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with a coworker blasts music from their speakers in an open office.",
+      "query_joint": "I'm dealing with a coworker blasts music from their speakers in an open office.",
+      "scenario_id": "child_interrupts_video_call",
+      "scenario_description": "A child bursts into the room during your important video meeting.",
+      "scenario_joint": "A child bursts into the room during your important video meeting.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "My situation involves someone is sitting in your pre\u2011assigned seat and hesitates to move.",
+      "query_joint": "My situation involves someone is sitting in your pre\u2011assigned seat and hesitates to move.",
+      "scenario_id": "seat_taken_reservation",
+      "scenario_description": "Someone is sitting in your pre\u2011assigned seat and hesitates to move.",
+      "scenario_joint": "Someone is sitting in your pre\u2011assigned seat and hesitates to move.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "I am experiencing during an introduction, the person forgets your name or gets it wrong.",
+      "query_joint": "I am experiencing during an introduction, the person forgets your name or gets it wrong.",
+      "scenario_id": "name_forgotten_introduction",
+      "scenario_description": "During an introduction, the person forgets your name or gets it wrong.",
+      "scenario_joint": "During an introduction, the person forgets your name or gets it wrong.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "The stapler clicks but no staple comes out when compiling papers.",
+      "query_joint": "The stapler clicks but no staple comes out when compiling papers.",
+      "scenario_id": "parking_meter_card_error",
+      "scenario_description": "A parking meter rejects your card repeatedly, risking a ticket.",
+      "scenario_joint": "A parking meter rejects your card repeatedly, risking a ticket.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing your coat zipper jams halfway up, trapping you inside the coat.",
+      "query_joint": "I am experiencing your coat zipper jams halfway up, trapping you inside the coat.",
+      "scenario_id": "pen_runs_out_mid_exam",
+      "scenario_description": "Your pen dries up halfway through writing an exam answer.",
+      "scenario_joint": "Your pen dries up halfway through writing an exam answer.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I'm dealing with someone uses or removes your personal property without permission.",
+      "query_joint": "I'm dealing with someone uses or removes your personal property without permission.",
+      "scenario_id": "personal_property_taken",
+      "scenario_description": "Someone uses or removes your personal property without permission.",
+      "scenario_joint": "Someone uses or removes your personal property without permission.",
+      "label": 1,
+      "pair_type": "positive"
+    },
+    {
+      "query": "A host serves food you cannot eat despite being told your restriction.",
+      "query_joint": "A host serves food you cannot eat despite being told your restriction.",
+      "scenario_id": "unexpected_noise",
+      "scenario_description": "A sudden loud or continuous noise disturbs your environment.",
+      "scenario_joint": "A sudden loud or continuous noise disturbs your environment.",
+      "label": 0,
+      "pair_type": "negative"
+    },
+    {
+      "query": "I am experiencing a legitimate purchase is declined because your bank flags it as suspicious.",
+      "query_joint": "I am experiencing a legitimate purchase is declined because your bank flags it as suspicious.",
+      "scenario_id": "card_declined_fraud",
+      "scenario_description": "A legitimate purchase is declined because your bank flags it as suspicious.",
+      "scenario_joint": "A legitimate purchase is declined because your bank flags it as suspicious.",
+      "label": 1,
+      "pair_type": "positive"
+    }
+  ]
+}

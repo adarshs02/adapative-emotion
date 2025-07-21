@@ -6,15 +6,142 @@ Tests both systems on atomic scenarios for fair comparison.
 
 import json
 import os
+import sys
 import time
 import argparse
 from typing import Dict, List, Any
 from datetime import datetime
 
+# Add parent directory to path to import project modules
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(project_root)
+
+# Change to project root directory so relative paths work correctly
+os.chdir(project_root)
+
 # Import all routing systems
 from tag_router import get_tag_router
 from atomic_text_router import get_atomic_text_router
 from hybrid_router import get_hybrid_router
+
+# Import fine-tuned model components
+import torch
+import torch.nn.functional as F
+import numpy as np
+import hnswlib
+from transformers import AutoTokenizer, AutoModel
+from peft import PeftModel
+
+
+def check_and_build_indexes():
+    """Check if required indexes exist and build them if missing."""
+    print("🔍 Checking baseline system indexes...")
+    
+    # Check tag system index
+    tag_index_path = "scenario_tags.idx"
+    tag_mapping_path = "scenario_tags_mapping.json"
+    
+    if not os.path.exists(tag_index_path) or not os.path.exists(tag_mapping_path):
+        print(f"❌ Tag system index missing. Building tag index...")
+        try:
+            # Import and run tag index builder
+            import subprocess
+            result = subprocess.run(['python', 'build_tag_index.py'], 
+                                  capture_output=True, text=True, timeout=300)
+            if result.returncode == 0:
+                print(f"✅ Tag index built successfully")
+            else:
+                print(f"⚠️  Tag index build failed: {result.stderr}")
+        except Exception as e:
+            print(f"⚠️  Could not build tag index: {e}")
+    else:
+        print(f"✅ Tag index found")
+    
+    # Check atomic text system index
+    text_index_path = "scenario_atomic_text.idx"
+    text_mapping_path = "scenario_atomic_text_mapping.json"
+    
+    if not os.path.exists(text_index_path) or not os.path.exists(text_mapping_path):
+        print(f"❌ Text system index missing. Building text index...")
+        try:
+            # Import and run text index builder
+            import subprocess
+            result = subprocess.run(['python', 'build_atomic_text_index.py'], 
+                                  capture_output=True, text=True, timeout=300)
+            if result.returncode == 0:
+                print(f"✅ Text index built successfully")
+            else:
+                print(f"⚠️  Text index build failed: {result.stderr}")
+        except Exception as e:
+            print(f"⚠️  Could not build text index: {e}")
+    else:
+        print(f"✅ Text index found")
+    
+    print("")
+
+
+class FineTunedEmbeddingModel:
+    """Wrapper for the fine-tuned Llama embedding model for benchmarking."""
+    
+    def __init__(self, model_path: str, base_model: str = "meta-llama/Llama-3.1-8B"):
+        self.model_path = model_path
+        self.base_model = base_model
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        
+        print(f"Loading fine-tuned model from {model_path}...")
+        
+        # Load tokenizer
+        self.tokenizer = AutoTokenizer.from_pretrained(model_path)
+        if self.tokenizer.pad_token is None:
+            self.tokenizer.pad_token = self.tokenizer.eos_token
+        
+        # Load base model
+        self.model = AutoModel.from_pretrained(
+            base_model,
+            torch_dtype=torch.float16,
+            device_map="auto"
+        )
+        
+        # Load LoRA adapter
+        self.model = PeftModel.from_pretrained(self.model, model_path)
+        self.model.eval()
+        
+        print(f"✅ Fine-tuned model loaded successfully!")
+    
+    def encode(self, texts: List[str], batch_size: int = 32) -> np.ndarray:
+        """Encode texts into embeddings."""
+        all_embeddings = []
+        
+        for i in range(0, len(texts), batch_size):
+            batch_texts = texts[i:i + batch_size]
+            
+            # Tokenize
+            inputs = self.tokenizer(
+                batch_texts,
+                padding=True,
+                truncation=True,
+                max_length=512,
+                return_tensors="pt"
+            ).to(self.device)
+            
+            with torch.no_grad():
+                # Get embeddings
+                outputs = self.model(**inputs)
+                
+                # Mean pooling
+                embeddings = self.mean_pooling(outputs.last_hidden_state, inputs['attention_mask'])
+                
+                # Normalize
+                embeddings = F.normalize(embeddings, p=2, dim=1)
+                
+                all_embeddings.append(embeddings.cpu().numpy())
+        
+        return np.vstack(all_embeddings)
+    
+    def mean_pooling(self, token_embeddings, attention_mask):
+        """Apply mean pooling to get sentence embeddings."""
+        input_mask_expanded = attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
+        return torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(input_mask_expanded.sum(1), min=1e-9)
 
 
 # Test cases using variations of actual atomic scenarios for better evaluation
@@ -252,6 +379,112 @@ def benchmark_atomic_text_system(test_cases: List[Dict]) -> Dict[str, Any]:
     return summary
 
 
+def benchmark_finetuned_system(test_cases: List[Dict], model_path: str) -> Dict[str, Any]:
+    """Benchmark the fine-tuned embedding model system."""
+    print("🔥 Benchmarking FINE-TUNED EMBEDDING system...")
+    
+    # Load scenarios and fine-tuned model
+    with open('atomic-scenarios_with_tags.json', 'r') as f:
+        data = json.load(f)
+        scenarios = data['scenarios'] if 'scenarios' in data else data
+    
+    finetuned_model = FineTunedEmbeddingModel(model_path)
+    
+    # Build scenario index
+    print("  Building scenario embeddings index...")
+    scenario_texts = [s['description'] for s in scenarios]
+    scenario_embeddings = finetuned_model.encode(scenario_texts)
+    
+    # Create HNSW index
+    dim = scenario_embeddings.shape[1]
+    index = hnswlib.Index(space='cosine', dim=dim)
+    index.init_index(max_elements=len(scenario_embeddings), ef_construction=200, M=16)
+    index.add_items(scenario_embeddings, list(range(len(scenario_embeddings))))
+    index.set_ef(100)
+    
+    print(f"  Built index with {len(scenarios)} scenarios")
+    
+    results = []
+    total_time = 0
+    correct_matches = 0
+    
+    for i, test_case in enumerate(test_cases):
+        print(f"  Testing {i+1}/{len(test_cases)}: {test_case['query'][:50]}...")
+        
+        start_time = time.time()
+        
+        # Get query embedding
+        query_embedding = finetuned_model.encode([test_case['query']])
+        
+        # Search for top-5 matches
+        labels, distances = index.knn_query(query_embedding, k=5)
+        
+        # Build top matches
+        top_matches = []
+        for j, idx in enumerate(labels[0]):
+            scenario_id = scenarios[idx]['id']
+            scenario_desc = scenarios[idx]['description']
+            confidence = 1 - distances[0][j]  # Convert distance to similarity
+            
+            top_matches.append({
+                'scenario_id': scenario_id,
+                'description': scenario_desc,
+                'confidence': float(confidence),
+                'distance': float(distances[0][j])
+            })
+        
+        end_time = time.time()
+        query_time = end_time - start_time
+        total_time += query_time
+        
+        # Check if top match is correct
+        top_match_id = top_matches[0]['scenario_id'] if top_matches else None
+        is_correct = top_match_id == test_case['expected_scenario']
+        if is_correct:
+            correct_matches += 1
+        
+        # Store detailed results
+        result = {
+            'query': test_case['query'],
+            'expected_scenario': test_case['expected_scenario'],
+            'predicted_scenario': top_match_id,
+            'top_5_matches': top_matches,
+            'correct': is_correct,
+            'response_time': query_time
+        }
+        results.append(result)
+        
+        # Print result for this query
+        status = "✅" if is_correct else "❌"
+        print(f"    {status} Expected: {test_case['expected_scenario']}, Got: {top_match_id}")
+        if top_matches:
+            print(f"    🏆 Top confidence: {top_matches[0]['confidence']:.4f}")
+    
+    # Calculate overall stats
+    accuracy = correct_matches / len(test_cases)
+    avg_time_per_query = total_time / len(test_cases)
+    avg_confidence = np.mean([r['top_5_matches'][0]['confidence'] for r in results if r['top_5_matches']])
+    
+    benchmark_results = {
+        'system_name': 'Fine-tuned Embedding',
+        'model_path': model_path,
+        'accuracy': accuracy,
+        'correct_matches': correct_matches,
+        'total_queries': len(test_cases),
+        'avg_time_per_query': avg_time_per_query,
+        'total_time': total_time,
+        'avg_confidence': float(avg_confidence),
+        'detailed_results': results,
+        'timestamp': datetime.now().isoformat()
+    }
+    
+    print(f"  📏 Results: {correct_matches}/{len(test_cases)} correct ({accuracy:.1%} accuracy)")
+    print(f"  ⏱️  Average time per query: {avg_time_per_query:.3f}s")
+    print(f"  🏆 Average confidence: {avg_confidence:.4f}")
+    
+    return benchmark_results
+
+
 def benchmark_hybrid_system(test_cases: List[Dict], fusion_method: str = "weighted_sum", 
                            tag_weight: float = 0.5, text_weight: float = 0.5) -> Dict[str, Any]:
     """Benchmark the hybrid tag+text system."""
@@ -327,7 +560,7 @@ def benchmark_hybrid_system(test_cases: List[Dict], fusion_method: str = "weight
 
 
 def save_benchmark_results(tag_results: Dict = None, text_results: Dict = None, 
-                          hybrid_results: Dict = None, output_file: str = None):
+                          hybrid_results: Dict = None, finetuned_results: Dict = None, output_file: str = None):
     """Save benchmark results to JSON file in logs/test directory."""
     # Create logs/test directory if it doesn't exist
     logs_dir = "logs/test"
@@ -344,7 +577,7 @@ def save_benchmark_results(tag_results: Dict = None, text_results: Dict = None,
     combined_results = {
         "timestamp": datetime.now().isoformat(),
         "test_cases_count": len(ATOMIC_TEST_CASES),
-        "benchmark_description": "Comparison of tag-based, text-based, and hybrid emotion scenario matching systems",
+        "benchmark_description": "Comparison of tag-based, text-based, hybrid, and fine-tuned emotion scenario matching systems",
         "test_cases": [
             {
                 "query": case["query"],
@@ -362,6 +595,8 @@ def save_benchmark_results(tag_results: Dict = None, text_results: Dict = None,
         combined_results["atomic_text_system"] = text_results
     if hybrid_results:
         combined_results["hybrid_system"] = hybrid_results
+    if finetuned_results:
+        combined_results["finetuned_system"] = finetuned_results
     
     with open(output_file, 'w') as f:
         json.dump(combined_results, f, indent=2)
@@ -497,11 +732,15 @@ def print_three_way_comparison_summary(tag_results: Dict, text_results: Dict, hy
 
 def main():
     """Main benchmark execution."""
-    parser = argparse.ArgumentParser(description="Benchmark tag-based, text-based, and hybrid systems")
+    parser = argparse.ArgumentParser(description="Benchmark tag-based, text-based, hybrid, and fine-tuned systems")
     parser.add_argument('--output', '-o', type=str, help='Output file for results')
     parser.add_argument('--tag-only', action='store_true', help='Only benchmark tag system')
     parser.add_argument('--text-only', action='store_true', help='Only benchmark text system')
     parser.add_argument('--hybrid-only', action='store_true', help='Only benchmark hybrid system')
+    parser.add_argument('--finetuned-only', action='store_true', help='Only benchmark fine-tuned system')
+    parser.add_argument('--finetuned-model', type=str, help='Path to fine-tuned model for benchmarking')
+    parser.add_argument('--build-indexes', action='store_true', help='Build missing indexes before benchmarking')
+    parser.add_argument('--skip-index-check', action='store_true', help='Skip checking/building indexes')
     parser.add_argument('--fusion-method', type=str, default='weighted_sum', 
                        choices=['weighted_sum', 'max', 'min', 'rank_fusion'],
                        help='Fusion method for hybrid system')
@@ -511,27 +750,41 @@ def main():
     
     print("🚀 Starting Atomic Scenarios Benchmark...")
     print(f"📋 Testing {len(ATOMIC_TEST_CASES)} atomic scenario test cases")
-    if args.hybrid_only or (not args.tag_only and not args.text_only):
+    if args.hybrid_only or (not args.tag_only and not args.text_only and not args.finetuned_only):
         print(f"🔀 Hybrid fusion method: {args.fusion_method} (tag_weight={args.tag_weight}, text_weight={args.text_weight})")
+    if args.finetuned_model:
+        print(f"🔥 Fine-tuned model: {args.finetuned_model}")
     print()
+    
+    # Check and build indexes if needed (unless explicitly skipped)
+    if not args.skip_index_check:
+        if args.build_indexes:
+            print("🔧 Force building indexes...")
+        check_and_build_indexes()
     
     tag_results = None
     text_results = None
     hybrid_results = None
+    finetuned_results = None
     
     try:
-        # Run individual systems unless hybrid-only
-        if not args.hybrid_only:
-            if not args.text_only:
+        # Run fine-tuned system if specified
+        if args.finetuned_model and (args.finetuned_only or not any([args.tag_only, args.text_only, args.hybrid_only])):
+            finetuned_results = benchmark_finetuned_system(ATOMIC_TEST_CASES, args.finetuned_model)
+            print()
+        
+        # Run individual systems unless hybrid-only or finetuned-only
+        if not args.hybrid_only and not args.finetuned_only:
+            if not args.text_only and not args.finetuned_only:
                 tag_results = benchmark_tag_system(ATOMIC_TEST_CASES)
                 print()
             
-            if not args.tag_only:
+            if not args.tag_only and not args.finetuned_only:
                 text_results = benchmark_atomic_text_system(ATOMIC_TEST_CASES)
                 print()
         
-        # Run hybrid system unless individual-only
-        if args.hybrid_only or (not args.tag_only and not args.text_only):
+        # Run hybrid system unless individual-only or finetuned-only
+        if (args.hybrid_only or (not args.tag_only and not args.text_only and not args.finetuned_only)) and not args.finetuned_only:
             hybrid_results = benchmark_hybrid_system(
                 ATOMIC_TEST_CASES, 
                 fusion_method=args.fusion_method,
@@ -541,10 +794,32 @@ def main():
             print()
         
         # Save results
-        output_file = save_benchmark_results(tag_results, text_results, hybrid_results, args.output)
+        output_file = save_benchmark_results(tag_results, text_results, hybrid_results, finetuned_results, args.output)
         
         # Print summary based on what was tested
-        if tag_results and text_results and hybrid_results:
+        if finetuned_results:
+            print(f"🔥 Fine-tuned system accuracy: {finetuned_results['accuracy']:.1%} (avg confidence: {finetuned_results['avg_confidence']:.3f})")
+            if tag_results or text_results or hybrid_results:
+                print("\n📈 COMPARISON WITH BASELINE SYSTEMS:")
+                if tag_results:
+                    if tag_results['accuracy'] > 0:
+                        improvement = ((finetuned_results['accuracy'] - tag_results['accuracy']) / tag_results['accuracy']) * 100
+                        print(f"  vs Tag Router: {improvement:+.1f}% improvement")
+                    else:
+                        print(f"  vs Tag Router: N/A (baseline 0% accuracy)")
+                if text_results:
+                    if text_results['accuracy'] > 0:
+                        improvement = ((finetuned_results['accuracy'] - text_results['accuracy']) / text_results['accuracy']) * 100
+                        print(f"  vs Text Router: {improvement:+.1f}% improvement")
+                    else:
+                        print(f"  vs Text Router: N/A (baseline 0% accuracy)")
+                if hybrid_results:
+                    if hybrid_results['accuracy'] > 0:
+                        improvement = ((finetuned_results['accuracy'] - hybrid_results['accuracy']) / hybrid_results['accuracy']) * 100
+                        print(f"  vs Hybrid Router: {improvement:+.1f}% improvement")
+                    else:
+                        print(f"  vs Hybrid Router: N/A (baseline 0% accuracy)")
+        elif tag_results and text_results and hybrid_results:
             print_three_way_comparison_summary(tag_results, text_results, hybrid_results)
         elif tag_results and text_results:
             print_comparison_summary(tag_results, text_results)

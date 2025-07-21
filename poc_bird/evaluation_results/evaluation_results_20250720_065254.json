@@ -1,0 +1,35 @@
+{
+  "timestamp": "20250720_065254",
+  "model_path": "llama_embedding_qlora_20250719_211137/best_model",
+  "embedding_quality": {
+    "accuracy": 0.42,
+    "precision": 0.4,
+    "recall": 0.45,
+    "f1_score": 0.42,
+    "avg_positive_similarity": 0.65,
+    "avg_negative_similarity": 0.35,
+    "similarity_gap": 0.3
+  },
+  "scenario_matching": {
+    "finetuned": {
+      "top1_accuracy": 0.88,
+      "top3_accuracy": 0.94,
+      "top5_accuracy": 0.95
+    },
+    "tag_router": {
+      "top1_accuracy": 0.0,
+      "top3_accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "text_router": {
+      "top1_accuracy": 0.0,
+      "top3_accuracy": 0.0,
+      "top5_accuracy": 0.0
+    },
+    "hybrid_router": {
+      "top1_accuracy": 0.0,
+      "top3_accuracy": 0.0,
+      "top5_accuracy": 0.0
+    }
+  }
+}
