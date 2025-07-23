@@ -66,3 +66,5 @@ poc_bird/*.bin
 poc_bird/poc_bird/llama_embedding_qlora_20250719_211137/*
 poc_bird/wandb/*
 poc_bird/llama_embedding_qlora_20250719_211137/*
+poc_bird/indices/*
+poc_bird/llama_embedding_with_tags_20250720_225721/*
