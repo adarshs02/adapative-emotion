@@ -50,7 +50,18 @@ class FactorGenerator:
             # Parse factors from the response
             factors_data = self._parse_factors_from_response(response)
             
-            if factors_data['factors']:
+            if factors_data['factors'] and len(factors_data['factors']) >= 3:
+                return factors_data['factors']
+            elif factors_data['factors'] and len(factors_data['factors']) < 3:
+                print(f"⚠️ Only {len(factors_data['factors'])} factors found, adding fallback factors to reach minimum of 3")
+                # Add fallback factors to reach minimum of 3
+                existing_names = {f['name'] for f in factors_data['factors']}
+                fallback_data = self._create_fallback_factors(user_situation)
+                
+                for fallback_factor in fallback_data['factors']:
+                    if fallback_factor['name'] not in existing_names and len(factors_data['factors']) < 3:
+                        factors_data['factors'].append(fallback_factor)
+                        
                 return factors_data['factors']
             else:
                 print("⚠️ No valid factors found in LLM response, using fallback")
@@ -95,7 +106,7 @@ class FactorGenerator:
         Build prompt for generating factors directly from user input only.
         No abstracts or external context needed.
         """
-        prompt = f"""Analyze this situation and identify the 3 most important psychological factors that would influence the person's emotions:
+        prompt = f"""Analyze this situation and identify 3-4 important psychological factors that would influence the person's emotions:
 
 SITUATION: {user_situation}
 
@@ -104,17 +115,19 @@ For each psychological factor, provide:
 - Brief description of what this factor represents
 - Two possible values (like high/low, present/absent, strong/weak, etc.)
 
-Format exactly like this:
+Provide AT LEAST 3 factors, up to 4 if relevant. Format exactly like this:
 1. Factor name: Description (value1/value2)
 2. Factor name: Description (value1/value2) 
 3. Factor name: Description (value1/value2)
+4. Factor name: Description (value1/value2)
 
-Example format:
-1. stress_level: How much stress the person is experiencing (low/high)
-2. social_support: Whether the person has people to rely on (absent/present)
-3. control_perception: How much control the person feels they have (low/high)
+Example:
+1. Self-efficacy: Person's belief in their ability to handle challenges (low/high)
+2. Social support: Availability of emotional support from others (absent/present)
+3. Stress level: Amount of psychological pressure experienced (low/high)
+4. Emotional regulation: Ability to manage emotional responses (weak/strong)
 
-Analyze the situation and provide 3 key psychological factors:"""
+Your analysis (provide at least 3 factors):"""
         
         return prompt
     
