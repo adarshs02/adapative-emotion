@@ -18,16 +18,14 @@ class CPTGenerator:
     def __init__(self, config):
         """Initialize the CPT generator."""
         self.config = config
-        self.tokenizer = None
-        self.model = None
+        self.vllm_wrapper = None
         
         # Default emotions and factors
         self.default_emotions = ['joy', 'sadness', 'anger', 'fear', 'surprise', 'disgust']
         
-    def set_llm(self, tokenizer, model):
-        """Set the LLM tokenizer and model from parent class."""
-        self.tokenizer = tokenizer
-        self.model = model
+    def set_vllm(self, vllm_wrapper):
+        """Set the vLLM wrapper from parent class."""
+        self.vllm_wrapper = vllm_wrapper
     
     def generate_cpt(self, scenario: Dict[str, Any], user_situation: str) -> Dict[str, Any]:
         """
@@ -66,23 +64,247 @@ class CPTGenerator:
         
         return cpt_data
     
+    def generate_cpt_with_factors(self, scenario: str, factors: List[Dict[str, Any]]) -> Dict[str, Any]:
+        """
+        Generate CPT using pre-generated factors with proven poc_bird prompt structure.
+        
+        Args:
+            scenario: Generated scenario description
+            factors: Pre-generated list of psychological factors
+            
+        Returns:
+            Dictionary containing the CPT data
+        """
+        
+        print(f"🎲 Generating CPT with pre-generated factors for scenario: {scenario[:50]}...")
+        print(f"✅ Using {len(factors)} pre-generated factors")
+        
+        # Calculate total combinations
+        total_combinations = 1
+        for factor in factors:
+            total_combinations *= len(factor['possible_values'])
+        
+        # Build improved prompt using proven poc_bird structure
+        prompt = self._build_improved_cpt_prompt(scenario, factors, total_combinations)
+        
+        # Generate CPT using natural language approach (same as successful factor generation)
+        if self.vllm_wrapper:
+            print("🔢 Generating complete CPT with emotion probabilities...")
+            # Use regular generate instead of generate_abstract (CPTs need more tokens than 64-token abstract limit)
+            response_text = self.vllm_wrapper.generate(
+                prompt,
+                component="cpt_generator",
+                interaction_type="complete_cpt_generation"
+            )
+            
+            print(f"🔍 Raw CPT response: '{response_text}'")
+            print(f"🔍 Response length: {len(response_text)} chars")
+            
+            # Parse CPT from natural language response
+            cpt_result = self._parse_cpt_from_text(response_text, factors)
+            
+            if cpt_result and cpt_result.get('cpt') and len(cpt_result['cpt']) > 0:
+                return {
+                    'factors': cpt_result['factors'],
+                    'cpt': cpt_result['cpt'],
+                    'metadata': {
+                        'num_factors': len(factors),
+                        'num_combinations': len(cpt_result.get('cpt', [])),
+                        'generation_method': 'natural_language_vllm'
+                    }
+                }
+            else:
+                print("⚠️ CPT generation failed, using fallback")
+                return self._generate_fallback_cpt(factors)
+        else:
+            # Fallback CPT generation
+            return self._generate_fallback_cpt(factors)
+    
+    def _parse_cpt_from_text(self, response_text: str, factors: List[Dict[str, Any]]) -> Dict[str, Any]:
+        """Parse CPT from natural language LLM response."""
+        
+        if not response_text or len(response_text.strip()) < 20:
+            return {'factors': {}, 'cpt': []}
+        
+        # For now, try to extract JSON if present, otherwise fallback  
+        try:
+            # Clean the response
+            cleaned_response = self._extract_clean_json_from_text(response_text)
+            
+            if cleaned_response:
+                import json
+                parsed = json.loads(cleaned_response)
+                
+                if isinstance(parsed, dict) and 'factors' in parsed and 'cpt' in parsed:
+                    return parsed
+        except Exception as e:
+            print(f"⚠️ Error parsing CPT JSON: {e}")
+        
+        # If JSON parsing fails, create basic structure for fallback
+        return {'factors': {}, 'cpt': []}
+    
+    def _extract_clean_json_from_text(self, response_text: str) -> str:
+        """Extract clean JSON from potentially messy LLM response."""
+        
+        # Look for JSON blocks
+        if "```json" in response_text:
+            start = response_text.find("```json") + 7
+            end = response_text.find("```", start)
+            if end != -1:
+                return response_text[start:end].strip()
+        
+        elif "```" in response_text:
+            start = response_text.find("```") + 3
+            end = response_text.find("```", start)
+            if end != -1:
+                return response_text[start:end].strip()
+        
+        # Look for JSON object patterns
+        if "{" in response_text and "}" in response_text:
+            start = response_text.find("{")
+            # Find the matching closing brace
+            brace_count = 0
+            end = -1
+            for i in range(start, len(response_text)):
+                if response_text[i] == "{":
+                    brace_count += 1
+                elif response_text[i] == "}":
+                    brace_count -= 1
+                    if brace_count == 0:
+                        end = i + 1
+                        break
+            
+            if end != -1:
+                return response_text[start:end].strip()
+        
+        return ""
+    
+    def _build_improved_cpt_prompt(self, scenario: str, factors: List[Dict[str, Any]], total_combinations: int) -> str:
+        """
+        Build improved CPT prompt using proven poc_bird structure.
+        
+        Args:
+            scenario: Scenario description
+            factors: List of psychological factors
+            total_combinations: Total number of factor combinations
+            
+        Returns:
+            Formatted prompt string
+        """
+        
+        # Build factors section
+        factors_spec = []
+        for i, factor in enumerate(factors, 1):
+            values = factor['possible_values']
+            # Limit to 2 values for binary factors (poc_bird approach)
+            if len(values) > 2:
+                values = values[:2]
+            factors_spec.append(f'    "<factor-{i}>": ["{values[0]}", "{values[1]}"]')
+        
+        factors_json = ",\n".join(factors_spec)
+        
+        # Build example CPT entry
+        example_factors = []
+        for i, factor in enumerate(factors, 1):
+            values = factor['possible_values']
+            example_factors.append(f'"<factor-{i}>":"{values[0] if len(values) > 0 else "v1"}"')
+        
+        example_entry = ", ".join(example_factors)
+        
+        prompt = f"""JSON ONLY. Start immediately with {{
+Scenario: "{scenario}"
+Factors: {len(factors)} factors, {total_combinations} combinations
+
+Return this exact JSON structure:
+{{
+  "factors": {{
+{factors_json}
+  }},
+  "cpt":[
+    {{{example_entry}, "emotions": {{"happy": 0.50, "sad": 0.30, "anxious": 0.20}} }},
+    ... {total_combinations - 1} more rows with all factor combinations
+  ]
+}}
+
+Rules:
+- All {total_combinations} factor combinations required
+- Emotion probabilities must sum to 1.0 in each row
+- Use relevant emotions for the scenario
+
+START WITH {{ - NO OTHER TEXT:"""
+        
+        return prompt
+    
+    def _generate_fallback_cpt(self, factors: List[Dict[str, Any]]) -> Dict[str, Any]:
+        """
+        Generate a simple fallback CPT when vLLM generation fails.
+        
+        Args:
+            factors: List of psychological factors
+            
+        Returns:
+            Basic CPT with uniform emotion probabilities
+        """
+        
+        print("🔄 Generating fallback CPT with uniform probabilities...")
+        
+        # Generate all factor combinations
+        factor_combinations = []
+        
+        # For simplicity, use first 2 values of each factor (binary approach)
+        factor_names = []
+        factor_values = []
+        
+        for factor in factors:
+            name = factor['name']
+            values = factor['possible_values'][:2]  # Limit to 2 values
+            factor_names.append(name)
+            factor_values.append(values)
+        
+        # Generate all combinations
+        from itertools import product
+        
+        combinations = list(product(*factor_values))
+        
+        # Create CPT entries with uniform emotion distribution
+        cpt_entries = []
+        emotions = ['happy', 'sad', 'angry', 'anxious', 'excited']
+        uniform_prob = 1.0 / len(emotions)
+        
+        for combo in combinations:
+            entry = {}
+            for i, factor_name in enumerate(factor_names):
+                entry[factor_name] = combo[i]
+            
+            # Add uniform emotion probabilities
+            entry['emotions'] = {emotion: uniform_prob for emotion in emotions}
+            cpt_entries.append(entry)
+        
+        return {
+            'factors': {factor['name']: factor['possible_values'][:2] for factor in factors},
+            'cpt': cpt_entries,
+            'metadata': {
+                'num_factors': len(factors),
+                'num_combinations': len(cpt_entries),
+                'generation_method': 'fallback_uniform'
+            }
+        }
+    
     def _generate_factors(self, scenario: Dict[str, Any], user_situation: str) -> List[Dict[str, Any]]:
         """Generate relevant factors for the scenario."""
         
         prompt = self._build_factors_prompt(scenario, user_situation)
         
-        if self.tokenizer and self.model:
-            response = self._generate_with_llm(prompt)
-            try:
-                factors_data = json.loads(response)
-                factors = factors_data.get('factors', [])
-                
-                # Validate and normalize factors
-                return self._validate_factors(factors)
-                
-            except json.JSONDecodeError as e:
-                print(f"⚠️ Failed to parse factors JSON: {e}")
-                return self._get_default_factors()
+        if self.vllm_wrapper:
+            factors_data = self.vllm_wrapper.generate_json(
+                prompt, 
+                component="cpt_generator", 
+                interaction_type="factor_generation"
+            )
+            factors = factors_data.get('factors', [])
+            
+            # Validate and normalize factors
+            return self._validate_factors(factors)
         else:
             return self._get_default_factors()
     
@@ -184,12 +406,12 @@ Estimate probabilities for these emotions: {', '.join(self.default_emotions)}
 Respond with ONLY a JSON object:
 {{
   "probabilities": {{
-    "joy": 0.XX,
-    "sadness": 0.XX,
-    "anger": 0.XX,
-    "fear": 0.XX,
-    "surprise": 0.XX,
-    "disgust": 0.XX
+    "joy": 0.0,
+    "sadness": 0.0,
+    "anger": 0.0,
+    "fear": 0.0,
+    "surprise": 0.0,
+    "disgust": 0.0
   }}
 }}
 
@@ -198,17 +420,16 @@ Requirements:
 - Use psychological principles to estimate realistic distributions
 - Consider how the factor conditions would influence emotional outcomes"""
 
-        if self.tokenizer and self.model:
-            response = self._generate_with_llm(prompt)
-            try:
-                probs_data = json.loads(response)
-                probabilities = probs_data.get('probabilities', {})
-                
-                # Normalize probabilities to sum to 1.0
-                return self._normalize_probabilities(probabilities)
-                
-            except json.JSONDecodeError:
-                return self._get_uniform_probabilities()
+        if self.vllm_wrapper:
+            probs_data = self.vllm_wrapper.generate_json(
+                prompt, 
+                component="cpt_generator", 
+                interaction_type="emotion_probability_generation"
+            )
+            probabilities = probs_data.get('probabilities', {})
+            
+            # Normalize probabilities to sum to 1.0
+            return self._normalize_probabilities(probabilities)
         else:
             return self._get_uniform_probabilities()
     

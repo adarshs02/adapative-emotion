@@ -7,11 +7,13 @@ This script demonstrates how to use the dynamic emotion analysis system.
 
 import sys
 import os
+import json
 
 # Add the parent directory to the path so we can import emobird modules
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from emobird import Emobird
+from utils import print_gpu_info
 
 
 def main():
@@ -23,23 +25,26 @@ def main():
     try:
         # Initialize Emobird system
         print("Initializing system...")
+        print_gpu_info()
         emobird = Emobird()
         
-        # Example situations for testing
-        example_situations = [
-            "I just got promoted at work after working really hard for months",
-            "My best friend forgot my birthday and didn't even call me",
-            "I'm nervous about giving a presentation to my boss tomorrow",
-            "I found out my dog is sick and needs surgery"
-        ]
+        # Load example situations from examples.json
+        try:
+            with open('examples.json', 'r') as f:
+                examples_data = json.load(f)
+            example_situations = examples_data['examples']
+            print(f"📂 Loaded {len(example_situations)} example situations from examples.json")
+        except Exception as e:
+            print(f"⚠️ Failed to load examples.json: {e}")
+            print("Using fallback example situations...")
+            example_situations = [
+                "I just got promoted at work after working really hard for months",
+                "My best friend forgot my birthday and didn't even call me"
+            ]
         
-        # Interactive mode
-        print("\n🎯 Choose an option:")
-        print("1. Analyze custom situation")
-        print("2. Run example situations")
-        print("3. Exit")
-        
-        choice = input("\nEnter your choice (1-3): ").strip()
+        # Automatically run all example situations
+        print("\n🧪 Running all example situations automatically...")
+        choice = "2"  # Automatically choose to run examples
         
         if choice == "1":
             # Custom situation
@@ -57,7 +62,7 @@ def main():
                 analyze_situation(emobird, situation)
                 
                 if i < len(example_situations):
-                    input("\nPress Enter to continue to next example...")
+                    print("\n" + "="*60 + "\n")  # Just add a separator line
                     
         elif choice == "3":
             print("Goodbye! 🐦")

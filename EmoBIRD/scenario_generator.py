@@ -15,19 +15,14 @@ class ScenarioGenerator:
     Generates scenarios dynamically from user input.
     """
     
-    def __init__(self, config):
+    def __init__(self, config, vllm_wrapper=None):
         """Initialize the scenario generator."""
         self.config = config
-        self.tokenizer = None
-        self.model = None
+        self.vllm_wrapper = vllm_wrapper
         
-        # We'll reuse the main LLM from the parent class
-        # This is set by the parent Emobird class
-        
-    def set_llm(self, tokenizer, model):
-        """Set the LLM tokenizer and model from parent class."""
-        self.tokenizer = tokenizer
-        self.model = model
+    def set_vllm(self, vllm_wrapper):
+        """Set the vLLM wrapper from parent class."""
+        self.vllm_wrapper = vllm_wrapper
     
     def generate_scenario(self, user_situation: str) -> Dict[str, Any]:
         """
@@ -54,12 +49,16 @@ class ScenarioGenerator:
         print("🎭 Generating scenario from abstract...")
         prompt = self._build_scenario_prompt(user_situation, abstract)
         
-        # Generate scenario using LLM
-        if self.tokenizer and self.model:
-            response = self._generate_with_llm(prompt)
+        # Generate scenario using vLLM
+        if self.vllm_wrapper:
+            response = self.vllm_wrapper.generate(
+                prompt, 
+                component="scenario_generator", 
+                interaction_type="scenario_generation"
+            )
         else:
             # Fallback: create a basic scenario
-            response = self._create_fallback_scenario(user_situation)
+            return self._create_fallback_scenario(user_situation)
         
         try:
             scenario_data = json.loads(response)
@@ -83,58 +82,193 @@ class ScenarioGenerator:
     def _generate_abstract(self, user_situation: str) -> str:
         """Generate an abstract/summary of the user input."""
         
-        prompt = f"""You are an expert at creating concise abstracts. Given a user's emotional situation, create a brief, focused abstract that captures the key emotional elements and context.
+        prompt = f"""You are an expert at generating summaries from user inputs. Summarize this user by looking out for the context, emotional impact, and the main idea in the shortest way possible:
 
-USER SITUATION:
 "{user_situation}"
 
-Create a concise abstract (2-3 sentences) that:
-1. Identifies the core emotional situation
-2. Highlights key contextual factors
-3. Captures the emotional tone
-
-Respond with ONLY the abstract text, no additional formatting or explanation."""
+Write only the summary:"""
         
-        if self.tokenizer and self.model:
-            response = self._generate_with_llm(prompt)
-            # Clean up response - remove any markdown or extra formatting
-            abstract = response.strip()
-            if abstract.startswith('"') and abstract.endswith('"'):
-                abstract = abstract[1:-1]
+        if self.vllm_wrapper:
+            response = self.vllm_wrapper.generate_abstract(
+                prompt, 
+                component="scenario_generator", 
+                interaction_type="abstract_generation"
+            )
+            print(f"🔍 Raw vLLM response: '{response}'")  # Debug print
+            print(f"🔍 Response length: {len(response)} chars")  # Debug print
+            # Extract clean abstract from potentially messy model output
+            abstract = self._extract_clean_abstract(response)
+            print(f"🔍 After extract_clean_abstract: '{abstract}'")  # Debug print
             return abstract
         else:
             # Fallback: create basic abstract
             return self._create_fallback_abstract(user_situation)
     
+    def _extract_clean_abstract(self, response: str) -> str:
+        """Extract clean abstract from potentially messy model output."""
+        if not response or not response.strip():
+            return ""
+        
+        # Start with the raw response
+        text = response.strip()
+        
+        # If it starts with a quote, extract the quoted content
+        if text.startswith('"'):
+            # Find the end quote, but not if it's followed by more text
+            end_quote_idx = text.find('"', 1)
+            if end_quote_idx != -1:
+                quoted_content = text[1:end_quote_idx].strip()
+                # Only use quoted content if it looks like a summary (not too short)
+                if len(quoted_content) > 10:
+                    text = quoted_content
+        
+        # Split by common separators and take the first meaningful part
+        # Stop at various markers that indicate unwanted content
+        stop_markers = [
+            '  #',  # Hashtags with space
+            '\n#',  # Hashtags on new line
+            'Bookmark',  # Spam content
+            'Click here',  # Spam content
+            '(Note:',  # Meta-commentary
+            'Did I get it right?',  # Conversational
+            'Word count:',  # Meta-analysis
+            'Analysis:',  # Meta-analysis
+            'Analyze:',  # Meta-analysis
+            '#Summary',  # Analysis tags
+            '#EmotionalImpact',  # Analysis tags
+            '(I\'m looking',  # Meta-commentary
+        ]
+        
+        for marker in stop_markers:
+            if marker in text:
+                text = text.split(marker)[0].strip()
+        
+        # Clean up any remaining formatting
+        text = text.strip()
+        
+        # Remove trailing punctuation repetition
+        while text.endswith('..') or text.endswith('  '):
+            text = text.rstrip('. ')
+        
+        # Ensure it ends with proper punctuation
+        if text and not text.endswith(('.', '!', '?')):
+            text += '.'
+        
+        return text
+    
     def _build_scenario_prompt(self, user_situation: str, abstract: str) -> str:
         """Build the prompt for scenario generation using the abstract."""
         
-        prompt = f"""You are a scenario analysis expert. Given a user's situation and its abstract summary, generate a comprehensive scenario description that captures the emotional context and relevant factors.
+        prompt = f"""Generate a scenario JSON from this situation and abstract:
 
-USER SITUATION:
-"{user_situation}"
+Situation: "{user_situation}"
+Abstract: "{abstract}"
 
-ABSTRACT SUMMARY:
-"{abstract}"
-
-Based on the abstract summary, generate a JSON response with the following structure:
-
+Example output:
 {{
-  "id": "scenario_<descriptive_name>",
-  "description": "Clear, concise description of the emotional scenario",
-  "context": "Additional context about the situation and relevant factors",
-  "tags": ["tag1", "tag2", "tag3"]
+  "id": "scenario_relationship_conflict",
+  "description": "Relationship_Misunderstanding",
+  "context": "frustration and sadness",
+  "tags": ["relationship", "conflict", "emotional"]
 }}
 
-Requirements:
-- The scenario should be emotionally relevant and capture key aspects
-- Include 3-5 relevant tags that describe the situation type
-- Keep description under 200 characters
-- Context should provide deeper insights into emotional factors
-
-Respond with ONLY the JSON object, no additional text."""
+Now generate similar JSON for the given situation and abstract:
+{{"""
 
         return prompt
+    
+    def _generate_scenario_from_input_only(self, user_situation: str) -> Dict[str, Any]:
+        """Generate scenario using only user input (no abstract)."""
+        prompt = f"""Generate a scenario JSON for this situation:
+
+Situation: "{user_situation}"
+
+Example output:
+{{
+  "id": "scenario_work_stress",
+  "description": "Work_Presentation_Anxiety",
+  "context": "nervous anticipation",
+  "tags": ["work", "anxiety"]
+}}
+
+Now generate similar JSON for the given situation:
+{{"""
+        
+        if self.vllm_wrapper:
+            response = self.vllm_wrapper.generate_json(
+                prompt,
+                component="scenario_generator",
+                interaction_type="input_only_scenario"
+            )
+            return {
+                'id': response.get('id', 'scenario_input_only'),
+                'description': response.get('description', user_situation),
+                'context': response.get('context', ''),
+                'tags': response.get('tags', []),
+                'method': 'input_only'
+            }
+        else:
+            return self._create_fallback_scenario(user_situation)
+    
+    def _generate_scenario_with_abstract(self, user_situation: str, abstract: str) -> Dict[str, Any]:
+        """Generate scenario using both user input and abstract (current pipeline approach)."""
+        prompt = self._build_scenario_prompt(user_situation, abstract)
+        
+        if self.vllm_wrapper:
+            response = self.vllm_wrapper.generate_json(
+                prompt,
+                component="scenario_generator",
+                interaction_type="input_plus_abstract_scenario"
+            )
+            return {
+                'id': response.get('id', 'scenario_input_abstract'),
+                'description': response.get('description', user_situation),
+                'context': response.get('context', ''),
+                'tags': response.get('tags', []),
+                'abstract': abstract,
+                'method': 'input_plus_abstract'
+            }
+        else:
+            return self._create_fallback_scenario(user_situation)
+    
+    def _generate_scenario_from_abstract_only(self, abstract: str) -> Dict[str, Any]:
+        """Generate scenario using only the abstract (no original user input)."""
+        prompt = f"""Generate a scenario JSON from this abstract:
+
+Abstract: "{abstract}"
+
+Example output:
+{{
+  "id": "scenario_career_milestone",
+  "description": "Career_Achievement_Celebration",
+  "context": "pride and accomplishment",
+  "tags": ["career", "success"]
+}}
+
+Now generate similar JSON for the given abstract:
+{{"""
+        
+        if self.vllm_wrapper:
+            response = self.vllm_wrapper.generate_json(
+                prompt,
+                component="scenario_generator",
+                interaction_type="abstract_only_scenario"
+            )
+            return {
+                'id': response.get('id', 'scenario_abstract_only'),
+                'description': response.get('description', abstract),
+                'context': response.get('context', ''),
+                'tags': response.get('tags', []),
+                'method': 'abstract_only'
+            }
+        else:
+            return {
+                'id': 'fallback_abstract_only',
+                'description': f"Scenario based on: {abstract}",
+                'context': 'Generated from abstract only',
+                'tags': ['abstract_based'],
+                'method': 'abstract_only'
+            }
     
     def _generate_with_llm(self, prompt: str) -> str:
         """Generate response using the LLM."""

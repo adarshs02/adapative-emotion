@@ -75,23 +75,6 @@ This will provide interactive options to:
 - Run pre-defined example situations
 - See detailed emotion analysis results
 
-## Configuration
-
-The system can be configured through:
-
-1. **Environment Variables**:
-   ```bash
-   export EMOBIRD_MODEL="microsoft/DialoGPT-medium"
-   export EMOBIRD_MAX_TOKENS=512
-   export EMOBIRD_TEMPERATURE=0.3
-   ```
-
-2. **Configuration File**:
-   ```python
-   config = EmobirdConfig("config.json")
-   emobird = Emobird(config)
-   ```
-
 ### Key Configuration Options
 
 - `llm_model_name`: The language model to use for generation

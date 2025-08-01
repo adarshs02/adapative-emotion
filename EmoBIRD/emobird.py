@@ -8,11 +8,12 @@ rather than using pre-stored scenarios and CPT files.
 import json
 import torch
 from typing import Dict, List, Any, Tuple
-from transformers import AutoTokenizer, AutoModelForCausalLM
 
 from scenario_generator import ScenarioGenerator
 from cpt_generator import CPTGenerator
+from factor_generator import FactorGenerator
 from config import EmobirdConfig
+from vllm_wrapper import VLLMWrapper
 
 
 class Emobird:
@@ -26,35 +27,29 @@ class Emobird:
         
         print("🐦 Initializing Emobird system...")
         
-        # Load LLM for inference first
+        # Load vLLM for inference first
         self._load_llm()
         
         # Initialize components
         self.scenario_generator = ScenarioGenerator(self.config)
+        self.factor_generator = FactorGenerator(self.config)
         self.cpt_generator = CPTGenerator(self.config)
         
-        # Set LLM for generators
-        self.scenario_generator.set_llm(self.tokenizer, self.model)
-        self.cpt_generator.set_llm(self.tokenizer, self.model)
+        # Set vLLM wrapper for generators
+        self.scenario_generator.set_vllm(self.vllm_wrapper)
+        self.factor_generator.set_vllm(self.vllm_wrapper)
+        self.cpt_generator.set_vllm(self.vllm_wrapper)
         
         print("✅ Emobird system initialized successfully!")
     
     def _load_llm(self):
-        """Load the language model for inference."""
-        print(f"🚀 Loading LLM: {self.config.llm_model_name}")
+        """Load the vLLM wrapper for inference."""
+        print(f"🚀 Loading vLLM: {self.config.llm_model_name}")
         
-        self.tokenizer = AutoTokenizer.from_pretrained(self.config.llm_model_name)
-        if self.tokenizer.pad_token is None:
-            self.tokenizer.pad_token = self.tokenizer.eos_token
-            
-        self.model = AutoModelForCausalLM.from_pretrained(
-            self.config.llm_model_name,
-            torch_dtype=torch.float16,
-            device_map="auto"
-        )
-        self.model.eval()
+        # Initialize vLLM wrapper
+        self.vllm_wrapper = VLLMWrapper(self.config)
         
-        print("✅ LLM loaded successfully!")
+        print("✅ vLLM loaded successfully!")
     
     def analyze_emotion(self, user_situation: str) -> Dict[str, Any]:
         """
@@ -72,37 +67,65 @@ class Emobird:
         """
         print(f"\n🔍 Analyzing situation: '{user_situation[:100]}...'")
         
-        # Step 1: Generate scenario dynamically from user input
+        # Step 1: Generate abstract/summary from user input (done in scenario generator)
+        print("📋 Generating abstract...")
+        abstract = self.scenario_generator._generate_abstract(user_situation)
+        
+        # Step 2: Generate factors from user input and abstract
+        print("⚙️ Generating psychological factors...")
+        factors = self.factor_generator.generate_factors(user_situation, abstract)
+        
+        # Step 3: Extract specific factor values for this situation
+        print("🎯 Extracting factor values...")
+        factor_values = self.factor_generator.extract_factor_values(
+            user_situation, abstract, factors
+        )
+        
+        # Step 4: Generate scenario from abstract
         print("📝 Generating scenario...")
         scenario = self.scenario_generator.generate_scenario(user_situation)
         
-        # Step 2: Generate CPT dynamically for this scenario
-        print("🎲 Generating CPT...")
-        cpt_data = self.cpt_generator.generate_cpt(scenario, user_situation)
+        # Check if scenario generation was successful
+        if not scenario or not isinstance(scenario, dict):
+            print("⚠️ Scenario generation failed, using fallback")
+            scenario_description = f"Emotional situation: {user_situation}"
+        else:
+            scenario_description = scenario.get('description', user_situation)
         
-        # Step 3: Extract factor values from user situation
-        print("⚙️ Extracting factor values...")
-        factor_values = self._extract_factor_values(
-            user_situation, scenario, cpt_data['factors']
+        # Step 5: Generate CPT dynamically using the generated factors
+        print("🎲 Generating CPT...")
+        cpt_data = self.cpt_generator.generate_cpt_with_factors(
+            scenario_description, factors
         )
         
-        # Step 4: Calculate emotion probabilities
+        # Step 6: Calculate emotion probabilities
         print("🎯 Calculating emotion probabilities...")
         emotions = self._calculate_emotions(cpt_data, factor_values)
         
-        # Step 5: Apply Bayesian calibration if enabled
+        # Step 7: Apply Bayesian calibration if enabled
         if self.config.use_bayesian_calibration:
             print("🔧 Applying Bayesian calibration...")
             emotions = self._apply_bayesian_calibration(emotions, factor_values)
         
         result = {
             'scenario': scenario,
-            'factors': factor_values,
+            'abstract': abstract,
+            'factors_definition': factors,
+            'factor_values': factor_values,
             'emotions': emotions,
             'metadata': {
-                'cpt_factors': cpt_data['factors'],
-                'inference_method': 'dynamic_generation',
-                'model_used': self.config.llm_model_name
+                'inference_method': 'dynamic_generation_with_factors',
+                'model_used': self.config.llm_model_name,
+                'workflow_steps': [
+                    'abstract_generation',
+                    'factor_generation', 
+                    'factor_value_extraction',
+                    'scenario_generation',
+                    'cpt_generation',
+                    'emotion_calculation'
+                ],
+                'num_factors': len(factors),
+                'total_combinations': self.factor_generator._calculate_combinations(factors)
             }
         }
         
@@ -115,13 +138,21 @@ class Emobird:
         
         factors_json = json.dumps(factors, indent=2)
         
+        # Safe extraction of scenario description - handle both dict and string cases
+        if isinstance(scenario, dict):
+            scenario_desc = scenario.get('description', user_situation)
+        elif isinstance(scenario, str):
+            scenario_desc = scenario
+        else:
+            scenario_desc = user_situation  # fallback
+        
         prompt = f"""You are a JSON-only API. Your only function is to determine the values for a given set of factors based on a user's situation. Do not provide any explanations or text outside of the JSON object.
 
 SITUATION:
 "{user_situation}"
 
 SCENARIO:
-"{scenario.get('description', '')}"
+"{scenario_desc}"
 
 FACTORS:
 {factors_json}
@@ -138,42 +169,9 @@ JSON SPEC:
 }}
 """
         
-        inputs = self.tokenizer(prompt, return_tensors="pt", truncation=True, max_length=2048)
-        inputs = {k: v.to(self.model.device) for k, v in inputs.items()}
-        
-        with torch.no_grad():
-            outputs = self.model.generate(
-                **inputs,
-                max_new_tokens=512,
-                temperature=0.1,
-                do_sample=True,
-                pad_token_id=self.tokenizer.eos_token_id
-            )
-        
-        response = self.tokenizer.decode(
-            outputs[0][inputs['input_ids'].shape[1]:], 
-            skip_special_tokens=True
-        )
-        
-        # Extract JSON from response
-        try:
-            # Handle potential markdown code blocks
-            if "```json" in response:
-                start = response.find("```json") + 7
-                end = response.find("```", start)
-                response = response[start:end].strip()
-            elif "```" in response:
-                start = response.find("```") + 3
-                end = response.find("```", start)
-                response = response[start:end].strip()
-            
-            parsed = json.loads(response)
-            return parsed.get('factor_values', {})
-            
-        except json.JSONDecodeError as e:
-            print(f"⚠️ Failed to parse factor values: {e}")
-            print(f"Raw response: {response}")
-            return {}
+        # Use vLLM wrapper to generate JSON response
+        factor_data = self.vllm_wrapper.generate_json(prompt)
+        return factor_data.get('factor_values', {})
     
     def _calculate_emotions(self, cpt_data: Dict[str, Any], 
                           factor_values: Dict[str, str]) -> Dict[str, float]:

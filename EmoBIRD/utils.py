@@ -1,3 +1,5 @@
+import torch
+
 def print_gpu_info():
     if torch.cuda.is_available():
         device_name = torch.cuda.get_device_name(0)

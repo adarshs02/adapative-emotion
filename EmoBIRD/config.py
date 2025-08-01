@@ -9,8 +9,14 @@ from typing import Dict, Any, Optional
 
 # EmoBIRD Configurations
 LLM_MODEL_NAME="meta-llama/Llama-3.1-8B-Instruct"
-LLM_MAX_NEW_TOKENS=512
+LLM_MAX_NEW_TOKENS=128
 LLM_TEMPERATURE=0.6
+
+# vLLM specific configurations
+USE_VLLM=True
+VLLM_GPU_MEMORY_UTILIZATION=0.8
+VLLM_MAX_MODEL_LEN=4096
+VLLM_TENSOR_PARALLEL_SIZE=1
 
 
 class EmobirdConfig:
@@ -64,6 +70,12 @@ class EmobirdConfig:
         # Performance
         self.batch_size = 1
         self.max_sequence_length = 2048
+        
+        # vLLM specific settings
+        self.use_vllm = USE_VLLM
+        self.vllm_gpu_memory_utilization = VLLM_GPU_MEMORY_UTILIZATION
+        self.vllm_max_model_len = VLLM_MAX_MODEL_LEN
+        self.vllm_tensor_parallel_size = VLLM_TENSOR_PARALLEL_SIZE
     
     def _load_config_file(self, config_path: str):
         """Load configuration from JSON file."""
