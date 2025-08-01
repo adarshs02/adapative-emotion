@@ -22,6 +22,134 @@ class FactorGenerator:
         """Set the vLLM wrapper from parent class."""
         self.vllm_wrapper = vllm_wrapper
     
+    def generate_factors_from_situation(self, user_situation: str) -> List[Dict[str, Any]]:
+        """
+        Generate psychological factors directly from user input only.
+        No abstracts or scenarios needed - factors come purely from the situation.
+        
+        Args:
+            user_situation: User's description of their situation
+            
+        Returns:
+            List of factor dictionaries with name, description, and possible values
+        """
+        print("🧠 Generating factors directly from user situation...")
+        
+        # Build prompt focused only on user input
+        prompt = self._build_direct_factor_prompt(user_situation)
+        
+        # Generate factors using vLLM
+        if self.vllm_wrapper:
+            response = self.vllm_wrapper.generate_abstract(
+                prompt, 
+                component="factor_generator", 
+                interaction_type="direct_factor_generation"
+            )
+            print(f"🔍 Raw factor response: '{response}'")
+            
+            # Parse factors from the response
+            factors_data = self._parse_factors_from_response(response)
+            
+            if factors_data['factors']:
+                return factors_data['factors']
+            else:
+                print("⚠️ No valid factors found in LLM response, using fallback")
+                return self._create_fallback_factors(user_situation)['factors']
+        else:
+            return self._create_fallback_factors(user_situation)['factors']
+    
+    def extract_factor_values_direct(self, user_situation: str, factors: List[Dict[str, Any]]) -> Dict[str, str]:
+        """
+        Extract factor values directly from user situation without using abstracts or scenarios.
+        
+        Args:
+            user_situation: User's description of their situation
+            factors: List of factor dictionaries
+            
+        Returns:
+            Dictionary mapping factor names to their determined values
+        """
+        print("🎯 Extracting factor values directly from user situation...")
+        
+        if not self.vllm_wrapper:
+            return self._create_fallback_analysis(user_situation, factors)
+        
+        # Build prompt for direct situation analysis
+        prompt = self._build_direct_analysis_prompt(user_situation, factors)
+        
+        response = self.vllm_wrapper.generate_abstract(
+            prompt,
+            component="factor_generator",
+            interaction_type="direct_situation_analysis"
+        )
+        
+        print(f"🔍 Direct analysis response: '{response}'")
+        
+        # Parse the analysis response
+        analysis = self._parse_analysis_response(response, factors)
+        
+        return analysis
+    
+    def _build_direct_factor_prompt(self, user_situation: str) -> str:
+        """
+        Build prompt for generating factors directly from user input only.
+        No abstracts or external context needed.
+        """
+        prompt = f"""Analyze this situation and identify the 3 most important psychological factors that would influence the person's emotions:
+
+SITUATION: {user_situation}
+
+For each psychological factor, provide:
+- Factor name (short, descriptive)
+- Brief description of what this factor represents
+- Two possible values (like high/low, present/absent, strong/weak, etc.)
+
+Format exactly like this:
+1. Factor name: Description (value1/value2)
+2. Factor name: Description (value1/value2) 
+3. Factor name: Description (value1/value2)
+
+Example format:
+1. stress_level: How much stress the person is experiencing (low/high)
+2. social_support: Whether the person has people to rely on (absent/present)
+3. control_perception: How much control the person feels they have (low/high)
+
+Analyze the situation and provide 3 key psychological factors:"""
+        
+        return prompt
+    
+    def _build_direct_analysis_prompt(self, user_situation: str, factors: List[Dict[str, Any]]) -> str:
+        """
+        Build prompt for analyzing factor values directly from user situation.
+        """
+        factor_descriptions = []
+        for factor in factors:
+            values = "/".join(factor['possible_values'])
+            factor_descriptions.append(f"- {factor['name']}: {factor['description']} ({values})")
+        
+        factors_text = "\n".join(factor_descriptions)
+        
+        prompt = f"""Analyze this situation and determine the specific value for each psychological factor:
+
+SITUATION: {user_situation}
+
+PSYCHOLOGICAL FACTORS:
+{factors_text}
+
+For each factor, choose the most appropriate value based on what you can observe in the situation. Provide a brief explanation.
+
+Format exactly like this:
+factor_name: chosen_value - brief explanation
+factor_name: chosen_value - brief explanation
+
+Example:
+stress_level: high - person mentions feeling overwhelmed and anxious
+social_support: present - mentions having family and friends available
+
+Your analysis:"""
+        
+        return prompt
+    
     def generate_factors(self, user_situation: str, abstract: str = "") -> Dict[str, Any]:
         """
         Generate psychological factors from user input.
@@ -131,7 +259,10 @@ Please list 3 factors for this situation:"""
                 try:
                     # Split on colon
                     name_part, desc_part = clean_line.split(':', 1)
-                    factor_name = name_part.strip().lower().replace(' ', '_')
+                
+                    # Clean factor name - remove markdown formatting and asterisks
+                    raw_name = name_part.strip()
+                    factor_name = raw_name.replace('*', '').replace('#', '').strip().lower().replace(' ', '_')
                     
                     # Skip if we already have this factor from multi-line parsing
                     if any(f['name'] == factor_name for f in factors):

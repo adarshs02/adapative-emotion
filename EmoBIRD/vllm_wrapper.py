@@ -59,7 +59,7 @@ class VLLMWrapper:
                 top_p=0.9,
                 frequency_penalty=0.8,  # Prevent repetition
                 presence_penalty=0.3,   # Encourage diversity
-                stop=["}", "\n}", "```", "\n\n"]  # Stop after JSON completion
+                stop=None  # Remove problematic stop tokens that truncate JSON
             )
             
             # Configure ultra-constrained sampling for abstracts to prevent hallucination
