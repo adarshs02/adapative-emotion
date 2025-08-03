@@ -18,6 +18,7 @@ from neutral_probability_extractor import NeutralProbabilityExtractor
 from factor_entailment import FactorEntailment
 from logistic_pooler import LogisticPooler
 from emotion_predictor import EmotionPredictor
+from output_generator import OutputGenerator
 from config import EmobirdConfig
 from vllm_wrapper import VLLMWrapper
 from utils import print_gpu_info
@@ -47,12 +48,14 @@ class Emobird:
         self.factor_entailment = None
         self.logistic_pooler = LogisticPooler()
         self.emotion_predictor = None
+        self.output_generator = OutputGenerator(self.config)
         
         # Set vLLM wrapper for generators
         self.scenario_generator.set_vllm(self.vllm_wrapper)
         self.factor_generator.set_vllm(self.vllm_wrapper)
         self.emotion_generator.set_vllm(self.vllm_wrapper)
         self.neutral_prob_extractor.set_vllm(self.vllm_wrapper)
+        self.output_generator.set_vllm(self.vllm_wrapper)
         
         print("✅ Emobird system initialized successfully!")
     
@@ -170,6 +173,7 @@ class Emobird:
                     'cpt_building',
                     'runtime_component_setup',
                     'bird_pooling_emotion_calculation',
+                    'conversational_response_generation'
                 ]
             }
         }
@@ -218,6 +222,9 @@ def main():
     sorted_emotions = sorted(result['emotions'].items(), key=lambda x: x[1], reverse=True)
     for emotion, prob in sorted_emotions:
         print(f"  - {emotion}: {prob:.3f}")
+    
+    print(f"\n💬 AI Response:")
+    print(f"{result['response']}")
     
     print(f"\n📊 Processing Summary:")
     metadata = result['metadata']
