@@ -8,6 +8,8 @@ entail values from story → pool probabilities → return top-k emotions.
 from typing import Dict, List, Any
 from factor_entailment import FactorEntailment
 from logistic_pooler import LogisticPooler
+from dial_cache import load_cpt
+from utils import norm_key
 
 
 class EmotionPredictor:
@@ -15,18 +17,36 @@ class EmotionPredictor:
     End-to-end emotion prediction engine.
     """
     
-    def __init__(self, entailment: FactorEntailment, pooler: LogisticPooler, cpt_data: dict):
+    def __init__(self, entailment: FactorEntailment, pooler: LogisticPooler):
         """
         Initialize emotion predictor.
         
         Args:
             entailment: FactorEntailment instance for factor value extraction
             pooler: LogisticPooler instance for probability combination
-            cpt_data: CPT data structure with factors and probability tables
+            
+        Raises:
+            RuntimeError: If no CPT cache is found - dials must be built offline first
         """
         self.entailment = entailment
         self.pooler = pooler
-        self.cpt_data = cpt_data
+        
+        # Load CPT data from cache - no live probability extraction allowed
+        print("📋 Loading CPT data from cache...")
+        self.cpt_data = load_cpt()
+        
+        if self.cpt_data is None:
+            error_msg = (
+                "❌ No CPT cache found! Dials must be built offline first. "
+                "Run the offline CPT generation script before using EmotionPredictor."
+            )
+            print(error_msg)
+            raise RuntimeError(error_msg)
+        
+        print(f"✅ CPT data loaded successfully:")
+        print(f"   Combinations: {len(self.cpt_data.get('combinations', {}))}")
+        print(f"   Emotions: {len(self.cpt_data.get('emotions', []))}")
+        print(f"   Method: {self.cpt_data.get('metadata', {}).get('method', 'unknown')}")
     
     def predict(self, story: str, top_k: int = 3) -> Dict[str, float]:
         """

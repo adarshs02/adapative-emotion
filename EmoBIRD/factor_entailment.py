@@ -54,10 +54,14 @@ class FactorEntailment:
         
         for factor in self.factors:
             factor_name = factor['name']
-            factor_values = factor.get('values', [])
+            # Handle both 'values' and 'possible_values' field names
+            factor_values = factor.get('values', factor.get('possible_values', []))
             
             if not factor_values:
+                print(f"   ⚠️ Warning: Factor '{factor_name}' has no values, skipping")
                 continue
+            
+            print(f"   📋 Factor '{factor_name}' has values: {factor_values}")
                 
             print(f"   📊 Processing factor: {factor_name}")
             

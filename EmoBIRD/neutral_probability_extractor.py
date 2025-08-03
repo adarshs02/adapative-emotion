@@ -6,7 +6,11 @@ in neutral contexts, using a qualitative scale that gets mapped to numerical pro
 """
 
 import json
+import torch
+import random
 from typing import Dict, List, Any, Tuple
+from utils import norm_key, pool_logistic, validate_rating, RATING_SCALE
+from dial_cache import save_cpt
 from config import EmobirdConfig
 
 
@@ -81,7 +85,7 @@ class NeutralProbabilityExtractor:
     
     def _extract_single_probability(self, factor_name: str, factor_value: str, emotion: str) -> float:
         """
-        Extract neutral probability for a single (factor_value, emotion) pair.
+        Extract neutral probability for a single (factor_value, emotion) pair with strict validation.
         
         Args:
             factor_name: Name of the psychological factor
@@ -93,20 +97,64 @@ class NeutralProbabilityExtractor:
         """
         prompt = self._build_neutral_assessment_prompt(factor_name, factor_value, emotion)
         
-        try:
-            # Generate JSON response
-            response_data = self.vllm_wrapper.generate_json(prompt)
-            qualitative_rating = response_data.get('rating', 'neutral').lower().strip()
-            
-            # Map qualitative rating to numerical probability
-            probability = self.PROBABILITY_SCALE.get(qualitative_rating, 0.50)  # Default to neutral
-            
-            print(f"      {factor_name}={factor_value} → {emotion}: {qualitative_rating} ({probability})")
-            return probability
-            
-        except Exception as e:
-            print(f"      ❌ Error extracting probability for {factor_name}={factor_value} → {emotion}: {e}")
-            return 0.50  # Default to neutral probability
+        # Define JSON schema for validation
+        schema = {
+            "required": ["rating"],
+            "properties": {
+                "rating": {"type": "string"},
+                "reasoning": {"type": "string"}
+            }
+        }
+        
+        max_retries = 2
+        for attempt in range(max_retries + 1):
+            try:
+                print(f"      🔄 Attempt {attempt + 1}: Calling json_call for {factor_name}={factor_value} → {emotion}")
+                response_data = self.vllm_wrapper.json_call(
+                    prompt=prompt,
+                    schema=schema,
+                    component="neutral_probability_extractor",
+                    interaction_type=f"probability_assessment_attempt_{attempt+1}",
+                    max_retries=1  # Let json_call handle its own retries
+                )
+                
+                print(f"      📋 Raw JSON response: {response_data}")
+                raw_rating = response_data.get('rating', 'neutral')
+                print(f"      🏷️ Extracted rating: '{raw_rating}'")
+                
+                validated_rating = validate_rating(raw_rating)
+                probability = RATING_SCALE[validated_rating]
+                
+                print(f"      ✅ Successfully extracted: {raw_rating} → {validated_rating} → {probability}")
+                return probability
+                
+            except ValueError as e:
+                if "Illegal rating" in str(e):
+                    print(f"      ⚠️ Invalid rating on attempt {attempt + 1}: {e}")
+                    if attempt < max_retries:
+                        # Make prompt stricter for retry
+                        prompt = self._build_stricter_assessment_prompt(factor_name, factor_value, emotion)
+                        continue
+                    else:
+                        print(f"      ⚠️ All rating validation attempts failed, falling back to neutral")
+                        return 0.50
+                else:
+                    # Other validation error, continue to next attempt
+                    print(f"      ⚠️ JSON validation error on attempt {attempt + 1}: {e}")
+                    if attempt >= max_retries:
+                        print(f"      ⚠️ All attempts failed, falling back to neutral")
+                        return 0.50
+                    continue
+                    
+            except Exception as e:
+                print(f"      ❌ Unexpected error on attempt {attempt + 1}: {e}")
+                if attempt >= max_retries:
+                    print(f"      ❌ All attempts failed, falling back to neutral")
+                    return 0.50
+                continue
+        
+        # Should never reach here, but just in case
+        return 0.50
     
     def _build_neutral_assessment_prompt(self, factor_name: str, factor_value: str, emotion: str) -> str:
         """
@@ -148,6 +196,48 @@ Use exactly one of these ratings: very-unlikely, unlikely, neutral, likely, very
 
         return prompt
     
+    def _build_stricter_assessment_prompt(self, factor_name: str, factor_value: str, emotion: str) -> str:
+        """
+        Build a stricter prompt for retry attempts with more explicit instructions.
+        """
+        prompt = f"""CRITICAL: You must respond with EXACTLY the specified JSON format and rating scale.
+
+TASK: Assess how strongly a neutral situation with a specific factor indicates an emotion.
+
+FACTOR: {factor_name} = "{factor_value}"
+EMOTION: {emotion.upper()}
+
+INSTRUCTIONS:
+Imagine a completely neutral situation where the {factor_name} is "{factor_value}".
+How strongly does having this factor value, BY ITSELF, indicate that someone would feel {emotion.upper()}?
+
+Consider ONLY the factor value, not any specific dramatic scenario. Think about neutral, everyday contexts.
+
+You MUST use EXACTLY one of these five ratings:
+- very-unlikely
+- unlikely  
+- neutral
+- likely
+- very-likely
+
+No other rating words are allowed. Do not use "low", "high", "moderate", or any other terms.
+
+Respond with ONLY this JSON format:
+{{
+    "rating": "your_exact_rating_here",
+    "reasoning": "brief explanation of your assessment"
+}}
+
+EXAMPLE RESPONSE:
+{{
+    "rating": "likely",
+    "reasoning": "high stress often contributes to anxiety in neutral situations"
+}}
+
+Remember: Use EXACTLY one of: very-unlikely, unlikely, neutral, likely, very-likely"""
+
+        return prompt
+    
     def build_cpt_from_probabilities(self, probabilities: Dict[str, Dict[str, float]], 
                                    factors: List[Dict[str, Any]]) -> Dict[str, Any]:
         """
@@ -175,48 +265,56 @@ Use exactly one of these ratings: very-unlikely, unlikely, neutral, likely, very
         factor_combinations = self._generate_factor_combinations(factors)
         
         for combination in factor_combinations:
-            # Create combination key
-            combo_key = str(tuple(combination.values()))
+            # Create normalized combination key
+            combo_parts = []
+            for factor_name, factor_value in combination.items():
+                combo_parts.append(norm_key(factor_name, factor_value))
+            combo_key = "|".join(sorted(combo_parts))  # Sort for consistency
             
             # Calculate emotion probabilities for this combination
             emotion_probs = {}
             
             for emotion in all_emotions:
-                # Aggregate probabilities across factors in the combination
+                # Collect probabilities across factors in the combination for BIRD pooling
                 factor_contributions = []
                 
                 for factor_name, factor_value in combination.items():
-                    factor_key = f"{factor_name}={factor_value}"
+                    factor_key = norm_key(factor_name, factor_value)
                     if factor_key in probabilities and emotion in probabilities[factor_key]:
                         factor_contributions.append(probabilities[factor_key][emotion])
                 
-                # Use average of contributing factors, or neutral if no contributions
+                # Use logistic pooling (BIRD formula) instead of averaging
                 if factor_contributions:
-                    emotion_probs[emotion] = sum(factor_contributions) / len(factor_contributions)
+                    emotion_probs[emotion] = pool_logistic(factor_contributions)
                 else:
                     emotion_probs[emotion] = 0.50  # Neutral probability
             
-            # Normalize probabilities to sum to 1.0
-            total_prob = sum(emotion_probs.values())
-            if total_prob > 0:
-                for emotion in emotion_probs:
-                    emotion_probs[emotion] /= total_prob
-            
+            # No normalization needed for logistic pooling - each emotion is independent
             cpt_table[combo_key] = emotion_probs
         
         cpt_data = {
             'factors': factors,
             'emotions': all_emotions,
-            'cpt': cpt_table,
+            'combinations': cpt_table,  # Renamed from 'cpt' to 'combinations' for clarity
             'metadata': {
-                'method': 'neutral_probability_extraction',
+                'method': 'neutral_probability_extraction_with_logistic_pooling',
                 'num_combinations': len(cpt_table),
                 'num_factors': len(factors),
-                'num_emotions': len(all_emotions)
+                'num_emotions': len(all_emotions),
+                'pooling_method': 'logistic_bird_formula'
             }
         }
         
         print(f"   ✅ Built CPT with {len(cpt_table)} factor combinations and {len(all_emotions)} emotions")
+        
+        # Save CPT to cache for future use
+        try:
+            save_cpt(cpt_data)
+            print(f"   💾 CPT saved to cache successfully")
+        except Exception as e:
+            print(f"   ⚠️ Warning: Failed to save CPT to cache: {e}")
+            # Continue without failing - caching is not critical for functionality
+        
         return cpt_data
     
     def _generate_factor_combinations(self, factors: List[Dict[str, Any]]) -> List[Dict[str, str]]:
@@ -235,7 +333,15 @@ Use exactly one of these ratings: very-unlikely, unlikely, neutral, likely, very
             return [{}]
         
         factor_names = [f['name'] for f in factors]
-        factor_value_lists = [f.get('values', ['']) for f in factors]
+        # Handle both 'values' and 'possible_values' field names
+        factor_value_lists = []
+        for f in factors:
+            values = f.get('values', f.get('possible_values', ['']))
+            if not values or values == ['']:  # Fallback if no values found
+                print(f"⚠️ Warning: Factor '{f['name']}' has no values, using default ['unknown']")
+                values = ['unknown']
+            factor_value_lists.append(values)
+            print(f"📊 Factor '{f['name']}' has values: {values}")
         
         combinations = []
         for combo in itertools.product(*factor_value_lists):

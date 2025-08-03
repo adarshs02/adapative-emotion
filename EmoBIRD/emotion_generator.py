@@ -41,17 +41,17 @@ class EmotionGenerator:
             
         prompt = self._build_abstract_emotion_extraction_prompt(abstract)
         
-        # Generate JSON response
-        emotion_data = self.vllm_wrapper.generate_json(prompt)
-        print(f"🔍 Raw emotion data from abstract: {emotion_data}")
+        # Generate structured text response
+        response = self.vllm_wrapper.generate_abstract(prompt, component="emotion_generator", interaction_type="emotion_extraction")
+        print(f"🔍 Raw emotion response from abstract: {response}")
         
-        # Parse and validate emotions
-        emotions = emotion_data.get('crucial_emotions', [])
+        # Parse structured text response
+        emotions = self._parse_emotion_response(response)
         
-        # If JSON parsing failed or returned invalid data, just print fallback message
+        # Validate emotions count
         if not emotions or len(emotions) < 3:
-            print("⚠️ JSON parsing failed or insufficient emotions, fell back")
-            return []  # Return empty list if fallback needed
+            print("⚠️ Response parsing failed or insufficient emotions, using fallback")
+            return []  # Basic fallback emotions
         elif len(emotions) > 5:
             # Take top 5 if too many
             emotions = emotions[:5]
@@ -61,28 +61,55 @@ class EmotionGenerator:
         
         # Final validation - ensure we have 3-5 emotions
         if len(emotions) < 3:
-            print("⚠️ Final validation failed, fell back")
-            return []  # Return empty list if fallback needed
+            print("⚠️ Final validation failed, using fallback")
+            return []  # Basic fallback emotions
             
         return emotions[:5]  # Ensure max 5 emotions
     
     def _build_abstract_emotion_extraction_prompt(self, abstract: str) -> str:
         """Build the prompt for extracting crucial emotions from abstracts."""
         
-        prompt = f"""TASK: Extract 3-5 crucial emotions from this abstract/summary. Respond ONLY with valid JSON.
+        prompt = f"""TASK: Extract 3-5 crucial emotions from this abstract/summary.
 
-        ABSTRACT: {abstract}
+ABSTRACT: {abstract}
 
-        Analyze the emotions someone would feel based on this summary. Choose 3-5 of the most important and distinct emotions.
+Analyze the emotions someone would feel based on this summary. Choose 3-5 of the most important and distinct emotions.
 
-        Respond with ONLY this JSON format:
-        {{
-        "crucial_emotions": ["emotion1", "emotion2", "emotion3"]
-        }}
+Format your response as a simple list, one emotion per line:
+emotion1
+emotion2
+emotion3
 
-        Do not include any other text. Just the JSON object."""
+Example:
+anxiety
+sadness
+hope
+relief
+
+Your emotions:"""
         
         return prompt
+    
+    def _parse_emotion_response(self, response: str) -> List[str]:
+        """Parse emotion list from LLM structured text response."""
+        if not response:
+            return []
+            
+        # Split by lines and clean up
+        lines = response.strip().split('\n')
+        emotions = []
+        
+        for line in lines:
+            line = line.strip().lower()
+            # Skip empty lines and common prefixes
+            if line and not line.startswith(('your emotions:', 'emotions:', '-', '*', '•')):
+                # Remove any numbering or bullet points
+                emotion = line.split('.', 1)[-1].strip()
+                emotion = emotion.split(')', 1)[-1].strip()
+                if emotion and len(emotion) > 1:  # Basic validation
+                    emotions.append(emotion)
+        
+        return emotions
        
     def validate_emotions(self, emotions: List[str]) -> bool:
         """

@@ -123,10 +123,10 @@ class Emobird:
         # Step 7: Initialize runtime components with CPT data
         print("🔧 Setting up runtime components...")
         self.factor_entailment = FactorEntailment(self.vllm_wrapper, factors)
+        # EmotionPredictor now loads CPT from cache automatically
         self.emotion_predictor = EmotionPredictor(
             self.factor_entailment, 
-            self.logistic_pooler, 
-            cpt_data
+            self.logistic_pooler
         )
         
         # Step 8: Use BIRD pooling for final emotion probabilities  

@@ -91,9 +91,122 @@ class VLLMWrapper:
             Generated response string
         """
         response = self.generate_batch([prompt], component, interaction_type)[0]
-        return response
+        return {}
     
-    def _generate_with_json_params(self, prompt: str, component: str = "vllm", interaction_type: str = "json_generation") -> str:
+    def _generate_strict_json(self, prompt: str, component: str, interaction_type: str, use_temp_zero: bool = False) -> str:
+        """
+        Generate response with strict JSON parameters and stop tokens.
+        """
+        if not self.model:
+            raise RuntimeError("vLLM model not initialized")
+        
+        try:
+            # Create strict JSON sampling params with balanced stop tokens
+            # Use shorter max_tokens and smarter stop tokens to prevent rambling
+            json_max_tokens = min(200, self.json_sampling_params.max_tokens)  # Limit for JSON responses
+            
+            if use_temp_zero:
+                sampling_params = SamplingParams(
+                    temperature=0.0,
+                    max_tokens=json_max_tokens,
+                    top_p=0.95,
+                    stop=["\n}\n", "```", "\n\nHuman:", "\n\nAssistant:", "\n---"],  # Stop after JSON completion or rambling starts
+                    logprobs=None
+                )
+            else:
+                sampling_params = SamplingParams(
+                    temperature=0.1,  # Very low temperature for consistency
+                    max_tokens=json_max_tokens,
+                    top_p=0.95,
+                    stop=["\n}\n", "```", "\n\nHuman:", "\n\nAssistant:", "\n---"],  # Stop after JSON completion or rambling starts
+                    logprobs=None
+                )
+            
+            # Generate response
+            outputs = self.model.generate([prompt], sampling_params)
+            response = outputs[0].outputs[0].text.strip()
+            
+            # Log the interaction
+            logger = get_logger()
+            logger.log_interaction(
+                component=component,
+                interaction_type=interaction_type,
+                prompt=prompt,
+                response=response,
+                metadata={
+                    "sampling_method": "strict_json",
+                    "temperature": sampling_params.temperature,
+                    "max_tokens": sampling_params.max_tokens,
+                    "stop_tokens": sampling_params.stop
+                }
+            )
+            
+            return response
+            
+        except Exception as e:
+            print(f"❌ Error during strict JSON generation: {e}")
+            raise
+    
+    def _extract_first_json(self, response: str) -> str:
+        """
+        Extract the first valid JSON object from response, stripping everything after.
+        """
+        if not response:
+            raise ValueError("Empty response")
+        
+        # Remove markdown code blocks if present
+        if "```json" in response:
+            start = response.find("```json") + 7
+            end = response.find("```", start)
+            if end != -1:
+                response = response[start:end].strip()
+        elif "```" in response:
+            start = response.find("```") + 3
+            end = response.find("```", start)
+            if end != -1:
+                response = response[start:end].strip()
+        
+        # Find first { and matching }
+        start = response.find('{')
+        if start == -1:
+            raise ValueError("No JSON object found in response")
+        
+        # Find matching closing brace
+        brace_count = 0
+        end = start
+        for i, char in enumerate(response[start:], start):
+            if char == '{':
+                brace_count += 1
+            elif char == '}':
+                brace_count -= 1
+                if brace_count == 0:
+                    end = i + 1
+                    break
+        
+        if brace_count != 0:
+            raise ValueError("Unmatched braces in JSON")
+        
+        return response[start:end]
+    
+    def _validate_json_schema(self, parsed_json: dict, schema: dict) -> None:
+        """
+        Basic schema validation for required keys.
+        """
+        if "required" in schema:
+            for key in schema["required"]:
+                if key not in parsed_json:
+                    raise ValueError(f"Missing required key: {key}")
+        
+        if "properties" in schema:
+            for key, value in parsed_json.items():
+                if key in schema["properties"]:
+                    expected_type = schema["properties"][key].get("type")
+                    if expected_type == "array" and not isinstance(value, list):
+                        raise ValueError(f"Key '{key}' must be an array")
+                    elif expected_type == "string" and not isinstance(value, str):
+                        raise ValueError(f"Key '{key}' must be a string")
+    
+    def _generate_with_json_params(self, prompt: str, component: str, interaction_type: str) -> str:
         """
         Generate a single response using JSON-specific sampling parameters.
         
@@ -241,6 +354,91 @@ class VLLMWrapper:
             )
             print(f"❌ Error during generation: {e}")
             return [""] * len(prompts)  # Return empty strings as fallback
+    
+    def json_call(self, prompt: str, schema: dict = None, component: str = "vllm", interaction_type: str = "json_generation", max_retries: int = 2) -> Dict[str, Any]:
+        """
+        Enforce strict JSON generation with schema validation and retry logic.
+        
+        Args:
+            prompt: Input prompt string
+            schema: Optional JSON schema dict for validation
+            component: Component name for logging
+            interaction_type: Type of interaction for logging
+            max_retries: Maximum number of retry attempts
+            
+        Returns:
+            Parsed JSON dictionary
+            
+        Raises:
+            ValueError: If JSON parsing fails after all retries
+        """
+        logger = get_logger()
+        
+        for attempt in range(max_retries + 1):
+            try:
+                # Use temperature=0 for retry attempts to get more deterministic output
+                use_temp_zero = attempt > 0
+                
+                # Generate response with strict JSON parameters
+                response = self._generate_strict_json(prompt, component, f"{interaction_type}_attempt_{attempt+1}", use_temp_zero)
+                
+                # Extract and parse JSON strictly
+                cleaned_response = self._extract_first_json(response)
+                parsed_json = json.loads(cleaned_response)
+                
+                # Validate against schema if provided
+                if schema:
+                    self._validate_json_schema(parsed_json, schema)
+                
+                # Log successful JSON parsing
+                logger.log_interaction(
+                    component=component,
+                    interaction_type=f"{interaction_type}_success",
+                    prompt=prompt[:200] + "..." if len(prompt) > 200 else prompt,
+                    response=json.dumps(parsed_json)[:200] + "..." if len(json.dumps(parsed_json)) > 200 else json.dumps(parsed_json),
+                    metadata={
+                        "attempt_number": attempt + 1,
+                        "schema_validated": schema is not None,
+                        "temperature_zero": use_temp_zero
+                    }
+                )
+                
+                return parsed_json
+                
+            except (json.JSONDecodeError, ValueError, KeyError) as e:
+                # Log parsing error
+                logger.log_error(
+                    component=component,
+                    error_type="strict_json_parse_error",
+                    error_message=str(e),
+                    context={
+                        "attempt": attempt + 1,
+                        "max_retries": max_retries,
+                        "raw_response": response[:300] if 'response' in locals() else "No response",
+                        "interaction_type": interaction_type
+                    }
+                )
+                
+                if attempt < max_retries:
+                    print(f"⚠️ JSON parse error (attempt {attempt + 1}): {e}")
+                    continue
+                else:
+                    # Final failure - raise error
+                    error_msg = f"Failed to generate valid JSON after {max_retries + 1} attempts: {e}"
+                    logger.log_error(
+                        component=component,
+                        error_type="strict_json_generation_failed",
+                        error_message=error_msg,
+                        context={
+                            "final_response": response if 'response' in locals() else "No response",
+                            "interaction_type": interaction_type,
+                            "prompt": prompt[:200]
+                        }
+                    )
+                    raise ValueError(error_msg)
+        
+        # Should never reach here, but just in case
+        raise ValueError("Unexpected error in json_call")
     
     def generate_json(self, prompt: str, component: str = "vllm", interaction_type: str = "json_generation", max_retries: int = 3) -> Dict[str, Any]:
         """

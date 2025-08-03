@@ -37,28 +37,31 @@ class LogisticPooler:
         if not chosen_values:
             return 0.50  # Neutral probability if no factors
         
-        cpt_table = cpt_data.get('cpt', {})
+        # Fix field name mismatch: CPT builder uses 'combinations', not 'cpt'
+        cpt_table = cpt_data.get('combinations', {})
         
-        # Collect individual probabilities for this emotion
-        individual_probs = []
+        # Import normalization function to match CPT key format
+        from utils import norm_key
         
+        # Create combination key to match CPT format
+        # CPT uses format: "attachment_style=weak|self-efficacy=low|stress_level=high"
+        combo_parts = []
         for factor_name, factor_value in chosen_values.items():
-            # Create factor key for CPT lookup
-            factor_key = f"{factor_name}={factor_value}"
-            
-            # Look up probability in CPT
-            if factor_key in cpt_table and emotion in cpt_table[factor_key]:
-                prob = cpt_table[factor_key][emotion]
-                individual_probs.append(prob)
-            else:
-                # Missing dial ⇒ use neutral probability
-                individual_probs.append(0.50)
+            combo_parts.append(norm_key(factor_name, factor_value))
+        combo_key = "|".join(sorted(combo_parts))  # Sort for consistency with CPT building
         
-        if not individual_probs:
+        print(f"🔍 Looking up combination key: '{combo_key}'")
+        print(f"🗂️  Available keys: {list(cpt_table.keys())}")
+        
+        # Look up probability in CPT for this exact combination
+        if combo_key in cpt_table and emotion in cpt_table[combo_key]:
+            prob = cpt_table[combo_key][emotion]
+            print(f"✅ Found {emotion} probability: {prob}")
+            return prob
+        else:
+            # Missing combination ⇒ use neutral probability
+            print(f"⚠️  Combination not found, falling back to neutral (0.50)")
             return 0.50
-        
-        # Apply BIRD pooling formula
-        return LogisticPooler._bird_pooling_formula(individual_probs)
     
     @staticmethod
     def _bird_pooling_formula(probs: List[float]) -> float:
@@ -110,12 +113,21 @@ class LogisticPooler:
         Returns:
             Dictionary mapping emotion to pooled probability
         """
+        print(f"🎲 Starting pool_all_emotions...")
+        print(f"📋 Chosen values: {chosen_values}")
+        print(f"🗂️ CPT data keys: {list(cpt_data.keys())}")
+        
         emotions = cpt_data.get('emotions', [])
+        print(f"😊 Emotions to process: {emotions}")
         
         pooled_probs = {}
         for emotion in emotions:
-            pooled_probs[emotion] = LogisticPooler.pool(emotion, chosen_values, cpt_data)
+            print(f"\n🔮 Processing emotion: {emotion}")
+            prob = LogisticPooler.pool(emotion, chosen_values, cpt_data)
+            pooled_probs[emotion] = prob
+            print(f"📊 {emotion}: {prob}")
         
+        print(f"\n✅ Final pooled probabilities: {pooled_probs}")
         return pooled_probs
     
     @staticmethod

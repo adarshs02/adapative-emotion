@@ -1,0 +1,100 @@
+{
+  "factors": [
+    {
+      "name": "loss_aversion",
+      "description": "The tendency to prefer avoiding losses over acquiring gains",
+      "possible_values": [
+        "strong",
+        "weak"
+      ]
+    },
+    {
+      "name": "nostalgia",
+      "description": "The sentimental longing for the past",
+      "possible_values": [
+        "high",
+        "low"
+      ]
+    },
+    {
+      "name": "self-perception",
+      "description": "The way individuals perceive themselves and their abilities",
+      "possible_values": [
+        "positive",
+        "negative"
+      ]
+    }
+  ],
+  "emotions": [
+    "admiration",
+    "awe",
+    "curiosity",
+    "gratitude",
+    "nostalgia"
+  ],
+  "combinations": {
+    "loss_aversion=strong|nostalgia=high|self-perception=positive": {
+      "admiration": 0.75,
+      "awe": 0.1,
+      "curiosity": 0.75,
+      "gratitude": 0.75,
+      "nostalgia": 0.9
+    },
+    "loss_aversion=strong|nostalgia=high|self-perception=negative": {
+      "admiration": 0.25,
+      "awe": 0.03571428571428571,
+      "curiosity": 0.5,
+      "gratitude": 0.75,
+      "nostalgia": 0.75
+    },
+    "loss_aversion=strong|nostalgia=low|self-perception=positive": {
+      "admiration": 0.75,
+      "awe": 0.25,
+      "curiosity": 0.25,
+      "gratitude": 0.5,
+      "nostalgia": 0.75
+    },
+    "loss_aversion=strong|nostalgia=low|self-perception=negative": {
+      "admiration": 0.25,
+      "awe": 0.1,
+      "curiosity": 0.1,
+      "gratitude": 0.5,
+      "nostalgia": 0.5
+    },
+    "loss_aversion=weak|nostalgia=high|self-perception=positive": {
+      "admiration": 0.5,
+      "awe": 0.25,
+      "curiosity": 0.75,
+      "gratitude": 0.75,
+      "nostalgia": 0.75
+    },
+    "loss_aversion=weak|nostalgia=high|self-perception=negative": {
+      "admiration": 0.1,
+      "awe": 0.1,
+      "curiosity": 0.5,
+      "gratitude": 0.75,
+      "nostalgia": 0.5
+    },
+    "loss_aversion=weak|nostalgia=low|self-perception=positive": {
+      "admiration": 0.5,
+      "awe": 0.5,
+      "curiosity": 0.25,
+      "gratitude": 0.5,
+      "nostalgia": 0.5
+    },
+    "loss_aversion=weak|nostalgia=low|self-perception=negative": {
+      "admiration": 0.1,
+      "awe": 0.25,
+      "curiosity": 0.1,
+      "gratitude": 0.5,
+      "nostalgia": 0.25
+    }
+  },
+  "metadata": {
+    "method": "neutral_probability_extraction_with_logistic_pooling",
+    "num_combinations": 8,
+    "num_factors": 3,
+    "num_emotions": 5,
+    "pooling_method": "logistic_bird_formula"
+  }
+}
