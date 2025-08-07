@@ -21,6 +21,7 @@ var/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+.windsurf-server
 
 # Virtual Environment
 venv/

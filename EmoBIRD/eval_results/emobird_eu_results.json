@@ -1,0 +1,13 @@
+[
+  {
+    "idx": 0,
+    "prompt": "Please identify the emotion and its cause from the scenario. Respond ONLY in JSON format.\n\nScenario: Dorea was trying to cook a Baklava. When she took it out of the oven, the Baklava was ruined as the bread was not crispy, and the filling was bursting all over the pan. At that moment, her daughter came home and noticed her mom's fresh yet ruined Baklava. She tasted it and gave a thumbs-up to her mother.\nAnswer:",
+    "raw_model_output": "{\"emo_label\": \"disappointment\", \"cause_label\": \"Context from the scenario: Dorea was trying to cook a Baklava. When she took ...\"}",
+    "pred_emo": "disappointment",
+    "pred_cause": "Context from the scenario: Dorea was trying to cook a Baklava. When she took ...",
+    "gt_emo": "Delight",
+    "gt_cause": "Her daughter enjoyed the Baklava despite it being ruined",
+    "is_correct": false,
+    "is_emo_correct": false
+  }
+]

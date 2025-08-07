@@ -1,93 +1,93 @@
 {
   "factors": [
     {
-      "name": "loss_aversion",
-      "description": "The tendency to prefer avoiding losses over acquiring gains",
+      "name": "social_support",
+      "description": "Availability of emotional support from others",
       "possible_values": [
-        "strong",
-        "weak"
+        "absent",
+        "present"
       ]
     },
     {
-      "name": "nostalgia",
-      "description": "The sentimental longing for the past",
+      "name": "attachment_style",
+      "description": "Level of emotional dependence on others",
       "possible_values": [
-        "high",
-        "low"
+        "secure",
+        "anxious"
       ]
     },
     {
-      "name": "self-perception",
-      "description": "The way individuals perceive themselves and their abilities",
+      "name": "self-esteem",
+      "description": "Person's overall sense of self-worth",
       "possible_values": [
-        "positive",
-        "negative"
+        "low",
+        "high"
       ]
     }
   ],
   "emotions": [
-    "admiration",
-    "awe",
-    "curiosity",
-    "gratitude",
-    "nostalgia"
+    "disappointment",
+    "frustration",
+    "loneliness",
+    "regret",
+    "sadness"
   ],
   "combinations": {
-    "loss_aversion=strong|nostalgia=high|self-perception=positive": {
-      "admiration": 0.75,
-      "awe": 0.1,
-      "curiosity": 0.75,
-      "gratitude": 0.75,
-      "nostalgia": 0.9
+    "attachment_style=secure|self-esteem=low|social_support=absent": {
+      "disappointment": 0.75,
+      "frustration": 0.75,
+      "loneliness": 0.9,
+      "regret": 0.75,
+      "sadness": 0.75
     },
-    "loss_aversion=strong|nostalgia=high|self-perception=negative": {
-      "admiration": 0.25,
-      "awe": 0.03571428571428571,
-      "curiosity": 0.5,
-      "gratitude": 0.75,
-      "nostalgia": 0.75
+    "attachment_style=secure|self-esteem=high|social_support=absent": {
+      "disappointment": 0.5,
+      "frustration": 0.5,
+      "loneliness": 0.5,
+      "regret": 0.5,
+      "sadness": 0.5
     },
-    "loss_aversion=strong|nostalgia=low|self-perception=positive": {
-      "admiration": 0.75,
-      "awe": 0.25,
-      "curiosity": 0.25,
-      "gratitude": 0.5,
-      "nostalgia": 0.75
+    "attachment_style=anxious|self-esteem=low|social_support=absent": {
+      "disappointment": 0.9,
+      "frustration": 0.9,
+      "loneliness": 0.9642857142857143,
+      "regret": 0.9,
+      "sadness": 0.9
     },
-    "loss_aversion=strong|nostalgia=low|self-perception=negative": {
-      "admiration": 0.25,
-      "awe": 0.1,
-      "curiosity": 0.1,
-      "gratitude": 0.5,
-      "nostalgia": 0.5
+    "attachment_style=anxious|self-esteem=high|social_support=absent": {
+      "disappointment": 0.75,
+      "frustration": 0.75,
+      "loneliness": 0.75,
+      "regret": 0.75,
+      "sadness": 0.75
     },
-    "loss_aversion=weak|nostalgia=high|self-perception=positive": {
-      "admiration": 0.5,
-      "awe": 0.25,
-      "curiosity": 0.75,
-      "gratitude": 0.75,
-      "nostalgia": 0.75
+    "attachment_style=secure|self-esteem=low|social_support=present": {
+      "disappointment": 0.75,
+      "frustration": 0.75,
+      "loneliness": 0.75,
+      "regret": 0.75,
+      "sadness": 0.75
     },
-    "loss_aversion=weak|nostalgia=high|self-perception=negative": {
-      "admiration": 0.1,
-      "awe": 0.1,
-      "curiosity": 0.5,
-      "gratitude": 0.75,
-      "nostalgia": 0.5
+    "attachment_style=secure|self-esteem=high|social_support=present": {
+      "disappointment": 0.5,
+      "frustration": 0.5,
+      "loneliness": 0.25,
+      "regret": 0.5,
+      "sadness": 0.5
     },
-    "loss_aversion=weak|nostalgia=low|self-perception=positive": {
-      "admiration": 0.5,
-      "awe": 0.5,
-      "curiosity": 0.25,
-      "gratitude": 0.5,
-      "nostalgia": 0.5
+    "attachment_style=anxious|self-esteem=low|social_support=present": {
+      "disappointment": 0.9,
+      "frustration": 0.9,
+      "loneliness": 0.9,
+      "regret": 0.9,
+      "sadness": 0.9
     },
-    "loss_aversion=weak|nostalgia=low|self-perception=negative": {
-      "admiration": 0.1,
-      "awe": 0.25,
-      "curiosity": 0.1,
-      "gratitude": 0.5,
-      "nostalgia": 0.25
+    "attachment_style=anxious|self-esteem=high|social_support=present": {
+      "disappointment": 0.75,
+      "frustration": 0.75,
+      "loneliness": 0.5,
+      "regret": 0.75,
+      "sadness": 0.75
     }
   },
   "metadata": {

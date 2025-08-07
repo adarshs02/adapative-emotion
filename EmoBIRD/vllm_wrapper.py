@@ -91,7 +91,7 @@ class VLLMWrapper:
             Generated response string
         """
         response = self.generate_batch([prompt], component, interaction_type)[0]
-        return {}
+        return response
     
     def _generate_strict_json(self, prompt: str, component: str, interaction_type: str, use_temp_zero: bool = False) -> str:
         """

@@ -18,6 +18,7 @@ from neutral_probability_extractor import NeutralProbabilityExtractor
 from factor_entailment import FactorEntailment
 from logistic_pooler import LogisticPooler
 from emotion_predictor import EmotionPredictor
+from output_generator import OutputGenerator
 from config import EmobirdConfig
 from vllm_wrapper import VLLMWrapper
 from utils import print_gpu_info
@@ -31,6 +32,7 @@ class Emobird:
     def __init__(self, config_path: str = None):
         """Initialize the Emobird system."""
         self.config = EmobirdConfig(config_path)
+        self.verbose = True  # Default to verbose mode
         
         print("🐦 Initializing Emobird system...")
         
@@ -86,93 +88,139 @@ class Emobird:
             - emotions: Final emotion probability distribution
             - metadata: Additional information about the inference
         """
-        print(f"\n🔍 Analyzing situation: '{user_situation[:100]}...'")
+        if self.verbose:
+            print(f"\n🔍 Analyzing situation: '{user_situation[:100]}...'")
         
-        # Step 1: Generate abstract from user situation
-        print("📋 Generating abstract from situation...")
-        abstract = self.scenario_generator._generate_abstract(user_situation)
-        print(f"   Generated abstract: {abstract[:100]}...")  # Show first 100 chars
-        
-        # Step 2: Extract 2-4 crucial emotions from abstract
-        print("🎭 Extracting crucial emotions from abstract...")
-        crucial_emotions = self.emotion_generator.extract_crucial_emotions_from_abstract(abstract)
-        print(f"   Found crucial emotions: {crucial_emotions}")
-        
-        # Step 3: Generate psychological factors from user input
-        print("⚙️ Generating important factors...")
-        factors = self.factor_generator.generate_factors_from_situation(user_situation)
-        
-        # Step 4: Extract specific factor values for this situation
-        print("🎯 Extracting factor values...")
-        factor_values = self.factor_generator.extract_factor_values_direct(
-            user_situation, factors
-        )
-        
-        # Step 5: Extract neutral probabilities for (factor, emotion) pairs
-        print("🎲 Extracting neutral probabilities...")
-        neutral_probabilities = self.neutral_prob_extractor.extract_neutral_probabilities(
-            factors, crucial_emotions
-        )
-        
-        # Step 6: Build CPT from neutral probabilities
-        print("📊 Building CPT from neutral probabilities...")
-        cpt_data = self.neutral_prob_extractor.build_cpt_from_probabilities(
-            neutral_probabilities, factors
-        )
-        
-        # Step 7: Initialize runtime components with CPT data
-        print("🔧 Setting up runtime components...")
-        self.factor_entailment = FactorEntailment(self.vllm_wrapper, factors)
-        # EmotionPredictor now loads CPT from cache automatically
-        self.emotion_predictor = EmotionPredictor(
-            self.factor_entailment, 
-            self.logistic_pooler
-        )
-        
-        # Step 8: Use BIRD pooling for final emotion probabilities  
-        print("🎯 Calculating emotions using BIRD pooling...")
-        emotions = self.emotion_predictor.predict_all(user_situation)
-        
-        # Step 9: Generate conversational response
-        print("💬 Generating conversational response...")
-        top_emotions = dict(sorted(emotions.items(), key=lambda x: x[1], reverse=True)[:3])
-        
-        response = self.output_generator.generate_response(
-            user_input=user_situation,
-            top_emotions=top_emotions,
-            context={
-                'factors': factor_values,
+        try:
+            # Step 1: Generate abstract from user situation
+            if self.verbose:
+                print("📋 Generating abstract from situation...")
+            abstract = self.scenario_generator._generate_abstract(user_situation)
+            if self.verbose:
+                print(f"   Generated abstract: {abstract[:100]}...")  # Show first 100 chars
+            
+            # Step 2: Extract 2-4 crucial emotions from abstract
+            if self.verbose:
+                print("🎭 Extracting crucial emotions from abstract...")
+            crucial_emotions = self.emotion_generator.extract_crucial_emotions_from_abstract(abstract)
+            if self.verbose:
+                print(f"   Found crucial emotions: {crucial_emotions}")
+            
+            # Step 3: Generate psychological factors from user input
+            if self.verbose:
+                print("⚙️ Generating important factors...")
+            factors = self.factor_generator.generate_factors_from_situation(user_situation)
+            
+            # Step 4: Extract specific factor values for this situation
+            if self.verbose:
+                print("🎯 Extracting factor values...")
+            factor_values = self.factor_generator.extract_factor_values_direct(
+                user_situation, factors
+            )
+            
+            # Step 5: Extract neutral probabilities for (factor, emotion) pairs
+            if self.verbose:
+                print("🎲 Extracting neutral probabilities...")
+            neutral_probabilities = self.neutral_prob_extractor.extract_neutral_probabilities(
+                factors, crucial_emotions
+            )
+            
+            # Step 6: Build CPT from neutral probabilities
+            if self.verbose:
+                print("📊 Building CPT from neutral probabilities...")
+            cpt_data = self.neutral_prob_extractor.build_cpt_from_probabilities(
+                neutral_probabilities, factors
+            )
+            
+            # Step 7: Initialize runtime components with CPT data
+            if self.verbose:
+                print("🔧 Setting up runtime components...")
+            self.factor_entailment = FactorEntailment(self.vllm_wrapper, factors)
+            # EmotionPredictor now loads CPT from cache automatically
+            self.emotion_predictor = EmotionPredictor(
+                self.factor_entailment, 
+                self.logistic_pooler
+            )
+            
+            # Step 8: Use BIRD pooling for final emotion probabilities  
+            if self.verbose:
+                print("🎯 Calculating emotions using BIRD pooling...")
+            emotions = self.emotion_predictor.predict_all(user_situation)
+            
+            # Create top_emotions from sorted emotions with error handling
+            top_emotions = {}
+            try:
+                if isinstance(emotions, dict) and emotions:
+                    sorted_items = sorted(emotions.items(), key=lambda x: x[1], reverse=True)[:3]
+                    top_emotions = dict(sorted_items)
+                else:
+                    if self.verbose:
+                        print("⚠️ Emotions is not a valid dictionary, using empty top_emotions")
+                    top_emotions = {}
+            except Exception as e:
+                if self.verbose:
+                    print(f"⚠️ Error creating top_emotions: {e}")
+                top_emotions = {}
+            
+            # Step 9: Generate conversational response
+            if self.verbose:
+                print("🗣️ Generating conversational response...")
+            output_generator = OutputGenerator(self.config)
+            output_generator.set_vllm(self.vllm_wrapper)
+            response = output_generator.generate_response(
+                user_input=user_situation,
+                top_emotions=top_emotions,
+                context="EmoBIRD emotional analysis"
+            )
+            
+            # Return comprehensive result
+            return {
                 'abstract': abstract,
-                'crucial_emotions': crucial_emotions
+                'crucial_emotions': crucial_emotions,
+                'factors': factor_values,
+                'neutral_probabilities': neutral_probabilities,
+                'cpt_data': cpt_data,
+                'emotions': emotions,
+                'top_emotions': top_emotions,
+                'response': response,
+                'metadata': {
+                    'abstract_length': len(abstract),
+                    'num_crucial_emotions': len(crucial_emotions),
+                    'num_factors': len(factor_values),
+                    'processing_steps': [
+                        'abstract_generation',
+                        'emotion_extraction_from_abstract',
+                        'factor_generation', 
+                        'factor_value_extraction',
+                        'neutral_probability_extraction',
+                        'cpt_building',
+                        'runtime_component_setup',
+                        'bird_pooling_emotion_calculation',
+                    ]
+                }
             }
-        )
         
-        # Return comprehensive result
-        return {
-            'abstract': abstract,
-            'crucial_emotions': crucial_emotions,
-            'factors': factor_values,
-            'neutral_probabilities': neutral_probabilities,
-            'cpt_data': cpt_data,
-            'emotions': emotions,
-            'top_emotions': top_emotions,
-            'response': response,
-            'metadata': {
-                'abstract_length': len(abstract),
-                'num_crucial_emotions': len(crucial_emotions),
-                'num_factors': len(factor_values),
-                'processing_steps': [
-                    'abstract_generation',
-                    'emotion_extraction_from_abstract',
-                    'factor_generation', 
-                    'factor_value_extraction',
-                    'neutral_probability_extraction',
-                    'cpt_building',
-                    'runtime_component_setup',
-                    'bird_pooling_emotion_calculation',
-                ]
+        except Exception as e:
+            print(f"❌ Error in EmoBIRD pipeline: {e}")
+            # Return structured error response that maintains expected dictionary format
+            return {
+                'abstract': "",
+                'crucial_emotions': [],
+                'factors': {},
+                'neutral_probabilities': {},
+                'cpt_data': {},
+                'emotions': {},
+                'top_emotions': {},
+                'response': f"Error in EmoBIRD analysis: {str(e)}",
+                'error': True,
+                'error_message': str(e),
+                'metadata': {
+                    'abstract_length': 0,
+                    'num_crucial_emotions': 0,
+                    'num_factors': 0,
+                    'processing_steps': ['error_occurred']
+                }
             }
-        }
     
     def batch_analyze(self, situations: List[str]) -> List[Dict[str, Any]]:
         """Analyze multiple situations in batch."""

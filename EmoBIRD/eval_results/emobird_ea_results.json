@@ -1,0 +1,10 @@
+[
+  {
+    "idx": 0,
+    "prompt": "Scenario: Sarah found out that her younger brother is being bullied at school but he begged her not to tell their parents.\nAs Sarah, how would you respond?\nChoices:\na) Promise to keep the secret\nb) Inform their parents anyway\nc) Confront the bullies herself\nd) Suggest her brother to talk to a teacher or a school counselor\nAnswer:",
+    "raw_model_output": "d) Suggest her brother to talk to a teacher or a school counselor\n\nReasoning: This response acknowledges the brother's feelings and boundaries while also taking proactive steps to address the bullying situation. By suggesting he talk to a teacher or a school counselor, Sarah can help her brother feel supported and empowered without betraying his trust. This approach also considers the potential long-term consequences of each choice and prioritizes a constructive solution that respects everyone's emotional well-being. \n\nThis response demonstrates empathy, understanding, and a willingness to find a solution that works for everyone involved. By choosing this option, Sarah can help her brother feel safe, heard,",
+    "pred_choice_text": "Suggest her brother to talk to a teacher or a school counselor",
+    "gt_choice_text": "Suggest her brother to talk to a teacher or a school counselor",
+    "is_correct": true
+  }
+]

@@ -41,6 +41,34 @@ class OutputGenerator:
         if not self.vllm_wrapper:
             raise ValueError("vLLM wrapper not set. Call set_vllm() first.")
         
+        # Robust input validation to prevent string/type errors
+        try:
+            # Validate user_input
+            if not isinstance(user_input, str):
+                user_input = str(user_input) if user_input else "[No input provided]"
+                
+            # Validate top_emotions - handle case where it might be a string or malformed
+            if isinstance(top_emotions, str):
+                print(f"⚠️ Warning: top_emotions received as string: {top_emotions[:100]}...")
+                top_emotions = {}  # Fallback to empty dict
+            elif not isinstance(top_emotions, dict):
+                print(f"⚠️ Warning: top_emotions is not a dict, got {type(top_emotions)}")
+                top_emotions = {}  # Fallback to empty dict
+            elif not top_emotions:  # Empty dict
+                top_emotions = {}  # Ensure it's an empty dict, not None
+                
+            # Validate context
+            if context is not None and not isinstance(context, dict):
+                print(f"⚠️ Warning: context is not a dict, got {type(context)}")
+                context = {}  # Fallback to empty dict
+                
+        except Exception as e:
+            print(f"⚠️ Error in OutputGenerator input validation: {e}")
+            # Set safe defaults
+            user_input = str(user_input) if user_input else "[Input validation failed]"
+            top_emotions = {}
+            context = {}
+        
         print("💬 Generating conversational response...")
         
         # Build conversational prompt
