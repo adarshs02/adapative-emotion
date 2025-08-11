@@ -1,93 +1,93 @@
 {
   "factors": [
     {
-      "name": "social_support",
-      "description": "Availability of emotional support from others",
+      "name": "nostalgia",
+      "description": "Tendency to reminisce about past experiences and objects",
       "possible_values": [
-        "absent",
-        "present"
+        "strong",
+        "weak"
       ]
     },
     {
-      "name": "attachment_style",
-      "description": "Level of emotional dependence on others",
+      "name": "separation_anxiety",
+      "description": "Fear of being away from loved ones",
       "possible_values": [
-        "secure",
-        "anxious"
+        "high",
+        "low"
       ]
     },
     {
-      "name": "self-esteem",
-      "description": "Person's overall sense of self-worth",
+      "name": "self-reliance",
+      "description": "Ability to take care of oneself in new situations",
       "possible_values": [
-        "low",
-        "high"
+        "weak",
+        "strong"
       ]
     }
   ],
   "emotions": [
-    "disappointment",
-    "frustration",
-    "loneliness",
-    "regret",
-    "sadness"
+    "excitement",
+    "longing",
+    "nervousness",
+    "uncertainty",
+    "wistfulness"
   ],
   "combinations": {
-    "attachment_style=secure|self-esteem=low|social_support=absent": {
-      "disappointment": 0.75,
-      "frustration": 0.75,
-      "loneliness": 0.9,
-      "regret": 0.75,
-      "sadness": 0.75
+    "nostalgia=strong|self-reliance=weak|separation_anxiety=high": {
+      "excitement": 0.25,
+      "longing": 0.9,
+      "nervousness": 0.75,
+      "uncertainty": 0.5,
+      "wistfulness": 0.9
     },
-    "attachment_style=secure|self-esteem=high|social_support=absent": {
-      "disappointment": 0.5,
-      "frustration": 0.5,
-      "loneliness": 0.5,
-      "regret": 0.5,
-      "sadness": 0.5
+    "nostalgia=strong|self-reliance=strong|separation_anxiety=high": {
+      "excitement": 0.75,
+      "longing": 0.9,
+      "nervousness": 0.5,
+      "uncertainty": 0.5,
+      "wistfulness": 0.9
     },
-    "attachment_style=anxious|self-esteem=low|social_support=absent": {
-      "disappointment": 0.9,
-      "frustration": 0.9,
-      "loneliness": 0.9642857142857143,
-      "regret": 0.9,
-      "sadness": 0.9
+    "nostalgia=strong|self-reliance=weak|separation_anxiety=low": {
+      "excitement": 0.25,
+      "longing": 0.75,
+      "nervousness": 0.5,
+      "uncertainty": 0.25,
+      "wistfulness": 0.75
     },
-    "attachment_style=anxious|self-esteem=high|social_support=absent": {
-      "disappointment": 0.75,
-      "frustration": 0.75,
-      "loneliness": 0.75,
-      "regret": 0.75,
-      "sadness": 0.75
+    "nostalgia=strong|self-reliance=strong|separation_anxiety=low": {
+      "excitement": 0.75,
+      "longing": 0.75,
+      "nervousness": 0.25,
+      "uncertainty": 0.25,
+      "wistfulness": 0.75
     },
-    "attachment_style=secure|self-esteem=low|social_support=present": {
-      "disappointment": 0.75,
-      "frustration": 0.75,
-      "loneliness": 0.75,
-      "regret": 0.75,
-      "sadness": 0.75
+    "nostalgia=weak|self-reliance=weak|separation_anxiety=high": {
+      "excitement": 0.25,
+      "longing": 0.75,
+      "nervousness": 0.5,
+      "uncertainty": 0.75,
+      "wistfulness": 0.9
     },
-    "attachment_style=secure|self-esteem=high|social_support=present": {
-      "disappointment": 0.5,
-      "frustration": 0.5,
-      "loneliness": 0.25,
-      "regret": 0.5,
-      "sadness": 0.5
+    "nostalgia=weak|self-reliance=strong|separation_anxiety=high": {
+      "excitement": 0.75,
+      "longing": 0.75,
+      "nervousness": 0.25,
+      "uncertainty": 0.75,
+      "wistfulness": 0.9
     },
-    "attachment_style=anxious|self-esteem=low|social_support=present": {
-      "disappointment": 0.9,
-      "frustration": 0.9,
-      "loneliness": 0.9,
-      "regret": 0.9,
-      "sadness": 0.9
+    "nostalgia=weak|self-reliance=weak|separation_anxiety=low": {
+      "excitement": 0.25,
+      "longing": 0.5,
+      "nervousness": 0.25,
+      "uncertainty": 0.5,
+      "wistfulness": 0.75
     },
-    "attachment_style=anxious|self-esteem=high|social_support=present": {
-      "disappointment": 0.75,
-      "frustration": 0.75,
-      "loneliness": 0.5,
-      "regret": 0.75,
-      "sadness": 0.75
+    "nostalgia=weak|self-reliance=strong|separation_anxiety=low": {
+      "excitement": 0.75,
+      "longing": 0.5,
+      "nervousness": 0.1,
+      "uncertainty": 0.5,
+      "wistfulness": 0.75
     }
   },
   "metadata": {

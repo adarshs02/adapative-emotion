@@ -2,9 +2,221 @@
   {
     "idx": 0,
     "prompt": "Scenario: Sarah found out that her younger brother is being bullied at school but he begged her not to tell their parents.\nAs Sarah, how would you respond?\nChoices:\na) Promise to keep the secret\nb) Inform their parents anyway\nc) Confront the bullies herself\nd) Suggest her brother to talk to a teacher or a school counselor\nAnswer:",
-    "raw_model_output": "d) Suggest her brother to talk to a teacher or a school counselor\n\nReasoning: This response acknowledges the brother's feelings and boundaries while also taking proactive steps to address the bullying situation. By suggesting he talk to a teacher or a school counselor, Sarah can help her brother feel supported and empowered without betraying his trust. This approach also considers the potential long-term consequences of each choice and prioritizes a constructive solution that respects everyone's emotional well-being. \n\nThis response demonstrates empathy, understanding, and a willingness to find a solution that works for everyone involved. By choosing this option, Sarah can help her brother feel safe, heard,",
+    "raw_model_output": "d) Suggest her brother to talk to a teacher or a school counselor\n\nReasoning: This response acknowledges Sarah's brother's trust and feelings while also addressing the bullying issue. By suggesting he talk to a teacher or a school counselor, Sarah can help her brother find support without betraying his trust. This approach also takes into account the potential emotional impact on her parents, as it doesn't directly involve them, and allows for a constructive solution to be implemented. This response demonstrates empathy, understanding, and a willingness to help without escalating the situation. \n\nNote: This response requires a deep understanding of the emotional context and the ability to weigh",
     "pred_choice_text": "Suggest her brother to talk to a teacher or a school counselor",
     "gt_choice_text": "Suggest her brother to talk to a teacher or a school counselor",
-    "is_correct": true
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 1,
+    "prompt": "Scenario: Natalie's friend has recently been going through a breakdown after a bad break-up and constantly calls Natalie throughout the day to talk about how she feels, which is overwhelming to Natalie\nAs Natalie, how would you respond?\nChoices:\na) Cut off communication with her friend for a while\nb) Continuously reassure her friend that everything will be fine\nc) Suggest her friend to seek professional help like a therapist\nd) Tell her friend to deal with it herself\nAnswer:",
+    "raw_model_output": "c) Suggest her friend to seek professional help like a therapist\n\nReasoning: Choice c) Suggest her friend to seek professional help like a therapist is the most empathetic and appropriate response. This response acknowledges Natalie's emotional exhaustion while still showing empathy and concern for her friend's well-being. Suggesting professional help can help her friend cope with her emotions and work through her grief in a healthy manner. This choice also empowers Natalie to set boundaries while still being supportive of her friend. \n\nThe other options are not the most appropriate:\n- a) Cutting off communication would be an unempathetic response and may lead to",
+    "pred_choice_text": "Cut off communication with her friend for a while",
+    "gt_choice_text": "Suggest her friend to seek professional help like a therapist",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "The model's chosen option is unrelated to the ground-truth option and may lead to negative consequences for the friend.",
+    "final_score": 0.0
+  },
+  {
+    "idx": 2,
+    "prompt": "Scenario: James' best friend has been acting distant and unresponsive recently. When James asked what was wrong, his friend mumbled something about coping with \"personal problems\".\nAs James, how would you respond?\nChoices:\na) Pray for his friend's wellbeing\nb) Confront his friend for not being transparent\nc) Respect his friend's privacy but express his willingness to help when ready\nd) Offer to help with whatever the personal problem might be without asking what it is\nAnswer:",
+    "raw_model_output": "c) Respect his friend's privacy but express his willingness to help when ready\n\nReasoning: This choice acknowledges James' friend's emotional distress without prying or intruding. It shows empathy and understanding, allowing the friend to open up when ready. Choice (c) prioritizes the friend's comfort and autonomy, which is crucial in situations where someone is struggling with personal issues. By expressing willingness to help, James demonstrates his support without putting pressure on his friend. This approach is likely to strengthen their friendship and create a safe space for his friend to share his struggles. \n\nNote: This response prioritizes empathy and respect for the friend's",
+    "pred_choice_text": "Respect his friend's privacy but express his willingness to help when ready",
+    "gt_choice_text": "Respect his friend's privacy but express his willingness to help when ready",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 3,
+    "prompt": "Scenario: Mike's teenage son was caught yesterday stealing videogames from the local store.\nAs Mike, how would you respond?\nChoices:\na) Pay the owner, hoping it's a one-time mistake\nb) Arrange a meeting with the store owner for his son to apologize\nc) Call the police to report his son's actions\nd) Ground his son without discussing the issue.\nAnswer:",
+    "raw_model_output": "b) Arrange a meeting with the store owner for his son to apologize\n\nReasoning: Choice b is the most empathetic and constructive approach. By arranging a meeting, Mike acknowledges his son's actions and encourages him to take responsibility. This choice also allows the store owner to express their feelings and concerns, promoting a sense of accountability and empathy. Choice b addresses the emotional needs of all parties involved, including Mike's son, the store owner, and Mike himself. It sets the stage for a constructive conversation and potential growth, rather than simply punishing or ignoring the issue. This approach acknowledges the emotional complexity of the situation and seeks to resolve it",
+    "pred_choice_text": "Arrange a meeting with the store owner for his son to apologize",
+    "gt_choice_text": "Arrange a meeting with the store owner for his son to apologize",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 4,
+    "prompt": "Scenario: Samantha's teenage daughter recently started hanging out with a group of friends who she believes are a bad influence.\nAs Samantha, how would you respond?\nChoices:\na) Forbid her from seeing these friends\nb) Personally meet and talk to her friends\nc) Discuss her concerns with her daughter\nd) Invite these friends over to their house\nAnswer:",
+    "raw_model_output": "c) Discuss her concerns with her daughter\n\nReasoning: Choice c) is the most empathetic and constructive approach. By discussing her concerns with her daughter, Samantha acknowledges her daughter's autonomy and feelings while also expressing her worries. This approach allows for open communication, empathy, and understanding, which are essential for building trust and resolving conflicts. This choice also takes into account the emotional state of both Samantha and her daughter, addressing the predicted emotions of concern, anxiety, and fear. By choosing to discuss her concerns, Samantha demonstrates a willingness to listen and work together to find a solution, which is likely to lead to a more positive outcome.",
+    "pred_choice_text": "Discuss her concerns with her daughter",
+    "gt_choice_text": "Discuss her concerns with her daughter",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 5,
+    "prompt": "Scenario: Robert had an old red t-shirt that he wanted to throw out. One day, his friend Andrew, asked to borrow the t-shirt for a party. The next day, Andrew came to Robert and apologetically told him that he lost the T-shirt.\nAs Robert, how would you respond?\nChoices:\na) Express forgiveness and understanding\nb) Request a replacement of similar value or style\nc) Mention that it's okay as the t-shirt didn't have any value to him\nd) Choose not to lend anything to Andrew in the future\nAnswer:",
+    "raw_model_output": "a) Express forgiveness and understanding\n\nReasoning: The emotional analysis indicates that Robert is likely to feel frustrated, disappointed, and angry due to the loss of the t-shirt. However, choosing to express forgiveness and understanding would be the most empathetic response. This response acknowledges Robert's feelings while also promoting a positive and supportive relationship with Andrew. Forgiveness can help to diffuse tension and prevent further conflict. By choosing this response, Robert demonstrates emotional intelligence and a willingness to understand Andrew's perspective. This approach also opens the door for Andrew to apologize sincerely and make amends, potentially strengthening their friendship. \n\nThis response prioritizes empathy and understanding,",
+    "pred_choice_text": "Express forgiveness and understanding",
+    "gt_choice_text": "Mention that it's okay as the t-shirt didn't have any value to him",
+    "is_correct": false,
+    "policy_score": 0.6,
+    "policy_justification": "The model's choice of expressing forgiveness and understanding is generally appropriate and empathetic, but misses the specific context of Robert's feelings and the value of the lost t-shirt. While forgiveness can be beneficial, Robert's initial reaction is likely to be frustration and disappointment, and the model's response doesn't fully capture this emotional complexity.",
+    "final_score": 0.6
+  },
+  {
+    "idx": 6,
+    "prompt": "Scenario: Nick's younger brother lost his scholarship due to poor grades and now he doesn't know how to continue his education.\nAs Nick, how would you respond?\nChoices:\na) Help him find a part-time job\nb) Comfort and support him so he can get a good grade next time\nc) Offer to pay for his education fee\nd) Help him find a full-time job\nAnswer:",
+    "raw_model_output": "b) Comfort and support him so he can get a good grade next time.\n\nReasoning: This choice acknowledges the emotional pain and distress that Nick's brother is experiencing, while also encouraging him to take responsibility for his education. By providing comfort and support, Nick can help his brother feel less helpless and more hopeful about his future. This approach also promotes emotional regulation, which is essential for Nick's brother to overcome his current emotional state. By choosing this option, Nick demonstrates empathy and understanding, while also empowering his brother to take control of his situation. \n\nAnalysis of the other options:\na) Helping him find a part-time job might provide",
+    "pred_choice_text": "Help him find a part-time job",
+    "gt_choice_text": "Help him find a part-time job",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 7,
+    "prompt": "Scenario: On his way back from work, Adrian was stuck in traffic when a person started shouting at him for being a bad driver. Once he came out of the car to confront that person, he realized it was his dad.\nAs Adrian, how would you respond?\nChoices:\na) Apologize to his dad for any driving mistakes he made and try to have a calm conversation about what happened\nb) Ignore his dad and get back in the car, refusing to engage in an argument\nc) Laugh it off and make a joke about the unexpected and coincidental nature of the situation\nd) Walk away from the situation and call his dad later to discuss their concerns calmly and privately\nAnswer:",
+    "raw_model_output": "a\n\nReasoning: Choice a acknowledges the emotional connection with his dad and takes into account the potential anger and shame he might be feeling. By apologizing for any driving mistakes, Adrian shows empathy and a willingness to listen to his dad's concerns. This approach also helps to diffuse tension and prevent further escalation. Choice a prioritizes emotional safety, respect, and open communication, which are essential in this situation. The other options either dismiss or exacerbate the emotions involved, making choice a the most empathetic and constructive response. \n\nThis response demonstrates the ability to analyze complex emotional situations, prioritize empathy, and choose a constructive approach that respects the",
+    "pred_choice_text": "Apologize to his dad for any driving mistakes he made and try to have a calm conversation about what happened",
+    "gt_choice_text": "Laugh it off and make a joke about the unexpected and coincidental nature of the situation",
+    "is_correct": false,
+    "policy_score": 0.6,
+    "policy_justification": "The model's choice a is generally appropriate and empathetic, but it misses the key aspect of the ground-truth choice c, which is to laugh it off and make a joke. This approach acknowledges the unexpected nature of the situation and can help to diffuse tension, which is not captured by choice a.",
+    "final_score": 0.6
+  },
+  {
+    "idx": 8,
+    "prompt": "Scenario: Regina's best friend recently broke up with her longtime partner and is texting Regina in the middle of the night expressing feelings of loneliness\nAs Regina, how would you respond?\nChoices:\na) Ignore the texts and continue sleeping\nb) Respond telling her friend to seek professional help\nc) Stay up and lend a listening ear to her friend\nd) Suggest her friend to find a new partner\nAnswer:",
+    "raw_model_output": "c) Stay up and lend a listening ear to her friend\n\nReasoning: Given the high level of loneliness, helplessness, and emptiness, Regina's friend is likely in a vulnerable emotional state. Responding with empathy and understanding (option c) acknowledges her friend's feelings and creates a safe space for her to process her emotions. Ignoring her texts (option a) might exacerbate her feelings of loneliness and isolation. Suggesting professional help (option b) might be perceived as dismissive or uncaring, while suggesting finding a new partner (option d) is not only insensitive but also unrealistic in the middle of the night",
+    "pred_choice_text": "Ignore the texts and continue sleeping",
+    "gt_choice_text": "Stay up and lend a listening ear to her friend",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "The model's chosen option is unrelated to the ground-truth option, and ignoring the texts might exacerbate the friend's feelings of loneliness and isolation.",
+    "final_score": 0.0
+  },
+  {
+    "idx": 9,
+    "prompt": "Scenario: Patricia's best friend shares with her that she feels stuck in her relationship with her boyfriend because they are constantly fighting.\nAs Patricia, how would you respond?\nChoices:\na) Encourage her to break up with her boyfriend immediately\nb) Offer her advice on how to improve their relationship\nc) Listen empathetically and offer advice without judgment and consideration\nd) Encourage her friend to communicate openly with her boyfriend about their problems\nAnswer:",
+    "raw_model_output": "c) Listen empathetically and offer advice without judgment and consideration.\n\nReasoning: This choice acknowledges the emotional context and allows the friend to express her feelings without judgment. It also shows that Patricia is willing to listen and offer support, rather than imposing her own solutions. This approach is most empathetic and constructive, as it prioritizes the friend's emotional well-being and encourages her to explore her feelings and options. The other choices may be too prescriptive or dismissive, potentially escalating the friend's emotional distress. \n\nNote: The emotional analysis is fictional and created for the purpose of this exercise. It is based on common emotional responses in a",
+    "pred_choice_text": "Listen empathetically and offer advice without judgment and consideration",
+    "gt_choice_text": "Encourage her friend to communicate openly with her boyfriend about their problems",
+    "is_correct": false,
+    "policy_score": 0.6,
+    "policy_justification": "The model's choice is generally appropriate and empathetic but misses some key aspect. The model's choice (c) is close to the ground-truth, but it is slightly different in tone and focus. The ground-truth emphasizes the importance of open communication, while the model's choice focuses on empathetic listening and advice. This difference is not significant enough to warrant a lower score, but it does indicate that the model could benefit from further refinement.",
+    "final_score": 0.6
+  },
+  {
+    "idx": 10,
+    "prompt": "Scenario: Sarah's best friend confides in her about financial troubles she's experiencing; she's too shy to ask for help and prefers to deal with it privately.\nAs Sarah, how would you respond?\nChoices:\na) Offer emotional support and a listening ear, letting her friend know that she can talk freely\nb) Have a discussion with her about potential solutions and available resources\nc) Privately share her problem to other friends and ask them for help\nd) Respect her friend's privacy and not pry further into her financial troubles\nAnswer:",
+    "raw_model_output": "a) Offer emotional support and a listening ear, letting her friend know that she can talk freely.\n\nReasoning: Choice a acknowledges the emotional context, prioritizing empathy and support over immediate solutions or actions. It allows Sarah to create a safe space for her friend to open up and express her feelings, which can be incredibly comforting and validating. This approach also shows that Sarah values her friend's trust and is willing to listen without judgment, further strengthening their bond. By choosing this option, Sarah demonstrates a high level of emotional intelligence and empathy, which is essential in this situation. \n\nThis response acknowledges the emotional state of all people involved (con",
+    "pred_choice_text": "Offer emotional support and a listening ear, letting her friend know that she can talk freely",
+    "gt_choice_text": "Have a discussion with her about potential solutions and available resources",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "Scorer exception: Expecting property name enclosed in double quotes: line 2 column 9 (char 10)",
+    "final_score": 0.0
+  },
+  {
+    "idx": 11,
+    "prompt": "Scenario: My friend lied to me about finishing the part of our group project that he was responsible for.\nAs I, how would you respond?\nChoices:\na) Show your disappointment to him\nb) Carry on doing the project by yourself\nc) Acknowledge his mistake and discuss future plans\nd) Find a new teammate\nAnswer:",
+    "raw_model_output": "c) Acknowledge his mistake and discuss future plans\n\nThis choice acknowledges the emotional impact of his actions, but also opens up a dialogue for moving forward. It shows empathy and understanding, while also addressing the issue and finding a way to proceed with the project. This approach takes into account the emotional state of all parties involved, including the friend, and aims to minimize further conflict. \n\nThis response also shows self-awareness and emotional intelligence, as it recognizes the emotional impact of the situation and seeks to address it in a constructive manner. It prioritizes the relationship and the project's success over personal feelings of anger or betrayal. \n\nThe other",
+    "pred_choice_text": "Acknowledge his mistake and discuss future plans",
+    "gt_choice_text": "Acknowledge his mistake and discuss future plans",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 12,
+    "prompt": "Scenario: Andre moves away from the city his friends and family are in. He finds his friends make less effort to keep in contact than he thought they would.\nAs Andre, how would you respond?\nChoices:\na) Try to adjust to life in the new city by joining clubs and activities there\nb) Make an effort to contact them but also try to meet people in his new city\nc) Let go of his old friends, who have shown themselves to be unreliable\nd) Tell his friends he is disappointed in them for not contacting him.\nAnswer:",
+    "raw_model_output": "b) Make an effort to contact them but also try to meet people in his new city\n\nReasoning: This choice acknowledges Andre's disappointment and frustration with his old friends, but also takes proactive steps to address his loneliness. By reaching out to his friends and trying to meet new people, Andre demonstrates a willingness to maintain connections and build new ones, which can help alleviate his emotional distress. This approach also recognizes that his friends' lack of effort may be a reflection of their own priorities and limitations, rather than a personal failing on Andre's part. By taking control of his situation, Andre can work towards a more positive emotional outcome.",
+    "pred_choice_text": "Make an effort to contact them but also try to meet people in his new city",
+    "gt_choice_text": "Make an effort to contact them but also try to meet people in his new city",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 13,
+    "prompt": "Scenario: Katerina takes a long time to turn on putting on a movie for the family movie night. Her sister says \"You idiot, how hard is it to put a movie on?\" Katerina is quite close to her sister and family.\nAs Katerina, how would you respond?\nChoices:\na) Tell her sister how her comments made her feel while crying\nb) Ask her sister to help do it\nc) Tell her sister she is the idiot\nd) Never work appliances in front of her sister or family again\nAnswer:",
+    "raw_model_output": "a) Tell her sister how her comments made her feel while crying\n\nReasoning: Choice a) acknowledges the emotional impact of her sister's comments and validates Katerina's feelings. This approach is empathetic and constructive as it addresses the emotional state of all people involved and encourages open communication. By expressing her emotions, Katerina can work through her feelings and develop a deeper understanding of herself and her relationships. This response also promotes emotional intelligence, self-awareness, and healthy conflict resolution. \n\nThe other choices are not as empathetic or constructive: choice b) may be perceived as asking for help as a way to avoid the issue",
+    "pred_choice_text": "Tell her sister how her comments made her feel while crying",
+    "gt_choice_text": "Ask her sister to help do it",
+    "is_correct": false,
+    "policy_score": 0.6,
+    "policy_justification": "The model's prediction is generally appropriate and empathetic, but misses the key aspect of promoting open communication and conflict resolution. It focuses on expressing emotions rather than addressing the issue.",
+    "final_score": 0.6
+  },
+  {
+    "idx": 14,
+    "prompt": "Scenario: Benjiro's parents are in their late 80s and living interstate in a house by themselves. He is worried that they need some help but they angrily deny it any time he brings up the subject.\nAs Benjiro, how would you respond?\nChoices:\na) Frequently visit his family\nb) Believe his parents' claim that they are fine\nc) Keep telling his parents his concern, stressing their importance\nd) Move into his parents' house.\nAnswer:",
+    "raw_model_output": "c) Keep telling his parents his concern, stressing their importance\n\nReasoning: This response acknowledges the emotional state of Benjiro and his parents, recognizing their resistance to change. By continuing to express concern, Benjiro shows that he cares about his parents' well-being, which may help to alleviate their feelings of guilt and helplessness. This approach also gives Benjiro a sense of control over the situation, allowing him to take a constructive and empathetic role in addressing his parents' needs. Options a and d may be intrusive or overwhelming, while option b dismisses the concern, which could exacerbate the situation. By choosing",
+    "pred_choice_text": "Keep telling his parents his concern, stressing their importance",
+    "gt_choice_text": "Frequently visit his family",
+    "is_correct": false,
+    "policy_score": 0.7,
+    "policy_justification": "The model's response is generally empathetic and acknowledges the emotional state of Benjiro and his parents. However, it misses the importance of taking a more proactive and supportive approach, such as visiting them frequently, to address their needs and alleviate their feelings of guilt and helplessness.",
+    "final_score": 0.7
+  },
+  {
+    "idx": 15,
+    "prompt": "Scenario: Andie answers the phone and hears that her close relatives are in hospital critically ill.\nAs Andie, how would you respond?\nChoices:\na) Let herself cry and express emotion for as long as she feels like\nb) Speak to other family members to calm herself and find out what is happening, then visit the hospital\nc) Accept that there is nothing she can do and wish the best\nd) Visit the hospital herself and ask the staff about their condition\nAnswer:",
+    "raw_model_output": "b) Speak to other family members to calm herself and find out what is happening, then visit the hospital.\n\nReasoning: This choice acknowledges the emotional turmoil Andie is experiencing while also taking proactive steps to gather information and provide support. By speaking to other family members, Andie can calm herself and get a more objective understanding of the situation. This approach shows empathy for herself and others, allowing her to make a more informed decision about how to proceed. It also demonstrates a constructive approach by taking action rather than simply accepting the situation or trying to suppress her emotions. This choice is likely to have a positive impact on Andie's emotional state",
+    "pred_choice_text": "Speak to other family members to calm herself and find out what is happening, then visit the hospital",
+    "gt_choice_text": "Speak to other family members to calm herself and find out what is happening, then visit the hospital",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 16,
+    "prompt": "Scenario: Evan's sister cooked food late at night when she was staying over at his place and she left a huge mess in the kitchen that Evan discovered at breakfast\nAs Evan, how would you respond?\nChoices:\na) Tell his sister to clean up the mess right now\nb) Ask his sister to clean up the mess as soon as she has the time\nc) Clean up the mess himself and not mention it to his sister\nd) Assume that his sister will clean it later\nAnswer:",
+    "raw_model_output": "b) Ask his sister to clean up the mess as soon as she has the time\n\nReasoning: Considering Evan's emotional state and his sister's perspective, choice (b) is the most empathetic and constructive response. It acknowledges Evan's frustration and tiredness while also being considerate of his sister's feelings and time. By asking her to clean up the mess when she has the time, Evan shows that he values their relationship and is willing to work together to resolve the issue. This approach also gives his sister a sense of agency and allows her to take responsibility for her actions. Choice (a) might come across as confrontational",
+    "pred_choice_text": "Tell his sister to clean up the mess right now",
+    "gt_choice_text": "Ask his sister to clean up the mess as soon as she has the time",
+    "is_correct": false,
+    "policy_score": 0.6,
+    "policy_justification": "The model's choice (b) is generally appropriate and empathetic, but it does not match the predicted choice (a), which is slightly more direct and less considerate of the sister's feelings.",
+    "final_score": 0.6
+  },
+  {
+    "idx": 17,
+    "prompt": "Scenario: Gloria's housemates never buy essential non-food items when they are running low, relying on Gloria to buy them, which she resents. They know each other reasonably well, but have not yet discussed financial issues.\nAs Gloria, how would you respond?\nChoices:\na) Don't buy the items\nb) Introduce a new system for grocery shopping and sharing costs\nc) Tell her housemates she has a problem with this\nd) Hide her own personal store of items from the others\nAnswer:",
+    "raw_model_output": "b) Introduce a new system for grocery shopping and sharing costs\n\nThis response acknowledges the emotional state of Gloria and her housemates, and addresses the underlying issue of fairness and financial anxiety. It also shows empathy and a willingness to find a constructive solution. This choice takes into account the potential emotional impact of each option, prioritizing a positive and respectful conversation. \n\nThe other options may exacerbate the emotional situation: \n- a) Not buying the items could lead to resentment and anger from her housemates.\n- c) Telling them she has a problem could lead to defensiveness and hurt feelings.\n- d) Hiding her",
+    "pred_choice_text": "Don't buy the items",
+    "gt_choice_text": "Introduce a new system for grocery shopping and sharing costs",
+    "is_correct": false,
+    "policy_score": 0.6,
+    "policy_justification": "The model's choice is generally appropriate and empathetic, but it doesn't address the underlying issue directly. It acknowledges Gloria's emotional state but doesn't propose a concrete solution like the ground-truth choice does.",
+    "final_score": 0.6
+  },
+  {
+    "idx": 18,
+    "prompt": "Scenario: Bella is overseas when she finds out that her father has passed away from an illness he has had in recent years.\nAs Bella, how would you respond?\nChoices:\na) Contact her close relatives for information and support\nb) Try not to think about it, and go on with her daily life as best she can\nc) Buy the first ticket back to her hometown\nd) Isolate herself from her family and try to control her emotions on her own\nAnswer:",
+    "raw_model_output": "a) Contact her close relatives for information and support\n\nReasoning: Choice (a) is the most empathetic and constructive response. Given Bella's emotional state, she will likely feel overwhelmed and disoriented by the news. Contacting close relatives will provide her with emotional support, practical information, and reassurance, which are essential in the initial stages of grief. This response acknowledges her emotional pain, validates her feelings, and offers a sense of control and connection. In contrast, choices (b), (c), and (d) may exacerbate her emotional distress or hinder her ability to cope effectively. \n\n**Note: This response is",
+    "pred_choice_text": "Contact her close relatives for information and support",
+    "gt_choice_text": "Contact her close relatives for information and support",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 19,
+    "prompt": "Scenario: Mina and her sister-in-law normally get along quite well, and the sister-in-law regularly baby-sits for her for a small fee. Lately she has also been cleaning away cobwebs, commenting on the mess, which Mina finds insulting.\nAs Mina, how would you respond?\nChoices:\na) Tell her sister-in-law these comments upset her\nb) Get a new babysitter\nc) Be grateful her house is being cleaned for free\nd) Tell her only to baby-sit, not to clean.\nAnswer:",
+    "raw_model_output": "a) Tell her sister-in-law these comments upset her\n\nReasoning: Given the high emotional sensitivity of Mina, the low sense of control, and the high stress level, telling her sister-in-law how these comments make her feel is the most empathetic and constructive approach. It acknowledges the emotional impact of the situation and opens up a dialogue to address the issue. This response also allows Mina to express her feelings without escalating the situation or causing further conflict. It is a direct and honest approach that prioritizes emotional understanding and addresses the hurt and resentment Mina is experiencing. By addressing the issue directly, Mina can work towards resolving",
+    "pred_choice_text": "Tell her sister-in-law these comments upset her",
+    "gt_choice_text": "Tell her sister-in-law these comments upset her",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
   }
 ]

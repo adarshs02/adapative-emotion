@@ -74,6 +74,7 @@ class EmotionGenerator:
 ABSTRACT: {abstract}
 
 Analyze the emotions someone would feel based on this summary. Choose 3-5 of the most important and distinct emotions.
+It is extremely important to note that the emotion evolves over time, track these emotions and pay attention to the final emotion as it is the one that is most relevant to the situation.
 
 Format your response as a simple list, one emotion per line:
 emotion1

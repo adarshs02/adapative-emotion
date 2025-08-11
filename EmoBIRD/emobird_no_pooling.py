@@ -1,8 +1,8 @@
 """
-Emobird: Dynamic Emotion Analysis System (Direct Assessment Version)
+Emobird (No Pooling Version): Simplified Emotion Analysis System
 
-This system generates scenarios and analyzes emotions dynamically at inference time.
-Modified to use direct LLM assessment instead of BIRD pooling.
+This version removes BIRD pooling and instead directly asks the LLM
+to assess emotion probabilities given the identified factor values.
 """
 
 import json
@@ -21,20 +21,19 @@ from vllm_wrapper import VLLMWrapper
 from utils import print_gpu_info
 
 
-class Emobird:
+class EmobirdNoPooling:
     """
-    Main Emobird inference engine that generates scenarios and analyzes emotions dynamically.
-    Now uses direct LLM assessment instead of BIRD pooling.
+    Simplified Emobird engine without BIRD pooling.
     """
     
     def __init__(self, config_path: str = None):
         """Initialize the Emobird system."""
         self.config = EmobirdConfig(config_path)
-        self.verbose = True  # Default to verbose mode
+        self.verbose = True
         
-        print("🐦 Initializing Emobird system (Direct Assessment Version)...")
+        print("🐦 Initializing Emobird (No Pooling Version)...")
         
-        # Load vLLM for inference first
+        # Load vLLM for inference
         self._load_llm()
         
         # Initialize components
@@ -54,65 +53,58 @@ class Emobird:
     def _load_llm(self):
         """Load the vLLM wrapper for inference."""
         print(f"🚀 Loading vLLM: {self.config.llm_model_name}")
-        
-        # Initialize vLLM wrapper
         self.vllm_wrapper = VLLMWrapper(self.config)
-        
         print("✅ vLLM loaded successfully!")
     
     def analyze_emotion(self, user_situation: str) -> Dict[str, Any]:
         """
-        Main inference method: analyze emotion for a given user situation.
+        Simplified emotion analysis pipeline without BIRD pooling.
         
-        Modified flow (without BIRD pooling):
-        1. Extract crucial emotions (2-4) from user situation
-        2. Generate psychological factors from user input
-        3. Extract factor values for this specific situation
-        4. Directly assess emotion probabilities given factor values (NO POOLING)
-        5. Generate conversational response
+        Flow:
+        1. Generate abstract from user situation
+        2. Extract crucial emotions from abstract
+        3. Generate psychological factors from user input
+        4. Extract factor values for this specific situation
+        5. Directly assess emotion probabilities given factor values (NO POOLING)
+        6. Generate conversational response
         
         Args:
             user_situation: User's description of their situation
             
         Returns:
-            Dictionary containing:
-            - crucial_emotions: List of 2-4 key emotions identified
-            - factors: Identified factors and their values
-            - emotions: Final emotion probability distribution
-            - explanation: Reasoning for the emotion assessment
-            - metadata: Additional information about the inference
+            Dictionary containing analysis results
         """
         if self.verbose:
             print(f"\n🔍 Analyzing situation: '{user_situation[:100]}...'")
         
         try:
-            # Step 1: Generate abstract from user situation
+            # Step 1: Generate abstract
             if self.verbose:
                 print("📋 Generating abstract from situation...")
             abstract = self.scenario_generator._generate_abstract(user_situation)
             if self.verbose:
-                print(f"   Generated abstract: {abstract[:100]}...")  # Show first 100 chars
+                print(f"   Generated abstract: {abstract[:100]}...")
             
-            # Step 2: Extract 2-4 crucial emotions from abstract
+            # Step 2: Extract crucial emotions from abstract
             if self.verbose:
                 print("🎭 Extracting crucial emotions from abstract...")
             crucial_emotions = self.emotion_generator.extract_crucial_emotions_from_abstract(abstract)
             if self.verbose:
                 print(f"   Found crucial emotions: {crucial_emotions}")
             
-            # Step 3: Generate psychological factors from user input
+            # Step 3: Generate psychological factors
             if self.verbose:
                 print("⚙️ Generating important factors...")
             factors = self.factor_generator.generate_factors_from_situation(user_situation)
             
-            # Step 4: Extract specific factor values for this situation
+            # Step 4: Extract factor values
             if self.verbose:
                 print("🎯 Extracting factor values...")
             factor_values = self.factor_generator.extract_factor_values_direct(
                 user_situation, factors
             )
             
-            # Step 5: Direct emotion assessment (NO POOLING, NO CPT)
+            # Step 5: Direct emotion assessment (NO POOLING)
             if self.verbose:
                 print("🎯 Directly assessing emotion probabilities from factors...")
             
@@ -143,7 +135,7 @@ class Emobird:
                     'factors': factor_values,
                     'abstract': abstract,
                     'crucial_emotions': crucial_emotions,
-                    'note': 'EmoBIRD emotional analysis'
+                    'note': 'EmoBIRD emotional analysis (no pooling)'
                 }
             )
             
@@ -165,17 +157,16 @@ class Emobird:
                     'processing_steps': [
                         'abstract_generation',
                         'emotion_extraction_from_abstract',
-                        'factor_generation', 
+                        'factor_generation',
                         'factor_value_extraction',
                         'direct_emotion_assessment',
-                        'response_generation',
+                        'response_generation'
                     ]
                 }
             }
         
         except Exception as e:
             print(f"❌ Error in EmoBIRD pipeline: {e}")
-            # Return structured error response that maintains expected dictionary format
             return {
                 'abstract': "",
                 'crucial_emotions': [],
@@ -196,14 +187,24 @@ class Emobird:
                 }
             }
     
-    def batch_analyze(self, situations: List[str]) -> List[Dict[str, Any]]:
-        """Analyze multiple situations in batch."""
-        results = []
-        for i, situation in enumerate(situations):
-            print(f"\n📦 Processing batch item {i+1}/{len(situations)}")
-            result = self.analyze_emotion(situation)
-            results.append(result)
-        return results
+    def compare_with_pooling(self, user_situation: str) -> Dict[str, Any]:
+        """
+        Run analysis and compare with what BIRD pooling would have produced.
+        Useful for evaluating the difference between approaches.
+        """
+        # Get direct assessment
+        direct_result = self.analyze_emotion(user_situation)
+        
+        # For comparison, we could load the old pooling-based system
+        # and run the same analysis, but for now just return the direct result
+        # with a note about the comparison
+        
+        direct_result['comparison_note'] = (
+            "This version uses direct LLM assessment without BIRD pooling. "
+            "The LLM considers all factors holistically when assigning emotion probabilities."
+        )
+        
+        return direct_result
 
 
 def cleanup_resources():
@@ -213,7 +214,7 @@ def cleanup_resources():
         if dist.is_initialized():
             dist.destroy_process_group()
     except:
-        pass  # Ignore cleanup errors
+        pass
 
 
 def main():
@@ -221,65 +222,72 @@ def main():
     atexit.register(cleanup_resources)
     
     print_gpu_info()
-
-    # Initialize Emobird
-    emobird = Emobird()
     
-    print("\n🐦 EmoBIRD Interactive Session Started!")
-    print("💡 Tip: Type 'exit' to quit the session\n")
+    # Initialize Emobird (No Pooling Version)
+    emobird = EmobirdNoPooling()
     
-    while True:
-        try:
-            # Get user input
-            user_situation = input("\nPlease describe your situation (or 'exit' to quit): ")
+    # Example situations to test
+    test_situations = [
+        "I just got promoted at work after months of hard work, and my team surprised me with a celebration.",
+        "My best friend betrayed my trust by sharing my personal secrets with others.",
+        "I'm feeling overwhelmed with deadlines and my manager keeps adding more tasks.",
+    ]
+    
+    print("\n" + "="*70)
+    print("TESTING EMOBIRD WITHOUT POOLING")
+    print("="*70)
+    
+    # Interactive mode
+    mode = input("\nChoose mode:\n1. Test with examples\n2. Enter custom situation\nChoice (1/2): ")
+    
+    if mode == "1":
+        for i, situation in enumerate(test_situations, 1):
+            print(f"\n{'='*70}")
+            print(f"Example {i}: {situation[:50]}...")
+            print('='*70)
             
-            # Check for exit condition
-            if user_situation.lower().strip() in ['exit', 'quit', 'q']:
-                print("\n👋 Thanks for using EmoBIRD! Goodbye!")
-                break
+            result = emobird.analyze_emotion(situation)
             
-            # Skip empty inputs
-            if not user_situation.strip():
-                print("⚠️ Please enter a situation to analyze.")
-                continue
-            
-            # Analyze emotion
-            result = emobird.analyze_emotion(user_situation)
-            
-            # Display results
-            print(f"\n🎭 Crucial Emotions Identified: {', '.join(result['crucial_emotions'])}")
-            print(f"\n⚙️ Factor Values:")
+            print(f"\n📊 Results:")
+            print(f"Crucial Emotions: {', '.join(result['crucial_emotions'])}")
+            print(f"\nFactor Values:")
             for factor, value in result['factors'].items():
                 print(f"  - {factor}: {value}")
             
-            print(f"\n😊 Final Emotion Probabilities (Direct Assessment):")
+            print(f"\n😊 Emotion Probabilities (Direct Assessment):")
             sorted_emotions = sorted(result['emotions'].items(), key=lambda x: x[1], reverse=True)
             for emotion, prob in sorted_emotions:
                 bar = '█' * int(prob * 20)
                 print(f"  {emotion:12} {prob:.3f} {bar}")
             
-            if 'explanation' in result:
-                print(f"\n💭 Reasoning: {result['explanation']}")
+            print(f"\n💭 Explanation: {result['explanation']}")
+            print(f"\n💬 Response: {result['response']}")
             
-            if 'response' in result and result['response']:
-                print(f"\n🤖 Generated Response: {result['response']}")
-            
-            print(f"\n📊 Processing Summary:")
-            metadata = result['metadata']
-            print(f"  - Method: {metadata.get('method', 'unknown')}")
-            print(f"  - Pooling: {metadata.get('pooling', 'unknown')}")
-            print(f"  - Crucial emotions found: {metadata['num_crucial_emotions']}")
-            print(f"  - Psychological factors: {metadata['num_factors']}")
-            print(f"  - Processing steps: {len(metadata['processing_steps'])}")
-            
-            print("\n" + "="*60)  # Separator between analyses
-            
-        except KeyboardInterrupt:
-            print("\n\n👋 Session interrupted. Goodbye!")
-            break
-        except Exception as e:
-            print(f"\n❌ An error occurred: {e}")
-            print("🔄 You can try again with a different situation.")
+            input("\nPress Enter to continue...")
+    
+    else:
+        # Custom situation
+        user_situation = input("\nPlease describe your situation: ")
+        
+        result = emobird.analyze_emotion(user_situation)
+        
+        print(f"\n📊 Results:")
+        print(f"Crucial Emotions: {', '.join(result['crucial_emotions'])}")
+        print(f"\nFactor Values:")
+        for factor, value in result['factors'].items():
+            print(f"  - {factor}: {value}")
+        
+        print(f"\n😊 Emotion Probabilities (Direct Assessment):")
+        sorted_emotions = sorted(result['emotions'].items(), key=lambda x: x[1], reverse=True)
+        for emotion, prob in sorted_emotions:
+            bar = '█' * int(prob * 20)
+            print(f"  {emotion:12} {prob:.3f} {bar}")
+        
+        print(f"\n💭 Explanation: {result['explanation']}")
+        print(f"\n💬 Response: {result['response']}")
+    
+    print(f"\n📝 Note: This version uses direct LLM assessment without BIRD pooling.")
+    print(f"The LLM considers all factors together when determining emotion probabilities.")
 
 
 if __name__ == "__main__":

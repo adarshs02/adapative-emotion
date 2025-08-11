@@ -19,82 +19,6 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from emobird_poc import Emobird
 
 
-def _call_policy_scorer(vllm_wrapper, system_prompt: str, user_prompt: str):
-    """Call the policy model via existing vLLM wrapper, expecting JSON with keys: score, justification.
-    Returns (score_float, justification_str). Falls back to (0.0, reason) on any error.
-    """
-    try:
-        prompt = f"{system_prompt}\n\n{user_prompt}\n\nReturn only a compact JSON object with keys: score (0..1 float) and justification (string)."
-        resp = vllm_wrapper.generate(prompt, component="policy_scorer", interaction_type="evaluation")
-        import re as _re, json as _json
-        m = _re.search(r'\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}', str(resp))
-        if not m:
-            return 0.0, "No JSON found in scorer response"
-        data = _json.loads(m.group(0))
-        score = float(data.get('score', 0.0))
-        score = max(0.0, min(1.0, score))
-        just = str(data.get('justification', ''))
-        return score, just
-    except Exception as e:
-        return 0.0, f"Scorer exception: {e}"
-
-
-def score_ea_with_policy_model(emobird, item, pred_choice_text: str, gt_choice_text: str, raw_output: str):
-    """If not an exact match, ask policy model how close the prediction was (0..1)."""
-    system_prompt = (
-        "You are a strict but fair evaluator for empathetic multiple-choice decisions. "
-        "Assess how close the model's chosen option is to the ground-truth option, considering empathy, appropriateness, and safety."
-    )
-    choices = item.get('choices', [])
-    choice_lines = [f"{chr(97+i)}) {c}" for i, c in enumerate(choices)]
-    choices_block = "\n".join(choice_lines)
-    user_prompt = f"""
-Scenario: {item.get('scenario','')}
-Subject: {item.get('subject','')}
-Choices:
-{choices_block}
-
-Ground truth choice text: {gt_choice_text}
-Model predicted choice text: {pred_choice_text}
-Model raw output: {raw_output}
-
-Scoring rubric:
-- 1.0 if prediction is effectively equivalent in meaning and quality to ground-truth.
-- 0.6-0.9 if generally appropriate and empathetic but misses some key aspect.
-- 0.3-0.5 if partially appropriate but with notable issues.
-- 0.1-0.2 if weakly related or slightly inappropriate.
-- 0.0 if unrelated, clearly inappropriate, or harmful.
-"""
-    return _call_policy_scorer(emobird.vllm_wrapper, system_prompt, user_prompt)
-
-
-def score_eu_with_policy_model(emobird, item, pred_emo: str, pred_cause: str, gt_emo: str, gt_cause: str, raw_output: str):
-    """Policy scoring for EU: evaluate closeness of emotion and cause. Return a combined score 0..1 and justification."""
-    system_prompt = (
-        "You are an evaluator for emotion understanding. Score the closeness between the predicted emotion/cause "
-        "and the ground truth. Consider synonyms for emotions and reasonable paraphrases for causes."
-    )
-    user_prompt = f"""
-Scenario: {item.get('scenario','')}
-Subject: {item.get('subject','')}
-
-Ground truth emotion: {gt_emo}
-Predicted emotion: {pred_emo}
-
-Ground truth cause: {gt_cause}
-Predicted cause: {pred_cause}
-
-Model raw output: {raw_output}
-
-Scoring rubric (produce a single overall score 0..1):
-- Start from emotion similarity (semantic equivalence and category closeness) as 60% of the score.
-- Cause similarity (semantic overlap and relevance) as 40% of the score.
-- 1.0 if both are essentially equivalent; 0.0 if both are unrelated.
-"""
-    return _call_policy_scorer(emobird.vllm_wrapper, system_prompt, user_prompt)
-
-
-
 def cleanup_resources():
     """Clean up distributed computing resources to prevent warnings"""
     try:
@@ -320,7 +244,6 @@ def evaluate_ea_dataset(emobird: Emobird, dataset: List[Dict[str, Any]]) -> List
     """Evaluate EA dataset using EmoBIRD emotional insights."""
     results = []
     correct_count = 0
-    total_points = 0.0
     
     print(f"\n🎭 Evaluating EA Dataset ({len(dataset)} items)")
     print("=" * 60)
@@ -395,49 +318,11 @@ def evaluate_ea_dataset(emobird: Emobird, dataset: List[Dict[str, Any]]) -> List
             }
             results.append(result_item)
     
-
-    # Compute policy-based scores for EA (closeness) and aggregate total_points
-    total_points = 0.0
-    for r in results:
-        try:
-            if r.get('is_correct'):
-                r['policy_score'] = 1.0
-                r['policy_justification'] = ''
-                r['final_score'] = 1.0
-                total_points += 1.0
-            else:
-                item = dataset[r['idx']]
-                ps, pj = score_ea_with_policy_model(
-                    emobird,
-                    item,
-                    r.get('pred_choice_text', ''),
-                    r.get('gt_choice_text', ''),
-                    r.get('raw_model_output', '')
-                )
-                r['policy_score'] = float(ps)
-                r['policy_justification'] = pj
-                r['final_score'] = float(ps)
-                total_points += float(ps)
-        except Exception as _e:
-            # On any error, fall back to 0 for incorrect and 1 for correct
-            if r.get('is_correct'):
-                r['policy_score'] = 1.0
-                r['policy_justification'] = ''
-                r['final_score'] = 1.0
-                total_points += 1.0
-            else:
-                r['policy_score'] = 0.0
-                r['policy_justification'] = f'Policy scoring failed: {_e}'
-                r['final_score'] = 0.0
-                total_points += 0.0
-    avg_score = total_points / len(dataset) if dataset else 0.0
-
     accuracy = correct_count / len(dataset) if dataset else 0
     print(f"\n📊 EA Dataset Results:")
     print(f"   Total Items: {len(dataset)}")
     print(f"   Correct: {correct_count}")
     print(f"   Accuracy: {accuracy:.4f} ({accuracy*100:.2f}%)")
-    print(f"   Average policy score: {avg_score:.4f} ({avg_score*100:.2f}%)")
     
     return results
 
@@ -447,7 +332,6 @@ def evaluate_eu_dataset(emobird: Emobird, dataset: List[Dict[str, Any]]) -> List
     results = []
     correct_count = 0
     emo_correct_count = 0
-    total_points = 0.0
     
     print(f"\n😊 Evaluating EU Dataset ({len(dataset)} items)")
     print("=" * 60)
@@ -496,10 +380,6 @@ def evaluate_eu_dataset(emobird: Emobird, dataset: List[Dict[str, Any]]) -> List
                 is_emo_correct = False
                 is_correct = False
             
-            # Simple scoring: 1.0 for exact overall match, else 0.0
-            policy_score = 1.0 if is_correct else 0.0
-            total_points += policy_score
-            
             if is_correct:
                 correct_count += 1
             if is_emo_correct:
@@ -522,8 +402,7 @@ def evaluate_eu_dataset(emobird: Emobird, dataset: List[Dict[str, Any]]) -> List
                 "gt_emo": gt_emo,
                 "gt_cause": gt_cause,
                 "is_correct": is_correct,
-                "is_emo_correct": is_emo_correct,
-                "final_score": policy_score
+                "is_emo_correct": is_emo_correct
             }
             
             results.append(result_item)
@@ -547,52 +426,12 @@ def evaluate_eu_dataset(emobird: Emobird, dataset: List[Dict[str, Any]]) -> List
     accuracy = correct_count / len(dataset) if dataset else 0
     emo_accuracy = emo_correct_count / len(dataset) if dataset else 0
     
-    # Compute policy-based closeness scores for EU predictions (emotion + cause)
-    # This mirrors EA's post-processing: exact matches get 1.0; otherwise use the policy scorer.
-    total_points = 0.0
-    for r in results:
-        try:
-            if r.get('is_correct'):
-                r['policy_score'] = 1.0
-                r['policy_justification'] = ''
-                r['final_score'] = 1.0
-                total_points += 1.0
-            else:
-                item = dataset[r['idx']]
-                ps, pj = score_eu_with_policy_model(
-                    emobird,
-                    item,
-                    r.get('pred_emo', ''),
-                    r.get('pred_cause', ''),
-                    r.get('gt_emo', ''),
-                    r.get('gt_cause', ''),
-                    r.get('raw_model_output', '')
-                )
-                r['policy_score'] = float(ps)
-                r['policy_justification'] = pj
-                r['final_score'] = float(ps)
-                total_points += float(ps)
-        except Exception as _e:
-            if r.get('is_correct'):
-                r['policy_score'] = 1.0
-                r['policy_justification'] = ''
-                r['final_score'] = 1.0
-                total_points += 1.0
-            else:
-                r['policy_score'] = 0.0
-                r['policy_justification'] = f'Policy scoring failed: {_e}'
-                r['final_score'] = 0.0
-                total_points += 0.0
-    avg_score = total_points / len(dataset) if dataset else 0.0
-    
     print(f"\n📊 EU Dataset Results:")
     print(f"   Total Items: {len(dataset)}")
     print(f"   Emotion Correct: {emo_correct_count}")
     print(f"   Overall Correct: {correct_count}")
     print(f"   Emotion Accuracy: {emo_accuracy:.4f} ({emo_accuracy*100:.2f}%)")
     print(f"   Overall Accuracy: {accuracy:.4f} ({accuracy*100:.2f}%)")
-    # Average policy score across items (policy-based closeness)
-    print(f"   Average policy score: {avg_score:.4f} ({avg_score*100:.2f}%)")
     
     return results
 
@@ -664,25 +503,21 @@ def main(limit_entries: int = None, quiet: bool = False):
     print(f"\n🎉 Evaluation Complete!")
     print("=" * 50)
     
-    # EA accuracy and score
-    ea_correct = sum(1 for r in ea_results if r.get('is_correct'))
+    # EA accuracy
+    ea_correct = sum(1 for r in ea_results if r['is_correct'])
     ea_accuracy = ea_correct / len(ea_results) if ea_results else 0
-    ea_avg_score = sum(float(r.get('final_score', 1.0 if r.get('is_correct') else 0.0)) for r in ea_results) / len(ea_results) if ea_results else 0.0
     print(f"📊 EA Dataset Final Accuracy: {ea_accuracy:.4f} ({ea_accuracy*100:.2f}%)")
     print(f"   Correct: {ea_correct}/{len(ea_results)}")
-    print(f"   Average policy score: {ea_avg_score:.4f} ({ea_avg_score*100:.2f}%)")
     
-    # EU accuracy and score
-    eu_correct = sum(1 for r in eu_results if r.get('is_correct'))
-    eu_emo_correct = sum(1 for r in eu_results if r.get('is_emo_correct'))
+    # EU accuracy
+    eu_correct = sum(1 for r in eu_results if r['is_correct'])
+    eu_emo_correct = sum(1 for r in eu_results if r['is_emo_correct'])
     eu_accuracy = eu_correct / len(eu_results) if eu_results else 0
     eu_emo_accuracy = eu_emo_correct / len(eu_results) if eu_results else 0
-    eu_avg_score = sum(float(r.get('final_score', 1.0 if r.get('is_correct') else 0.0)) for r in eu_results) / len(eu_results) if eu_results else 0.0
     print(f"📊 EU Dataset Final Accuracy:")
     print(f"   Emotion Accuracy: {eu_emo_accuracy:.4f} ({eu_emo_accuracy*100:.2f}%)")
     print(f"   Overall Accuracy: {eu_accuracy:.4f} ({eu_accuracy*100:.2f}%)")
     print(f"   Emotion Correct: {eu_emo_correct}/{len(eu_results)}")
-    print(f"   Average policy score: {eu_avg_score:.4f} ({eu_avg_score*100:.2f}%)")
     print(f"   Overall Correct: {eu_correct}/{len(eu_results)}")
 
 

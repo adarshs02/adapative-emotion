@@ -90,8 +90,78 @@ class VLLMWrapper:
         Returns:
             Generated response string
         """
+        # Use extended tokens for conversational output generation
+        if component == "output_generator" and interaction_type == "conversational_response":
+            return self.generate_conversational([prompt], component, interaction_type)[0]
+        
         response = self.generate_batch([prompt], component, interaction_type)[0]
         return response
+    
+    def generate_conversational(self, prompts: List[str], component: str = "output_generator", interaction_type: str = "conversational_response") -> List[str]:
+        """
+        Generate conversational responses with extended token limits (up to 512 tokens).
+        
+        Args:
+            prompts: List of input prompt strings
+            component: Component name for logging
+            interaction_type: Type of interaction for logging
+            
+        Returns:
+            List of generated response strings
+        """
+        if not self.model:
+            raise RuntimeError("vLLM model not initialized")
+        
+        try:
+            # Create extended sampling parameters for conversational responses
+            conversational_params = SamplingParams(
+                temperature=self.config.temperature,
+                max_tokens=220,  # Extended token limit for conversational responses
+                top_p=0.9,
+                frequency_penalty=0.0,
+                presence_penalty=0.0,
+                stop=None
+            )
+            
+            # Generate responses
+            outputs = self.model.generate(prompts, conversational_params)
+            
+            # Extract responses
+            responses = []
+            for output in outputs:
+                response = output.outputs[0].text.strip()
+                responses.append(response)
+            
+            # Log the interactions
+            logger = get_logger()
+            for i, (prompt, response) in enumerate(zip(prompts, responses)):
+                logger.log_interaction(
+                    component=component,
+                    interaction_type=interaction_type,
+                    prompt=prompt,
+                    response=response,
+                    metadata={
+                        "batch_index": i,
+                        "batch_size": len(prompts),
+                        "sampling_method": "conversational_extended",
+                        "temperature": conversational_params.temperature,
+                        "max_tokens": conversational_params.max_tokens
+                    }
+                )
+            
+            return responses
+            
+        except Exception as e:
+            # Log the error
+            logger = get_logger()
+            logger.log_error(
+                component=component,
+                error_type="conversational_generation_failed",
+                error_message=str(e),
+                context={"prompts_count": len(prompts), "interaction_type": interaction_type}
+            )
+            print(f"❌ Error during conversational generation: {e}")
+            return [""] * len(prompts)  # Return empty strings as fallback
     
     def _generate_strict_json(self, prompt: str, component: str, interaction_type: str, use_temp_zero: bool = False) -> str:
         """
