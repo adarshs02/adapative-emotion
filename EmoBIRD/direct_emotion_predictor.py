@@ -6,7 +6,7 @@ the identified factor values, removing the need for complex pooling formulas.
 """
 
 from typing import Dict, List, Any
-from utils import validate_rating, RATING_SCALE
+from EmoBIRD.utils import validate_rating, RATING_SCALE
 
 
 class DirectEmotionPredictor:

@@ -1,0 +1,249 @@
+{
+    "scenarios": [
+      {
+        "id": "S1",
+        "title": "I’m the strong one (de novo HER2+ metastatic breast cancer)",
+        "diagnosis": "De novo HER2-positive metastatic breast cancer with gastric/cecal involvement",
+        "treatment_plan": "Docetaxel + trastuzumab + pertuzumab every 3 weeks; limit docetaxel to ~4–6 cycles if responding, then continue trastuzumab + pertuzumab",
+        "narrative": "I’m a 60-year-old grandmother who has always held the family together. I’ve lost 30 lb in three months and just learned the thickening in my stomach and colon is breast cancer that already spread. My team recommends docetaxel with trastuzumab and pertuzumab. I’m afraid of losing who I am to my grandkids.",
+        "qa": [
+          {
+            "q": "I keep hearing this regimen is ‘palliative’—how do I hold on to hope without pretending this isn’t serious?",
+            "gt": "‘Palliative’ means the goal is control and quality of life, not cure; many patients live well for years on HER2-targeted therapy. We’ll measure progress, celebrate wins, and pivot quickly if something isn’t helping."
+          },
+          {
+            "q": "On the weeks I feel wiped out, how do I explain to my 7-year-old grandson that Nana can’t play on the floor without making cancer the center of his world?",
+            "gt": "Use simple, honest language (‘medicine days make me extra tired’), offer alternate connection like reading or drawing, and keep routines. We can connect you with child-life specialists for age-appropriate scripts."
+          },
+          {
+            "q": "I’m terrified of heart damage from the HER2 drugs—what do we actually do to protect my heart while I’m trying to stay alive for my family?",
+            "gt": "We check an echocardiogram before treatment and about every 3 months, watch symptoms closely, and hold or adjust medicines if heart function changes. Most heart effects are mild and reversible when caught early."
+          },
+          {
+            "q": "I hate asking for help with basic things—how do we plan my infusion days so I still feel dignified?",
+            "gt": "We’ll schedule infusions every 3 weeks, anticipate ‘down days,’ arrange rides and meals, and pre-treat nausea. You decide what help you accept; our goal is independence with support."
+          },
+          {
+            "q": "If scans show response, can I stop the chemotherapy part so I can be present at my granddaughter’s recital without a wig and bone-deep fatigue?",
+            "gt": "Yes. Docetaxel is typically limited to about 4–6 cycles if you’re responding; after that we often continue just trastuzumab plus pertuzumab every 3 weeks."
+          },
+          {
+            "q": "When do we know the plan isn’t working, and what’s the next move so I don’t feel abandoned?",
+            "gt": "We reassess symptoms and labs each visit and get scans about every 2–3 months. If growth or side effects limit this regimen, we switch promptly—there are multiple effective HER2-targeted options."
+          },
+          {
+            "q": "Can I still be around family during low-count days without making everyone mask up and tiptoe?",
+            "gt": "Yes—avoid anyone sick, wash hands regularly, and consider masking in crowds. You don’t need to isolate from loved ones; sensible precautions are enough."
+          }
+        ]
+      },
+      {
+        "id": "S2",
+        "title": "New mom, old terror (stage IIIB triple-negative breast cancer, neoadjuvant)",
+        "diagnosis": "Stage IIIB triple-negative breast cancer",
+        "treatment_plan": "Neoadjuvant chemo-immunotherapy (pembrolizumab q3w with weekly paclitaxel/carboplatin ~12 weeks, then doxorubicin/cyclophosphamide q2w ×4), surgery ± radiation; continue pembrolizumab to ~1 year total",
+        "narrative": "I’m 33, eight months postpartum, newly diagnosed with triple-negative breast cancer. My baby still wakes at night; my body doesn’t feel like mine. They’re starting chemo-immunotherapy before surgery.",
+        "qa": [
+          {
+            "q": "How do I grieve losing breastfeeding and my hair without feeling like I’m failing at motherhood before treatment even starts?",
+            "gt": "Grief is normal. We’ll stop breastfeeding for safety, explore milk donation if meaningful, and discuss scalp cooling to reduce hair loss. You’re protecting your child by treating your cancer."
+          },
+          {
+            "q": "I’m terrified I’ll be too sick to comfort my baby after shots or fevers—what can we do so she still reaches for me?",
+            "gt": "We plan ‘down-day’ help, treat nausea and fatigue aggressively, and block off predictable windows you can be present. Skin-to-skin, reading, and calm routines maintain attachment."
+          },
+          {
+            "q": "If the lump doesn’t shrink fast, how do I not spiral into ‘the medicine is failing and I’m going to die’?",
+            "gt": "Response can be gradual. We examine you each visit, use interval imaging, and adjust therapy if needed. Lack of rapid shrinkage doesn’t equal failure; the plan has built-in pivots."
+          },
+          {
+            "q": "Will treatment kill my chance to have another child, and is there anything we can do right now without delaying therapy dangerously?",
+            "gt": "Chemotherapy may reduce fertility, but urgent referral for egg or embryo freezing can often be done quickly. Ovarian suppression during chemo may help preserve function."
+          },
+          {
+            "q": "Can we time a cycle so I can hold my baby at my sister’s wedding without nausea or a mask in every photo?",
+            "gt": "Usually yes—schedule around infusion dates, verify blood counts, and use simple precautions. We’ll customize to that event."
+          },
+          {
+            "q": "If I get a complete response before surgery, does that mean I’m safe to stop worrying?",
+            "gt": "A pathologic complete response improves prognosis, but we still complete the planned therapy and follow-up. We’ll keep watching and living, not just waiting."
+          }
+        ]
+      },
+      {
+        "id": "S3",
+        "title": "Coach who can’t fix it (metastatic hormone-sensitive prostate cancer)",
+        "diagnosis": "Metastatic hormone-sensitive prostate cancer with painful bone lesions",
+        "treatment_plan": "Androgen deprivation therapy (injection every 1–3 months) plus a daily androgen-receptor–targeted pill; consider focused radiation for painful spots",
+        "narrative": "I’m a 71-year-old retired high-school coach with bone pain. They’re starting hormone shots plus a daily pill. I’ve always been the guy with answers; now I’m short-tempered and scared.",
+        "qa": [
+          {
+            "q": "When my sex drive plummets and I don’t recognize my body, how do I keep from resenting the medicine that’s helping me live?",
+            "gt": "ADT can change libido, energy, and mood. We treat hot flashes, support intimacy in new ways, address depression if it appears, and adjust therapy to balance control with quality of life."
+          },
+          {
+            "q": "I want the pain to stop yesterday—what’s the fastest way back to walking my grandkids to school?",
+            "gt": "Cancer control from ADT often eases pain in weeks; focused radiation can give quicker relief to the worst spots. We’ll also optimize pain medicines now, not later."
+          },
+          {
+            "q": "I worry I’ll become ‘the sick dad’ everyone tiptoes around—how do we keep my routines without pretending I’m fine?",
+            "gt": "Keep meaningful activities with realistic pacing. We’ll schedule injections around plans, use bone-strengthening measures, and build a symptom check-in so family knows how to help."
+          },
+          {
+            "q": "If this stops working, how do we avoid panic and keep a sense of direction?",
+            "gt": "We monitor PSA, symptoms, and scans. If resistance appears, we move to the next evidence-based step—chemotherapy or other targeted agents—and review goals together."
+          },
+          {
+            "q": "My friend died of a heart attack on ADT—how are we protecting me?",
+            "gt": "We’ll track weight, blood pressure, cholesterol, and glucose; encourage exercise; and coordinate with cardiology as needed. Preventive care continues throughout treatment."
+          }
+        ]
+      },
+      {
+        "id": "S4",
+        "title": "Teacher with too much silence (high-grade serous ovarian cancer)",
+        "diagnosis": "High-grade serous ovarian cancer with ascites",
+        "treatment_plan": "Surgery when appropriate and carboplatin/paclitaxel every 3 weeks for ~6 cycles; maintenance therapy based on tumor features and response; genetic testing recommended",
+        "narrative": "I’m a 45-year-old teacher with ascites, facing surgery and chemo. My daughter is 16, and our home has become very quiet since we said the word ‘cancer.’",
+        "qa": [
+          {
+            "q": "My belly is so tight I can’t eat; I feel ashamed of how I look—what can we do right now so I can sit at the table with my family again?",
+            "gt": "We can drain ascites, start medicines for nausea and appetite, and involve a dietitian. Many people feel relief within days of draining."
+          },
+          {
+            "q": "I’m scared my daughter is Googling worst-case stories alone in her room—how do we talk so she feels included but not crushed?",
+            "gt": "Share the plan in clear steps, invite her to appointments if she wishes, and give her specific ways to help. We’ll provide teen-focused resources and counseling."
+          },
+          {
+            "q": "If my hair falls out and my students stare, how do I walk back into my classroom with dignity?",
+            "gt": "We can plan timing around cycles, discuss head coverings or going without, and coordinate with your school for privacy and support. Hair typically regrows after chemotherapy."
+          },
+          {
+            "q": "Do I pass this to my daughter—is that on me?",
+            "gt": "Many ovarian cancers are not inherited, but genetic testing matters. If a hereditary mutation is found, we’ll guide family testing and prevention options—knowledge gives choices, not blame."
+          },
+          {
+            "q": "How do we know the chemo is worth what it’s taking from me?",
+            "gt": "We track how you feel, follow tumor markers like CA-125 when appropriate, and scan every 2–3 months. If benefits don’t outweigh burdens, we modify quickly."
+          }
+        ]
+      },
+      {
+        "id": "S5",
+        "title": "The drummer who counts rests (glioblastoma after surgery)",
+        "diagnosis": "Glioblastoma after maximal safe resection",
+        "treatment_plan": "Radiation therapy for 6 weeks with daily temozolomide, then monthly temozolomide cycles; consider tumor-treating fields",
+        "narrative": "I’m 58, a drummer. They removed what they could and now it’s radiation with daily chemo. I keep practicing rudiments to feel normal, but the rests feel longer than the notes.",
+        "qa": [
+          {
+            "q": "If my thinking slows or words jam, how do I stay myself in front of the band that’s never seen me drop a beat?",
+            "gt": "Cognitive rehab, routines, and medications can help; we’ll pace rehearsals to your energy. Identity is more than speed—your role can adapt without disappearing."
+          },
+          {
+            "q": "I’m afraid of a seizure on stage—do I have to give up performing entirely?",
+            "gt": "Not necessarily. With anti-seizure medicines, sleep, and avoiding triggers, many people perform safely. We’ll plan venues, transport, and a safety plan you trust."
+          },
+          {
+            "q": "How do we tell if scans show real growth or treatment swelling so I don’t live month-to-month in terror?",
+            "gt": "We use standardized MRI timing and criteria to distinguish progression from treatment effects and interpret images in the context of your symptoms."
+          },
+          {
+            "q": "I want to leave my family something more than fear—what can we set up now?",
+            "gt": "We’ll document your wishes, involve palliative care early, and help with legacy projects like letters or recordings. Preparing reduces fear for everyone."
+          },
+          {
+            "q": "If it returns, I don’t want a scramble—what options are actually on the table?",
+            "gt": "Potential options include clinical trials, alternate chemotherapy or targeted approaches, tumor-treating fields, or comfort-focused care—chosen with your goals front and center."
+          }
+        ]
+      },
+      {
+        "id": "S6",
+        "title": "Driver with the detour (locally advanced rectal cancer, total neoadjuvant therapy)",
+        "diagnosis": "Locally advanced rectal adenocarcinoma",
+        "treatment_plan": "Total neoadjuvant therapy: chemoradiation (~5–6 weeks), systemic chemotherapy for several months, then surgery depending on response; possible temporary ostomy",
+        "narrative": "I’m 62, I drive a city bus. Treatment will be chemoradiation, then systemic chemo, then maybe surgery. I keep picturing an ostomy and panicking about the smell on a crowded route.",
+        "qa": [
+          {
+            "q": "I can’t stop imagining a bag leaking while I’m on shift—what’s real versus fear, and who teaches me to manage it if I need one?",
+            "gt": "Modern ostomy systems are low-profile and odor-controlling. An ostomy nurse trains you before and after surgery; most people return to public work confidently."
+          },
+          {
+            "q": "Is there any chance I avoid surgery if the tumor melts away, or is that just internet talk?",
+            "gt": "A ‘watch-and-wait’ approach is possible for selected patients with a complete clinical response; we decide based on exams, MRI, and endoscopy in a specialized program."
+          },
+          {
+            "q": "My partner and I are scared to talk about sex—will intimacy be possible after all this?",
+            "gt": "Yes, though healing and adjustments take time. Pelvic floor therapy, lubrication, erectile aids when needed, and honest communication help many couples."
+          },
+          {
+            "q": "I want to keep my route for sanity—how do we schedule therapy so I’m not falling asleep at the wheel?",
+            "gt": "We coordinate treatment days, monitor fatigue and blood counts, and provide work notes for modified schedules or temporary leave if needed."
+          },
+          {
+            "q": "If chemo knocks me down, are we stuck, or can we change course without losing control of the cancer?",
+            "gt": "We can reduce doses, switch regimens, or adjust sequencing. Your safety and long-term control both matter; we won’t push through unmanageable toxicity."
+          }
+        ]
+      },
+      {
+        "id": "S7",
+        "title": "Senior year, sudden detour (bulky mediastinal Hodgkin lymphoma)",
+        "diagnosis": "Classical Hodgkin lymphoma with bulky mediastinal disease",
+        "treatment_plan": "ABVD every 2 weeks for 4–6 cycles; radiation may follow depending on response; interim PET/CT after 2–3 cycles",
+        "narrative": "I’m 22, a college senior. I’m supposed to take graduation photos and go on a cross-country trip. Now it’s ABVD and maybe radiation.",
+        "qa": [
+          {
+            "q": "I’m scared my friends will only see ‘the sick guy’—how do I tell them without becoming a project?",
+            "gt": "Share what you want, ask for concrete help like rides or meals, and set boundaries. We can connect you with young-adult peers who’ve navigated the same dynamics."
+          },
+          {
+            "q": "Can we bank sperm without delaying chemo to a dangerous degree?",
+            "gt": "Yes—sperm banking can usually be arranged within days and won’t meaningfully delay treatment."
+          },
+          {
+            "q": "Will my lungs handle hiking on our post-grad trip if I’ve had bleomycin or chest radiation?",
+            "gt": "We test lung function before and monitor during therapy; strenuous hikes may need timing adjustments. Post-therapy activity is possible with a tailored plan."
+          },
+          {
+            "q": "If my PET after two cycles isn’t perfect, does that mean I’ve already failed?",
+            "gt": "No. Interim PET guides whether we continue the same plan or intensify; it’s a tool for adjustment, not a verdict."
+          },
+          {
+            "q": "I want to take graduation photos without a hat or wig—is there any way to time this?",
+            "gt": "We can try to schedule around hair-loss timing, but hair loss is common. Some choose photos before chemo or embrace caps or headwraps—your call."
+          }
+        ]
+      },
+      {
+        "id": "S8",
+        "title": "Coder with a countdown (chronic-phase CML on TKI)",
+        "diagnosis": "Chronic-phase chronic myeloid leukemia",
+        "treatment_plan": "Daily oral tyrosine kinase inhibitor; regular BCR-ABL monitoring; consider treatment-free remission after deep, durable response",
+        "narrative": "I’m 29, a software engineer with chronic-phase CML. I look fine, but the word ‘leukemia’ keeps crashing my thoughts. They’re starting me on a daily TKI pill.",
+        "qa": [
+          {
+            "q": "How do I keep working sprints when my brain keeps looping ‘I have leukemia’ every 10 minutes?",
+            "gt": "Many people keep full-time work. Short-term therapy, mindfulness, and peer support help; we can also provide brief medical leave during dose starts or adjustments if needed."
+          },
+          {
+            "q": "I want kids in a couple of years—does this lock that door?",
+            "gt": "Not necessarily. Some TKIs aren’t safe in pregnancy; with deep, stable responses, treatment pauses under strict monitoring can be considered. We’ll plan with hematology and fertility teams."
+          },
+          {
+            "q": "The side-effect lists online are terrifying—what do people actually feel day-to-day, and how do we handle it without stopping the drug?",
+            "gt": "Common issues are fluid retention, muscle cramps, rash, and GI upset. We manage with supportive medicines and dose adjustments; most patients find a tolerable routine."
+          },
+          {
+            "q": "How do we know it’s truly working and not just ‘hoping’?",
+            "gt": "Regular blood tests track BCR-ABL levels. We expect specific milestones, like major molecular response, over time; if we miss them, we change course early."
+          },
+          {
+            "q": "If I hit deep remission, is there life after leukemia pills?",
+            "gt": "Possibly. After years of deep, stable response, some patients attempt treatment-free remission with close monitoring. It’s a careful, shared decision."
+          }
+        ]
+      }
+    ]
+  }
+  

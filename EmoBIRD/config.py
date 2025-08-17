@@ -15,7 +15,7 @@ LLM_TEMPERATURE=0.6
 # vLLM specific configurations
 USE_VLLM=True
 VLLM_GPU_MEMORY_UTILIZATION=0.8
-VLLM_MAX_MODEL_LEN=4096
+VLLM_MAX_MODEL_LEN=8192
 VLLM_TENSOR_PARALLEL_SIZE=1
 
 
@@ -46,6 +46,19 @@ class EmobirdConfig:
         self.max_new_tokens = LLM_MAX_NEW_TOKENS
         self.temperature = LLM_TEMPERATURE
         self.do_sample = True
+
+        # Hardening controls
+        # Global stop sequences to terminate trailing chatter or markdown
+        self.stop_seqs = ["END_OF_FACTORS", "\n```", "```", "\n--", "\nNote:", "\nEND", "###"]
+        # Strict JSON controls
+        self.strict_json_only = True
+        self.allow_format_only_retry = 1  # number of LLM reformat-only retries
+        # Dedicated JSON generation controls
+        self.json_max_tokens = 256
+        self.json_temperature = 0.0
+        # Unified analysis (factors + values + emotions) controls
+        self.temp_analysis = 0.3  # slightly non-zero for creative factor/emotion discovery
+        self.max_tokens_analysis = 768
         
         # CPT generation limits
         self.max_cpt_entries = 50  # Limit CPT size to avoid exponential explosion
@@ -100,24 +113,45 @@ class EmobirdConfig:
             'EMOBIRD_DEVICE': 'device',
             'EMOBIRD_MAX_TOKENS': 'max_new_tokens',
             'EMOBIRD_TEMPERATURE': 'temperature',
+            'EMOBIRD_TEMP_ANALYSIS': 'temp_analysis',
+            'EMOBIRD_MAX_TOKENS_ANALYSIS': 'max_tokens_analysis',
+            'EMOBIRD_JSON_MAX_TOKENS': 'json_max_tokens',
+            'EMOBIRD_JSON_TEMPERATURE': 'json_temperature',
             'EMOBIRD_MAX_CPT_ENTRIES': 'max_cpt_entries',
             'EMOBIRD_USE_BAYESIAN': 'use_bayesian_calibration',
             'EMOBIRD_LOG_LEVEL': 'log_level',
-            'EMOBIRD_CACHE_DIR': 'cache_dir'
+            'EMOBIRD_CACHE_DIR': 'cache_dir',
+            # vLLM specific overrides
+            'EMOBIRD_USE_VLLM': 'use_vllm',
+            'EMOBIRD_VLLM_MAX_MODEL_LEN': 'vllm_max_model_len',
+            'EMOBIRD_VLLM_TENSOR_PARALLEL_SIZE': 'vllm_tensor_parallel_size',
+            'EMOBIRD_VLLM_GPU_MEMORY_UTILIZATION': 'vllm_gpu_memory_utilization',
         }
         
         for env_var, config_key in env_mappings.items():
             env_value = os.getenv(env_var)
             if env_value is not None:
                 # Convert to appropriate type
-                if config_key in ['max_new_tokens', 'max_cpt_entries']:
+                if config_key in ['max_new_tokens', 'max_cpt_entries', 'max_tokens_analysis', 'json_max_tokens', 'vllm_max_model_len', 'vllm_tensor_parallel_size']:
                     setattr(self, config_key, int(env_value))
-                elif config_key in ['temperature', 'bayesian_smoothing']:
+                elif config_key in ['temperature', 'bayesian_smoothing', 'temp_analysis', 'json_temperature', 'vllm_gpu_memory_utilization']:
                     setattr(self, config_key, float(env_value))
-                elif config_key in ['use_bayesian_calibration', 'do_sample', 'use_caching']:
+                elif config_key in ['use_bayesian_calibration', 'do_sample', 'use_caching', 'strict_json_only', 'use_vllm']:
                     setattr(self, config_key, env_value.lower() in ['true', '1', 'yes'])
                 else:
                     setattr(self, config_key, env_value)
+
+        # STOP sequences via env (comma-separated)
+        stop_env = os.getenv('EMOBIRD_STOP_SEQS')
+        if stop_env:
+            self.stop_seqs = [s for s in stop_env.split(',') if s]
+        # Allow format-only retries override
+        fmt_retry_env = os.getenv('EMOBIRD_ALLOW_FORMAT_ONLY_RETRY')
+        if fmt_retry_env is not None:
+            try:
+                self.allow_format_only_retry = int(fmt_retry_env)
+            except ValueError:
+                pass
     
     def to_dict(self) -> Dict[str, Any]:
         """Convert configuration to dictionary."""

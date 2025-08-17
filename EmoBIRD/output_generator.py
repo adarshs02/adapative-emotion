@@ -6,7 +6,10 @@ emotion analysis insights in a human-like, supportive manner.
 """
 
 from typing import Dict, List, Any
-from config import EmobirdConfig
+try:
+    from EmoBIRD.config import EmobirdConfig
+except ImportError:  # Allow running from within package dir
+    from config import EmobirdConfig
 
 
 class OutputGenerator:
@@ -171,6 +174,8 @@ Response:"""
             emotion_descriptions.append(f"{intensity} {emotion}")
         
         # Format naturally
+        if len(emotion_descriptions) == 0:
+            return "mixed emotions"
         if len(emotion_descriptions) == 1:
             return emotion_descriptions[0]
         elif len(emotion_descriptions) == 2:

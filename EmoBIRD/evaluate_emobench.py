@@ -9,7 +9,7 @@ import json
 import os
 import re
 from pathlib import Path
-from typing import Dict, List, Any
+from typing import Dict, List, Any, Tuple
 import sys
 import atexit
 
@@ -172,8 +172,8 @@ def parse_ea_response(response: str, choices: List[str]) -> str:
         print(f"⚠️ Error processing EA response: {e}")
         response = ""  # Fallback to empty string
     
-    # Look for choice letters (a, b, c, d)
-    choice_pattern = r'[Aa]nswer:\s*([a-d])\)'
+    # Look for choice letters (a, b, c, d) with optional colon/paren
+    choice_pattern = r'[Aa]nswer[:\s]*([a-dA-D])\)?'
     match = re.search(choice_pattern, response)
     
     if match:
@@ -199,23 +199,21 @@ def parse_ea_response(response: str, choices: List[str]) -> str:
 
 def parse_eu_response(response: str) -> tuple:
     """Parse EU response to extract emotion and cause."""
+    # First, try to extract strict JSON
     try:
-        # Try to extract JSON from response
         json_pattern = r'\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}'
         json_match = re.search(json_pattern, response)
-        
         if json_match:
             json_str = json_match.group(0)
             parsed = json.loads(json_str)
-            
             emotion = parsed.get('emo_label', parsed.get('emotion', ''))
             cause = parsed.get('cause_label', parsed.get('cause', ''))
-            
             return emotion, cause
-    except:
+    except Exception:
+        # Fall through to regex-based fallback
         pass
     
-    # Fallback parsing
+    # Fallback parsing (regex-based, tolerant)
     emotion = ""
     cause = ""
     
@@ -246,6 +244,86 @@ def parse_eu_response(response: str) -> tuple:
             break
     
     return emotion, cause
+
+def predict_eu_labels_with_choices(emobird: Emobird, item: Dict[str, Any]) -> tuple:
+    """Use the LLM (via robust json_call) to select emotion and cause strictly from provided choices.
+    Returns (pred_emo, pred_cause, raw_output_json_str).
+    """
+    scenario = item.get('scenario', '')
+    subject = item.get('subject', '')
+    emo_choices = item.get('emotion_choices', [])
+    cause_choices = item.get('cause_choices', [])
+
+    # Build strict instruction to force verbatim selection from choices
+    choices_block = (
+        "Emotion choices:\n- " + "\n- ".join(str(c) for c in emo_choices) + "\n\n" +
+        "Cause choices:\n- " + "\n- ".join(str(c) for c in cause_choices)
+    )
+    prompt = (
+        "You are EmoBIRD. Read the scenario and choose exactly ONE emotion and ONE cause from the provided choices. "
+        "Return STRICT JSON only (no markdown, no code fences) with keys 'emo_label' and 'cause_label'. "
+        "The values MUST be verbatim copies of one option from the respective choices. Do not invent new options.\n\n"
+        f"Subject: {subject}\n"
+        f"Scenario: {scenario}\n\n"
+        f"{choices_block}\n\n"
+        "Output format strictly: {\"emo_label\": \"<one of emotion choices>\", \"cause_label\": \"<one of cause choices>\"}"
+    )
+
+    try:
+        data = emobird.vllm_wrapper.json_call(
+            prompt=prompt,
+            component="eu_predictor",
+            interaction_type="eu_prediction",
+            max_retries=getattr(emobird.config, 'allow_format_only_retry', 1),
+            schema_model=None,
+            temperature_override=0.0,
+            max_tokens_override=256,
+        )
+        pred_emo = str(data.get('emo_label') or data.get('emotion') or '').strip()
+        pred_cause = str(data.get('cause_label') or data.get('cause') or '').strip()
+
+        # Enforce membership; if invalid, attempt a light-weight reformat prompt once
+        def _coerce_to_choice(val: str, choices: List[str]) -> str:
+            if val in choices:
+                return val
+            # Try case-insensitive exact match
+            lower_map = {c.lower(): c for c in choices}
+            if val.lower() in lower_map:
+                return lower_map[val.lower()]
+            # Fallback to closest match using difflib
+            try:
+                import difflib
+                m = difflib.get_close_matches(val, choices, n=1, cutoff=0.0)
+                return m[0] if m else (choices[0] if choices else '')
+            except Exception:
+                return choices[0] if choices else ''
+
+        pred_emo = _coerce_to_choice(pred_emo, emo_choices)
+        pred_cause = _coerce_to_choice(pred_cause, cause_choices)
+
+        raw_output = json.dumps({"emo_label": pred_emo, "cause_label": pred_cause}, ensure_ascii=False)
+        return pred_emo, pred_cause, raw_output
+    except Exception as _e:
+        # As a fallback, derive from EmoBIRD's unified analysis: map top emotion to choices; pick closest cause choice by semantic proximity to scenario via difflib
+        try:
+            analysis = emobird.analyze_emotion(scenario)
+            emotions = analysis.get('emotions', {})
+            top_emotion = max(emotions.items(), key=lambda x: x[1])[0] if emotions else ''
+        except Exception:
+            top_emotion = ''
+        # Coerce emotion to closest choice
+        def _closest(val: str, choices: List[str]) -> str:
+            try:
+                import difflib
+                m = difflib.get_close_matches(val, choices, n=1, cutoff=0.0)
+                return m[0] if m else (choices[0] if choices else '')
+            except Exception:
+                return choices[0] if choices else ''
+        pred_emo = _closest(top_emotion, emo_choices)
+        # Choose cause by nearest to scenario text (very rough but bounded to choices)
+        pred_cause = _closest(scenario, cause_choices)
+        raw_output = json.dumps({"emo_label": pred_emo, "cause_label": pred_cause}, ensure_ascii=False)
+        return pred_emo, pred_cause, raw_output
 
 
 def generate_ea_choice_with_emotions(emobird: Emobird, scenario: str, subject: str, choices: List[str]) -> str:
@@ -316,6 +394,115 @@ Answer:"""
         return f"Unable to analyze emotions. Default reasoning for scenario: {scenario[:100]}..."
 
 
+def predict_ea_choice_with_choices(emobird: Emobird, item: Dict[str, Any]) -> Tuple[str, str]:
+    """Select EA choice strictly from provided options using robust JSON selection.
+    Returns (pred_choice_text, raw_output_str).
+    """
+    choices = item.get('choices', [])
+    scenario = item.get('scenario', '')
+    subject = item.get('subject', 'user')
+
+    # Prepare choice block
+    choice_lines = [f"{chr(97+i)}) {c}" for i, c in enumerate(choices)]
+    choices_block = "\n".join(choice_lines)
+
+    # Optional: include EmoBIRD analysis context to guide the selection
+    emotion_ctx = ""
+    try:
+        emo = emobird.analyze_emotion(scenario)
+        if isinstance(emo, dict):
+            emod = emo.get('emotions', {})
+            if isinstance(emod, dict) and emod:
+                try:
+                    top3 = sorted(emod.items(), key=lambda x: x[1], reverse=True)[:3]
+                    emotion_ctx += "Predicted emotions: " + ", ".join([f"{k} ({v:.2f})" for k, v in top3]) + ". "
+                except Exception:
+                    pass
+            factors = emo.get('factors', {})
+            if isinstance(factors, dict) and factors:
+                try:
+                    flist = [f"{k}: {v}" for k, v in list(factors.items())[:5]]
+                    emotion_ctx += "Key factors: " + ", ".join(flist) + ". "
+                except Exception:
+                    pass
+            ce = emo.get('crucial_emotions', [])
+            if isinstance(ce, list) and ce:
+                emotion_ctx += "Crucial emotions identified: " + ", ".join([str(x) for x in ce]) + "."
+    except Exception as _e:
+        # Non-fatal; proceed without context
+        emotion_ctx = ""
+
+    system = (
+        "You are an empathetic decision-maker. Select exactly one option that is most empathetic, supportive, and safe. "
+        "Consider emotional wellbeing, de-escalation, and respect."
+    )
+    user = f"""
+Scenario: {scenario}
+Subject: {subject}
+
+Choices (select exactly one):
+{choices_block}
+
+Emotional analysis context (optional): {emotion_ctx}
+
+Return STRICT JSON only with keys:
+{{
+  "choice_letter": "a|b|c|d",
+  "choice_text": "<exact text copied from one of the choices>"
+}}
+
+Rules:
+- The choice_text must be exactly one of the provided choices (verbatim match).
+- Do not include any text before or after the JSON object.
+- If unsure, pick the safest, most empathetic option.
+"""
+
+    schema = {
+        "required": ["choice_text"],
+        "properties": {
+            "choice_letter": {"type": "string"},
+            "choice_text": {"type": "string"}
+        }
+    }
+
+    try:
+        data = emobird.vllm_wrapper.json_call(
+            prompt=f"{system}\n\n{user}",
+            component="ea_choice_selector",
+            interaction_type="ea_choice_selection",
+            schema=schema,
+            temperature_override=0.0,
+            max_tokens_override=256,
+        )
+        # Coerce to valid choice
+        letter = str(data.get('choice_letter', '')).strip().lower() if isinstance(data, dict) else ''
+        txt = str(data.get('choice_text', '')).strip() if isinstance(data, dict) else ''
+
+        # Prefer exact letter mapping if valid
+        if letter in ['a', 'b', 'c', 'd']:
+            idx = ord(letter) - ord('a')
+            if 0 <= idx < len(choices):
+                return choices[idx], json.dumps(data)
+
+        # Else, try exact text match (case-insensitive)
+        for c in choices:
+            if txt.lower() == c.strip().lower():
+                return c, json.dumps(data)
+
+        # Else, try substring containment heuristic
+        for c in choices:
+            cl = c.strip().lower()
+            if cl in txt.lower() or txt.lower() in cl:
+                return c, json.dumps(data)
+
+        # Last resort: fall back to freeform generator + parser
+        raw = generate_ea_choice_with_emotions(emobird, scenario, subject, choices)
+        return parse_ea_response(raw, choices), json.dumps(data)
+    except Exception as e:
+        print(f"⚠️ EA strict JSON selection failed, falling back: {e}")
+        raw = generate_ea_choice_with_emotions(emobird, scenario, subject, choices)
+        return parse_ea_response(raw, choices), str(raw)
+
 def evaluate_ea_dataset(emobird: Emobird, dataset: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """Evaluate EA dataset using EmoBIRD emotional insights."""
     results = []
@@ -333,23 +520,19 @@ def evaluate_ea_dataset(emobird: Emobird, dataset: List[Dict[str, Any]]) -> List
         print(f"📋 Scenario: {item['scenario'][:100]}...")
         
         try:
-            # Generate choice using EmoBIRD emotional insights
-            print("🧠 Running EmoBIRD emotional analysis...")
-            raw_output = generate_ea_choice_with_emotions(
-                emobird, item['scenario'], item['subject'], item['choices']
-            )
-            
+            # Select choice via strict JSON helper (with robust fallbacks)
+            print("🧠 Selecting choice via strict JSON...")
+            pred_choice, raw_output = predict_ea_choice_with_choices(emobird, item)
+
             # Safely display raw output with proper type checking
             try:
                 if isinstance(raw_output, str):
-                    print(f"💭 Raw reasoning output: {raw_output[:150]}...")
+                    print(f"💭 Raw selection output: {raw_output[:150]}...")
                 else:
-                    print(f"💭 Raw reasoning output: {str(raw_output)[:150]}...")
+                    print(f"💭 Raw selection output: {str(raw_output)[:150]}...")
             except Exception as e:
                 print(f"⚠️ Error displaying raw output: {e}")
-            
-            # Parse prediction
-            pred_choice = parse_ea_response(raw_output, item['choices'])
+
             gt_choice = item['label']
             # Robust string comparison with type checking
             try:
@@ -460,25 +643,8 @@ def evaluate_eu_dataset(emobird: Emobird, dataset: List[Dict[str, Any]]) -> List
         print(f"Prompt: {prompt[:100]}...")
         
         try:
-            # Run EmoBIRD pipeline
-            result = emobird.analyze_emotion(item['scenario'])
-            
-            # Extract top emotions and create EU-style response
-            emotion_probs = result.get('emotions', {})
-            if emotion_probs:
-                # Get the top emotion (highest probability)
-                top_emotion = max(emotion_probs.items(), key=lambda x: x[1])[0]
-                # Simple cause extraction from scenario context
-                cause = f"Context from the scenario: {item['scenario'][:50]}..."
-            else:
-                top_emotion = "Neutral"
-                cause = "Unable to determine cause"
-            
-            # Format as JSON response
-            raw_output = f'{{"emo_label": "{top_emotion}", "cause_label": "{cause}"}}'
-            
-            # Parse prediction
-            pred_emo, pred_cause = parse_eu_response(raw_output)
+            # Predict using strict choice selection via LLM
+            pred_emo, pred_cause, raw_output = predict_eu_labels_with_choices(emobird, item)
             gt_emo = item['emotion_label']
             gt_cause = item['cause_label']
             

@@ -71,3 +71,8 @@ poc_bird/indices/
 poc_bird/llama_embedding_with_tags_20250720_225721/
 EmoBIRD/logs/
 EmoBIRD/training_dataset/
+logs/
+eval_results/
+elo_results_eqbench3.json
+eqbench3_runs.json
+datasets/EmoPatient/results/

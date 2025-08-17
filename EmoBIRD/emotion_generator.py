@@ -7,7 +7,10 @@ providing the foundation for emotion-specific analysis.
 
 import json
 from typing import Dict, List, Any
-from config import EmobirdConfig
+try:
+    from EmoBIRD.config import EmobirdConfig
+except ImportError:  # Allow running from within package dir
+    from config import EmobirdConfig
 
 
 class EmotionGenerator:

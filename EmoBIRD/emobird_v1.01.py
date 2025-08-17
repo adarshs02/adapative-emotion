@@ -22,6 +22,7 @@ from output_generator import OutputGenerator
 from config import EmobirdConfig
 from vllm_wrapper import VLLMWrapper
 from utils import print_gpu_info
+from schemas import UnifiedEmotionAnalysis
 
 
 class Emobird:
@@ -72,12 +73,9 @@ class Emobird:
         """
         Main inference method: analyze emotion for a given user situation.
         
-        New flow:
-        1. Extract crucial emotions (2-4) from user situation
-        2. Generate psychological factors from user input
-        3. Extract factor values for this specific situation
-        4. Generate CPT using factors and crucial emotions
-        5. Calculate final emotion probabilities
+        Hardened flow (unified stage):
+        1. Single strict-JSON call returning unified object with factors, factor_values, emotions, and emotion_probs
+        2. Generate conversational response from the unified output
         
         Args:
             user_situation: User's description of their situation
@@ -90,93 +88,101 @@ class Emobird:
             - metadata: Additional information about the inference
         """
         print(f"\n🔍 Analyzing situation: '{user_situation[:100]}...'")
-        
-        # Step 1: Generate abstract from user situation
-        print("📋 Generating abstract from situation...")
-        abstract = self.scenario_generator._generate_abstract(user_situation)
-        print(f"   Generated abstract: {abstract[:100]}...")  # Show first 100 chars
-        
-        # Step 2: Extract 2-4 crucial emotions from abstract
-        print("🎭 Extracting crucial emotions from abstract...")
-        crucial_emotions = self.emotion_generator.extract_crucial_emotions_from_abstract(abstract)
-        print(f"   Found crucial emotions: {crucial_emotions}")
-        
-        # Step 3: Generate psychological factors from user input
-        print("⚙️ Generating important factors...")
-        factors = self.factor_generator.generate_factors_from_situation(user_situation)
-        
-        # Step 4: Extract specific factor values for this situation
-        print("🎯 Extracting factor values...")
-        factor_values = self.factor_generator.extract_factor_values_direct(
-            user_situation, factors
+
+        # Unified strict-JSON stage with perspective locking
+        subject = "user"
+        prompt = self._build_unified_prompt(subject=subject, situation=user_situation)
+
+        print("🧩 Running unified strict-JSON analysis...")
+        parsed = self.vllm_wrapper.json_call(
+            prompt=prompt,
+            component="emobird",
+            interaction_type="unified_emotion_analysis",
+            max_retries=self.config.allow_format_only_retry,
+            schema_model=UnifiedEmotionAnalysis,  # Pydantic validation
+            temperature_override=self.config.temp_analysis,
+            max_tokens_override=self.config.max_tokens_analysis,
         )
-        
-        # Step 5: Extract neutral probabilities for (factor, emotion) pairs
-        print("🎲 Extracting neutral probabilities...")
-        neutral_probabilities = self.neutral_prob_extractor.extract_neutral_probabilities(
-            factors, crucial_emotions
-        )
-        
-        # Step 6: Build CPT from neutral probabilities
-        print("📊 Building CPT from neutral probabilities...")
-        cpt_data = self.neutral_prob_extractor.build_cpt_from_probabilities(
-            neutral_probabilities, factors
-        )
-        
-        # Step 7: Initialize runtime components with CPT data
-        print("🔧 Setting up runtime components...")
-        self.factor_entailment = FactorEntailment(self.vllm_wrapper, factors)
-        # EmotionPredictor now loads CPT from cache automatically
-        self.emotion_predictor = EmotionPredictor(
-            self.factor_entailment, 
-            self.logistic_pooler
-        )
-        
-        # Step 8: Use BIRD pooling for final emotion probabilities  
-        print("🎯 Calculating emotions using BIRD pooling...")
-        emotions = self.emotion_predictor.predict_all(user_situation)
-        
-        # Step 9: Generate conversational response
+
+        # Construct model instance for convenience
+        uea = UnifiedEmotionAnalysis.model_validate(parsed)
+
+        # Perspective lock: Ensure subject matches
+        if uea.subject.strip().lower() != subject:
+            raise ValueError(f"Perspective lock failed: expected subject='{subject}' but got '{uea.subject}'")
+
+        # Prepare response using existing output generator
+        emotions_dict = dict(uea.emotion_probs)
+        top_emotions = dict(sorted(emotions_dict.items(), key=lambda x: x[1], reverse=True)[:3])
+
         print("💬 Generating conversational response...")
-        top_emotions = dict(sorted(emotions.items(), key=lambda x: x[1], reverse=True)[:3])
-        
         response = self.output_generator.generate_response(
             user_input=user_situation,
             top_emotions=top_emotions,
             context={
-                'factors': factor_values,
-                'abstract': abstract,
-                'crucial_emotions': crucial_emotions
+                'factors': dict(uea.factor_values),
+                'abstract': uea.scenario_summary,
+                'crucial_emotions': list(uea.emotions),
             }
         )
-        
-        # Return comprehensive result
+
         return {
-            'abstract': abstract,
-            'crucial_emotions': crucial_emotions,
-            'factors': factor_values,
-            'neutral_probabilities': neutral_probabilities,
-            'cpt_data': cpt_data,
-            'emotions': emotions,
+            'abstract': uea.scenario_summary,
+            'crucial_emotions': list(uea.emotions),
+            'factors': dict(uea.factor_values),
+            'neutral_probabilities': {},
+            'cpt_data': {},
+            'emotions': emotions_dict,
             'top_emotions': top_emotions,
             'response': response,
             'metadata': {
-                'abstract_length': len(abstract),
-                'num_crucial_emotions': len(crucial_emotions),
-                'num_factors': len(factor_values),
+                'subject': uea.subject,
+                'num_crucial_emotions': len(uea.emotions),
+                'num_factors': len(uea.factor_values),
                 'processing_steps': [
-                    'abstract_generation',
-                    'emotion_extraction_from_abstract',
-                    'factor_generation', 
-                    'factor_value_extraction',
-                    'neutral_probability_extraction',
-                    'cpt_building',
-                    'runtime_component_setup',
-                    'bird_pooling_emotion_calculation',
-                    'conversational_response_generation'
-                ]
+                    'unified_strict_json_analysis',
+                    'conversational_response_generation',
+                ],
+                'version': uea.version,
             }
         }
+
+    def _build_unified_prompt(self, subject: str, situation: str) -> str:
+        """Construct the unified analysis prompt with strict JSON instructions."""
+        required_keys = [
+            'subject', 'situation', 'scenario_summary',
+            'factors', 'factor_values', 'emotions', 'emotion_probs', 'version'
+        ]
+        instructions = (
+            "You are EmoBIRD, an emotion analysis engine. "
+            "Return STRICT JSON only. No commentary, no markdown. "
+            "Preserve the subject exactly as provided."
+        )
+        # Minimal schema hint
+        schema_hint = (
+            '{'
+            '"subject": "string", '
+            '"situation": "string", '
+            '"scenario_summary": "string", '
+            '"factors": [{"name": "string", "value_type": "boolean|categorical|ordinal", "possible_values": [], "description": "string"}], '
+            '"factor_values": {}, '
+            '"emotions": ["string"], '
+            '"emotion_probs": {"emotion": 0.0}, '
+            '"version": "uea_v1"'
+            '}'
+        )
+        prompt = (
+            f"{instructions}\n"
+            f"Subject: {subject}\n"
+            f"Situation: {situation}\n"
+            f"Requirements:\n"
+            f"- Output JSON only matching keys: {', '.join(required_keys)}\n"
+            f"- The 'emotion_probs' must sum to 1.0 and keys subset of 'emotions'\n"
+            f"- Factor names must be consistent with 'factor_values' keys\n"
+            f"- Do not include any text before or after JSON\n"
+            f"Schema hint: {schema_hint}\n"
+        )
+        return prompt
     
     def batch_analyze(self, situations: List[str]) -> List[Dict[str, Any]]:
         """Analyze multiple situations in batch."""

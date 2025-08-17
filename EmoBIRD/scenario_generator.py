@@ -45,39 +45,43 @@ class ScenarioGenerator:
         print("📋 Generating abstract of user input...")
         abstract = self._generate_abstract(user_situation)
         
-        # Step 2: Generate scenario from abstract
+        # Step 2: Generate scenario from abstract with strict JSON
         print("🎭 Generating scenario from abstract...")
         prompt = self._build_scenario_prompt(user_situation, abstract)
-        
-        # Generate scenario using vLLM
-        if self.vllm_wrapper:
-            response = self.vllm_wrapper.generate(
-                prompt, 
-                component="scenario_generator", 
-                interaction_type="scenario_generation"
-            )
-        else:
-            # Fallback: create a basic scenario
+
+        if not self.vllm_wrapper:
             return self._create_fallback_scenario(user_situation)
-        
-        try:
-            scenario_data = json.loads(response)
-            
-            # Ensure required fields exist
-            scenario = {
-                'id': scenario_data.get('id', self._generate_scenario_id(user_situation)),
-                'description': scenario_data.get('description', user_situation),
-                'context': scenario_data.get('context', ''),
-                'tags': scenario_data.get('tags', []),
-                'abstract': abstract,
-                'generated_from': user_situation[:100] + '...' if len(user_situation) > 100 else user_situation
-            }
-            
-            return scenario
-            
-        except json.JSONDecodeError as e:
-            print(f"⚠️ Failed to parse scenario JSON: {e}")
+
+        schema = {
+            "required": ["id", "description", "context", "tags"],
+            "properties": {
+                "id": {"type": "string"},
+                "description": {"type": "string"},
+                "context": {"type": "string"},
+                "tags": {"type": "array"},
+            },
+        }
+
+        data = self.vllm_wrapper.json_call(
+            prompt,
+            schema=schema,
+            component="scenario_generator",
+            interaction_type="scenario_generation",
+        )
+
+        # Validate keys and build scenario, else fallback
+        if not isinstance(data, dict) or not all(k in data for k in ["id", "description", "context", "tags"]):
             return self._create_fallback_scenario(user_situation)
+
+        scenario = {
+            'id': data.get('id', self._generate_scenario_id(user_situation)),
+            'description': data.get('description', user_situation),
+            'context': data.get('context', ''),
+            'tags': data.get('tags', []),
+            'abstract': abstract,
+            'generated_from': user_situation[:100] + '...' if len(user_situation) > 100 else user_situation
+        }
+        return scenario
     
     def _generate_abstract(self, user_situation: str) -> str:
         """Generate an abstract/summary of the user input."""
@@ -158,13 +162,12 @@ Write only the summary:"""
     
     def _build_scenario_prompt(self, user_situation: str, abstract: str) -> str:
         """Build the prompt for scenario generation using the abstract."""
-        
-        prompt = f"""Generate a scenario JSON from this situation and abstract:
+        prompt = f"""You are to produce JSON only. Using the situation and abstract below, return exactly one JSON object with keys: id (string), description (string), context (string), tags (array of strings). Do not include explanations or code fences.
 
 Situation: "{user_situation}"
 Abstract: "{abstract}"
 
-Example output:
+Example JSON:
 {{
   "id": "scenario_relationship_conflict",
   "description": "Relationship_Misunderstanding",
@@ -172,18 +175,17 @@ Example output:
   "tags": ["relationship", "conflict", "emotional"]
 }}
 
-Now generate similar JSON for the given situation and abstract:
-{{"""
-
+Return only the JSON object now.
+"""
         return prompt
     
     def _generate_scenario_from_input_only(self, user_situation: str) -> Dict[str, Any]:
         """Generate scenario using only user input (no abstract)."""
-        prompt = f"""Generate a scenario JSON for this situation:
+        prompt = f"""You are to produce JSON only. Using the situation below, return exactly one JSON object with keys: id (string), description (string), context (string), tags (array of strings). Do not include explanations or code fences.
 
 Situation: "{user_situation}"
 
-Example output:
+Example JSON:
 {{
   "id": "scenario_work_stress",
   "description": "Work_Presentation_Anxiety",
@@ -191,20 +193,32 @@ Example output:
   "tags": ["work", "anxiety"]
 }}
 
-Now generate similar JSON for the given situation:
-{{"""
+Return only the JSON object now.
+"""
         
         if self.vllm_wrapper:
-            response = self.vllm_wrapper.generate_json(
+            schema = {
+                "required": ["id", "description", "context", "tags"],
+                "properties": {
+                    "id": {"type": "string"},
+                    "description": {"type": "string"},
+                    "context": {"type": "string"},
+                    "tags": {"type": "array"},
+                },
+            }
+            data = self.vllm_wrapper.json_call(
                 prompt,
+                schema=schema,
                 component="scenario_generator",
-                interaction_type="input_only_scenario"
+                interaction_type="input_only_scenario",
             )
+            if not isinstance(data, dict) or not all(k in data for k in ["id", "description", "context", "tags"]):
+                return self._create_fallback_scenario(user_situation)
             return {
-                'id': response.get('id', 'scenario_input_only'),
-                'description': response.get('description', user_situation),
-                'context': response.get('context', ''),
-                'tags': response.get('tags', []),
+                'id': data.get('id', 'scenario_input_only'),
+                'description': data.get('description', user_situation),
+                'context': data.get('context', ''),
+                'tags': data.get('tags', []),
                 'method': 'input_only'
             }
         else:
@@ -213,18 +227,30 @@ Now generate similar JSON for the given situation:
     def _generate_scenario_with_abstract(self, user_situation: str, abstract: str) -> Dict[str, Any]:
         """Generate scenario using both user input and abstract (current pipeline approach)."""
         prompt = self._build_scenario_prompt(user_situation, abstract)
-        
+
         if self.vllm_wrapper:
-            response = self.vllm_wrapper.generate_json(
+            schema = {
+                "required": ["id", "description", "context", "tags"],
+                "properties": {
+                    "id": {"type": "string"},
+                    "description": {"type": "string"},
+                    "context": {"type": "string"},
+                    "tags": {"type": "array"},
+                },
+            }
+            data = self.vllm_wrapper.json_call(
                 prompt,
+                schema=schema,
                 component="scenario_generator",
-                interaction_type="input_plus_abstract_scenario"
+                interaction_type="input_plus_abstract_scenario",
             )
+            if not isinstance(data, dict) or not all(k in data for k in ["id", "description", "context", "tags"]):
+                return self._create_fallback_scenario(user_situation)
             return {
-                'id': response.get('id', 'scenario_input_abstract'),
-                'description': response.get('description', user_situation),
-                'context': response.get('context', ''),
-                'tags': response.get('tags', []),
+                'id': data.get('id', 'scenario_input_abstract'),
+                'description': data.get('description', user_situation),
+                'context': data.get('context', ''),
+                'tags': data.get('tags', []),
                 'abstract': abstract,
                 'method': 'input_plus_abstract'
             }
@@ -233,11 +259,11 @@ Now generate similar JSON for the given situation:
     
     def _generate_scenario_from_abstract_only(self, abstract: str) -> Dict[str, Any]:
         """Generate scenario using only the abstract (no original user input)."""
-        prompt = f"""Generate a scenario JSON from this abstract:
+        prompt = f"""You are to produce JSON only. Using the abstract below, return exactly one JSON object with keys: id (string), description (string), context (string), tags (array of strings). Do not include explanations or code fences.
 
 Abstract: "{abstract}"
 
-Example output:
+Example JSON:
 {{
   "id": "scenario_career_milestone",
   "description": "Career_Achievement_Celebration",
@@ -245,20 +271,38 @@ Example output:
   "tags": ["career", "success"]
 }}
 
-Now generate similar JSON for the given abstract:
-{{"""
+Return only the JSON object now.
+"""
         
         if self.vllm_wrapper:
-            response = self.vllm_wrapper.generate_json(
+            schema = {
+                "required": ["id", "description", "context", "tags"],
+                "properties": {
+                    "id": {"type": "string"},
+                    "description": {"type": "string"},
+                    "context": {"type": "string"},
+                    "tags": {"type": "array"},
+                },
+            }
+            data = self.vllm_wrapper.json_call(
                 prompt,
+                schema=schema,
                 component="scenario_generator",
-                interaction_type="abstract_only_scenario"
+                interaction_type="abstract_only_scenario",
             )
+            if not isinstance(data, dict) or not all(k in data for k in ["id", "description", "context", "tags"]):
+                return {
+                    'id': 'fallback_abstract_only',
+                    'description': f"Scenario based on: {abstract}",
+                    'context': 'Generated from abstract only',
+                    'tags': ['abstract_based'],
+                    'method': 'abstract_only'
+                }
             return {
-                'id': response.get('id', 'scenario_abstract_only'),
-                'description': response.get('description', abstract),
-                'context': response.get('context', ''),
-                'tags': response.get('tags', []),
+                'id': data.get('id', 'scenario_abstract_only'),
+                'description': data.get('description', abstract),
+                'context': data.get('context', ''),
+                'tags': data.get('tags', []),
                 'method': 'abstract_only'
             }
         else:

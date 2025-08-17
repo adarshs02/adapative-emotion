@@ -11,14 +11,15 @@ from typing import Dict, List, Any, Tuple
 import sys
 import atexit
 
-from scenario_generator import ScenarioGenerator
-from factor_generator import FactorGenerator
-from emotion_generator import EmotionGenerator
-from direct_emotion_predictor import DirectEmotionPredictor
-from output_generator import OutputGenerator
-from config import EmobirdConfig
-from vllm_wrapper import VLLMWrapper
-from utils import print_gpu_info
+from EmoBIRD.scenario_generator import ScenarioGenerator
+from EmoBIRD.factor_generator import FactorGenerator
+from EmoBIRD.emotion_generator import EmotionGenerator
+from EmoBIRD.direct_emotion_predictor import DirectEmotionPredictor
+from EmoBIRD.output_generator import OutputGenerator
+from EmoBIRD.config import EmobirdConfig
+from EmoBIRD.vllm_wrapper import VLLMWrapper
+from EmoBIRD.utils import print_gpu_info
+from EmoBIRD.schemas import UnifiedEmotionAnalysis
 
 
 class Emobird:
@@ -63,77 +64,78 @@ class Emobird:
     def analyze_emotion(self, user_situation: str) -> Dict[str, Any]:
         """
         Main inference method: analyze emotion for a given user situation.
-        
-        Modified flow (without BIRD pooling):
-        1. Extract crucial emotions (2-4) from user situation
-        2. Generate psychological factors from user input
-        3. Extract factor values for this specific situation
-        4. Directly assess emotion probabilities given factor values (NO POOLING)
-        5. Generate conversational response
+
+        Modular flow (multi-stage):
+        1. Generate abstract/summary from the user situation
+        2. Generate psychological factors with possible values
+        3. Extract factor values from the situation
+        4. Extract 3-5 crucial emotions from the abstract
+        5. Predict emotion probabilities using Likert ratings (strict JSON if possible)
+        6. Generate conversational response from the predicted emotions
         
         Args:
             user_situation: User's description of their situation
             
         Returns:
             Dictionary containing:
-            - crucial_emotions: List of 2-4 key emotions identified
+            - crucial_emotions: List of key emotions identified
             - factors: Identified factors and their values
             - emotions: Final emotion probability distribution
-            - explanation: Reasoning for the emotion assessment
             - metadata: Additional information about the inference
         """
         if self.verbose:
             print(f"\n🔍 Analyzing situation: '{user_situation[:100]}...'")
         
         try:
-            # Step 1: Generate abstract from user situation
+            processing_steps: List[str] = []
+
+            # 1) Abstract generation only
             if self.verbose:
-                print("📋 Generating abstract from situation...")
+                print("📋 Generating abstract...")
             abstract = self.scenario_generator._generate_abstract(user_situation)
+            processing_steps.append('abstract_generation')
+
+            # 2) Factor generation (definitions + initial values)
             if self.verbose:
-                print(f"   Generated abstract: {abstract[:100]}...")  # Show first 100 chars
-            
-            # Step 2: Extract 2-4 crucial emotions from abstract
+                print("🧠 Generating factors...")
+            factor_result = self.factor_generator.generate_factors(user_situation, abstract)
+            factors = factor_result.get('factors', [])
+            processing_steps.append('factor_generation')
+
+            # Ensure we have at least 3 factors via fallback if needed
+            if not factors or len(factors) < 3:
+                print("⚠️ Insufficient factors, using fallback generation")
+                fallback = self.factor_generator._create_fallback_factors(user_situation)  # fallback is internal
+                factors = fallback.get('factors', [])
+
+            # 3) Factor value extraction
+            if self.verbose:
+                print("🎯 Extracting factor values...")
+            factor_values = self.factor_generator.analyze_situation(user_situation, factors)
+            processing_steps.append('factor_value_extraction')
+
+            # 4) Crucial emotion extraction from abstract
             if self.verbose:
                 print("🎭 Extracting crucial emotions from abstract...")
             crucial_emotions = self.emotion_generator.extract_crucial_emotions_from_abstract(abstract)
+            processing_steps.append('crucial_emotion_extraction')
+
+            # Ensure we have a valid set of emotions (3-5). Apply simple fallback if needed.
+            if not crucial_emotions or len(crucial_emotions) < 3:
+                print("⚠️ Emotion extraction returned too few items, applying default fallback emotions")
+                crucial_emotions = ["anxiety", "sadness", "frustration"]
+
+            # 5) Likert-scale emotion prediction (strict JSON first, then fallback)
             if self.verbose:
-                print(f"   Found crucial emotions: {crucial_emotions}")
-            
-            # Step 3: Generate psychological factors from user input
-            if self.verbose:
-                print("⚙️ Generating important factors...")
-            factors = self.factor_generator.generate_factors_from_situation(user_situation)
-            
-            # Step 4: Extract specific factor values for this situation
-            if self.verbose:
-                print("🎯 Extracting factor values...")
-            factor_values = self.factor_generator.extract_factor_values_direct(
-                user_situation, factors
-            )
-            
-            # Step 5: Direct emotion assessment (NO POOLING, NO CPT)
-            if self.verbose:
-                print("🎯 Directly assessing emotion probabilities from factors...")
-            
-            # Initialize direct predictor with factors and emotions
-            direct_predictor = DirectEmotionPredictor(
-                self.vllm_wrapper, 
-                factors, 
-                crucial_emotions
-            )
-            
-            # Get emotion predictions directly
-            result = direct_predictor.predict_with_explanation(
-                user_situation, 
-                factor_values
-            )
-            
-            emotions = result['emotions']
-            top_emotions = result['top_emotions']
-            explanation = result['explanation']
-            
-            # Step 6: Generate conversational response
+                print("📈 Predicting emotions with Likert ratings...")
+            predictor = DirectEmotionPredictor(self.vllm_wrapper, factors=factors, emotions=crucial_emotions)
+            pred = predictor.predict_with_explanation(user_situation, factor_values)
+            emotions_dict = pred.get('emotions', {})
+            explanation = pred.get('explanation', '')
+            processing_steps.append('likert_emotion_prediction')
+
+            # 6) Conversational response
+            top_emotions = dict(sorted(emotions_dict.items(), key=lambda x: x[1], reverse=True)[:3])
             if self.verbose:
                 print("🗣️ Generating conversational response...")
             response = self.output_generator.generate_response(
@@ -143,59 +145,70 @@ class Emobird:
                     'factors': factor_values,
                     'abstract': abstract,
                     'crucial_emotions': crucial_emotions,
-                    'note': 'EmoBIRD emotional analysis'
+                    'note': 'EmoBIRD emotional analysis (modular)'
                 }
             )
-            
-            # Return comprehensive result
+
+            # Compose result
             return {
                 'abstract': abstract,
                 'crucial_emotions': crucial_emotions,
                 'factors': factor_values,
-                'emotions': emotions,
+                'emotions': emotions_dict,
                 'top_emotions': top_emotions,
                 'explanation': explanation,
                 'response': response,
                 'metadata': {
-                    'method': 'direct_llm_assessment',
+                    'method': 'modular_pipeline_v1',
                     'pooling': 'none',
                     'abstract_length': len(abstract),
                     'num_crucial_emotions': len(crucial_emotions),
-                    'num_factors': len(factor_values),
-                    'processing_steps': [
-                        'abstract_generation',
-                        'emotion_extraction_from_abstract',
-                        'factor_generation', 
-                        'factor_value_extraction',
-                        'direct_emotion_assessment',
-                        'response_generation',
-                    ]
+                    'num_factors': len(factors),
+                    'processing_steps': processing_steps + ['response_generation'],
                 }
             }
         
         except Exception as e:
-            print(f"❌ Error in EmoBIRD pipeline: {e}")
-            # Return structured error response that maintains expected dictionary format
+            print(f"❌ Error in EmoBIRD pipeline (modular): {e}")
+            # Hard-gate fallback: use base LLM to respond without partial insights.
+            try:
+                fallback_prompt = (
+                    "You are an empathetic, supportive assistant. "
+                    "Provide a concise, compassionate response with 2-4 sentences. "
+                    "Acknowledge feelings, offer understanding, and suggest one gentle next step. "
+                    "Avoid diagnosing or giving medical/clinical advice.\n\n"
+                    f"User situation: {user_situation}\n\n"
+                    "Response:"
+                )
+                fallback_response = self.vllm_wrapper.generate(
+                    fallback_prompt,
+                    component="emobird",
+                    interaction_type="fallback_base_llm_response",
+                )
+            except Exception as ef:
+                print(f"⚠️ Fallback generation failed: {ef}")
+                fallback_response = "I'm here for you. I'm sorry this is hard. If you'd like, share more about what's going on."
+
+            # Return a consistent structure with empty analytics and the base LLM response
             return {
                 'abstract': "",
                 'crucial_emotions': [],
                 'factors': {},
                 'emotions': {},
                 'top_emotions': {},
-                'explanation': "",
-                'response': f"Error in EmoBIRD analysis: {str(e)}",
-                'error': True,
-                'error_message': str(e),
+                'response': fallback_response if isinstance(fallback_response, str) else str(fallback_response),
                 'metadata': {
-                    'method': 'direct_llm_assessment',
+                    'method': 'fallback_base_llm_only',
                     'pooling': 'none',
                     'abstract_length': 0,
                     'num_crucial_emotions': 0,
                     'num_factors': 0,
-                    'processing_steps': ['error_occurred']
+                    'processing_steps': ['modular_pipeline_failed', 'fallback_base_llm_response'],
+                    'error_message': str(e),
+                    'json_call_meta': getattr(self.vllm_wrapper, 'last_json_call_meta', None),
                 }
             }
-    
+
     def batch_analyze(self, situations: List[str]) -> List[Dict[str, Any]]:
         """Analyze multiple situations in batch."""
         results = []
