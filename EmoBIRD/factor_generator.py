@@ -22,6 +22,27 @@ class FactorGenerator:
         """Set the vLLM wrapper from parent class."""
         self.vllm_wrapper = vllm_wrapper
     
+    def _sanitize_situation_text(self, user_situation: str) -> str:
+        """Sanitize situation text to avoid contaminating prompts with unrelated formatting blocks.
+
+        - If the situation contains a block starting with 'Respond in exactly this output format:',
+          drop everything from that marker onward.
+        - Also truncate before headers like "# I'm thinking & feeling" if present.
+        - Preserve the original dialogue/content before those markers.
+        """
+        if not user_situation:
+            return user_situation
+        markers = [
+            "Respond in exactly this output format:",
+            "# I'm thinking & feeling",
+        ]
+        cleaned = user_situation
+        for m in markers:
+            idx = cleaned.find(m)
+            if idx != -1:
+                cleaned = cleaned[:idx].strip()
+        return cleaned
+    
     def generate_factors_from_situation(self, user_situation: str) -> List[Dict[str, Any]]:
         """
         Generate psychological factors directly from user input only.
@@ -46,6 +67,17 @@ class FactorGenerator:
                 interaction_type="direct_factor_generation"
             )
             print(f"🔍 Raw factor response: '{response}'")
+            
+            # Guard: if response is empty (e.g., early stop at sentinel), retry once with a clearer start hint
+            if not response or not response.strip():
+                retry_prompt = prompt + "\nStart the list immediately with '1.' on its own line."
+                print("♻️ Empty response detected; retrying factor generation once with a start hint...")
+                response = self.vllm_wrapper.generate(
+                    retry_prompt,
+                    component="factor_generator",
+                    interaction_type="direct_factor_generation"
+                )
+                print(f"🔁 Retry raw factor response: '{response}'")
             
             # Parse factors from the response
             factors_data = self._parse_factors_from_response(response)
@@ -106,9 +138,10 @@ class FactorGenerator:
         Build prompt for generating factors directly from user input only.
         No abstracts or external context needed.
         """
+        situation = self._sanitize_situation_text(user_situation)
         prompt = f"""You are an expert at analyzing situations and identifying psychological/social factors that would influence the person's emotions. Analyze this situation and identify 3 important factors that would influence the person's emotions:
 
-SITUATION: {user_situation}
+SITUATION: {situation}
 
 For each factor, provide:
 - Factor name (short, descriptive)
@@ -136,6 +169,7 @@ Example:
         """
         Build prompt for analyzing factor values directly from user situation.
         """
+        situation = self._sanitize_situation_text(user_situation)
         factor_descriptions = []
         for factor in factors:
             values = "/".join(factor['possible_values'])
@@ -145,7 +179,7 @@ Example:
         
         prompt = f"""Analyze this situation and determine the specific value for each psychological factor:
 
-SITUATION: {user_situation}
+SITUATION: {situation}
 
 PSYCHOLOGICAL FACTORS:
 {factors_text}
@@ -193,6 +227,17 @@ Your analysis:"""
             )
             print(f"🔍 Raw factor response: '{response}'")
             print(f"🔍 Response length: {len(response)} chars")
+            
+            # Guard: if response is empty (e.g., early stop at sentinel), retry once with a clearer start hint
+            if not response or not response.strip():
+                retry_prompt = prompt + "\nStart the list immediately with '1.' on its own line."
+                print("♻️ Empty response detected; retrying factor generation once with a start hint...")
+                response = self.vllm_wrapper.generate(
+                    retry_prompt,
+                    component="factor_generator",
+                    interaction_type="direct_factor_generation"
+                )
+                print(f"🔁 Retry raw factor response: '{response}'")
             
             # Parse factors from the response
             factors_data = self._parse_factors_from_response(response)

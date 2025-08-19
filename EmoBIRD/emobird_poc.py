@@ -111,7 +111,7 @@ class Emobird:
             # 3) Factor value extraction
             if self.verbose:
                 print("🎯 Extracting factor values...")
-            factor_values = self.factor_generator.analyze_situation(user_situation, factors)
+            factor_values = self.factor_generator.extract_factor_values_direct(user_situation, factors)
             processing_steps.append('factor_value_extraction')
 
             # 4) Crucial emotion extraction from abstract

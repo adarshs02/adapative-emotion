@@ -4,7 +4,7 @@ Generic model tester: run any HF causal LLM on a prompt or on EmoPatient scenari
 
 Notes:
 - If run with no flags inside the EmoPatient scenarios folder, the script will auto-use
-  ./scenarios.json when present. Otherwise it falls back to a single default prompt.
+  ./scenarios_30.json when present. Otherwise it falls back to a single default prompt.
 
 Examples:
   # Single prompt
@@ -12,10 +12,10 @@ Examples:
     --model meta-llama/Meta-Llama-3.1-8B-Instruct \
     --prompt "Write a brief, supportive reply to someone awaiting biopsy results."
 
-  # Use scenarios.json (S1 style)
+  # Use scenarios_30.json
   CUDA_VISIBLE_DEVICES=6 python run_model_test.py \
     --model meta-llama/Meta-Llama-3.1-8B-Instruct \
-    --scenarios ./scenarios.json
+    --scenarios ./scenarios_30.json
 """
 
 import argparse
@@ -27,6 +27,20 @@ from typing import Optional, List, Dict, Any
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
+# Visual progress bar (with safe fallback)
+try:
+    from tqdm.auto import tqdm  # prefer rich display when available
+except Exception:
+    class _TqdmFallback:
+        def __call__(self, iterable, **kwargs):
+            return iterable
+
+        @staticmethod
+        def write(msg: str):
+            print(msg)
+
+    tqdm = _TqdmFallback()
+
 # Default model used when neither --model nor EMOBIRD_MODEL is provided.
 # Edit this to change the script's built-in default.
 DEFAULT_MODEL = "meta-llama/Meta-Llama-3.1-8B-Instruct"
@@ -36,7 +50,7 @@ def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="Test any HF causal LLM on prompts or EmoPatient scenarios")
     p.add_argument("--model", help="HF model id, e.g., meta-llama/Meta-Llama-3.1-8B-Instruct", default=None)
     p.add_argument("--prompt", help="Single prompt to run", default="Please provide a concise, empathetic, medically grounded answer tailored to the above context.")
-    p.add_argument("--scenarios", help="Path to EmoPatient scenarios.json to run first scenario's QAs")
+    p.add_argument("--scenarios", help="Path to scenarios_30.json to run first scenario's QAs")
     p.add_argument("--scenario-index", type=int, default=0, help="Scenario index to use from scenarios file (default 0)")
     p.add_argument("--max-new-tokens", type=int, default=256)
     p.add_argument("--temperature", type=float, default=0.7)
@@ -114,9 +128,18 @@ def run_single_prompt(pipe, tok, prompt: str, max_new_tokens: int, temperature: 
 
 def run_scenarios(pipe, tok, scenarios_path: Path, scenario_index: int, max_new_tokens: int, temperature: float, top_p: float):
     data = json.loads(Path(scenarios_path).read_text(encoding="utf-8"))
-    scenarios = data.get("scenarios", [])
+    # Support multiple formats:
+    # 1) {"scenarios": [...]} (preferred)
+    # 2) {"scenarios_30": [...]} (legacy)
+    # 3) [... ] (raw list)
+    if isinstance(data, dict):
+        scenarios = data.get("scenarios") or data.get("scenarios_30") or []
+    elif isinstance(data, list):
+        scenarios = data
+    else:
+        scenarios = []
     if not scenarios:
-        raise ValueError("No scenarios found in file")
+        raise ValueError("No scenarios found in file; expected key 'scenarios' or 'scenarios_30'")
     if not (0 <= scenario_index < len(scenarios)):
         raise ValueError(f"scenario-index {scenario_index} out of range (0..{len(scenarios)-1})")
 
@@ -126,16 +149,20 @@ def run_scenarios(pipe, tok, scenarios_path: Path, scenario_index: int, max_new_
         raise ValueError("Selected scenario has no QA items")
 
     print(f"\nScenario: {scn.get('id', '(unknown)')} — {scn.get('title', '')}")
-    for i, qa in enumerate(qa_list, start=1):
+    for i, qa in enumerate(tqdm(qa_list, desc="QAs", unit="q"), start=1):
+        qid = (qa.get("qid") or "").strip()
         q = (qa.get("q") or "").strip()
         if not q:
             continue
         prompt = compose_from_scenario(scn, q)
-        print("=" * 80)
-        print(f"Q{i}: {q}")
-        print("-" * 80)
+        tqdm.write("=" * 80)
+        header = f"Q{i}"
+        if qid:
+            header += f" [{qid}]"
+        tqdm.write(f"{header}: {q}")
+        tqdm.write("-" * 80)
         ans = run_single_prompt(pipe, tok, prompt, max_new_tokens, temperature, top_p)
-        print(ans)
+        tqdm.write(ans)
 
 
 if __name__ == "__main__":
@@ -148,12 +175,13 @@ if __name__ == "__main__":
 
     # Choose model priority: EMOBIRD_MODEL env > CLI --model > DEFAULT_MODEL
     model_id = os.environ.get("EMOBIRD_MODEL") or (args.model or DEFAULT_MODEL)
-    # Auto-detect scenarios.json in current working directory if not provided
+    # Auto-detect scenarios_30.json in current working directory if not provided
     try:
-        default_scen = Path("scenarios.json")
-        if not args.scenarios and default_scen.exists():
-            args.scenarios = str(default_scen)
-            print(f"Detected scenarios file: {args.scenarios}")
+        if not args.scenarios:
+            cand = Path("scenarios_30.json")
+            if cand.exists():
+                args.scenarios = str(cand)
+                print(f"Detected scenarios file: {args.scenarios}")
     except Exception:
         pass
 

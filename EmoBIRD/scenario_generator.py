@@ -24,6 +24,34 @@ class ScenarioGenerator:
         """Set the vLLM wrapper from parent class."""
         self.vllm_wrapper = vllm_wrapper
     
+    def _sanitize_situation_text(self, user_situation: str) -> str:
+        """Sanitize situation text to avoid contaminating prompts with unrelated formatting blocks.
+
+        - If the situation contains a block starting with 'Respond in exactly this output format:',
+          drop everything from that marker onward.
+        - Also truncate before headers like "# I'm thinking & feeling" if present.
+        - Preserve the original dialogue/content before those markers.
+        """
+        if not user_situation:
+            return user_situation
+        markers = [
+            "Respond in exactly this output format:",
+            "# I'm thinking & feeling",
+            "I'm thinking & feeling",
+            "# I'm thinking and feeling",
+            "I'm thinking and feeling",
+            "# I’m thinking & feeling",
+            "I’m thinking & feeling",
+            "# I’m thinking and feeling",
+            "I’m thinking and feeling",
+        ]
+        cleaned = user_situation
+        for m in markers:
+            idx = cleaned.find(m)
+            if idx != -1:
+                cleaned = cleaned[:idx].strip()
+        return cleaned
+    
     def generate_scenario(self, user_situation: str) -> Dict[str, Any]:
         """
         Generate a scenario description and metadata from user input.
@@ -86,9 +114,10 @@ class ScenarioGenerator:
     def _generate_abstract(self, user_situation: str) -> str:
         """Generate an abstract/summary of the user input."""
         
-        prompt = f"""You are an expert at generating summaries from user inputs. Summarize this user by looking out for the context, emotional impact, and the main idea in the shortest way possible:
+        situation = self._sanitize_situation_text(user_situation)
+        prompt = f"""You are an expert at generating abstracts from user inputs. Summarize the input by looking out for the subject, context, emotional impact, and the main idea in 50 words or less possible:
 
-"{user_situation}"
+"{situation}"
 
 Write only the summary:"""
         
@@ -103,6 +132,22 @@ Write only the summary:"""
             # Extract clean abstract from potentially messy model output
             abstract = self._extract_clean_abstract(response)
             print(f"🔍 After extract_clean_abstract: '{abstract}'")  # Debug print
+            # One-time retry if empty
+            if not abstract or not abstract.strip():
+                print("⚠️ Empty abstract; retrying once with a clearer hint...")
+                retry_prompt = f"""You are an expert at generating abstracts from user inputs. Write a single concise, one-sentence summary covering subject, context, and emotional impact.
+
+Input:
+"{situation}"
+
+Write only the summary:"""
+                retry_resp = self.vllm_wrapper.generate_abstract(
+                    retry_prompt,
+                    component="scenario_generator",
+                    interaction_type="abstract_generation_retry",
+                )
+                abstract = self._extract_clean_abstract(retry_resp)
+                print(f"🔁 Retry abstract: '{abstract}'")
             return abstract
         else:
             # Fallback: create basic abstract
@@ -141,6 +186,14 @@ Write only the summary:"""
             '#Summary',  # Analysis tags
             '#EmotionalImpact',  # Analysis tags
             '(I\'m looking',  # Meta-commentary
+            "I'm thinking & feeling",
+            "I'm thinking and feeling",
+            "# I'm thinking & feeling",
+            "# I'm thinking and feeling",
+            "I’m thinking & feeling",
+            "I’m thinking and feeling",
+            "# I’m thinking & feeling",
+            "# I’m thinking and feeling",
         ]
         
         for marker in stop_markers:
@@ -162,9 +215,10 @@ Write only the summary:"""
     
     def _build_scenario_prompt(self, user_situation: str, abstract: str) -> str:
         """Build the prompt for scenario generation using the abstract."""
+        situation = self._sanitize_situation_text(user_situation)
         prompt = f"""You are to produce JSON only. Using the situation and abstract below, return exactly one JSON object with keys: id (string), description (string), context (string), tags (array of strings). Do not include explanations or code fences.
 
-Situation: "{user_situation}"
+Situation: "{situation}"
 Abstract: "{abstract}"
 
 Example JSON:
@@ -181,9 +235,11 @@ Return only the JSON object now.
     
     def _generate_scenario_from_input_only(self, user_situation: str) -> Dict[str, Any]:
         """Generate scenario using only user input (no abstract)."""
+    
+        situation = self._sanitize_situation_text(user_situation)
         prompt = f"""You are to produce JSON only. Using the situation below, return exactly one JSON object with keys: id (string), description (string), context (string), tags (array of strings). Do not include explanations or code fences.
 
-Situation: "{user_situation}"
+Situation: "{situation}"
 
 Example JSON:
 {{
