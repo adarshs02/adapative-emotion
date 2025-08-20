@@ -12,15 +12,22 @@ Examples:
     --model meta-llama/Meta-Llama-3.1-8B-Instruct \
     --prompt "Write a brief, supportive reply to someone awaiting biopsy results."
 
-  # Use scenarios_30.json
+  # Run all scenarios in scenarios_30.json
   CUDA_VISIBLE_DEVICES=6 python run_model_test.py \
     --model meta-llama/Meta-Llama-3.1-8B-Instruct \
     --scenarios ./scenarios_30.json
+
+  # Run a single scenario by index (0-based)
+  CUDA_VISIBLE_DEVICES=6 python run_model_test.py \
+    --model meta-llama/Meta-Llama-3.1-8B-Instruct \
+    --scenarios ./scenarios_30.json \
+    --scenario-index 3
 """
 
 import argparse
 import json
 import os
+from datetime import datetime
 from pathlib import Path
 from typing import Optional, List, Dict, Any
 
@@ -45,13 +52,17 @@ except Exception:
 # Edit this to change the script's built-in default.
 DEFAULT_MODEL = "meta-llama/Meta-Llama-3.1-8B-Instruct"
 
+# Results directory next to this script
+HERE = Path(__file__).resolve()
+RESULTS_DIR = HERE.parent / "results"
+
 
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="Test any HF causal LLM on prompts or EmoPatient scenarios")
     p.add_argument("--model", help="HF model id, e.g., meta-llama/Meta-Llama-3.1-8B-Instruct", default=None)
     p.add_argument("--prompt", help="Single prompt to run", default="Please provide a concise, empathetic, medically grounded answer tailored to the above context.")
-    p.add_argument("--scenarios", help="Path to scenarios_30.json to run first scenario's QAs")
-    p.add_argument("--scenario-index", type=int, default=0, help="Scenario index to use from scenarios file (default 0)")
+    p.add_argument("--scenarios", help="Path to scenarios_30.json to run QAs (default: run all scenarios)")
+    p.add_argument("--scenario-index", type=int, default=None, help="Run only this scenario index (0-based). If omitted, runs all scenarios.")
     p.add_argument("--max-new-tokens", type=int, default=256)
     p.add_argument("--temperature", type=float, default=0.7)
     p.add_argument("--top-p", type=float, default=0.9)
@@ -126,7 +137,7 @@ def run_single_prompt(pipe, tok, prompt: str, max_new_tokens: int, temperature: 
     return out[0]["generated_text"].strip()
 
 
-def run_scenarios(pipe, tok, scenarios_path: Path, scenario_index: int, max_new_tokens: int, temperature: float, top_p: float):
+def run_scenarios(pipe, tok, scenarios_path: Path, scenario_index: Optional[int], max_new_tokens: int, temperature: float, top_p: float):
     data = json.loads(Path(scenarios_path).read_text(encoding="utf-8"))
     # Support multiple formats:
     # 1) {"scenarios": [...]} (preferred)
@@ -140,29 +151,70 @@ def run_scenarios(pipe, tok, scenarios_path: Path, scenario_index: int, max_new_
         scenarios = []
     if not scenarios:
         raise ValueError("No scenarios found in file; expected key 'scenarios' or 'scenarios_30'")
-    if not (0 <= scenario_index < len(scenarios)):
-        raise ValueError(f"scenario-index {scenario_index} out of range (0..{len(scenarios)-1})")
+    # If scenario_index is provided, run a single scenario; otherwise iterate over all
+    indices: List[int]
+    if scenario_index is None:
+        indices = list(range(len(scenarios)))
+        outer = tqdm(indices, desc="Scenarios", unit="scn")
+    else:
+        if not (0 <= scenario_index < len(scenarios)):
+            raise ValueError(f"scenario-index {scenario_index} out of range (0..{len(scenarios)-1})")
+        indices = [scenario_index]
+        outer = indices  # no outer progress bar for single scenario
 
-    scn = scenarios[scenario_index]
-    qa_list = scn.get("qa", [])
-    if not qa_list:
-        raise ValueError("Selected scenario has no QA items")
+    overall_results: List[Dict[str, Any]] = []
 
-    print(f"\nScenario: {scn.get('id', '(unknown)')} — {scn.get('title', '')}")
-    for i, qa in enumerate(tqdm(qa_list, desc="QAs", unit="q"), start=1):
-        qid = (qa.get("qid") or "").strip()
-        q = (qa.get("q") or "").strip()
-        if not q:
+    for s_idx in outer:
+        scn = scenarios[s_idx]
+        qa_list = scn.get("qa", [])
+        if not qa_list:
+            tqdm.write(f"⚠️ Scenario {s_idx} has no QA items; skipping.")
             continue
-        prompt = compose_from_scenario(scn, q)
-        tqdm.write("=" * 80)
-        header = f"Q{i}"
-        if qid:
-            header += f" [{qid}]"
-        tqdm.write(f"{header}: {q}")
-        tqdm.write("-" * 80)
-        ans = run_single_prompt(pipe, tok, prompt, max_new_tokens, temperature, top_p)
-        tqdm.write(ans)
+
+        tqdm.write(f"\nScenario {s_idx}: {scn.get('id', '(unknown)')} — {scn.get('title', '')}")
+        scenario_items: List[Dict[str, Any]] = []
+        for i, qa in enumerate(tqdm(qa_list, desc="QAs", unit="q"), start=1):
+            qid = (qa.get("qid") or "").strip()
+            q = (qa.get("q") or "").strip()
+            if not q:
+                continue
+            prompt = compose_from_scenario(scn, q)
+            tqdm.write("=" * 80)
+            header = f"Q{i}"
+            if qid:
+                header += f" [{qid}]"
+            tqdm.write(f"{header}: {q}")
+            tqdm.write("-" * 80)
+            ans = run_single_prompt(pipe, tok, prompt, max_new_tokens, temperature, top_p)
+            tqdm.write(ans)
+
+            scenario_items.append({
+                "index": i,
+                "qid": qid,
+                "question": q,
+                "answer": ans,
+            })
+
+        overall_results.append({
+            "scenario_index": s_idx,
+            "id": scn.get("id"),
+            "title": scn.get("title"),
+            "num_questions": len(qa_list),
+            "qas": scenario_items,
+        })
+
+    # Save combined results
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+    out_path = RESULTS_DIR / f"modeltest_results_{run_id}.json"
+    with out_path.open("w", encoding="utf-8") as f:
+        json.dump({
+            "scenarios_path": str(scenarios_path),
+            "generated_at": run_id,
+            "num_scenarios": len(overall_results),
+            "items": overall_results,
+        }, f, ensure_ascii=False, indent=2)
+    print(f"\n📝 Saved results to: {out_path}")
 
 
 if __name__ == "__main__":
