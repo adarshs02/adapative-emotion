@@ -1,93 +1,93 @@
 {
   "factors": [
     {
-      "name": "loss_aversion",
-      "description": "The tendency to prefer avoiding losses over acquiring gains",
+      "name": "nostalgia",
+      "description": "Tendency to reminisce about past experiences and objects",
       "possible_values": [
         "strong",
         "weak"
       ]
     },
     {
-      "name": "nostalgia",
-      "description": "The sentimental longing for the past",
+      "name": "separation_anxiety",
+      "description": "Fear of being away from loved ones",
       "possible_values": [
         "high",
         "low"
       ]
     },
     {
-      "name": "self-perception",
-      "description": "The way individuals perceive themselves and their abilities",
+      "name": "self-reliance",
+      "description": "Ability to take care of oneself in new situations",
       "possible_values": [
-        "positive",
-        "negative"
+        "weak",
+        "strong"
       ]
     }
   ],
   "emotions": [
-    "admiration",
-    "awe",
-    "curiosity",
-    "gratitude",
-    "nostalgia"
+    "excitement",
+    "longing",
+    "nervousness",
+    "uncertainty",
+    "wistfulness"
   ],
   "combinations": {
-    "loss_aversion=strong|nostalgia=high|self-perception=positive": {
-      "admiration": 0.75,
-      "awe": 0.1,
-      "curiosity": 0.75,
-      "gratitude": 0.75,
-      "nostalgia": 0.9
+    "nostalgia=strong|self-reliance=weak|separation_anxiety=high": {
+      "excitement": 0.25,
+      "longing": 0.9,
+      "nervousness": 0.75,
+      "uncertainty": 0.5,
+      "wistfulness": 0.9
     },
-    "loss_aversion=strong|nostalgia=high|self-perception=negative": {
-      "admiration": 0.25,
-      "awe": 0.03571428571428571,
-      "curiosity": 0.5,
-      "gratitude": 0.75,
-      "nostalgia": 0.75
+    "nostalgia=strong|self-reliance=strong|separation_anxiety=high": {
+      "excitement": 0.75,
+      "longing": 0.9,
+      "nervousness": 0.5,
+      "uncertainty": 0.5,
+      "wistfulness": 0.9
     },
-    "loss_aversion=strong|nostalgia=low|self-perception=positive": {
-      "admiration": 0.75,
-      "awe": 0.25,
-      "curiosity": 0.25,
-      "gratitude": 0.5,
-      "nostalgia": 0.75
+    "nostalgia=strong|self-reliance=weak|separation_anxiety=low": {
+      "excitement": 0.25,
+      "longing": 0.75,
+      "nervousness": 0.5,
+      "uncertainty": 0.25,
+      "wistfulness": 0.75
     },
-    "loss_aversion=strong|nostalgia=low|self-perception=negative": {
-      "admiration": 0.25,
-      "awe": 0.1,
-      "curiosity": 0.1,
-      "gratitude": 0.5,
-      "nostalgia": 0.5
+    "nostalgia=strong|self-reliance=strong|separation_anxiety=low": {
+      "excitement": 0.75,
+      "longing": 0.75,
+      "nervousness": 0.25,
+      "uncertainty": 0.25,
+      "wistfulness": 0.75
     },
-    "loss_aversion=weak|nostalgia=high|self-perception=positive": {
-      "admiration": 0.5,
-      "awe": 0.25,
-      "curiosity": 0.75,
-      "gratitude": 0.75,
-      "nostalgia": 0.75
+    "nostalgia=weak|self-reliance=weak|separation_anxiety=high": {
+      "excitement": 0.25,
+      "longing": 0.75,
+      "nervousness": 0.5,
+      "uncertainty": 0.75,
+      "wistfulness": 0.9
     },
-    "loss_aversion=weak|nostalgia=high|self-perception=negative": {
-      "admiration": 0.1,
-      "awe": 0.1,
-      "curiosity": 0.5,
-      "gratitude": 0.75,
-      "nostalgia": 0.5
+    "nostalgia=weak|self-reliance=strong|separation_anxiety=high": {
+      "excitement": 0.75,
+      "longing": 0.75,
+      "nervousness": 0.25,
+      "uncertainty": 0.75,
+      "wistfulness": 0.9
     },
-    "loss_aversion=weak|nostalgia=low|self-perception=positive": {
-      "admiration": 0.5,
-      "awe": 0.5,
-      "curiosity": 0.25,
-      "gratitude": 0.5,
-      "nostalgia": 0.5
+    "nostalgia=weak|self-reliance=weak|separation_anxiety=low": {
+      "excitement": 0.25,
+      "longing": 0.5,
+      "nervousness": 0.25,
+      "uncertainty": 0.5,
+      "wistfulness": 0.75
     },
-    "loss_aversion=weak|nostalgia=low|self-perception=negative": {
-      "admiration": 0.1,
-      "awe": 0.25,
-      "curiosity": 0.1,
-      "gratitude": 0.5,
-      "nostalgia": 0.25
+    "nostalgia=weak|self-reliance=strong|separation_anxiety=low": {
+      "excitement": 0.75,
+      "longing": 0.5,
+      "nervousness": 0.1,
+      "uncertainty": 0.5,
+      "wistfulness": 0.75
     }
   },
   "metadata": {

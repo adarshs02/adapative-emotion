@@ -1,0 +1,2074 @@
+{
+  "scenarios": [
+    {
+      "id": "S1",
+      "title": "I'm the strong one (de novo HER2+ metastatic breast cancer)",
+      "diagnosis": "De novo HER2-positive metastatic breast cancer with gastric/cecal involvement",
+      "treatment_plan": "Docetaxel + trastuzumab + pertuzumab IV every 3 weeks; limit docetaxel to ~4–6 cycles if responding, then continue trastuzumab + pertuzumab maintenance",
+      "narrative": "I'm a 60-year-old grandmother who has always held the family together. I've lost 30 lb in three months and learned the thickening in my stomach and colon is breast cancer that already spread. My team recommends docetaxel with trastuzumab and pertuzumab. I'm afraid of losing who I am to my grandkids.",
+      "qa": [
+        {
+          "q": "Everyone keeps saying this plan is palliative. How do I balance hope with honesty so my family doesn't think I'm giving up?",
+          "gt": "Palliative means the goal is control and quality of life, not cure. Many people live well for years on HER2-targeted therapy; we will track benefit and change course quickly if it stops helping.",
+          "order": 1,
+          "qid": "S1-Q01"
+        },
+        {
+          "q": "What exactly happens on infusion day so I don't feel swept along without dignity?",
+          "gt": "Every 3 weeks you’ll have labs, a brief visit, premeds for side effects, then the infusions. We’ll schedule rides, anti-nausea meds, and a plan for your expected low-energy days.",
+          "order": 2,
+          "qid": "S1-Q02"
+        },
+        {
+          "q": "I’m terrified about heart damage from the HER2 drugs. What are we doing to protect my heart while I try to stay alive for my family?",
+          "gt": "We’ll obtain a baseline echocardiogram and repeat about every 3 months, watch for symptoms, and pause or adjust if heart function dips. Most changes are mild and reversible when caught early.",
+          "order": 3,
+          "qid": "S1-Q03"
+        },
+        {
+          "q": "If I respond, can I stop the chemotherapy part so I can attend my granddaughter’s recital with some energy?",
+          "gt": "Yes. If you respond and are tolerating treatment, we usually stop docetaxel after ~4–6 cycles and continue trastuzumab plus pertuzumab every 3 weeks.",
+          "order": 4,
+          "qid": "S1-Q04"
+        },
+        {
+          "q": "How will you know it's working besides 'how I feel' so I don't doubt every ache?",
+          "gt": "We’ll assess symptoms and labs each visit and obtain scans about every 2–3 months to confirm response or stability.",
+          "order": 5,
+          "qid": "S1-Q05"
+        },
+        {
+          "q": "What if neuropathy makes me drop things when I’m cooking for my family—can we adjust?",
+          "gt": "Yes. We can dose-reduce, delay, or stop docetaxel for neuropathy and use medications and safety strategies at home.",
+          "order": 6,
+          "qid": "S1-Q06"
+        },
+        {
+          "q": "I hate the idea of isolation when my white cells drop. Do I need to avoid my loved ones?",
+          "gt": "No. Avoid people who are ill, practice hand hygiene, and consider a mask in crowded places. You do not need to avoid close family contact.",
+          "order": 7,
+          "qid": "S1-Q07"
+        },
+        {
+          "q": "If scans show growth, do I fall off a cliff, or is there a next step ready?",
+          "gt": "We have multiple effective next lines for HER2+ disease. We’ll switch promptly based on your scan, symptoms, and preferences.",
+          "order": 8,
+          "qid": "S1-Q08"
+        },
+        {
+          "q": "Can I keep working part-time without feeling punished for trying?",
+          "gt": "Often yes. We can time infusions, provide work notes, and adjust doses to maintain quality of life.",
+          "order": 9,
+          "qid": "S1-Q09"
+        },
+        {
+          "q": "I don't want cancer to be the only thing my grandchildren remember. How can we plan around the good days?",
+          "gt": "We’ll map your expected energy pattern each cycle and schedule meaningful activities on your best days so family time stays central.",
+          "order": 10,
+          "qid": "S1-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "New mom, old terror (stage IIIB triple-negative breast cancer, neoadjuvant)",
+      "diagnosis": "Stage IIIB triple-negative breast cancer",
+      "treatment_plan": "Neoadjuvant pembrolizumab every 3 weeks with weekly paclitaxel/carboplatin ~12 weeks, then doxorubicin/cyclophosphamide every 2 weeks ×4; surgery ± radiation; continue pembrolizumab to ~1 year",
+      "narrative": "I'm 33, eight months postpartum, newly diagnosed with aggressive triple-negative breast cancer. My baby still wakes at night; my body doesn't feel like mine. They’re starting chemo-immunotherapy before surgery.",
+      "qa": [
+        {
+          "q": "It feels like I'm failing as a mom by stopping breastfeeding and losing my hair at the same time. How do I not drown in that guilt?",
+          "gt": "Stopping breastfeeding is necessary for safety, and hair loss is temporary. Treating your cancer protects your child; we’ll support grief, discuss scalp cooling, and preserve routines that keep you bonded.",
+          "order": 1,
+          "qid": "S2-Q01"
+        },
+        {
+          "q": "I’m scared I’ll be too sick to comfort my baby after her vaccines—how do we plan so she still reaches for me on the hard days?",
+          "gt": "We’ll anticipate post-infusion fatigue, arrange help during low days, and manage nausea proactively. Short, predictable comfort routines keep attachment strong.",
+          "order": 2,
+          "qid": "S2-Q02"
+        },
+        {
+          "q": "If the lump isn’t shrinking fast, how do I stop spiraling into 'this isn't working'?",
+          "gt": "Responses can be gradual. We examine you at each visit, use interval imaging, and adjust therapy if needed. Slow change doesn’t mean failure.",
+          "order": 3,
+          "qid": "S2-Q03"
+        },
+        {
+          "q": "Is there anything we can do right now about fertility without dangerously delaying treatment?",
+          "gt": "Yes. We can urgently refer for egg or embryo freezing and consider ovarian suppression during chemo; these steps usually don’t cause significant delays.",
+          "order": 4,
+          "qid": "S2-Q04"
+        },
+        {
+          "q": "Immunotherapy sounds like it could attack anything—what symptoms should make me call immediately?",
+          "gt": "Call for new or worsening shortness of breath, persistent diarrhea, severe rash, jaundice, or unusual fatigue—early treatment prevents serious complications.",
+          "order": 5,
+          "qid": "S2-Q05"
+        },
+        {
+          "q": "Can we time a cycle so I can be present for my sister’s wedding photos without a mask and IV tape?",
+          "gt": "We’ll schedule around infusions and confirm blood counts; with precautions, most people can attend milestones between cycles.",
+          "order": 6,
+          "qid": "S2-Q06"
+        },
+        {
+          "q": "I’m worried about a port and feeling 'marked.' Do I really need one?",
+          "gt": "A port makes frequent infusions safer and more comfortable and can reduce IV complications. We remove it when treatment ends.",
+          "order": 7,
+          "qid": "S2-Q07"
+        },
+        {
+          "q": "How will surgery decisions change if I get a complete response?",
+          "gt": "A pathologic complete response improves prognosis but doesn’t eliminate surgery. We’ll tailor the surgical plan to your response and preferences.",
+          "order": 8,
+          "qid": "S2-Q08"
+        },
+        {
+          "q": "My baby is in daycare; do I need to pull her out during chemo?",
+          "gt": "Not necessarily. Use strict hand hygiene, avoid close contact with anyone ill, and consider extra precautions during your lowest-count days.",
+          "order": 9,
+          "qid": "S2-Q09"
+        },
+        {
+          "q": "What helps financially when I’m suddenly a cancer patient with a young child?",
+          "gt": "We’ll connect you with financial counseling, medication assistance programs, and community resources for childcare and transportation.",
+          "order": 10,
+          "qid": "S2-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "Coach who can’t fix it (metastatic hormone-sensitive prostate cancer)",
+      "diagnosis": "Metastatic hormone-sensitive prostate cancer with painful bone lesions",
+      "treatment_plan": "Androgen deprivation therapy injection every 1–3 months plus a daily androgen-receptor–targeted pill; consider focused radiation for painful sites; bone-protective measures",
+      "narrative": "I'm a 71-year-old retired high-school coach with bone pain. They’re starting hormone shots plus a daily pill. I’ve always been the guy with answers; now I’m short-tempered and scared.",
+      "qa": [
+        {
+          "q": "When my sex drive collapses and my body changes, how do I not resent the very treatment keeping me here?",
+          "gt": "ADT affects libido, energy, and mood. We’ll manage hot flashes and depression, support intimacy in new ways, and adjust therapy to balance control with quality of life.",
+          "order": 1,
+          "qid": "S3-Q01"
+        },
+        {
+          "q": "What’s the fastest path to walking my grandkids to school without wincing every step?",
+          "gt": "ADT often eases bone pain within weeks. We can add focused radiation for quicker relief and optimize pain medications now.",
+          "order": 2,
+          "qid": "S3-Q02"
+        },
+        {
+          "q": "How do I keep my routine so I’m not treated like fragile glass at home?",
+          "gt": "We’ll pace activities realistically, schedule injections around plans, and set up a symptom check-in so your family knows when you need help and when you don’t.",
+          "order": 3,
+          "qid": "S3-Q03"
+        },
+        {
+          "q": "My buddy had a heart issue on hormones. What are we doing to protect my heart and metabolism?",
+          "gt": "We’ll monitor blood pressure, cholesterol, glucose, and weight, encourage exercise, and involve your primary care or cardiology when needed.",
+          "order": 4,
+          "qid": "S3-Q04"
+        },
+        {
+          "q": "Will my bones thin out? I don’t want a hip fracture to bench me for good.",
+          "gt": "ADT can weaken bones. We’ll check vitamin D/calcium, recommend weight-bearing exercise, and consider bone-strengthening medications.",
+          "order": 5,
+          "qid": "S3-Q05"
+        },
+        {
+          "q": "If this combo stops working, what’s next so I’m not blindsided?",
+          "gt": "We’ll watch PSA, symptoms, and scans. If resistance develops, options include chemotherapy or other targeted agents.",
+          "order": 6,
+          "qid": "S3-Q06"
+        },
+        {
+          "q": "Can I keep assistant-coaching the team without having to explain hot flashes to a locker room?",
+          "gt": "Likely yes. We can schedule around side effects and provide notes for flexible duties while we manage symptoms discreetly.",
+          "order": 7,
+          "qid": "S3-Q07"
+        },
+        {
+          "q": "What if the pain suddenly spikes on a weekend?",
+          "gt": "Call us. We’ll provide an after-hours plan, escalate pain control, and use urgent imaging or radiation if needed.",
+          "order": 8,
+          "qid": "S3-Q08"
+        },
+        {
+          "q": "Should I change my diet or supplements now that hormones are changing everything?",
+          "gt": "Heart-healthy eating and adequate calcium/vitamin D are helpful. Check all supplements with us to avoid interactions.",
+          "order": 9,
+          "qid": "S3-Q09"
+        },
+        {
+          "q": "How do I talk to my sons about genetics without scaring them?",
+          "gt": "Some prostate cancers have hereditary components. We can arrange genetic counseling; information helps them make informed screening choices.",
+          "order": 10,
+          "qid": "S3-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "Teacher with too much silence (high-grade serous ovarian cancer)",
+      "diagnosis": "High-grade serous ovarian cancer with ascites",
+      "treatment_plan": "Cytoreductive surgery when appropriate; carboplatin/paclitaxel every 3 weeks for ~6 cycles; maintenance therapy based on tumor features (e.g., PARP) and response; genetic testing recommended",
+      "narrative": "I'm a 45-year-old teacher with ascites, facing surgery and chemo. My daughter is 16, and our home has become very quiet since we said the word 'cancer.'",
+      "qa": [
+        {
+          "q": "My belly is so tight I can't eat and I feel ashamed of how I look. What can we do right now so I can sit at the table with my family again?",
+          "gt": "We can drain ascites to relieve pressure, treat nausea and early fullness, and involve a dietitian. Many people feel immediate improvement after drainage.",
+          "order": 1,
+          "qid": "S4-Q01"
+        },
+        {
+          "q": "I’m scared my daughter is googling worst-case stories alone. How do we talk so she feels included but not crushed?",
+          "gt": "We’ll outline the plan in clear steps, invite her to visits if she wants, and offer teen-focused counseling and concrete ways to help.",
+          "order": 2,
+          "qid": "S4-Q02"
+        },
+        {
+          "q": "If my hair falls out and my students stare, how do I walk back into my classroom with dignity?",
+          "gt": "We’ll plan timing around cycles, discuss head coverings or going without, and coordinate with your school for privacy and support. Hair usually regrows after chemo.",
+          "order": 3,
+          "qid": "S4-Q03"
+        },
+        {
+          "q": "Do I pass this to my daughter—did I cause this?",
+          "gt": "Many ovarian cancers are not inherited, but genetic testing matters. If a hereditary mutation is found, we’ll guide family testing and prevention options.",
+          "order": 4,
+          "qid": "S4-Q04"
+        },
+        {
+          "q": "How will you prove the chemo is worth what it takes from me?",
+          "gt": "We’ll track symptoms, scan every 2–3 months, and follow tumor markers like CA-125 when applicable. We adjust quickly if the burden outweighs benefit.",
+          "order": 5,
+          "qid": "S4-Q05"
+        },
+        {
+          "q": "I’m terrified of neuropathy making me drop dishes at school lunches. Can we prevent or manage it?",
+          "gt": "We monitor closely and adjust doses if symptoms start. Occupational strategies and medications can help manage neuropathy.",
+          "order": 6,
+          "qid": "S4-Q06"
+        },
+        {
+          "q": "If surgery can’t remove everything, does that mean we failed?",
+          "gt": "No. The goal is maximal safe removal plus effective chemotherapy; many patients do well even without complete resection.",
+          "order": 7,
+          "qid": "S4-Q07"
+        },
+        {
+          "q": "What will maintenance therapy look like if I respond?",
+          "gt": "Depending on tumor genetics and response, we may recommend a daily PARP inhibitor or other maintenance for a defined period to prolong control.",
+          "order": 8,
+          "qid": "S4-Q08"
+        },
+        {
+          "q": "I want to plan one normal family trip between cycles. Is that realistic?",
+          "gt": "Often yes. We’ll choose a window when counts and energy are best and give clear precautions.",
+          "order": 9,
+          "qid": "S4-Q09"
+        },
+        {
+          "q": "What should my daughter say if someone at school asks if I’m dying?",
+          "gt": "'My mom is getting treatment and has a plan. We’re taking it step by step.' We can coach her on boundaries and support.",
+          "order": 10,
+          "qid": "S4-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "The drummer who counts rests (glioblastoma after surgery)",
+      "diagnosis": "Glioblastoma after maximal safe resection",
+      "treatment_plan": "Concurrent radiation (~6 weeks) with daily temozolomide; then adjuvant temozolomide 5 days every 28 days for several cycles; consider tumor-treating fields; symptom management and rehab",
+      "narrative": "I'm 58, a drummer. They removed what they could and now it's radiation with daily chemo. I keep practicing rudiments to feel normal, but the rests feel longer than the notes.",
+      "qa": [
+        {
+          "q": "If my thinking slows or words jam, how do I stay myself in front of a band that's never seen me drop a beat?",
+          "gt": "Cognitive rehab, sleep hygiene, and medications can help. We’ll pace rehearsals and adapt your role while protecting independence and dignity.",
+          "order": 1,
+          "qid": "S5-Q01"
+        },
+        {
+          "q": "I’m afraid of seizing on stage. Do I have to quit performing altogether?",
+          "gt": "Not necessarily. With anti-seizure meds, trigger avoidance, and a safety plan, many people perform safely. We’ll also discuss driving restrictions where applicable.",
+          "order": 2,
+          "qid": "S5-Q02"
+        },
+        {
+          "q": "How do we tell real tumor growth from treatment swelling so I don't live scan to scan in panic?",
+          "gt": "We use standardized MRI timing and criteria and interpret changes alongside your symptoms. Sometimes short-interval scans clarify ambiguous findings.",
+          "order": 3,
+          "qid": "S5-Q03"
+        },
+        {
+          "q": "Steroids make me feel wired and unlike myself. Can we limit them?",
+          "gt": "We’ll use the lowest effective dose and taper as soon as safely possible while controlling swelling and symptoms.",
+          "order": 4,
+          "qid": "S5-Q04"
+        },
+        {
+          "q": "Does wearing tumor-treating fields make me look 'sick' all the time? Is it worth it?",
+          "gt": "It’s visible and takes adjustment, but it can add benefit for some patients. We’ll review pros/cons and support practical strategies if you choose it.",
+          "order": 5,
+          "qid": "S5-Q05"
+        },
+        {
+          "q": "What does MGMT or IDH status actually change for me?",
+          "gt": "These markers can inform how well temozolomide may work and guide prognosis and trial options. We’ll personalize your plan based on your results.",
+          "order": 6,
+          "qid": "S5-Q06"
+        },
+        {
+          "q": "I want to leave my family something more than fear. What can we set up now?",
+          "gt": "Advance care planning, legacy projects (letters, recordings), and early palliative care reduce uncertainty and strengthen connection.",
+          "order": 7,
+          "qid": "S5-Q07"
+        },
+        {
+          "q": "If the tumor returns, what are the realistic next steps?",
+          "gt": "Options may include clinical trials, alternate chemo/targeted approaches, repeat surgery or radiation in select cases, or comfort-focused care.",
+          "order": 8,
+          "qid": "S5-Q08"
+        },
+        {
+          "q": "How do I protect my energy so I’m not sleeping through the parts of life I want to be awake for?",
+          "gt": "We’ll coordinate therapy timing, manage fatigue, and build a weekly plan prioritizing the activities that matter most to you.",
+          "order": 9,
+          "qid": "S5-Q09"
+        },
+        {
+          "q": "How do I ask for help without feeling like a burden?",
+          "gt": "We’ll define specific tasks others can do, connect you to caregiver resources, and normalize asking—support is part of treatment.",
+          "order": 10,
+          "qid": "S5-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S6",
+      "title": "Driver with the detour (locally advanced rectal cancer, total neoadjuvant therapy)",
+      "diagnosis": "Locally advanced rectal adenocarcinoma",
+      "treatment_plan": "Total neoadjuvant therapy: chemoradiation (~5–6 weeks), systemic chemotherapy for several months, then surgery depending on response; possible temporary ostomy; consideration of watch-and-wait if complete clinical response",
+      "narrative": "I'm 62 and drive a city bus. Treatment will be chemoradiation, then systemic chemo, then maybe surgery. I keep picturing an ostomy and panicking about the smell on a crowded route.",
+      "qa": [
+        {
+          "q": "I can’t stop imagining a bag leaking while I’m on shift. What’s real versus fear, and who teaches me to manage it if I need one?",
+          "gt": "Modern ostomy systems are low-profile and odor-controlling. An ostomy nurse will train you before and after surgery; most people return to public-facing work confidently.",
+          "order": 1,
+          "qid": "S6-Q01"
+        },
+        {
+          "q": "Is watch-and-wait a real option if the tumor melts away, or just internet rumor?",
+          "gt": "It’s real for carefully selected patients with a complete clinical response. We decide using exam, MRI, and endoscopy within an experienced program.",
+          "order": 2,
+          "qid": "S6-Q02"
+        },
+        {
+          "q": "I’m scared of incontinence after treatment. Can we do anything to protect function?",
+          "gt": "Pelvic floor therapy, careful surgical planning, and bowel management strategies help many people maintain control.",
+          "order": 3,
+          "qid": "S6-Q03"
+        },
+        {
+          "q": "How do we schedule treatment so I’m not nodding off at the wheel?",
+          "gt": "We’ll coordinate therapy days, monitor fatigue and counts, and adjust work hours or provide leave documentation as needed.",
+          "order": 4,
+          "qid": "S6-Q04"
+        },
+        {
+          "q": "Will intimacy be possible after all this, or are we pretending?",
+          "gt": "Yes, though adjustments may be needed. Counseling, pelvic floor therapy, lubrication, and erectile aids can help; we’ll address concerns openly.",
+          "order": 5,
+          "qid": "S6-Q05"
+        },
+        {
+          "q": "If chemo knocks me down, do we push through or change course?",
+          "gt": "We can reduce doses, switch regimens, or adjust sequencing. Your safety and long-term control both matter.",
+          "order": 6,
+          "qid": "S6-Q06"
+        },
+        {
+          "q": "What should I eat when everything upsets my stomach on radiation days?",
+          "gt": "Small, bland meals; hydration; and anti-diarrheals when needed. A dietitian can tailor a plan for you.",
+          "order": 7,
+          "qid": "S6-Q07"
+        },
+        {
+          "q": "How will you decide if surgery can spare my sphincter?",
+          "gt": "Tumor location, size, and response guide the approach. Our goal is cancer control while preserving function when it’s safe.",
+          "order": 8,
+          "qid": "S6-Q08"
+        },
+        {
+          "q": "If I choose a temporary ostomy, how long might I have it?",
+          "gt": "If used, many temporary ostomies are reversed a few months after healing and completion of therapy, depending on your recovery.",
+          "order": 9,
+          "qid": "S6-Q09"
+        },
+        {
+          "q": "What’s the long-term follow-up so I’m not blindsided later?",
+          "gt": "Regular exams, imaging, and scopes at defined intervals. We’ll give you a written survivorship plan.",
+          "order": 10,
+          "qid": "S6-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S7",
+      "title": "Senior year, sudden detour (bulky mediastinal Hodgkin lymphoma)",
+      "diagnosis": "Classical Hodgkin lymphoma with bulky mediastinal disease",
+      "treatment_plan": "ABVD every 2 weeks for 4–6 cycles (or regimen adjusted per interim PET); radiation may follow depending on response; fertility counseling before treatment",
+      "narrative": "I'm 22, a college senior. I’m supposed to take graduation photos and go on a cross-country trip. Now it’s ABVD and maybe radiation.",
+      "qa": [
+        {
+          "q": "How do I tell my friends without becoming the 'project' everyone hovers over?",
+          "gt": "Share only what you want, ask for practical help (rides, meals), and set boundaries. We can connect you with peers who’ve navigated this.",
+          "order": 1,
+          "qid": "S7-Q01"
+        },
+        {
+          "q": "Can we bank sperm without delaying chemo dangerously?",
+          "gt": "Yes. Sperm banking can usually be done within days and won’t meaningfully delay treatment.",
+          "order": 2,
+          "qid": "S7-Q02"
+        },
+        {
+          "q": "What can I realistically expect from hair loss and timing so I can plan photos I won’t hate?",
+          "gt": "Hair loss is common and often starts after the first few cycles. We can time photos early or plan head coverings—your choice.",
+          "order": 3,
+          "qid": "S7-Q03"
+        },
+        {
+          "q": "If my PET after two cycles isn’t perfect, does that mean I failed?",
+          "gt": "No. Interim PET guides whether we continue the same plan or intensify; it’s a tool for adjustment, not a verdict.",
+          "order": 4,
+          "qid": "S7-Q04"
+        },
+        {
+          "q": "Will my lungs be okay for hiking later if I get bleomycin or chest radiation?",
+          "gt": "We’ll test lung function and monitor. Many people resume activity with a graduated plan; we may modify treatment to protect lungs.",
+          "order": 5,
+          "qid": "S7-Q05"
+        },
+        {
+          "q": "Can I keep a piece of senior year—clubs, trip, something—without risking my health?",
+          "gt": "Often yes. We’ll time cycles, check counts, and set precautions so you can safely participate between treatments.",
+          "order": 6,
+          "qid": "S7-Q06"
+        },
+        {
+          "q": "What should I do about vaccines and infections with roommates coming and going?",
+          "gt": "Stay current on recommended vaccines, hand hygiene, avoid sick contacts, and call for fever 100.4°F (38°C) or higher.",
+          "order": 7,
+          "qid": "S7-Q07"
+        },
+        {
+          "q": "How do I handle dating and the 'big C' conversation without scaring someone off?",
+          "gt": "Be honest at your pace. Many people appreciate clarity. We can offer language and support resources for young adults.",
+          "order": 8,
+          "qid": "S7-Q08"
+        },
+        {
+          "q": "Is alcohol totally off-limits during treatment?",
+          "gt": "Moderation is key, and sometimes it’s best to avoid alcohol due to liver effects and interactions. Ask before drinking in a cycle.",
+          "order": 9,
+          "qid": "S7-Q09"
+        },
+        {
+          "q": "What does life look like if treatment works—am I always looking over my shoulder?",
+          "gt": "Follow-up visits become less frequent over time. Most survivors resume normal life with a plan for surveillance and late-effect monitoring.",
+          "order": 10,
+          "qid": "S7-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S8",
+      "title": "Coder with a countdown (chronic-phase CML on TKI)",
+      "diagnosis": "Chronic-phase chronic myeloid leukemia",
+      "treatment_plan": "Daily oral tyrosine kinase inhibitor; regular BCR-ABL monitoring with specific molecular milestones; consider treatment-free remission after deep, stable response",
+      "narrative": "I'm 29, a software engineer with chronic-phase CML. I look fine, but the word 'leukemia' keeps crashing my thoughts. They’re starting me on a daily TKI pill.",
+      "qa": [
+        {
+          "q": "How do I keep working sprints when my brain pings 'I have leukemia' every 10 minutes?",
+          "gt": "Short-term counseling, mindfulness, and peer support help. Many people work full-time; we can also arrange brief leave during dose starts or adjustments.",
+          "order": 1,
+          "qid": "S8-Q01"
+        },
+        {
+          "q": "What side effects actually show up day to day, not the terrifying list online?",
+          "gt": "Common effects include fluid retention, cramps, rash, and GI upset. We manage with supportive meds and dose adjustments; most patients find a tolerable routine.",
+          "order": 2,
+          "qid": "S8-Q02"
+        },
+        {
+          "q": "Do I have to give up my morning PPI and supplements?",
+          "gt": "Some TKIs interact with acid reducers and supplements. We’ll review your list and time or change medications to avoid interactions.",
+          "order": 3,
+          "qid": "S8-Q03"
+        },
+        {
+          "q": "How do you know this pill is truly working and not just wishful thinking?",
+          "gt": "We track BCR-ABL by PCR at set intervals. Hitting specific milestones tells us the drug is controlling the disease; if not, we change early.",
+          "order": 4,
+          "qid": "S8-Q04"
+        },
+        {
+          "q": "Could I ever stop treatment, or is this forever?",
+          "gt": "After years of deep, stable responses, some patients attempt treatment-free remission with close monitoring. It’s a shared, carefully monitored decision.",
+          "order": 5,
+          "qid": "S8-Q05"
+        },
+        {
+          "q": "I want kids in a couple years—how do we plan around pregnancy and this medication?",
+          "gt": "Some TKIs aren’t safe in pregnancy. With planning and stable disease, supervised treatment pauses may be possible; we’ll coordinate with hematology and fertility teams.",
+          "order": 6,
+          "qid": "S8-Q06"
+        },
+        {
+          "q": "Travel matters to me—can I fly internationally and keep labs on schedule?",
+          "gt": "Yes. Bring enough medication, keep dosing times consistent, and arrange labs where you’ll be; we’ll coordinate schedules.",
+          "order": 7,
+          "qid": "S8-Q07"
+        },
+        {
+          "q": "What if I miss doses during crunch time at work?",
+          "gt": "Adherence is key. If you miss a dose, don’t double up; take the next dose as scheduled. Tell us if adherence becomes hard so we can problem-solve.",
+          "order": 8,
+          "qid": "S8-Q08"
+        },
+        {
+          "q": "What’s my plan if side effects hit hard at 2 a.m.?",
+          "gt": "We’ll give clear after-hours contact instructions and supportive meds to keep at home so you aren’t stuck waiting.",
+          "order": 9,
+          "qid": "S8-Q09"
+        },
+        {
+          "q": "How do I tell my parents I’m okay when the word 'leukemia' makes them panic?",
+          "gt": "Share that CML in chronic phase is highly controllable with pills and monitoring. We can include them in a visit to answer questions.",
+          "order": 10,
+          "qid": "S8-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S9",
+      "title": "Meeting my granddaughter (EGFR-mutated metastatic NSCLC)",
+      "diagnosis": "EGFR-mutated metastatic non-small cell lung cancer",
+      "treatment_plan": "Osimertinib oral therapy once daily; routine monitoring for rash, diarrhea, heart rhythm, and rare lung inflammation; imaging every 2–3 months",
+      "narrative": "I'm 68, a soon-to-be grandfather with an EGFR mutation. I feel guilty about old smoking years and I'm terrified I won't be there to hold my granddaughter next month.",
+      "qa": [
+        {
+          "q": "How quickly might my breathing ease so I can fly to meet her without gasping in the aisle?",
+          "gt": "Many people feel improvement within 1–2 weeks of starting osimertinib. We’ll assess if you need oxygen or precautions before flying.",
+          "order": 1,
+          "qid": "S9-Q01"
+        },
+        {
+          "q": "I read about dangerous lung inflammation from this pill. What would that feel like and what would we do?",
+          "gt": "New or worsening cough, shortness of breath, or fever could signal inflammation. Stop the drug and call us immediately; early evaluation and steroids can help.",
+          "order": 2,
+          "qid": "S9-Q02"
+        },
+        {
+          "q": "Do I need to hide from crowds like airports and skip the baby to avoid infection?",
+          "gt": "Osimertinib doesn’t usually suppress immunity like chemo. Use hand hygiene and a mask in crowded spaces; you can safely be with family if you feel well.",
+          "order": 3,
+          "qid": "S9-Q03"
+        },
+        {
+          "q": "Will I lose my hair or look 'sick' in photos?",
+          "gt": "Significant hair loss is uncommon. Skin rash and dryness can occur; we’ll treat promptly and plan skincare.",
+          "order": 4,
+          "qid": "S9-Q04"
+        },
+        {
+          "q": "I’m ashamed about past smoking. Does that change my prognosis or how you treat me?",
+          "gt": "Your EGFR mutation guides treatment more than smoking history. There’s no judgment here—our focus is what helps you now.",
+          "order": 5,
+          "qid": "S9-Q05"
+        },
+        {
+          "q": "How will we know it’s working beyond me wanting it to be?",
+          "gt": "We’ll monitor symptoms and obtain CT scans every 2–3 months initially to confirm tumor response or stability.",
+          "order": 6,
+          "qid": "S9-Q06"
+        },
+        {
+          "q": "What happens if or when the pill stops working?",
+          "gt": "We’ll re-test for resistance changes and move to the next therapy or a clinical trial tailored to what we find and how you’re feeling.",
+          "order": 7,
+          "qid": "S9-Q07"
+        },
+        {
+          "q": "Can I stay active with my walking group, or should I rest more?",
+          "gt": "Stay active as tolerated; walking is encouraged. We’ll adjust if fatigue or side effects increase.",
+          "order": 8,
+          "qid": "S9-Q08"
+        },
+        {
+          "q": "Are there heart checks I need to worry about?",
+          "gt": "We may do baseline and periodic ECGs if you take other QT-affecting medicines or develop symptoms, and we’ll monitor electrolytes.",
+          "order": 9,
+          "qid": "S9-Q09"
+        },
+        {
+          "q": "What’s my plan if diarrhea hits mid-flight?",
+          "gt": "Carry anti-diarrheal medication, hydrate, and contact us if symptoms persist. We can adjust the plan if side effects recur.",
+          "order": 10,
+          "qid": "S9-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "Sunday dinners matter (metastatic pancreatic cancer)",
+      "diagnosis": "Metastatic pancreatic adenocarcinoma with weight loss and pain",
+      "treatment_plan": "Gemcitabine + nab-paclitaxel weekly for 3 weeks, then 1 week off (28-day cycles); symptom control; nutrition and enzyme support; reassessment each cycle",
+      "narrative": "I'm 72, a retired teacher. Pain steals my sleep and I’m losing weight. My family’s Sunday dinner and church choir are my anchors. The plan is gemcitabine with nab-paclitaxel.",
+      "qa": [
+        {
+          "q": "Can you get my pain under control now so I can sit through dinner without faking a smile?",
+          "gt": "Yes. We’ll escalate pain medicines quickly, consider nerve blocks if needed, and involve palliative care immediately to keep you comfortable.",
+          "order": 1,
+          "qid": "S10-Q01"
+        },
+        {
+          "q": "I can’t keep weight on and everything tastes wrong. What can actually help this week?",
+          "gt": "We’ll prescribe pancreatic enzymes, manage nausea, add appetite support, and connect you with an oncology dietitian for rapid, practical changes.",
+          "order": 2,
+          "qid": "S10-Q02"
+        },
+        {
+          "q": "Will this treatment take all my 'good days,' or can we plan around choir and grandkids?",
+          "gt": "Most people have predictable low-energy days after infusions. We’ll map your cycle so you can plan meaningful activities on your better days.",
+          "order": 3,
+          "qid": "S10-Q03"
+        },
+        {
+          "q": "How do you know it’s working without waiting months?",
+          "gt": "We track pain, weight, and function at every visit, follow labs (such as CA 19-9 when applicable), and scan every 2–3 months or sooner if symptoms change.",
+          "order": 4,
+          "qid": "S10-Q04"
+        },
+        {
+          "q": "What if the side effects feel worse than the disease—do I have permission to ask for less?",
+          "gt": "Absolutely. We can reduce doses, skip doses, or switch regimens. Your goals and comfort guide decisions.",
+          "order": 5,
+          "qid": "S10-Q05"
+        },
+        {
+          "q": "I don’t want to die in a hospital. When do we talk about those wishes without giving up?",
+          "gt": "Now. We’ll document your preferences, involve palliative care early, and make plans so your care matches what matters to you.",
+          "order": 6,
+          "qid": "S10-Q06"
+        },
+        {
+          "q": "Will I lose my hair, and if I do, how do I handle people’s reactions at church?",
+          "gt": "Hair loss can occur. Head coverings, wigs, or going natural are all valid; we’ll support whatever helps you feel most like yourself.",
+          "order": 7,
+          "qid": "S10-Q07"
+        },
+        {
+          "q": "Can I keep taking my walks without risking a fall when I’m weak?",
+          "gt": "Yes, with support. We’ll use physical therapy for strength and balance and suggest assistive devices if needed.",
+          "order": 8,
+          "qid": "S10-Q08"
+        },
+        {
+          "q": "My family is afraid to eat with me, like food will 'hurt' the cancer. What should we tell them?",
+          "gt": "Food doesn’t feed the cancer. With enzymes and symptom control, eating small, frequent meals is encouraged for strength and comfort.",
+          "order": 9,
+          "qid": "S10-Q09"
+        },
+        {
+          "q": "If this stops working, what’s next so we aren’t scrambling?",
+          "gt": "We’ll discuss other regimens and trials and, when appropriate, focus care entirely on comfort at home. There will always be a plan.",
+          "order": 10,
+          "qid": "S10-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "My hands play, my bones ache (transplant-eligible multiple myeloma)",
+      "diagnosis": "Multiple myeloma with lytic bone disease, transplant-eligible",
+      "treatment_plan": "Induction (bortezomib/lenalidomide/dexamethasone), stem-cell collection and autologous transplant when appropriate, then maintenance (often lenalidomide)",
+      "narrative": "I'm 58, a guitarist. My fingers are my identity, but my back aches from bone lesions. They're talking about transplant after several months of treatment.",
+      "qa": [
+        {
+          "q": "Will treatment numb my fingers and steal my music?",
+          "gt": "Some drugs can cause neuropathy. We monitor closely and adjust doses early; hand therapy and medications can help. Many musicians continue to play.",
+          "order": 1,
+          "qid": "S11-Q01"
+        },
+        {
+          "q": "What does a 'transplant' actually mean for me day to day—am I isolated for months?",
+          "gt": "It’s an autologous transplant using your own cells. Expect a hospital stay of about 2–3 weeks and extra precautions at home for several weeks afterward.",
+          "order": 2,
+          "qid": "S11-Q02"
+        },
+        {
+          "q": "Can you stabilize my spine so I’m not afraid to pick up my guitar?",
+          "gt": "We’ll use bone-strengthening medicines, pain control, and consider vertebral procedures or radiation for painful lesions.",
+          "order": 3,
+          "qid": "S11-Q03"
+        },
+        {
+          "q": "Steroids make me wired and edgy. How do I sleep and not snap at my partner?",
+          "gt": "We’ll adjust timing, consider sleep aids, and provide mood support. Dose adjustments are possible if side effects are severe.",
+          "order": 4,
+          "qid": "S11-Q04"
+        },
+        {
+          "q": "I heard about jaw problems with bone drugs. Do I need a dentist first?",
+          "gt": "Yes. A dental evaluation before starting bone-strengthening therapy lowers the risk of jaw complications.",
+          "order": 5,
+          "qid": "S11-Q05"
+        },
+        {
+          "q": "What’s the plan if my numbers drop again after transplant?",
+          "gt": "We have maintenance therapy and multiple effective options at relapse; we’ll choose based on response and your goals.",
+          "order": 6,
+          "qid": "S11-Q06"
+        },
+        {
+          "q": "Can I keep teaching lessons between cycles without risking infections?",
+          "gt": "Often yes. Use hand hygiene, avoid sick contacts, and adjust your schedule around low-count days.",
+          "order": 7,
+          "qid": "S11-Q07"
+        },
+        {
+          "q": "How do you decide when to collect my stem cells?",
+          "gt": "After initial cycles when the disease is controlled and counts are favorable; we coordinate injections and apheresis timing.",
+          "order": 8,
+          "qid": "S11-Q08"
+        },
+        {
+          "q": "What does 'MRD negative' mean and should I chase it?",
+          "gt": "Minimal residual disease negativity is a deep response marker; it’s helpful but not mandatory. We focus on effective, tolerable control.",
+          "order": 9,
+          "qid": "S11-Q09"
+        },
+        {
+          "q": "Will I ever feel strong enough to perform a full set again?",
+          "gt": "Most patients regain endurance over months; rehab and gradual return help. We’ll pace treatment with your functional goals.",
+          "order": 10,
+          "qid": "S11-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S12",
+      "title": "Voice on the line (HPV-positive base-of-tongue cancer)",
+      "diagnosis": "HPV-positive oropharyngeal squamous cell carcinoma",
+      "treatment_plan": "Definitive chemoradiation with speech/swallow therapy; consider feeding tube support if needed",
+      "narrative": "I'm 49, a choir singer and call-center lead. The tumor is at the base of my tongue. The plan is chemoradiation. My voice is my livelihood and my joy.",
+      "qa": [
+        {
+          "q": "Will I still sound like me after treatment, or is that voice gone?",
+          "gt": "Many people keep a recognizable voice. Swallow and voice therapy during and after treatment helps preserve quality.",
+          "order": 1,
+          "qid": "S12-Q01"
+        },
+        {
+          "q": "Everyone keeps mentioning a feeding tube. How will I know if I really need one?",
+          "gt": "We decide based on weight loss, swallowing safety, and pain. It can be temporary support to prevent hospitalizations.",
+          "order": 2,
+          "qid": "S12-Q02"
+        },
+        {
+          "q": "Is HPV something I 'gave' my spouse—do we need to stop kissing forever?",
+          "gt": "HPV is common; your partner is likely already exposed. Intimacy is generally safe; we focus on your treatment and recovery.",
+          "order": 3,
+          "qid": "S12-Q03"
+        },
+        {
+          "q": "Will my mouth feel like sand forever?",
+          "gt": "Dry mouth often improves but can persist. Saliva substitutes, fluoride trays, and dental care protect teeth and comfort.",
+          "order": 4,
+          "qid": "S12-Q04"
+        },
+        {
+          "q": "Can I keep working phones with a sore throat and fatigue?",
+          "gt": "We can try reduced hours and breaks, but many people need leave during peak treatment weeks. We’ll provide documentation.",
+          "order": 5,
+          "qid": "S12-Q05"
+        },
+        {
+          "q": "How do I eat when everything burns?",
+          "gt": "We’ll tailor a soft, high-calorie plan and use pain control, mouth rinses, and medications to make eating possible.",
+          "order": 6,
+          "qid": "S12-Q06"
+        },
+        {
+          "q": "Will I ever sing a solo again?",
+          "gt": "Likely yes, with time and therapy. We’ll set realistic milestones and protect your instrument—your throat—during recovery.",
+          "order": 7,
+          "qid": "S12-Q07"
+        },
+        {
+          "q": "What happens to my teeth with all this radiation?",
+          "gt": "You’ll use daily fluoride and see dental regularly. Preventive care reduces cavities and jaw problems.",
+          "order": 8,
+          "qid": "S12-Q08"
+        },
+        {
+          "q": "If I choke on water one day, is that the new normal?",
+          "gt": "Swallowing can fluctuate. Report changes promptly; therapy can retrain safe techniques and we adjust pain meds and diet.",
+          "order": 9,
+          "qid": "S12-Q09"
+        },
+        {
+          "q": "How will you check if the cancer is gone without another surgery?",
+          "gt": "We use exams and imaging at set intervals after treatment, and biopsy only if something looks suspicious.",
+          "order": 10,
+          "qid": "S12-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S13",
+      "title": "Choice overload (early ER+/PR+ HER2- breast cancer)",
+      "diagnosis": "Early-stage hormone receptor–positive, HER2-negative breast cancer",
+      "treatment_plan": "Breast-conserving surgery plus radiation or mastectomy; adjuvant endocrine therapy; chemotherapy guided by genomic risk when indicated",
+      "narrative": "I'm 41, engaged, and deciding between lumpectomy with radiation or mastectomy. I want to live, look like myself in photos, and still feel like me.",
+      "qa": [
+        {
+          "q": "Is survival the same with lumpectomy plus radiation versus mastectomy, or am I gambling?",
+          "gt": "For many early HR+ cancers, survival is equivalent. Choice depends on tumor features and your preferences.",
+          "order": 1,
+          "qid": "S13-Q01"
+        },
+        {
+          "q": "Do I need chemo, or can a test spare me? Waiting for results is torture.",
+          "gt": "Genomic assays can estimate chemo benefit for eligible tumors. If results suggest low benefit, we may safely omit chemotherapy.",
+          "order": 2,
+          "qid": "S13-Q02"
+        },
+        {
+          "q": "Will endocrine therapy make me feel old overnight?",
+          "gt": "Some people notice hot flashes, mood shifts, or joint aches. We have strategies and can switch medicines if needed.",
+          "order": 3,
+          "qid": "S13-Q03"
+        },
+        {
+          "q": "Can I preserve fertility before treatment without losing precious time?",
+          "gt": "Fertility consults can move quickly. Ovarian suppression during chemo may help protect function if chemo is needed.",
+          "order": 4,
+          "qid": "S13-Q04"
+        },
+        {
+          "q": "I’m terrified of recurrence—how will follow-up actually catch something early?",
+          "gt": "We schedule regular exams and imaging. Report new, persistent symptoms; most recurrences are detected with a combination of surveillance and symptom reporting.",
+          "order": 5,
+          "qid": "S13-Q05"
+        },
+        {
+          "q": "What about reconstruction if I choose mastectomy—will it feel like me?",
+          "gt": "Reconstruction restores shape but not normal sensation; results vary. We’ll connect you with plastic surgery to review options.",
+          "order": 6,
+          "qid": "S13-Q06"
+        },
+        {
+          "q": "Can I keep wedding plans, or should we postpone?",
+          "gt": "Many couples keep the date. We can plan surgery and treatments around key events if it’s safe.",
+          "order": 7,
+          "qid": "S13-Q07"
+        },
+        {
+          "q": "Will exercise help, or am I supposed to rest?",
+          "gt": "Exercise during and after treatment improves energy, mood, and bone health. Start gradually with guidance.",
+          "order": 8,
+          "qid": "S13-Q08"
+        },
+        {
+          "q": "Do I have to take pills for 5 years no matter what?",
+          "gt": "Duration depends on risk and tolerance—often 5 years, sometimes longer. We individualize the plan together.",
+          "order": 9,
+          "qid": "S13-Q09"
+        },
+        {
+          "q": "How do I explain all this to future in-laws without becoming 'the sick bride'?",
+          "gt": "Share the plan briefly and what support helps. We can offer a concise summary for family if you like.",
+          "order": 10,
+          "qid": "S13-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S14",
+      "title": "Miles to go (metastatic left-sided RAS wild-type colon cancer)",
+      "diagnosis": "Metastatic colorectal cancer, left-sided, RAS wild-type",
+      "treatment_plan": "Backbone chemo (e.g., FOLFOX or FOLFIRI) with targeted therapy (anti-EGFR or bevacizumab) based on goals and side-effect profile; consider liver-directed options if response",
+      "narrative": "I'm 52, a sales rep living on the road. I need a plan that controls cancer without wrecking my ability to drive and meet clients.",
+      "qa": [
+        {
+          "q": "How do we pick between regimens when every option sounds like a trade-off?",
+          "gt": "We match treatment to your tumor biology and priorities—balancing rash vs neuropathy, infusion schedules, and goals of care.",
+          "order": 1,
+          "qid": "S14-Q01"
+        },
+        {
+          "q": "If I get the anti-EGFR drug and my face breaks out, am I stuck hiding at home?",
+          "gt": "We start preventive skin care, treat rash early, and adjust dosing if needed. Most people remain active socially and at work.",
+          "order": 2,
+          "qid": "S14-Q02"
+        },
+        {
+          "q": "Will neuropathy make it unsafe to drive?",
+          "gt": "If neuropathy affects pedal feel, we’ll reduce or switch drugs. We monitor closely and prioritize safety.",
+          "order": 3,
+          "qid": "S14-Q03"
+        },
+        {
+          "q": "Can the liver spots ever be removed, or is that false hope?",
+          "gt": "Sometimes chemo shrinks disease enough for surgery or ablation. We reassess with surgeons if scans look favorable.",
+          "order": 4,
+          "qid": "S14-Q04"
+        },
+        {
+          "q": "Cold drinks triggering pain—does that mean I’m stuck sipping lukewarm forever?",
+          "gt": "Oxaliplatin can cause cold sensitivity that usually improves between cycles and after stopping the drug.",
+          "order": 5,
+          "qid": "S14-Q05"
+        },
+        {
+          "q": "How often will I be tethered to an infusion pump?",
+          "gt": "Many regimens involve a 46-hour take-home pump every two weeks; we can explore alternatives if pumps are a barrier.",
+          "order": 6,
+          "qid": "S14-Q06"
+        },
+        {
+          "q": "What if my bowels go haywire on a client visit?",
+          "gt": "We’ll provide anti-diarrheals and a plan for triggers and timing. Dose adjustments are available if symptoms persist.",
+          "order": 7,
+          "qid": "S14-Q07"
+        },
+        {
+          "q": "Do second opinions slow me down or strengthen my plan?",
+          "gt": "They often strengthen plans. We’ll share records and welcome another expert’s input.",
+          "order": 8,
+          "qid": "S14-Q08"
+        },
+        {
+          "q": "How do you know when to switch before the scan says so?",
+          "gt": "Worsening symptoms or rising tumor markers may prompt earlier reassessment—your day-to-day function matters.",
+          "order": 9,
+          "qid": "S14-Q09"
+        },
+        {
+          "q": "Is it okay to keep small goals, like hitting my sales summit, or is that denial?",
+          "gt": "Goals help. We’ll align treatment and travel around what matters to you whenever it’s safe.",
+          "order": 10,
+          "qid": "S14-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S15",
+      "title": "Sun runner (BRAF V600E metastatic melanoma)",
+      "diagnosis": "BRAF V600E positive metastatic melanoma",
+      "treatment_plan": "Immunotherapy and/or targeted BRAF/MEK inhibitors depending on goals and disease features",
+      "narrative": "I'm 39, a trail runner with metastatic melanoma. I want to keep moving and not lose months to side effects if there’s a path that fits me.",
+      "qa": [
+        {
+          "q": "How do we choose between immunotherapy and targeted pills without gambling my best shot?",
+          "gt": "We consider disease pace, symptoms, and your priorities. Both are effective; sometimes we start with one and switch as needed.",
+          "order": 1,
+          "qid": "S15-Q01"
+        },
+        {
+          "q": "What side effects stop runs versus ones I can work around?",
+          "gt": "Targeted pills can cause fevers and fatigue; immunotherapy can cause immune inflammation. We treat early to keep you active when safe.",
+          "order": 2,
+          "qid": "S15-Q02"
+        },
+        {
+          "q": "If I spike fevers on pills, am I done running for good?",
+          "gt": "Fevers are manageable with dose holds and meds. Many runners resume training between episodes.",
+          "order": 3,
+          "qid": "S15-Q03"
+        },
+        {
+          "q": "Will immunotherapy make my body attack my thyroid or gut forever?",
+          "gt": "Some effects can be long-lasting, but most are treatable with steroids when caught early. We monitor labs and symptoms closely.",
+          "order": 4,
+          "qid": "S15-Q04"
+        },
+        {
+          "q": "Can I still race this season if scans look better?",
+          "gt": "Possibly, with careful timing and monitoring. Recovery days may increase; we’ll prioritize safety.",
+          "order": 5,
+          "qid": "S15-Q05"
+        },
+        {
+          "q": "Do I need to hide from the sun now?",
+          "gt": "Protect your skin diligently with clothing and sunscreen. You can be outdoors with precautions.",
+          "order": 6,
+          "qid": "S15-Q06"
+        },
+        {
+          "q": "If brain spots show up later, does that end everything?",
+          "gt": "Not necessarily. Stereotactic radiosurgery and systemic therapy can still be effective.",
+          "order": 7,
+          "qid": "S15-Q07"
+        },
+        {
+          "q": "Can I keep my job while doing this, or should I plan leave?",
+          "gt": "Many work with adjustments. We’ll write notes for flexibility and modify dosing if needed.",
+          "order": 8,
+          "qid": "S15-Q08"
+        },
+        {
+          "q": "What signals tell me to call you the same day?",
+          "gt": "New severe diarrhea, abdominal pain, shortness of breath, chest pain, or neurologic symptoms—call immediately.",
+          "order": 9,
+          "qid": "S15-Q09"
+        },
+        {
+          "q": "If I choose wrong first, did I ruin my chance at the other option?",
+          "gt": "No. We can switch strategies; sequencing is part of care, not a one-shot choice.",
+          "order": 10,
+          "qid": "S15-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S16",
+      "title": "Hospital or home (newly diagnosed AML at 67)",
+      "diagnosis": "Acute myeloid leukemia in a 67-year-old",
+      "treatment_plan": "Either intensive inpatient induction or lower-intensity therapy (hypomethylating agent + venetoclax) with transfusion support; infection prophylaxis; consider trial",
+      "narrative": "I'm 67 and blindsided by leukemia. They’re talking about weeks in the hospital or a gentler plan mostly at home. I want time, but I also want myself.",
+      "qa": [
+        {
+          "q": "If I choose the hospital route, how long am I really there and what does a day look like?",
+          "gt": "Induction often means 3–4 weeks inpatient for chemo and count recovery, with daily monitoring.",
+          "order": 1,
+          "qid": "S16-Q01"
+        },
+        {
+          "q": "If I choose the at-home regimen, am I less likely to be alive for my granddaughter’s birthday?",
+          "gt": "Lower-intensity therapy can be very effective in older adults. We choose based on your genes, health, and goals.",
+          "order": 2,
+          "qid": "S16-Q02"
+        },
+        {
+          "q": "Will I be transfusion-dependent for months?",
+          "gt": "Counts are low early on; transfusions are common at first and decrease as the marrow responds.",
+          "order": 3,
+          "qid": "S16-Q03"
+        },
+        {
+          "q": "How do we prevent infections when my immune system vanishes?",
+          "gt": "We use preventive antibiotics, growth factors when indicated, and strict fever rules: call for 100.4°F (38°C) or higher.",
+          "order": 4,
+          "qid": "S16-Q04"
+        },
+        {
+          "q": "What if the plan isn’t working—do we know early enough to pivot?",
+          "gt": "We repeat bone marrow tests to assess response and adjust therapy quickly if needed.",
+          "order": 5,
+          "qid": "S16-Q05"
+        },
+        {
+          "q": "Can I appoint my daughter to make decisions if I’m too sick?",
+          "gt": "Yes. We’ll complete advance directives and ensure your wishes are honored.",
+          "order": 6,
+          "qid": "S16-Q06"
+        },
+        {
+          "q": "Will chemo steal my mind or only my hair?",
+          "gt": "You may feel fatigued or foggy, usually temporarily. We’ll manage symptoms and provide rehab support.",
+          "order": 7,
+          "qid": "S16-Q07"
+        },
+        {
+          "q": "Do I have to stop my daily walk?",
+          "gt": "Gentle activity is encouraged if counts and energy permit; avoid crowds and injury risk.",
+          "order": 8,
+          "qid": "S16-Q08"
+        },
+        {
+          "q": "How do costs and caregiver time differ between options?",
+          "gt": "Inpatient care concentrates time in the hospital; outpatient care spreads visits over weeks. We’ll involve social work to plan support.",
+          "order": 9,
+          "qid": "S16-Q09"
+        },
+        {
+          "q": "If I want to switch paths later, can I?",
+          "gt": "Often yes, depending on response and health. We reassess at each milestone.",
+          "order": 10,
+          "qid": "S16-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S17",
+      "title": "Waiting feels like doing nothing (CLL watch-and-wait)",
+      "diagnosis": "Chronic lymphocytic leukemia, asymptomatic",
+      "treatment_plan": "Active surveillance with regular labs and exams; start treatment when specific triggers are met",
+      "narrative": "I'm 63 and told we aren't treating yet. It feels like ignoring a ticking clock.",
+      "qa": [
+        {
+          "q": "How is 'watch and wait' not just 'wait and worry'?",
+          "gt": "CLL can be indolent for years. Treating too early doesn’t help and can add side effects; we monitor closely to start at the right time.",
+          "order": 1,
+          "qid": "S17-Q01"
+        },
+        {
+          "q": "What exact signs mean it’s time to act so I’m not guessing?",
+          "gt": "Triggers include rapidly rising counts, big nodes, anemia, low platelets, or symptoms like fevers, night sweats, or weight loss.",
+          "order": 2,
+          "qid": "S17-Q02"
+        },
+        {
+          "q": "Can I still travel without labs every month?",
+          "gt": "Yes. We’ll plan lab intervals and tele-visits around your schedule.",
+          "order": 3,
+          "qid": "S17-Q03"
+        },
+        {
+          "q": "Will my immunity be weak even without treatment?",
+          "gt": "CLL can lower immunity. Vaccines, hand hygiene, and prompt care for infections help.",
+          "order": 4,
+          "qid": "S17-Q04"
+        },
+        {
+          "q": "Should I change my diet or supplements to slow this down?",
+          "gt": "No diet is proven to alter CLL. We’ll review supplements for interactions and focus on overall health.",
+          "order": 5,
+          "qid": "S17-Q05"
+        },
+        {
+          "q": "Will insurance balk when I’m not 'actively' treated?",
+          "gt": "Surveillance is standard care. We’ll document medical necessity for labs and visits.",
+          "order": 6,
+          "qid": "S17-Q06"
+        },
+        {
+          "q": "Is there a benefit to clinical trials now?",
+          "gt": "Most trials are for active disease, but we can review options and keep you informed.",
+          "order": 7,
+          "qid": "S17-Q07"
+        },
+        {
+          "q": "How do I tell family I’m okay when the word leukemia scares them?",
+          "gt": "Explain that CLL often grows slowly and that we’re monitoring for specific changes. We can include family in a visit.",
+          "order": 8,
+          "qid": "S17-Q08"
+        },
+        {
+          "q": "Can stress make this speed up?",
+          "gt": "Stress doesn’t drive CLL, though it affects wellbeing. Coping strategies can help you feel more in control.",
+          "order": 9,
+          "qid": "S17-Q09"
+        },
+        {
+          "q": "How often do people never need treatment?",
+          "gt": "A significant minority never require therapy; we’ll see how your course behaves over time.",
+          "order": 10,
+          "qid": "S17-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S18",
+      "title": "Finding my voice again (papillary thyroid cancer)",
+      "diagnosis": "Papillary thyroid carcinoma after thyroidectomy",
+      "treatment_plan": "Surgery followed by thyroid hormone replacement; consider radioactive iodine based on risk; lifelong surveillance",
+      "narrative": "I'm 35, a teacher. Surgery took my thyroid. My voice is hoarse and the scar is new territory. I’m trying to feel normal again.",
+      "qa": [
+        {
+          "q": "Will my voice return to my old classroom strength?",
+          "gt": "Hoarseness often improves over weeks to months; voice therapy can help. We’ll check for nerve issues if it persists.",
+          "order": 1,
+          "qid": "S18-Q01"
+        },
+        {
+          "q": "Do I need radioactive iodine, or can we skip it safely?",
+          "gt": "It depends on tumor size, spread, and risk features. Many low-risk patients skip radioactive iodine.",
+          "order": 2,
+          "qid": "S18-Q02"
+        },
+        {
+          "q": "How do we set my hormone dose so I’m not anxious and sleepless?",
+          "gt": "We adjust levothyroxine based on labs and symptoms to replace hormone and sometimes suppress TSH; fine-tuning may take a few visits.",
+          "order": 3,
+          "qid": "S18-Q03"
+        },
+        {
+          "q": "Will this scar always shout 'cancer' at people?",
+          "gt": "Scars fade significantly with time, sunscreen, and care. Scar therapy can improve appearance.",
+          "order": 4,
+          "qid": "S18-Q04"
+        },
+        {
+          "q": "Can I get pregnant safely on these medicines?",
+          "gt": "Yes. We’ll optimize hormone levels before and during pregnancy and coordinate with OB care.",
+          "order": 5,
+          "qid": "S18-Q05"
+        },
+        {
+          "q": "What follow-up keeps me safe without over-testing?",
+          "gt": "Periodic exams, ultrasound as indicated, and blood tests for thyroglobulin when appropriate.",
+          "order": 6,
+          "qid": "S18-Q06"
+        },
+        {
+          "q": "Is my calcium low forever after surgery?",
+          "gt": "Temporary drops are common; most recover. We’ll monitor and supplement as needed.",
+          "order": 7,
+          "qid": "S18-Q07"
+        },
+        {
+          "q": "Can I sing in choir again?",
+          "gt": "Likely yes; voice therapy and gradual practice help. Protect your voice as you rebuild.",
+          "order": 8,
+          "qid": "S18-Q08"
+        },
+        {
+          "q": "Do I need to avoid certain foods because of iodine?",
+          "gt": "Only if preparing for radioactive iodine; otherwise a normal balanced diet is fine.",
+          "order": 9,
+          "qid": "S18-Q09"
+        },
+        {
+          "q": "How do I keep from defining myself by this scar?",
+          "gt": "We’ll focus on recovery goals and connect you to support groups where many find confidence returning.",
+          "order": 10,
+          "qid": "S18-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S19",
+      "title": "Runner with a new scar (high-grade thigh sarcoma)",
+      "diagnosis": "High-grade soft tissue sarcoma of the thigh",
+      "treatment_plan": "Limb-sparing surgery with radiation (pre- or post-operative) and rehabilitation",
+      "narrative": "I'm 46, a half-marathoner. A deep thigh mass turned out to be sarcoma. I want to keep my leg strong and my life moving.",
+      "qa": [
+        {
+          "q": "Will surgery steal my stride, or can I run again?",
+          "gt": "Many runners return to distance with rehab. We plan incisions and reconstructive techniques to protect function.",
+          "order": 1,
+          "qid": "S19-Q01"
+        },
+        {
+          "q": "Pre-op or post-op radiation—what protects my leg best?",
+          "gt": "Pre-op may lower long-term stiffness but increases wound-healing risk; post-op flips those risks. We decide based on tumor and tissue factors.",
+          "order": 2,
+          "qid": "S19-Q02"
+        },
+        {
+          "q": "How do I avoid lymphedema or swelling that ends training?",
+          "gt": "Compression, therapy, and gradual activity help; we’ll teach early signs and interventions.",
+          "order": 3,
+          "qid": "S19-Q03"
+        },
+        {
+          "q": "If margins are close, does that mean I’ll lose the leg?",
+          "gt": "Not typically. We may use additional radiation or re-excision; amputation is rarely required.",
+          "order": 4,
+          "qid": "S19-Q04"
+        },
+        {
+          "q": "Can I work remotely during recovery?",
+          "gt": "Often yes. We’ll outline weight-bearing limits and schedule therapy.",
+          "order": 5,
+          "qid": "S19-Q05"
+        },
+        {
+          "q": "What about nerve damage—will my foot drop?",
+          "gt": "We plan to spare key nerves; sometimes weakness occurs and improves with time and therapy.",
+          "order": 6,
+          "qid": "S19-Q06"
+        },
+        {
+          "q": "Are scans forever, and how often?",
+          "gt": "Regular chest imaging and local exams for several years, then less often.",
+          "order": 7,
+          "qid": "S19-Q07"
+        },
+        {
+          "q": "Is chemo part of this?",
+          "gt": "Only for certain sarcoma types or high-risk features. We’ll discuss if it adds benefit in your case.",
+          "order": 8,
+          "qid": "S19-Q08"
+        },
+        {
+          "q": "How do I fuel healing without gaining weight when I can’t run?",
+          "gt": "A dietitian can tailor protein and calories to recovery while you cross-train safely.",
+          "order": 9,
+          "qid": "S19-Q09"
+        },
+        {
+          "q": "What if I trip on fear every time I lace up?",
+          "gt": "Psych support and graded exposure back to running help many athletes regain confidence.",
+          "order": 10,
+          "qid": "S19-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S20",
+      "title": "Left the field mid-game (stage II testicular cancer)",
+      "diagnosis": "Stage II testicular cancer (seminoma or nonseminoma)",
+      "treatment_plan": "Orchiectomy followed by surveillance, chemotherapy, or radiation depending on type and spread; fertility preservation recommended",
+      "narrative": "I'm 28, play in a weekend soccer league, and just lost a testicle to cancer. I’m scared about fertility, masculinity, and telling my team.",
+      "qa": [
+        {
+          "q": "Is banking sperm urgent, or can I wait until after the next scan?",
+          "gt": "Bank before any additional treatment to protect options. It’s fast and discrete.",
+          "order": 1,
+          "qid": "S20-Q01"
+        },
+        {
+          "q": "Will chemo wreck my lungs or stamina permanently?",
+          "gt": "Some drugs can affect lungs short-term. We monitor and guide return to sport; most athletes recover endurance.",
+          "order": 2,
+          "qid": "S20-Q02"
+        },
+        {
+          "q": "Do I need a prosthesis to feel 'normal'?",
+          "gt": "It’s optional. Many choose one for symmetry; others don’t. Either choice is valid.",
+          "order": 3,
+          "qid": "S20-Q03"
+        },
+        {
+          "q": "Is radiation still used, and will it affect fertility?",
+          "gt": "For seminoma, radiation is less common now; if used, we plan to limit exposure. Discuss sperm banking first.",
+          "order": 4,
+          "qid": "S20-Q04"
+        },
+        {
+          "q": "What if tumor markers bounce—am I relapsing?",
+          "gt": "Markers can fluctuate; trends and imaging guide decisions. We’ll interpret results together.",
+          "order": 5,
+          "qid": "S20-Q05"
+        },
+        {
+          "q": "Can I be intimate during treatment?",
+          "gt": "Yes, with contraception during chemo and while markers normalize. Fatigue may affect timing.",
+          "order": 6,
+          "qid": "S20-Q06"
+        },
+        {
+          "q": "How do I tell my teammates without jokes swallowing the room?",
+          "gt": "Be brief and factual, set boundaries, and redirect to what support you need—rides, meals, or just normal practice talk.",
+          "order": 7,
+          "qid": "S20-Q07"
+        },
+        {
+          "q": "Will insurance question a prosthesis?",
+          "gt": "Often covered; we’ll provide documentation if needed.",
+          "order": 8,
+          "qid": "S20-Q08"
+        },
+        {
+          "q": "Does losing a testicle change my hormones forever?",
+          "gt": "Most men maintain normal testosterone with one testicle; we’ll check levels and treat if needed.",
+          "order": 9,
+          "qid": "S20-Q09"
+        },
+        {
+          "q": "If I relapse, is cure still on the table?",
+          "gt": "Yes. Testicular cancer remains highly curable even if additional therapy is required.",
+          "order": 10,
+          "qid": "S20-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S21",
+      "title": "Keys and the road (brain metastases, stereotactic radiosurgery)",
+      "diagnosis": "Limited brain metastases from solid tumor",
+      "treatment_plan": "Stereotactic radiosurgery (SRS) to brain lesions; systemic therapy continues or adjusts; seizure precautions and neuro follow-up",
+      "narrative": "I'm 56, I drive for work and play piano at church. Small brain spots showed up on my scan. They recommend focused radiation.",
+      "qa": [
+        {
+          "q": "Can I still legally drive after SRS?",
+          "gt": "Driving rules vary. If you’ve had a seizure, restrictions apply. If not, many can drive after recovery—confirm with your state and doctor.",
+          "order": 1,
+          "qid": "S21-Q01"
+        },
+        {
+          "q": "Will radiation change how I think or play music?",
+          "gt": "SRS is precise and spares most normal tissue. Temporary fatigue or fog can occur; lasting effects are uncommon for small targets.",
+          "order": 2,
+          "qid": "S21-Q02"
+        },
+        {
+          "q": "Do I lose my hair in patches?",
+          "gt": "Small localized thinning can happen over treated spots; most hair regrows.",
+          "order": 3,
+          "qid": "S21-Q03"
+        },
+        {
+          "q": "How do you decide which lesions to treat now versus watch?",
+          "gt": "We treat active or symptomatic spots and monitor tiny stable ones with serial MRIs.",
+          "order": 4,
+          "qid": "S21-Q04"
+        },
+        {
+          "q": "Does this mean my systemic treatment failed?",
+          "gt": "Not necessarily. Some drugs treat the body well but don’t fully reach the brain; we tailor both local and systemic plans.",
+          "order": 5,
+          "qid": "S21-Q05"
+        },
+        {
+          "q": "If a new spot appears later, do we do SRS again?",
+          "gt": "Often yes, if lesions are limited and accessible.",
+          "order": 6,
+          "qid": "S21-Q06"
+        },
+        {
+          "q": "What symptoms should make me call immediately?",
+          "gt": "New weakness, speech changes, severe headache, or seizures—call right away.",
+          "order": 7,
+          "qid": "S21-Q07"
+        },
+        {
+          "q": "Can I fly for work next week?",
+          "gt": "Usually safe after SRS if you feel well. Check with your team based on size and swelling risk.",
+          "order": 8,
+          "qid": "S21-Q08"
+        },
+        {
+          "q": "Will steroids make me jittery or hungry?",
+          "gt": "They can. We use the lowest effective dose and taper quickly.",
+          "order": 9,
+          "qid": "S21-Q09"
+        },
+        {
+          "q": "How often are MRIs after this?",
+          "gt": "Typically every 2–3 months initially, then spaced out if stable.",
+          "order": 10,
+          "qid": "S21-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S22",
+      "title": "Second chances (liver cancer with cirrhosis)",
+      "diagnosis": "Hepatocellular carcinoma in the setting of cirrhosis",
+      "treatment_plan": "Locoregional therapy (e.g., ablation or embolization) or systemic therapy; transplant evaluation when appropriate; manage liver function",
+      "narrative": "I'm 64 with cirrhosis and now a liver tumor. I quit drinking last year. I want to live long enough to walk my daughter down the aisle.",
+      "qa": [
+        {
+          "q": "Am I a transplant candidate, or did I miss that window?",
+          "gt": "Eligibility depends on tumor size/number and liver function. We’ll refer for evaluation if criteria are in reach.",
+          "order": 1,
+          "qid": "S22-Q01"
+        },
+        {
+          "q": "Does treatment hurt my liver more than the cancer does?",
+          "gt": "We choose options that balance tumor control and liver reserve, monitoring labs closely.",
+          "order": 2,
+          "qid": "S22-Q02"
+        },
+        {
+          "q": "What if my legs swell and I can’t fit shoes—does that mean it’s all downhill?",
+          "gt": "Swelling can be managed with sodium restriction, meds, and procedures if needed. It signals careful monitoring, not the end.",
+          "order": 3,
+          "qid": "S22-Q03"
+        },
+        {
+          "q": "Do I have to swear off every celebration forever?",
+          "gt": "Alcohol should be avoided with cirrhosis. We can help with supports to maintain sobriety.",
+          "order": 4,
+          "qid": "S22-Q04"
+        },
+        {
+          "q": "How risky is bleeding during procedures with my platelets low?",
+          "gt": "We plan around clotting status and use supportive measures to lower risk.",
+          "order": 5,
+          "qid": "S22-Q05"
+        },
+        {
+          "q": "If the tumor shrinks, can I get on a transplant list?",
+          "gt": "Downstaging can make transplant possible. We’ll coordinate with the transplant team.",
+          "order": 6,
+          "qid": "S22-Q06"
+        },
+        {
+          "q": "What does a bad day look like so my family knows when to act?",
+          "gt": "Confusion, severe belly swelling, vomiting blood, black stools, or fever—seek urgent care and call us.",
+          "order": 7,
+          "qid": "S22-Q07"
+        },
+        {
+          "q": "Can I still walk the neighborhood safely?",
+          "gt": "Light activity is encouraged; avoid falls and stay hydrated. We’ll tailor it to your stamina.",
+          "order": 8,
+          "qid": "S22-Q08"
+        },
+        {
+          "q": "Will I itch forever?",
+          "gt": "Itching can improve with bile acid binders and skin care. We’ll treat it proactively.",
+          "order": 9,
+          "qid": "S22-Q09"
+        },
+        {
+          "q": "How do I keep hope without pretending this isn’t serious?",
+          "gt": "We set clear goals, tackle symptoms early, and revisit options as your liver and tumor change. There is always meaningful care to offer.",
+          "order": 10,
+          "qid": "S22-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S23",
+      "title": "Stigma and steel (locally advanced cervical cancer)",
+      "diagnosis": "Locally advanced cervical cancer",
+      "treatment_plan": "Definitive pelvic radiation with weekly cisplatin and brachytherapy; survivorship sexual health support",
+      "narrative": "I'm 37 and a mom of two. The word 'cervical' makes me feel judged. Treatment is radiation with weekly chemo and internal radiation later.",
+      "qa": [
+        {
+          "q": "I feel ashamed telling people what kind of cancer I have. How do I carry this without hiding?",
+          "gt": "There is no shame in a diagnosis. We can offer language that protects your privacy and connects you to supportive communities.",
+          "order": 1,
+          "qid": "S23-Q01"
+        },
+        {
+          "q": "Will sex ever feel normal again?",
+          "gt": "Vaginal dryness and tightness can occur. Pelvic floor therapy, dilators, and lubricants help many women regain comfort.",
+          "order": 2,
+          "qid": "S23-Q02"
+        },
+        {
+          "q": "Do I need a port for the weekly chemo?",
+          "gt": "Usually not; weekly low-dose cisplatin often uses peripheral IVs.",
+          "order": 3,
+          "qid": "S23-Q03"
+        },
+        {
+          "q": "What if childcare blows up on treatment days?",
+          "gt": "We’ll coordinate schedules, connect you with social work for resources, and write notes for flexibility.",
+          "order": 4,
+          "qid": "S23-Q04"
+        },
+        {
+          "q": "Will I burn or peel from radiation?",
+          "gt": "Skin irritation and diarrhea can happen; we provide creams, hydration plans, and meds to protect skin and bowels.",
+          "order": 5,
+          "qid": "S23-Q05"
+        },
+        {
+          "q": "How do you make sure the internal radiation isn’t traumatic?",
+          "gt": "We use anesthesia or sedation, careful positioning, and experienced teams; we’ll explain every step beforehand.",
+          "order": 6,
+          "qid": "S23-Q06"
+        },
+        {
+          "q": "Can I keep working, or should I plan leave?",
+          "gt": "Many work part-time; fatigue and bowel changes can make full-time difficult. We’ll help with documentation.",
+          "order": 7,
+          "qid": "S23-Q07"
+        },
+        {
+          "q": "Does this mean I can’t have more children?",
+          "gt": "Radiation often affects fertility. We’ll discuss options and preservation before therapy if possible.",
+          "order": 8,
+          "qid": "S23-Q08"
+        },
+        {
+          "q": "How will you know it worked without surgery?",
+          "gt": "Exams and imaging after treatment assess response; many patients achieve complete remission.",
+          "order": 9,
+          "qid": "S23-Q09"
+        },
+        {
+          "q": "What if the cancer comes back—what’s next?",
+          "gt": "Options include surgery, systemic therapy, or trials depending on location and your goals.",
+          "order": 10,
+          "qid": "S23-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S24",
+      "title": "Fixing the fence (diffuse large B-cell lymphoma)",
+      "diagnosis": "Diffuse large B-cell lymphoma, curative intent",
+      "treatment_plan": "R-CHOP every 3 weeks for 6 cycles (or tailored regimen); interim PET after a few cycles",
+      "narrative": "I'm 66 and run a small farm. A fast-growing node appeared in my neck. They’re aiming to cure this with chemo.",
+      "qa": [
+        {
+          "q": "Does 'curative intent' really mean cure for someone my age?",
+          "gt": "Yes—many people are cured with R-CHOP regardless of age if they’re fit for treatment.",
+          "order": 1,
+          "qid": "S24-Q01"
+        },
+        {
+          "q": "How sick will I be after each cycle—will the animals still get fed?",
+          "gt": "Expect 2–4 low-energy days; we’ll plan help for those windows. Most people can handle light tasks between cycles.",
+          "order": 2,
+          "qid": "S24-Q02"
+        },
+        {
+          "q": "Will I lose my hair and beard?",
+          "gt": "Hair loss is common and temporary; it regrows after therapy.",
+          "order": 3,
+          "qid": "S24-Q03"
+        },
+        {
+          "q": "I’m worried about infection from hay dust and barns. Is that a real risk?",
+          "gt": "During low counts, mask in dusty areas, wear gloves, and wash hands. Avoid sick animals and people.",
+          "order": 4,
+          "qid": "S24-Q04"
+        },
+        {
+          "q": "What does the interim PET actually change?",
+          "gt": "It confirms response and helps decide whether to continue the same plan.",
+          "order": 5,
+          "qid": "S24-Q05"
+        },
+        {
+          "q": "Can heart issues happen with this regimen?",
+          "gt": "We check heart function when needed and monitor for symptoms; risks are low but real.",
+          "order": 6,
+          "qid": "S24-Q06"
+        },
+        {
+          "q": "Will steroids make me edgy and sleepless?",
+          "gt": "They can. We’ll adjust timing, add sleep support, and taper as prescribed.",
+          "order": 7,
+          "qid": "S24-Q07"
+        },
+        {
+          "q": "If a cycle is delayed, does that ruin my chance of cure?",
+          "gt": "Short delays for safety don’t reduce cure rates. We aim for steady, safe dosing.",
+          "order": 8,
+          "qid": "S24-Q08"
+        },
+        {
+          "q": "Should I get extra vaccines now?",
+          "gt": "We’ll update non-live vaccines when appropriate and plan timing around treatment.",
+          "order": 9,
+          "qid": "S24-Q09"
+        },
+        {
+          "q": "What happens if it doesn’t respond?",
+          "gt": "We escalate to second-line therapy and consider cell therapy; we won’t stop at the first hurdle.",
+          "order": 10,
+          "qid": "S24-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S25",
+      "title": "Trailhead ahead (metastatic kidney cancer)",
+      "diagnosis": "Metastatic renal cell carcinoma",
+      "treatment_plan": "Combination immunotherapy or immunotherapy plus targeted therapy; monitor for immune-related side effects",
+      "narrative": "I'm 61 and love national parks. I want a plan that lets me keep hiking without ignoring warning signs.",
+      "qa": [
+        {
+          "q": "How do we choose between combinations without wrecking my stamina?",
+          "gt": "We balance efficacy and side-effect profiles with your goals; dose modifications keep many people active.",
+          "order": 1,
+          "qid": "S25-Q01"
+        },
+        {
+          "q": "What immune side effects should make me stop the trail and call?",
+          "gt": "Severe diarrhea, new cough or shortness of breath, jaundice, or severe rash—stop and call immediately.",
+          "order": 2,
+          "qid": "S25-Q02"
+        },
+        {
+          "q": "Can I camp far from hospitals?",
+          "gt": "Yes with planning—carry meds, know nearest facilities, and have a clear call plan if symptoms arise.",
+          "order": 3,
+          "qid": "S25-Q03"
+        },
+        {
+          "q": "Will high altitude be a problem?",
+          "gt": "Usually fine; acclimate slowly and watch for excessive fatigue or breathlessness.",
+          "order": 4,
+          "qid": "S25-Q04"
+        },
+        {
+          "q": "Does diet matter for these meds?",
+          "gt": "Eat balanced meals and stay hydrated; avoid grapefruit with some targeted therapies.",
+          "order": 5,
+          "qid": "S25-Q05"
+        },
+        {
+          "q": "What about blood pressure spikes I’ve heard about?",
+          "gt": "Some drugs raise blood pressure; we’ll monitor and treat promptly.",
+          "order": 6,
+          "qid": "S25-Q06"
+        },
+        {
+          "q": "Can I still donate blood to the park drives?",
+          "gt": "Not during active cancer treatment; reconsider in survivorship per guidelines.",
+          "order": 7,
+          "qid": "S25-Q07"
+        },
+        {
+          "q": "If scans show stable disease, is that a win or just holding pattern?",
+          "gt": "Stability is a success with metastatic RCC—control matters. We continue if benefits outweigh side effects.",
+          "order": 8,
+          "qid": "S25-Q08"
+        },
+        {
+          "q": "What if my joints ache too much to hike?",
+          "gt": "We’ll evaluate for immune arthritis and treat; physical therapy can keep you mobile.",
+          "order": 9,
+          "qid": "S25-Q09"
+        },
+        {
+          "q": "If this stops working, what’s next?",
+          "gt": "Several other systemic options and trials exist; we sequence based on response and tolerance.",
+          "order": 10,
+          "qid": "S25-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S26",
+      "title": "Hope in a cooler (CAR-T for relapsed lymphoma)",
+      "diagnosis": "Relapsed/refractory large B-cell lymphoma, candidate for CAR-T",
+      "treatment_plan": "Leukapheresis, bridging therapy as needed, lymphodepleting chemo, CAR-T infusion; monitor for CRS/ICANS; caregiver required",
+      "narrative": "I'm 59 and my lymphoma came back. They say my own cells can be turned into medicine. I’m hopeful and scared of the side effects I’ve read about.",
+      "qa": [
+        {
+          "q": "How long am I away from home from collection to infusion?",
+          "gt": "Cells are collected, modified off-site, then returned in a few weeks. Expect local stays around infusion and monitoring.",
+          "order": 1,
+          "qid": "S26-Q01"
+        },
+        {
+          "q": "What does a caregiver actually do, and for how long?",
+          "gt": "A caregiver should stay with you 24/7 for at least two weeks after infusion to watch for symptoms and help with daily needs.",
+          "order": 2,
+          "qid": "S26-Q02"
+        },
+        {
+          "q": "What does cytokine release syndrome feel like?",
+          "gt": "Fevers, low blood pressure, or shortness of breath. We treat quickly with medicines that calm the reaction.",
+          "order": 3,
+          "qid": "S26-Q03"
+        },
+        {
+          "q": "What about the brain side effects—will I know if my words tangle?",
+          "gt": "We test thinking daily; confusion, tremor, or trouble speaking can happen. Most cases are reversible with prompt care.",
+          "order": 4,
+          "qid": "S26-Q04"
+        },
+        {
+          "q": "Can I work remotely during all this?",
+          "gt": "Plan to pause work around infusion and early recovery; fatigue is common.",
+          "order": 5,
+          "qid": "S26-Q05"
+        },
+        {
+          "q": "If the cells don’t grow in the lab, then what?",
+          "gt": "We have other therapies or trials; your team will have a backup plan.",
+          "order": 6,
+          "qid": "S26-Q06"
+        },
+        {
+          "q": "Is infection risk higher after CAR-T?",
+          "gt": "Yes initially. We use preventive meds and vaccines later when safe.",
+          "order": 7,
+          "qid": "S26-Q07"
+        },
+        {
+          "q": "Will I lose my hair again?",
+          "gt": "Lymphodepleting chemo can cause hair loss; regrowth follows afterward.",
+          "order": 8,
+          "qid": "S26-Q08"
+        },
+        {
+          "q": "How soon will I know if it worked?",
+          "gt": "We assess in the first month and again at 3 months; responses can deepen over time.",
+          "order": 9,
+          "qid": "S26-Q09"
+        },
+        {
+          "q": "If it works, how long can it last?",
+          "gt": "Many have durable remissions; we’ll follow closely and act early if disease returns.",
+          "order": 10,
+          "qid": "S26-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S27",
+      "title": "Semester on hold (acute lymphoblastic leukemia, young adult)",
+      "diagnosis": "Ph-negative acute lymphoblastic leukemia in a 24-year-old",
+      "treatment_plan": "Multi-phase chemotherapy (induction, consolidation, maintenance); CNS prophylaxis; central line; fertility counseling",
+      "narrative": "I'm 24 and in grad school. The schedule looks like a second full-time job. I want to live—and still graduate.",
+      "qa": [
+        {
+          "q": "How much of my semester is realistically salvageable?",
+          "gt": "Induction often requires full-time focus on treatment. Many resume part-time coursework during later phases.",
+          "order": 1,
+          "qid": "S27-Q01"
+        },
+        {
+          "q": "Will a central line change how I sleep or shower?",
+          "gt": "We’ll teach line care and waterproofing; most people adapt quickly.",
+          "order": 2,
+          "qid": "S27-Q02"
+        },
+        {
+          "q": "How do I handle friends who say 'you don’t look sick' when I’m exhausted?",
+          "gt": "Share that fatigue and low counts are invisible. Set limits and ask for specific help.",
+          "order": 3,
+          "qid": "S27-Q03"
+        },
+        {
+          "q": "What does 'maintenance' actually feel like?",
+          "gt": "Lower-intensity oral therapy with periodic clinic visits—life often feels more normal during this phase.",
+          "order": 4,
+          "qid": "S27-Q04"
+        },
+        {
+          "q": "Can we preserve fertility without delaying induction?",
+          "gt": "Sperm banking is quick; egg preservation is more time-consuming but sometimes possible—decisions are individualized.",
+          "order": 5,
+          "qid": "S27-Q05"
+        },
+        {
+          "q": "Do I have to give up my apartment with roommates?",
+          "gt": "Not necessarily. Avoid sick contacts, keep spaces clean, and follow fever rules.",
+          "order": 6,
+          "qid": "S27-Q06"
+        },
+        {
+          "q": "What if chemo brain wrecks my studying?",
+          "gt": "Cognitive rehab strategies and accommodations help; we can write letters to your program.",
+          "order": 7,
+          "qid": "S27-Q07"
+        },
+        {
+          "q": "How strict is infection prevention during exams on campus?",
+          "gt": "Very—masking, hand hygiene, and avoiding crowds are key during low counts.",
+          "order": 8,
+          "qid": "S27-Q08"
+        },
+        {
+          "q": "If a phase is delayed, does it ruin the whole plan?",
+          "gt": "Short delays for safety are common and acceptable; we keep the overall sequence intact.",
+          "order": 9,
+          "qid": "S27-Q09"
+        },
+        {
+          "q": "What’s plan B if remission isn’t complete?",
+          "gt": "We adjust therapy intensity and consider transplant or trials if needed.",
+          "order": 10,
+          "qid": "S27-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S28",
+      "title": "Which way do I pee (muscle-invasive bladder cancer)",
+      "diagnosis": "Muscle-invasive urothelial carcinoma",
+      "treatment_plan": "Neoadjuvant cisplatin-based chemotherapy followed by radical cystectomy with urinary diversion (ileal conduit or neobladder)",
+      "narrative": "I'm 65. They’re removing my bladder after chemo, and I have to choose how I’ll pee for the rest of my life. I want dignity and practicality.",
+      "qa": [
+        {
+          "q": "Is there a way to avoid removing the bladder if chemo works well?",
+          "gt": "Bladder-sparing approaches exist for select patients, but cystectomy remains standard for many. We’ll review eligibility carefully.",
+          "order": 1,
+          "qid": "S28-Q01"
+        },
+        {
+          "q": "Which diversion lets me travel without constant bathroom scouting?",
+          "gt": "An ileal conduit is low-maintenance; a neobladder allows voiding but requires training. We match choice to lifestyle.",
+          "order": 2,
+          "qid": "S28-Q02"
+        },
+        {
+          "q": "Will intimacy be possible after surgery?",
+          "gt": "Sexual function can change; nerve-sparing and rehab help. We’ll connect you with specialists and counseling.",
+          "order": 3,
+          "qid": "S28-Q03"
+        },
+        {
+          "q": "How visible is an external bag under clothes?",
+          "gt": "Modern appliances are discreet; most people feel comfortable in everyday clothing.",
+          "order": 4,
+          "qid": "S28-Q04"
+        },
+        {
+          "q": "Will chemo damage my hearing or nerves permanently?",
+          "gt": "Cisplatin can affect hearing and nerves; we monitor closely and adjust if problems arise.",
+          "order": 5,
+          "qid": "S28-Q05"
+        },
+        {
+          "q": "Can I swim with a stoma?",
+          "gt": "Yes, with proper sealing and supplies. Many people return to swimming.",
+          "order": 6,
+          "qid": "S28-Q06"
+        },
+        {
+          "q": "What if I can’t pee with a neobladder at first?",
+          "gt": "Training and pelvic therapy help; intermittent self-catheterization is sometimes needed early on.",
+          "order": 7,
+          "qid": "S28-Q07"
+        },
+        {
+          "q": "How often are follow-ups after surgery?",
+          "gt": "Regular visits with labs and imaging at set intervals, then less frequent over time.",
+          "order": 8,
+          "qid": "S28-Q08"
+        },
+        {
+          "q": "Will I smell or leak?",
+          "gt": "Proper fit and care prevent odor and leaks. Stoma nurses are key partners.",
+          "order": 9,
+          "qid": "S28-Q09"
+        },
+        {
+          "q": "If pathology shows worse disease than expected, do we have backup options?",
+          "gt": "Yes—adjuvant therapy or trials may be recommended based on findings.",
+          "order": 10,
+          "qid": "S28-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S29",
+      "title": "Swallowing my fear (esophageal cancer)",
+      "diagnosis": "Locally advanced esophageal or gastroesophageal junction cancer",
+      "treatment_plan": "Neoadjuvant chemoradiation followed by surgery when appropriate; nutrition support",
+      "narrative": "I'm 60 and losing weight because food gets stuck. Treatment is chemoradiation and possibly surgery. I want to eat with my family again.",
+      "qa": [
+        {
+          "q": "How do I keep weight on when every bite scares me?",
+          "gt": "We’ll involve a dietitian, use high-calorie liquids, and place a feeding tube if needed to maintain strength.",
+          "order": 1,
+          "qid": "S29-Q01"
+        },
+        {
+          "q": "Will chemoradiation make swallowing worse before it gets better?",
+          "gt": "It can temporarily; we manage pain and use nutrition support to bridge that period.",
+          "order": 2,
+          "qid": "S29-Q02"
+        },
+        {
+          "q": "If surgery is needed, will I ever eat normally?",
+          "gt": "Eating changes but many return to small, frequent meals and enjoy food again.",
+          "order": 3,
+          "qid": "S29-Q03"
+        },
+        {
+          "q": "Am I going to choke or aspirate at home?",
+          "gt": "Swallow therapy and careful pacing reduce risk; report coughing with meals so we can adjust.",
+          "order": 4,
+          "qid": "S29-Q04"
+        },
+        {
+          "q": "Can I still drink coffee or wine?",
+          "gt": "Acidic or alcoholic drinks may irritate during treatment; we’ll reintroduce as tolerated.",
+          "order": 5,
+          "qid": "S29-Q05"
+        },
+        {
+          "q": "How long before I know if surgery is on the table?",
+          "gt": "We reassess after chemoradiation with imaging and endoscopy to decide timing.",
+          "order": 6,
+          "qid": "S29-Q06"
+        },
+        {
+          "q": "Do I need to sleep upright forever?",
+          "gt": "During treatment and recovery, elevating the head helps reflux; many need fewer adjustments over time.",
+          "order": 7,
+          "qid": "S29-Q07"
+        },
+        {
+          "q": "How do you keep me safe from dehydration?",
+          "gt": "We set daily fluid goals, use IV fluids when needed, and monitor labs closely.",
+          "order": 8,
+          "qid": "S29-Q08"
+        },
+        {
+          "q": "What does a 'good day' look like during treatment so I can plan moments with my spouse?",
+          "gt": "Energy often dips midweek; we’ll map your cycle to schedule lighter meals and treasured activities on better days.",
+          "order": 9,
+          "qid": "S29-Q09"
+        },
+        {
+          "q": "If I can’t face surgery, is there still a path?",
+          "gt": "We can focus on non-surgical control and comfort; decisions are shared and revisited as you feel ready.",
+          "order": 10,
+          "qid": "S29-Q10"
+        }
+      ]
+    },
+    {
+      "id": "S30",
+      "title": "Fast and furious (extensive-stage small cell lung cancer)",
+      "diagnosis": "Extensive-stage small cell lung cancer",
+      "treatment_plan": "Platinum/etoposide chemotherapy with immunotherapy; symptom control; imaging to assess response",
+      "narrative": "I'm 63 and this cancer showed up fast. They want to start chemo-immunotherapy now. I need relief and a plan that keeps my days meaningful.",
+      "qa": [
+        {
+          "q": "How quickly might my cough and breathlessness improve?",
+          "gt": "Small cell cancers often respond within weeks; symptom relief can be rapid.",
+          "order": 1,
+          "qid": "S30-Q01"
+        },
+        {
+          "q": "What makes this cancer different from the others I read about?",
+          "gt": "It grows and responds quickly; we act early and monitor closely for recurrence.",
+          "order": 2,
+          "qid": "S30-Q02"
+        },
+        {
+          "q": "Will I be stuck in bed after each cycle?",
+          "gt": "Most people have several days of fatigue but often feel better before the next cycle. We’ll manage nausea and energy.",
+          "order": 3,
+          "qid": "S30-Q03"
+        },
+        {
+          "q": "Can immunotherapy cause dangerous side effects?",
+          "gt": "Rarely it can inflame organs. Call for new shortness of breath, severe diarrhea, or jaundice—early treatment helps.",
+          "order": 4,
+          "qid": "S30-Q04"
+        },
+        {
+          "q": "Should I quit smoking now, or is it too late to matter?",
+          "gt": "It always helps—improves breathing, treatment tolerance, and overall health. We have support to make it easier.",
+          "order": 5,
+          "qid": "S30-Q05"
+        },
+        {
+          "q": "If my brain scan later shows spots, what then?",
+          "gt": "We use targeted radiation and continue systemic therapy as appropriate.",
+          "order": 6,
+          "qid": "S30-Q06"
+        },
+        {
+          "q": "Can I keep my morning walks with my dog?",
+          "gt": "Yes, as tolerated; activity supports mood and stamina.",
+          "order": 7,
+          "qid": "S30-Q07"
+        },
+        {
+          "q": "How long does this treatment last?",
+          "gt": "Chemo is usually a few months; immunotherapy may continue afterward if effective and tolerated.",
+          "order": 8,
+          "qid": "S30-Q08"
+        },
+        {
+          "q": "What happens if it grows back fast?",
+          "gt": "We’ll discuss second-line options and prioritize symptom relief; you won’t face it alone.",
+          "order": 9,
+          "qid": "S30-Q09"
+        },
+        {
+          "q": "How do we protect good days for time with my family?",
+          "gt": "We’ll plan around predictable low-energy windows and control symptoms proactively to preserve meaningful time.",
+          "order": 10,
+          "qid": "S30-Q10"
+        }
+      ]
+    }
+  ]
+}

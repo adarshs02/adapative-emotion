@@ -53,11 +53,11 @@ def test_new_factor_generator():
             print(f"   Selected: {result['selected_values'].get(factor['name'], 'N/A')}")
             print()
         
-        # Test situation analysis
-        print("🔍 Testing situation analysis...")
-        analysis = factor_generator.analyze_situation(user_situation, result['factors'])
+        # Test direct factor value extraction
+        print("🔍 Testing direct factor value extraction...")
+        analysis = factor_generator.extract_factor_values_direct(user_situation, result['factors'])
         
-        print("📈 Situation Analysis:")
+        print("📈 Factor Value Extraction:")
         for factor_name, value in analysis.items():
             print(f"  {factor_name}: {value}")
         

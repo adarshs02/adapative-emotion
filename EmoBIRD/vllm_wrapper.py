@@ -5,9 +5,24 @@ Provides a high-performance LLM interface using vLLM for inference.
 """
 
 import json
-from typing import List, Dict, Any, Optional
+import re
+from typing import List, Dict, Any, Optional, Type
 from vllm import LLM, SamplingParams
-from logger import get_logger
+try:
+    from EmoBIRD.logger import get_logger
+    from EmoBIRD.validation import (
+        extract_first_json as _first_json,
+        parse_and_validate as _parse_and_validate,
+        strip_noise as _strip_noise,
+    )
+except ImportError:
+    # Allow running scripts from the EmoBIRD/ directory without package context
+    from logger import get_logger
+    from validation import (
+        extract_first_json as _first_json,
+        parse_and_validate as _parse_and_validate,
+        strip_noise as _strip_noise,
+    )
 
 
 class VLLMWrapper:
@@ -21,6 +36,7 @@ class VLLMWrapper:
         self.config = config
         self.model = None
         self.sampling_params = None
+        self.last_json_call_meta = {}
         
         if config.use_vllm:
             self._initialize_vllm()
@@ -49,17 +65,17 @@ class VLLMWrapper:
                 top_p=0.9,
                 frequency_penalty=0.0,
                 presence_penalty=0.0,
-                stop=None
+                stop=self.config.stop_seqs
             )
             
-            # Configure JSON-specific sampling parameters to prevent repetitive generation
+            # Configure JSON-specific sampling parameters
             self.json_sampling_params = SamplingParams(
-                temperature=0.6,
-                max_tokens=256,   # Shorter for JSON responses
+                temperature=self.config.json_temperature,
+                max_tokens=self.config.json_max_tokens,   # Shorter for JSON responses
                 top_p=0.9,
                 frequency_penalty=0.8,  # Prevent repetition
-                presence_penalty=0.3,   # Encourage diversity
-                stop=None  # Remove problematic stop tokens that truncate JSON
+                presence_penalty=0.3,
+                stop=self.config.stop_seqs
             )
             
             # Configure ultra-constrained sampling for abstracts to prevent hallucination
@@ -69,7 +85,7 @@ class VLLMWrapper:
                 top_p=0.7,              # More focused sampling
                 frequency_penalty=0.0,  # No repetition penalty
                 presence_penalty=0.0,   # No creativity penalty
-                stop=None  # Remove problematic stop tokens that halt generation immediately
+                stop=self.config.stop_seqs
             )
             
             print("✅ vLLM initialized successfully!")
@@ -90,10 +106,94 @@ class VLLMWrapper:
         Returns:
             Generated response string
         """
+        # Use extended tokens for conversational output generation
+        if component == "output_generator" and interaction_type == "conversational_response":
+            return self.generate_conversational([prompt], component, interaction_type)[0]
+        
         response = self.generate_batch([prompt], component, interaction_type)[0]
-        return {}
+        return response
     
-    def _generate_strict_json(self, prompt: str, component: str, interaction_type: str, use_temp_zero: bool = False) -> str:
+    def generate_conversational(self, prompts: List[str], component: str = "output_generator", interaction_type: str = "conversational_response") -> List[str]:
+        """
+        Generate conversational responses with extended token limits (up to 512 tokens).
+        
+        Args:
+            prompts: List of input prompt strings
+            component: Component name for logging
+            interaction_type: Type of interaction for logging
+            
+        Returns:
+            List of generated response strings
+        """
+        if not self.model:
+            raise RuntimeError("vLLM model not initialized")
+        
+        try:
+            # Create extended sampling parameters for conversational responses
+            conversational_params = SamplingParams(
+                temperature=self.config.temperature,
+                max_tokens=220,  # Extended token limit for conversational responses
+                top_p=0.9,
+                frequency_penalty=0.0,
+                presence_penalty=0.0,
+                stop=self.config.stop_seqs
+            )
+            
+            # Generate responses
+            outputs = self.model.generate(prompts, conversational_params)
+            
+            # Extract responses safely
+            responses = []
+            if not outputs or len(outputs) == 0:
+                responses = [""] * len(prompts)
+            else:
+                for output in outputs:
+                    try:
+                        txt = (output.outputs[0].text if getattr(output, "outputs", None) else "")
+                        responses.append((txt or "").strip())
+                    except Exception:
+                        responses.append("")
+            
+            # Log the interactions
+            logger = get_logger()
+            for i, (prompt, response) in enumerate(zip(prompts, responses)):
+                logger.log_interaction(
+                    component=component,
+                    interaction_type=interaction_type,
+                    prompt=prompt,
+                    response=response,
+                    metadata={
+                        "batch_index": i,
+                        "batch_size": len(prompts),
+                        "sampling_method": "conversational_extended",
+                        "temperature": conversational_params.temperature,
+                        "max_tokens": conversational_params.max_tokens
+                    }
+                )
+            
+            return responses
+            
+        except Exception as e:
+            # Log the error
+            logger = get_logger()
+            logger.log_error(
+                component=component,
+                error_type="conversational_generation_failed",
+                error_message=str(e),
+                context={"prompts_count": len(prompts), "interaction_type": interaction_type}
+            )
+            print(f"❌ Error during conversational generation: {e}")
+            return [""] * len(prompts)  # Return empty strings as fallback
+    
+    def _generate_strict_json(
+        self,
+        prompt: str,
+        component: str,
+        interaction_type: str,
+        use_temp_zero: bool = False,
+        temperature_override: Optional[float] = None,
+        max_tokens_override: Optional[int] = None,
+    ) -> str:
         """
         Generate response with strict JSON parameters and stop tokens.
         """
@@ -103,28 +203,38 @@ class VLLMWrapper:
         try:
             # Create strict JSON sampling params with balanced stop tokens
             # Use shorter max_tokens and smarter stop tokens to prevent rambling
-            json_max_tokens = min(200, self.json_sampling_params.max_tokens)  # Limit for JSON responses
+            # Respect per-call override and cap
+            effective_max = max_tokens_override if max_tokens_override is not None else self.json_sampling_params.max_tokens
+            json_max_tokens = effective_max
+            # Avoid stop tokens during JSON; rely on brace-aware extraction to capture the first complete object.
+            # Any early stop (e.g., '}\n') can cut inside nested objects and corrupt JSON.
+            json_stop = None
             
             if use_temp_zero:
                 sampling_params = SamplingParams(
                     temperature=0.0,
                     max_tokens=json_max_tokens,
                     top_p=0.95,
-                    stop=["\n}\n", "```", "\n\nHuman:", "\n\nAssistant:", "\n---"],  # Stop after JSON completion or rambling starts
+                    stop=json_stop,
                     logprobs=None
                 )
             else:
+                # Choose temperature: override > config.json_temperature
+                eff_temp = self.config.json_temperature if temperature_override is None else temperature_override
                 sampling_params = SamplingParams(
-                    temperature=0.1,  # Very low temperature for consistency
+                    temperature=eff_temp,
                     max_tokens=json_max_tokens,
                     top_p=0.95,
-                    stop=["\n}\n", "```", "\n\nHuman:", "\n\nAssistant:", "\n---"],  # Stop after JSON completion or rambling starts
+                    stop=json_stop,
                     logprobs=None
                 )
             
             # Generate response
             outputs = self.model.generate([prompt], sampling_params)
-            response = outputs[0].outputs[0].text.strip()
+            if outputs and len(outputs) > 0 and getattr(outputs[0], "outputs", None):
+                response = (outputs[0].outputs[0].text or "").strip()
+            else:
+                response = ""
             
             # Log the interaction
             logger = get_logger()
@@ -142,51 +252,102 @@ class VLLMWrapper:
             )
             
             return response
-            
         except Exception as e:
             print(f"❌ Error during strict JSON generation: {e}")
             raise
-    
-    def _extract_first_json(self, response: str) -> str:
+    def _normalize_unified_json(self, data: Dict[str, Any]) -> Dict[str, Any]:
+        """Normalize unified JSON object in-place-safe manner.
+        - Drop emotion_probs keys not in emotions; renormalize to 1.0.
+        - If missing probs, back off to uniform over up to 3 emotions (or defaults).
+        - Enforce allowed factor taxonomy from config if provided.
+        - Coerce boolean strings to booleans for boolean-typed factors.
+        - Rebuild factors list to match allowed definitions for present keys.
         """
-        Extract the first valid JSON object from response, stripping everything after.
-        """
-        if not response:
-            raise ValueError("Empty response")
-        
-        # Remove markdown code blocks if present
-        if "```json" in response:
-            start = response.find("```json") + 7
-            end = response.find("```", start)
-            if end != -1:
-                response = response[start:end].strip()
-        elif "```" in response:
-            start = response.find("```") + 3
-            end = response.find("```", start)
-            if end != -1:
-                response = response[start:end].strip()
-        
-        # Find first { and matching }
-        start = response.find('{')
-        if start == -1:
-            raise ValueError("No JSON object found in response")
-        
-        # Find matching closing brace
-        brace_count = 0
-        end = start
-        for i, char in enumerate(response[start:], start):
-            if char == '{':
-                brace_count += 1
-            elif char == '}':
-                brace_count -= 1
-                if brace_count == 0:
-                    end = i + 1
-                    break
-        
-        if brace_count != 0:
-            raise ValueError("Unmatched braces in JSON")
-        
-        return response[start:end]
+        if not isinstance(data, dict):
+            return data
+
+        # Emotions and probs
+        emotions = data.get("emotions") or []
+        if not isinstance(emotions, list):
+            emotions = []
+        emotions = [e for e in emotions if isinstance(e, str) and e]
+        data["emotions"] = emotions
+
+        probs = data.get("emotion_probs") or {}
+        if not isinstance(probs, dict):
+            probs = {}
+
+        # Keep only keys in emotions
+        probs = {k: float(v) for k, v in probs.items() if k in emotions and isinstance(v, (int, float)) and v >= 0}
+
+        def uniform_over(keys: list) -> Dict[str, float]:
+            if not keys:
+                return {}
+            w = 1.0 / float(len(keys))
+            return {k: w for k in keys}
+
+        if not probs:
+            # Back-off: choose up to 3 emotions if available, else defaults
+            if emotions:
+                chosen = emotions[:3]
+            else:
+                defaults = getattr(self.config, "default_emotions", []) or ["joy", "sadness", "anger"]
+                chosen = defaults[:3]
+                # also set emotions if empty
+                if not emotions:
+                    data["emotions"] = chosen
+            probs = uniform_over(chosen)
+        else:
+            s = float(sum(probs.values()))
+            if s <= 0:
+                keys = list(probs.keys()) if probs else (emotions[:3] if emotions else [])
+                probs = uniform_over(keys)
+            elif abs(s - 1.0) > 1e-6:
+                for k in list(probs.keys()):
+                    probs[k] = probs[k] / s
+        data["emotion_probs"] = probs
+
+        # Factors normalization
+        allowed = getattr(self.config, "allowed_factors", None)
+        fv = data.get("factor_values") or {}
+        if not isinstance(fv, dict):
+            fv = {}
+
+        if isinstance(allowed, dict) and allowed:
+            normalized_fv: Dict[str, Any] = {}
+            for name, val in fv.items():
+                if name not in allowed:
+                    continue  # reject unknown factor
+                spec = allowed[name]
+                vtype = spec.get("value_type")
+                pvals = spec.get("possible_values")
+                v = val
+                if vtype == "boolean":
+                    if isinstance(v, str):
+                        lv = v.strip().lower()
+                        if lv in ("true", "yes", "1"): v = True
+                        elif lv in ("false", "no", "0"): v = False
+                    v = bool(v) if isinstance(v, (bool, int, str)) else False
+                if pvals is not None and len(pvals) > 0 and v not in pvals:
+                    # Reject values not in allowed set
+                    continue
+                normalized_fv[name] = v
+            fv = normalized_fv
+            data["factor_values"] = fv
+
+            # Rebuild factors list to match allowed set for present keys
+            factors_list = []
+            for name in fv.keys():
+                spec = allowed[name]
+                factors_list.append({
+                    "name": name,
+                    "value_type": spec.get("value_type"),
+                    "possible_values": spec.get("possible_values"),
+                    "description": spec.get("description", "allowed factor")
+                })
+            data["factors"] = factors_list
+
+        return data
     
     def _validate_json_schema(self, parsed_json: dict, schema: dict) -> None:
         """
@@ -205,52 +366,106 @@ class VLLMWrapper:
                         raise ValueError(f"Key '{key}' must be an array")
                     elif expected_type == "string" and not isinstance(value, str):
                         raise ValueError(f"Key '{key}' must be a string")
-    
-    def _generate_with_json_params(self, prompt: str, component: str, interaction_type: str) -> str:
+
+    def _clean_and_parse_json_two_pass(
+        self,
+        raw_text: str,
+        schema: Optional[dict] = None,
+        schema_model: Optional[Type] = None,
+        context_meta: Optional[Dict[str, Any]] = None,
+        component: str = "vllm",
+        interaction_type: str = "json_generation",
+    ) -> Optional[Dict[str, Any]]:
+        """Two-pass cleaning + parsing routine.
+        Pass 1: strict brace-aware first JSON.
+        Pass 2: light noise stripping before first JSON.
+        Returns parsed dict or None if both passes fail.
         """
-        Generate a single response using JSON-specific sampling parameters.
-        
-        Args:
-            prompt: Input prompt string
-            component: Component name for logging
-            interaction_type: Type of interaction for logging
-            
-        Returns:
-            Generated response string
-        """
-        if not self.model:
-            raise RuntimeError("vLLM model not initialized")
-        
+        logger = get_logger()
+        # Pass 1
         try:
-            # Generate response with JSON-specific parameters
-            outputs = self.model.generate([prompt], self.json_sampling_params)
-            
-            # Extract generated text
-            generated_text = outputs[0].outputs[0].text
-            response = generated_text.strip()
-            
-            # Log the interaction
-            logger = get_logger()
+            cleaned = _first_json(raw_text)
+            data = json.loads(cleaned)
+            data = self._normalize_unified_json(data)
+            if schema_model is not None:
+                _, _ = _parse_and_validate(json.dumps(data), schema_model)
+            if schema:
+                self._validate_json_schema(data, schema)
+            return data
+        except Exception as e1:
+            logger.log_error(
+                component=component,
+                error_type="json_parse_first_pass_failed",
+                error_message=str(e1),
+                context={**(context_meta or {}), "stage": "first_pass"},
+            )
+
+        # Pass 2: noise strip then extract first JSON
+        try:
+            stripped = _strip_noise(raw_text)
+            cleaned2 = _first_json(stripped)
+            data2 = json.loads(cleaned2)
+            data2 = self._normalize_unified_json(data2)
+            if schema_model is not None:
+                _, _ = _parse_and_validate(json.dumps(data2), schema_model)
+            if schema:
+                self._validate_json_schema(data2, schema)
             logger.log_interaction(
                 component=component,
-                interaction_type=interaction_type,
-                prompt=prompt,
-                response=response,
-                metadata={
-                    "sampling_method": "json_specific",
-                    "temperature": self.json_sampling_params.temperature,
-                    "max_tokens": self.json_sampling_params.max_tokens,
-                    "frequency_penalty": self.json_sampling_params.frequency_penalty,
-                    "presence_penalty": self.json_sampling_params.presence_penalty,
-                    "stop_tokens": self.json_sampling_params.stop
-                }
+                interaction_type=f"{interaction_type}_success_after_clean",
+                prompt=(context_meta or {}).get("prompt_preview"),
+                response=json.dumps(data2)[:200] + ("..." if len(json.dumps(data2)) > 200 else ""),
+                metadata={**(context_meta or {}), "stage": "second_pass"},
             )
-            
-            return response
-            
-        except Exception as e:
-            print(f"❌ Error during JSON generation: {e}")
-            return ""  # Return empty string as fallback
+            return data2
+        except Exception as e2:
+            logger.log_error(
+                component=component,
+                error_type="json_parse_second_pass_failed",
+                error_message=str(e2),
+                context={**(context_meta or {}), "stage": "second_pass"},
+            )
+            return None
+
+    def _fallback_minimal_json(self, prompt: str, component: str, interaction_type: str) -> Dict[str, Any]:
+        """Hard-gate fallback: produce minimal empathetic JSON using base LLM.
+        Returns a consistent minimal structure without partial insights.
+        """
+        try:
+            # Ask the model for one concise empathetic sentence only (deterministic)
+            instruct = (
+                "Write one concise, empathetic sentence acknowledging the user's feelings "
+                "and offering brief support. No lists."
+            )
+            base_prompt = f"{instruct}\n\nContext:\n{prompt[:800]}"
+            outputs = self.model.generate(
+                [base_prompt],
+                SamplingParams(temperature=0.0, max_tokens=64, top_p=0.9, stop=None),
+            )
+            text = outputs[0].outputs[0].text.strip()
+            # Build minimal JSON
+            data = {
+                "emotions": ["neutral"],
+                "emotion_probs": {"neutral": 1.0},
+                "message": text[:500],
+            }
+        except Exception:
+            # Absolute minimal fallback on catastrophic error
+            data = {
+                "emotions": ["neutral"],
+                "emotion_probs": {"neutral": 1.0},
+                "message": "I'm here with you. You're not alone in this.",
+            }
+        # Log fallback usage
+        logger = get_logger()
+        logger.log_interaction(
+            component=component,
+            interaction_type=f"{interaction_type}_fallback_minimal",
+            prompt=prompt[:200] + ("..." if len(prompt) > 200 else ""),
+            response=json.dumps(data),
+            metadata={"fallback": True},
+        )
+        return data
     
     def generate_abstract(self, prompt: str, component: str = "vllm", interaction_type: str = "abstract_generation") -> str:
         """
@@ -271,9 +486,12 @@ class VLLMWrapper:
             # Generate response with abstract-specific constrained parameters
             outputs = self.model.generate([prompt], self.abstract_sampling_params)
             
-            # Extract generated text
-            generated_text = outputs[0].outputs[0].text
-            response = generated_text.strip()
+            # Extract generated text safely
+            if outputs and len(outputs) > 0 and getattr(outputs[0], "outputs", None):
+                generated_text = outputs[0].outputs[0].text
+            else:
+                generated_text = ""
+            response = (generated_text or "").strip()
             
             # Log the interaction
             logger = get_logger()
@@ -319,11 +537,17 @@ class VLLMWrapper:
             # Generate responses
             outputs = self.model.generate(prompts, self.sampling_params)
             
-            # Extract generated text
+            # Extract generated text safely
             responses = []
-            for output in outputs:
-                generated_text = output.outputs[0].text
-                responses.append(generated_text.strip())
+            if not outputs or len(outputs) == 0:
+                responses = [""] * len(prompts)
+            else:
+                for output in outputs:
+                    try:
+                        generated_text = (output.outputs[0].text if getattr(output, "outputs", None) else "")
+                        responses.append((generated_text or "").strip())
+                    except Exception:
+                        responses.append("")
             
             # Log each prompt-response pair
             logger = get_logger()
@@ -355,7 +579,17 @@ class VLLMWrapper:
             print(f"❌ Error during generation: {e}")
             return [""] * len(prompts)  # Return empty strings as fallback
     
-    def json_call(self, prompt: str, schema: dict = None, component: str = "vllm", interaction_type: str = "json_generation", max_retries: int = 2) -> Dict[str, Any]:
+    def json_call(
+        self,
+        prompt: str,
+        schema: dict = None,
+        component: str = "vllm",
+        interaction_type: str = "json_generation",
+        max_retries: int = 0,
+        schema_model: Optional[Type] = None,
+        temperature_override: Optional[float] = None,
+        max_tokens_override: Optional[int] = None,
+    ) -> Dict[str, Any]:
         """
         Enforce strict JSON generation with schema validation and retry logic.
         
@@ -373,262 +607,219 @@ class VLLMWrapper:
             ValueError: If JSON parsing fails after all retries
         """
         logger = get_logger()
-        
-        for attempt in range(max_retries + 1):
-            try:
-                # Use temperature=0 for retry attempts to get more deterministic output
-                use_temp_zero = attempt > 0
-                
-                # Generate response with strict JSON parameters
-                response = self._generate_strict_json(prompt, component, f"{interaction_type}_attempt_{attempt+1}", use_temp_zero)
-                
-                # Extract and parse JSON strictly
-                cleaned_response = self._extract_first_json(response)
-                parsed_json = json.loads(cleaned_response)
-                
-                # Validate against schema if provided
-                if schema:
-                    self._validate_json_schema(parsed_json, schema)
-                
-                # Log successful JSON parsing
+        meta = {"attempts": 0, "final_status": "unknown"}
+        self.last_json_call_meta = meta
+
+        # Step 1: single strict generation (deterministic)
+        meta["attempts"] += 1
+        response = self._generate_strict_json(
+            prompt,
+            component,
+            f"{interaction_type}_attempt_1",
+            use_temp_zero=True,
+            temperature_override=0.0 if temperature_override is None else temperature_override,
+            max_tokens_override=max_tokens_override,
+        )
+
+        # Optional single regenerate if empty or no JSON brace
+        if (not response) or ("{" not in response):
+            logger.log_error(
+                component=component,
+                error_type="empty_or_no_brace_response",
+                error_message="Empty or no '{' found; one-time regenerate",
+                context={"attempt": 1, "interaction_type": interaction_type}
+            )
+            meta["attempts"] += 1
+            base_budget = max_tokens_override if max_tokens_override is not None else self.config.json_max_tokens
+            bumped_budget = min(int(base_budget * 2), 2048)
+            # Force JSON-only directive on regenerate
+            force_json_prompt = (
+                f"{prompt}\n\nReturn only a valid JSON object. "
+                f"Do not include any explanations, comments, or code fences."
+            )
+            response = self._generate_strict_json(
+                force_json_prompt,
+                component,
+                f"{interaction_type}_attempt_2_regenerate",
+                use_temp_zero=True,
+                temperature_override=0.0,
+                max_tokens_override=bumped_budget,
+            )
+
+        # Parse once, with two-pass cleaning and targeted unmatched-brace retry
+        try:
+            parsed = self._clean_and_parse_json_two_pass(
+                response,
+                schema=schema,
+                schema_model=schema_model,
+                context_meta={
+                    "attempt": meta["attempts"],
+                    "interaction_type": interaction_type,
+                    "prompt_preview": prompt[:200] + ("..." if len(prompt) > 200 else ""),
+                },
+                component=component,
+                interaction_type=interaction_type,
+            )
+            if parsed is not None:
                 logger.log_interaction(
                     component=component,
                     interaction_type=f"{interaction_type}_success",
-                    prompt=prompt[:200] + "..." if len(prompt) > 200 else prompt,
-                    response=json.dumps(parsed_json)[:200] + "..." if len(json.dumps(parsed_json)) > 200 else json.dumps(parsed_json),
-                    metadata={
-                        "attempt_number": attempt + 1,
-                        "schema_validated": schema is not None,
-                        "temperature_zero": use_temp_zero
-                    }
+                    prompt=prompt[:200] + ("..." if len(prompt) > 200 else ""),
+                    response=json.dumps(parsed)[:200] + ("..." if len(json.dumps(parsed)) > 200 else ""),
+                    metadata={"attempt_number": meta["attempts"]},
                 )
-                
-                return parsed_json
-                
-            except (json.JSONDecodeError, ValueError, KeyError) as e:
-                # Log parsing error
+                meta["final_status"] = "success"
+                self.last_json_call_meta = meta
+                return parsed
+        except Exception as e:
+            # If braces were unmatched or JSON was truncated, do a one-time higher-budget regenerate.
+            err_str = str(e).lower()
+            unmatched_like = ("unmatched braces" in err_str)
+            truncated_like = ("unterminated" in err_str) or ("expecting" in err_str and "delimiter" in err_str)
+            if unmatched_like or truncated_like:
                 logger.log_error(
                     component=component,
-                    error_type="strict_json_parse_error",
+                    error_type="unmatched_braces_retry",
                     error_message=str(e),
                     context={
-                        "attempt": attempt + 1,
-                        "max_retries": max_retries,
-                        "raw_response": response[:300] if 'response' in locals() else "No response",
-                        "interaction_type": interaction_type
+                        "first_response": response if response else "No response",
+                        "interaction_type": interaction_type,
+                        "prompt": prompt[:200]
                     }
                 )
-                
-                if attempt < max_retries:
-                    print(f"⚠️ JSON parse error (attempt {attempt + 1}): {e}")
-                    continue
-                else:
-                    # Final failure - raise error
-                    error_msg = f"Failed to generate valid JSON after {max_retries + 1} attempts: {e}"
+                meta["attempts"] += 1
+                base_budget = max_tokens_override if max_tokens_override is not None else self.config.json_max_tokens
+                bumped_budget = min(int(base_budget * 2), 2048)
+                # Keep same prompt but emphasize JSON-only
+                force_json_prompt2 = (
+                    f"{prompt}\n\nReturn only a valid JSON object. "
+                    f"Do not include any explanations, comments, or code fences."
+                )
+                response2 = self._generate_strict_json(
+                    force_json_prompt2,
+                    component,
+                    f"{interaction_type}_attempt_{meta['attempts']}_regenerate_unmatched",
+                    use_temp_zero=True,
+                    temperature_override=0.0,
+                    max_tokens_override=bumped_budget,
+                )
+                try:
+                    parsed2 = self._clean_and_parse_json_two_pass(
+                        response2,
+                        schema=schema,
+                        schema_model=schema_model,
+                        context_meta={
+                            "attempt": meta["attempts"],
+                            "interaction_type": interaction_type,
+                            "prompt_preview": prompt[:200] + ("..." if len(prompt) > 200 else ""),
+                        },
+                        component=component,
+                        interaction_type=interaction_type,
+                    )
+                    if parsed2 is not None:
+                        logger.log_interaction(
+                            component=component,
+                            interaction_type=f"{interaction_type}_success_after_retry",
+                            prompt=prompt[:200] + ("..." if len(prompt) > 200 else ""),
+                            response=json.dumps(parsed2)[:200] + ("..." if len(json.dumps(parsed2)) > 200 else ""),
+                            metadata={"attempt_number": meta["attempts"]},
+                        )
+                        meta["final_status"] = "success"
+                        self.last_json_call_meta = meta
+                        return parsed2
+                except Exception as e2:
+                    # Hard-gate fallback
                     logger.log_error(
                         component=component,
-                        error_type="strict_json_generation_failed",
-                        error_message=error_msg,
+                        error_type="strict_json_generation_failed_after_retry",
+                        error_message=str(e2),
                         context={
-                            "final_response": response if 'response' in locals() else "No response",
+                            "first_response": response if response else "No response",
+                            "second_response": response2 if response2 else "No response",
                             "interaction_type": interaction_type,
-                            "prompt": prompt[:200]
-                        }
+                            "prompt": prompt[:200],
+                        },
                     )
-                    raise ValueError(error_msg)
-        
-        # Should never reach here, but just in case
-        raise ValueError("Unexpected error in json_call")
+                    meta["final_status"] = "fallback"
+                    self.last_json_call_meta = meta
+                    return self._fallback_minimal_json(prompt, component, interaction_type)
+            # Non-brace-related failure: log and raise
+            # Before giving up, attempt second-pass salvage on the first response
+            salvaged = self._clean_and_parse_json_two_pass(
+                response,
+                schema=schema,
+                schema_model=schema_model,
+                context_meta={
+                    "attempt": meta["attempts"],
+                    "interaction_type": interaction_type,
+                    "prompt_preview": prompt[:200] + ("..." if len(prompt) > 200 else ""),
+                },
+                component=component,
+                interaction_type=interaction_type,
+            )
+            if salvaged is not None:
+                logger.log_interaction(
+                    component=component,
+                    interaction_type=f"{interaction_type}_success_after_clean",
+                    prompt=prompt[:200] + ("..." if len(prompt) > 200 else ""),
+                    response=json.dumps(salvaged)[:200] + ("..." if len(json.dumps(salvaged)) > 200 else ""),
+                    metadata={"attempt_number": meta["attempts"]},
+                )
+                meta["final_status"] = "success"
+                self.last_json_call_meta = meta
+                return salvaged
+            # Hard-gate fallback
+            logger.log_error(
+                component=component,
+                error_type="strict_json_generation_failed",
+                error_message=str(e),
+                context={
+                    "final_response": response if response else "No response",
+                    "interaction_type": interaction_type,
+                    "prompt": prompt[:200],
+                },
+            )
+            meta["final_status"] = "fallback"
+            self.last_json_call_meta = meta
+            return self._fallback_minimal_json(prompt, component, interaction_type)
     
-    def generate_json(self, prompt: str, component: str = "vllm", interaction_type: str = "json_generation", max_retries: int = 3) -> Dict[str, Any]:
+    def generate_json(self, prompt: str, component: str = "vllm", interaction_type: str = "json_generation", max_retries: int = 0) -> Dict[str, Any]:
         """
-        Generate a JSON response, with retry logic for malformed JSON.
-        
-        Args:
-            prompt: Input prompt string
-            component: Component name for logging
-            interaction_type: Type of interaction for logging
-            max_retries: Maximum number of retry attempts
-            
-        Returns:
-            Parsed JSON dictionary, or empty dict if parsing fails
+        Minimal JSON generation. Single strict call with optional one-time regenerate if empty.
+        Returns parsed dict or {} on failure. Kept for backward compatibility.
         """
         logger = get_logger()
-        
-        for attempt in range(max_retries):
-            # Use JSON-specific sampling parameters for better JSON generation
-            response = self._generate_with_json_params(prompt, component, f"{interaction_type}_attempt_{attempt+1}")
-            
-            # DEBUG: Print raw response to see what we're getting
-            print(f"🔍 Raw vLLM response length: {len(response)} chars")
-            print(f"🔍 Raw vLLM response: {response[:1000]}")
-            if len(response) > 1000:
-                print(f"🔍 [TRUNCATED - showing first 1000 chars of {len(response)} total]")
-            
-            # Try to extract and parse JSON
-            try:
-                # Handle potential markdown code blocks
-                cleaned_response = self._clean_json_response(response)
-                parsed_json = json.loads(cleaned_response)
-                
-                # Log successful JSON parsing
-                logger.log_interaction(
-                    component=component,
-                    interaction_type=f"{interaction_type}_success",
-                    prompt=f"[JSON PARSING SUCCESS] Original prompt: {prompt[:100]}...",
-                    response=f"[PARSED JSON] {json.dumps(parsed_json)[:200]}...",
-                    metadata={
-                        "attempt_number": attempt + 1,
-                        "json_keys": list(parsed_json.keys()),
-                        "cleaned_response_length": len(cleaned_response),
-                        "original_response_length": len(response)
-                    }
-                )
-                
-                return parsed_json
-                
-            except json.JSONDecodeError as e:
-                # Log JSON parsing error
-                logger.log_error(
-                    component=component,
-                    error_type="json_parse_error",
-                    error_message=str(e),
-                    context={
-                        "attempt": attempt + 1,
-                        "max_retries": max_retries,
-                        "raw_response": response[:500],
-                        "cleaned_response": self._clean_json_response(response)[:500],
-                        "interaction_type": interaction_type
-                    }
-                )
-                
-                if attempt < max_retries - 1:
-                    print(f"⚠️ JSON parse error (attempt {attempt + 1}): {e}")
-                    print(f"Raw response: {response[:200]}...")
-                    continue
-                else:
-                    print(f"❌ Failed to parse JSON after {max_retries} attempts")
-                    print(f"Final response: {response}")
-                    
-                    # Log final failure
-                    logger.log_error(
-                        component=component,
-                        error_type="json_generation_failed",
-                        error_message=f"Failed to generate valid JSON after {max_retries} attempts",
-                        context={
-                            "final_response": response,
-                            "interaction_type": interaction_type,
-                            "prompt": prompt[:200]
-                        }
-                    )
-                    
-                    return {}
-        
-        return {}
-    
-    def _clean_json_response(self, response: str) -> str:
-        """
-        Robust JSON extraction from model responses.
-        Handles various formats: markdown blocks, extra text, multiple JSONs.
-        
-        Args:
-            response: Raw model response
-            
-        Returns:
-            Cleaned JSON string
-        """
-        import re
-        
-        response = response.strip()
-        
-        # Method 1: Try to find JSON within markdown code blocks
-        json_block_pattern = r'```(?:json)?\s*([\s\S]*?)```'
-        json_blocks = re.findall(json_block_pattern, response)
-        
-        for block in json_blocks:
-            block = block.strip()
-            if block.startswith('{') and block.endswith('}'):
-                try:
-                    # Test if it's valid JSON
-                    json.loads(block)
-                    return block
-                except:
-                    continue
-        
-        # Method 2: Find JSON objects in the response (handles extra text)
-        json_pattern = r'(\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\})'
-        json_matches = re.findall(json_pattern, response)
-        
-        for match in json_matches:
-            try:
-                json.loads(match)
-                return match
-            except:
-                continue
-        
-        # Find complete JSON objects with balanced braces
-        start_idx = response.find('{')
-        if start_idx != -1:
-            brace_count = 0
-            for i, char in enumerate(response[start_idx:], start_idx):
-                if char == '{':
-                    brace_count += 1
-                elif char == '}':
-                    brace_count -= 1
-                    if brace_count == 0:
-                        candidate = response[start_idx:i+1]
-                        try:
-                            json.loads(candidate)
-                            return candidate
-                        except:
-                            continue
-        
-        # Last resort: empty JSON
-        return "{}"
-    
-    def _reconstruct_partial_json(self, response: str) -> str:
-        """
-        Attempt to reconstruct a minimal valid JSON from partial content.
-        
-        Args:
-            response: Raw model response
-            
-        Returns:
-            Reconstructed JSON string
-        """
-        response = response.strip()
-        
-        # If response starts with a quote, assume it's partial JSON content
-        if response.startswith('"'):
-            # Add opening brace and try to close it
-            response = '{' + response
-            if not response.endswith('}'):
-                response += '}'
-        
-        # Try to find the first opening brace
-        start_idx = response.find('{')
-        if start_idx == -1:
-            return "{}"
-        
-        # Try to find the last closing brace
-        end_idx = response.rfind('}')
-        if end_idx == -1:
-            # If no closing brace, try to add one
-            response += '}'
-            end_idx = len(response) - 1
-        
-        # Extract the content between the braces
-        content = response[start_idx:end_idx+1]
-        
-        # Try to parse the content as JSON
+        # Single strict gen
+        response = self._generate_strict_json(
+            prompt,
+            component,
+            f"{interaction_type}_attempt_1",
+            use_temp_zero=True,
+            temperature_override=0.0,
+        )
+        if (not response) or ("{" not in response):
+            # One-time regenerate with higher budget
+            base_budget = self.config.json_max_tokens
+            bumped_budget = min(int(base_budget * 2), 2048)
+            response = self._generate_strict_json(
+                prompt,
+                component,
+                f"{interaction_type}_attempt_2_regenerate",
+                use_temp_zero=True,
+                temperature_override=0.0,
+                max_tokens_override=bumped_budget,
+            )
         try:
-            json.loads(content)
-            return content
-        except json.JSONDecodeError:
-            pass
-        
-        # If all else fails, return an empty JSON object
-        return "{}"
+            cleaned = _first_json(response)
+            return json.loads(cleaned)
+        except Exception as e:
+            logger.log_error(
+                component=component,
+                error_type="json_generation_failed",
+                error_message=str(e),
+                context={"interaction_type": interaction_type, "prompt": prompt[:200]}
+            )
+            return {}
     
     def update_sampling_params(self, **kwargs):
         """Update sampling parameters dynamically."""

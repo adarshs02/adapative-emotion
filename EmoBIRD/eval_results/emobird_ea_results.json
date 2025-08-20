@@ -1,0 +1,222 @@
+[
+  {
+    "idx": 0,
+    "prompt": "Scenario: Sarah found out that her younger brother is being bullied at school but he begged her not to tell their parents.\nAs Sarah, how would you respond?\nChoices:\na) Promise to keep the secret\nb) Inform their parents anyway\nc) Confront the bullies herself\nd) Suggest her brother to talk to a teacher or a school counselor\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"d\", \"choice_text\": \"Suggest her brother to talk to a teacher or a school counselor\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Suggest her brother to talk to a teacher or a school counselor",
+    "gt_choice_text": "Suggest her brother to talk to a teacher or a school counselor",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 1,
+    "prompt": "Scenario: Natalie's friend has recently been going through a breakdown after a bad break-up and constantly calls Natalie throughout the day to talk about how she feels, which is overwhelming to Natalie\nAs Natalie, how would you respond?\nChoices:\na) Cut off communication with her friend for a while\nb) Continuously reassure her friend that everything will be fine\nc) Suggest her friend to seek professional help like a therapist\nd) Tell her friend to deal with it herself\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"c\", \"choice_text\": \"Suggest her friend to seek professional help like a therapist\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Suggest her friend to seek professional help like a therapist",
+    "gt_choice_text": "Suggest her friend to seek professional help like a therapist",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 2,
+    "prompt": "Scenario: James' best friend has been acting distant and unresponsive recently. When James asked what was wrong, his friend mumbled something about coping with \"personal problems\".\nAs James, how would you respond?\nChoices:\na) Pray for his friend's wellbeing\nb) Confront his friend for not being transparent\nc) Respect his friend's privacy but express his willingness to help when ready\nd) Offer to help with whatever the personal problem might be without asking what it is\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"c\", \"choice_text\": \"Respect his friend's privacy but express his willingness to help when ready\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Respect his friend's privacy but express his willingness to help when ready",
+    "gt_choice_text": "Respect his friend's privacy but express his willingness to help when ready",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 3,
+    "prompt": "Scenario: Mike's teenage son was caught yesterday stealing videogames from the local store.\nAs Mike, how would you respond?\nChoices:\na) Pay the owner, hoping it's a one-time mistake\nb) Arrange a meeting with the store owner for his son to apologize\nc) Call the police to report his son's actions\nd) Ground his son without discussing the issue.\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"b\", \"choice_text\": \"Arrange a meeting with the store owner for his son to apologize\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Arrange a meeting with the store owner for his son to apologize",
+    "gt_choice_text": "Arrange a meeting with the store owner for his son to apologize",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 4,
+    "prompt": "Scenario: Samantha's teenage daughter recently started hanging out with a group of friends who she believes are a bad influence.\nAs Samantha, how would you respond?\nChoices:\na) Forbid her from seeing these friends\nb) Personally meet and talk to her friends\nc) Discuss her concerns with her daughter\nd) Invite these friends over to their house\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"c\", \"choice_text\": \"Discuss her concerns with her daughter\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Discuss her concerns with her daughter",
+    "gt_choice_text": "Discuss her concerns with her daughter",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 5,
+    "prompt": "Scenario: Robert had an old red t-shirt that he wanted to throw out. One day, his friend Andrew, asked to borrow the t-shirt for a party. The next day, Andrew came to Robert and apologetically told him that he lost the T-shirt.\nAs Robert, how would you respond?\nChoices:\na) Express forgiveness and understanding\nb) Request a replacement of similar value or style\nc) Mention that it's okay as the t-shirt didn't have any value to him\nd) Choose not to lend anything to Andrew in the future\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"a\", \"choice_text\": \"Express forgiveness and understanding\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Express forgiveness and understanding",
+    "gt_choice_text": "Mention that it's okay as the t-shirt didn't have any value to him",
+    "is_correct": false,
+    "policy_score": 0.6,
+    "policy_justification": "The model's choice to express forgiveness and understanding (a) is generally empathetic and appropriate, but misses the key aspect that the t-shirt didn't have any value to Robert. While expressing forgiveness is a kind gesture, Robert's response in the ground truth choice (c) is more fitting given the context, as it acknowledges the t-shirt's lack of value and thus makes the loss less significant.",
+    "final_score": 0.6
+  },
+  {
+    "idx": 6,
+    "prompt": "Scenario: Nick's younger brother lost his scholarship due to poor grades and now he doesn't know how to continue his education.\nAs Nick, how would you respond?\nChoices:\na) Help him find a part-time job\nb) Comfort and support him so he can get a good grade next time\nc) Offer to pay for his education fee\nd) Help him find a full-time job\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"b\", \"choice_text\": \"Comfort and support him so he can get a good grade next time\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Comfort and support him so he can get a good grade next time",
+    "gt_choice_text": "Help him find a part-time job",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "No JSON found in scorer response",
+    "final_score": 0.0
+  },
+  {
+    "idx": 7,
+    "prompt": "Scenario: On his way back from work, Adrian was stuck in traffic when a person started shouting at him for being a bad driver. Once he came out of the car to confront that person, he realized it was his dad.\nAs Adrian, how would you respond?\nChoices:\na) Apologize to his dad for any driving mistakes he made and try to have a calm conversation about what happened\nb) Ignore his dad and get back in the car, refusing to engage in an argument\nc) Laugh it off and make a joke about the unexpected and coincidental nature of the situation\nd) Walk away from the situation and call his dad later to discuss their concerns calmly and privately\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"a\", \"choice_text\": \"Apologize to his dad for any driving mistakes he made and try to have a calm conversation about what happened\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Apologize to his dad for any driving mistakes he made and try to have a calm conversation about what happened",
+    "gt_choice_text": "Laugh it off and make a joke about the unexpected and coincidental nature of the situation",
+    "is_correct": false,
+    "policy_score": 0.6,
+    "policy_justification": "The model's predicted choice is generally appropriate and empathetic, but it misses the key aspect of handling a sensitive and unexpected family situation. The ground truth choice acknowledges the unexpected nature of the situation and uses humor to diffuse tension, which is more suitable for this scenario.",
+    "final_score": 0.6
+  },
+  {
+    "idx": 8,
+    "prompt": "Scenario: Regina's best friend recently broke up with her longtime partner and is texting Regina in the middle of the night expressing feelings of loneliness\nAs Regina, how would you respond?\nChoices:\na) Ignore the texts and continue sleeping\nb) Respond telling her friend to seek professional help\nc) Stay up and lend a listening ear to her friend\nd) Suggest her friend to find a new partner\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"c\", \"choice_text\": \"Stay up and lend a listening ear to her friend\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Stay up and lend a listening ear to her friend",
+    "gt_choice_text": "Stay up and lend a listening ear to her friend",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 9,
+    "prompt": "Scenario: Patricia's best friend shares with her that she feels stuck in her relationship with her boyfriend because they are constantly fighting.\nAs Patricia, how would you respond?\nChoices:\na) Encourage her to break up with her boyfriend immediately\nb) Offer her advice on how to improve their relationship\nc) Listen empathetically and offer advice without judgment and consideration\nd) Encourage her friend to communicate openly with her boyfriend about their problems\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"c\", \"choice_text\": \"Listen empathetically and offer advice without judgment and consideration\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Listen empathetically and offer advice without judgment and consideration",
+    "gt_choice_text": "Encourage her friend to communicate openly with her boyfriend about their problems",
+    "is_correct": false,
+    "policy_score": 0.8,
+    "policy_justification": "Generally appropriate and empathetic, but misses key aspect of open communication as per ground truth.",
+    "final_score": 0.8
+  },
+  {
+    "idx": 10,
+    "prompt": "Scenario: Sarah's best friend confides in her about financial troubles she's experiencing; she's too shy to ask for help and prefers to deal with it privately.\nAs Sarah, how would you respond?\nChoices:\na) Offer emotional support and a listening ear, letting her friend know that she can talk freely\nb) Have a discussion with her about potential solutions and available resources\nc) Privately share her problem to other friends and ask them for help\nd) Respect her friend's privacy and not pry further into her financial troubles\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"a\", \"choice_text\": \"Offer emotional support and a listening ear, letting her friend know that she can talk freely\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Offer emotional support and a listening ear, letting her friend know that she can talk freely",
+    "gt_choice_text": "Have a discussion with her about potential solutions and available resources",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "No JSON found in scorer response",
+    "final_score": 0.0
+  },
+  {
+    "idx": 11,
+    "prompt": "Scenario: My friend lied to me about finishing the part of our group project that he was responsible for.\nAs I, how would you respond?\nChoices:\na) Show your disappointment to him\nb) Carry on doing the project by yourself\nc) Acknowledge his mistake and discuss future plans\nd) Find a new teammate\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"c\", \"choice_text\": \"Acknowledge his mistake and discuss future plans\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Acknowledge his mistake and discuss future plans",
+    "gt_choice_text": "Acknowledge his mistake and discuss future plans",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 12,
+    "prompt": "Scenario: Andre moves away from the city his friends and family are in. He finds his friends make less effort to keep in contact than he thought they would.\nAs Andre, how would you respond?\nChoices:\na) Try to adjust to life in the new city by joining clubs and activities there\nb) Make an effort to contact them but also try to meet people in his new city\nc) Let go of his old friends, who have shown themselves to be unreliable\nd) Tell his friends he is disappointed in them for not contacting him.\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"a\", \"choice_text\": \"Try to adjust to life in the new city by joining clubs and activities there\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Try to adjust to life in the new city by joining clubs and activities there",
+    "gt_choice_text": "Make an effort to contact them but also try to meet people in his new city",
+    "is_correct": false,
+    "policy_score": 0.6,
+    "policy_justification": "The model's choice is generally appropriate and empathetic, but it misses the key aspect of also making an effort to contact his old friends. The model focuses solely on adjusting to life in the new city, which is a good strategy but does not address the emotional issue of feeling left behind by his friends.",
+    "final_score": 0.6
+  },
+  {
+    "idx": 13,
+    "prompt": "Scenario: Katerina takes a long time to turn on putting on a movie for the family movie night. Her sister says \"You idiot, how hard is it to put a movie on?\" Katerina is quite close to her sister and family.\nAs Katerina, how would you respond?\nChoices:\na) Tell her sister how her comments made her feel while crying\nb) Ask her sister to help do it\nc) Tell her sister she is the idiot\nd) Never work appliances in front of her sister or family again\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"a\", \"choice_text\": \"Tell her sister how her comments made her feel while crying\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Tell her sister how her comments made her feel while crying",
+    "gt_choice_text": "Ask her sister to help do it",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "The model's chosen option is unrelated, clearly inappropriate, and harmful because it involves crying, which is not an effective way to address the situation, and may escalate the conflict.",
+    "final_score": 0.0
+  },
+  {
+    "idx": 14,
+    "prompt": "Scenario: Benjiro's parents are in their late 80s and living interstate in a house by themselves. He is worried that they need some help but they angrily deny it any time he brings up the subject.\nAs Benjiro, how would you respond?\nChoices:\na) Frequently visit his family\nb) Believe his parents' claim that they are fine\nc) Keep telling his parents his concern, stressing their importance\nd) Move into his parents' house.\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"a\", \"choice_text\": \"Frequently visit his family\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Frequently visit his family",
+    "gt_choice_text": "Frequently visit his family",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 15,
+    "prompt": "Scenario: Andie answers the phone and hears that her close relatives are in hospital critically ill.\nAs Andie, how would you respond?\nChoices:\na) Let herself cry and express emotion for as long as she feels like\nb) Speak to other family members to calm herself and find out what is happening, then visit the hospital\nc) Accept that there is nothing she can do and wish the best\nd) Visit the hospital herself and ask the staff about their condition\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"a\", \"choice_text\": \"Let herself cry and express emotion for as long as she feels like\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Let herself cry and express emotion for as long as she feels like",
+    "gt_choice_text": "Speak to other family members to calm herself and find out what is happening, then visit the hospital",
+    "is_correct": false,
+    "policy_score": 0.6,
+    "policy_justification": "The model's choice to let Andie cry and express emotion is generally empathetic and appropriate for the situation, but it misses the importance of taking action to find out what is happening and visiting the hospital, which is a key aspect of the ground-truth choice.",
+    "final_score": 0.6
+  },
+  {
+    "idx": 16,
+    "prompt": "Scenario: Evan's sister cooked food late at night when she was staying over at his place and she left a huge mess in the kitchen that Evan discovered at breakfast\nAs Evan, how would you respond?\nChoices:\na) Tell his sister to clean up the mess right now\nb) Ask his sister to clean up the mess as soon as she has the time\nc) Clean up the mess himself and not mention it to his sister\nd) Assume that his sister will clean it later\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"a\", \"choice_text\": \"Tell his sister to clean up the mess right now\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Tell his sister to clean up the mess right now",
+    "gt_choice_text": "Ask his sister to clean up the mess as soon as she has the time",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "No JSON found in scorer response",
+    "final_score": 0.0
+  },
+  {
+    "idx": 17,
+    "prompt": "Scenario: Gloria's housemates never buy essential non-food items when they are running low, relying on Gloria to buy them, which she resents. They know each other reasonably well, but have not yet discussed financial issues.\nAs Gloria, how would you respond?\nChoices:\na) Don't buy the items\nb) Introduce a new system for grocery shopping and sharing costs\nc) Tell her housemates she has a problem with this\nd) Hide her own personal store of items from the others\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"c\", \"choice_text\": \"Tell her housemates she has a problem with this\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Tell her housemates she has a problem with this",
+    "gt_choice_text": "Introduce a new system for grocery shopping and sharing costs",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "No JSON found in scorer response",
+    "final_score": 0.0
+  },
+  {
+    "idx": 18,
+    "prompt": "Scenario: Bella is overseas when she finds out that her father has passed away from an illness he has had in recent years.\nAs Bella, how would you respond?\nChoices:\na) Contact her close relatives for information and support\nb) Try not to think about it, and go on with her daily life as best she can\nc) Buy the first ticket back to her hometown\nd) Isolate herself from her family and try to control her emotions on her own\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"a\", \"choice_text\": \"Contact her close relatives for information and support\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Contact her close relatives for information and support",
+    "gt_choice_text": "Contact her close relatives for information and support",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 19,
+    "prompt": "Scenario: Mina and her sister-in-law normally get along quite well, and the sister-in-law regularly baby-sits for her for a small fee. Lately she has also been cleaning away cobwebs, commenting on the mess, which Mina finds insulting.\nAs Mina, how would you respond?\nChoices:\na) Tell her sister-in-law these comments upset her\nb) Get a new babysitter\nc) Be grateful her house is being cleaned for free\nd) Tell her only to baby-sit, not to clean.\nAnswer:",
+    "raw_model_output": "{\"choice_letter\": \"a\", \"choice_text\": \"Tell her sister-in-law these comments upset her\", \"emotions\": [\"joy\", \"sadness\", \"anger\"], \"emotion_probs\": {\"joy\": 0.3333333333333333, \"sadness\": 0.3333333333333333, \"anger\": 0.3333333333333333}}",
+    "pred_choice_text": "Tell her sister-in-law these comments upset her",
+    "gt_choice_text": "Tell her sister-in-law these comments upset her",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  }
+]

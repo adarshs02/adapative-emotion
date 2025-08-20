@@ -1,0 +1,255 @@
+#!/usr/bin/env python3
+"""
+Generic model tester: run any HF causal LLM on a prompt or on EmoPatient scenarios.
+
+Notes:
+- If run with no flags inside the EmoPatient scenarios folder, the script will auto-use
+  ./scenarios_30.json when present. Otherwise it falls back to a single default prompt.
+
+Examples:
+  # Single prompt
+  CUDA_VISIBLE_DEVICES=6 python run_model_test.py \
+    --model meta-llama/Meta-Llama-3.1-8B-Instruct \
+    --prompt "Write a brief, supportive reply to someone awaiting biopsy results."
+
+  # Run all scenarios in scenarios_30.json
+  CUDA_VISIBLE_DEVICES=6 python run_model_test.py \
+    --model meta-llama/Meta-Llama-3.1-8B-Instruct \
+    --scenarios ./scenarios_30.json
+
+  # Run a single scenario by index (0-based)
+  CUDA_VISIBLE_DEVICES=6 python run_model_test.py \
+    --model meta-llama/Meta-Llama-3.1-8B-Instruct \
+    --scenarios ./scenarios_30.json \
+    --scenario-index 3
+"""
+
+import argparse
+import json
+import os
+from datetime import datetime
+from pathlib import Path
+from typing import Optional, List, Dict, Any
+
+import torch
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+
+# Visual progress bar (with safe fallback)
+try:
+    from tqdm.auto import tqdm  # prefer rich display when available
+except Exception:
+    class _TqdmFallback:
+        def __call__(self, iterable, **kwargs):
+            return iterable
+
+        @staticmethod
+        def write(msg: str):
+            print(msg)
+
+    tqdm = _TqdmFallback()
+
+# Default model used when neither --model nor EMOBIRD_MODEL is provided.
+# Edit this to change the script's built-in default.
+DEFAULT_MODEL = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+
+# Results directory next to this script
+HERE = Path(__file__).resolve()
+RESULTS_DIR = HERE.parent / "results"
+
+
+def build_parser() -> argparse.ArgumentParser:
+    p = argparse.ArgumentParser(description="Test any HF causal LLM on prompts or EmoPatient scenarios")
+    p.add_argument("--model", help="HF model id, e.g., meta-llama/Meta-Llama-3.1-8B-Instruct", default=None)
+    p.add_argument("--prompt", help="Single prompt to run", default="Please provide a concise, empathetic, medically grounded answer tailored to the above context.")
+    p.add_argument("--scenarios", help="Path to scenarios_30.json to run QAs (default: run all scenarios)")
+    p.add_argument("--scenario-index", type=int, default=None, help="Run only this scenario index (0-based). If omitted, runs all scenarios.")
+    p.add_argument("--max-new-tokens", type=int, default=256)
+    p.add_argument("--temperature", type=float, default=0.7)
+    p.add_argument("--top-p", type=float, default=0.9)
+    p.add_argument("--seed", type=int, help="Random seed")
+    return p
+
+
+def load_pipe(model_id: str):
+    dtype = torch.bfloat16 if torch.cuda.is_available() else torch.float32
+    tok = AutoTokenizer.from_pretrained(model_id, use_fast=True)
+    if tok.pad_token is None:
+        # Many LLMs don't have a pad token; use EOS
+        tok.pad_token = tok.eos_token
+    model = AutoModelForCausalLM.from_pretrained(
+        model_id,
+        torch_dtype=dtype,
+        device_map="auto",
+    )
+    textgen = pipeline(
+        "text-generation",
+        model=model,
+        tokenizer=tok,
+        torch_dtype=dtype,
+        device_map="auto",
+    )
+    return textgen, tok
+
+
+def apply_chat_or_plain(tokenizer, prompt: str) -> str:
+    # If the tokenizer has a chat template, use it for instruction-tuned models.
+    try:
+        if hasattr(tokenizer, "apply_chat_template"):
+            return tokenizer.apply_chat_template(
+                [{"role": "user", "content": prompt}],
+                tokenize=False,
+                add_generation_prompt=True,
+            )
+    except Exception:
+        pass
+    return prompt
+
+
+def compose_from_scenario(scn: Dict[str, Any], q: str) -> str:
+    title = scn.get("title", "")
+    diagnosis = scn.get("diagnosis", "")
+    tplan = scn.get("treatment_plan", "")
+    narrative = scn.get("narrative", "")
+    return (
+        f"Context (clinical scenario):\n"
+        f"Title: {title}\n"
+        f"Diagnosis: {diagnosis}\n"
+        f"Treatment plan: {tplan}\n\n"
+        f"Patient narrative:\n{narrative}\n\n"
+        f"Question:\n{q}\n\n"
+        f"Please provide a concise, empathetic, medically grounded answer tailored to the above context.\n\n"
+        f"Answer:"
+    )
+
+
+def run_single_prompt(pipe, tok, prompt: str, max_new_tokens: int, temperature: float, top_p: float) -> str:
+    text = apply_chat_or_plain(tok, prompt)
+    out = pipe(
+        text,
+        max_new_tokens=max_new_tokens,
+        do_sample=(temperature > 0),
+        temperature=temperature,
+        top_p=top_p,
+        pad_token_id=tok.pad_token_id,
+        eos_token_id=tok.eos_token_id,
+        return_full_text=False,
+    )
+    return out[0]["generated_text"].strip()
+
+
+def run_scenarios(pipe, tok, scenarios_path: Path, scenario_index: Optional[int], max_new_tokens: int, temperature: float, top_p: float):
+    data = json.loads(Path(scenarios_path).read_text(encoding="utf-8"))
+    # Support multiple formats:
+    # 1) {"scenarios": [...]} (preferred)
+    # 2) {"scenarios_30": [...]} (legacy)
+    # 3) [... ] (raw list)
+    if isinstance(data, dict):
+        scenarios = data.get("scenarios") or data.get("scenarios_30") or []
+    elif isinstance(data, list):
+        scenarios = data
+    else:
+        scenarios = []
+    if not scenarios:
+        raise ValueError("No scenarios found in file; expected key 'scenarios' or 'scenarios_30'")
+    # If scenario_index is provided, run a single scenario; otherwise iterate over all
+    indices: List[int]
+    if scenario_index is None:
+        indices = list(range(len(scenarios)))
+        outer = tqdm(indices, desc="Scenarios", unit="scn")
+    else:
+        if not (0 <= scenario_index < len(scenarios)):
+            raise ValueError(f"scenario-index {scenario_index} out of range (0..{len(scenarios)-1})")
+        indices = [scenario_index]
+        outer = indices  # no outer progress bar for single scenario
+
+    overall_results: List[Dict[str, Any]] = []
+
+    for s_idx in outer:
+        scn = scenarios[s_idx]
+        qa_list = scn.get("qa", [])
+        if not qa_list:
+            tqdm.write(f"⚠️ Scenario {s_idx} has no QA items; skipping.")
+            continue
+
+        tqdm.write(f"\nScenario {s_idx}: {scn.get('id', '(unknown)')} — {scn.get('title', '')}")
+        scenario_items: List[Dict[str, Any]] = []
+        for i, qa in enumerate(tqdm(qa_list, desc="QAs", unit="q"), start=1):
+            qid = (qa.get("qid") or "").strip()
+            q = (qa.get("q") or "").strip()
+            if not q:
+                continue
+            prompt = compose_from_scenario(scn, q)
+            tqdm.write("=" * 80)
+            header = f"Q{i}"
+            if qid:
+                header += f" [{qid}]"
+            tqdm.write(f"{header}: {q}")
+            tqdm.write("-" * 80)
+            ans = run_single_prompt(pipe, tok, prompt, max_new_tokens, temperature, top_p)
+            tqdm.write(ans)
+
+            scenario_items.append({
+                "index": i,
+                "qid": qid,
+                "question": q,
+                "answer": ans,
+            })
+
+        overall_results.append({
+            "scenario_index": s_idx,
+            "id": scn.get("id"),
+            "title": scn.get("title"),
+            "num_questions": len(qa_list),
+            "qas": scenario_items,
+        })
+
+    # Save combined results
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+    out_path = RESULTS_DIR / f"modeltest_results_{run_id}.json"
+    with out_path.open("w", encoding="utf-8") as f:
+        json.dump({
+            "scenarios_path": str(scenarios_path),
+            "generated_at": run_id,
+            "num_scenarios": len(overall_results),
+            "items": overall_results,
+        }, f, ensure_ascii=False, indent=2)
+    print(f"\n📝 Saved results to: {out_path}")
+
+
+if __name__ == "__main__":
+    args = build_parser().parse_args()
+    if args.seed is not None:
+        try:
+            torch.manual_seed(args.seed)
+        except Exception:
+            pass
+
+    # Choose model priority: EMOBIRD_MODEL env > CLI --model > DEFAULT_MODEL
+    model_id = os.environ.get("EMOBIRD_MODEL") or (args.model or DEFAULT_MODEL)
+    # Auto-detect scenarios_30.json in current working directory if not provided
+    try:
+        if not args.scenarios:
+            cand = Path("scenarios_30.json")
+            if cand.exists():
+                args.scenarios = str(cand)
+                print(f"Detected scenarios file: {args.scenarios}")
+    except Exception:
+        pass
+
+    print(f"Using model: {model_id}")
+    pipe, tok = load_pipe(model_id)
+
+    if args.scenarios:
+        run_scenarios(pipe, tok, Path(args.scenarios), args.scenario_index, args.max_new_tokens, args.temperature, args.top_p)
+    else:
+        # Resolve prompt: from --prompt or fallback to input()
+        prompt: Optional[str] = args.prompt
+        if not prompt:
+            try:
+                prompt = input("Enter prompt: ")
+            except EOFError:
+                raise SystemExit("No prompt provided.")
+        print("\n--- Prompt ---\n" + prompt + "\n---------------\n")
+        ans = run_single_prompt(pipe, tok, prompt, args.max_new_tokens, args.temperature, args.top_p)
+        print("\n--- Output ---\n" + ans + "\n---------------")

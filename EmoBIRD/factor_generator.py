@@ -22,6 +22,27 @@ class FactorGenerator:
         """Set the vLLM wrapper from parent class."""
         self.vllm_wrapper = vllm_wrapper
     
+    def _sanitize_situation_text(self, user_situation: str) -> str:
+        """Sanitize situation text to avoid contaminating prompts with unrelated formatting blocks.
+
+        - If the situation contains a block starting with 'Respond in exactly this output format:',
+          drop everything from that marker onward.
+        - Also truncate before headers like "# I'm thinking & feeling" if present.
+        - Preserve the original dialogue/content before those markers.
+        """
+        if not user_situation:
+            return user_situation
+        markers = [
+            "Respond in exactly this output format:",
+            "# I'm thinking & feeling",
+        ]
+        cleaned = user_situation
+        for m in markers:
+            idx = cleaned.find(m)
+            if idx != -1:
+                cleaned = cleaned[:idx].strip()
+        return cleaned
+    
     def generate_factors_from_situation(self, user_situation: str) -> List[Dict[str, Any]]:
         """
         Generate psychological factors directly from user input only.
@@ -38,14 +59,25 @@ class FactorGenerator:
         # Build prompt focused only on user input
         prompt = self._build_direct_factor_prompt(user_situation)
         
-        # Generate factors using vLLM
+        # Generate factors using vLLM (general generator, not abstract-constrained)
         if self.vllm_wrapper:
-            response = self.vllm_wrapper.generate_abstract(
+            response = self.vllm_wrapper.generate(
                 prompt, 
                 component="factor_generator", 
                 interaction_type="direct_factor_generation"
             )
             print(f"🔍 Raw factor response: '{response}'")
+            
+            # Guard: if response is empty (e.g., early stop at sentinel), retry once with a clearer start hint
+            if not response or not response.strip():
+                retry_prompt = prompt + "\nStart the list immediately with '1.' on its own line."
+                print("♻️ Empty response detected; retrying factor generation once with a start hint...")
+                response = self.vllm_wrapper.generate(
+                    retry_prompt,
+                    component="factor_generator",
+                    interaction_type="direct_factor_generation"
+                )
+                print(f"🔁 Retry raw factor response: '{response}'")
             
             # Parse factors from the response
             factors_data = self._parse_factors_from_response(response)
@@ -88,7 +120,7 @@ class FactorGenerator:
         # Build prompt for direct situation analysis
         prompt = self._build_direct_analysis_prompt(user_situation, factors)
         
-        response = self.vllm_wrapper.generate_abstract(
+        response = self.vllm_wrapper.generate(
             prompt,
             component="factor_generator",
             interaction_type="direct_situation_analysis"
@@ -106,28 +138,30 @@ class FactorGenerator:
         Build prompt for generating factors directly from user input only.
         No abstracts or external context needed.
         """
-        prompt = f"""Analyze this situation and identify 3-4 important psychological factors that would influence the person's emotions:
+        situation = self._sanitize_situation_text(user_situation)
+        prompt = f"""You are an expert at analyzing situations and identifying psychological/social factors that would influence the person's emotions. Analyze this situation and identify 3 important factors that would influence the person's emotions:
 
-SITUATION: {user_situation}
+SITUATION: {situation}
 
-For each psychological factor, provide:
+For each factor, provide:
 - Factor name (short, descriptive)
-- Brief description of what this factor represents
 - Two possible values (like high/low, present/absent, strong/weak, etc.)
 
-Provide AT LEAST 3 factors, up to 4 if relevant. Format exactly like this:
+Provide AT LEAST 3 factors:
 1. Factor name: Description (value1/value2)
 2. Factor name: Description (value1/value2) 
 3. Factor name: Description (value1/value2)
-4. Factor name: Description (value1/value2)
+ Do not include any explanations after the factors.
+ After you list the factors, output a single line exactly:
+ END_OF_FACTORS
+
 
 Example:
 1. Self-efficacy: Person's belief in their ability to handle challenges (low/high)
 2. Social support: Availability of emotional support from others (absent/present)
 3. Stress level: Amount of psychological pressure experienced (low/high)
-4. Emotional regulation: Ability to manage emotional responses (weak/strong)
-
-Your analysis (provide at least 3 factors):"""
+ 
+ Now list the factors:"""
         
         return prompt
     
@@ -135,6 +169,7 @@ Your analysis (provide at least 3 factors):"""
         """
         Build prompt for analyzing factor values directly from user situation.
         """
+        situation = self._sanitize_situation_text(user_situation)
         factor_descriptions = []
         for factor in factors:
             values = "/".join(factor['possible_values'])
@@ -144,7 +179,7 @@ Your analysis (provide at least 3 factors):"""
         
         prompt = f"""Analyze this situation and determine the specific value for each psychological factor:
 
-SITUATION: {user_situation}
+SITUATION: {situation}
 
 PSYCHOLOGICAL FACTORS:
 {factors_text}
@@ -180,18 +215,29 @@ Your analysis:"""
         
         print("🧠 Generating psychological factors...")
         
-        # Build the prompt for factor generation
-        prompt = self._build_factor_prompt(user_situation, abstract)
+        # Build the prompt for factor generation (standardized on direct flow)
+        prompt = self._build_direct_factor_prompt(user_situation)
         
-        # Generate factors using vLLM
+        # Generate factors using vLLM (general generator, not abstract-constrained)
         if self.vllm_wrapper:
-            response = self.vllm_wrapper.generate_abstract(
-                prompt, 
-                component="factor_generator", 
-                interaction_type="factor_generation"
+            response = self.vllm_wrapper.generate(
+                prompt,
+                component="factor_generator",
+                interaction_type="direct_factor_generation"
             )
             print(f"🔍 Raw factor response: '{response}'")
             print(f"🔍 Response length: {len(response)} chars")
+            
+            # Guard: if response is empty (e.g., early stop at sentinel), retry once with a clearer start hint
+            if not response or not response.strip():
+                retry_prompt = prompt + "\nStart the list immediately with '1.' on its own line."
+                print("♻️ Empty response detected; retrying factor generation once with a start hint...")
+                response = self.vllm_wrapper.generate(
+                    retry_prompt,
+                    component="factor_generator",
+                    interaction_type="direct_factor_generation"
+                )
+                print(f"🔁 Retry raw factor response: '{response}'")
             
             # Parse factors from the response
             factors_data = self._parse_factors_from_response(response)
@@ -207,36 +253,6 @@ Your analysis:"""
                 return self._create_fallback_factors(user_situation)
         else:
             return self._create_fallback_factors(user_situation)
-    
-    def _build_factor_prompt(self, user_situation: str, abstract: str) -> str:
-        """Build the prompt for factor generation."""
-        
-        context = user_situation
-        if abstract:
-            context += f"\n\nSummary: {abstract}"
-        
-        prompt = f"""Situation: {context}
-
-What are 3 key psychological factors that would influence someone's emotions in this situation? 
-
-For each factor, give:
-- The factor name
-- A brief description  
-- Two possible values (like high/low, present/absent, etc.)
-
-Format like this:
-1. Factor name: Description (value1/value2)
-2. Factor name: Description (value1/value2) 
-3. Factor name: Description (value1/value2)
-
-Example:
-1. Anxiety level: How anxious the person feels (low/high)
-2. Social support: Whether support is available (absent/present)
-3. Control: How much control they feel (low/high)
-
-Please list 3 factors for this situation:"""
-        
-        return prompt
     
     def _parse_factors_from_response(self, response: str) -> Dict[str, Any]:
         """Parse psychological factors from LLM response."""
@@ -256,26 +272,41 @@ Please list 3 factors for this situation:"""
         if factors_multi:
             for factor in factors_multi:
                 factors.append(factor)
-                selected_values[factor['name']] = factor['possible_values'][0]
+                if len(factor['possible_values']) > 0:
+                    selected_values[factor['name']] = factor['possible_values'][0]
         
         # Then try single-line format parsing for any remaining lines
-        for line in lines:
-            line = line.strip()
+        for raw_line in lines:
+            line = raw_line.strip()
             if not line:
                 continue
                 
             # Remove numbering and bullets
             clean_line = line.lstrip('123456789.- ').strip()
             
-            # Look for pattern: "Factor name: Description (value1/value2)"
+            # Look for pattern: "Factor name: Description (value1/value2)" or
+            #                     "Factor name: <ActualName> (low/high)"
             if ':' in clean_line and '(' in clean_line and ')' in clean_line:
                 try:
                     # Split on colon
                     name_part, desc_part = clean_line.split(':', 1)
                 
-                    # Clean factor name - remove markdown formatting and asterisks
-                    raw_name = name_part.strip()
-                    factor_name = raw_name.replace('*', '').replace('#', '').strip().lower().replace(' ', '_')
+                    # Derive factor name
+                    raw_left = name_part.strip()
+                    left_clean = raw_left.replace('*', '').replace('#', '').strip().lower()
+                    desc_part = desc_part.strip()
+                    # Extract the text before '(' on the right side
+                    pre_paren = desc_part[:desc_part.rfind('(')].strip() if '(' in desc_part and ')' in desc_part else desc_part
+                    # If left side is generic like "factor name", use right side pre-paren as the actual name
+                    if left_clean in ("factor name", "factor", "name") and pre_paren:
+                        raw_name_source = pre_paren
+                    else:
+                        raw_name_source = raw_left
+                    # Final normalized factor_name
+                    factor_name = raw_name_source.replace('*', '').replace('#', '').strip().lower().replace(' ', '_')
+                    if not factor_name:
+                        # Skip if we couldn't derive a name
+                        continue
                     
                     # Skip if we already have this factor from multi-line parsing
                     if any(f['name'] == factor_name for f in factors):
@@ -291,12 +322,16 @@ Please list 3 factors for this situation:"""
                         
                         # Parse values (value1/value2 or value1 or value2)
                         possible_values = []
-                        if '/' in values_text:
-                            values = [v.strip().lower().replace(' ', '_') for v in values_text.split('/')]
-                            possible_values = [v for v in values if v]
-                        elif ' or ' in values_text:
-                            values = [v.strip().lower().replace(' ', '_') for v in values_text.split(' or ')]
-                            possible_values = [v for v in values if v]
+                        vt = values_text.lower()
+                        # Remove common labels like 'value1', 'value2', 'value'
+                        for token in ["value1", "value2", "value 1", "value 2", "value:", "value"]:
+                            vt = vt.replace(token, "")
+                        # Normalize separators to '/'
+                        vt = vt.replace(",", "/")
+                        vt = vt.replace(" or ", "/")
+                        # Split and normalize tokens
+                        values = [v.strip().replace(' ', '_') for v in vt.split('/')]
+                        possible_values = [v for v in values if v]
                         
                         # Create factor if we have valid values
                         if len(possible_values) >= 2:
@@ -319,76 +354,124 @@ Please list 3 factors for this situation:"""
     def _parse_multiline_bullet_format(self, lines: List[str]) -> List[Dict[str, Any]]:
         """Parse multi-line bullet format factors like:
         1. **Factor Name**: Description
-                * High: explanation
-                * Low: explanation
+           * High: explanation
+           * Low: explanation
+
+        Also supports headers like:
+        1. Factor name: Sense of identity
+           Description: ...
+           (low/high)
         """
         
-        factors = []
-        current_factor = None
-        current_values = []
+        factors: List[Dict[str, Any]] = []
+        current_factor: Dict[str, Any] = None  # {'name': str, 'description': str}
+        current_values: List[str] = []
         
-        for line in lines:
-            line = line.strip()
+        for raw_line in lines:
+            line = raw_line.strip()
             if not line:
                 continue
             
-            # Remove numbering and bullets from start
-            clean_line = line.lstrip('123456789.- ').strip()
+            # Remove numbering/bullets
+            clean_line = line.lstrip('1234567890.- ').strip()
             
-            # Check if this is a factor name line (has colon, no bullet values)
-            if (':' in clean_line and 
-                not clean_line.strip().startswith('*') and 
-                not clean_line.strip().startswith('-') and
-                '(' not in clean_line):  # Not single-line format
-                
-                # Save previous factor if we have one
+            # New factor header (multi-line style): contains ':' but not parentheses and not a bullet
+            if (':' in clean_line and not clean_line.startswith('*') and not clean_line.startswith('-') and '(' not in clean_line):
+                # Save previous factor if complete
                 if current_factor and len(current_values) >= 2:
-                    factor = {
+                    factors.append({
                         'name': current_factor['name'],
-                        'description': current_factor['description'],
-                        'possible_values': current_values[:2]  # Take first 2 for binary
-                    }
-                    factors.append(factor)
-                
-                # Start new factor
+                        'description': current_factor.get('description', ''),
+                        'possible_values': current_values[:2]
+                    })
+                # Start a new factor
                 try:
                     name_part, desc_part = clean_line.split(':', 1)
-                    # Clean factor name (remove asterisks, make lowercase, replace spaces)
-                    factor_name = name_part.strip().replace('*', '').strip().lower().replace(' ', '_')
-                    description = desc_part.strip()
-                    
-                    current_factor = {
-                        'name': factor_name,
-                        'description': description
-                    }
+                    raw_left = name_part.strip()
+                    left_clean = raw_left.replace('*', '').replace('#', '').strip().lower()
+                    right_text = desc_part.strip()
+                    # If generic left label, use right side as the name
+                    if left_clean in ("factor name", "factor", "name") and right_text:
+                        name_source = right_text
+                        description = ""
+                    else:
+                        name_source = raw_left
+                        description = right_text
+                    factor_name = name_source.replace('*', '').replace('#', '').strip().lower().replace(' ', '_')
+                    current_factor = {'name': factor_name, 'description': description}
                     current_values = []
-                    
                 except Exception as e:
                     print(f"⚠️ Error parsing factor name line '{line}': {e}")
-                    continue
+                    current_factor = None
+                    current_values = []
+                continue
             
-            # Check if this is a value line (starts with * or -)
-            elif (clean_line.startswith('*') or clean_line.startswith('-')) and current_factor:
+            # Bullet value lines: e.g., '* High: ...', '- Low: ...', '* Value1: High (...)'
+            if (clean_line.startswith('*') or clean_line.startswith('-')) and current_factor:
                 try:
-                    # Extract value name
                     value_line = clean_line.lstrip('*- ').strip()
+                    candidate = ""
                     if ':' in value_line:
-                        value_name = value_line.split(':', 1)[0].strip().lower().replace(' ', '_')
-                        if value_name and value_name not in current_values:
-                            current_values.append(value_name)
-                            
+                        left, right = value_line.split(':', 1)
+                        left_norm = left.strip().lower().replace(' ', '_')
+                        right_text = right.strip()
+                        # If left label is a generic placeholder (value1/value2/etc),
+                        # use the right-hand side as the candidate value; otherwise use the left.
+                        if left_norm in {"value1", "value2", "value_1", "value_2", "value", "option1", "option_1", "option2", "option_2"}:
+                            candidate = right_text
+                        else:
+                            candidate = left
+                    else:
+                        candidate = value_line
+
+                    # Extract the value token from candidate by cutting at common separators
+                    # like ' - ', '(', ',', ';' and taking the first token.
+                    cut_points = []
+                    for sep in [" - ", "(", ",", ";"]:
+                        idx = candidate.find(sep)
+                        if idx != -1:
+                            cut_points.append(idx)
+                    if cut_points:
+                        candidate = candidate[:min(cut_points)]
+                    value_name = candidate.strip().strip("-:()[]{}.,").lower().replace(' ', '_')
+                    if value_name and value_name not in current_values:
+                        current_values.append(value_name)
                 except Exception as e:
                     print(f"⚠️ Error parsing value line '{line}': {e}")
-                    continue
+                continue
+            
+            # Description override line
+            if current_factor and clean_line.lower().startswith('description:'):
+                try:
+                    current_factor['description'] = clean_line.split(':', 1)[1].strip()
+                except Exception:
+                    pass
+                continue
+            
+            # Parenthesized values on a separate line: "(value1/low, value2/high)"
+            if current_factor and '(' in clean_line and ')' in clean_line and ':' not in clean_line:
+                try:
+                    values_start = clean_line.rfind('(')
+                    values_end = clean_line.rfind(')')
+                    values_text = clean_line[values_start+1:values_end]
+                    vt = values_text.lower()
+                    for token in ["value1", "value2", "value 1", "value 2", "value:", "value"]:
+                        vt = vt.replace(token, "")
+                    vt = vt.replace(",", "/").replace(" or ", "/")
+                    for v in [t.strip().replace(' ', '_') for t in vt.split('/')]:
+                        if v and v not in current_values:
+                            current_values.append(v)
+                except Exception as e:
+                    print(f"⚠️ Error parsing parenthesized values line '{line}': {e}")
+                continue
         
-        # Save the last factor if we have one
+        # Save last factor
         if current_factor and len(current_values) >= 2:
-            factor = {
-                'name': current_factor['name'], 
-                'description': current_factor['description'],
-                'possible_values': current_values[:2]  # Take first 2 for binary
-            }
-            factors.append(factor)
+            factors.append({
+                'name': current_factor['name'],
+                'description': current_factor.get('description', ''),
+                'possible_values': current_values[:2]
+            })
         
         return factors
     
@@ -408,7 +491,14 @@ Please list 3 factors for this situation:"""
         
         # Remove common prefixes/suffixes
         response = response.strip()
-        for prefix in ["Here are", "The factors are", "Factors:", "Answer:"]:
+        for prefix in [
+            "Here are",
+            "The factors are",
+            "Factors:",
+            "Answer:",
+            "Here is the answer:",
+            "Here is the answer",
+        ]:
             if response.startswith(prefix):
                 response = response[len(prefix):].strip()
         
@@ -489,7 +579,7 @@ Please list 3 factors for this situation:"""
         # Build prompt for situation analysis
         prompt = self._build_analysis_prompt(user_situation, factors)
         
-        response = self.vllm_wrapper.generate_abstract(
+        response = self.vllm_wrapper.generate(
             prompt,
             component="factor_generator",
             interaction_type="situation_analysis"
@@ -507,14 +597,18 @@ Please list 3 factors for this situation:"""
         
         factor_descriptions = []
         for factor in factors:
-            values = "/".join(factor['possible_values'])
-            factor_descriptions.append(f"- {factor['name']}: {factor['description']} ({values})")
+            try:
+                pv = factor.get('possible_values') or []
+                values = "/".join(pv)
+                factor_descriptions.append(f"- {factor.get('name', 'unknown')}: {factor.get('description', '')} ({values})")
+            except Exception as e:
+                print(f"⚠️ Error building factor description for prompt: {e}")
         
         factors_text = "\n".join(factor_descriptions)
         
         prompt = f"""Situation: {user_situation}
 
-Based on this situation, determine the value for each psychological factor:
+Based on this situation, determine the value for each factor:
 
 {factors_text}
 
@@ -552,10 +646,17 @@ Your analysis:"""
                     value_part = parts[1].strip()
                     
                     # Extract just the value (before any explanation)
+                    value = None
                     if ' - ' in value_part:
-                        value = value_part.split(' - ')[0].strip().lower().replace(' ', '_')
+                        candidate = value_part.split(' - ')[0].strip()
                     else:
-                        value = value_part.split()[0].strip().lower().replace(' ', '_')
+                        # Guard against empty strings to avoid IndexError
+                        tokens = value_part.split()
+                        if not tokens:
+                            continue
+                        candidate = tokens[0]
+                    # Normalize and strip trailing punctuation
+                    value = candidate.strip().strip("-:()[]{}.,").lower().replace(' ', '_')
                     
                     # Validate factor name and value
                     if factor_name in factor_names:
@@ -569,8 +670,17 @@ Your analysis:"""
         # Fill in missing values with fallback analysis
         fallback = self._create_fallback_analysis("", factors)
         for factor in factors:
-            if factor['name'] not in analysis:
-                analysis[factor['name']] = fallback.get(factor['name'], factor['possible_values'][0])
+            name = factor.get('name', 'unknown')
+            if name not in analysis:
+                if name in fallback:
+                    analysis[name] = fallback[name]
+                else:
+                    pv = factor.get('possible_values') or []
+                    if pv:
+                        analysis[name] = pv[0]
+                    else:
+                        print(f"⚠️ Factor '{name}' has no possible_values; defaulting to 'unknown'")
+                        analysis[name] = 'unknown'
         
         return analysis
     
@@ -579,8 +689,18 @@ Your analysis:"""
         
         analysis = {}
         
-        # Default to first value for each factor
+        # Default to first value for each factor (if available), else 'unknown'
         for factor in factors:
-            analysis[factor['name']] = factor['possible_values'][0]
+            try:
+                name = factor.get('name', 'unknown')
+                pv = factor.get('possible_values') or []
+                if pv:
+                    analysis[name] = pv[0]
+                else:
+                    print(f"⚠️ Factor '{name}' has empty possible_values; using 'unknown' as fallback")
+                    analysis[name] = 'unknown'
+            except Exception as e:
+                print(f"⚠️ Error creating fallback for factor: {e}")
+                analysis[factor.get('name', 'unknown')] = 'unknown'
         
         return analysis

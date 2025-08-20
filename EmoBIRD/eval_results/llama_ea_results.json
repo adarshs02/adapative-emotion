@@ -1,0 +1,222 @@
+[
+  {
+    "idx": 0,
+    "prompt": "Scenario: Sarah found out that her younger brother is being bullied at school but he begged her not to tell their parents.\nAs Sarah, how would you respond?\nChoices:\na) Promise to keep the secret\nb) Inform their parents anyway\nc) Confront the bullies herself\nd) Suggest her brother to talk to a teacher or a school counselor\nAnswer:",
+    "raw_model_output": "d) Suggest her brother to talk to a teacher or a school counselor\nExplanation: This is the most appropriate response because it addresses the problem without betraying her brother's trust. By suggesting that her brother talk to a teacher or a school counselor, Sarah is helping him find a solution to the bullying problem without involving their parents, which would be a breach of his trust. This response also shows that Sarah is taking the situation seriously and is willing to help her brother find a way to resolve the issue.\n\nReasoning skill for Resolving Moral Or Ethical Dilemmas: This question requires the ability to weigh the importance of keeping a",
+    "pred_choice_text": "Suggest her brother to talk to a teacher or a school counselor",
+    "gt_choice_text": "Suggest her brother to talk to a teacher or a school counselor",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 1,
+    "prompt": "Scenario: Natalie's friend has recently been going through a breakdown after a bad break-up and constantly calls Natalie throughout the day to talk about how she feels, which is overwhelming to Natalie\nAs Natalie, how would you respond?\nChoices:\na) Cut off communication with her friend for a while\nb) Continuously reassure her friend that everything will be fine\nc) Suggest her friend to seek professional help like a therapist\nd) Tell her friend to deal with it herself\nAnswer:",
+    "raw_model_output": "c) Suggest her friend to seek professional help like a therapist\nExplanation: \nThis question requires Empathy And Perspective Taking as it involves understanding the feelings and needs of Natalie's friend who is going through a tough time, and also considering Natalie's own feelings and limitations. The correct answer, suggesting professional help, shows that Natalie is trying to help her friend in a constructive way, while also being mindful of her own needs. The other options are not ideal as cutting off communication (a) would be unhelpful and uncaring, continuously reassuring (b) might be seen as dismissive of her friend's feelings, and telling her",
+    "pred_choice_text": "Cut off communication with her friend for a while",
+    "gt_choice_text": "Suggest her friend to seek professional help like a therapist",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "No JSON found in scorer response",
+    "final_score": 0.0
+  },
+  {
+    "idx": 2,
+    "prompt": "Scenario: James' best friend has been acting distant and unresponsive recently. When James asked what was wrong, his friend mumbled something about coping with \"personal problems\".\nAs James, how would you respond?\nChoices:\na) Pray for his friend's wellbeing\nb) Confront his friend for not being transparent\nc) Respect his friend's privacy but express his willingness to help when ready\nd) Offer to help with whatever the personal problem might be without asking what it is\nAnswer:",
+    "raw_model_output": "c) Respect his friend's privacy but express his willingness to help when ready\n\nExplanation:\nThis question requires Social Norm Understanding as it involves navigating a sensitive social situation. The correct answer, \"c) Respect his friend's privacy but express his willingness to help when ready\", demonstrates an understanding of the importance of respecting people's boundaries and privacy, especially when they are dealing with personal issues. This response acknowledges that the friend may not be ready to talk about their problems yet, but also shows a willingness to support them when they are.\n\nThe other options are incorrect because:\na) Praying for his friend's wellbeing may be seen as dismissive",
+    "pred_choice_text": "Pray for his friend's wellbeing",
+    "gt_choice_text": "Respect his friend's privacy but express his willingness to help when ready",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "No JSON found in scorer response",
+    "final_score": 0.0
+  },
+  {
+    "idx": 3,
+    "prompt": "Scenario: Mike's teenage son was caught yesterday stealing videogames from the local store.\nAs Mike, how would you respond?\nChoices:\na) Pay the owner, hoping it's a one-time mistake\nb) Arrange a meeting with the store owner for his son to apologize\nc) Call the police to report his son's actions\nd) Ground his son without discussing the issue.\nAnswer:",
+    "raw_model_output": "b) Arrange a meeting with the store owner for his son to apologize\nReasoning Skill for Resolving Moral Or Ethical Dilemmas:\nThis question requires the ability to balance consequences, empathy, and fairness. The correct answer, arranging a meeting for his son to apologize, demonstrates an understanding of the importance of taking responsibility for one's actions and making amends. It also shows empathy towards the store owner and the value of repairing relationships.\n\nThe incorrect answers demonstrate a lack of consideration for the consequences of the son's actions, the impact on the store owner, and the importance of accountability. Paying the owner (a) might seem",
+    "pred_choice_text": "Pay the owner, hoping it's a one-time mistake",
+    "gt_choice_text": "Arrange a meeting with the store owner for his son to apologize",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "No JSON found in scorer response",
+    "final_score": 0.0
+  },
+  {
+    "idx": 4,
+    "prompt": "Scenario: Samantha's teenage daughter recently started hanging out with a group of friends who she believes are a bad influence.\nAs Samantha, how would you respond?\nChoices:\na) Forbid her from seeing these friends\nb) Personally meet and talk to her friends\nc) Discuss her concerns with her daughter\nd) Invite these friends over to their house\nAnswer:",
+    "raw_model_output": "c) Discuss her concerns with her daughter\nReasoning skill: Empathy And Perspective Taking\nThis question requires the ability to understand and share the feelings of another person, in this case, Samantha's daughter. It also requires the ability to see things from the daughter's perspective and consider her feelings and thoughts. By choosing to discuss her concerns with her daughter, Samantha is showing empathy and understanding, which is essential in building trust and a positive relationship with her child. This approach also allows Samantha to understand her daughter's perspective and feelings, which is crucial in making informed decisions about how to handle the situation.",
+    "pred_choice_text": "Discuss her concerns with her daughter",
+    "gt_choice_text": "Discuss her concerns with her daughter",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 5,
+    "prompt": "Scenario: Robert had an old red t-shirt that he wanted to throw out. One day, his friend Andrew, asked to borrow the t-shirt for a party. The next day, Andrew came to Robert and apologetically told him that he lost the T-shirt.\nAs Robert, how would you respond?\nChoices:\na) Express forgiveness and understanding\nb) Request a replacement of similar value or style\nc) Mention that it's okay as the t-shirt didn't have any value to him\nd) Choose not to lend anything to Andrew in the future\nAnswer:",
+    "raw_model_output": "a) Express forgiveness and understanding\nReasoning Skill: Empathy and Perspective Taking\nThis question requires the ability to put oneself in Andrew's shoes and understand that he made a genuine mistake. It also requires empathy to recognize that losing something is a common occurrence and that Andrew is likely feeling guilty and apologetic. By choosing to express forgiveness and understanding, Robert demonstrates that he values their friendship and is willing to let go of the material item. This response also shows that Robert is able to take Andrew's perspective and understand that he didn't intentionally try to cause harm. \n\nThis question assesses the ability to take the perspective of another person",
+    "pred_choice_text": "Express forgiveness and understanding",
+    "gt_choice_text": "Mention that it's okay as the t-shirt didn't have any value to him",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "No JSON found in scorer response",
+    "final_score": 0.0
+  },
+  {
+    "idx": 6,
+    "prompt": "Scenario: Nick's younger brother lost his scholarship due to poor grades and now he doesn't know how to continue his education.\nAs Nick, how would you respond?\nChoices:\na) Help him find a part-time job\nb) Comfort and support him so he can get a good grade next time\nc) Offer to pay for his education fee\nd) Help him find a full-time job\nAnswer:",
+    "raw_model_output": "b) Comfort and support him so he can get a good grade next time\n\nAnalysis:\nThis question requires Empathy And Perspective Taking as it asks the respondent to consider the feelings and situation of Nick's younger brother. The correct answer, \"Comfort and support him so he can get a good grade next time\", shows that the respondent understands that the brother is likely feeling disappointed and discouraged, and needs emotional support to bounce back. This response also acknowledges that the brother's poor grades are not a reflection of his worth or potential, but rather a setback that can be overcome with support and guidance.\n\nThe incorrect answers, on the other hand, focus",
+    "pred_choice_text": "Comfort and support him so he can get a good grade next time",
+    "gt_choice_text": "Help him find a part-time job",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "No JSON found in scorer response",
+    "final_score": 0.0
+  },
+  {
+    "idx": 7,
+    "prompt": "Scenario: On his way back from work, Adrian was stuck in traffic when a person started shouting at him for being a bad driver. Once he came out of the car to confront that person, he realized it was his dad.\nAs Adrian, how would you respond?\nChoices:\na) Apologize to his dad for any driving mistakes he made and try to have a calm conversation about what happened\nb) Ignore his dad and get back in the car, refusing to engage in an argument\nc) Laugh it off and make a joke about the unexpected and coincidental nature of the situation\nd) Walk away from the situation and call his dad later to discuss their concerns calmly and privately\nAnswer:",
+    "raw_model_output": "a) Apologize to his dad for any driving mistakes he made and try to have a calm conversation about what happened\n\nReasoning skill for Empathy And Perspective Taking: This question requires the ability to understand and consider multiple perspectives, including one's own, the other person's, and the situation. In this scenario, Adrian needs to empathize with his dad's frustration and perspective, while also being aware of his own actions and their impact. By choosing option a), Adrian demonstrates the ability to take his dad's perspective and respond in a way that acknowledges his dad's feelings and concerns. This response also shows that Adrian is willing to",
+    "pred_choice_text": "Apologize to his dad for any driving mistakes he made and try to have a calm conversation about what happened",
+    "gt_choice_text": "Laugh it off and make a joke about the unexpected and coincidental nature of the situation",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "No JSON found in scorer response",
+    "final_score": 0.0
+  },
+  {
+    "idx": 8,
+    "prompt": "Scenario: Regina's best friend recently broke up with her longtime partner and is texting Regina in the middle of the night expressing feelings of loneliness\nAs Regina, how would you respond?\nChoices:\na) Ignore the texts and continue sleeping\nb) Respond telling her friend to seek professional help\nc) Stay up and lend a listening ear to her friend\nd) Suggest her friend to find a new partner\nAnswer:",
+    "raw_model_output": "c) Stay up and lend a listening ear to her friend\nReasoning Skill: Empathy And Perspective Taking\nThis question requires the ability to understand and share the feelings of the friend who is going through a difficult time. It demands empathy and the capacity to put oneself in the other person's shoes. By choosing to stay up and listen to her friend, Regina is demonstrating a willingness to be present and supportive, which is essential in building strong relationships. This response also shows that Regina values her friend's emotions and is willing to invest time and effort in helping her feel better. \n\nIn contrast, ignoring the texts (a) or suggesting",
+    "pred_choice_text": "Ignore the texts and continue sleeping",
+    "gt_choice_text": "Stay up and lend a listening ear to her friend",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "No JSON found in scorer response",
+    "final_score": 0.0
+  },
+  {
+    "idx": 9,
+    "prompt": "Scenario: Patricia's best friend shares with her that she feels stuck in her relationship with her boyfriend because they are constantly fighting.\nAs Patricia, how would you respond?\nChoices:\na) Encourage her to break up with her boyfriend immediately\nb) Offer her advice on how to improve their relationship\nc) Listen empathetically and offer advice without judgment and consideration\nd) Encourage her friend to communicate openly with her boyfriend about their problems\nAnswer:",
+    "raw_model_output": "c) Listen empathetically and offer advice without judgment and consideration\n\nReasoning skill for Empathy And Perspective Taking: This question requires the ability to understand and acknowledge the friend's emotions and perspective, without jumping to conclusions or offering unsolicited advice. It demands empathy and the ability to see things from the friend's point of view. The correct answer, \"Listen empathetically and offer advice without judgment and consideration,\" demonstrates an understanding of the importance of active listening and non-judgmental support in helping someone navigate a difficult situation. \n\nThis question assesses the ability to consider multiple perspectives, understand the emotional nuances of a situation, and respond",
+    "pred_choice_text": "Listen empathetically and offer advice without judgment and consideration",
+    "gt_choice_text": "Encourage her friend to communicate openly with her boyfriend about their problems",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "No JSON found in scorer response",
+    "final_score": 0.0
+  },
+  {
+    "idx": 10,
+    "prompt": "Scenario: Sarah's best friend confides in her about financial troubles she's experiencing; she's too shy to ask for help and prefers to deal with it privately.\nAs Sarah, how would you respond?\nChoices:\na) Offer emotional support and a listening ear, letting her friend know that she can talk freely\nb) Have a discussion with her about potential solutions and available resources\nc) Privately share her problem to other friends and ask them for help\nd) Respect her friend's privacy and not pry further into her financial troubles\nAnswer:",
+    "raw_model_output": "a) Offer emotional support and a listening ear, letting her friend know that she can talk freely\nExplanation:\nThis response acknowledges the importance of maintaining confidentiality and respecting her friend's boundaries. By providing emotional support and a listening ear, Sarah allows her friend to feel comfortable opening up about her financial struggles without feeling judged or embarrassed. This response prioritizes empathy and understanding over trying to \"fix\" the problem or offering unsolicited advice.\n\nAnalysis:\nThis question requires the test-taker to demonstrate empathy and understanding of the importance of confidentiality in a friendship. It also assesses their ability to prioritize emotional support over offering solutions, which is a key aspect",
+    "pred_choice_text": "Offer emotional support and a listening ear, letting her friend know that she can talk freely",
+    "gt_choice_text": "Have a discussion with her about potential solutions and available resources",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "No JSON found in scorer response",
+    "final_score": 0.0
+  },
+  {
+    "idx": 11,
+    "prompt": "Scenario: My friend lied to me about finishing the part of our group project that he was responsible for.\nAs I, how would you respond?\nChoices:\na) Show your disappointment to him\nb) Carry on doing the project by yourself\nc) Acknowledge his mistake and discuss future plans\nd) Find a new teammate\nAnswer:",
+    "raw_model_output": "c) Acknowledge his mistake and discuss future plans\nExplanation: In this scenario, you can't change what your friend has done, but you can take control of how you react to it. Acknowledging his mistake and discussing future plans shows that you are willing to work with him and find a solution to the problem, rather than getting angry or giving up on the project. This approach also shows that you value your friendship and are willing to work through the issue together. By choosing this option, you are taking a proactive and constructive approach to resolving the problem. \n\nThis question requires the reasoning skill of Resolving Moral Or Ethical D",
+    "pred_choice_text": "Acknowledge his mistake and discuss future plans",
+    "gt_choice_text": "Acknowledge his mistake and discuss future plans",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 12,
+    "prompt": "Scenario: Andre moves away from the city his friends and family are in. He finds his friends make less effort to keep in contact than he thought they would.\nAs Andre, how would you respond?\nChoices:\na) Try to adjust to life in the new city by joining clubs and activities there\nb) Make an effort to contact them but also try to meet people in his new city\nc) Let go of his old friends, who have shown themselves to be unreliable\nd) Tell his friends he is disappointed in them for not contacting him.\nAnswer:",
+    "raw_model_output": "b) Make an effort to contact them but also try to meet people in his new city\nExplanation: This choice shows a balanced approach. Andre is not abandoning his old friends but also not expecting them to make all the effort to keep in contact. By making an effort to contact them, he is showing that he values the relationship. At the same time, he is taking initiative to meet new people and build a social life in his new city, which is a necessary step in adapting to a new environment. This approach also shows that he is open to change and willing to grow and develop in his new life. \n\nAnalysis: This scenario",
+    "pred_choice_text": "Make an effort to contact them but also try to meet people in his new city",
+    "gt_choice_text": "Make an effort to contact them but also try to meet people in his new city",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 13,
+    "prompt": "Scenario: Katerina takes a long time to turn on putting on a movie for the family movie night. Her sister says \"You idiot, how hard is it to put a movie on?\" Katerina is quite close to her sister and family.\nAs Katerina, how would you respond?\nChoices:\na) Tell her sister how her comments made her feel while crying\nb) Ask her sister to help do it\nc) Tell her sister she is the idiot\nd) Never work appliances in front of her sister or family again\nAnswer:",
+    "raw_model_output": "a) Tell her sister how her comments made her feel while crying\nExplanation: This is a good way to handle the situation because it addresses the hurtful comment made by the sister. It also shows that Katerina values her relationship with her sister and is willing to talk about the issue to work through it. This is an example of using \"I\" statements to express feelings and thoughts, which is a key aspect of assertiveness. It is also a good way to express emotions in a healthy way, rather than bottling them up or lashing out. The other options are not good ways to handle the situation because they do not",
+    "pred_choice_text": "Tell her sister how her comments made her feel while crying",
+    "gt_choice_text": "Ask her sister to help do it",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "No JSON found in scorer response",
+    "final_score": 0.0
+  },
+  {
+    "idx": 14,
+    "prompt": "Scenario: Benjiro's parents are in their late 80s and living interstate in a house by themselves. He is worried that they need some help but they angrily deny it any time he brings up the subject.\nAs Benjiro, how would you respond?\nChoices:\na) Frequently visit his family\nb) Believe his parents' claim that they are fine\nc) Keep telling his parents his concern, stressing their importance\nd) Move into his parents' house.\nAnswer:",
+    "raw_model_output": "a) Frequently visit his family.\nExplanation: Benjiro's parents are in their late 80s and living alone, which may indicate that they are not coping well. They are denying any need for help, which may be due to their pride or stubbornness. Benjiro's frequent visits will allow him to keep an eye on them and assess their situation, and also show them that he cares about their well-being. This approach is more effective than trying to convince them that they need help, which may only lead to more resistance. By being present and supportive, Benjiro can help his parents in a way that respects their",
+    "pred_choice_text": "Frequently visit his family",
+    "gt_choice_text": "Frequently visit his family",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 15,
+    "prompt": "Scenario: Andie answers the phone and hears that her close relatives are in hospital critically ill.\nAs Andie, how would you respond?\nChoices:\na) Let herself cry and express emotion for as long as she feels like\nb) Speak to other family members to calm herself and find out what is happening, then visit the hospital\nc) Accept that there is nothing she can do and wish the best\nd) Visit the hospital herself and ask the staff about their condition\nAnswer:",
+    "raw_model_output": "b) Speak to other family members to calm herself and find out what is happening, then visit the hospital\nExplanation: When we are faced with a crisis, it is natural to feel overwhelmed and shocked. However, in this situation, Andie would need to control her emotions and take a step back to think clearly. She would need to call other family members to find out what is happening and get more information. This would help her to calm herself down and come up with a plan. She would then visit the hospital to see her relatives and support them. This response shows that she is able to control her emotions, think clearly and take",
+    "pred_choice_text": "Speak to other family members to calm herself and find out what is happening, then visit the hospital",
+    "gt_choice_text": "Speak to other family members to calm herself and find out what is happening, then visit the hospital",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 16,
+    "prompt": "Scenario: Evan's sister cooked food late at night when she was staying over at his place and she left a huge mess in the kitchen that Evan discovered at breakfast\nAs Evan, how would you respond?\nChoices:\na) Tell his sister to clean up the mess right now\nb) Ask his sister to clean up the mess as soon as she has the time\nc) Clean up the mess himself and not mention it to his sister\nd) Assume that his sister will clean it later\nAnswer:",
+    "raw_model_output": "b) Ask his sister to clean up the mess as soon as she has the time\nReasoning: \nThis response is more polite and considerate. It shows that Evan trusts his sister to clean up the mess eventually, but also gives her the flexibility to do it at her own pace. This response also acknowledges that his sister might be busy or tired, and that she might not be able to clean up the mess right away. It's a more empathetic and understanding response. \n\nAnalysis: \nThis question requires the ability to understand social norms and relationships. It requires the ability to consider the feelings and needs of others, and to",
+    "pred_choice_text": "Ask his sister to clean up the mess as soon as she has the time",
+    "gt_choice_text": "Ask his sister to clean up the mess as soon as she has the time",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 17,
+    "prompt": "Scenario: Gloria's housemates never buy essential non-food items when they are running low, relying on Gloria to buy them, which she resents. They know each other reasonably well, but have not yet discussed financial issues.\nAs Gloria, how would you respond?\nChoices:\na) Don't buy the items\nb) Introduce a new system for grocery shopping and sharing costs\nc) Tell her housemates she has a problem with this\nd) Hide her own personal store of items from the others\nAnswer:",
+    "raw_model_output": "c) Tell her housemates she has a problem with this\nReasoning skill for resolving moral or ethical dilemmas: This question requires the ability to express one's feelings and concerns to others, and to initiate a conversation about a sensitive issue. It involves assertiveness, empathy and communication skills. The correct answer, \"Tell her housemates she has a problem with this\", requires Gloria to confront the issue directly and express her feelings in a clear and respectful manner. This is an essential skill for resolving moral or ethical dilemmas, as it allows individuals to address problems and find solutions that work for everyone involved. The other options do not address",
+    "pred_choice_text": "Tell her housemates she has a problem with this",
+    "gt_choice_text": "Introduce a new system for grocery shopping and sharing costs",
+    "is_correct": false,
+    "policy_score": 0.0,
+    "policy_justification": "No JSON found in scorer response",
+    "final_score": 0.0
+  },
+  {
+    "idx": 18,
+    "prompt": "Scenario: Bella is overseas when she finds out that her father has passed away from an illness he has had in recent years.\nAs Bella, how would you respond?\nChoices:\na) Contact her close relatives for information and support\nb) Try not to think about it, and go on with her daily life as best she can\nc) Buy the first ticket back to her hometown\nd) Isolate herself from her family and try to control her emotions on her own\nAnswer:",
+    "raw_model_output": "a) Contact her close relatives for information and support\n\nExplanation: This response is appropriate because it acknowledges the reality of the situation, while also reaching out for help and support. It's a normal human response to seek comfort and guidance from loved ones during difficult times. This choice also shows that Bella is willing to confront her emotions and take the necessary steps to process her grief.\n\nAnalysis: This question requires Social Norm Understanding because it involves understanding how people typically respond to difficult news, such as the loss of a loved one. It also requires empathy and understanding of human emotions, as well as the ability to recognize appropriate behaviors in a given situation.",
+    "pred_choice_text": "Contact her close relatives for information and support",
+    "gt_choice_text": "Contact her close relatives for information and support",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  },
+  {
+    "idx": 19,
+    "prompt": "Scenario: Mina and her sister-in-law normally get along quite well, and the sister-in-law regularly baby-sits for her for a small fee. Lately she has also been cleaning away cobwebs, commenting on the mess, which Mina finds insulting.\nAs Mina, how would you respond?\nChoices:\na) Tell her sister-in-law these comments upset her\nb) Get a new babysitter\nc) Be grateful her house is being cleaned for free\nd) Tell her only to baby-sit, not to clean.\nAnswer:",
+    "raw_model_output": "a) Tell her sister-in-law these comments upset her\nExplanation: This is the most respectful response, as it acknowledges the sister-in-law's effort and communicates Mina's feelings about the comments. This way, the sister-in-law can understand that her words are perceived as insulting and adjust her behavior. The other options do not address the issue directly and may lead to further conflict. Getting a new babysitter (b) might be seen as an overreaction and may damage the relationship. Being grateful for the cleaning (c) ignores the issue of the comments, and telling her to only baby-sit (d) might be seen as",
+    "pred_choice_text": "Tell her sister-in-law these comments upset her",
+    "gt_choice_text": "Tell her sister-in-law these comments upset her",
+    "is_correct": true,
+    "policy_score": 1.0,
+    "policy_justification": "",
+    "final_score": 1.0
+  }
+]
