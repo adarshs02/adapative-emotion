@@ -52,12 +52,20 @@ class EmobirdConfig:
         # Do NOT include 'END_OF_FACTORS' here; it's a parse-only sentinel to avoid empty outputs.
         # Avoid using "\nEND" as a global stop to prevent collisions with the 'END_OF_FACTORS' line.
         self.stop_seqs = ["\n```", "```", "\n--", "\nNote:", "###"]
+        # Dedicated end sentinels for multi-step pipeline
+        self.end_draft_sentinel = "<<END_DRAFT>>"
+        self.end_json_sentinel = "<<END_JSON>>"
         # Strict JSON controls
         self.strict_json_only = True
         self.allow_format_only_retry = 1  # number of LLM reformat-only retries
         # Dedicated JSON generation controls
         self.json_max_tokens = 256
         self.json_temperature = 0.0
+        # Draft essay generation budgets
+        self.draft_max_tokens = 1200  # target ~1100-1300
+        self.draft_temperature = 0.6
+        # JSON rating step budget (tighter than general JSON if desired)
+        self.json_rating_max_tokens = 200
         # Unified analysis (factors + values + emotions) controls
         self.temp_analysis = 0.3  # slightly non-zero for creative factor/emotion discovery
         self.max_tokens_analysis = 768
@@ -121,6 +129,9 @@ class EmobirdConfig:
             'EMOBIRD_MAX_TOKENS_ANALYSIS': 'max_tokens_analysis',
             'EMOBIRD_JSON_MAX_TOKENS': 'json_max_tokens',
             'EMOBIRD_JSON_TEMPERATURE': 'json_temperature',
+            'EMOBIRD_JSON_RATING_MAX_TOKENS': 'json_rating_max_tokens',
+            'EMOBIRD_DRAFT_MAX_TOKENS': 'draft_max_tokens',
+            'EMOBIRD_DRAFT_TEMPERATURE': 'draft_temperature',
             'EMOBIRD_MAX_CPT_ENTRIES': 'max_cpt_entries',
             'EMOBIRD_USE_BAYESIAN': 'use_bayesian_calibration',
             'EMOBIRD_LOG_LEVEL': 'log_level',
@@ -137,9 +148,9 @@ class EmobirdConfig:
             env_value = os.getenv(env_var)
             if env_value is not None:
                 # Convert to appropriate type
-                if config_key in ['max_new_tokens', 'max_cpt_entries', 'max_tokens_analysis', 'json_max_tokens', 'vllm_max_model_len', 'vllm_tensor_parallel_size']:
+                if config_key in ['max_new_tokens', 'max_cpt_entries', 'max_tokens_analysis', 'json_max_tokens', 'json_rating_max_tokens', 'draft_max_tokens', 'vllm_max_model_len', 'vllm_tensor_parallel_size']:
                     setattr(self, config_key, int(env_value))
-                elif config_key in ['temperature', 'bayesian_smoothing', 'temp_analysis', 'json_temperature', 'vllm_gpu_memory_utilization']:
+                elif config_key in ['temperature', 'bayesian_smoothing', 'temp_analysis', 'json_temperature', 'draft_temperature', 'vllm_gpu_memory_utilization']:
                     setattr(self, config_key, float(env_value))
                 elif config_key in ['use_bayesian_calibration', 'do_sample', 'use_caching', 'strict_json_only', 'use_vllm']:
                     setattr(self, config_key, env_value.lower() in ['true', '1', 'yes'])
@@ -150,6 +161,13 @@ class EmobirdConfig:
         stop_env = os.getenv('EMOBIRD_STOP_SEQS')
         if stop_env:
             self.stop_seqs = [s for s in stop_env.split(',') if s]
+        # Sentinel overrides via env
+        draft_s = os.getenv('EMOBIRD_END_DRAFT_SENTINEL')
+        if draft_s:
+            self.end_draft_sentinel = draft_s
+        json_s = os.getenv('EMOBIRD_END_JSON_SENTINEL')
+        if json_s:
+            self.end_json_sentinel = json_s
         # Allow format-only retries override
         fmt_retry_env = os.getenv('EMOBIRD_ALLOW_FORMAT_ONLY_RETRY')
         if fmt_retry_env is not None:

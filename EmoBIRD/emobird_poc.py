@@ -125,16 +125,22 @@ class Emobird:
                 print("⚠️ Emotion extraction returned too few items, applying default fallback emotions")
                 crucial_emotions = ["anxiety", "sadness", "frustration"]
 
-            # 5) Likert-scale emotion prediction (strict JSON first, then fallback)
+            # 5) Draft essay generation (separate call with explicit end sentinel)
+            if self.verbose:
+                print("📝 Generating draft essay...")
+            draft = self._generate_draft_essay(user_situation, abstract, factor_values, crucial_emotions)
+            processing_steps.append('draft_generation')
+
+            # 6) Likert-scale emotion prediction (strict JSON first, then fallback)
             if self.verbose:
                 print("📈 Predicting emotions with Likert ratings...")
             predictor = DirectEmotionPredictor(self.vllm_wrapper, factors=factors, emotions=crucial_emotions)
-            pred = predictor.predict_with_explanation(user_situation, factor_values)
+            pred = predictor.predict_with_explanation(user_situation, factor_values, draft_essay=draft)
             emotions_dict = pred.get('emotions', {})
             explanation = pred.get('explanation', '')
             processing_steps.append('likert_emotion_prediction')
 
-            # 6) Conversational response
+            # 7) Conversational response
             top_emotions = dict(sorted(emotions_dict.items(), key=lambda x: x[1], reverse=True)[:3])
             if self.verbose:
                 print("🗣️ Generating conversational response...")
@@ -144,6 +150,7 @@ class Emobird:
                 context={
                     'factors': factor_values,
                     'abstract': abstract,
+                    'draft': draft,
                     'crucial_emotions': crucial_emotions,
                     'note': 'EmoBIRD emotional analysis (modular)'
                 }
@@ -159,9 +166,10 @@ class Emobird:
                 'explanation': explanation,
                 'response': response,
                 'metadata': {
-                    'method': 'modular_pipeline_v1',
+                    'method': 'modular_pipeline_v2_split_calls',
                     'pooling': 'none',
                     'abstract_length': len(abstract),
+                    'draft_length': len(draft),
                     'num_crucial_emotions': len(crucial_emotions),
                     'num_factors': len(factors),
                     'processing_steps': processing_steps + ['response_generation'],
@@ -192,6 +200,7 @@ class Emobird:
             # Return a consistent structure with empty analytics and the base LLM response
             return {
                 'abstract': "",
+                'draft': "",
                 'crucial_emotions': [],
                 'factors': {},
                 'emotions': {},
@@ -208,6 +217,42 @@ class Emobird:
                     'json_call_meta': getattr(self.vllm_wrapper, 'last_json_call_meta', None),
                 }
             }
+
+    def _generate_draft_essay(
+        self,
+        user_situation: str,
+        abstract: str,
+        factor_values: Dict[str, Any],
+        crucial_emotions: List[str],
+    ) -> str:
+        """Generate a concise empathetic draft essay with explicit end sentinel.
+
+        Uses dedicated stop token and tight budgets from config.
+        """
+        try:
+            cfg = self.config
+            sentinel = cfg.end_draft_sentinel
+            # Keep rubric simple to avoid contradictions
+            prompt = (
+                "You are an empathetic assistant. Write a short, compassionate draft (2-5 sentences) "
+                "that acknowledges feelings and offers gentle support. Avoid clinical advice.\n\n"
+                f"SITUATION:\n{user_situation}\n\n"
+                f"ABSTRACT:\n{abstract}\n\n"
+                f"FACTORS:\n{factor_values}\n\n"
+                f"CRUCIAL EMOTIONS: {', '.join(crucial_emotions)}\n\n"
+                f"End with the token {sentinel} and do not write anything after it."
+            )
+            draft = self.vllm_wrapper.generate(
+                prompt,
+                component="emobird",
+                interaction_type="draft_generation",
+                stop=[sentinel],
+                max_tokens_override=cfg.draft_max_tokens,
+                temperature_override=cfg.draft_temperature,
+            )
+            return (draft or "").strip()
+        except Exception:
+            return ""
 
     def batch_analyze(self, situations: List[str]) -> List[Dict[str, Any]]:
         """Analyze multiple situations in batch."""

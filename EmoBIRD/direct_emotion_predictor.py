@@ -27,7 +27,7 @@ class DirectEmotionPredictor:
         self.factors = factors
         self.emotions = emotions
         
-    def predict_emotions(self, user_situation: str, factor_values: Dict[str, str]) -> Dict[str, float]:
+    def predict_emotions(self, user_situation: str, factor_values: Dict[str, str], draft_essay: str = "") -> Dict[str, float]:
         """
         Directly predict emotion probabilities given factor values.
         
@@ -42,7 +42,7 @@ class DirectEmotionPredictor:
         
         # 1) Try strict JSON path first for reliable parsing
         try:
-            json_prompt = self._build_emotion_assessment_json_prompt(user_situation, factor_values)
+            json_prompt = self._build_emotion_assessment_json_prompt(user_situation, factor_values, draft_essay)
             schema = {
                 "required": ["ratings"],
                 "properties": {
@@ -55,8 +55,9 @@ class DirectEmotionPredictor:
                 schema=schema,
                 component="direct_emotion_predictor",
                 interaction_type="emotion_assessment_json",
-                max_retries=2,
-                temperature_override=0.6,
+                max_retries=1,
+                temperature_override=None,  # use strict/deterministic JSON settings
+                max_tokens_override=getattr(self.vllm_wrapper.config, 'json_rating_max_tokens', 200),
             )
             print(f"🔍 JSON ratings response: {data}")
             emotion_probs = self._parse_emotion_json(data)
@@ -65,7 +66,7 @@ class DirectEmotionPredictor:
             print(f"⚠️ JSON ratings path failed, falling back to text parsing: {e}")
         
         # 2) Fallback to text prompt + parsing
-        prompt = self._build_emotion_assessment_prompt(user_situation, factor_values)
+        prompt = self._build_emotion_assessment_prompt(user_situation, factor_values, draft_essay)
         response = self.vllm_wrapper.generate(
             prompt,
             component="direct_emotion_predictor",
@@ -75,7 +76,7 @@ class DirectEmotionPredictor:
         print(f"🔍 Raw emotion assessment (text): {response}")
         return self._parse_emotion_response(response)
     
-    def _build_emotion_assessment_prompt(self, user_situation: str, factor_values: Dict[str, str]) -> str:
+    def _build_emotion_assessment_prompt(self, user_situation: str, factor_values: Dict[str, str], draft_essay: str = "") -> str:
         """
         Build prompt for direct emotion assessment.
         """
@@ -85,6 +86,7 @@ class DirectEmotionPredictor:
         # Format emotions list
         emotions_list = ", ".join(self.emotions)
         
+        extra = f"\n\nDRAFT ESSAY (for context):\n{draft_essay}" if draft_essay else ""
         prompt = f"""Given the following situation and psychological factors, assess the likelihood of each emotion.
 
 SITUATION:
@@ -92,6 +94,7 @@ SITUATION:
 
 IDENTIFIED PSYCHOLOGICAL FACTORS:
 {factor_desc}
+{extra}
 
 TASK:
 For each emotion below, provide a likelihood rating based on the situation and factors above.
@@ -112,7 +115,7 @@ Now provide your assessment WITHOUT ANY EXTRAS ONLY EXAMPLE FORMAT AS SHOWN ABOV
         
         return prompt
 
-    def _build_emotion_assessment_json_prompt(self, user_situation: str, factor_values: Dict[str, str]) -> str:
+    def _build_emotion_assessment_json_prompt(self, user_situation: str, factor_values: Dict[str, str], draft_essay: str = "") -> str:
         """
         Build prompt that requests STRICT JSON with ratings only.
         """
@@ -120,6 +123,8 @@ Now provide your assessment WITHOUT ANY EXTRAS ONLY EXAMPLE FORMAT AS SHOWN ABOV
         emotions_list = ", ".join(self.emotions)
         allowed = ", ".join(RATING_SCALE.keys())
         
+        sentinel = getattr(self.vllm_wrapper.config, 'end_json_sentinel', '<<END_JSON>>')
+        extra = f"\n\nDRAFT ESSAY (for context):\n{draft_essay}" if draft_essay else ""
         prompt = f"""You are evaluating likely emotions from a situation and its psychological factors.
 
 SITUATION:
@@ -127,6 +132,7 @@ SITUATION:
 
 FACTORS:
 {factor_desc}
+{extra}
 
 TASK:
 Return STRICT JSON with a single top-level object containing:
@@ -145,7 +151,7 @@ FORMAT:
   "justification": "..."
 }}
 
-Do NOT include any extra text, markdown, numbered lists, or analysis outside the JSON. Output JSON only."""
+Write only the JSON object. After the closing brace, write the token {sentinel} and nothing else."""
         return prompt
     
     def _parse_emotion_response(self, response: str) -> Dict[str, float]:
@@ -224,19 +230,19 @@ Do NOT include any extra text, markdown, numbered lists, or analysis outside the
         
         return emotion_probs
     
-    def predict_with_explanation(self, user_situation: str, factor_values: Dict[str, str]) -> Dict[str, Any]:
+    def predict_with_explanation(self, user_situation: str, factor_values: Dict[str, str], draft_essay: str = "") -> Dict[str, Any]:
         """
         Predict emotions with explanation of reasoning.
         """
         # Get basic predictions
-        emotion_probs = self.predict_emotions(user_situation, factor_values)
+        emotion_probs = self.predict_emotions(user_situation, factor_values, draft_essay)
         
         # Get top emotions
         sorted_emotions = sorted(emotion_probs.items(), key=lambda x: x[1], reverse=True)
         top_emotions = dict(sorted_emotions[:3])
         
         # Generate explanation
-        explanation = self._generate_explanation(user_situation, factor_values, top_emotions)
+        explanation = self._generate_explanation(user_situation, factor_values, top_emotions, draft_essay)
         
         return {
             'emotions': emotion_probs,
@@ -246,10 +252,11 @@ Do NOT include any extra text, markdown, numbered lists, or analysis outside the
         }
     
     def _generate_explanation(self, user_situation: str, factor_values: Dict[str, str], 
-                             top_emotions: Dict[str, float]) -> str:
+                             top_emotions: Dict[str, float], draft_essay: str = "") -> str:
         """
         Generate explanation for the emotion predictions.
         """
+        extra = f"\n\nDRAFT ESSAY (for context):\n{draft_essay}" if draft_essay else ""
         prompt = f"""Based on the psychological factors identified, explain why these emotions are most likely.
 
 SITUATION: {user_situation}
@@ -258,7 +265,7 @@ FACTORS: {factor_values}
 
 TOP EMOTIONS: {top_emotions}
 
-Provide a brief 2-3 sentence explanation of how the factors lead to these emotions:"""
+Provide a brief 2-3 sentence explanation of how the factors lead to these emotions:{extra}"""
         
         response = self.vllm_wrapper.generate(
             prompt,
