@@ -44,8 +44,13 @@ class EmotionGenerator:
             
         prompt = self._build_abstract_emotion_extraction_prompt(abstract)
         
-        # Generate structured text response
-        response = self.vllm_wrapper.generate_abstract(prompt, component="emotion_generator", interaction_type="emotion_extraction")
+        # Generate structured text response with higher temperature for diversity
+        response = self.vllm_wrapper.generate(
+            prompt,
+            component="emotion_generator",
+            interaction_type="emotion_extraction",
+            temperature_override=0.6,
+        )
         print(f"🔍 Raw emotion response from abstract: {response}")
         
         # Parse structured text response

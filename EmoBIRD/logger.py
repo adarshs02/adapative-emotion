@@ -95,16 +95,44 @@ class EmobirdLogger:
             result: Complete analysis result from Emobird
         """
         
+        # Derive num_factors and workflow steps robustly across schema versions
+        meta = result.get('metadata', {}) if isinstance(result, dict) else {}
+        num_factors = None
+        # 1) Prefer explicit metadata field if it's an int
+        mf = meta.get('num_factors')
+        if isinstance(mf, int):
+            num_factors = mf
+        else:
+            # 2) Try 'factors' field (can be list of definitions or dict of values)
+            f = result.get('factors') if isinstance(result, dict) else None
+            if isinstance(f, dict):
+                num_factors = len(f)
+            elif isinstance(f, list):
+                num_factors = len(f)
+            else:
+                # 3) Legacy key
+                num_factors = len(result.get('factors_definition', [])) if isinstance(result, dict) else 0
+        # 4) Ensure an integer
+        if not isinstance(num_factors, int):
+            try:
+                num_factors = int(num_factors)
+            except Exception:
+                num_factors = 0
+
+        workflow_steps = meta.get('workflow_steps')
+        if not workflow_steps:
+            workflow_steps = meta.get('processing_steps', []) or []
+
         analysis_log = {
             "timestamp": datetime.datetime.now().isoformat(),
             "user_situation": user_situation,
             "result": result,
             "analysis_metadata": {
                 "situation_length": len(user_situation),
-                "num_factors": len(result.get('factors_definition', [])),
+                "num_factors": num_factors,
                 "num_emotions": len(result.get('emotions', {})),
                 "top_emotion": max(result.get('emotions', {}).items(), key=lambda x: x[1])[0] if result.get('emotions') else None,
-                "workflow_steps": result.get('metadata', {}).get('workflow_steps', [])
+                "workflow_steps": workflow_steps
             }
         }
         

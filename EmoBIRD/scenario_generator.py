@@ -115,7 +115,7 @@ class ScenarioGenerator:
         """Generate an abstract/summary of the user input."""
         
         situation = self._sanitize_situation_text(user_situation)
-        prompt = f"""You are an expert at generating abstracts from user inputs. Summarize the input by looking out for the subject, context, emotional impact, and the main idea in 50 words or less possible:
+        prompt = f"""You are an expert at generating abstracts from user inputs. Summarize the input by looking out for the subject, context, emotional impact, and the main idea in 100 words or less if possible:
 
 "{situation}"
 

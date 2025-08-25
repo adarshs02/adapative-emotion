@@ -55,7 +55,8 @@ class DirectEmotionPredictor:
                 schema=schema,
                 component="direct_emotion_predictor",
                 interaction_type="emotion_assessment_json",
-                max_retries=2
+                max_retries=2,
+                temperature_override=0.6,
             )
             print(f"🔍 JSON ratings response: {data}")
             emotion_probs = self._parse_emotion_json(data)
@@ -65,10 +66,11 @@ class DirectEmotionPredictor:
         
         # 2) Fallback to text prompt + parsing
         prompt = self._build_emotion_assessment_prompt(user_situation, factor_values)
-        response = self.vllm_wrapper.generate_abstract(
+        response = self.vllm_wrapper.generate(
             prompt,
             component="direct_emotion_predictor",
-            interaction_type="emotion_assessment"
+            interaction_type="emotion_assessment",
+            temperature_override=0.6,
         )
         print(f"🔍 Raw emotion assessment (text): {response}")
         return self._parse_emotion_response(response)
@@ -258,10 +260,11 @@ TOP EMOTIONS: {top_emotions}
 
 Provide a brief 2-3 sentence explanation of how the factors lead to these emotions:"""
         
-        response = self.vllm_wrapper.generate_abstract(
+        response = self.vllm_wrapper.generate(
             prompt,
             component="direct_emotion_predictor",
-            interaction_type="explanation"
+            interaction_type="explanation",
+            temperature_override=0.6,
         )
         
         return response

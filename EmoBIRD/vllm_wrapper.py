@@ -5,6 +5,7 @@ Provides a high-performance LLM interface using vLLM for inference.
 """
 
 import json
+import os
 import re
 from typing import List, Dict, Any, Optional, Type
 from vllm import LLM, SamplingParams
@@ -48,6 +49,28 @@ class VLLMWrapper:
         print(f"🚀 Initializing vLLM with model: {self.config.llm_model_name}")
         
         try:
+            # Respect optional custom download/cache directory to avoid shared-permission issues
+            dl_dir = getattr(self.config, "vllm_download_dir", None)
+            if dl_dir:
+                # Ensure directory exists
+                try:
+                    os.makedirs(dl_dir, exist_ok=True)
+                except Exception:
+                    pass
+                # Point Hugging Face caches to this directory as well
+                # Force override to avoid inherited shared read-only paths
+                os.environ["HF_HOME"] = dl_dir
+                # A subdir for transformers cache to avoid clutter if desired
+                os.environ["TRANSFORMERS_CACHE"] = os.path.join(dl_dir, "transformers")
+                # Also direct Hugging Face Hub cache to this directory
+                os.environ["HUGGINGFACE_HUB_CACHE"] = os.path.join(dl_dir, "hub")
+                # Ensure subdirectories exist to prevent permission errors during lazy creation
+                try:
+                    os.makedirs(os.environ["TRANSFORMERS_CACHE"], exist_ok=True)
+                    os.makedirs(os.environ["HUGGINGFACE_HUB_CACHE"], exist_ok=True)
+                except Exception:
+                    pass
+
             # Initialize vLLM engine
             self.model = LLM(
                 model=self.config.llm_model_name,
@@ -56,6 +79,7 @@ class VLLMWrapper:
                 tensor_parallel_size=self.config.vllm_tensor_parallel_size,
                 trust_remote_code=True,
                 enforce_eager=False,  # Use CUDA graphs for better performance
+                download_dir=dl_dir if dl_dir else None,
             )
             
             # Configure sampling parameters
@@ -81,20 +105,40 @@ class VLLMWrapper:
             # Configure ultra-constrained sampling for abstracts to prevent hallucination
             self.abstract_sampling_params = SamplingParams(
                 temperature=0.1,        # Very low temperature for deterministic output
-                max_tokens=64,          # Short abstracts only
+                max_tokens=128,          # Short abstracts only
                 top_p=0.7,              # More focused sampling
                 frequency_penalty=0.0,  # No repetition penalty
                 presence_penalty=0.0,   # No creativity penalty
                 stop=self.config.stop_seqs
             )
             
-            print("✅ vLLM initialized successfully!")
+            if dl_dir:
+                print(f"✅ vLLM initialized successfully! Using download/cache dir: {dl_dir}")
+                # Print resolved cache environment variables for debugging
+                try:
+                    print(
+                        "Cache envs -> HF_HOME=", os.environ.get("HF_HOME"),
+                        ", TRANSFORMERS_CACHE=", os.environ.get("TRANSFORMERS_CACHE"),
+                        ", HUGGINGFACE_HUB_CACHE=", os.environ.get("HUGGINGFACE_HUB_CACHE")
+                    )
+                except Exception:
+                    pass
+            else:
+                print("✅ vLLM initialized successfully!")
             
         except Exception as e:
             print(f"❌ Failed to initialize vLLM: {e}")
             raise
     
-    def generate(self, prompt: str, component: str = "vllm", interaction_type: str = "generation") -> str:
+    def generate(
+        self,
+        prompt: str,
+        component: str = "vllm",
+        interaction_type: str = "generation",
+        stop: Optional[List[str]] = None,
+        max_tokens_override: Optional[int] = None,
+        temperature_override: Optional[float] = None,
+    ) -> str:
         """
         Generate a single response for a prompt.
         
@@ -110,12 +154,19 @@ class VLLMWrapper:
         if component == "output_generator" and interaction_type == "conversational_response":
             return self.generate_conversational([prompt], component, interaction_type)[0]
         
-        response = self.generate_batch([prompt], component, interaction_type)[0]
+        response = self.generate_batch(
+            [prompt],
+            component,
+            interaction_type,
+            stop=stop,
+            max_tokens_override=max_tokens_override,
+            temperature_override=temperature_override,
+        )[0]
         return response
     
     def generate_conversational(self, prompts: List[str], component: str = "output_generator", interaction_type: str = "conversational_response") -> List[str]:
         """
-        Generate conversational responses with extended token limits (up to 512 tokens).
+        Generate conversational responses with extended token limits (up to 1500 tokens).
         
         Args:
             prompts: List of input prompt strings
@@ -132,7 +183,7 @@ class VLLMWrapper:
             # Create extended sampling parameters for conversational responses
             conversational_params = SamplingParams(
                 temperature=self.config.temperature,
-                max_tokens=220,  # Extended token limit for conversational responses
+                max_tokens=1500,  # Extended token limit for conversational responses
                 top_p=0.9,
                 frequency_penalty=0.0,
                 presence_penalty=0.0,
@@ -518,7 +569,15 @@ class VLLMWrapper:
             traceback.print_exc()
             return ""  # Return empty string as fallback
     
-    def generate_batch(self, prompts: List[str], component: str = "vllm", interaction_type: str = "batch_generation") -> List[str]:
+    def generate_batch(
+        self,
+        prompts: List[str],
+        component: str = "vllm",
+        interaction_type: str = "batch_generation",
+        stop: Optional[List[str]] = None,
+        max_tokens_override: Optional[int] = None,
+        temperature_override: Optional[float] = None,
+    ) -> List[str]:
         """
         Generate responses for a batch of prompts.
         
@@ -534,8 +593,22 @@ class VLLMWrapper:
             raise RuntimeError("vLLM model not initialized")
         
         try:
+            # Choose effective sampling params (allow per-call overrides)
+            if stop is None and max_tokens_override is None and temperature_override is None:
+                effective_params = self.sampling_params
+            else:
+                base = self.sampling_params
+                effective_params = SamplingParams(
+                    temperature=base.temperature if temperature_override is None else temperature_override,
+                    max_tokens=base.max_tokens if max_tokens_override is None else max_tokens_override,
+                    top_p=getattr(base, "top_p", 0.9),
+                    frequency_penalty=getattr(base, "frequency_penalty", 0.0),
+                    presence_penalty=getattr(base, "presence_penalty", 0.0),
+                    stop=base.stop if stop is None else stop,
+                )
+
             # Generate responses
-            outputs = self.model.generate(prompts, self.sampling_params)
+            outputs = self.model.generate(prompts, effective_params)
             
             # Extract generated text safely
             responses = []
@@ -560,8 +633,9 @@ class VLLMWrapper:
                     metadata={
                         "batch_size": len(prompts),
                         "batch_index": i,
-                        "temperature": self.sampling_params.temperature,
-                        "max_tokens": self.sampling_params.max_tokens
+                        "temperature": (effective_params.temperature if 'effective_params' in locals() else self.sampling_params.temperature),
+                        "max_tokens": (effective_params.max_tokens if 'effective_params' in locals() else self.sampling_params.max_tokens),
+                        "stop_tokens": (effective_params.stop if 'effective_params' in locals() else self.sampling_params.stop),
                     }
                 )
             
@@ -610,14 +684,14 @@ class VLLMWrapper:
         meta = {"attempts": 0, "final_status": "unknown"}
         self.last_json_call_meta = meta
 
-        # Step 1: single strict generation (deterministic)
+        # Step 1: single strict generation (honor override if provided)
         meta["attempts"] += 1
         response = self._generate_strict_json(
             prompt,
             component,
             f"{interaction_type}_attempt_1",
-            use_temp_zero=True,
-            temperature_override=0.0 if temperature_override is None else temperature_override,
+            use_temp_zero=(temperature_override is None),
+            temperature_override=(0.0 if temperature_override is None else temperature_override),
             max_tokens_override=max_tokens_override,
         )
 
@@ -641,8 +715,8 @@ class VLLMWrapper:
                 force_json_prompt,
                 component,
                 f"{interaction_type}_attempt_2_regenerate",
-                use_temp_zero=True,
-                temperature_override=0.0,
+                use_temp_zero=(temperature_override is None),
+                temperature_override=(0.0 if temperature_override is None else temperature_override),
                 max_tokens_override=bumped_budget,
             )
 
@@ -699,8 +773,8 @@ class VLLMWrapper:
                     force_json_prompt2,
                     component,
                     f"{interaction_type}_attempt_{meta['attempts']}_regenerate_unmatched",
-                    use_temp_zero=True,
-                    temperature_override=0.0,
+                    use_temp_zero=(temperature_override is None),
+                    temperature_override=(0.0 if temperature_override is None else temperature_override),
                     max_tokens_override=bumped_budget,
                 )
                 try:

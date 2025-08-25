@@ -64,9 +64,24 @@ class FactorGenerator:
             response = self.vllm_wrapper.generate(
                 prompt, 
                 component="factor_generator", 
-                interaction_type="direct_factor_generation"
+                interaction_type="direct_factor_generation",
+                max_tokens_override=256,
             )
             print(f"🔍 Raw factor response: '{response}'")
+            # If the model starts with the sentinel, retry with a clearer instruction
+            if response and response.strip().startswith("END_OF_FACTORS"):
+                retry_prompt = (
+                    prompt
+                    + "\nDo not start with END_OF_FACTORS. Start the list immediately with '1.' and only output END_OF_FACTORS after the list."
+                )
+                print("♻️ Response started with sentinel; retrying with delayed-sentinel instruction...")
+                response = self.vllm_wrapper.generate(
+                    retry_prompt,
+                    component="factor_generator",
+                    interaction_type="direct_factor_generation",
+                    max_tokens_override=256,
+                )
+                print(f"🔁 Retry raw factor response (delayed sentinel): '{response}'")
             
             # Guard: if response is empty (e.g., early stop at sentinel), retry once with a clearer start hint
             if not response or not response.strip():
@@ -75,7 +90,8 @@ class FactorGenerator:
                 response = self.vllm_wrapper.generate(
                     retry_prompt,
                     component="factor_generator",
-                    interaction_type="direct_factor_generation"
+                    interaction_type="direct_factor_generation",
+                    max_tokens_override=256,
                 )
                 print(f"🔁 Retry raw factor response: '{response}'")
             
@@ -123,7 +139,8 @@ class FactorGenerator:
         response = self.vllm_wrapper.generate(
             prompt,
             component="factor_generator",
-            interaction_type="direct_situation_analysis"
+            interaction_type="direct_situation_analysis",
+            max_tokens_override=256,
         )
         
         print(f"🔍 Direct analysis response: '{response}'")
@@ -151,9 +168,9 @@ Provide AT LEAST 3 factors:
 1. Factor name: Description (value1/value2)
 2. Factor name: Description (value1/value2) 
 3. Factor name: Description (value1/value2)
- Do not include any explanations after the factors.
- After you list the factors, output a single line exactly:
- END_OF_FACTORS
+ Do not include any explanations after the factors. Do not start with END_OF_FACTORS.
+ After you list the factors, output a single line exactly: END_OF_FACTORS
+ Never output END_OF_FACTORS before the list. Only place it after the final factor line.
 
 
 Example:
@@ -194,6 +211,9 @@ Example:
 stress_level: high - person mentions feeling overwhelmed and anxious
 social_support: present - mentions having family and friends available
 
+Only output the lines in the specified format above. Do not add headings, prefaces, or trailing commentary.
+After your last line, output a single line exactly: END_OF_ANALYSIS
+
 Your analysis:"""
         
         return prompt
@@ -223,10 +243,25 @@ Your analysis:"""
             response = self.vllm_wrapper.generate(
                 prompt,
                 component="factor_generator",
-                interaction_type="direct_factor_generation"
+                interaction_type="direct_factor_generation",
+                max_tokens_override=256,
             )
             print(f"🔍 Raw factor response: '{response}'")
             print(f"🔍 Response length: {len(response)} chars")
+            # If the model starts with the sentinel, retry with a clearer instruction
+            if response and response.strip().startswith("END_OF_FACTORS"):
+                retry_prompt = (
+                    prompt
+                    + "\nDo not start with END_OF_FACTORS. Start the list immediately with '1.' and only output END_OF_FACTORS after the list."
+                )
+                print("♻️ Response started with sentinel; retrying with delayed-sentinel instruction...")
+                response = self.vllm_wrapper.generate(
+                    retry_prompt,
+                    component="factor_generator",
+                    interaction_type="direct_factor_generation",
+                    max_tokens_override=256,
+                )
+                print(f"🔁 Retry raw factor response (delayed sentinel): '{response}'")
             
             # Guard: if response is empty (e.g., early stop at sentinel), retry once with a clearer start hint
             if not response or not response.strip():
@@ -235,7 +270,8 @@ Your analysis:"""
                 response = self.vllm_wrapper.generate(
                     retry_prompt,
                     component="factor_generator",
-                    interaction_type="direct_factor_generation"
+                    interaction_type="direct_factor_generation",
+                    max_tokens_override=256,
                 )
                 print(f"🔁 Retry raw factor response: '{response}'")
             
@@ -265,7 +301,11 @@ Your analysis:"""
         
         # Clean the response
         response = self._extract_clean_response(response)
-        lines = response.strip().split('\n')
+        # Drop empty and sentinel-only lines to reduce noise
+        lines = [
+            l for l in response.strip().split('\n')
+            if l.strip() and "end_of_factors" not in l.strip().lower()
+        ]
         
         # First try multi-line bullet format parsing
         factors_multi = self._parse_multiline_bullet_format(lines)
@@ -331,14 +371,21 @@ Your analysis:"""
                         vt = vt.replace(" or ", "/")
                         # Split and normalize tokens
                         values = [v.strip().replace(' ', '_') for v in vt.split('/')]
-                        possible_values = [v for v in values if v]
+                        # De-duplicate while preserving order
+                        seen = set()
+                        possible_values = []
+                        for v in values:
+                            if v and v not in seen:
+                                seen.add(v)
+                                possible_values.append(v)
                         
                         # Create factor if we have valid values
                         if len(possible_values) >= 2:
                             factor = {
                                 'name': factor_name,
                                 'description': description or f'Factor representing {factor_name.replace("_", " ")}',
-                                'possible_values': possible_values[:2]  # Take first 2 for binary
+                                # Keep up to 3 options to accommodate "medium" style outputs
+                                'possible_values': possible_values[:3]
                             }
                             factors.append(factor)
                             
@@ -501,6 +548,32 @@ Your analysis:"""
         ]:
             if response.startswith(prefix):
                 response = response[len(prefix):].strip()
+        # Handle sentinel if present (parse-only delimiter) and repeated blocks
+        # Choose the segment that actually contains the clearest factor-like content.
+        if "END_OF_FACTORS" in response:
+            segments = [seg.strip() for seg in response.split("END_OF_FACTORS")]
+            def looks_like_factors(text: str) -> int:
+                if not text:
+                    return 0
+                lines = [l.strip() for l in text.split('\n') if l.strip()]
+                score = 0
+                for l in lines[:10]:
+                    # Numbered or bulleted
+                    if l[:2].isdigit() or l.startswith(('-', '*')):
+                        score += 1
+                    # Factor-style pattern
+                    if (":" in l) and ("(" in l) and (")" in l):
+                        score += 2
+                return score
+            # Pick the segment with highest score; tie-breaker by length
+            best = ""
+            best_score = -1
+            for seg in segments:
+                sc = looks_like_factors(seg)
+                if sc > best_score or (sc == best_score and len(seg) > len(best)):
+                    best = seg
+                    best_score = sc
+            response = (best or response).strip()
         
         return response
     
@@ -582,7 +655,8 @@ Your analysis:"""
         response = self.vllm_wrapper.generate(
             prompt,
             component="factor_generator",
-            interaction_type="situation_analysis"
+            interaction_type="situation_analysis",
+            max_tokens_override=256,
         )
         
         print(f"🔍 Analysis response: '{response}'")
@@ -622,6 +696,9 @@ Example:
 stress_level: high - person shows clear signs of stress and worry
 social_support: present - mentions having friends to talk to
 
+Only output the lines in the specified format above. Do not add headings, prefaces, or trailing commentary.
+After your last line, output a single line exactly: END_OF_ANALYSIS
+
 Your analysis:"""
         
         return prompt
@@ -634,7 +711,9 @@ Your analysis:"""
         if not response:
             return self._create_fallback_analysis("", factors)
         
-        lines = response.strip().split('\n')
+        # Trim at analysis sentinel to drop trailing chatter
+        cut = response.split("END_OF_ANALYSIS", 1)[0]
+        lines = cut.strip().split('\n')
         factor_names = {f['name'] for f in factors}
         
         for line in lines:

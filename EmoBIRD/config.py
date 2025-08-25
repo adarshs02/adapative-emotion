@@ -49,7 +49,9 @@ class EmobirdConfig:
 
         # Hardening controls
         # Global stop sequences to terminate trailing chatter or markdown
-        self.stop_seqs = ["END_OF_FACTORS", "\n```", "```", "\n--", "\nNote:", "\nEND", "###"]
+        # Do NOT include 'END_OF_FACTORS' here; it's a parse-only sentinel to avoid empty outputs.
+        # Avoid using "\nEND" as a global stop to prevent collisions with the 'END_OF_FACTORS' line.
+        self.stop_seqs = ["\n```", "```", "\n--", "\nNote:", "###"]
         # Strict JSON controls
         self.strict_json_only = True
         self.allow_format_only_retry = 1  # number of LLM reformat-only retries
@@ -89,6 +91,8 @@ class EmobirdConfig:
         self.vllm_gpu_memory_utilization = VLLM_GPU_MEMORY_UTILIZATION
         self.vllm_max_model_len = VLLM_MAX_MODEL_LEN
         self.vllm_tensor_parallel_size = VLLM_TENSOR_PARALLEL_SIZE
+        # Optional custom download/cache directory for vLLM/HF model weights
+        self.vllm_download_dir = None
     
     def _load_config_file(self, config_path: str):
         """Load configuration from JSON file."""
@@ -126,6 +130,7 @@ class EmobirdConfig:
             'EMOBIRD_VLLM_MAX_MODEL_LEN': 'vllm_max_model_len',
             'EMOBIRD_VLLM_TENSOR_PARALLEL_SIZE': 'vllm_tensor_parallel_size',
             'EMOBIRD_VLLM_GPU_MEMORY_UTILIZATION': 'vllm_gpu_memory_utilization',
+            'EMOBIRD_VLLM_DOWNLOAD_DIR': 'vllm_download_dir',
         }
         
         for env_var, config_key in env_mappings.items():
