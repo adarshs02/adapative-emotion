@@ -8,7 +8,7 @@ paths for leaderboard data and local result files relative to the project root.
 Environment variables for API keys/URLs (used by `utils/api.APIClient` inside EQBench3):
 - TEST_API_KEY / TEST_API_URL (preferred for test model)
 - JUDGE_API_KEY / JUDGE_API_URL (preferred for judge model)
-- OPENAI_API_KEY / OPENAI_API_URL (fallbacks)
+- OPENROUTER_API_KEY / OPENROUTER_BASE_URL (global fallbacks)
 
 Example:
   python scripts/eqbench3_run.py \
@@ -110,12 +110,12 @@ def main() -> int:
         return 2
 
     # Friendly env hints
-    test_key = os.getenv("TEST_API_KEY") or os.getenv("OPENAI_API_KEY")
-    judge_key = os.getenv("JUDGE_API_KEY") or os.getenv("OPENAI_API_KEY")
+    test_key = os.getenv("TEST_API_KEY") or os.getenv("OPENROUTER_API_KEY")
+    judge_key = os.getenv("JUDGE_API_KEY") or os.getenv("OPENROUTER_API_KEY")
     if not test_key:
-        logging.warning("TEST_API_KEY/OPENAI_API_KEY not set. API calls for test model will fail.")
+        logging.warning("TEST_API_KEY/OPENROUTER_API_KEY not set. API calls for test model may fail.")
     if (run_elo or run_rubric) and not judge_key:
-        logging.warning("JUDGE_API_KEY/OPENAI_API_KEY not set. Judge calls will fail if enabled.")
+        logging.warning("JUDGE_API_KEY/OPENROUTER_API_KEY not set. Judge calls will fail if enabled.")
 
     # Run benchmark
     run_key = run_eq_bench3(

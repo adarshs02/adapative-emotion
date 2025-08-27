@@ -8,15 +8,15 @@ Why: sometimes you want to try other hosted models without standing up vLLM loca
 
 Environment variables (used if flags omitted):
 - EMOBIRD_MODEL: default local model for EmoBIRD (prefers Llama)
-- LAMBDA_API_KEY (or OPENAI_API_KEY)
-- LAMBDA_API_BASE (or OPENAI_BASE_URL/OPENAI_API_BASE)  e.g., https://api.lambdalabs.com/v1
+- OPENROUTER_API_KEY (preferred) or LAMBDA_API_KEY
+- OPENROUTER_BASE_URL (preferred) or LAMBDA_API_BASE  e.g., https://openrouter.ai/api/v1
 
 Examples
 - Local EmoBIRD (default):
   CUDA_VISIBLE_DEVICES=0 python run_emopatient_EmoBIRD_ext.py --provider emo
 
-- Remote OpenAI-compatible (Lambda/OpenRouter/etc):
-  LAMBDA_API_KEY=... LAMBDA_API_BASE=https://api.openrouter.ai/v1 \
+- Remote OpenRouter/OpenAI-compatible:
+  OPENROUTER_API_KEY=... OPENROUTER_BASE_URL=https://openrouter.ai/api/v1 \
   python run_emopatient_EmoBIRD_ext.py --provider openai \
     --remote-model meta-llama/Meta-Llama-3.1-8B-Instruct
 """
@@ -71,8 +71,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     # Remote OpenAI-compatible configuration
     p.add_argument("--remote-model", default=None, help="Remote model name/id")
-    p.add_argument("--remote-base-url", default=None, help="Base URL for OpenAI-compatible API (env LAMBDA_API_BASE/OPENAI_BASE_URL)")
-    p.add_argument("--api-key", default=LAMBDA_API_KEY, help="API key (env LAMBDA_API_KEY/OPENAI_API_KEY)")
+    p.add_argument("--remote-base-url", default=None, help="Base URL for OpenAI-compatible API (env OPENROUTER_BASE_URL or LAMBDA_API_BASE)")
+    p.add_argument("--api-key", default=None, help="API key (env OPENROUTER_API_KEY or LAMBDA_API_KEY)")
     p.add_argument("--temperature", type=float, default=0.6)
     p.add_argument("--max-tokens", type=int, default=220)
 
@@ -154,13 +154,18 @@ def remote_chat_complete(base_url: str, api_key: str, model: str, prompt: str, t
 # -------------------- Main flows --------------------
 
 def run_remote_openai(args: argparse.Namespace):
-    base_url = args.remote_base_url or os.environ.get("LAMBDA_API_BASE") or os.environ.get("OPENAI_BASE_URL") or os.environ.get("OPENAI_API_BASE")
-    api_key = args.api_key or os.environ.get("LAMBDA_API_KEY") or os.environ.get("OPENAI_API_KEY")
+    base_url = (
+        args.remote_base_url
+        or os.environ.get("OPENROUTER_BASE_URL")
+        or os.environ.get("LAMBDA_API_BASE")
+        or "https://openrouter.ai/api/v1"
+    )
+    api_key = args.api_key or os.environ.get("OPENROUTER_API_KEY") or os.environ.get("LAMBDA_API_KEY")
     model = args.remote_model or os.environ.get("REMOTE_MODEL") or DEFAULT_REMOTE_MODEL
     if not api_key:
-        raise SystemExit("Missing API key. Provide --api-key or set LAMBDA_API_KEY/OPENAI_API_KEY.")
+        raise SystemExit("Missing API key. Provide --api-key or set OPENROUTER_API_KEY (or LAMBDA_API_KEY).")
     if not base_url:
-        raise SystemExit("Missing base URL. Provide --remote-base-url or set LAMBDA_API_BASE/OPENAI_BASE_URL.")
+        raise SystemExit("Missing base URL. Provide --remote-base-url or set OPENROUTER_BASE_URL (or LAMBDA_API_BASE).")
 
     scenarios = load_scenarios(Path(args.scenarios))
     # Optional single-scenario selection

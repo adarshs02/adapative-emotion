@@ -41,6 +41,8 @@ class EmobirdConfig:
         # Model configuration
         self.llm_model_name = LLM_MODEL_NAME
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
+        # Backend selection: 'vllm' or 'openrouter'
+        self.llm_backend = "vllm"
         
         # Generation parameters
         self.max_new_tokens = LLM_MAX_NEW_TOKENS
@@ -101,6 +103,15 @@ class EmobirdConfig:
         self.vllm_tensor_parallel_size = VLLM_TENSOR_PARALLEL_SIZE
         # Optional custom download/cache directory for vLLM/HF model weights
         self.vllm_download_dir = None
+
+        # OpenRouter specific settings
+        self.openrouter_base_url = "https://openrouter.ai/api/v1/chat/completions"
+        self.openrouter_api_key = None
+        # Optional provider routing hint, e.g., "OpenRouter" or vendor names
+        self.openrouter_provider = None
+        # Client behavior
+        self.openrouter_timeout = 60  # seconds
+        self.openrouter_max_retries = 1
     
     def _load_config_file(self, config_path: str):
         """Load configuration from JSON file."""
@@ -123,6 +134,9 @@ class EmobirdConfig:
         env_mappings = {
             'EMOBIRD_MODEL': 'llm_model_name',
             'EMOBIRD_DEVICE': 'device',
+            # Backend selector
+            'LLM_BACKEND': 'llm_backend',
+            'EMOBIRD_LLM_BACKEND': 'llm_backend',
             'EMOBIRD_MAX_TOKENS': 'max_new_tokens',
             'EMOBIRD_TEMPERATURE': 'temperature',
             'EMOBIRD_TEMP_ANALYSIS': 'temp_analysis',
@@ -142,13 +156,19 @@ class EmobirdConfig:
             'EMOBIRD_VLLM_TENSOR_PARALLEL_SIZE': 'vllm_tensor_parallel_size',
             'EMOBIRD_VLLM_GPU_MEMORY_UTILIZATION': 'vllm_gpu_memory_utilization',
             'EMOBIRD_VLLM_DOWNLOAD_DIR': 'vllm_download_dir',
+            # OpenRouter specifics
+            'OPENROUTER_BASE_URL': 'openrouter_base_url',
+            'OPENROUTER_API_KEY': 'openrouter_api_key',
+            'OPENROUTER_PROVIDER': 'openrouter_provider',
+            'OPENROUTER_TIMEOUT': 'openrouter_timeout',
+            'OPENROUTER_MAX_RETRIES': 'openrouter_max_retries',
         }
         
         for env_var, config_key in env_mappings.items():
             env_value = os.getenv(env_var)
             if env_value is not None:
                 # Convert to appropriate type
-                if config_key in ['max_new_tokens', 'max_cpt_entries', 'max_tokens_analysis', 'json_max_tokens', 'json_rating_max_tokens', 'draft_max_tokens', 'vllm_max_model_len', 'vllm_tensor_parallel_size']:
+                if config_key in ['max_new_tokens', 'max_cpt_entries', 'max_tokens_analysis', 'json_max_tokens', 'json_rating_max_tokens', 'draft_max_tokens', 'vllm_max_model_len', 'vllm_tensor_parallel_size', 'openrouter_timeout', 'openrouter_max_retries']:
                     setattr(self, config_key, int(env_value))
                 elif config_key in ['temperature', 'bayesian_smoothing', 'temp_analysis', 'json_temperature', 'draft_temperature', 'vllm_gpu_memory_utilization']:
                     setattr(self, config_key, float(env_value))
@@ -175,6 +195,7 @@ class EmobirdConfig:
                 self.allow_format_only_retry = int(fmt_retry_env)
             except ValueError:
                 pass
+        
     
     def to_dict(self) -> Dict[str, Any]:
         """Convert configuration to dictionary."""

@@ -17,7 +17,18 @@ from EmoBIRD.emotion_generator import EmotionGenerator
 from EmoBIRD.direct_emotion_predictor import DirectEmotionPredictor
 from EmoBIRD.output_generator import OutputGenerator
 from EmoBIRD.config import EmobirdConfig
-from EmoBIRD.vllm_wrapper import VLLMWrapper
+try:
+    from EmoBIRD.vllm_wrapper import VLLMWrapper  # type: ignore
+    _vllm_import_err = None
+except Exception as _e:
+    VLLMWrapper = None  # type: ignore
+    _vllm_import_err = _e
+try:
+    from EmoBIRD.openrouter_wrapper import OpenRouterWrapper  # type: ignore
+    _or_import_err = None
+except Exception as _e:
+    OpenRouterWrapper = None  # type: ignore
+    _or_import_err = _e
 from EmoBIRD.utils import print_gpu_info
 from EmoBIRD.schemas import UnifiedEmotionAnalysis
 
@@ -53,13 +64,20 @@ class Emobird:
         print("✅ Emobird system initialized successfully!")
     
     def _load_llm(self):
-        """Load the vLLM wrapper for inference."""
-        print(f"🚀 Loading vLLM: {self.config.llm_model_name}")
-        
-        # Initialize vLLM wrapper
-        self.vllm_wrapper = VLLMWrapper(self.config)
-        
-        print("✅ vLLM loaded successfully!")
+        """Load the selected LLM backend wrapper for inference."""
+        backend = (getattr(self.config, "llm_backend", "vllm") or "vllm").lower()
+        if backend == "openrouter":
+            print(f"🚀 Loading OpenRouter: {self.config.llm_model_name}")
+            self.vllm_wrapper = OpenRouterWrapper(self.config)
+            print("✅ OpenRouter loaded successfully!")
+        elif backend == "vllm":
+            print(f"🚀 Loading vLLM: {self.config.llm_model_name}")
+            self.vllm_wrapper = VLLMWrapper(self.config)
+            print("✅ vLLM loaded successfully!")
+        else:
+            print(f"⚠️ Unknown llm_backend '{backend}', defaulting to vLLM")
+            self.vllm_wrapper = VLLMWrapper(self.config)
+            print("✅ vLLM loaded successfully!")
     
     def analyze_emotion(self, user_situation: str) -> Dict[str, Any]:
         """

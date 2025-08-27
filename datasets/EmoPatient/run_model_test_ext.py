@@ -7,8 +7,8 @@ Extended model tester: local HF or remote OpenAI-compatible (e.g., Lambda) model
 - Reads API config from environment or CLI flags
 
 Environment variables (used if flags omitted):
-- LAMBDA_API_KEY (or OPENAI_API_KEY)
-- LAMBDA_API_BASE (or OPENAI_BASE_URL)  e.g., https://api.lambdalabs.com/v1
+- OPENROUTER_API_KEY (preferred) or LAMBDA_API_KEY
+- OPENROUTER_BASE_URL (preferred) or LAMBDA_API_BASE  e.g., https://openrouter.ai/api/v1
 - EMOBIRD_MODEL (default HF model when provider=hf)
 
 Examples:
@@ -18,15 +18,15 @@ Examples:
     --model meta-llama/Meta-Llama-3.1-8B-Instruct \
     --scenarios ./scenarios_30.json
 
-  # Remote Lambda (OpenAI-compatible) model
-  LAMBDA_API_KEY=... LAMBDA_API_BASE=https://api.openrouter.ai/v1 \
+  # Remote OpenRouter (OpenAI-compatible) model
+  OPENROUTER_API_KEY=... OPENROUTER_BASE_URL=https://openrouter.ai/api/v1 \
   python run_model_test_ext.py \
     --provider openai \
     --remote-model meta-llama/Meta-Llama-3.1-8B-Instruct \
     --scenarios ./scenarios_30.json
 
   # Single prompt via remote
-  python run_model_test_ext.py --provider openai --remote-model "gpt-4o-mini" \
+  python run_model_test_ext.py --provider openai --remote-model "meta-llama/Meta-Llama-3.1-8B-Instruct" \
     --prompt "Write a brief, supportive reply to someone awaiting biopsy results."
 """
 
@@ -76,8 +76,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     # Remote OpenAI-compatible
     p.add_argument("--remote-model", help="Remote model name/id (provider=openai)", default=None)
-    p.add_argument("--remote-base-url", help="OpenAI-compatible base URL (env LAMBDA_API_BASE/OPENAI_BASE_URL)", default=None)
-    p.add_argument("--api-key", help="API key (env LAMBDA_API_KEY/OPENAI_API_KEY)", default=LAMBDA_API_KEY)
+    p.add_argument("--remote-base-url", help="OpenAI-compatible base URL (env OPENROUTER_BASE_URL or LAMBDA_API_BASE)", default=None)
+    p.add_argument("--api-key", help="API key (env OPENROUTER_API_KEY or LAMBDA_API_KEY)", default=None)
 
     # Workload
     p.add_argument("--prompt", help="Single prompt to run", default="Please provide a concise, empathetic, medically grounded answer tailored to the above context.")
@@ -391,14 +391,19 @@ if __name__ == "__main__":
             ans = run_single_prompt_hf(pipe, tok, prompt, args.max_new_tokens, args.temperature, args.top_p)
             print("\n--- Output ---\n" + ans + "\n---------------")
     else:
-        # Provider: openai-compatible (e.g., Lambda)
-        base_url = args.remote_base_url or os.environ.get("LAMBDA_API_BASE") or os.environ.get("OPENAI_BASE_URL") or os.environ.get("OPENAI_API_BASE")
-        api_key = args.api_key or os.environ.get("LAMBDA_API_KEY") or os.environ.get("OPENAI_API_KEY")
+        # Provider: openai-compatible (e.g., OpenRouter/Lambda)
+        base_url = (
+            args.remote_base_url
+            or os.environ.get("OPENROUTER_BASE_URL")
+            or os.environ.get("LAMBDA_API_BASE")
+            or "https://openrouter.ai/api/v1"
+        )
+        api_key = args.api_key or os.environ.get("OPENROUTER_API_KEY") or os.environ.get("LAMBDA_API_KEY")
         remote_model = args.remote_model or os.environ.get("REMOTE_MODEL") or (args.model or DEFAULT_MODEL)
         if not api_key:
-            raise SystemExit("Missing API key. Provide --api-key or set LAMBDA_API_KEY/OPENAI_API_KEY.")
+            raise SystemExit("Missing API key. Provide --api-key or set OPENROUTER_API_KEY (or LAMBDA_API_KEY).")
         if not base_url:
-            raise SystemExit("Missing base URL. Provide --remote-base-url or set LAMBDA_API_BASE/OPENAI_BASE_URL.")
+            raise SystemExit("Missing base URL. Provide --remote-base-url or set OPENROUTER_BASE_URL (or LAMBDA_API_BASE).")
         print(f"Using remote OpenAI-compatible model: {remote_model} @ {base_url}")
         if args.scenarios:
             run_scenarios_openai(base_url, api_key, remote_model, Path(args.scenarios), args.scenario_index, args.max_new_tokens, args.temperature)
