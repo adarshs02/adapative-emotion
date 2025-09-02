@@ -60,6 +60,10 @@ class DirectEmotionPredictor:
                 max_tokens_override=getattr(self.vllm_wrapper.config, 'json_rating_max_tokens', 200),
             )
             print(f"🔍 JSON ratings response: {data}")
+            # If JSON path returned fallback minimal (no 'ratings'), trigger text fallback instead of neutral defaults
+            if not (isinstance(data, dict) and data.get("ratings")):
+                print("⚠️ JSON ratings missing or empty; falling back to text parsing")
+                raise ValueError("missing_ratings")
             emotion_probs = self._parse_emotion_json(data)
             return emotion_probs
         except Exception as e:
@@ -122,8 +126,6 @@ Now provide your assessment WITHOUT ANY EXTRAS ONLY EXAMPLE FORMAT AS SHOWN ABOV
         factor_desc = "\n".join([f"- {factor}: {value}" for factor, value in factor_values.items()])
         emotions_list = ", ".join(self.emotions)
         allowed = ", ".join(RATING_SCALE.keys())
-        
-        sentinel = getattr(self.vllm_wrapper.config, 'end_json_sentinel', '<<END_JSON>>')
         extra = f"\n\nDRAFT ESSAY (for context):\n{draft_essay}" if draft_essay else ""
         prompt = f"""You are evaluating likely emotions from a situation and its psychological factors.
 
@@ -151,7 +153,7 @@ FORMAT:
   "justification": "..."
 }}
 
-Write only the JSON object. After the closing brace, write the token {sentinel} and nothing else."""
+Write only the JSON object."""
         return prompt
     
     def _parse_emotion_response(self, response: str) -> Dict[str, float]:

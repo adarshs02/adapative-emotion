@@ -20,11 +20,18 @@ class EmobirdLogger:
         """Initialize the logger."""
         self.log_dir = Path(log_dir)
         self.log_dir.mkdir(parents=True, exist_ok=True)
-        
+
         # Create session-specific log file
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         self.session_id = timestamp
         self.log_file = self.log_dir / f"session_{timestamp}.json"
+
+        # Control whether to create a separate file per analysis result
+        # Set EMOBIRD_WRITE_ANALYSIS_FILES=1 to enable individual analysis_*.json files
+        try:
+            self.write_analysis_files: bool = bool(int(os.getenv("EMOBIRD_WRITE_ANALYSIS_FILES", "0")))
+        except Exception:
+            self.write_analysis_files = False
         
         # Initialize session log
         self.session_data = {
@@ -40,6 +47,12 @@ class EmobirdLogger:
         
         print(f"📝 Logging session started: {self.session_id}")
         print(f"📁 Log file: {self.log_file}")
+        if not self.write_analysis_files:
+            # Informative note so users know analyses are session-only
+            try:
+                print("ℹ️  Per-analysis files disabled (session-only). Set EMOBIRD_WRITE_ANALYSIS_FILES=1 to enable.")
+            except Exception:
+                pass
     
     def log_interaction(self, component: str, interaction_type: str, 
                        prompt: str, response: str, metadata: Optional[Dict[str, Any]] = None):
@@ -136,17 +149,21 @@ class EmobirdLogger:
             }
         }
         
-        # Save individual analysis result
-        analysis_file = self.log_dir / f"analysis_{self.session_id}_{len(self.session_data.get('analyses', []))}.json"
-        with open(analysis_file, 'w', encoding='utf-8') as f:
-            json.dump(analysis_log, f, indent=2, ensure_ascii=False)
-        
-        # Add to session data
+        # Optionally save individual analysis result (controlled by flag)
+        if self.write_analysis_files:
+            analysis_file = self.log_dir / f"analysis_{self.session_id}_{len(self.session_data.get('analyses', []))}.json"
+            with open(analysis_file, 'w', encoding='utf-8') as f:
+                json.dump(analysis_log, f, indent=2, ensure_ascii=False)
+
+        # Add to session data (always)
         if 'analyses' not in self.session_data:
             self.session_data['analyses'] = []
         self.session_data['analyses'].append(analysis_log)
         
-        print(f"🎯 Analysis result logged: {analysis_file.name}")
+        if self.write_analysis_files:
+            print(f"🎯 Analysis result logged: {analysis_file.name}")
+        else:
+            print("🎯 Analysis result captured (session-only)")
     
     def log_error(self, component: str, error_type: str, error_message: str, 
                   context: Optional[Dict[str, Any]] = None):

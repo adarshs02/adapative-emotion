@@ -1,0 +1,21 @@
+Analyze this situation and determine the specific value for each psychological factor:
+
+SITUATION: {situation}
+
+PSYCHOLOGICAL FACTORS:
+{factors_text}
+
+For each factor, choose the most appropriate value based on what you can observe in the situation. Provide a brief explanation.
+
+Format exactly like this:
+factor_name: chosen_value - brief explanation
+factor_name: chosen_value - brief explanation
+
+Example:
+stress_level: high - person mentions feeling overwhelmed and anxious
+social_support: present - mentions having family and friends available
+
+Only output the lines in the specified format above. Do not add headings, prefaces, or trailing commentary.
+After your last line, output a single line exactly: END_OF_ANALYSIS
+
+Your analysis:

@@ -49,6 +49,11 @@ class EmobirdConfig:
         self.temperature = LLM_TEMPERATURE
         self.do_sample = True
 
+        # Conversational/abstract generation budgets (used by wrappers)
+        # These replace hardcoded limits in wrapper implementations
+        self.conversational_max_tokens = 1536
+        self.abstract_max_tokens = 256
+
         # Hardening controls
         # Global stop sequences to terminate trailing chatter or markdown
         # Do NOT include 'END_OF_FACTORS' here; it's a parse-only sentinel to avoid empty outputs.
@@ -57,12 +62,15 @@ class EmobirdConfig:
         # Dedicated end sentinels for multi-step pipeline
         self.end_draft_sentinel = "<<END_DRAFT>>"
         self.end_json_sentinel = "<<END_JSON>>"
-        # Strict JSON controls
-        self.strict_json_only = True
+        # Strict JSON controls (disabled by default; use sentinel-wrapped JSON instead)
+        self.strict_json_only = False
         self.allow_format_only_retry = 1  # number of LLM reformat-only retries
         # Dedicated JSON generation controls
         self.json_max_tokens = 256
         self.json_temperature = 0.0
+        # JSON sentinel markers for relaxed JSON extraction
+        self.json_start_sentinel = "<<JSON_START>>"
+        self.json_end_sentinel = "<<JSON_END>>"
         # Draft essay generation budgets
         self.draft_max_tokens = 1200  # target ~1100-1300
         self.draft_temperature = 0.6
@@ -110,7 +118,10 @@ class EmobirdConfig:
         # Optional provider routing hint, e.g., "OpenRouter" or vendor names
         self.openrouter_provider = None
         # Client behavior
-        self.openrouter_timeout = 60  # seconds
+        # Prefer read/connect split; keep legacy single-timeout for backward compatibility
+        self.openrouter_connect_timeout = 20  # seconds (TCP connect)
+        self.openrouter_read_timeout = 180    # seconds (server processing & response)
+        self.openrouter_timeout = 180         # legacy single-timeout (used as read timeout if specific not set)
         self.openrouter_max_retries = 1
     
     def _load_config_file(self, config_path: str):
@@ -138,6 +149,8 @@ class EmobirdConfig:
             'LLM_BACKEND': 'llm_backend',
             'EMOBIRD_LLM_BACKEND': 'llm_backend',
             'EMOBIRD_MAX_TOKENS': 'max_new_tokens',
+            'EMOBIRD_CONVERSATIONAL_MAX_TOKENS': 'conversational_max_tokens',
+            'EMOBIRD_ABSTRACT_MAX_TOKENS': 'abstract_max_tokens',
             'EMOBIRD_TEMPERATURE': 'temperature',
             'EMOBIRD_TEMP_ANALYSIS': 'temp_analysis',
             'EMOBIRD_MAX_TOKENS_ANALYSIS': 'max_tokens_analysis',
@@ -160,6 +173,8 @@ class EmobirdConfig:
             'OPENROUTER_BASE_URL': 'openrouter_base_url',
             'OPENROUTER_API_KEY': 'openrouter_api_key',
             'OPENROUTER_PROVIDER': 'openrouter_provider',
+            'OPENROUTER_CONNECT_TIMEOUT': 'openrouter_connect_timeout',
+            'OPENROUTER_READ_TIMEOUT': 'openrouter_read_timeout',
             'OPENROUTER_TIMEOUT': 'openrouter_timeout',
             'OPENROUTER_MAX_RETRIES': 'openrouter_max_retries',
         }
@@ -168,7 +183,7 @@ class EmobirdConfig:
             env_value = os.getenv(env_var)
             if env_value is not None:
                 # Convert to appropriate type
-                if config_key in ['max_new_tokens', 'max_cpt_entries', 'max_tokens_analysis', 'json_max_tokens', 'json_rating_max_tokens', 'draft_max_tokens', 'vllm_max_model_len', 'vllm_tensor_parallel_size', 'openrouter_timeout', 'openrouter_max_retries']:
+                if config_key in ['max_new_tokens', 'conversational_max_tokens', 'abstract_max_tokens', 'max_cpt_entries', 'max_tokens_analysis', 'json_max_tokens', 'json_rating_max_tokens', 'draft_max_tokens', 'vllm_max_model_len', 'vllm_tensor_parallel_size', 'openrouter_timeout', 'openrouter_max_retries', 'openrouter_connect_timeout', 'openrouter_read_timeout']:
                     setattr(self, config_key, int(env_value))
                 elif config_key in ['temperature', 'bayesian_smoothing', 'temp_analysis', 'json_temperature', 'draft_temperature', 'vllm_gpu_memory_utilization']:
                     setattr(self, config_key, float(env_value))
@@ -188,6 +203,13 @@ class EmobirdConfig:
         json_s = os.getenv('EMOBIRD_END_JSON_SENTINEL')
         if json_s:
             self.end_json_sentinel = json_s
+        # JSON extraction sentinels via env
+        jstart = os.getenv('EMOBIRD_JSON_START_SENTINEL')
+        if jstart:
+            self.json_start_sentinel = jstart
+        jend = os.getenv('EMOBIRD_JSON_END_SENTINEL')
+        if jend:
+            self.json_end_sentinel = jend
         # Allow format-only retries override
         fmt_retry_env = os.getenv('EMOBIRD_ALLOW_FORMAT_ONLY_RETRY')
         if fmt_retry_env is not None:

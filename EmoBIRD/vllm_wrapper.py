@@ -594,18 +594,25 @@ class VLLMWrapper:
         
         try:
             # Choose effective sampling params (allow per-call overrides)
-            if stop is None and max_tokens_override is None and temperature_override is None:
-                effective_params = self.sampling_params
-            else:
-                base = self.sampling_params
-                effective_params = SamplingParams(
-                    temperature=base.temperature if temperature_override is None else temperature_override,
-                    max_tokens=base.max_tokens if max_tokens_override is None else max_tokens_override,
-                    top_p=getattr(base, "top_p", 0.9),
-                    frequency_penalty=getattr(base, "frequency_penalty", 0.0),
-                    presence_penalty=getattr(base, "presence_penalty", 0.0),
-                    stop=base.stop if stop is None else stop,
-                )
+            base = self.sampling_params
+            # Treat an explicit empty list stop=[] as "no stop tokens"
+            eff_stop = None if (stop is not None and isinstance(stop, list) and len(stop) == 0) else (base.stop if stop is None else stop)
+            eff_temp = base.temperature if temperature_override is None else temperature_override
+            eff_max_tokens = base.max_tokens if max_tokens_override is None else max_tokens_override
+            effective_params = base if (stop is None and max_tokens_override is None and temperature_override is None) else SamplingParams(
+                temperature=eff_temp,
+                max_tokens=eff_max_tokens,
+                top_p=getattr(base, "top_p", 0.9),
+                frequency_penalty=getattr(base, "frequency_penalty", 0.0),
+                presence_penalty=getattr(base, "presence_penalty", 0.0),
+                stop=eff_stop,
+            )
+
+            # Debug sampling params for this call
+            try:
+                print(f"🧪 vLLM.generate_batch -> temp={effective_params.temperature}, max_tokens={effective_params.max_tokens}, stop={effective_params.stop}")
+            except Exception:
+                pass
 
             # Generate responses
             outputs = self.model.generate(prompts, effective_params)
@@ -633,9 +640,9 @@ class VLLMWrapper:
                     metadata={
                         "batch_size": len(prompts),
                         "batch_index": i,
-                        "temperature": (effective_params.temperature if 'effective_params' in locals() else self.sampling_params.temperature),
-                        "max_tokens": (effective_params.max_tokens if 'effective_params' in locals() else self.sampling_params.max_tokens),
-                        "stop_tokens": (effective_params.stop if 'effective_params' in locals() else self.sampling_params.stop),
+                        "temperature": effective_params.temperature,
+                        "max_tokens": effective_params.max_tokens,
+                        "stop_tokens": effective_params.stop,
                     }
                 )
             

@@ -65,7 +65,8 @@ class FactorGenerator:
                 prompt, 
                 component="factor_generator", 
                 interaction_type="direct_factor_generation",
-                max_tokens_override=256,
+                max_tokens_override=512,
+                stop=[],
             )
             print(f"🔍 Raw factor response: '{response}'")
             # If the model starts with the sentinel, retry with a clearer instruction
@@ -79,7 +80,8 @@ class FactorGenerator:
                     retry_prompt,
                     component="factor_generator",
                     interaction_type="direct_factor_generation",
-                    max_tokens_override=256,
+                    max_tokens_override=512,
+                    stop=[],
                 )
                 print(f"🔁 Retry raw factor response (delayed sentinel): '{response}'")
             
@@ -91,7 +93,8 @@ class FactorGenerator:
                     retry_prompt,
                     component="factor_generator",
                     interaction_type="direct_factor_generation",
-                    max_tokens_override=256,
+                    max_tokens_override=512,
+                    stop=[],
                 )
                 print(f"🔁 Retry raw factor response: '{response}'")
             
@@ -140,7 +143,8 @@ class FactorGenerator:
             prompt,
             component="factor_generator",
             interaction_type="direct_situation_analysis",
-            max_tokens_override=256,
+            max_tokens_override=512,
+            stop=[],
         )
         
         print(f"🔍 Direct analysis response: '{response}'")
@@ -244,7 +248,8 @@ Your analysis:"""
                 prompt,
                 component="factor_generator",
                 interaction_type="direct_factor_generation",
-                max_tokens_override=256,
+                max_tokens_override=512,
+                stop=[],
             )
             print(f"🔍 Raw factor response: '{response}'")
             print(f"🔍 Response length: {len(response)} chars")
@@ -259,7 +264,8 @@ Your analysis:"""
                     retry_prompt,
                     component="factor_generator",
                     interaction_type="direct_factor_generation",
-                    max_tokens_override=256,
+                    max_tokens_override=512,
+                    stop=[],
                 )
                 print(f"🔁 Retry raw factor response (delayed sentinel): '{response}'")
             
@@ -271,7 +277,8 @@ Your analysis:"""
                     retry_prompt,
                     component="factor_generator",
                     interaction_type="direct_factor_generation",
-                    max_tokens_override=256,
+                    max_tokens_override=512,
+                    stop=[],
                 )
                 print(f"🔁 Retry raw factor response: '{response}'")
             
@@ -656,7 +663,8 @@ Your analysis:"""
             prompt,
             component="factor_generator",
             interaction_type="situation_analysis",
-            max_tokens_override=256,
+            max_tokens_override=512,
+            stop=[],
         )
         
         print(f"🔍 Analysis response: '{response}'")

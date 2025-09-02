@@ -42,9 +42,14 @@ class OpenRouterWrapper:
         self.base_url: str = getattr(config, "openrouter_base_url", "https://openrouter.ai/api/v1/chat/completions")
         self.api_key: Optional[str] = getattr(config, "openrouter_api_key", None)
         self.provider: Optional[str] = getattr(config, "openrouter_provider", None)
-        self.timeout: int = int(getattr(config, "openrouter_timeout", 60))
+        # Timeouts: prefer explicit connect/read; fall back to legacy single timeout
+        self.connect_timeout: int = int(getattr(config, "openrouter_connect_timeout", 20))
+        self.read_timeout: int = int(getattr(config, "openrouter_read_timeout", getattr(config, "openrouter_timeout", 60)))
+        self.timeout: int = int(getattr(config, "openrouter_timeout", self.read_timeout))  # legacy attr kept for backward-compat
         self.max_retries: int = int(getattr(config, "openrouter_max_retries", 1))
         self.last_json_call_meta: Dict[str, Any] = {}
+        # Default nucleus sampling; can be overridden via update_sampling_params(top_p=...)
+        self._top_p: float = float(getattr(config, "top_p", 0.9))
 
         if not self.api_key:
             print("⚠️ OpenRouter API key is not set. Set OPENROUTER_API_KEY or config.openrouter_api_key.")
@@ -79,6 +84,43 @@ class OpenRouterWrapper:
             temperature_override=temperature_override,
         )[0]
 
+    def update_sampling_params(self, **kwargs):
+        """
+        Update sampling parameters dynamically to mirror VLLMWrapper API.
+        Supported keys: temperature, max_tokens, stop, top_p
+        - temperature -> self.config.temperature
+        - max_tokens  -> self.config.max_new_tokens
+        - stop        -> self.config.stop_seqs
+        - top_p       -> self._top_p (used in OpenRouter payload)
+        """
+        for key, value in kwargs.items():
+            if key == "temperature":
+                try:
+                    self.config.temperature = float(value)
+                except Exception:
+                    pass
+            elif key == "max_tokens":
+                try:
+                    self.config.max_new_tokens = int(value)
+                except Exception:
+                    pass
+            elif key == "stop":
+                try:
+                    self.config.stop_seqs = list(value)
+                except Exception:
+                    pass
+            elif key == "top_p":
+                try:
+                    self._top_p = float(value)
+                except Exception:
+                    pass
+            else:
+                # Keep parity with VLLMWrapper's warning behavior
+                try:
+                    print(f"⚠️ Unknown sampling parameter: {key}")
+                except Exception:
+                    pass
+
     def generate_conversational(
         self,
         prompts: List[str],
@@ -94,7 +136,7 @@ class OpenRouterWrapper:
             resp_text = self._complete(
                 prompt=p,
                 temperature=self.config.temperature,
-                max_tokens=1500,
+                max_tokens=getattr(self.config, "conversational_max_tokens", 1536),
                 stop=self.config.stop_seqs,
                 metadata={
                     "component": component,
@@ -114,8 +156,9 @@ class OpenRouterWrapper:
                     "batch_index": i,
                     "batch_size": len(prompts),
                     "temperature": self.config.temperature,
-                    "max_tokens": 1500,
+                    "max_tokens": getattr(self.config, "conversational_max_tokens", 1536),
                     "stop_tokens": self.config.stop_seqs,
+                    "top_p": float(self._top_p),
                 },
             )
         return responses
@@ -173,6 +216,7 @@ class OpenRouterWrapper:
                     "temperature": eff_temp,
                     "max_tokens": eff_max_tokens,
                     "stop_tokens": eff_stop,
+                    "top_p": float(self._top_p),
                 },
             )
         return responses
@@ -195,6 +239,18 @@ class OpenRouterWrapper:
         logger = get_logger()
         meta = {"attempts": 0, "final_status": "unknown"}
         self.last_json_call_meta = meta
+
+        # If strict JSON is disabled, use sentinel-based relaxed JSON extraction path
+        if not bool(getattr(self.config, "strict_json_only", False)):
+            return self._json_call_with_sentinels(
+                prompt=prompt,
+                component=component,
+                interaction_type=interaction_type,
+                schema=schema,
+                schema_model=schema_model,
+                temperature_override=temperature_override,
+                max_tokens_override=max_tokens_override,
+            )
 
         # Step 1: single strict generation (temp zero by default unless override)
         meta["attempts"] += 1
@@ -327,7 +383,7 @@ class OpenRouterWrapper:
                 )
                 reform = self._complete(
                     prompt=reform_prompt,
-                    temperature=0.0,
+                    temperature=0.6,
                     max_tokens=min(1024, (self.config.json_max_tokens if max_tokens_override is None else max_tokens_override) * 2),
                     stop=None,
                     force_json_only=False,
@@ -361,6 +417,133 @@ class OpenRouterWrapper:
         self.last_json_call_meta = meta
         return data
 
+    def _json_call_with_sentinels(
+        self,
+        prompt: str,
+        component: str,
+        interaction_type: str,
+        schema: Optional[dict] = None,
+        schema_model: Optional[Type] = None,
+        temperature_override: Optional[float] = None,
+        max_tokens_override: Optional[int] = None,
+    ) -> Dict[str, Any]:
+        """
+        Relaxed JSON path: instruct the model to wrap a single JSON object between
+        configured start/end sentinels, then extract and parse only that region.
+        If extraction or parsing fails, perform one regenerate, then hard-gate fallback.
+        """
+        logger = get_logger()
+        meta = {"attempts": 0, "final_status": "unknown", "mode": "sentinel"}
+        self.last_json_call_meta = meta
+
+        s_start = getattr(self.config, "json_start_sentinel", "<<JSON_START>>")
+        s_end = getattr(self.config, "json_end_sentinel", "<<JSON_END>>")
+
+        base_instr = (
+            "Return exactly one JSON object and wrap it strictly between the following markers. "
+            "Do not include code fences, commentary, or any text outside the markers.\n"
+            f"{s_start}\n{{...}}\n{s_end}"
+        )
+        full_prompt = f"{prompt}\n\n{base_instr}"
+
+        def extract_region(text: str) -> str:
+            if not text:
+                return ""
+            i = text.find(s_start)
+            if i == -1:
+                return ""
+            j = text.find(s_end, i + len(s_start))
+            if j == -1:
+                return ""
+            return text[i + len(s_start):j].strip()
+
+        def try_parse(region: str) -> Optional[Dict[str, Any]]:
+            if not region:
+                return None
+            try:
+                obj = json.loads(region)
+                obj = self._normalize_unified_json(obj)
+                return obj
+            except Exception as e:
+                try:
+                    # Last-ditch: attempt to strip minor noise then parse first JSON
+                    cleaned = _first_json(region)
+                    obj2 = json.loads(cleaned)
+                    obj2 = self._normalize_unified_json(obj2)
+                    return obj2
+                except Exception:
+                    logger.log_error(
+                        component=component,
+                        error_type="sentinel_json_parse_failed",
+                        error_message=str(e),
+                        context={"interaction_type": interaction_type},
+                    )
+                    return None
+
+        # Attempt 1
+        meta["attempts"] += 1
+        resp1 = self._complete(
+            prompt=full_prompt,
+            temperature=(0.0 if temperature_override is None else float(temperature_override)),
+            max_tokens=(self.config.json_max_tokens if max_tokens_override is None else int(max_tokens_override)),
+            stop=None,
+            force_json_only=False,
+            metadata={"component": component, "interaction_type": f"{interaction_type}_sentinel_attempt_1"},
+        )
+        region1 = extract_region(resp1)
+        parsed1 = try_parse(region1)
+        if parsed1 is not None:
+            try:
+                logger.log_interaction(
+                    component=component,
+                    interaction_type=f"{interaction_type}_sentinel_success",
+                    prompt=full_prompt[:200] + ("..." if len(full_prompt) > 200 else ""),
+                    response=json.dumps(parsed1)[:200] + ("..." if len(json.dumps(parsed1)) > 200 else ""),
+                    metadata={"attempt_number": meta["attempts"]},
+                )
+            except Exception:
+                pass
+            meta["final_status"] = "success"
+            self.last_json_call_meta = meta
+            return parsed1
+
+        # Attempt 2: one-time regenerate with stronger instruction
+        meta["attempts"] += 1
+        regen_prompt = (
+            f"{prompt}\n\nOnly output the two markers and a valid JSON object between them. Nothing else.\n"
+            f"{s_start}\n{{...}}\n{s_end}"
+        )
+        resp2 = self._complete(
+            prompt=regen_prompt,
+            temperature=(0.0 if temperature_override is None else float(temperature_override)),
+            max_tokens=min(2048, (self.config.json_max_tokens if max_tokens_override is None else int(max_tokens_override)) * 2),
+            stop=None,
+            force_json_only=False,
+            metadata={"component": component, "interaction_type": f"{interaction_type}_sentinel_attempt_2_regen"},
+        )
+        region2 = extract_region(resp2)
+        parsed2 = try_parse(region2)
+        if parsed2 is not None:
+            try:
+                logger.log_interaction(
+                    component=component,
+                    interaction_type=f"{interaction_type}_sentinel_success_after_regen",
+                    prompt=regen_prompt[:200] + ("..." if len(regen_prompt) > 200 else ""),
+                    response=json.dumps(parsed2)[:200] + ("..." if len(json.dumps(parsed2)) > 200 else ""),
+                    metadata={"attempt_number": meta["attempts"]},
+                )
+            except Exception:
+                pass
+            meta["final_status"] = "success"
+            self.last_json_call_meta = meta
+            return parsed2
+
+        # Hard-gate fallback
+        data = self._fallback_minimal_json(prompt, component, interaction_type)
+        meta["final_status"] = "fallback"
+        self.last_json_call_meta = meta
+        return data
+
     def generate_abstract(
         self,
         prompt: str,
@@ -375,7 +558,7 @@ class OpenRouterWrapper:
             resp_text = self._complete(
                 prompt=prompt,
                 temperature=0.1,
-                max_tokens=128,
+                max_tokens=getattr(self.config, "abstract_max_tokens", 256),
                 stop=self.config.stop_seqs,
                 metadata={"component": component, "interaction_type": interaction_type},
             )
@@ -387,8 +570,9 @@ class OpenRouterWrapper:
                 metadata={
                     "sampling_method": "abstract_constrained",
                     "temperature": 0.1,
-                    "max_tokens": 128,
+                    "max_tokens": getattr(self.config, "abstract_max_tokens", 256),
                     "stop_tokens": self.config.stop_seqs,
+                    "top_p": float(self._top_p),
                 },
             )
             return (resp_text or "").strip()
@@ -430,7 +614,7 @@ class OpenRouterWrapper:
             ],
             "temperature": max(0.0, float(temperature)),
             "max_tokens": int(max_tokens),
-            "top_p": 0.9,
+            "top_p": float(self._top_p),
         }
         if stop:
             payload["stop"] = stop
@@ -445,7 +629,7 @@ class OpenRouterWrapper:
                     self.base_url,
                     data=json.dumps(payload),
                     headers=headers,
-                    timeout=self.timeout,
+                    timeout=(self.connect_timeout, self.read_timeout),
                 )
                 if resp.status_code == 200:
                     data = resp.json()
@@ -545,8 +729,8 @@ class OpenRouterWrapper:
             base_prompt = f"{instruct}\n\nContext:\n{prompt[:800]}"
             text = self._complete(
                 prompt=base_prompt,
-                temperature=0.0,
-                max_tokens=64,
+                temperature=0.6,
+                max_tokens=256,
                 stop=None,
                 metadata={"component": component, "interaction_type": f"{interaction_type}_fallback_minimal"},
             )

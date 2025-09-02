@@ -1,9 +1,9 @@
 """
-SECEU evaluation script integrated with EmoBIRD's vLLM wrapper and logger.
+SECEU evaluation script integrated with EmoBIRD's vLLM or OpenRouter backend and logger.
 
 Features
 - Loads SECEU items and standard scores.
-- Generates model outputs using VLLMWrapper (text-only response; no JSON enforced).
+- Generates model outputs using VLLMWrapper or OpenRouterWrapper (text-only response; no JSON enforced).
 - Parses four scores per item (sum normalized to 10), robust to extra text.
 - Computes SECEU distance score, EQ conversion, and pattern similarity.
 - Logs interactions and saves predictions and results into eval_results/.
@@ -30,23 +30,44 @@ import json
 import time
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
+import os
 import re
+import sys
 
 import numpy as np
 from scipy.stats import pearsonr
 from tqdm import tqdm
 
-# Local imports from EmoBIRD (support both module and script execution)
+# Local imports from EmoBIRD (support module, repo-root script, or EmoBIRD-dir script execution)
 try:
-    # When run as a module: python -m EmoBIRD.evaluate_seceu
+    # Package execution: python -m EmoBIRD.eval_scripts.evaluate_seceu
     from .config import EmobirdConfig
     from .vllm_wrapper import VLLMWrapper
+    from .openrouter_wrapper import OpenRouterWrapper
+    from .emobird_poc import Emobird
     from .logger import get_logger
-except ImportError:
-    # When run as a script: python evaluate_seceu.py from the EmoBIRD/ directory
-    from config import EmobirdConfig
-    from vllm_wrapper import VLLMWrapper
-    from logger import get_logger
+except Exception:
+    # Running as a script from the repository root:
+    #   python EmoBIRD/eval_scripts/evaluate_seceu.py
+    try:
+        from EmoBIRD.config import EmobirdConfig
+        from EmoBIRD.vllm_wrapper import VLLMWrapper
+        from EmoBIRD.openrouter_wrapper import OpenRouterWrapper
+        from EmoBIRD.emobird_poc import Emobird
+        from EmoBIRD.logger import get_logger
+    except Exception:
+        # Running as a script from inside the EmoBIRD directory:
+        #   python eval_scripts/evaluate_seceu.py
+        # Ensure EmoBIRD dir is importable then try plain imports.
+        CURRENT_DIR = Path(__file__).resolve().parent
+        EMOBIRD_DIR = CURRENT_DIR.parent
+        if str(EMOBIRD_DIR) not in sys.path:
+            sys.path.insert(0, str(EMOBIRD_DIR))
+        from config import EmobirdConfig
+        from vllm_wrapper import VLLMWrapper
+        from openrouter_wrapper import OpenRouterWrapper
+        from emobird_poc import Emobird
+        from logger import get_logger
 
 
 DATA_ROOT = Path("/mnt/shared/adarsh/data/seceu")
@@ -208,12 +229,11 @@ def extract_scores(text: str, fallback: List[float] | None = None) -> np.ndarray
 
 def build_prompt(story: str, options: List[str]) -> str:
     opts = ", ".join(f"({i+1}) {opt}" for i, opt in enumerate(options))
-    return f'''You are an empathetic AI assistant. Your task is to carefully read the following story and evaluate the emotional state of the main character.
-You will be given four emotion options. For each option, assign a score from 0 to 10 representing how intensely the main character feels that emotion.
+    return f'''Read the story and score each of the four emotion options.
 
-**Important Constraints:**
-1. Each score must be between 0 and 10 (inclusive).
-2. The sum of your scores for the four options MUST be exactly 10.
+Rules:
+- Each score is between 0 and 10 (inclusive).
+- The four scores must sum to exactly 10.
 
 Story:
 {story}
@@ -240,8 +260,28 @@ def main():
     parser.add_argument("--max-items", type=int, default=0, help="0 = all")
     parser.add_argument("--iterations", type=int, default=1, help="repeat the full set and average")
     parser.add_argument("--temperature", type=float, default=None)
+    parser.add_argument("--env-file", type=str, default="", help="Path to a bash/.env file with KEY=VALUE or 'export KEY=VALUE' lines to pre-load (e.g., OPENROUTER_API_KEY)")
+    parser.add_argument("--model", type=str, default="", help="Override model name (updates config.llm_model_name) e.g., meta-llama/Llama-3.1-8B-Instruct or an OpenRouter model ID")
+    # OpenRouter-specific overrides
+    parser.add_argument("--api-key", type=str, default="", help="OpenRouter API key (overrides env)")
+    parser.add_argument("--base-url", type=str, default="", help="OpenRouter base URL (overrides env)")
+    parser.add_argument("--provider", type=str, default="", help="Optional provider routing hint (overrides env OPENROUTER_PROVIDER)")
+    parser.add_argument("--openrouter-timeout", type=int, default=None, help="Request timeout in seconds for OpenRouter (overrides env)")
+    parser.add_argument("--openrouter-max-retries", type=int, default=None, help="Max retries for OpenRouter requests (overrides env)")
     parser.add_argument("--output-preds", type=str, default="")
     parser.add_argument("--output-results", type=str, default="")
+    parser.add_argument("--backend", type=str, choices=["vllm", "openrouter"], default="", help="Override backend; else use config.llm_backend/env")
+    parser.add_argument("--seceu-max-tokens", type=int, default=256, help="Max tokens for SECEU per-call generation (previously 24)")
+    parser.add_argument(
+        "--seceu-stop-policy",
+        type=str,
+        choices=["none", "newline", "auto"],
+        default="none",
+        help=(
+            "Stop policy for SECEU generation: 'none' sends no stop tokens; 'newline' uses \\n; "
+            "'auto' uses none for OpenRouter and newline for vLLM. Default: none."
+        ),
+    )
     args = parser.parse_args()
 
     # Resolve defaults (prefer project-root data path if present, else fallback to DATA_ROOT)
@@ -262,22 +302,110 @@ def main():
     preds_out.parent.mkdir(parents=True, exist_ok=True)
     results_out.parent.mkdir(parents=True, exist_ok=True)
 
+    # Optionally load env vars from a bash/.env file BEFORE creating config
+    if getattr(args, "env_file", None):
+        env_path = Path(args.env_file).expanduser()
+        if env_path.exists():
+            try:
+                for raw in env_path.read_text(encoding="utf-8").splitlines():
+                    line = raw.strip()
+                    if not line or line.startswith("#"):
+                        continue
+                    if line.startswith("export "):
+                        line = line[len("export "):].strip()
+                    if "=" not in line:
+                        continue
+                    k, v = line.split("=", 1)
+                    k = k.strip()
+                    v = v.strip()
+                    # Strip surrounding single or double quotes
+                    if (len(v) >= 2) and ((v[0] == v[-1]) and v[0] in ('"', "'")):
+                        v = v[1:-1]
+                    # Only set if not already present in process env
+                    if k and (k not in os.environ):
+                        os.environ[k] = v
+            except Exception as e:
+                print(f"⚠️ Failed to load env file {env_path}: {e}")
+        else:
+            print(f"⚠️ Env file not found: {env_path}")
+
     # Config and model
     config = EmobirdConfig()
     if args.temperature is not None:
         config.update_config(temperature=float(args.temperature))
-    wrapper = VLLMWrapper(config)
-
-    # Enforce deterministic, short, single-line numeric output for SECEU
-    # - temperature: 0.0 (deterministic)
-    # - top_p: 1.0 (disable nucleus bias)
-    # - max_tokens: 24 (enough for "a b c d")
-    # - stop: newline to stop after first line of numbers
+    # CLI model override (applies to both vLLM and OpenRouter backends)
+    if getattr(args, "model", None):
+        model_name = (args.model or "").strip()
+        if model_name:
+            try:
+                config.update_config(llm_model_name=model_name)
+            except Exception:
+                config.llm_model_name = model_name
+    # OpenRouter CLI overrides
+    if getattr(args, "api_key", None):
+        key = (args.api_key or "").strip()
+        if key:
+            try:
+                config.update_config(openrouter_api_key=key)
+            except Exception:
+                config.openrouter_api_key = key
+    if getattr(args, "base_url", None):
+        bu = (args.base_url or "").strip()
+        if bu:
+            try:
+                config.update_config(openrouter_base_url=bu)
+            except Exception:
+                config.openrouter_base_url = bu
+    if getattr(args, "provider", None):
+        prov = (args.provider or "").strip()
+        if prov:
+            try:
+                config.update_config(openrouter_provider=prov)
+            except Exception:
+                config.openrouter_provider = prov
+    if getattr(args, "openrouter_timeout", None) is not None:
+        try:
+            config.update_config(openrouter_timeout=int(args.openrouter_timeout))
+        except Exception:
+            config.openrouter_timeout = int(args.openrouter_timeout)
+    if getattr(args, "openrouter_max_retries", None) is not None:
+        try:
+            config.update_config(openrouter_max_retries=int(args.openrouter_max_retries))
+        except Exception:
+            config.openrouter_max_retries = int(args.openrouter_max_retries)
+    backend = (args.backend or "").strip().lower() or config.llm_backend
+    # Persist chosen backend in config for downstream logging
     try:
-        wrapper.update_sampling_params(temperature=0.0, top_p=1.0, max_tokens=24, stop=["\n"])
+        config.update_config(llm_backend=backend)
     except Exception:
-        # Best-effort; continue with defaults if update not supported
-        pass
+        config.llm_backend = backend
+    # Fail fast if OpenRouter selected but API key is missing
+    if backend == "openrouter" and not getattr(config, "openrouter_api_key", None):
+        raise RuntimeError(
+            "OpenRouter backend selected but API key is missing. Set OPENROUTER_API_KEY in the environment, pass --api-key, or load with --env-file."
+        )
+
+    # Mirror critical overrides into environment so Emobird() picks them up in its own EmobirdConfig
+    os.environ.setdefault("EMOBIRD_MODEL", str(config.llm_model_name))
+    os.environ["EMOBIRD_LLM_BACKEND"] = backend
+    if getattr(config, "openrouter_api_key", None):
+        os.environ["OPENROUTER_API_KEY"] = str(config.openrouter_api_key)
+    if getattr(config, "openrouter_base_url", None):
+        os.environ["OPENROUTER_BASE_URL"] = str(config.openrouter_base_url)
+    if getattr(config, "openrouter_provider", None):
+        os.environ["OPENROUTER_PROVIDER"] = str(config.openrouter_provider)
+    if getattr(config, "openrouter_timeout", None) is not None:
+        os.environ["OPENROUTER_TIMEOUT"] = str(int(config.openrouter_timeout))
+    if getattr(config, "openrouter_max_retries", None) is not None:
+        os.environ["OPENROUTER_MAX_RETRIES"] = str(int(config.openrouter_max_retries))
+
+    # Instantiate EmoBIRD pipeline and reuse its wrapper for SECEU generation
+    eb = Emobird()
+    wrapper = eb.vllm_wrapper
+
+    # Important: do NOT globally override wrapper sampling here, as it affects all
+    # EmoBIRD pipeline stages (e.g., factor generation). We enforce deterministic
+    # numeric output only in the SECEU call below via per-call overrides.
 
     # Load data
     items = load_items(items_path)
@@ -292,6 +420,19 @@ def main():
     if args.max_items and args.max_items > 0:
         item_list = item_list[: args.max_items]
 
+    # Align standards and human pattern to the processed subset length
+    subset_n = len(item_list)
+    try:
+        if subset_n != len(standard_scores):
+            standard_scores = np.array(standard_scores[:subset_n], dtype=float)
+    except Exception:
+        standard_scores = np.array(standard_scores[:subset_n], dtype=float)
+    try:
+        if subset_n != len(human_pattern):
+            human_pattern = np.array(human_pattern[:subset_n], dtype=float)
+    except Exception:
+        human_pattern = np.array(human_pattern[:subset_n], dtype=float)
+
     logger = get_logger()
 
     # Run for N iterations and average distances pattern across iterations
@@ -301,13 +442,50 @@ def main():
     for it in range(1, args.iterations + 1):
         iter_preds: List[List[float]] = []
         distances_iter: List[float] = []
+        # Stop policy: control per-call stop behavior for numeric output stability.
+        policy = (getattr(args, "seceu_stop_policy", "none") or "none").lower()
+        if policy == "auto":
+            eff_stop = [] if backend == "openrouter" else ["\n"]
+            stop_policy_meta = "none" if backend == "openrouter" else "\\n"
+        elif policy == "newline":
+            eff_stop = ["\n"]
+            stop_policy_meta = "\\n"
+        else:  # "none"
+            eff_stop = []
+            stop_policy_meta = "none"
+        seceu_max_tokens = int(getattr(args, "seceu_max_tokens", 128) or 128)
+
         for idx, item in enumerate(tqdm(item_list, desc=f"Processing items (iter {it})")):
             story = item["story"]
             options = item["options"]
             prompt = build_prompt(story, options)
 
-            # Generate model output
-            response = wrapper.generate(prompt, component="seceu", interaction_type="seceu_prompt")
+            # Run full EmoBIRD pipeline for logging per stage
+            try:
+                result = eb.analyze_emotion(story)
+                # Persist a structured log of the pipeline output for this story
+                try:
+                    from EmoBIRD.logger import get_logger as _pkg_get_logger  # ensure same global
+                    _pkg_get_logger().log_analysis_result(story, result)
+                except Exception:
+                    logger.log_analysis_result(story, result)
+            except Exception as e:
+                logger.log_error(
+                    component="seceu",
+                    error_type="emobird_pipeline_failure",
+                    error_message=str(e),
+                    context={"item_index": idx, "iteration": it},
+                )
+
+            # Generate model output (deterministic, single-line numeric) using EmoBIRD's wrapper
+            response = wrapper.generate(
+                prompt,
+                component="seceu",
+                interaction_type="seceu_prompt",
+                stop=eff_stop,
+                max_tokens_override=seceu_max_tokens,
+                temperature_override=0.0,
+            )
 
             # Log raw interaction
             logger.log_interaction(
@@ -348,7 +526,10 @@ def main():
     distances = np.mean(np.vstack(all_iter_distances), axis=0)
     seceu_score = float(np.mean(distances))
     eq_score = float(15.0 * ((population_mean - seceu_score) / population_std) + 100.0)
-    pattern_similarity = float(pearsonr(distances, human_pattern)[0])
+    # Ensure equal length and enough points for correlation
+    if len(distances) != len(human_pattern):
+        human_pattern = np.array(human_pattern[: len(distances)], dtype=float)
+    pattern_similarity = float(pearsonr(distances, human_pattern)[0]) if len(distances) >= 2 else float("nan")
 
     # Save predictions (keep only final iteration if single iteration, else save all)
     preds_payload: Dict[str, Any] = {"predictions": all_iter_preds[-1] if args.iterations == 1 else all_iter_preds}
@@ -364,14 +545,19 @@ def main():
             "items_path": str(items_path),
             "standard_path": str(std_path),
             "iterations": args.iterations,
-            "model_name": config.llm_model_name,
-            "sampling_temperature": config.temperature,
+            "backend": getattr(getattr(eb, "config", config), "llm_backend", config.llm_backend),
+            "model_name": getattr(getattr(eb, "config", config), "llm_model_name", config.llm_model_name),
+            # Actual overrides used for SECEU generation
+            "sampling_temperature": 0.0,
+            "sampling_top_p": (float(getattr(wrapper, "_top_p", 1.0)) if backend == "openrouter" else None),
+            "seceu_max_tokens": seceu_max_tokens,
+            "stop_policy": stop_policy_meta,
         },
     }
     with results_out.open("w", encoding="utf-8") as f:
         json.dump(results, f, indent=2)
 
-    print(f"✅ SECEU evaluation complete. SECEU Score: {results['seceu_score']}")
+    print(f"✅ SECEU evaluation complete. SECEU Score: {results['seceu_score']}  |  EQ Score: {results['eq_score']}")
     print(f"📄 Predictions saved to: {preds_out}")
     print(f"📄 Results saved to: {results_out}")
 

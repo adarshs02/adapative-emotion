@@ -1,0 +1,25 @@
+Given the following situation and psychological factors, assess the likelihood of each emotion.
+
+SITUATION:
+{situation}
+
+IDENTIFIED FACTORS:
+{factors}
+
+TASK:
+For each emotion below, provide a likelihood rating based on the situation and factors above.
+Use ONLY these exact ratings: very-unlikely, unlikely, neutral, likely, very-likely
+
+EMOTIONS TO ASSESS:
+{emotions_list}
+
+FORMAT YOUR RESPONSE EXACTLY LIKE THIS (one line per emotion):
+emotion_name: rating
+
+Example format:
+joy: likely
+anger: very-unlikely
+sadness: neutral
+
+You MUST output exactly one line per emotion (no blanks).
+Do NOT include any text other than the lines in the specified format. Begin now:
