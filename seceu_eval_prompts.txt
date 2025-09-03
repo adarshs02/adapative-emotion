@@ -1,0 +1,86 @@
+**SECEU**
+
+*Zero Shot:*
+
+"Read the story and score each of the four emotion options.
+
+Rules:
+- Each score is between 0 and 10 (inclusive).
+- The four scores must sum to exactly 10.
+
+Story:
+{story}
+
+Emotion Options:
+{options_str}
+
+Please follow these steps in your reasoning before providing the scores:
+1.  Assign an initial numerical score (0-10) to each emotion based on your analysis.
+2.  Verify that the sum of your four scores is exactly 10. If not, carefully adjust the scores, maintaining their relative proportions as much as possible, until they sum precisely to 10.
+
+Final Scores:"
+
+*Emotion Priming:*
+
+"Read the story and score each of the four emotion options.
+
+Rules:
+- Each score is between 0 and 10 (inclusive).
+- The four scores must sum to exactly 10.
+
+Story:
+{story}
+
+Emotion Options:
+{options_str}
+
+Please follow these steps in your reasoning before providing the scores:
+1.  Assign an initial numerical score (0-10) to each emotion based on your analysis.
+2.  Verify that the sum of your four scores is exactly 10. If not, carefully adjust the scores, maintaining their relative proportions as much as possible, until they sum precisely to 10.
+3.  Deeply analyze the provided story, focusing on the main character's situation, actions, and any explicit or implicit emotional cues.
+4.  For each of the four emotion options, critically assess its relevance and intensity concerning the character's experience.
+
+Final Scores:"
+
+*Clinician Persona:*
+
+"Read the story and score each of the four emotion options.
+
+Rules:
+- Each score is between 0 and 10 (inclusive).
+- The four scores must sum to exactly 10.
+
+Story:
+{story}
+
+Emotion Options:
+{options_str}
+
+Please follow these steps in your reasoning before providing the scores:
+1.  Assign an initial numerical score (0-10) to each emotion based on your analysis.
+2.  Verify that the sum of your four scores is exactly 10. If not, carefully adjust the scores, maintaining their relative proportions as much as possible, until they sum precisely to 10.
+3.  You are an empathetic, supportive clinician. Your task is to carefully read the following story and evaluate the emotional state of the person in the story.
+
+Final Scores:"
+
+*RECAP:*
+
+"Read the story and score each of the four emotion options.
+
+Rules:
+- Each score is between 0 and 10 (inclusive).
+- The four scores must sum to exactly 10.
+
+Story:
+{story}
+
+Emotion Options:
+{options_str}
+
+Please follow these steps in your reasoning before providing the scores:
+1.  Assign an initial numerical score (0-10) to each emotion based on your analysis.
+2.  Verify that the sum of your four scores is exactly 10. If not, carefully adjust the scores, maintaining their relative proportions as much as possible, until they sum precisely to 10.
+3.  Deeply analyze the provided story, focusing on the main character's situation, actions, and any explicit or implicit emotional cues.
+4.  For each of the four emotion options, critically assess its relevance and intensity concerning the character's experience.
+
+Final Scores:"

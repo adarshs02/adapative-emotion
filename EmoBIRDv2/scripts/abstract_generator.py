@@ -10,7 +10,7 @@ Abstract Generator (EmoBIRDv2)
 import json
 import os
 import sys
-from typing import Optional
+from typing import Optional, Dict, Any
 
 import requests
 
@@ -41,20 +41,42 @@ def build_user_prompt(template: str, situation: str) -> str:
     return template.format(situation=situation.strip())
 
 
-def call_openrouter(prompt: str, api_key: str, model: str, temperature: float, max_tokens: int) -> str:
+def call_openrouter(
+    prompt: str,
+    api_key: str,
+    model: str,
+    temperature: float,
+    max_tokens: int,
+    *,
+    response_format: Optional[Dict[str, Any]] = None,
+    system: Optional[str] = None,
+    extra_headers: Optional[Dict[str, str]] = None,
+    extra_payload: Optional[Dict[str, Any]] = None,
+) -> str:
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
+        "Accept": "application/json",
     }
-    payload = {
+    if extra_headers:
+        headers.update({k: v for k, v in extra_headers.items() if v is not None})
+
+    messages = []
+    if system:
+        messages.append({"role": "system", "content": system})
+    messages.append({"role": "user", "content": prompt})
+
+    payload: Dict[str, Any] = {
         "model": model,
-        "messages": [
-            {"role": "user", "content": prompt},
-        ],
+        "messages": messages,
         "temperature": float(temperature),
         "max_tokens": int(max_tokens),
-        # Do not send stop tokens to avoid premature truncation
     }
+    if response_format is not None:
+        payload["response_format"] = response_format
+    if extra_payload:
+        payload.update({k: v for k, v in extra_payload.items() if v is not None})
+
     resp = requests.post(
         OPENROUTER_URL,
         headers=headers,
@@ -63,8 +85,19 @@ def call_openrouter(prompt: str, api_key: str, model: str, temperature: float, m
     )
     resp.raise_for_status()
     data = resp.json()
+    # Surface API-declared errors even with 200 status
+    if isinstance(data, dict) and data.get("error"):
+        raise RuntimeError(f"OpenRouter error: {data.get('error')}")
     try:
-        return (data["choices"][0]["message"]["content"] or "").strip()
+        content = (data["choices"][0]["message"].get("content") or "").strip()
+        if content:
+            return content
+        # Fallback: use tool call function arguments if present
+        tool_calls = data["choices"][0]["message"].get("tool_calls") or []
+        if tool_calls:
+            args = tool_calls[0].get("function", {}).get("arguments")
+            return (args or "").strip()
+        return ""
     except Exception:
         return ""
 

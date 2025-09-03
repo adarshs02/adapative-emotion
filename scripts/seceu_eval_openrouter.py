@@ -217,16 +217,16 @@ def build_prompt(story: str, options: List[str]) -> str:
 Rules:
 - Each score is between 0 and 10 (inclusive).
 - The four scores must sum to exactly 10.
-- You are an empathetic, supportive clinician. Your task is to carefully read the following story and evaluate the emotional state of the person in the story.
 
 Story:
 {story}
 
 Emotion Options:
-{opts}
+{options_str}
 
-Do not show your reasoning. Think silently and output only the final scores.
-Output format: a single line with four numbers separated by spaces (e.g., 1.5 3.0 4.5 1.0).
+Please follow these steps in your reasoning before providing the scores:
+1.  Assign an initial numerical score (0-10) to each emotion based on your analysis.
+2.  Verify that the sum of your four scores is exactly 10. If not, carefully adjust the scores, maintaining their relative proportions as much as possible, until they sum precisely to 10.
 
 Final Scores:'''
 

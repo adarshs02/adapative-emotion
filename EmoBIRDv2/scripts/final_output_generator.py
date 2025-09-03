@@ -5,7 +5,7 @@ Final Output Generator (EmoBIRDv2)
 - Purpose: Produce a natural, empathetic final narrative that weaves together the situation
   and all intermediate insights. This is the LAST step of EmoBIRD; any downstream evaluation
   (e.g., SEC-EU) is external and not handled here.
-- Loads the conversational prompt from prompts/output_generation_prompt.txt
+- Loads the conversational prompt from prompts/final_output_prompt.txt
 - Fills placeholders for {situation} (or {user_input}), {emotion_insights}, {context_info}
 - Calls OpenRouter and returns the textual response
 """
@@ -34,7 +34,7 @@ from EmoBIRDv2.scripts.abstract_generator import call_openrouter
 def load_prompt() -> str:
     # Conversational final output prompt (not SEC-EU). Must contain:
     # either {situation} or {user_input}, plus {emotion_insights} and {context_info}
-    path = os.path.join(PROMPT_DIR, "output_generation_prompt.txt")
+    path = os.path.join(PROMPT_DIR, "final_output_prompt.txt")
     with open(path, "r", encoding="utf-8") as f:
         return f.read()
 

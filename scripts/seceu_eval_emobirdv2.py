@@ -3,10 +3,12 @@
 SEC-EU evaluation using the EmoBIRDv2 pipeline via OpenRouter.
 
 Flow per item (story):
-1) Abstract from situation
+1) Abstract from situation (only the story is provided here)
 2) Factors from abstract
-3) Likert ratings for the 4 SEC-EU options (treated as the emotion list)
-4) Map Likert ratings to weights, renormalize to produce 4 scores summing to 10
+3) Factor value selection from the story and discovered factors ("select" module)
+4) Likert ratings for the 4 SEC-EU options (treated as the emotion list)
+5) Build evaluation preamble (situation + emotion insights + context)
+6) Append the SEC-EU scoring prompt and generate four numeric scores that sum to 10
 
 Outputs mirror scripts/seceu_eval.py:
 - results/seceu/seceu_emobirdv2_predictions.json
@@ -20,7 +22,7 @@ import sys
 import json
 import argparse
 from pathlib import Path
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Tuple
 
 import numpy as np
 from tqdm import tqdm
@@ -56,8 +58,12 @@ from EmoBIRDv2.scripts.likert_matcher import (
     build_user_prompt as build_lik_user,
     parse_likert_lines,
 )
+from EmoBIRDv2.scripts.factor_value_selector import (
+    load_prompt as load_sel_prompt,
+    build_user_prompt as build_sel_user,
+    parse_selection_block,
+)
 from EmoBIRDv2.utils.utils import robust_json_loads
-from pathlib import Path
 import re
 
 
@@ -132,12 +138,11 @@ def _build_seceu_prompt(story: str, options: List[str]) -> str:
     Used only for logging/reproducibility, not for inference in this pipeline.
     """
     options_str = ", ".join(f"({i+1}) {opt}" for i, opt in enumerate(options))
-    prompt = f'''You are an empathetic AI assistant. Your task is to carefully read the following story and evaluate the emotional state of the main character.
-You will be given four emotion options. For each option, assign a score from 0 to 10 representing how intensely the main character feels that emotion.
+    prompt = f'''Read the story and score each of the four emotion options.
 
-**Important Constraints:**
-1. Each score must be between 0 and 10 (inclusive).
-2. The sum of your scores for the four options MUST be exactly 10.
+Rules:
+- Each score is between 0 and 10 (inclusive).
+- The four scores must sum to exactly 10.
 
 Story:
 {story}
@@ -150,7 +155,6 @@ Please follow these steps in your reasoning before providing the scores:
 2.  For each of the four emotion options, critically assess its relevance and intensity concerning the character's experience.
 3.  Assign an initial numerical score (0-10) to each emotion based on your analysis.
 4.  Verify that the sum of your four scores is exactly 10. If not, carefully adjust the scores, maintaining their relative proportions as much as possible, until they sum precisely to 10.
-5.  Provide ONLY the four final numerical scores, separated by spaces (e.g., 1.5 3.0 4.5 1.0). Do not add any other text or explanation before or after the scores.
 
 Final Scores:'''
     return prompt
@@ -165,6 +169,7 @@ def main():
     parser.add_argument("--abs-max-tokens", type=int, default=ABSTRACT_MAX_TOKENS, help="Max new tokens for abstract step")
     parser.add_argument("--fac-max-tokens", type=int, default=FACTOR_MAX_TOKENS, help="Max new tokens for factors step")
     parser.add_argument("--likert-max-tokens", type=int, default=LIKERT_MAX_TOKENS, help="Max new tokens for likert step")
+    parser.add_argument("--select-max-tokens", type=int, default=512, help="Max new tokens for factor value selection step")
     parser.add_argument("--seceu-max-tokens", type=int, default=256, help="Max new tokens for SECEU numeric scoring generation")
     parser.add_argument("--log-raw", action="store_true", help="Print truncated raw model outputs")
     args = parser.parse_args()
@@ -184,6 +189,7 @@ def main():
     tmpl_abs = load_abs_prompt()
     tmpl_fac = load_fac_prompt()
     tmpl_lik = load_lik_prompt()
+    tmpl_sel = load_sel_prompt()
 
     # Load eval output preamble prompt (prepended before SECEU scoring)
     def _load_eval_output_prompt() -> str:
@@ -209,13 +215,7 @@ def main():
         story = item["story"]
         options = item["options"]  # 4 strings
 
-        # Log the original SEC-EU prompt for this item (for reference) if requested
-        if args.log_raw:
-            try:
-                seceu_prompt = _build_seceu_prompt(story, options)
-                print(f"[seceu_prompt][{idx+1}]\n{seceu_prompt}")
-            except Exception as e:
-                print(f"[seceu_prompt][{idx+1}] failed to build: {e}")
+        # Note: We do not feed the SEC-EU scoring prompt at the start. It is appended only after the full pipeline steps.
 
         # 1) Abstract
         abs_user = build_abs_user(tmpl_abs, story)
@@ -258,7 +258,19 @@ def main():
                 {"name": "consequences", "description": "Severity of potential outcomes", "possible_values": ["mild", "severe"]},
             ]
 
-        # 3) Likert for the 4 options (as the emotion list)
+        # 3) Select factor values from the full situation using the discovered factors
+        sel_user = build_sel_user(tmpl_sel, story, factors)
+        sel_raw = _run_with_retries(
+            prompt=sel_user,
+            model=args.model,
+            temperature=args.temperature,
+            max_tokens=args["select_max_tokens"] if isinstance(args, dict) else args.select_max_tokens,
+            log_prefix=f"[select][{idx+1}]",
+            log_raw=args.log_raw,
+        )
+        selections = parse_selection_block(sel_raw) if sel_raw else []
+
+        # 4) Likert for the 4 options (as the emotion list)
         lik_user = build_lik_user(tmpl_lik, story, factors, options)
         lik_raw = _run_with_retries(
             prompt=lik_user,
@@ -270,7 +282,7 @@ def main():
         )
         likert_items = parse_likert_lines(lik_raw) if lik_raw else []
 
-        # 4) Build eval preamble with emotion insights + optional context, then append SECEU scoring prompt
+        # 5) Build eval preamble with emotion insights + optional context (including selected factors), then append SECEU scoring prompt
         def _fmt_emotion_insights(items: List[Dict[str, Any]]) -> str:
             outs = []
             for it in items or []:
@@ -284,8 +296,18 @@ def main():
                         outs.append(f"{em}: {rt}")
             return ", ".join(outs) if outs else "(no clear signals)"
 
+        def _fmt_selected_factors(items: List[Dict[str, Any]]) -> str:
+            pairs = []
+            for it in items or []:
+                n = str(it.get("name", "")).strip()
+                v = str(it.get("value", "")).strip()
+                if n and v:
+                    pairs.append(f"{n}={v}")
+            return ", ".join(pairs) if pairs else "(none)"
+
         emotion_insights = _fmt_emotion_insights(likert_items)
-        context_info = f"Context summary: {abstract_text}"
+        selected_summary = _fmt_selected_factors(selections)
+        context_info = f"Context summary: {abstract_text}\nSelected factors: {selected_summary}"
 
         preamble = tmpl_eval.format(
             user_input=story,
@@ -295,7 +317,7 @@ def main():
         seceu_prompt = _build_seceu_prompt(story, options)
         combined_prompt = f"{preamble}\n\n{seceu_prompt}"
 
-        # 5) Call OpenRouter to get numeric scores from the combined prompt
+        # 6) Call OpenRouter to get numeric scores from the combined prompt
         def _extract_scores_with_info(text: str, fallback: List[float] | None = None) -> Tuple[np.ndarray, Dict[str, Any]]:
             if fallback is None:
                 fallback = [2.5, 2.5, 2.5, 2.5]
