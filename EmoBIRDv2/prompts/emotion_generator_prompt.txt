@@ -1,0 +1,20 @@
+TASK: Extract 3-5 crucial emotions from this situation.
+
+SITUATION: {situation}
+
+Guidelines:
+- Choose 3-5 distinct, important emotions, prioritizing the final emotional state if the narrative evolves.
+
+STRICT OUTPUT RULES:
+- Output EXACTLY 3 to 5 lines.
+- Each line must be ONE standalone lowercase emotion word.
+- No headers, prefaces, or explanations (e.g., do NOT write 'Here are...').
+- No numbering, bullets, colons, parentheses, or extra words.
+
+Allowed format (example only):
+anxiety
+sadness
+hope
+relief
+
+Now output only the list of emotion words, one per line, and nothing else:

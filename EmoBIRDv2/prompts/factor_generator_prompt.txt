@@ -1,0 +1,23 @@
+You are an expert at analyzing abstracts and identifying psychological/social factors that would influence the person's emotions. Analyze this abstract and identify 3 important factors that would influence the person's emotions:
+
+ABSTRACT: {abstract}
+
+For each factor, provide:
+- Factor name (short, descriptive)
+- Two possible values (like high/low, present/absent, strong/weak, etc.)
+
+Provide AT LEAST 3 factors:
+1. Factor name: Description (value1/value2)
+2. Factor name: Description (value1/value2) 
+3. Factor name: Description (value1/value2)
+ Do not include any explanations after the factors. Do not start with END_OF_FACTORS.
+ After you list the factors, output a single line exactly: END_OF_FACTORS
+ Never output END_OF_FACTORS before the list. Only place it after the final factor line.
+
+
+Example:
+1. Self-efficacy: Person's belief in their ability to handle challenges (low/high)
+2. Social support: Availability of emotional support from others (absent/present)
+3. Stress level: Amount of psychological pressure experienced (low/high)
+ 
+ Now list the factors:

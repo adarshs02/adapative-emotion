@@ -1,30 +1,40 @@
 #!/usr/bin/env python3
 """
-Extended EmoPatient runner:
+Extended EmoPatient runner (hardened):
 - Mode 1 (default): runs EmoBIRD pipeline locally (vLLM)
-- Mode 2: runs remote OpenAI-compatible (e.g., Lambda) model via API key
+- Mode 2: runs remote OpenAI-compatible (e.g., OpenRouter/Lambda) model via API key
 
-Why: sometimes you want to try other hosted models without standing up vLLM locally.
+What's new in this version:
+- Robust HTTP JSON posting with retries/backoff for 429/5xx/timeouts
+- Treats non-JSON bodies (empty/HTML/CF pages) as transient, with readable error snippets
+- Optional small inter-call delay to be gentle on providers
+- Accept header set explicitly; connection pooling via requests.Session()
 
 Environment variables (used if flags omitted):
 - EMOBIRD_MODEL: default local model for EmoBIRD (prefers Llama)
-- LAMBDA_API_KEY (or OPENAI_API_KEY)
-- LAMBDA_API_BASE (or OPENAI_BASE_URL/OPENAI_API_BASE)  e.g., https://api.lambdalabs.com/v1
+- OPENROUTER_API_KEY (preferred) or LAMBDA_API_KEY
+- OPENROUTER_BASE_URL (preferred) or LAMBDA_API_BASE  e.g., https://openrouter.ai/api/v1
+- OPENROUTER_CONNECT_TIMEOUT (default 20), OPENROUTER_READ_TIMEOUT (default 180)
+- OPENROUTER_INTERCALL_DELAY_MS (default 250), OPENROUTER_MAX_RETRIES (default 4)
+- OPENROUTER_TITLE, HTTP_REFERER (optional OpenRouter niceties)
 
 Examples
 - Local EmoBIRD (default):
   CUDA_VISIBLE_DEVICES=0 python run_emopatient_EmoBIRD_ext.py --provider emo
 
-- Remote OpenAI-compatible (Lambda/OpenRouter/etc):
-  LAMBDA_API_KEY=... LAMBDA_API_BASE=https://api.openrouter.ai/v1 \
+- Remote OpenRouter/OpenAI-compatible:
+  OPENROUTER_API_KEY=... OPENROUTER_BASE_URL=https://openrouter.ai/api/v1 \
   python run_emopatient_EmoBIRD_ext.py --provider openai \
-    --remote-model meta-llama/Meta-Llama-3.1-8B-Instruct
+    --remote-model meta-llama/llama-3.1-8b-instruct \
+    --openrouter-read-timeout 240 --max-retries 4 --inter-call-delay-ms 300
 """
 
 import argparse
 import json
 import os
 import sys
+import time
+import random
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 from datetime import datetime
@@ -41,7 +51,7 @@ try:
 except Exception:  # pragma: no cover
     requests = None
     import urllib.request
-    import urllib.error
+    import urllib.error  # type: ignore
 
 # Visual progress bar (with safe fallback)
 try:
@@ -62,23 +72,42 @@ from EmoBIRD.logger import EmobirdLogger, set_logger, get_logger, close_logger
 DATASET_PATH = HERE.parent / "scenarios_30.json"
 RESULTS_DIR = HERE.parent / "results"
 LOGS_DIR = HERE.parent / "logs"
-DEFAULT_REMOTE_MODEL = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+DEFAULT_REMOTE_MODEL = "openai/gpt-oss-20b"
 
 
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="Run EmoPatient with EmoBIRD (local) or OpenAI-compatible remote API")
-    p.add_argument("--provider", choices=["emo", "openai"], default="emo", help="'emo' = EmoBIRD local vLLM, 'openai' = remote OpenAI-compatible API")
+    p.add_argument("--provider", choices=["emo", "openai"], default="emo",
+                   help="'emo' = EmoBIRD local vLLM, 'openai' = remote OpenAI-compatible API")
 
     # Remote OpenAI-compatible configuration
     p.add_argument("--remote-model", default=None, help="Remote model name/id")
-    p.add_argument("--remote-base-url", default=None, help="Base URL for OpenAI-compatible API (env LAMBDA_API_BASE/OPENAI_BASE_URL)")
-    p.add_argument("--api-key", default=LAMBDA_API_KEY, help="API key (env LAMBDA_API_KEY/OPENAI_API_KEY)")
+    p.add_argument("--remote-base-url", default=None, help="Base URL for OpenAI-compatible API (env OPENROUTER_BASE_URL or LAMBDA_API_BASE)")
+    p.add_argument("--api-key", default=None, help="API key (env OPENROUTER_API_KEY or LAMBDA_API_KEY)")
     p.add_argument("--temperature", type=float, default=0.6)
     p.add_argument("--max-tokens", type=int, default=220)
+    # OpenRouter timeout controls
+    p.add_argument("--openrouter-connect-timeout", type=int, default=None,
+                   help="TCP connect timeout in seconds (env OPENROUTER_CONNECT_TIMEOUT, default 20)")
+    p.add_argument("--openrouter-read-timeout", type=int, default=None,
+                   help="Read/response timeout in seconds (env OPENROUTER_READ_TIMEOUT, default 180)")
+
+    # NEW: polite pacing + retries
+    p.add_argument("--inter-call-delay-ms", type=int,
+                   default=int(os.environ.get("OPENROUTER_INTERCALL_DELAY_MS", "250")),
+                   help="Sleep this many ms between remote calls")
+    p.add_argument("--max-retries", type=int,
+                   default=int(os.environ.get("OPENROUTER_MAX_RETRIES", "4")),
+                   help="Max transient retries for 429/5xx/timeouts/parse errors")
 
     # Execution controls
-    p.add_argument("--scenario-index", type=int, default=None, help="Run only this scenario (0-based). If omitted, runs all.")
-    p.add_argument("--scenarios", default=str(DATASET_PATH), help="Path to scenarios JSON (default: datasets/EmoPatient/scenarios_30.json)")
+    p.add_argument("--scenario-index", type=int, default=None,
+                   help="Run only this scenario (0-based). If omitted, runs all.")
+    p.add_argument("--scenarios", default=str(DATASET_PATH),
+                   help="Path to scenarios JSON (default: datasets/EmoPatient/scenarios_30.json)")
+    # Local EmoBIRD model override
+    p.add_argument("--model", default=None,
+                   help="Local EmoBIRD model name/id (env EMOBIRD_MODEL). Only used when --provider emo")
     return p
 
 
@@ -103,37 +132,199 @@ def compose_situation_text(scn: Dict[str, Any], question: str) -> str:
         f"Treatment plan: {tplan}\n\n"
         f"Patient narrative:\n{narrative}\n\n"
         f"Question:\n{question}\n\n"
-        f"Please provide a concise, empathetic, medically grounded answer tailored to the above context."
+        f"TASK: You are an empathetic AI assistant. Please provide a concise, empathetic, medically grounded answer tailored to the above context."
     )
     return situation
 
 
 # -------------------- Remote OpenAI-compatible helpers --------------------
 
-def _http_post_json(url: str, headers: Dict[str, str], payload: Dict[str, Any]) -> Dict[str, Any]:
-    body = json.dumps(payload).encode("utf-8")
-    if requests is not None:
-        r = requests.post(url, headers=headers, data=body, timeout=120)
-        r.raise_for_status()
-        return r.json()
-    else:  # urllib fallback
-        req = urllib.request.Request(url, method="POST")
-        for k, v in headers.items():
-            req.add_header(k, v)
-        req.add_header("Content-Type", "application/json")
+_SESSION = None
+def _session():
+    """Shared requests session for connection pooling."""
+    global _SESSION
+    if _SESSION is None and requests is not None:
+        _S = requests.Session()
+        _S.headers.update({"Accept": "application/json"})
+        _SESSION = _S
+    return _SESSION
+
+_TRANSIENT_STATUSES = {408, 409, 425, 429, 500, 502, 503, 504, 522, 524}
+
+
+def _post_json_with_retries(url: str,
+                            headers: Dict[str, str],
+                            payload: Dict[str, Any],
+                            *,
+                            connect_timeout: int,
+                            read_timeout: int,
+                            max_retries: int) -> Dict[str, Any]:
+    """
+    POST JSON with robust error handling:
+    - JSON encode (so requests sets proper headers)
+    - Retries on 429/5xx/timeouts and on non-JSON bodies
+    - Raises RuntimeError with a helpful snippet when giving up
+    """
+    last_err: Optional[str] = None
+    sess = _session()
+
+    for attempt in range(max_retries + 1):
         try:
-            with urllib.request.urlopen(req, data=body, timeout=120) as resp:
-                return json.loads(resp.read().decode("utf-8"))
-        except urllib.error.HTTPError as e:  # pragma: no cover
-            raise RuntimeError(f"HTTP {e.code}: {e.read().decode('utf-8', errors='ignore')}")
+            if requests is None:
+                # urllib fallback
+                req = urllib.request.Request(url, method="POST")  # type: ignore[attr-defined]
+                for k, v in headers.items():
+                    req.add_header(k, v)
+                req.add_header("Content-Type", "application/json")
+                req.add_header("Accept", "application/json")
+                body = json.dumps(payload).encode("utf-8")
+                try:
+                    with urllib.request.urlopen(req, data=body, timeout=read_timeout) as resp:  # type: ignore[attr-defined]
+                        raw = resp.read().decode("utf-8", errors="ignore")
+                        try:
+                            return json.loads(raw)
+                        except Exception:
+                            last_err = f"Non-JSON response (status {getattr(resp, 'status', '?')}). First 500 chars:\n{raw[:500]}"
+                            # treat as transient and retry
+                            raise RuntimeError(last_err)
+                except urllib.error.HTTPError as e:  # type: ignore[attr-defined]
+                    status = getattr(e, "code", 0)
+                    body = e.read().decode("utf-8", errors="ignore")
+                    if status in _TRANSIENT_STATUSES and attempt < max_retries:
+                        time.sleep(min(10.0, (2 ** attempt) * 0.5 + random.uniform(0, 0.25)))
+                        continue
+                    raise RuntimeError(f"HTTP {status} error:\n{body[:500]}") from e
+
+            else:
+                r = sess.post(url, headers=headers, json=payload,
+                              timeout=(connect_timeout, read_timeout))
+                status = r.status_code
+                if status in _TRANSIENT_STATUSES:
+                    retry_after = r.headers.get("Retry-After")
+                    if attempt < max_retries:
+                        sleep_s = float(retry_after) if (retry_after and retry_after.isdigit()) else min(
+                            10.0, (2 ** attempt) * 0.5 + random.uniform(0, 0.25)
+                        )
+                        time.sleep(sleep_s)
+                        continue
+                    # fallthrough to raise below
+
+                # Raise for non-transient HTTP client errors
+                r.raise_for_status()
+
+                # Parse JSON safely
+                try:
+                    return r.json()
+                except Exception:
+                    ct = r.headers.get("Content-Type", "")
+                    txt = ""
+                    try:
+                        txt = r.text
+                    except Exception:
+                        pass
+                    last_err = f"Non-JSON response (HTTP {status}, Content-Type={ct}). First 500 chars:\n{txt[:500]}"
+                    if attempt < max_retries:
+                        time.sleep(min(10.0, (2 ** attempt) * 0.5 + random.uniform(0, 0.25)))
+                        continue
+                    raise RuntimeError(last_err)
+
+        except (requests.exceptions.Timeout if requests else tuple(),  # type: ignore
+                requests.exceptions.ConnectionError if requests else tuple()) as e:  # type: ignore
+            last_err = f"{type(e).__name__}: {e}"
+            if attempt < max_retries:
+                time.sleep(min(10.0, (2 ** attempt) * 0.5 + random.uniform(0, 0.25)))
+                continue
+            raise RuntimeError(last_err) from e
+
+        except RuntimeError as e:
+            # If transient-like error and attempts remain, we already slept; else propagate
+            if attempt >= max_retries:
+                raise
+
+            time.sleep(min(10.0, (2 ** attempt) * 0.5 + random.uniform(0, 0.25)))
+
+    raise RuntimeError(last_err or "Unknown error during POST")
 
 
-def remote_chat_complete(base_url: str, api_key: str, model: str, prompt: str, temperature: float, max_tokens: int) -> str:
+def _extract_message_text_from_openai_response(data: Dict[str, Any]) -> str:
+    """Best-effort extraction of assistant text from OpenAI-compatible response."""
+    try:
+        choices = data.get("choices") or []
+        if not choices:
+            return ""
+        c0 = choices[0] or {}
+        # Chat-style content
+        msg = c0.get("message") or {}
+        content = msg.get("content")
+        if isinstance(content, str) and content.strip():
+            return content.strip()
+        # Legacy text completion
+        txt = c0.get("text")
+        if isinstance(txt, str) and txt.strip():
+            return txt.strip()
+        # Reasoning fallback fields if present
+        reasoning = msg.get("reasoning")
+        if isinstance(reasoning, str) and reasoning.strip():
+            return reasoning.strip()
+        rdet = msg.get("reasoning_details")
+        if isinstance(rdet, list):
+            parts = [p.get("text", "") for p in rdet if isinstance(p, dict)]
+            joined = "\n".join([p for p in parts if isinstance(p, str) and p.strip()])
+            if joined.strip():
+                return joined.strip()
+        return ""
+    except Exception:
+        return ""
+
+
+def _extract_text_from_responses_api(data: Dict[str, Any]) -> str:
+    """Extract text from OpenRouter unified /responses response."""
+    try:
+        out = data.get("output")
+        if isinstance(out, list):
+            texts: List[str] = []
+            for block in out:
+                content = block.get("content") if isinstance(block, dict) else None
+                if isinstance(content, list):
+                    for part in content:
+                        txt = part.get("text") if isinstance(part, dict) else None
+                        if isinstance(txt, str) and txt.strip():
+                            texts.append(txt.strip())
+            if texts:
+                return "\n".join(texts)
+        cont = data.get("content")
+        if isinstance(cont, list) and cont and isinstance(cont[0], dict):
+            txt = cont[0].get("text")
+            if isinstance(txt, str) and txt.strip():
+                return txt.strip()
+        return ""
+    except Exception:
+        return ""
+
+
+def remote_chat_complete(base_url: str,
+                         api_key: str,
+                         model: str,
+                         prompt: str,
+                         temperature: float,
+                         max_tokens: int,
+                         *,
+                         connect_timeout: int,
+                         read_timeout: int,
+                         max_retries: int) -> str:
+    """Call chat/completions with robust fallback to /responses when truncated/empty."""
     url = base_url.rstrip("/") + "/chat/completions"
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
+        "Accept": "application/json",
     }
+    # Optional OpenRouter headers (recommended)
+    referer = os.environ.get("OPENROUTER_REFERER") or os.environ.get("HTTP_REFERER")
+    if referer:
+        headers["HTTP-Referer"] = referer
+    headers["X-Title"] = os.environ.get("OPENROUTER_TITLE", "EmoPatient")
+
     messages = [
         {"role": "system", "content": "You are an empathetic, clinically careful assistant."},
         {"role": "user", "content": prompt},
@@ -144,23 +335,58 @@ def remote_chat_complete(base_url: str, api_key: str, model: str, prompt: str, t
         "temperature": max(0.0, float(temperature)),
         "max_tokens": int(max_tokens),
     }
-    data = _http_post_json(url, headers, payload)
+
+    data = _post_json_with_retries(url, headers, payload,
+                                   connect_timeout=connect_timeout,
+                                   read_timeout=read_timeout,
+                                   max_retries=max_retries)
+
+    text = _extract_message_text_from_openai_response(data).strip()
+    truncated = False
     try:
-        return (data["choices"][0]["message"]["content"] or "").strip()
-    except Exception as e:
-        raise RuntimeError(f"Malformed response from OpenAI-compatible API: {e}; got: {json.dumps(data)[:500]}")
+        ch0 = (data.get("choices") or [None])[0] or {}
+        fin = str(ch0.get("finish_reason", "")).lower()
+        truncated = (fin == "length")
+    except Exception:
+        pass
+
+    if truncated or not text:
+        fb_url = base_url.rstrip("/") + "/responses"
+        fb_payload = {
+            "model": model,
+            "input": prompt,
+            "temperature": max(0.0, float(temperature)),
+            "max_output_tokens": int(max(64, int(max_tokens) * 2)),
+        }
+        fb_data = _post_json_with_retries(fb_url, headers, fb_payload,
+                                          connect_timeout=connect_timeout,
+                                          read_timeout=read_timeout,
+                                          max_retries=max_retries)
+        fb_text = _extract_text_from_responses_api(fb_data).strip()
+        if fb_text:
+            return fb_text
+
+    return text
 
 
 # -------------------- Main flows --------------------
 
 def run_remote_openai(args: argparse.Namespace):
-    base_url = args.remote_base_url or os.environ.get("LAMBDA_API_BASE") or os.environ.get("OPENAI_BASE_URL") or os.environ.get("OPENAI_API_BASE")
-    api_key = args.api_key or os.environ.get("LAMBDA_API_KEY") or os.environ.get("OPENAI_API_KEY")
+    base_url = (
+        args.remote_base_url
+        or os.environ.get("OPENROUTER_BASE_URL")
+        or os.environ.get("LAMBDA_API_BASE")
+        or "https://openrouter.ai/api/v1"
+    )
+    api_key = args.api_key or os.environ.get("OPENROUTER_API_KEY") or os.environ.get("LAMBDA_API_KEY")
     model = args.remote_model or os.environ.get("REMOTE_MODEL") or DEFAULT_REMOTE_MODEL
+    # Timeouts: CLI -> ENV -> defaults
+    connect_timeout = args.openrouter_connect_timeout if args.openrouter_connect_timeout is not None else int(os.environ.get("OPENROUTER_CONNECT_TIMEOUT", "20"))
+    read_timeout = args.openrouter_read_timeout if args.openrouter_read_timeout is not None else int(os.environ.get("OPENROUTER_READ_TIMEOUT", "180"))
     if not api_key:
-        raise SystemExit("Missing API key. Provide --api-key or set LAMBDA_API_KEY/OPENAI_API_KEY.")
+        raise SystemExit("Missing API key. Provide --api-key or set OPENROUTER_API_KEY (or LAMBDA_API_KEY).")
     if not base_url:
-        raise SystemExit("Missing base URL. Provide --remote-base-url or set LAMBDA_API_BASE/OPENAI_BASE_URL.")
+        raise SystemExit("Missing base URL. Provide --remote-base-url or set OPENROUTER_BASE_URL (or LAMBDA_API_BASE).")
 
     scenarios = load_scenarios(Path(args.scenarios))
     # Optional single-scenario selection
@@ -195,7 +421,17 @@ def run_remote_openai(args: argparse.Namespace):
             tqdm.write("-" * 80)
 
             try:
-                answer = remote_chat_complete(base_url, api_key, model, situation, args.temperature, args.max_tokens)
+                answer = remote_chat_complete(
+                    base_url=base_url,
+                    api_key=api_key,
+                    model=model,
+                    prompt=situation,
+                    temperature=args.temperature,
+                    max_tokens=args.max_tokens,
+                    connect_timeout=connect_timeout,
+                    read_timeout=read_timeout,
+                    max_retries=args.max_retries,
+                )
             except Exception as e:
                 tqdm.write(f"❌ Error calling remote API: {e}")
                 continue
@@ -220,6 +456,10 @@ def run_remote_openai(args: argparse.Namespace):
                 },
             })
 
+            # Be polite to the provider between calls
+            if args.inter_call_delay_ms and args.inter_call_delay_ms > 0:
+                time.sleep(args.inter_call_delay_ms / 1000.0)
+
         payload = {
             "scenario_id": scenario.get("id"),
             "title": scenario.get("title"),
@@ -232,6 +472,8 @@ def run_remote_openai(args: argparse.Namespace):
                 "max_tokens": args.max_tokens,
                 "base_url": base_url,
                 "provider": "openai-compatible",
+                "connect_timeout": connect_timeout,
+                "read_timeout": read_timeout,
             },
             "log_info": None,
             "items": items,
@@ -264,6 +506,10 @@ def run_local_emobird(args: argparse.Namespace):
 
     # Initialize EmoBIRD
     print("🐦 Initializing EmoBIRD engine ...")
+    # Apply local model override via environment, if provided
+    if getattr(args, "model", None):
+        os.environ["EMOBIRD_MODEL"] = args.model
+        print(f"🔧 Using local model override from --model: {args.model}")
     emo = Emobird()
 
     # Prepare results dir and metadata

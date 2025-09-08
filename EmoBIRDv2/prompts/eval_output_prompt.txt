@@ -1,0 +1,8 @@
+SITUATION SHARED:
+{user_input}
+
+EMOTIONAL INSIGHTS:
+Based on psychological analysis, this person is likely experiencing: {emotion_insights}
+{context_info}
+
+Keep this information in mind while writing a final response to the user.

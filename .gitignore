@@ -76,3 +76,4 @@ eval_results/
 elo_results_eqbench3.json
 eqbench3_runs.json
 datasets/EmoPatient/results/
+/results/
