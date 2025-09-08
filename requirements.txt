@@ -10,3 +10,6 @@ langchain_openai
 pandas
 pyyaml
 requests
+blobfile
+openai
+jinja2

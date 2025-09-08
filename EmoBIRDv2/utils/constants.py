@@ -1,7 +1,7 @@
 import os
 
 # MODEL PARAMS
-MODEL_NAME="openai/gpt-oss-20b"
+MODEL_NAME="meta-llama/llama-3.1-8b-instruct"
 MODEL_TEMPERATURE = 0.6
 ABSTRACT_MAX_TOKENS = 256
 FACTOR_MAX_TOKENS = 512
