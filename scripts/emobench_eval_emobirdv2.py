@@ -198,30 +198,24 @@ def build_ea_json_prompt(
     selected_summary = ", ".join(selected_pairs) if selected_pairs else "(none)"
 
     system = (
-        "You are an empathetic decision-maker. Select exactly one option that is most empathetic, supportive, and safe. "
-        "Consider emotional wellbeing, de-escalation, and respect."
+        "Select exactly one option out of the given choices. Respond with strict JSON only."
     )
-    user = f"""
-Scenario: {scenario}
-Subject: {subject}
+        user = f"""
+        Subject: {subject}
+        Scenario: {scenario}
 
-Choices (select exactly one):
-{os.linesep.join(choice_lines)}
+        Choices (select exactly one):
+        {os.linesep.join(choice_lines)}
 
-Context:
-- Abstract summary: {abstract or '(missing)'}
-- Selected factors: {selected_summary}
-
-Return STRICT JSON only with keys:
-{{
-  "choice_letter": "a|b|c|d",
-  "choice_text": "<exact text copied from one of the choices>"
-}}
-Rules:
-- The choice_text must be exactly one of the provided choices (verbatim match).
-- Do not include any text before or after the JSON object.
-- If unsure, pick the safest, most empathetic option.
-"""
+        Return STRICT JSON ONLY (no markdown/code fences) with keys:
+        {{
+        "choice_letter": "A|B|C|D|...",
+        "choice_text": "<verbatim copy of the chosen option>"
+        }}
+        Rules:
+        - choice_text must be an exact verbatim match of the chosen option.
+        - No text before or after the JSON object.
+        """
     return f"{system}\n\n{user}"
 
 

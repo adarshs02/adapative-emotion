@@ -45,6 +45,7 @@ import EmoBIRDv2.scripts.factor_value_selector as FVS
 import EmoBIRDv2.scripts.emotion_generator as EG
 import EmoBIRDv2.scripts.likert_matcher as LM
 import EmoBIRDv2.scripts.final_output_generator as FOG
+import EmoBIRDv2.scripts.fallback_responder as FBR
 
 
 @dataclass
@@ -67,6 +68,12 @@ class EmoBIRDConfig:
     api_key: Optional[str] = field(default_factory=lambda: OPENROUTER_API_KEY or "")
     openrouter_connect_timeout: Optional[int] = None
     openrouter_read_timeout: Optional[int] = None
+
+    # Fallback behavior
+    fallback_enabled: bool = True
+    fallback_model: Optional[str] = None  # default to primary model when None
+    fallback_temperature: Optional[float] = 0.6
+    fallback_max_tokens: int = OUTPUT_MAX_TOKENS
 
 
 class EmoBIRDPipeline:
@@ -102,7 +109,7 @@ class EmoBIRDPipeline:
                     trunc = (raw[:2000] + "...[truncated]") if len(raw) > 2000 else raw
                     print(f"[abstract] raw: {trunc}", file=sys.stderr)
             except Exception as e:
-                print(f"[abstract] attempt {i} failed: {e}", file=sys.stderr)
+                print(f"[abstract] attempt {i}/{self.config.attempts} failed: {e}", file=sys.stderr)
                 raw = ""
             if not raw:
                 continue
@@ -111,7 +118,10 @@ class EmoBIRDPipeline:
                 if isinstance(obj, dict) and obj.get("abstract"):
                     return obj
             except Exception as e:
-                print(f"[abstract] JSON parse failed: {e}", file=sys.stderr)
+                print(
+                    f"[abstract] attempt {i}/{self.config.attempts} JSON parse failed: {e}",
+                    file=sys.stderr,
+                )
         return None
 
     def step_factors(self, *, abstract_text: str) -> Optional[List[Dict[str, Any]]]:
@@ -131,7 +141,7 @@ class EmoBIRDPipeline:
                     trunc = (raw[:2000] + "...[truncated]") if len(raw) > 2000 else raw
                     print(f"[factors] raw: {trunc}", file=sys.stderr)
             except Exception as e:
-                print(f"[factors] attempt {i} failed: {e}", file=sys.stderr)
+                print(f"[factors] attempt {i}/{self.config.attempts} failed: {e}", file=sys.stderr)
                 raw = ""
             if not raw:
                 continue
@@ -157,7 +167,7 @@ class EmoBIRDPipeline:
                     trunc = (raw[:2000] + "...[truncated]") if len(raw) > 2000 else raw
                     print(f"[select] raw: {trunc}", file=sys.stderr)
             except Exception as e:
-                print(f"[select] attempt {i} failed: {e}", file=sys.stderr)
+                print(f"[select] attempt {i}/{self.config.attempts} failed: {e}", file=sys.stderr)
                 raw = ""
             if not raw:
                 continue
@@ -183,7 +193,7 @@ class EmoBIRDPipeline:
                     trunc = (raw[:2000] + "...[truncated]") if len(raw) > 2000 else raw
                     print(f"[emotions] raw: {trunc}", file=sys.stderr)
             except Exception as e:
-                print(f"[emotions] attempt {i} failed: {e}", file=sys.stderr)
+                print(f"[emotions] attempt {i}/{self.config.attempts} failed: {e}", file=sys.stderr)
                 raw = ""
             if not raw:
                 continue
@@ -209,7 +219,7 @@ class EmoBIRDPipeline:
                     trunc = (raw[:2000] + "...[truncated]") if len(raw) > 2000 else raw
                     print(f"[likert] raw: {trunc}", file=sys.stderr)
             except Exception as e:
-                print(f"[likert] attempt {i} failed: {e}", file=sys.stderr)
+                print(f"[likert] attempt {i}/{self.config.attempts} failed: {e}", file=sys.stderr)
                 raw = ""
             if not raw:
                 continue
@@ -240,6 +250,36 @@ class EmoBIRDPipeline:
             print(f"[final_output] failed: {e}", file=sys.stderr)
             return None
 
+    def step_fallback(
+        self,
+        *,
+        situation: str,
+        failed_at: str,
+    ) -> str:
+        """Best-effort empathetic response when a stage fails.
+
+        Returns a non-empty string. Uses a static last-resort message if the model call fails.
+        """
+        static_msg = (
+            "I'm sorry you're going through this. Based on what you shared, it's understandable "
+            "to feel this way. If you can, take a slow breath and focus on one small, supportive "
+            "step for yourself right now. If safety is a concern, please reach out to someone you "
+            "trust or local support services."
+        )
+        try:
+            text = FBR.generate_fallback(
+                situation=situation,
+                failed_at=failed_at,
+                model=self.config.fallback_model or self.config.model,
+                temperature=(self.config.fallback_temperature if self.config.fallback_temperature is not None else self.config.temperature),
+                max_tokens=int(self.config.fallback_max_tokens),
+                api_key=self.config.api_key or "",
+            )
+            return text.strip() if text and text.strip() else static_msg
+        except Exception as e:
+            print(f"[fallback] failed: {e}", file=sys.stderr)
+            return static_msg
+
     # ------------------------ Orchestration ------------------------
     def run_for_text(self, *, situation: str) -> Dict[str, Any]:
         result: Dict[str, Any] = {
@@ -251,6 +291,9 @@ class EmoBIRDPipeline:
             "final_output": None,
             "status": "ok",
             "failed_at": None,
+            "fallback_used": False,
+            "fallback_reason": None,
+            "fallback_model": None,
         }
 
         abs_obj = self.step_abstract(situation=situation)
@@ -266,6 +309,17 @@ class EmoBIRDPipeline:
 
         factors = self.step_factors(abstract_text=abstract)
         if not factors:
+            if self.config.fallback_enabled:
+                fb = self.step_fallback(situation=situation, failed_at="factors")
+                result.update({
+                    "status": "fallback",
+                    "failed_at": "factors",
+                    "final_output": fb,
+                    "fallback_used": True,
+                    "fallback_reason": "stage_failed",
+                    "fallback_model": self.config.fallback_model or self.config.model,
+                })
+                return result
             result["status"] = "error"
             result["failed_at"] = "factors"
             return result
@@ -273,6 +327,20 @@ class EmoBIRDPipeline:
 
         selections = self.step_select(situation=situation, factors=factors)
         if not selections:
+            if self.config.fallback_enabled:
+                fb = self.step_fallback(
+                    situation=situation,
+                    failed_at="select",
+                )
+                result.update({
+                    "status": "fallback",
+                    "failed_at": "select",
+                    "final_output": fb,
+                    "fallback_used": True,
+                    "fallback_reason": "stage_failed",
+                    "fallback_model": self.config.fallback_model or self.config.model,
+                })
+                return result
             result["status"] = "error"
             result["failed_at"] = "select"
             return result
@@ -281,6 +349,20 @@ class EmoBIRDPipeline:
         # Emotions are required
         emotions: Optional[List[str]] = self.step_emotions(situation=situation)
         if not emotions:
+            if self.config.fallback_enabled:
+                fb = self.step_fallback(
+                    situation=situation,
+                    failed_at="emotions",
+                )
+                result.update({
+                    "status": "fallback",
+                    "failed_at": "emotions",
+                    "final_output": fb,
+                    "fallback_used": True,
+                    "fallback_reason": "stage_failed",
+                    "fallback_model": self.config.fallback_model or self.config.model,
+                })
+                return result
             result["status"] = "error"
             result["failed_at"] = "emotions"
             return result
@@ -291,6 +373,20 @@ class EmoBIRDPipeline:
             situation=situation, factors=factors, emotions=emotions
         )
         if not likert:
+            if self.config.fallback_enabled:
+                fb = self.step_fallback(
+                    situation=situation,
+                    failed_at="likert",
+                )
+                result.update({
+                    "status": "fallback",
+                    "failed_at": "likert",
+                    "final_output": fb,
+                    "fallback_used": True,
+                    "fallback_reason": "stage_failed",
+                    "fallback_model": self.config.fallback_model or self.config.model,
+                })
+                return result
             result["status"] = "error"
             result["failed_at"] = "likert"
             return result
@@ -305,6 +401,22 @@ class EmoBIRDPipeline:
         )
         if final_text:
             result["final_output"] = final_text
+            return result
+        # If final generation failed, attempt fallback if enabled
+        if self.config.fallback_enabled:
+            fb = self.step_fallback(
+                situation=situation,
+                failed_at="final_output",
+            )
+            result.update({
+                "status": "fallback",
+                "failed_at": "final_output",
+                "final_output": fb,
+                "fallback_used": True,
+                "fallback_reason": "stage_failed",
+                "fallback_model": self.config.fallback_model or self.config.model,
+            })
+            return result
 
         return result
 
