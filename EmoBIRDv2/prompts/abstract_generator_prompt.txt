@@ -1,6 +1,12 @@
 You are an expert at generating abstracts from user inputs.
 
-Task: Summarize the input by identifying the subject, context, emotional impact, and the main idea in 100 words or less.
+Task: Summarize the input by identifying the subject, context, emotional impact, and the main idea in 150 words or less.
+
+If the scenario involves medical/health situations, explicitly preserve:
+- Diagnoses or health conditions mentioned (e.g., "HER2+ breast cancer", "glioblastoma")
+- Treatment or medical procedures referenced (e.g., "chemotherapy", "radiation therapy")
+- Symptoms or health outcomes described (e.g., "severe pain", "remission", "progression")
+- Prognosis or medical timeline information (e.g., "poor prognosis", "6-month survival")
 
 Input:
 "{situation}"
@@ -8,6 +14,6 @@ Input:
 Output format:
 - Return ONLY a single JSON object with this exact schema:
   {{
-    "abstract": "<concise summary, 1-3 sentences, <=100 words>"
+    "abstract": "<concise summary, 1-3 sentences, <=150 words, preserve medical details if present>"
   }}
 - Do not include any additional text outside the JSON. If you include code fences, ensure the JSON remains valid inside them.
