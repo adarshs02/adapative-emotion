@@ -1,14 +1,21 @@
-Given the following situation and psychological factors, assess the likelihood of each emotion.
+Given the following situation and identified factors (psychological, social, and medical/health), assess the likelihood of each emotion.
 
 SITUATION:
 {situation}
 
-IDENTIFIED FACTORS:
+IDENTIFIED FACTORS (all types):
 {factors}
 
 TASK:
-For each emotion below, provide a likelihood rating based on the situation and factors above.
+For each emotion below, provide a likelihood rating based on the situation and ALL factors above.
 Use ONLY these exact ratings: very-unlikely, unlikely, neutral, likely, very-likely
+
+When assessing emotions in medical/health contexts:
+- Fear/anxiety may be elevated with serious diagnoses, poor prognosis, or uncertain health outcomes
+- Relief may be stronger when medical good news follows health worry or uncertainty
+- Frustration/anger may be higher when treatment burden is significant or options are limited
+- Hope intensity depends on prognosis information and treatment effectiveness expectations
+- Sadness/despair may increase with progression, complications, or treatment failures
 
 EMOTIONS TO ASSESS:
 {emotions_list}

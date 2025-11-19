@@ -1,0 +1,929 @@
+{
+  "scenarios": [
+    {
+      "id": "S1",
+      "title": "I'm the strong one (de novo HER2+ metastatic breast cancer)",
+      "diagnosis": "De novo HER2-positive metastatic breast cancer with gastric/cecal involvement",
+      "treatment_plan": "Docetaxel + trastuzumab + pertuzumab IV every 3 weeks; limit docetaxel to ~4–6 cycles if responding, then continue trastuzumab + pertuzumab maintenance",
+      "narrative": "I'm a 60-year-old grandmother who has always held the family together. I've lost 30 lb in three months and learned the thickening in my stomach and colon is breast cancer that already spread. My team recommends docetaxel with trastuzumab and pertuzumab. I'm afraid of losing who I am to my grandkids.",
+      "qa": [
+        {
+          "q": "Everyone keeps saying this plan is palliative. How do I balance hope with honesty so my family doesn't think I'm giving up?",
+          "gt": "I hear how frightening the idea of losing your identity feels, especially when you’re already carrying so much love for your grandkids.\n\n**What the plan looks like**  \n- **Docetaxel** 75 mg/m² IV over 1–2 hours every 3 weeks.  \n- **Trastuzumab** 8 mg/kg IV loading dose, then 6 mg/kg every 3 weeks.  \n- **Pertuzumab** 840 mg IV loading dose, then 420 mg every 3 weeks.  \nYou’ll have a full blood count and chemistry panel before each cycle; an echocardiogram at baseline and every 3 months to monitor left‑ventricular ejection fraction.  \n\n**What to expect**  \n- Common side effects: neutropenia (watch for fever), neuropathy, alopecia, mild diarrhea, and infusion reactions.  \n- Recovery between cycles is usually 7–10 days; you’ll need a support person for transportation and help with daily tasks.  \n\n**What success looks like**  \n- Tumor shrinkage or stabilization, reduced pain or bowel symptoms, and a measurable drop in tumor markers.  \n- If the disease progresses, we’ll consider switching to T‑DM1 or other HER2‑targeted options.  \n\n**Balancing hope and honesty**  \nExplain to your family that the goal is to fight the cancer and preserve quality time with them, not to give up. Emphasize that the treatment is a proactive, not passive, approach—your “fight” continues as long as you’re able to tolerate it.  \n\nWe’ll monitor closely and adjust as needed, so you’re not alone in this.",
+          "order": 1,
+          "qid": "S1-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "Everyone keeps saying this plan is palliative. How do I balance hope with honesty so my family doesn't think I'm giving up?",
+          "gt": "It’s normal to feel torn between wanting to stay strong for your family and being honest about the reality of a metastatic diagnosis.  \n**1. Frame the plan as “curative‑intent” first‑line therapy** – the combination of docetaxel, trastuzumab, and pertuzumab is the standard of care for HER2‑positive metastatic breast cancer and can shrink disease, prolong survival, and improve quality of life.  \n**2. Explain the goal of “maintenance”** – after 4–6 cycles you’ll switch to trastuzumab + pertuzumab alone, which keeps the cancer controlled while reducing side‑effects.  \n**3. Share realistic expectations** – talk about possible side‑effects, the chance of response, and that the treatment is not a cure but a way to keep you healthy and active for as long as possible.  \n**4. Keep the conversation open** – let your family know you’re not giving up; you’re choosing the best evidence‑based approach to stay strong for them.  \n\nBalancing hope and honesty is about presenting the plan as a proactive, life‑prolonging strategy rather than a “last resort.”",
+          "order": 1,
+          "qid": "S1-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "Everyone keeps saying this plan is palliative. How do I balance hope with honesty so my family doesn't think I'm giving up?",
+          "gt": "I’m sorry you’re feeling this way. The regimen you’re starting—docetaxel, trastuzumab, and pertuzumab—is the standard first‑line therapy for HER2‑positive metastatic breast cancer. It’s designed to control the disease, prolong survival, and preserve quality of life, not to “cure” in the classic sense, so it’s often described as palliative.  \n\nWhen you talk to your family, frame it this way: “I’m not giving up. I’m choosing the best evidence‑based treatment that can keep the cancer under control, let me stay active with the grandkids, and give us more time together.” Use “I” statements, keep the focus on what you can influence (treatment goals, symptom control, support), and invite them to ask questions.  \n\nAsk your oncologist for a clear, realistic prognosis—how many months or years the therapy might extend, what side‑effects to expect, and when to shift to maintenance or supportive care. Knowing the numbers helps everyone stay honest while holding onto hope.  \n\nFinally, consider a brief family meeting with the oncology team or a palliative‑care specialist to align expectations and ensure everyone feels heard and supported.",
+          "order": 1,
+          "qid": "S1-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "Everyone keeps saying this plan is palliative. How do I balance hope with honesty so my family doesn't think I'm giving up?",
+          "gt": "Docetaxel + trastuzumab + pertuzumab is the standard first‑line regimen for HER2‑positive metastatic breast cancer.  It is **palliative** in the sense that it is not curative, but it can shrink tumors, slow progression, and often prolong survival and keep you functioning for months to years.  \n\n**How to share this with your family**\n\n1. **Be honest but hopeful** – explain that the goal is to control the disease and give you time to enjoy moments with your grandchildren.  \n2. **Use concrete numbers** – discuss median overall survival (~2–3 years with this therapy) and the chance of a meaningful response (≈70 %).  \n3. **Highlight quality of life** – emphasize that the plan aims to keep you active, manage pain, and maintain independence.  \n4. **Invite questions** – let them ask what “palliative” means and what side‑effects to expect.  \n5. **Involve palliative care early** – they can help with symptom control and emotional support while you pursue treatment.  \n\nBalancing realism with optimism keeps everyone on the same page and preserves your sense of purpose.",
+          "order": 1,
+          "qid": "S1-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "New mom, old terror (stage IIIB triple-negative breast cancer, neoadjuvant)",
+      "diagnosis": "Stage IIIB triple-negative breast cancer",
+      "treatment_plan": "Neoadjuvant pembrolizumab every 3 weeks with weekly paclitaxel/carboplatin ~12 weeks, then doxorubicin/cyclophosphamide every 2 weeks ×4; surgery ± radiation; continue pembrolizumab to ~1 year",
+      "narrative": "I'm 33, eight months postpartum, newly diagnosed with aggressive triple-negative breast cancer. My baby still wakes at night; my body doesn't feel like mine. They’re starting chemo-immunotherapy before surgery.",
+      "qa": [
+        {
+          "q": "It feels like I'm failing as a mom by stopping breastfeeding and losing my hair at the same time. How do I not drown in that guilt?",
+          "gt": "I hear how heavy the guilt feels, especially when you’re trying to stay strong for your little one. It’s normal to feel like you’re falling short when your body is fighting a battle of its own.\n\nYour treatment plan will likely start with a 4‑cycle dose‑dense doxorubicin‑cyclophosphamide (AC) every two weeks, followed by 12 weekly cycles of docetaxel plus carboplatin, and concurrent pembrolizumab (200 mg IV every 3 weeks). Hair loss is a common, temporary side effect of these agents; most patients regain hair within 6–8 weeks after therapy ends. Breastfeeding is usually stopped before chemo because the drugs can be harmful to the infant, and the breast tissue may be compromised by the tumor and treatment.\n\nWe’ll monitor you with CBC, liver enzymes, and a baseline and every 3‑month echocardiogram to track heart function. If you notice severe fatigue, fever, or bleeding, call the oncology team right away. After neoadjuvant therapy, you’ll have surgery to remove the tumor, then possibly radiation and a short course of maintenance pembrolizumab.\n\nCoping strategies can help: join a breast‑cancer support group, keep a gratitude journal, and allow yourself to feel proud of the courage you’re showing. Your team will be with you every step of the way.",
+          "order": 1,
+          "qid": "S2-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "It feels like I'm failing as a mom by stopping breastfeeding and losing my hair at the same time. How do I not drown in that guilt?",
+          "gt": "I’m so sorry you’re feeling this way—your body is fighting a tough battle, and it’s normal to feel guilt when routine changes.  \n\n**Breastfeeding**  \n- Most agents in your plan (paclitaxel, carboplatin, doxorubicin, cyclophosphamide, pembrolizumab) are **not safe for nursing**.  \n- Talk to your oncologist and a lactation consultant about stopping breastfeeding or pumping for a short time, then re‑introducing it once treatment is finished.  \n- If you’re worried about the baby’s nutrition, a pediatrician can help you choose a safe formula or a short‑term supplement.\n\n**Hair loss**  \n- Wigs, scarves, or head wraps are quick, low‑maintenance ways to feel confident.  \n- Some patients find a “hair‑loss” support group or a short‑term hair‑loss kit helpful.\n\n**Managing guilt**  \n- Write a brief note to your baby: “I’m doing everything I can to keep you safe.”  \n- Share your feelings with a trusted friend, counselor, or a mom‑support group (online or in‑person).  \n- Remember: you’re not “failing” – you’re protecting your child’s future.\n\n**Practical next steps**  \n1. Schedule a brief call with your oncologist to confirm breastfeeding safety.  \n2. Ask for a lactation consultant referral.  \n3. Pick a wig or head covering that feels right for you.  \n4. Reach out to a local or online breast‑cancer support group for moms.\n\nYou’re doing the best you can; that alone is enough to be a great mom.",
+          "order": 1,
+          "qid": "S2-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "It feels like I'm failing as a mom by stopping breastfeeding and losing my hair at the same time. How do I not drown in that guilt?",
+          "gt": "I hear how heavy the guilt feels—your body is fighting a life‑threatening cancer while you’re still caring for a newborn. First, know that stopping or pausing breastfeeding is safe for both you and the baby during this treatment; the breast‑milk supply will return once therapy ends, and you can resume feeding or use expressed milk. Hair loss is temporary—most patients regain their hair within months, and many use wigs, scarves, or headbands to feel more like themselves.  \n\nFocus on what you can control: keep open lines with your oncology team about breastfeeding safety, ask for supportive‑care options (nutrition, wigs, counseling), and lean on your partner, family, or a mom‑support group. Remind yourself that protecting your health now preserves the future you’ll share with your child. You’re not failing—you’re making the hardest, most courageous choice for both of you.",
+          "order": 1,
+          "qid": "S2-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "It feels like I'm failing as a mom by stopping breastfeeding and losing my hair at the same time. How do I not drown in that guilt?",
+          "gt": "It’s normal to feel guilt, but remember that the treatment you’re receiving is for your long‑term survival and ultimately for your baby’s future. Breast‑milk safety guidelines advise stopping breastfeeding while on chemotherapy and immunotherapy because the drugs can pass into milk. You can still nourish your baby by pumping and feeding expressed milk or using a donor bank, and many parents find this a manageable compromise. Hair loss is temporary—most regrow within 3–6 months, and wigs or scarves can help you feel confident. Focus on what you can control: keep a treatment diary, ask your oncology team for a lactation consultant, and lean on a therapist or support group for moms with cancer. You’re doing the best you can for both yourself and your child.",
+          "order": 1,
+          "qid": "S2-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "title": "Coach who can’t fix it (metastatic hormone-sensitive prostate cancer)",
+      "diagnosis": "Metastatic hormone-sensitive prostate cancer with painful bone lesions",
+      "treatment_plan": "Androgen deprivation therapy injection every 1–3 months plus a daily androgen-receptor–targeted pill; consider focused radiation for painful sites; bone-protective measures",
+      "narrative": "I'm a 71-year-old retired high-school coach with bone pain. They’re starting hormone shots plus a daily pill. I’ve always been the guy with answers; now I’m short-tempered and scared.",
+      "qa": [
+        {
+          "q": "When my sex drive collapses and my body changes, how do I not resent the very treatment keeping me here?",
+          "gt": "I hear how frightening the loss of sex drive and the body changes feel, especially when you’re already carrying so much on your shoulders as a retired coach—your frustration and fear are completely understandable.\n\nYour treatment likely combines an LHRH agonist/antagonist (e.g., leuprolide or goserelin) with a daily anti‑androgen such as bicalutamide or enzalutamide. These drugs lower testosterone to <50 ng/dL, which explains the sudden drop in libido, hot flashes, fatigue, and mood swings. The goal is to keep PSA levels low and prevent further bone damage, so the therapy is life‑preserving even if it feels like a loss.  \n\nTo ease resentment, discuss each side effect with your oncologist. Options include:  \n1. **PDE‑5 inhibitors** (tadalafil, sildenafil) for erectile function;  \n2. **Psychological counseling** or support groups for mood and coping;  \n3. **Lifestyle tweaks**—regular light exercise, balanced diet, adequate sleep, and mindfulness can blunt hot flashes and improve mood.  \n\nYour team will monitor PSA every 3 months, bone scans every 6 months, and routine labs (CBC, CMP, lipid panel). If side effects become intolerable, dose adjustments or switching to a different anti‑androgen may be considered.  \n\nRemember, the therapy is a lifeline; working together with your care team can help you feel less resentful and more empowered.",
+          "order": 1,
+          "qid": "S3-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "When my sex drive collapses and my body changes, how do I not resent the very treatment keeping me here?",
+          "gt": "I’m sorry you’re feeling torn. The hormone‑deprivation shots and pill are the best way to keep the cancer from spreading, but they do change how you feel and function. Here are a few practical steps:\n\n1. **Talk openly** – Share your worries with your partner and your oncologist. They can help you weigh the benefits of treatment against the side‑effects and may adjust the dose or add supportive meds (e.g., PDE5 inhibitors, lubricants, or low‑dose testosterone trials under strict supervision).\n\n2. **Seek counseling** – A therapist or support group for men with prostate cancer can help you process the loss of libido and body changes, reducing resentment.\n\n3. **Focus on the bigger picture** – Remind yourself that the treatment is keeping you alive and able to coach, play with grandchildren, and enjoy life. Celebrate the small victories (e.g., pain relief, improved mobility).\n\n4. **Self‑care routine** – Gentle exercise, balanced nutrition, and adequate sleep can improve mood and energy, making the side‑effects feel less overwhelming.\n\nIf the side‑effects become intolerable, ask your doctor about alternative regimens or clinical trials. You deserve both longevity and quality of life.",
+          "order": 1,
+          "qid": "S3-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "When my sex drive collapses and my body changes, how do I not resent the very treatment keeping me here?",
+          "gt": "I’m sorry you’re feeling so conflicted. Remember that the hormone‑deprivation shots and pill are the very tools that keep the cancer from spreading and give you more time to enjoy life. Here are a few practical ways to keep resentment at bay:\n\n1. **Talk openly with your oncologist** about every side effect—sex drive, hot flashes, fatigue, mood swings. They can adjust the dose, add a phosphodiesterase‑5 inhibitor for erectile function, or prescribe a short‑acting steroid to blunt hot flashes.\n\n2. **Use a “side‑effect diary.”** Note when symptoms flare and what helps (e.g., cool showers, exercise, a supportive partner). Patterns can guide targeted interventions.\n\n3. **Keep the focus on the goal:** each injection is a step toward controlling the cancer. Remind yourself that the pain relief and bone‑protective drugs are also part of the plan.\n\n4. **Seek emotional support**—a counselor, support group, or a trusted friend can help you process the loss of libido and body changes without feeling guilty.\n\n5. **Maintain routine physical activity** (light weight‑lifting, walking, or swimming). Exercise boosts mood, preserves muscle mass, and can improve sexual function.\n\n6. **Practice mindfulness or gentle meditation** to stay present and reduce frustration.\n\nBy treating side effects as manageable challenges rather than betrayals, you can honor the therapy that keeps you alive while preserving your dignity and relationships.",
+          "order": 1,
+          "qid": "S3-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "When my sex drive collapses and my body changes, how do I not resent the very treatment keeping me here?",
+          "gt": "I’m sorry you’re feeling so conflicted. Remember that the hormone‑deprivation shots and pill are the most effective way to slow the cancer and relieve bone pain, so the benefits outweigh the side‑effects for most men.  \n**What you can do:**  \n1. **Talk to your oncologist** about the loss of libido and other changes. They can adjust the dose, add a short‑term testosterone “bridge” (rarely used) or prescribe a PDE‑5 inhibitor to help with sexual function.  \n2. **Seek counseling or a support group**—many men find it easier to share feelings with peers who understand the trade‑offs.  \n3. **Maintain a routine of light exercise, good sleep, and balanced nutrition**; these help mood and energy.  \n4. **Keep a diary of pain and side‑effects** so you can discuss them at each visit and adjust pain or bone‑protective therapy (bisphosphonates, denosumab).  \n\nTreat the treatment as a tool that keeps you alive and active, not a punishment. Your feelings are valid, and there are practical ways to manage them while staying on the path that keeps you here.",
+          "order": 1,
+          "qid": "S3-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S4",
+      "title": "Teacher with too much silence (high-grade serous ovarian cancer)",
+      "diagnosis": "High-grade serous ovarian cancer with ascites",
+      "treatment_plan": "Cytoreductive surgery when appropriate; carboplatin/paclitaxel every 3 weeks for ~6 cycles; maintenance therapy based on tumor features (e.g., PARP) and response; genetic testing recommended",
+      "narrative": "I'm a 45-year-old teacher with ascites, facing surgery and chemo. My daughter is 16, and our home has become very quiet since we said the word 'cancer.'",
+      "qa": [
+        {
+          "q": "My belly is so tight I can't eat and I feel ashamed of how I look. What can we do right now so I can sit at the table with my family again?",
+          "gt": "I hear how overwhelming the tightness feels, especially when you’re trying to stay strong for your family.  \n\n**Ascites relief** – Start a low‑salt diet (≤2 g/day) and fluid restriction (≤1.5 L/day).  A diuretic combo—spironolactone 25–50 mg + furosemide 20–40 mg daily—helps, but for malignant ascites a paracentesis is often needed.  \n\n**Timing for surgery** – Schedule a therapeutic paracentesis 24–48 h before your operation to drain excess fluid and reduce abdominal pressure.  After the procedure, you can usually tolerate small, frequent meals (e.g., 3–4 small servings per day).  \n\n**Nutrition & appetite** – Work with a dietitian to plan high‑protein, low‑fat meals and consider an appetite stimulant like megestrol acetate if your oncologist approves.  Keep snacks handy (nuts, yogurt, smoothies) so you can sit at the table without feeling deprived.  \n\n**Monitoring** – Check electrolytes, weight, and abdominal girth every 2–3 days.  Watch for signs of infection (fever, abdominal pain) or bleeding; report any changes to your oncology team immediately.  \n\nWe’ll work together to keep you comfortable and bring you back to the table.",
+          "order": 1,
+          "qid": "S4-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "My belly is so tight I can't eat and I feel ashamed of how I look. What can we do right now so I can sit at the table with my family again?",
+          "gt": "I’m sorry you’re feeling so uncomfortable. The tightness you’re describing is most likely from the ascites.  \n**Short‑term relief**  \n1. **Diuretics** (e.g., spironolactone + furosemide) can reduce fluid, but only under your oncologist’s guidance.  \n2. **Paracentesis** – a quick needle drainage at the hospital can immediately relieve pressure and allow you to eat.  \n3. **Diet** – eat small, frequent, high‑calorie, high‑protein snacks (protein shakes, soups, smoothies) and avoid large, heavy meals that fill the abdomen.  \n4. **Positioning** – sit upright or lean forward while eating; a wedge pillow can help.  \n\n**Emotional support**  \n- Share your feelings with your daughter; she’ll understand you’re not “shaming” yourself.  \n- A brief counseling session or support group can help you process the silence and rebuild confidence at the table.  \n\nAsk your oncology team about diuretics and paracentesis today; these steps can let you sit and eat with your family again.",
+          "order": 1,
+          "qid": "S4-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "My belly is so tight I can't eat and I feel ashamed of how I look. What can we do right now so I can sit at the table with my family again?",
+          "gt": "I’m sorry you’re feeling so uncomfortable and ashamed. Here are a few practical steps you can try right now:\n\n1. **Manage the ascites** – Ask your oncologist about diuretics or a small‑volume paracentesis. Even a brief drainage can relieve pressure and make eating easier.\n\n2. **Nutrition tricks** –  \n   * Eat 5–6 small, high‑calorie, high‑protein snacks (protein shakes, Greek yogurt, nut butter, cheese).  \n   * Add a liquid meal replacement (Ensure, Boost) to your routine.  \n   * If appetite is low, discuss appetite stimulants (e.g., megestrol acetate) with your team.\n\n3. **Pain & comfort** – Gentle abdominal massage, warm compresses, and a supportive pillow can ease tightness. If pain persists, review your pain plan with the oncology nurse.\n\n4. **Family support** – Invite your daughter to help prepare a simple meal or snack together. Even a small plate at the table can restore normalcy. Let her know you’re okay with her helping.\n\n5. **Emotional care** – A brief talk with a counselor or a cancer‑support group (many teachers find peer support helpful) can ease the shame you’re feeling. Body‑image counseling can also be useful.\n\n6. **Professional help** – A dietitian experienced in oncology can tailor a meal plan that fits your comfort level and treatment schedule.\n\nStart with one or two of these, and let your care team know how you’re doing. You deserve support and comfort, both physically and emotionally.",
+          "order": 1,
+          "qid": "S4-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "My belly is so tight I can't eat and I feel ashamed of how I look. What can we do right now so I can sit at the table with my family again?",
+          "gt": "I’m sorry you’re feeling so uncomfortable. Here are a few practical steps you can try right now:\n\n1. **Manage the ascites** – Ask your oncologist about a therapeutic paracentesis or a temporary drainage catheter. Removing fluid can relieve pressure, improve appetite, and let you sit more comfortably.  \n2. **Nutrition** – Eat small, frequent meals (4–6 times a day) and add high‑calorie, high‑protein shakes (e.g., Ensure®) between meals. A dietitian can tailor a plan that fits your taste and tolerances.  \n3. **Appetite & nausea** – Discuss anti‑emetics (ondansetron, dexamethasone) and appetite stimulants (megestrol acetate) with your team.  \n4. **Physical comfort** – Use a supportive pillow or wedge while sitting, and gentle abdominal massage or gentle yoga can ease tightness.  \n5. **Emotional support** – Invite a trusted friend or counselor to sit with you at the table; sharing feelings can reduce the sense of isolation.  \n\nSpeak with your oncology team about these options; they can coordinate the quickest relief so you can enjoy meals with your family again.",
+          "order": 1,
+          "qid": "S4-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S5",
+      "title": "The drummer who counts rests (glioblastoma after surgery)",
+      "diagnosis": "Glioblastoma after maximal safe resection",
+      "treatment_plan": "Concurrent radiation (~6 weeks) with daily temozolomide; then adjuvant temozolomide 5 days every 28 days for several cycles; consider tumor-treating fields; symptom management and rehab",
+      "narrative": "I'm 58, a drummer. They removed what they could and now it's radiation with daily chemo. I keep practicing rudiments to feel normal, but the rests feel longer than the notes.",
+      "qa": [
+        {
+          "q": "If my thinking slows or words jam, how do I stay myself in front of a band that's never seen me drop a beat?",
+          "gt": "I hear how anxious you feel about keeping your rhythm while juggling chemo and radiation, especially when you want to stay true to your band.  \n\n**Cognitive side‑effects**  \nMany chemotherapies—cisplatin, carboplatin, paclitaxel, and some targeted agents—can cause “chemo‑brain,” a slowing of thinking and word retrieval. Whole‑brain radiation can add fatigue and mild memory lapses.  \n\n**Monitoring**  \nYour oncologist will schedule neurocognitive tests (e.g., Trail‑Making A/B) and speech‑language evaluations every 4–6 weeks. Blood counts and liver/renal panels are checked before each cycle to gauge tolerance.  \n\n**Supportive measures**  \nIf you notice word‑jam or slowed reaction, try brief, focused rehearsal with a metronome, cue cards, or a visual rhythm chart. Breathing exercises (4‑7‑8) help reset focus mid‑beat.  \n\n**Therapeutic options**  \nA speech‑language pathologist can teach memory‑retrieval drills and pacing techniques. In some cases, low‑dose donepezil or methylphenidate is trialed to boost attention, but only after oncologic clearance.  \n\n**When to act**  \nIf confusion, disorientation, or a sudden drop in coordination occurs, contact your oncology team immediately. They may adjust dose, add a neuroprotective agent, or shift to a less neurotoxic regimen.  \n\n**Next steps**  \nDiscuss these concerns with your oncologist; they can tailor monitoring and supportive care to your specific chemo‑radiation plan.  \n\nYou’re not alone—your team will keep a close eye on your cognitive health so you can keep drumming with confidence.",
+          "order": 1,
+          "qid": "S5-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "If my thinking slows or words jam, how do I stay myself in front of a band that's never seen me drop a beat?",
+          "gt": "It’s normal for temozolomide and radiation to slow thinking a bit. Keep the band’s confidence by turning the “drop” into a cue rather than a flaw.  \n\n1. **Communicate early** – tell the drummer and bassist that you might need a moment to reset. A quick “one more beat” or a hand‑signal is enough.  \n2. **Use visual/aural anchors** – practice the set with a metronome or a simple cue card that shows the next measure.  \n3. **Slow‑down rehearsal** – run the routine at 75 % tempo until you feel comfortable, then gradually return to full speed.  \n4. **Cognitive aids** – write key phrases or chord changes on a small notepad; glance at it if you feel a “jam.”  \n5. **Self‑care** – stay hydrated, get adequate sleep, and discuss any cognitive side‑effects with your neuro‑oncologist; sometimes a brief dose adjustment helps.  \n\nRemember, the band is there to support you. A brief pause is a professional, not a failure.",
+          "order": 1,
+          "qid": "S5-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "If my thinking slows or words jam, how do I stay myself in front of a band that's never seen me drop a beat?",
+          "gt": "I’m sorry you’re dealing with this. Temozolomide and radiation can slow thinking, but you can still keep your groove.  \n\n1. **Rehearse the “slow‑down”** – practice the set at a reduced tempo and add a visual cue (a hand signal or a light) that tells you to pause or reset.  \n2. **Use a metronome or click‑track** – it anchors your timing even when your mind lags.  \n3. **Keep a quick‑reference sheet** – write key phrases or chord changes on a small card you can glance at if you feel a “jam.”  \n4. **Communicate with the band** – let them know you may need a brief pause; most musicians will respect that.  \n5. **Mindful breathing** – a 4‑2‑4 inhale‑hold‑exhale pattern steadies focus and reduces anxiety.  \n6. **Ask for neuro‑cognitive support** – discuss with your oncologist about medications or cognitive‑rehab strategies that may help.  \n\nRemember, the band’s rhythm is a partnership; a brief pause is part of the music, not a flaw.",
+          "order": 1,
+          "qid": "S5-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "If my thinking slows or words jam, how do I stay myself in front of a band that's never seen me drop a beat?",
+          "gt": "I’m sorry you’re feeling this way—cognitive slowing is common after temozolomide and radiation. Here are quick, practical steps you can try before and during a gig:\n\n1. **Pre‑practice** – rehearse the set with a friend or a recording so you’re familiar with the flow.  \n2. **Cue cards** – write key transitions or lyric snippets on a small card you can glance at if you lose a line.  \n3. **Pacing** – play a metronome or a backing track that keeps a steady beat; it gives your brain a visual cue to stay on time.  \n4. **Mindful breathing** – a 5‑second inhale, 5‑second exhale before each bar can reset focus.  \n5. **Communicate** – let the band know you’re managing a side effect; most musicians will be supportive and can give you a gentle nudge if you miss a beat.  \n6. **Professional help** – if the slowing worsens, talk to your neuro‑oncologist or a neuropsychologist; they can adjust medication or recommend cognitive rehab.  \n\nRemember, your rhythm is more than the notes—you’re still the drummer who keeps the groove alive.",
+          "order": 1,
+          "qid": "S5-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S6",
+      "title": "Driver with the detour (locally advanced rectal cancer, total neoadjuvant therapy)",
+      "diagnosis": "Locally advanced rectal adenocarcinoma",
+      "treatment_plan": "Total neoadjuvant therapy: chemoradiation (~5–6 weeks), systemic chemotherapy for several months, then surgery depending on response; possible temporary ostomy; consideration of watch-and-wait if complete clinical response",
+      "narrative": "I'm 62 and drive a city bus. Treatment will be chemoradiation, then systemic chemo, then maybe surgery. I keep picturing an ostomy and panicking about the smell on a crowded route.",
+      "qa": [
+        {
+          "q": "I can’t stop imagining a bag leaking while I’m on shift. What’s real versus fear, and who teaches me to manage it if I need one?",
+          "gt": "I hear how frightening the thought of a leaking ostomy bag feels, especially when you’re already juggling the demands of a city‑bus schedule and the uncertainty of treatment. It’s normal to feel anxious about something that could impact your daily life so directly.\n\nMost patients who receive chemoradiation for colorectal or anal cancers do **not** end up needing a permanent ostomy; the decision depends on tumor location, extent of surgery, and how well the bowel can be preserved. If an ostomy is required, it is usually created during the surgical phase, and you’ll have a dedicated stoma nurse and dietitian who will teach you how to fit, secure, and empty the bag before you leave the hospital. They’ll also show you how to manage odor—using odor‑neutralizing liners, choosing a bag with a secure seal, and cleaning the skin around the stoma to prevent leaks.\n\nAfter discharge, you’ll have follow‑up visits with the surgical team and stoma nurse to check the stoma site, adjust the bag size, and address any complications. If a leak occurs, you’ll know to replace the bag immediately, apply a fresh adhesive, and monitor for redness or infection. Call your stoma nurse or oncologist if you notice persistent leakage, swelling, or pain.\n\nRemember, your care team will guide you through every step—together, you’ll stay prepared and in control.",
+          "order": 1,
+          "qid": "S6-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "I can’t stop imagining a bag leaking while I’m on shift. What’s real versus fear, and who teaches me to manage it if I need one?",
+          "gt": "I’m really sorry you’re feeling so anxious—many people worry about an ostomy while driving or working. **What’s real?**  \n- **Most ostomies are well‑sealed and odor‑controlled** with modern pouching systems.  \n- **A temporary ileostomy** (often used after chemoradiation) usually lasts 4–6 weeks; a permanent colostomy is less common and can be managed with a discreet pouch that can be changed in a restroom or a private area.  \n- **Driving is usually safe** once you’re comfortable with the pouch and have practiced changing it in a car or bus.\n\n**What’s fear?**  \n- Imagining a leak in the middle of a crowded route.  \n- Believing the smell will be unbearable or visible to passengers.\n\n**How to manage it:**  \n1. **Stoma‑care nurse**: They’ll teach you pouch‑placement, leak‑testing, and odor‑control products.  \n2. **Practice**: Change the pouch in a car or at home before you start driving.  \n3. **Emergency kit**: Keep spare pouches, a small bag, and a change‑of‑clothes in your vehicle.  \n4. **Diet & hydration**: Reduce gas‑producing foods and stay hydrated to minimize leaks.  \n5. **Support**: Join a local or online ostomy support group; hearing others’ experiences can reduce anxiety.\n\nIf you’re still unsure, ask your oncologist to refer you to a stoma nurse or a colorectal surgeon who can give you a personalized plan. You can keep driving safely—most patients do, with the right preparation and support.",
+          "order": 1,
+          "qid": "S6-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "I can’t stop imagining a bag leaking while I’m on shift. What’s real versus fear, and who teaches me to manage it if I need one?",
+          "gt": "It’s normal to worry, but most patients who need a temporary ostomy after rectal cancer treatment learn to manage it safely on the job.  \n**Real risk** – About 20‑30 % of patients with locally advanced rectal cancer receive a diverting ileostomy or colostomy. The chance of a “leak” that would interrupt a bus shift is very low once the bag is fitted and the skin is protected.  \n**What to do** –  \n1. **Ask your surgeon** if a temporary ostomy is likely and whether a “watch‑and‑wait” approach could avoid it.  \n2. **Stoma‑nurse education**: they’ll teach you how to change the bag, use skin‑barrier products, and check for leaks.  \n3. **Occupational‑therapy or bus‑company support** can help you adapt your route and schedule breaks for care.  \n4. **Practice**: try a mock change at home; confidence reduces anxiety.  \n\nWith proper training and support, most drivers return to work with no interruption.",
+          "order": 1,
+          "qid": "S6-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "I can’t stop imagining a bag leaking while I’m on shift. What’s real versus fear, and who teaches me to manage it if I need one?",
+          "gt": "I’m sorry you’re feeling so anxious—many people worry about an ostomy, especially when you’re on the move. In locally advanced rectal cancer, about 10‑20 % of patients end up with a temporary ileostomy to protect a low anastomosis. The bag is usually small, well‑sealed, and can be hidden under a jacket or coat. Most people learn to change it quickly and manage odors with a low‑odor pouch and a small “scent‑neutralizer” spray.  \n\nYour care team can arrange a **stoma‑care nurse** to give you hands‑on training before you start treatment. They’ll show you how to check for leaks, how to clean the skin, and how to carry a spare bag in a discreet pocket. If you’re worried about the smell, a simple “odor‑absorbing” pouch and a quick wipe with a damp cloth can keep it under control.  \n\nTalk to your oncologist about your concerns; they can adjust the plan (e.g., a watch‑and‑wait approach if you achieve a complete clinical response) and refer you to a stoma support group. Remember, most patients who receive an ostomy return to normal driving and daily life with minimal disruption.",
+          "order": 1,
+          "qid": "S6-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S7",
+      "title": "Senior year, sudden detour (bulky mediastinal Hodgkin lymphoma)",
+      "diagnosis": "Classical Hodgkin lymphoma with bulky mediastinal disease",
+      "treatment_plan": "ABVD every 2 weeks for 4–6 cycles (or regimen adjusted per interim PET); radiation may follow depending on response; fertility counseling before treatment",
+      "narrative": "I'm 22, a college senior. I’m supposed to take graduation photos and go on a cross-country trip. Now it’s ABVD and maybe radiation.",
+      "qa": [
+        {
+          "q": "How do I tell my friends without becoming the 'project' everyone hovers over?",
+          "gt": "I hear how anxious you feel about sharing your diagnosis, especially when you’re already juggling graduation plans and a big trip—your worries are completely understandable.  \n\n**ABVD details**  \nABVD (doxorubicin 25 mg/m², bleomycin 10 mg/m², vinblastine 6 mg/m², dacarbazine 375 mg/m²) is given every 14 days for 6–8 cycles. If radiation is added, it’s usually localized and scheduled after chemotherapy.  \n\n**Monitoring**  \nYour oncology team will check CBC, liver enzymes, and electrolytes before each cycle, plus a baseline and periodic echocardiogram and pulmonary function tests to monitor heart and lung health.  \n\n**Side effects**  \nCommon side effects include fatigue, nausea, mouth sores, mild neuropathy, and a risk of pulmonary toxicity from bleomycin. Most symptoms improve within a few days after each infusion.  \n\n**How to disclose**  \nWhen you tell friends, keep it simple: “I’m on a cancer treatment right now, but I’m still the same person. I might need some extra help or time, and I’d appreciate your support.”  \n\n**Set boundaries**  \nDecide what details you’re comfortable sharing and let them know you’re okay with casual check‑ins but don’t want to be treated as a case study.  \n\nYou’re not alone; your friends can be a source of strength while you focus on recovery.",
+          "order": 1,
+          "qid": "S7-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "How do I tell my friends without becoming the 'project' everyone hovers over?",
+          "gt": "Hey, you don’t have to go it alone. Pick a time when you’re both relaxed—maybe over coffee or a quick video call—and say something like, “I’ve been diagnosed with Hodgkin lymphoma and will be on ABVD for a few months. I’m still excited about graduation and the trip, but I’ll need some time for treatment and recovery.” Use “I” statements so it’s about your experience, not a request for constant updates. Let them know what you’re comfortable sharing (e.g., treatment dates, how you’re feeling) and set boundaries—“I’ll let you know if I need help, but I’ll handle most of the logistics.” Most friends will respect that and will be happy to support you without turning you into a project.",
+          "order": 1,
+          "qid": "S7-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "How do I tell my friends without becoming the 'project' everyone hovers over?",
+          "gt": "It’s perfectly fine to let your friends know what’s happening, but you can keep it brief and set clear boundaries.  \n1. **Pick a moment**—a quick chat or a short message works.  \n2. **Use “I” language**: “I’ve been diagnosed with Hodgkin lymphoma and will start ABVD. I’m focusing on treatment and recovery.”  \n3. **State what you need**: “I’d appreciate your support and understanding, but I don’t want to be a case study.”  \n4. **Offer updates on your own terms**: “I’ll share progress when I feel ready.”  \n5. **Invite specific help** (e.g., “Could you help me with grocery runs?”) rather than open-ended requests.  \n\nBy being honest yet concise, you give them the information they need without turning your journey into a project. Remember, you’re in control of how much you share and when.",
+          "order": 1,
+          "qid": "S7-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "How do I tell my friends without becoming the 'project' everyone hovers over?",
+          "gt": "It’s okay to be honest but you don’t have to share every detail.  \n1. **Pick one or two close friends** who you trust to keep things private.  \n2. **Keep it simple**: “I’ve been diagnosed with Hodgkin lymphoma and will start ABVD in a few weeks. I’ll need some time for treatment and recovery.”  \n3. **Set boundaries**: let them know you’ll share updates when you’re ready, but you don’t want constant check‑ins.  \n4. **Ask for support, not tasks**: “I’d appreciate a text or a call when I’m feeling up to it, but I’ll handle the rest.”  \n5. **Plan your own schedule**: let them know you’ll still be around for graduation photos and the trip, but you may need to adjust dates.  \n6. **Fertility counseling** is part of the plan—share that if you feel comfortable, but it’s not a daily conversation.  \n\nBy framing it as a brief, honest update and setting clear limits, you keep the focus on your health while preserving your friendships.",
+          "order": 1,
+          "qid": "S7-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S8",
+      "title": "Coder with a countdown (chronic-phase CML on TKI)",
+      "diagnosis": "Chronic-phase chronic myeloid leukemia",
+      "treatment_plan": "Daily oral tyrosine kinase inhibitor; regular BCR-ABL monitoring with specific molecular milestones; consider treatment-free remission after deep, stable response",
+      "narrative": "I'm 29, a software engineer with chronic-phase CML. I look fine, but the word 'leukemia' keeps crashing my thoughts. They’re starting me on a daily TKI pill.",
+      "qa": [
+        {
+          "q": "How do I keep working sprints when my brain pings 'I have leukemia' every 10 minutes?",
+          "gt": "I hear how unsettling those repeated thoughts feel, especially when you’re juggling tight sprint deadlines and the weight of a new diagnosis.  \n\n**TKI therapy**  \nMost chronic‑phase CML patients start imatinib 400 mg once daily (or dasatinib 100 mg, nilotinib 300 mg, or bosutinib 400 mg if first‑line is unsuitable). Side effects are usually mild—fatigue, muscle cramps, or a rash. Your oncologist will check a CBC and CMP every month and a BCR‑ABL1 PCR every 3 months to confirm the 0.1 % or lower transcript level that signals a good response.  \n\n**Managing the anxiety**  \nCognitive‑behavioral techniques work well: set a brief “leukemia check” every 10 min—note the thought, then redirect to a task. Pair this with 5‑minute micro‑breaks, deep‑breathing, or a short walk. A mental‑health professional can tailor a plan, and if anxiety spikes, a short‑acting anxiolytic may be considered.  \n\n**Keeping focus at work**  \nUse the Pomodoro method (25 min work, 5 min break) to limit multitasking. Keep a visible task list, use noise‑cancelling headphones, stay hydrated, and avoid caffeine surges that can heighten anxiety.  \n\n**What to do if things change**  \nIf you develop grade 2+ side effects, your dose may be reduced or switched. If BCR‑ABL1 remains >1 % at 3 months, a second‑line TKI may be needed.  \n\nYou’re not alone—your team and your doctor will keep a close eye on both your blood work and your mental well‑being.",
+          "order": 1,
+          "qid": "S8-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "How do I keep working sprints when my brain pings 'I have leukemia' every 10 minutes?",
+          "gt": "It’s normal for the diagnosis to intrude on your mind. Try to “park” the thought so it doesn’t hijack your sprint.  \n\n1. **Set a fixed “check‑in” window** – 5 min every 2 h to glance at your blood‑work or medication log. Outside that window, let the thought go.  \n2. **Use a Pomodoro or time‑boxing routine** – 25 min focused work, 5 min break. During breaks, jot the leukemia thought on a sticky note and set a timer to revisit it later.  \n3. **Externalize the worry** – keep a short “leukemia log” (date, test result, feeling). Seeing it written out reduces rumination.  \n4. **Mind‑body pause** – a 1‑min breathing or grounding exercise whenever the thought pops up.  \n5. **Talk to your manager** – explain you’re managing a chronic condition; most teams can accommodate brief breaks or flexible hours.  \n6. **Professional support** – a brief CBT or counseling session can give you coping tools tailored to health anxiety.  \n\nRemember, the TKI usually doesn’t impair cognition; if it does, discuss it with your oncologist. By giving the thought a scheduled slot and using structured breaks, you can keep your sprint momentum while staying on top of your health.",
+          "order": 1,
+          "qid": "S8-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "How do I keep working sprints when my brain pings 'I have leukemia' every 10 minutes?",
+          "gt": "I’m sorry you’re feeling this way—leukemia can feel like a constant reminder, but it doesn’t have to derail your work.  \n1. **Set a “leukemia‑pause.”** Every 10–15 min, take a 1‑minute break: breathe, stretch, or jot the thought in a notebook.  \n2. **Use a “task‑focus” cue.** Keep a sticky note or a short‑term task list on your monitor. When the thought pops up, glance at the list and shift back to the next item.  \n3. **Schedule “mind‑reset” moments.** During your sprint planning, allocate a 5‑minute slot for a quick meditation or a short walk—this trains your brain to switch gears.  \n4. **Talk to your team.** A brief disclosure (“I’m managing CML; I’ll need short breaks”) can foster understanding and reduce anxiety.  \n5. **Seek support.** A therapist or CML support group can help you reframe the constant reminder into a manageable part of your routine.  \n\nRemember, TKIs often lead to deep, stable responses, so your leukemia is not a permanent obstacle—just a temporary challenge you can navigate with these tools.",
+          "order": 1,
+          "qid": "S8-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "How do I keep working sprints when my brain pings 'I have leukemia' every 10 minutes?",
+          "gt": "It’s normal for the diagnosis to intrude on your thoughts, especially when you’re in a fast‑paced work environment. Try a few practical habits that keep the focus on the task at hand:\n\n1. **Chunk your day** – use short, timed sprints (e.g., 25 min work + 5 min break). Set a timer so you know when to pause and reset.  \n2. **Grounding cue** – when a “leukemia” thought pops up, pause, take three deep breaths, and jot the thought on a sticky note. Then return to the timer.  \n3. **Reframe the narrative** – remind yourself that the TKI is highly effective; most patients achieve deep molecular responses and can even pursue treatment‑free remission.  \n4. **Communicate** – let your manager or HR know you’re managing a chronic condition; they can help with flexible breaks or remote work if needed.  \n5. **Support network** – a brief chat with a trusted colleague, a peer‑support group, or a therapist can help you process anxiety outside work hours.  \n\nBy turning the “ping” into a quick, structured pause, you keep the momentum of your sprints while honoring your health.",
+          "order": 1,
+          "qid": "S8-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S9",
+      "title": "Meeting my granddaughter (EGFR-mutated metastatic NSCLC)",
+      "diagnosis": "EGFR-mutated metastatic non-small cell lung cancer",
+      "treatment_plan": "Osimertinib oral therapy once daily; routine monitoring for rash, diarrhea, heart rhythm, and rare lung inflammation; imaging every 2–3 months",
+      "narrative": "I'm 68, a soon-to-be grandfather with an EGFR mutation. I feel guilty about old smoking years and I'm terrified I won't be there to hold my granddaughter next month.",
+      "qa": [
+        {
+          "q": "How quickly might my breathing ease so I can fly to meet her without gasping in the aisle?",
+          "gt": "I hear how frightening the idea of struggling to breathe on a flight feels, especially when you’re already carrying so much hope for your granddaughter’s arrival.\n\nMost patients with an EGFR‑mutated lung cancer who start a first‑line TKI (e.g., osimertinib 80 mg once daily) notice a reduction in cough and shortness of breath within 1–2 weeks, though full symptomatic relief can take up to 4 weeks. Blood counts, liver enzymes, and a baseline ECG are checked every 4 weeks, and a CT scan is repeated every 8–12 weeks to confirm tumor shrinkage and monitor for interstitial lung disease. If you develop a rash, diarrhea, or worsening dyspnea, your oncologist may add a low‑dose steroid or adjust the dose.\n\nFor a flight, stay well‑hydrated, wear compression stockings, and consider a prophylactic anticoagulant if you have a high VTE risk. If you have baseline hypoxia, bring a portable oxygen concentrator or arrange for supplemental oxygen at the airport. Discuss these plans with your oncology team before you travel.\n\nWe’ll monitor your response closely and adjust the plan as needed so you can focus on being there for your granddaughter.",
+          "order": 1,
+          "qid": "S9-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "How quickly might my breathing ease so I can fly to meet her without gasping in the aisle?",
+          "gt": "Osimertinib usually starts to relieve symptoms within a few weeks, but the exact timing varies. Many patients notice a modest improvement in shortness of breath and cough after 2–4 weeks of therapy, while radiographic shrinkage often appears by 6–8 weeks. If your breathing is still very labored, your oncologist may add supportive measures (e.g., low‑dose steroids, oxygen, or a bronchodilator) to help you feel better sooner. In short, you might feel less gasping after about a month of treatment, but the response can be slower or faster depending on tumor burden and overall health. Discuss your travel plans with your oncologist so they can tailor monitoring and supportive care to keep you comfortable for the flight.",
+          "order": 1,
+          "qid": "S9-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "How quickly might my breathing ease so I can fly to meet her without gasping in the aisle?",
+          "gt": "I’m sorry you’re feeling so anxious. Osimertinib often begins to relieve cough, wheeze, and shortness of breath within a few weeks, but the full radiologic response can take 3–6 months. If you notice a modest improvement in your breathing after 2–4 weeks, many patients feel comfortable traveling, especially if you have a routine of bronchodilators or low‑dose steroids that help during flights. However, if you still feel significant exertional dyspnea, or if you develop new cough or chest pain, you should contact your oncologist before booking a flight. They may recommend a short‑course of steroids, supplemental oxygen, or a brief pause in travel until your symptoms are better. In short, expect some relief in a few weeks, but plan the trip only after your doctor confirms it’s safe for you.",
+          "order": 1,
+          "qid": "S9-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "How quickly might my breathing ease so I can fly to meet her without gasping in the aisle?",
+          "gt": "I’m so sorry you’re feeling anxious about travel.  With osimertinib, many patients notice a reduction in cough, wheeze, and shortness of breath within **2–4 weeks** of starting therapy, especially if the tumor burden is modest.  In some cases, early symptomatic relief can appear in a few days, but the most reliable improvement usually follows after the first cycle of treatment and the first imaging review (≈6–8 weeks).  \n\nIf you have significant lung involvement or baseline hypoxia, the response may be slower or less complete, and you might still need supplemental oxygen or a bronchodilator.  Discuss your travel plans with your oncologist; they can assess whether you’re fit for a flight and may recommend a pre‑flight evaluation or a brief course of steroids or bronchodilators to ease breathing.  \n\nTake it one step at a time—your care team can help you plan a safe, comfortable trip to meet your granddaughter.",
+          "order": 1,
+          "qid": "S9-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "Sunday dinners matter (metastatic pancreatic cancer)",
+      "diagnosis": "Metastatic pancreatic adenocarcinoma with weight loss and pain",
+      "treatment_plan": "Gemcitabine + nab-paclitaxel weekly for 3 weeks, then 1 week off (28-day cycles); symptom control; nutrition and enzyme support; reassessment each cycle",
+      "narrative": "I'm 72, a retired teacher. Pain steals my sleep and I’m losing weight. My family’s Sunday dinner and church choir are my anchors. The plan is gemcitabine with nab-paclitaxel.",
+      "qa": [
+        {
+          "q": "Can you get my pain under control now so I can sit through dinner without faking a smile?",
+          "gt": "I hear how frightening it feels to be in pain while you’re trying to stay strong for your family and choir—your frustration is completely understandable.\n\n**Pain‑control options you can discuss right away**  \n1. **Baseline meds** – Acetaminophen 1 g every 6 h or an NSAID (e.g., ibuprofen 400 mg q6h) if you’re not on a chemo‑related bleeding risk.  \n2. **Opioid bridge** – If pain is moderate‑to‑severe, a short‑acting opioid such as oxycodone 5–10 mg every 4–6 h or hydromorphone 1–2 mg q4–6 h can be started. For breakthrough pain, a “rescue” dose (e.g., oxycodone 5 mg) can be taken as needed.  \n3. **Adjuncts for neuropathic pain** – Gabapentin 300 mg at bedtime, titrated up to 900 mg nightly, or duloxetine 30 mg daily, can help with the numb‑tingling pain that gemcitabine/nab‑paclitaxel often causes.  \n4. **Topicals** – Lidocaine patches or capsaicin cream for localized discomfort.  \n5. **Non‑pharmacologic** – Warm compresses, gentle stretching, and relaxation breathing can complement meds.\n\n**What to watch for**  \n- Sedation, dizziness, or slowed breathing (especially with opioids).  \n- Constipation—take a stool softener or laxative with each opioid dose.  \n- Nausea or vomiting—consider ondansetron if needed.  \n- If you notice confusion, extreme drowsiness, or breathing slows, call your oncology nurse or go to the ER immediately.\n\n**Next steps**  \nCall your oncology team or nurse line today to request a prescription for the above regimen and to discuss any dose adjustments based on your current labs and overall health. They can also arrange a quick pain‑assessment visit if needed.  \n\nYou’re not alone—your care team will help you get the relief you need so you can enjoy your Sunday dinner and choir without masking the pain.",
+          "order": 1,
+          "qid": "S10-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "Can you get my pain under control now so I can sit through dinner without faking a smile?",
+          "gt": "I’m sorry you’re in so much pain. The first step is to let your oncology team know immediately—pain that interferes with eating or sleep is a medical emergency. In the meantime, here are practical options that can often be started quickly:\n\n1. **Opioid rescue** – a short‑acting opioid (e.g., oxycodone 5 mg every 4–6 h PRN) can be titrated to control breakthrough pain.  \n2. **Adjuvant agents** – low‑dose gabapentin or duloxetine can help with neuropathic components.  \n3. **Non‑opioid adjuncts** – acetaminophen 1 g q6h or NSAIDs (if no contraindication) add benefit.  \n4. **Topical** – lidocaine patches or creams for localized pain.  \n5. **Supportive measures** – heat packs, gentle massage, and a warm shower can ease discomfort.  \n6. **Rapid‑acting interventions** – if pain spikes, a short‑acting opioid or a brief IV opioid (e.g., morphine 2 mg IV) can be administered by your team.\n\nDiscuss these options with your oncologist or palliative care provider right away; they can adjust doses, monitor for side effects, and add nerve blocks or radiation if needed. With prompt adjustment, you should feel better enough to enjoy Sunday dinner and your choir.",
+          "order": 1,
+          "qid": "S10-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "Can you get my pain under control now so I can sit through dinner without faking a smile?",
+          "gt": "I’m sorry you’re in so much pain. The first step is to let your oncology team know how bad it is—pain scores and timing help them adjust therapy. In most cases, a short‑acting opioid (e.g., oxycodone or hydromorphone) taken 30–60 min before dinner can give you a few hours of relief. If the pain is more constant, a long‑acting opioid (like oxycodone‑extended release) plus a rescue dose for breakthrough pain is common.  \n\nAdd adjuvants that are inexpensive and low‑risk: acetaminophen, NSAIDs (if kidney function allows), or a low‑dose antidepressant (duloxetine) for neuropathic pain. If opioids alone don’t help, ask about a nerve block or a palliative‑care consult—these can dramatically reduce pain and improve quality of life.  \n\nKeep a simple pain diary (time, intensity, meds) and bring it to your next appointment; it gives the team the data they need to fine‑tune your plan. You deserve to enjoy Sunday dinner, not just survive it.",
+          "order": 1,
+          "qid": "S10-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "Can you get my pain under control now so I can sit through dinner without faking a smile?",
+          "gt": "I’m sorry you’re in so much pain. The first step is to get a rapid‑acting opioid (e.g., oral morphine 10–15 mg every 4 hours or a transdermal fentanyl patch) titrated to your comfort. If you’re already on opioids, add a short‑acting “rescue” dose (e.g., oxycodone 5 mg every 1–2 hours as needed). Pair this with a non‑steroidal anti‑inflammatory (if no contraindications) and an adjuvant such as gabapentin 300 mg at bedtime, titrated up to 900 mg over a few days. A brief course of a low‑dose steroid (e.g., prednisone 10 mg daily for 3–5 days) can also reduce inflammation‑related pain. If pain persists, a regional nerve block (e.g., celiac plexus block) or a short‑term opioid infusion may be warranted. Call your oncology team or palliative‑care nurse right away—rapid adjustment of medication can often bring relief within hours. In the meantime, keep a small glass of water and a light snack at the table; staying hydrated and eating small bites can help you enjoy the meal.",
+          "order": 1,
+          "qid": "S10-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "My hands play, my bones ache (transplant-eligible multiple myeloma)",
+      "diagnosis": "Multiple myeloma with lytic bone disease, transplant-eligible",
+      "treatment_plan": "Induction (bortezomib/lenalidomide/dexamethasone), stem-cell collection and autologous transplant when appropriate, then maintenance (often lenalidomide)",
+      "narrative": "I'm 58, a guitarist. My fingers are my identity, but my back aches from bone lesions. They're talking about transplant after several months of treatment.",
+      "qa": [
+        {
+          "q": "Will treatment numb my fingers and steal my music?",
+          "gt": "I hear how frightening it feels that the treatment might numb your fingers, especially when your music is such a core part of who you are. It’s completely natural to feel anxious about that possibility.\n\nThe transplant itself—whether it’s an autologous stem‑cell transplant for multiple myeloma or a bone‑marrow transplant for another condition—doesn’t directly numb your hands. The risk of peripheral neuropathy comes mainly from the chemotherapy agents used before and after the transplant. For example, high‑dose melphalan (200 mg/m²) and bortezomib are common conditioning drugs that can cause tingling or numbness in the fingers. Most patients experience only mild, reversible symptoms, but a small percentage develop more persistent neuropathy.\n\nYour team will monitor you closely: weekly neurologic exams, pain scales, and, if needed, nerve‑conduction studies. If symptoms appear, they can reduce the dose, switch to a less neurotoxic drug, or add neuropathic pain medications (gabapentin, duloxetine). Hand‑therapy and occupational‑therapy exercises can help maintain dexterity.\n\nMany musicians recover full sensation and return to playing after transplant, sometimes with temporary adjustments. Discuss your specific regimen and any concerns with your transplant oncologist; they’ll tailor the plan to protect your hands while treating the disease.\n\nWe’ll keep a close eye on your nerves and adjust as needed so you can keep making music.",
+          "order": 1,
+          "qid": "S11-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "Will treatment numb my fingers and steal my music?",
+          "gt": "I’m sorry you’re worried about your hands—your fingers are indeed a precious part of who you are. The induction regimen you described (bortezomib‑lenalidomide‑dexamethasone) can cause peripheral neuropathy, most often from bortezomib. In most patients the neuropathy is mild, reversible, and improves when the drug is stopped or the dose is lowered. Lenalidomide and the transplant itself are not neurotoxic, and many people return to normal hand function after transplant and maintenance.  \n\nIf you notice tingling, numbness, or weakness, let your team know right away. They can adjust the bortezomib schedule, add neuropathy‑protective agents, or switch to a different drug. Hand‑strengthening exercises, occupational therapy, and pain‑control measures (e.g., gabapentin, duloxetine) can also help.  \n\nWith close monitoring and timely adjustments, most patients keep their fingers working and their music playing.",
+          "order": 1,
+          "qid": "S11-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "Will treatment numb my fingers and steal my music?",
+          "gt": "I’m really glad you’re asking this—your hands are central to who you are. The main drugs in the induction (bortezomib, lenalidomide, dexamethasone) can cause peripheral neuropathy, most often a mild, reversible tingling or numbness that usually improves if the dose is reduced or the drug is switched. Bortezomib‑induced neuropathy is dose‑related, so your team will monitor symptoms closely and adjust therapy early. Lenalidomide and steroids rarely cause neuropathy. After transplant, many patients report a significant reduction in bone pain and a return of strength. In short, while there is a risk of temporary numbness, it is usually manageable, and most patients regain full use of their fingers and can continue playing. Keep the conversation open with your oncologist—early reporting of symptoms is key to preserving your music.",
+          "order": 1,
+          "qid": "S11-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "Will treatment numb my fingers and steal my music?",
+          "gt": "Bortezomib‑based regimens can cause **peripheral neuropathy**—tingling, numbness, or weakness that may affect fine finger movements. Lenalidomide and steroids are less neurotoxic, but cumulative doses can add risk. Most patients notice symptoms early (within the first 2–3 cycles) and can have the dose reduced, switched to a weekly schedule, or switched to a different drug (e.g., carfilzomib or a non‑neurotoxic backbone).  \n\n**What you can do:**  \n- Report any tingling, numbness, or hand weakness right away.  \n- Keep a symptom diary and bring it to appointments.  \n- Ask for dose‑adjustment or a neuropathy‑friendly regimen if symptoms worsen.  \n- Use hand‑strengthening exercises and ergonomic tools; a hand therapist can tailor a program for guitar playing.  \n\nWith close monitoring and early intervention, most patients maintain enough hand function to continue playing. The transplant itself does not add neuropathy; it mainly restores marrow function. So, while there is a risk, it is manageable, and many musicians keep their music alive through treatment.",
+          "order": 1,
+          "qid": "S11-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S12",
+      "title": "Voice on the line (HPV-positive base-of-tongue cancer)",
+      "diagnosis": "HPV-positive oropharyngeal squamous cell carcinoma",
+      "treatment_plan": "Definitive chemoradiation with speech/swallow therapy; consider feeding tube support if needed",
+      "narrative": "I'm 49, a choir singer and call-center lead. The tumor is at the base of my tongue. The plan is chemoradiation. My voice is my livelihood and my joy.",
+      "qa": [
+        {
+          "q": "Will I still sound like me after treatment, or is that voice gone?",
+          "gt": "I hear how frightening it feels to think your voice might be lost, especially when singing is such a core part of who you are and how you connect with others.\n\nChemoradiation for a base‑of‑tongue tumor usually involves 70 Gy of external‑beam radiation delivered in 35 fractions, combined with cisplatin 100 mg/m² every 3 weeks (or weekly 30 mg/m²). The treatment can cause mucositis, xerostomia, and swelling of the tongue and larynx, all of which can temporarily alter pitch, breathiness, and vocal stamina. Most patients experience some hoarseness or reduced range during the first 6–12 weeks, but with early referral to a speech‑language pathologist, voice‑rest protocols, and targeted exercises, many regain a voice that is close to their pre‑treatment sound. Your oncologist will schedule routine laryngoscopies and voice assessments every 3–6 months to monitor for late fibrosis or persistent dysphonia. If significant changes arise, options such as voice prosthesis or surgical intervention can be discussed.\n\nLet’s keep a close eye on your voice and work together with your speech therapist to preserve the sound that defines you.",
+          "order": 1,
+          "qid": "S12-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "Will I still sound like me after treatment, or is that voice gone?",
+          "gt": "I’m sorry you’re facing this uncertainty. Chemoradiation for a base‑of‑tongue tumor can alter voice quality—radiation can cause temporary swelling, dryness, and later fibrosis that changes resonance, pitch, and breath support. Many patients, however, regain a voice that is close to their pre‑treatment sound, especially when speech‑language pathology is started early, voice rest is followed, and hydration and oral hygiene are maintained. Expect some initial hoarseness or a slightly breathier tone; with targeted voice therapy, most singers find they can return to their usual range and projection. If you notice persistent changes, a laryngologist can evaluate for structural issues and recommend further interventions. Keep in touch with your speech therapist and let them know any new symptoms so adjustments can be made promptly.",
+          "order": 1,
+          "qid": "S12-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "Will I still sound like me after treatment, or is that voice gone?",
+          "gt": "Chemoradiation for a base‑of‑tongue tumor can alter the voice, but it isn’t automatically “gone.” Radiation can cause temporary hoarseness, breathiness, or a slightly lower pitch, and the tongue’s flexibility may be reduced. Most patients notice improvement as the mucosa heals, especially with early, intensive speech‑and‑swallow therapy. Some subtle, permanent changes (e.g., a slightly raspier tone or reduced range) can remain, but many singers return to a voice that is recognizably theirs. Working closely with a speech‑pathologist, practicing vocal exercises, and protecting your voice during recovery will maximize the chance of regaining the quality and strength you need for singing and speaking.",
+          "order": 1,
+          "qid": "S12-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "Will I still sound like me after treatment, or is that voice gone?",
+          "gt": "I’m sorry you’re facing this uncertainty. Radiation to the base‑of‑tongue can affect the muscles that move the tongue and the surrounding soft tissues, so you may notice some changes in pitch, volume, or clarity. Most patients recover a functional voice, but it often takes weeks to months of speech‑and‑swallow therapy to regain the strength and control you need for singing. The larynx itself is usually spared in oropharyngeal treatment, so true vocal fold function is preserved, but swelling, dryness, and temporary hoarseness are common. With diligent therapy, many singers return to their pre‑treatment voice, though the tone may be slightly different. Discuss your goals with your speech‑language pathologist early—he/she can tailor exercises to preserve your singing quality and help you adapt to any subtle changes.",
+          "order": 1,
+          "qid": "S12-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S13",
+      "title": "Choice overload (early ER+/PR+ HER2- breast cancer)",
+      "diagnosis": "Early-stage hormone receptor–positive, HER2-negative breast cancer",
+      "treatment_plan": "Breast-conserving surgery plus radiation or mastectomy; adjuvant endocrine therapy; chemotherapy guided by genomic risk when indicated",
+      "narrative": "I'm 41, engaged, and deciding between lumpectomy with radiation or mastectomy. I want to live, look like myself in photos, and still feel like me.",
+      "qa": [
+        {
+          "q": "Is survival the same with lumpectomy plus radiation versus mastectomy, or am I gambling?",
+          "gt": "I hear how frightening the idea of choosing between a lumpectomy with radiation and a mastectomy feels, especially when you’re already juggling so many thoughts about your future and your partner’s support.\n\nFor most early‑stage (I–II) breast cancers, large randomized trials and long‑term follow‑up show that overall survival with breast‑conserving therapy (lumpectomy + whole‑breast radiation) is essentially identical to that with a mastectomy, provided the surgical margins are clear and the tumor biology is favorable. Local‑recurrence rates are slightly higher after lumpectomy (≈2–4 % over 10 years) but are effectively managed with radiation and rarely impact overall survival. Mastectomy eliminates the need for daily radiation, but it carries its own surgical risks and, if reconstruction is desired, additional procedures and recovery time. Your oncologist will review your tumor size, nodal status, hormone receptor/HER2 status, and genetic risk to tailor the recommendation. Regular follow‑up (clinical exam, mammogram or MRI of the contralateral breast, and routine blood work) is the same for both paths, with adjustments for any adjuvant chemotherapy or targeted therapy you receive.\n\nWe’ll work together to weigh these factors and choose the plan that keeps you healthy while honoring how you want to look and feel.",
+          "order": 1,
+          "qid": "S13-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "Is survival the same with lumpectomy plus radiation versus mastectomy, or am I gambling?",
+          "gt": "For most early‑stage ER⁺/PR⁺/HER2‑negative breast cancers, the 10‑year overall survival after breast‑conserving surgery (lumpectomy) plus whole‑breast radiation is essentially the same as after a mastectomy when the tumor is ≤3 cm, margins are clear, and no high‑risk features (e.g., extensive intraductal component, multicentric disease, or BRCA mutation) are present. Mastectomy does lower the chance of a local recurrence, but it does **not** improve overall survival in this setting. If you’re comfortable with radiation and your surgeon confirms clear margins, lumpectomy + radiation is a safe, evidence‑based choice that preserves your body image while maintaining the same life‑prolonging benefit as mastectomy.",
+          "order": 1,
+          "qid": "S13-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "Is survival the same with lumpectomy plus radiation versus mastectomy, or am I gambling?",
+          "gt": "For most early‑stage, hormone‑receptor positive, HER2‑negative breast cancers, overall survival is essentially the same whether you choose breast‑conserving surgery (lumpectomy + radiation) or a mastectomy, as long as the tumor is completely removed and all other treatment steps (endocrine therapy, possible chemo) are followed.  \nThe trade‑off is a slightly higher chance of a local recurrence after lumpectomy, but this does not translate into a survival difference in large, randomized trials.  \nYour decision can therefore focus on what feels right for you—body image, comfort with radiation, personal risk factors, and any genetic findings—rather than a survival gamble. If you’re unsure, a second opinion or a multidisciplinary tumor board can help clarify how your specific tumor characteristics fit into these data.",
+          "order": 1,
+          "qid": "S13-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "Is survival the same with lumpectomy plus radiation versus mastectomy, or am I gambling?",
+          "gt": "For most early‑stage, hormone‑receptor positive, HER2‑negative breast cancers, the overall survival with breast‑conserving surgery (lumpectomy) plus whole‑breast radiation is essentially the same as with a mastectomy. Large trials (e.g., NSABP B‑06, EORTC 22922) show no difference in 10‑year or 15‑year survival, even though local‑recurrence rates are slightly higher with lumpectomy (≈5‑10 % vs. <2 % with mastectomy). Those recurrences are usually treatable and do not worsen long‑term outcomes.  \n\nKey points to consider:  \n- **Tumor size and margins**: If the tumor is large relative to breast size or margins are close, mastectomy may be preferred.  \n- **Genomic risk**: If a genomic assay (e.g., Oncotype DX) suggests low chemotherapy benefit, endocrine therapy alone may suffice, making breast‑conserving therapy a safe choice.  \n- **Personal preference**: Your desire to maintain appearance and body image is valid; many patients choose lumpectomy for that reason.  \n\nIn short, you’re not gambling on survival—both options give comparable long‑term outcomes. Discuss your specific tumor characteristics and personal priorities with your surgical oncologist to decide the best plan for you.",
+          "order": 1,
+          "qid": "S13-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S14",
+      "title": "Miles to go (metastatic left-sided RAS wild-type colon cancer)",
+      "diagnosis": "Metastatic colorectal cancer, left-sided, RAS wild-type",
+      "treatment_plan": "Backbone chemo (e.g., FOLFOX or FOLFIRI) with targeted therapy (anti-EGFR or bevacizumab) based on goals and side-effect profile; consider liver-directed options if response",
+      "narrative": "I'm 52, a sales rep living on the road. I need a plan that controls cancer without wrecking my ability to drive and meet clients.",
+      "qa": [
+        {
+          "q": "How do we pick between regimens when every option sounds like a trade-off?",
+          "gt": "I hear how anxious you feel about picking a regimen that keeps you on the road, especially when every option feels like a trade‑off.\n\nWhen choosing a cancer plan, the oncologist weighs three pillars: **efficacy for your specific tumor**, **side‑effect profile that won’t impair driving or client meetings**, and **treatment logistics** (oral vs. infusion, frequency, and recovery time).  \n- **Oral targeted agents** (e.g., CDK4/6 inhibitors for hormone‑positive breast cancer, EGFR inhibitors for lung cancer) give you 1‑2 hour daily doses that fit a travel schedule and usually cause fatigue or mild rash, not the severe neuropathy or cardiotoxicity that can limit driving.  \n- **Immunotherapy** (pembrolizumab, nivolumab) is given every 2–3 weeks, with infusions lasting 30–60 minutes; the main risks are immune‑related fatigue and mild colitis, which can be managed with steroids and rarely require stopping treatment.  \n- **Traditional chemotherapy** (FOLFOX, CAPOX, carboplatin/paclitaxel) often produces neuropathy, myelosuppression, and longer recovery, so it’s usually reserved for when the tumor is aggressive or other options are unsuitable.\n\n**Monitoring**: CBC and CMP every 2 weeks; echocardiogram every 3 months if you’re on trastuzumab or a cardiotoxic agent; neuropathy checks at each visit; and imaging every 8–12 weeks to gauge response (tumor shrinkage or marker decline).  \n\nIf a side effect threatens your ability to drive, dose reductions, supportive meds (anti‑nausea, neuropathy pain relievers), or a switch to a less toxic agent are common next steps.  \n\nYour oncologist will tailor this plan to your tumor biology and lifestyle, so keep the conversation open—your voice is key in balancing control and mobility.",
+          "order": 1,
+          "qid": "S14-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "How do we pick between regimens when every option sounds like a trade-off?",
+          "gt": "**Choosing a regimen that lets you keep driving**\n\n| What matters | Regimen that fits | Why it’s better for a road‑oriented schedule |\n|--------------|-------------------|----------------------------------------------|\n| **Avoid neuropathy & fatigue** | **FOLFIRI + bevacizumab** (or capecitabine‑based FOLFOX) | IFO‑IRI has less neuro‑toxicity than FOLFOX; capecitabine is oral, so you can dose at home. |\n| **Minimise GI upset** | **FOLFOX + bevacizumab** | 5‑FU/oxaliplatin is usually better tolerated than irinotecan‑based therapy. |\n| **Targeted‑therapy side‑effects** | **Anti‑EGFR (cetuximab/panitumumab)** for RAS‑WT, left‑sided tumors | Skin rash can be managed with topical care; no hypertension or bleeding that would impair driving. |\n| **Convenience & travel** | **Capecitabine + bevacizumab** | Oral capecitabine + IV bevacizumab every 2 weeks; no daily clinic visits. |\n| **Overall safety** | **FOLFOX + bevacizumab** | Lower risk of severe hypertension/bleeding than bevacizumab alone. |\n\n**Practical steps**\n\n1. **Prioritize your performance status** – if you’re already fatigued, avoid irinotecan.  \n2. **Discuss side‑effect management** – skin‑rash kits, anti‑nausea meds, and a plan for neuropathy.  \n3. **Schedule infusions** – choose a clinic that offers same‑day or home‑infusion options.  \n4. **Monitor** – regular labs and imaging every 8–12 weeks; adjust if toxicity rises.  \n\nPick the combo that keeps you symptom‑free, lets you dose at home or on the road, and matches your travel schedule.",
+          "order": 1,
+          "qid": "S14-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "How do we pick between regimens when every option sounds like a trade-off?",
+          "gt": "**Choosing a regimen that lets you keep driving and meeting clients**\n\n1. **Efficacy vs. side‑effect profile** – For left‑sided, RAS‑wild‑type disease, anti‑EGFR (cetuximab or panitumumab) + FOLFIRI is highly effective, but it can cause diarrhea and a skin rash that may need frequent clinic visits.  \n2. **Neuro‑toxicity** – FOLFOX + bevacizumab has less cumulative neuropathy, which is important for safe driving.  \n3. **Treatment schedule** – FOLFOX is usually every 2 weeks, while FOLFIRI is every 2 weeks as well; both require IV infusions. Oral capecitabine + bevacizumab can reduce clinic time but adds hand‑foot syndrome.  \n4. **Practicality** – Pick the regimen that fits your travel schedule: fewer infusion days, minimal monitoring, and side‑effects that you can manage on the road (e.g., keep hydration for diarrhea, use antihistamines for rash).  \n\n**Bottom line:** Discuss with your oncologist the trade‑offs above. A common compromise is **FOLFOX + bevacizumab** for lower neuropathy and manageable side‑effects, or **FOLFIRI + cetuximab** if you’re comfortable handling diarrhea and rash. The goal is to keep the cancer controlled while preserving your ability to drive and work.",
+          "order": 1,
+          "qid": "S14-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "How do we pick between regimens when every option sounds like a trade-off?",
+          "gt": "**Choosing a regimen when every option feels like a trade‑off**\n\n1. **Side‑effect profile that matters to you**  \n   * **FOLFOX + bevacizumab** – 2‑week cycles, less neuropathy than FOLFIRI, but can cause hypertension and proteinuria.  \n   * **FOLFIRI + bevacizumab** – 2‑week cycles, more diarrhea and fatigue, but less neuropathy.  \n   * **Anti‑EGFR (cetuximab/panitumumab) + chemo** – rash, hypomagnesemia, and infusion reactions; usually paired with FOLFOX or FOLFIRI.\n\n2. **Impact on driving**  \n   * Avoid regimens that cause severe fatigue, neuropathy, or vision changes.  \n   * FOLFOX’s neuropathy is usually mild early on; anti‑EGFR rash can be managed with topical steroids and antihistamines.\n\n3. **Convenience**  \n   * 2‑week infusions fit a travel schedule better than 3‑week cycles.  \n   * Consider a home‑infusion or a nearby clinic to reduce travel time.\n\n4. **Personal priorities**  \n   * If maintaining high energy for client meetings is key, lean toward FOLFOX + bevacizumab or anti‑EGFR + FOLFOX with close monitoring of rash and neuropathy.  \n   * If you’re more tolerant of diarrhea but want fewer infusion visits, FOLFIRI + bevacizumab is an option.\n\n**Bottom line:**  \nPick the regimen that offers the most predictable, manageable side‑effects for driving and client work, fits your travel schedule, and aligns with your overall health goals. Discuss these priorities with your oncologist to tailor the plan to your lifestyle.",
+          "order": 1,
+          "qid": "S14-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S15",
+      "title": "Sun runner (BRAF V600E metastatic melanoma)",
+      "diagnosis": "BRAF V600E positive metastatic melanoma",
+      "treatment_plan": "Immunotherapy and/or targeted BRAF/MEK inhibitors depending on goals and disease features",
+      "narrative": "I'm 39, a trail runner with metastatic melanoma. I want to keep moving and not lose months to side effects if there’s a path that fits me.",
+      "qa": [
+        {
+          "q": "How do we choose between immunotherapy and targeted pills without gambling my best shot?",
+          "gt": "I hear how anxious you feel about picking the right path, especially when you’re eager to keep running and avoid months of debilitating side‑effects.\n\n**Choosing the right therapy**  \n1. **Mutation status** – If your tumor has a BRAF V600 mutation, a BRAF inhibitor (vemurafenib or dabrafenib) plus a MEK inhibitor (trametinib or cobimetinib) can shrink lesions quickly (median response ~6 weeks). Side‑effects include rash, fever, and, rarely, cardiac changes; you’ll need a baseline and quarterly echocardiogram.  \n2. **Immunotherapy** – Anti‑PD‑1 agents (nivolumab 240 mg IV every 2 weeks or pembrolizumab 200 mg IV every 3 weeks) work in 40–50 % of patients and can produce durable responses, but they may take 4–8 weeks to show benefit. Common toxicities are fatigue, rash, colitis, and pneumonitis; you’ll have regular CBCs, CMPs, and prompt evaluation of any new symptoms.  \n3. **Speed vs. durability** – If you need rapid tumor control (e.g., symptomatic brain mets), start targeted therapy. If you’re in good performance status and can tolerate a longer ramp‑up, immunotherapy may offer longer‑term benefit.  \n4. **Monitoring** – Imaging every 8–12 weeks, labs every 2–4 weeks, and a clear “red‑flag” list (fever, diarrhea, shortness of breath) will guide adjustments.  \n5. **Next steps** – If progression occurs, you can switch to the other modality or add a second agent (e.g., ipilimumab with nivolumab) after discussion with your oncologist.\n\nWe’ll tailor the plan to your mutation profile, performance status, and how you feel about side‑effects, and we’ll keep a close eye on any changes.",
+          "order": 1,
+          "qid": "S15-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "How do we choose between immunotherapy and targeted pills without gambling my best shot?",
+          "gt": "**Choosing the first line for a 39‑year‑old trail runner with BRAF V600E metastatic melanoma**\n\n| Factor | Immunotherapy (nivolumab + ipilimumab or pembrolizumab) | BRAF/MEK (dabrafenib + trametinib) |\n|--------|--------------------------------------------------------|-------------------------------------|\n| **Speed of response** | 4–6 weeks, but many patients need 2–3 months | 2–4 weeks, rapid shrinkage |\n| **Durability** | 5‑year OS ~40 % in trials | 3‑year OS ~30 % (shorter median PFS) |\n| **Tumor burden / symptomatic disease** | Low‑volume, asymptomatic → immunotherapy first | High‑volume, pain, organ compromise → targeted first |\n| **Brain metastases** | Limited CNS penetration | Better CNS activity |\n| **LDH / performance status** | Normal LDH, ECOG 0–1 → immunotherapy | Elevated LDH, poor PS → targeted |\n| **Side‑effect tolerance** | Immune‑related AEs (colitis, dermatitis) | On‑target AEs (rash, fever, fatigue) |\n| **Prior therapy** | If previously on BRAF/MEK → switch to immunotherapy | If previously on immunotherapy → switch to BRAF/MEK |\n| **Patient preference** | Prefers fewer pills, willing to accept infusion risk | Prefers oral pills, wants quick relief |\n\n**Practical algorithm**\n\n1. **Assess tumor burden, LDH, and symptoms.**  \n   *High burden or symptomatic → start BRAF/MEK.*  \n   *Low burden → start immunotherapy.*\n\n2. **Check for brain mets.**  \n   *If present → consider BRAF/MEK first.*\n\n3. **Consider prior treatments and comorbidities.**  \n   *If you’ve had immunotherapy → switch to BRAF/MEK, and vice‑versa.*\n\n4. **Discuss side‑effect profiles and lifestyle impact.**  \n   *Oral pills + manageable rash → BRAF/MEK; infusions + potential colitis → immunotherapy.*\n\n5. **Re‑evaluate after 8–12 weeks.**  \n   *If progression → switch to the other modality.*\n\n**Bottom line:** For a fit, low‑volume patient who wants to keep running, start with **nivolumab + ipilimumab** (or pembrolizumab alone). If you have high tumor burden, symptomatic disease, or brain mets, begin **dabrafenib + trametinib** for rapid shrinkage, then consider immunotherapy for long‑term control. Always coordinate with your oncology team to tailor the plan to your specific disease features and lifestyle goals.",
+          "order": 1,
+          "qid": "S15-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "How do we choose between immunotherapy and targeted pills without gambling my best shot?",
+          "gt": "For a 39‑year‑old trail runner with BRAF V600E‑positive metastatic melanoma, the choice hinges on how quickly you need disease control versus long‑term durability.\n\n**Targeted BRAF + MEK inhibitors**  \n• Fast‑acting (median response 2–3 weeks).  \n• Excellent for bulky, symptomatic disease or when you need rapid relief to keep running.  \n• Side‑effects (rash, fatigue, arthralgia, photosensitivity) are usually manageable and often reversible after a few months.  \n\n**Immunotherapy (anti‑PD‑1/PD‑L1 ± CTLA‑4)**  \n• Durable responses in ~40–50 % of patients, but onset is slower (weeks to months).  \n• Risk of immune‑related adverse events (colitis, thyroiditis, dermatitis) that can be severe and may require steroids or treatment breaks.  \n\n**Practical approach**  \n1. **High tumor burden or symptomatic lesions** → start BRAF + MEK inhibitors for rapid control.  \n2. **Low burden, desire for long‑term remission, or prior targeted therapy** → start anti‑PD‑1/PD‑L1 (± CTLA‑4).  \n3. **If you tolerate targeted therapy well and want to preserve activity**, consider a short course (6–12 weeks) followed by immunotherapy for consolidation.  \n\nDiscuss with your oncologist to tailor the plan to your disease pattern, prior treatments, and personal tolerance for side‑effects.",
+          "order": 1,
+          "qid": "S15-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "How do we choose between immunotherapy and targeted pills without gambling my best shot?",
+          "gt": "For a 39‑year‑old trail runner with BRAF V600E metastatic melanoma, the choice hinges on **speed of response vs. long‑term durability** and your tolerance for side effects.\n\n| Factor | Targeted BRAF/MEK (dabrafenib + trametinib, etc.) | Immunotherapy (nivolumab, pembrolizumab, ipilimumab) |\n|--------|----------------------------------------------|-----------------------------------------------------|\n| **Onset** | Rapid (1–2 weeks) – useful if you have high tumor burden or symptomatic disease | Slower (4–6 weeks) – may take months for a durable response |\n| **Durability** | Median progression‑free ~6–7 mo; overall survival ~2 yr | Durable in ~30–40 % of patients; can last years |\n| **Side‑effect profile** | Fatigue, rash, arthralgia, photosensitivity; manageable with dose‑adjustment | Immune‑related AEs (colitis, dermatitis, endocrinopathies); usually reversible with steroids |\n| **Impact on activity** | Can cause fatigue and joint pain; many patients maintain exercise with dose‑modification | AEs may limit activity, but many patients continue running once stable |\n| **Brain mets** | Good penetration; often first choice for symptomatic brain disease | Effective but slower; may need steroids if symptomatic |\n\n**Practical approach**\n\n1. **Assess disease burden** – If you have bulky or symptomatic disease (e.g., painful lesions, brain mets), start BRAF/MEK to shrink quickly.  \n2. **Consider performance status** – If you’re fit and can tolerate immune‑related AEs, immunotherapy offers a chance for long‑term control.  \n3. **Sequence or combine** – Many clinicians start with BRAF/MEK, then switch to immunotherapy after 3–6 mo if disease remains controlled, or vice‑versa.  \n4. **Discuss with your oncologist** – Bring your running goals and any prior side‑effect history; they can tailor dosing or add supportive measures (e.g., physical therapy, anti‑inflammatory meds).\n\nIn short, **rapid control → targeted therapy; durable control → immunotherapy**—but the best plan is individualized and often involves a short course of targeted pills followed by immunotherapy.",
+          "order": 1,
+          "qid": "S15-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S16",
+      "title": "Hospital or home (newly diagnosed AML at 67)",
+      "diagnosis": "Acute myeloid leukemia in a 67-year-old",
+      "treatment_plan": "Either intensive inpatient induction or lower-intensity therapy (hypomethylating agent + venetoclax) with transfusion support; infection prophylaxis; consider trial",
+      "narrative": "I'm 67 and blindsided by leukemia. They’re talking about weeks in the hospital or a gentler plan mostly at home. I want time, but I also want myself.",
+      "qa": [
+        {
+          "q": "If I choose the hospital route, how long am I really there and what does a day look like?",
+          "gt": "I hear how frightening the idea of spending weeks in a hospital feels, especially when you’re already juggling so much for your family—your worries are completely understandable.\n\nIf you choose the inpatient route, most induction regimens for leukemia last 4–6 weeks. For example, acute myeloid leukemia (AML) induction typically involves cytarabine 100 mg/m² IV every 12 hours for 7 days plus daunorubicin 60 mg/m² IV days 1–3. You’ll stay until your white‑cell count recovers (usually 2–3 weeks after the last dose). Consolidation cycles add another 2–3 weeks each, so the total inpatient stay can reach 6–8 weeks, though some patients transition to outpatient care for maintenance.\n\nA typical day starts with morning vitals and a CBC. You’ll receive medications (e.g., antibiotics, growth factors) and a chemotherapy infusion that lasts 1–2 hours. Nurses check you every 4–6 hours, monitor for fever or infection, and adjust supportive meds. Meals are delivered, and you’ll have time to rest or talk with a social worker. Evening vitals and a discharge‑planning meeting wrap up the day. If you develop neutropenic fever or other complications, you may need ICU care, but most patients stay on the general oncology floor.\n\nYour team will monitor your blood counts, organ function, and infection risk closely, adjusting doses as needed. If anything changes, your oncologist will discuss alternative plans right away.",
+          "order": 1,
+          "qid": "S16-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "If I choose the hospital route, how long am I really there and what does a day look like?",
+          "gt": "**Typical inpatient induction for AML (age 67)**  \n\n- **Length of stay:** 7–10 days of continuous chemotherapy (e.g., cytarabine + anthracycline). After that, you’re usually discharged for 2–4 weeks of close outpatient monitoring (labs, imaging, transfusion support).  \n- **Daily routine while in the hospital:**  \n  1. **Morning** – blood counts, electrolytes, and a quick physical exam.  \n  2. **Chemotherapy** – usually a 24‑hour infusion of cytarabine (or a 3‑day “7‑day” course) with an anthracycline on day 1.  \n  3. **Supportive care** – IV fluids, antibiotics (often prophylactic), antifungals, and growth factors as needed.  \n  4. **Transfusions** – packed red cells or platelets if counts fall below thresholds.  \n  5. **Monitoring** – continuous vitals, frequent labs (CBC, CMP) every 6–12 hours, and assessment for infection or bleeding.  \n  6. **Evening** – review of labs, medication adjustments, and planning for the next day.  \n\nAfter the induction phase, you’ll transition to outpatient care for the next 2–4 weeks while your marrow recovers and you receive transfusion support and infection prophylaxis.",
+          "order": 1,
+          "qid": "S16-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "If I choose the hospital route, how long am I really there and what does a day look like?",
+          "gt": "If you opt for the standard “7‑day” induction, you’ll be in the hospital for about **2–3 weeks**.  \n**Day‑to‑day:**  \n\n1. **Morning** – blood tests, CBC, chemistry panel, and a dose of cytarabine (or daunorubicin) given by IV or infusion.  \n2. **Mid‑day** – a short break, then a second drug dose (often a second cytarabine or anthracycline).  \n3. **Afternoon** – routine labs, monitoring for side‑effects (fever, low platelets, neutropenia).  \n4. **Evening** – supportive care: transfusions (red cells/platelets) as needed, antibiotics or antifungals if you’re neutropenic, and pain/fever management.  \n\nYou’ll have frequent nursing checks (every 4–6 hrs) and may need a central line for medications and blood draws. The goal is to achieve remission, so the intensity is high, but the hospital stay is relatively short—most patients are discharged once counts recover and the chemo cycle ends.",
+          "order": 1,
+          "qid": "S16-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "If I choose the hospital route, how long am I really there and what does a day look like?",
+          "gt": "If you opt for intensive inpatient induction, you’ll usually stay in the hospital for **7–10 days** of chemotherapy (often 7 days of cytarabine + daunorubicin or a similar regimen). After that, you’ll be monitored closely for 2–4 weeks—sometimes a few more days if you’re neutropenic or need transfusions—before being discharged.  \n\n**A typical day**:  \n- **Morning**: blood counts, vitals, and a brief check‑in with the oncology team.  \n- **Mid‑day**: chemo infusion (usually 1–2 hours), followed by a recovery period.  \n- **Afternoon**: labs, medication administration (antibiotics, antifungals, growth factors), and transfusion support if needed.  \n- **Evening**: routine nursing care, pain control, and a brief review of the next day’s plan.  \n\nThroughout, the team monitors for infections, organ toxicity, and blood‑count recovery, adjusting supportive care as needed.",
+          "order": 1,
+          "qid": "S16-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S17",
+      "title": "Waiting feels like doing nothing (CLL watch-and-wait)",
+      "diagnosis": "Chronic lymphocytic leukemia, asymptomatic",
+      "treatment_plan": "Active surveillance with regular labs and exams; start treatment when specific triggers are met",
+      "narrative": "I'm 63 and told we aren't treating yet. It feels like ignoring a ticking clock.",
+      "qa": [
+        {
+          "q": "How is 'watch and wait' not just 'wait and worry'?",
+          "gt": "I hear how unsettling it feels to be told “not to treat yet,” especially when you’re already worried about what might happen next. It’s normal to feel anxious and a bit powerless in that moment.\n\n**What “watchful waiting” really means**  \nWatchful waiting is an active, structured monitoring plan rather than passive silence. Your team will set a clear schedule—usually a PSA or tumor marker test, imaging (CT/MRI or ultrasound), and a physical exam every 3–6 months. If any of these tests show a significant rise (e.g., a PSA doubling time < 3 months or a measurable increase in tumor size), treatment is started immediately.  \nDuring this period you’ll keep a symptom diary (pain, fatigue, urinary changes) and report any new or worsening symptoms right away. The goal is to avoid unnecessary treatment while still catching progression early.  \nIf the disease remains stable, you’ll continue the same schedule; if it progresses, the plan will shift to the appropriate therapy (e.g., hormone therapy, targeted agents, or surgery).  \n\nYour oncologist will tailor the exact intervals and thresholds to your specific diagnosis, so you’re not left guessing.  \n\nWe’ll keep a close eye on you, and I’ll be here to answer any new questions as they arise.",
+          "order": 1,
+          "qid": "S17-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "How is 'watch and wait' not just 'wait and worry'?",
+          "gt": "**Watch‑and‑wait is a structured, evidence‑based plan, not passive neglect.**  \n- **Scheduled monitoring**: labs, imaging, and physical exams at defined intervals (e.g., every 3–6 months).  \n- **Clear triggers**: treatment starts only when specific, measurable changes occur (e.g., rising lymphocyte count, new symptoms, organ involvement).  \n- **Early intervention**: you’re not “waiting” until the disease is advanced; you intervene promptly when the plan signals it.  \n- **Reduced toxicity**: avoiding unnecessary chemo or radiation spares you side‑effects and preserves quality of life.  \n- **Psychological support**: regular visits give you a chance to discuss concerns, ask questions, and adjust coping strategies.  \n\nSo, watch‑and‑wait is a proactive, monitored approach that balances vigilance with the goal of minimizing harm.",
+          "order": 1,
+          "qid": "S17-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "How is 'watch and wait' not just 'wait and worry'?",
+          "gt": "**Watch‑and‑wait is a deliberate, evidence‑based strategy, not passive anxiety.**  \n- **Clear criteria**: Treatment starts only when blood counts drop, lymph nodes enlarge, or symptoms appear—so you’re not “ignoring” a ticking clock but following a proven plan that avoids unnecessary chemo and its side‑effects.  \n- **Regular monitoring**: Blood tests every 1–3 months and physical exams keep the disease under close watch. Any change is caught early, often before symptoms develop.  \n- **Quality of life**: You avoid the fatigue, nausea, and immune suppression that many early‑treatment patients experience, preserving your day‑to‑day well‑being.  \n- **Psychological support**: Many patients find that scheduled visits and clear milestones reduce uncertainty; counseling or support groups can help turn “waiting” into a structured, reassuring process.  \n\nSo, watch‑and‑wait is a proactive, data‑driven plan that protects you from overtreatment while keeping the disease in check.",
+          "order": 1,
+          "qid": "S17-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "How is 'watch and wait' not just 'wait and worry'?",
+          "gt": "**Watch‑and‑wait is a structured, evidence‑based strategy, not passive neglect.**  \n- **Clear triggers**: You’ll start therapy only when blood counts, organ size, or symptoms cross defined thresholds.  \n- **Regular monitoring**: Blood tests every 3–6 months (or sooner if needed) catch changes early, so treatment can be initiated before complications arise.  \n- **Avoids overtreatment**: Many patients never need chemo or radiation, sparing them side‑effects and preserving quality of life.  \n- **Empowerment**: You control the plan—stay active, maintain healthy habits, and report new symptoms promptly.  \n- **Psychological support**: Discuss concerns with your oncologist or a counselor; you’re not alone, and the plan is designed to protect you, not leave you idle.",
+          "order": 1,
+          "qid": "S17-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S18",
+      "title": "Finding my voice again (papillary thyroid cancer)",
+      "diagnosis": "Papillary thyroid carcinoma after thyroidectomy",
+      "treatment_plan": "Surgery followed by thyroid hormone replacement; consider radioactive iodine based on risk; lifelong surveillance",
+      "narrative": "I'm 35, a teacher. Surgery took my thyroid. My voice is hoarse and the scar is new territory. I’m trying to feel normal again.",
+      "qa": [
+        {
+          "q": "Will my voice return to my old classroom strength?",
+          "gt": "I hear how unsettling the loss of your classroom‑level voice feels, especially when you’re already juggling the demands of teaching and caring for your students.\n\nAfter a thyroidectomy, hoarseness most often results from temporary irritation or stretching of the recurrent laryngeal nerve. In about 70–80 % of cases, the nerve recovers enough to restore normal vocal strength within 4–6 weeks, and many patients regain full function by 3–6 months. If the nerve injury is more severe, voice changes can persist longer or become permanent.  \n\nYour next steps:  \n1. **Voice rest** for the first 48–72 hours, then gentle phonation.  \n2. **ENT evaluation** with laryngoscopy at 2 weeks and again at 6 weeks; this will show vocal cord mobility and help decide if therapy is needed.  \n3. **Speech‑language pathology**: a structured voice‑therapy program (warm‑up, breath support, resonance exercises) can accelerate recovery.  \n4. If hoarseness persists beyond 3 months, the ENT may consider a **vocal‑cord injection** or **thyroplasty** to improve cord closure.  \n\nKeep a voice diary, note any pain or swelling, and report new symptoms immediately. With careful follow‑up and therapy, many teachers return to their former vocal power, but the timeline varies—your team will monitor progress closely.",
+          "order": 1,
+          "qid": "S18-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "Will my voice return to my old classroom strength?",
+          "gt": "After a thyroidectomy the recurrent laryngeal nerves that control the vocal cords can be stretched or bruised. Most patients notice hoarseness for a few weeks to a few months, and many regain near‑normal voice strength with time, especially if the nerves were only irritated. Persistent changes are less common but can occur if the nerves were partially damaged.  \n\n**What you can do:**  \n- **Voice rest** (avoid shouting or whispering).  \n- **Speech‑language therapy**: a trained therapist can teach gentle vocal exercises and breathing techniques that strengthen the cords.  \n- **Follow‑up laryngoscopy**: your surgeon can check nerve function and guide further treatment if needed.  \n\nWith patience and targeted therapy, many teachers return to their pre‑surgery vocal power. If you notice no improvement after 3–4 months, discuss a second opinion or additional interventions with your ENT.",
+          "order": 1,
+          "qid": "S18-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "Will my voice return to my old classroom strength?",
+          "gt": "I’m sorry you’re dealing with this change. After thyroidectomy the recurrent laryngeal nerve can be stretched or injured, which often causes hoarseness that improves over time. Most patients notice gradual recovery within 3–6 months, and many regain near‑normal vocal strength with voice‑therapy exercises, vocal rest, and good hydration. In some cases the nerve does not fully recover, and the voice may remain slightly weaker or breathier. An ENT or speech‑language pathologist can assess nerve function and guide a tailored therapy plan. If you’re still hoarse after a few months, a repeat laryngoscopy can rule out other issues. Keep your voice rested, stay hydrated, and follow up with your surgeon/ENT—most teachers find their classroom voice returns or improves significantly.",
+          "order": 1,
+          "qid": "S18-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "Will my voice return to my old classroom strength?",
+          "gt": "After a thyroidectomy the recurrent laryngeal nerves are the most common culprit for hoarseness. In most cases the nerves are only stretched or mildly irritated, and vocal strength improves over weeks to a few months with rest, hydration, and voice‑therapy exercises. Full recovery to “old classroom” volume is common, but some people notice a subtle, permanent change in pitch or endurance. The scar itself does not affect the voice. If you’re still hoarse after 6–8 weeks, a speech‑language pathologist can tailor a program to strengthen your vocal folds and teach safe vocal habits. Early referral and consistent practice give the best chance of regaining your former classroom presence.",
+          "order": 1,
+          "qid": "S18-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S19",
+      "title": "Runner with a new scar (high-grade thigh sarcoma)",
+      "diagnosis": "High-grade soft tissue sarcoma of the thigh",
+      "treatment_plan": "Limb-sparing surgery with radiation (pre- or post-operative) and rehabilitation",
+      "narrative": "I'm 46, a half-marathoner. A deep thigh mass turned out to be sarcoma. I want to keep my leg strong and my life moving.",
+      "qa": [
+        {
+          "q": "Will surgery steal my stride, or can I run again?",
+          "gt": "I hear the uncertainty you feel about whether the surgery will “steal” your stride, especially after all the training you’ve put into half‑marathons. It’s natural to worry about how your leg will function once the tumor is removed.\n\nFor a deep‑thigh sarcoma, surgeons aim for a wide local excision that preserves as much muscle and nerve as possible. If the tumor is close to major nerves or the quadriceps, a more extensive resection may be needed, but limb‑sparing procedures are common in adults. After surgery, you’ll start with a short period of protected weight‑bearing (often 4–6 weeks) using crutches or a walker. A structured physical‑therapy program follows, focusing on restoring quadriceps strength, hip stability, and gait mechanics. Most patients can return to running after 3–6 months, once they meet strength and endurance milestones and have no residual pain or instability. Your oncologist will schedule regular imaging (MRI or CT every 3–6 months) and functional assessments to ensure the limb remains healthy and to catch any recurrence early.\n\nIn short, while the surgery may temporarily alter your stride, a carefully planned, progressive rehab plan can help you regain full running ability. Your team will monitor progress closely and adjust the plan as needed.",
+          "order": 1,
+          "qid": "S19-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "Will surgery steal my stride, or can I run again?",
+          "gt": "It’s common to worry that a thigh sarcoma resection will ruin your running. In most limb‑sparing cases the muscle and nerve bundles are preserved or reconstructed, and with a structured rehab program you can regain most of your stride.  \n\n**Key points**\n\n| Factor | Impact on running | Typical outcome |\n|--------|------------------|-----------------|\n| **Tumor size/grade** | Larger, high‑grade tumors may need wider margins, sometimes sacrificing part of the quadriceps or hamstrings. | Strength can be rebuilt; you may need a slightly slower pace initially. |\n| **Nerve involvement** | If the femoral or sciatic nerve is cut, you’ll feel weakness or numbness. | Nerve repair or grafting can restore function; full return is possible but may take 6–12 months. |\n| **Radiation** | Post‑op radiation can cause fibrosis and stiffness. | Physical therapy focuses on flexibility; most patients run again within 9–12 months. |\n| **Rehabilitation** | Early, progressive physiotherapy (strength, balance, gait) is essential. | With adherence, many return to half‑marathons or longer within 12–18 months. |\n\n**Practical advice**\n\n1. **Start early** – begin gentle range‑of‑motion and isometric exercises within days of surgery.  \n2. **Progress gradually** – add weight‑bearing, then plyometrics, then distance running once pain and swelling are controlled.  \n3. **Monitor** – keep an eye on any new pain, swelling, or numbness; report promptly.  \n4. **Set realistic goals** – aim for a “modified” stride first (shorter strides, less impact), then rebuild to your pre‑tumor pace.\n\nIn short, surgery doesn’t have to steal your stride. With careful surgical planning, radiation timing, and a disciplined rehab program, many patients return to running—often at or near their former level—within a year.",
+          "order": 1,
+          "qid": "S19-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "Will surgery steal my stride, or can I run again?",
+          "gt": "I’m glad you’re asking—many people who undergo limb‑sparing surgery for a thigh sarcoma do return to running, but it usually takes a structured plan and time. The key factors that influence your stride are the size and depth of the tumor, whether nerves or major vessels were involved, and the amount of tissue removed. Pre‑operative radiation can help preserve muscle and nerve function, and post‑operative radiation may cause some fibrosis that can limit flexibility, but this is often mild.\n\nA dedicated physiotherapist will guide you through progressive strength, balance, and gait training. Start with low‑impact activities (cycling, elliptical), then add short strides, gradually increasing distance and speed. Most patients resume half‑marathons within 6–12 months, though some may need to adjust stride length or pace. Stay patient, follow your rehab plan, and keep your doctor updated on any changes.",
+          "order": 1,
+          "qid": "S19-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "Will surgery steal my stride, or can I run again?",
+          "gt": "A limb‑sparing operation can preserve most of your thigh’s strength and range of motion, but the outcome depends on how much muscle, nerve, and bone were removed and whether you need radiation. In most cases, with a dedicated physiotherapy program, patients return to running within 6–12 months. Early rehab focuses on restoring quadriceps power, hip stability, and ankle‑foot coordination, while gradual mileage increases help rebuild endurance. Possible setbacks include temporary weakness, joint stiffness, or lymphedema, but these are usually manageable with targeted exercises and compression garments. Discuss your specific surgical plan with your surgeon and rehab team; they can tailor a timeline and set realistic milestones so you can keep your stride—and your half‑marathon goals—alive.",
+          "order": 1,
+          "qid": "S19-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S20",
+      "title": "Left the field mid-game (stage II testicular cancer)",
+      "diagnosis": "Stage II testicular cancer (seminoma or nonseminoma)",
+      "treatment_plan": "Orchiectomy followed by surveillance, chemotherapy, or radiation depending on type and spread; fertility preservation recommended",
+      "narrative": "I'm 28, play in a weekend soccer league, and just lost a testicle to cancer. I’m scared about fertility, masculinity, and telling my team.",
+      "qa": [
+        {
+          "q": "Is banking sperm urgent, or can I wait until after the next scan?",
+          "gt": "I hear how frightening the uncertainty about your future fertility feels, especially when you’re already dealing with a cancer diagnosis and the pressure of sharing this with your teammates.\n\nSperm banking is ideally done **before** any chemotherapy or radiation, because those treatments can severely damage sperm production. If you’re still awaiting your next scan and have not yet started systemic therapy, you can technically wait until after the scan, but you risk missing the window if chemo is scheduled soon. With only one testicle left, sperm counts may be lower, but many men still produce viable sperm. A single semen sample—collected by masturbation—can be frozen in liquid nitrogen within a few days; the process takes about 1–2 hours and can be done at most fertility clinics. Stored sperm retains 80–90 % viability after thawing, giving you a realistic chance of future conception.\n\nDiscuss the exact timing with your oncologist and a reproductive specialist. They can confirm whether you’re about to start chemo and advise whether immediate banking is safest. If you’re not yet on treatment, you can still bank now to avoid any future delays.\n\nLet’s keep the conversation open so you feel supported as you decide the best timing for sperm banking.",
+          "order": 1,
+          "qid": "S20-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "Is banking sperm urgent, or can I wait until after the next scan?",
+          "gt": "You should bank sperm as soon as possible—ideally before any chemotherapy begins. The orchiectomy has already removed one testicle, but if you need cisplatin‑based chemotherapy, the remaining testis can still be damaged. Sperm banking can be done at any time, but waiting until after a scan could delay treatment and reduce fertility chances. Discuss the plan with your oncologist; they can arrange a sperm bank appointment quickly.  \n\nRegarding your team, you can share what you’re comfortable with—many players appreciate honesty and support. Focus on recovery first; the rest will follow.",
+          "order": 1,
+          "qid": "S20-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "Is banking sperm urgent, or can I wait until after the next scan?",
+          "gt": "I’m really sorry you’re going through this. Sperm banking is safest **before** any treatment that could damage fertility—chemotherapy, radiation, or even some high‑dose hormone therapy. If your oncologist has already decided you’ll need chemo or radiation, the bank should happen as soon as possible, ideally within a week of the orchiectomy.  \n\nIf the plan is *surveillance* and you’re not scheduled for immediate therapy, you can wait until after the next scan, but it’s still wise to bank within the next few months. Future treatment could be delayed, and fertility can decline with age or additional therapy. Talk to your urologist or reproductive specialist right away; they can arrange a quick, painless collection and storage.",
+          "order": 1,
+          "qid": "S20-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "Is banking sperm urgent, or can I wait until after the next scan?",
+          "gt": "It’s best to bank sperm as soon as possible, but it’s not an emergency if you’re on surveillance.  \n- **Why bank now?** If you need chemotherapy or radiation later, those treatments can damage the remaining testicle. Sperm banking before any such therapy guarantees you have viable material.  \n- **If you’re only under surveillance:** You can wait until after your next scan, provided you’re not scheduled for immediate treatment. The remaining testicle usually produces enough sperm for most men, but fertility can still be affected by future therapy.  \n- **Practical tip:** The banking process takes a few minutes and can be done at a local fertility clinic or hospital. If you can, schedule it now; if not, plan to do it after the next scan and before any planned treatment.",
+          "order": 1,
+          "qid": "S20-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S21",
+      "title": "Keys and the road (brain metastases, stereotactic radiosurgery)",
+      "diagnosis": "Limited brain metastases from solid tumor",
+      "treatment_plan": "Stereotactic radiosurgery (SRS) to brain lesions; systemic therapy continues or adjusts; seizure precautions and neuro follow-up",
+      "narrative": "I'm 56, I drive for work and play piano at church. Small brain spots showed up on my scan. They recommend focused radiation.",
+      "qa": [
+        {
+          "q": "Can I still legally drive after SRS?",
+          "gt": "Feeling anxious about whether you can keep driving after SRS is completely understandable, especially when you rely on your car for work and your piano practice.  \n\nSRS is an outpatient procedure that delivers a single, high‑dose radiation beam to a small brain lesion. Most patients experience only mild fatigue or a brief headache, so the procedure itself rarely precludes driving.  \n\nHowever, any new or worsening symptoms—headaches, visual disturbances, dizziness, seizures, or cognitive changes—can impair safe driving. Most clinicians recommend waiting at least 2–4 weeks after SRS before resuming driving, unless symptoms appear sooner.  \n\nDriving laws vary by state, but most require a physician’s clearance once you feel symptom‑free. Your radiation oncologist or a neurologist can issue a written statement confirming you meet the functional criteria.",
+          "order": 1,
+          "qid": "S21-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "Can I still legally drive after SRS?",
+          "gt": "After stereotactic radiosurgery (SRS) most patients can resume driving within 24–48 hours **if** they have no seizures, no new neurological deficits, and are not on medications that impair alertness (e.g., high‑dose steroids, certain anti‑epileptics). However, driving laws vary by state/country. Many jurisdictions require a medical clearance or a “fit‑to‑drive” certificate from your oncologist or neurologist.  \n\n**Practical steps:**\n\n1. **Check local regulations** – some places mandate a 7‑day waiting period or a formal clearance.  \n2. **Discuss with your treating physician** – they can assess your neurological status and any medication side‑effects.  \n3. **Monitor for seizures or visual changes** – if you experience any, delay driving until fully evaluated.  \n\nOnce you receive a medical clearance and feel symptom‑free, you can legally drive again.",
+          "order": 1,
+          "qid": "S21-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "Can I still legally drive after SRS?",
+          "gt": "After stereotactic radiosurgery (SRS) you can usually resume driving, but the exact timing depends on how you’re feeling and your local regulations. In most places a physician’s clearance is required, and you’ll need to be seizure‑free, have stable vision, and no significant cognitive or balance problems. Many clinicians recommend waiting 2–4 weeks after SRS before driving, but if you develop headaches, nausea, or new neurological symptoms you should postpone. Check your state or country’s motor‑vehicle department for specific rules—some require a medical statement or a driving test. Talk with your oncologist and neurologist about your symptoms; they can give you a written clearance once you’re symptom‑free and your imaging shows no acute complications.",
+          "order": 1,
+          "qid": "S21-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "Can I still legally drive after SRS?",
+          "gt": "After stereotactic radiosurgery (SRS) most people can resume driving once they’re symptom‑free, but the exact timing is set by your local motor‑vehicle authority and your treating team.  \n\n**Key points**\n\n| What matters | Typical guidance |\n|--------------|------------------|\n| **Seizure risk** | If you’ve had a seizure or are on anti‑seizure meds, you’ll need a seizure‑free period (often 4–6 weeks) and a physician’s clearance. |\n| **Neurologic deficits** | Any new weakness, vision loss, or balance problems usually require a neurologic assessment before driving. |\n| **Cognitive function** | If you notice memory or concentration issues, a brief driving‑skills test may be requested. |\n| **Local regulations** | Many states allow driving after SRS if you’re symptom‑free and can demonstrate safe driving ability; some require a medical certificate. |\n\n**Practical steps**\n\n1. Discuss your driving plans with your oncologist or radiation oncologist.  \n2. If you’re seizure‑free, have no new deficits, and feel confident, ask for a written clearance.  \n3. Check your state’s DMV rules—some require a medical report or a driving assessment.  \n\nIn short, you can usually drive after SRS, but you’ll need to be symptom‑free, have a physician’s approval, and meet any local DMV requirements.",
+          "order": 1,
+          "qid": "S21-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S22",
+      "title": "Second chances (liver cancer with cirrhosis)",
+      "diagnosis": "Hepatocellular carcinoma in the setting of cirrhosis",
+      "treatment_plan": "Locoregional therapy (e.g., ablation or embolization) or systemic therapy; transplant evaluation when appropriate; manage liver function",
+      "narrative": "I'm 64 with cirrhosis and now a liver tumor. I quit drinking last year. I want to live long enough to walk my daughter down the aisle.",
+      "qa": [
+        {
+          "q": "Am I a transplant candidate, or did I miss that window?",
+          "gt": "I hear how scary it feels to wonder if you’ve missed the transplant window, especially when you’re already carrying so much hope for your daughter’s wedding day.\n\nA 64‑year‑old who stopped drinking a year ago still meets the basic abstinence requirement (≥6 months). Age alone is not a hard cutoff—many centers accept candidates up to 70–75 years if liver function and overall health allow. The key question is whether your liver tumor falls within the transplant‑eligible “Milan criteria”: a single lesion ≤5 cm or up to three lesions each ≤3 cm, with no macrovascular invasion or extra‑hepatic spread. If your imaging shows that, you’re likely still a transplant candidate. If the tumor is larger or more extensive, the transplant team may consider down‑staging with locoregional therapies (e.g., TACE, radioembolization) or systemic therapy while you’re evaluated.\n\nThe next step is a formal transplant work‑up: a hepatology referral, repeat MRI/CT, liver function labs, a MELD score calculation, and a multidisciplinary board review. Your team will discuss candidacy, timing, and any needed bridging treatments.  \n\nWe’ll keep you informed every step of the way, so you can focus on the moments you want to cherish.",
+          "order": 1,
+          "qid": "S22-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "Am I a transplant candidate, or did I miss that window?",
+          "gt": "A liver transplant is still an option if your tumor meets the **Milan criteria** (single lesion ≤5 cm or up to 3 lesions each ≤3 cm) and your liver function is acceptable (MELD < 15–20, no refractory ascites or variceal bleeding). Even if the tumor is slightly larger, some centers use the **UNOS/ELITA expanded criteria** or consider **down‑staging** with ablation/embolization first.  \n\n**What to do next:**  \n1. Get a high‑resolution MRI/CT and AFP level.  \n2. Have a transplant hepatology consult to review MELD, portal hypertension, and comorbidities.  \n3. If you qualify, you’ll be listed immediately; if not, bridging therapy (ablation, TACE) can keep the tumor within transplant limits while you wait.  \n\nSo you haven’t missed the window—evaluation is the first step.",
+          "order": 1,
+          "qid": "S22-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "Am I a transplant candidate, or did I miss that window?",
+          "gt": "I’m glad you’re still hopeful—age alone isn’t a barrier.  The key is whether your tumor meets the **Milan criteria** (single ≤5 cm or up to 3 nodules each ≤3 cm) and whether your liver function is adequate (usually Child‑Pugh A or well‑controlled B, MELD < 15–20).  Because you quit drinking a year ago, your fibrosis may be stabilizing, which helps.  \n\nThe next step is a formal transplant evaluation at a center that treats HCC.  They’ll review imaging, labs, performance status, and any comorbidities.  If you’re within criteria, you can be listed; if not, bridging therapies (ablation, TACE) or systemic agents (e.g., atezolizumab‑bevacizumab) can control the tumor while you wait.  \n\nSo you haven’t missed the window—just get evaluated promptly, and we’ll see if you qualify.",
+          "order": 1,
+          "qid": "S22-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "Am I a transplant candidate, or did I miss that window?",
+          "gt": "I’m sorry you’re facing this. Whether you’re a transplant candidate depends on a few key factors that your transplant team will review:\n\n| Factor | Typical threshold for transplant | What it means for you |\n|--------|----------------------------------|-----------------------|\n| **Tumor size & number** | ≤ 5 cm single tumor **or** ≤ 3 tumors each ≤ 3 cm (Milan criteria) | If your lesion fits, you’re in the “window.” |\n| **AFP level** | < 400 ng/mL (often < 200 ng/mL) | Lower AFP correlates with better outcomes. |\n| **Liver function** | Child‑Pugh A or well‑controlled B (bilirubin ≤ 2 mg/dL, INR ≤ 1.5, platelets ≥ 50 k/µL) | Good function means you can tolerate surgery. |\n| **Portal hypertension** | No clinically significant varices or ascites | Severe portal hypertension usually excludes transplant. |\n| **Other comorbidities** | No uncontrolled infection, active alcohol use, or other organ failure | You’ve quit drinking, which is a big plus. |\n\n**Next steps:**  \n1. **Get a formal transplant evaluation** (usually within a few weeks).  \n2. Your hepatologist will order imaging, AFP, liver function labs, and a portal pressure measurement.  \n3. If you meet the criteria, you’ll be placed on the waiting list; if not, we’ll discuss locoregional or systemic therapy to control the tumor while you keep your liver function as good as possible.\n\nEven if you’re outside the strict Milan window, some centers use expanded criteria (e.g., up to 6.5 cm or 3 tumors ≤ 4 cm) and can still offer transplant. The key is early evaluation—don’t wait.  \n\nI hope this helps you plan the next steps toward walking your daughter down the aisle.",
+          "order": 1,
+          "qid": "S22-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S23",
+      "title": "Stigma and steel (locally advanced cervical cancer)",
+      "diagnosis": "Locally advanced cervical cancer",
+      "treatment_plan": "Definitive pelvic radiation with weekly cisplatin and brachytherapy; survivorship sexual health support",
+      "narrative": "I'm 37 and a mom of two. The word 'cervical' makes me feel judged. Treatment is radiation with weekly chemo and internal radiation later.",
+      "qa": [
+        {
+          "q": "I feel ashamed telling people what kind of cancer I have. How do I carry this without hiding?",
+          "gt": "I hear how heavy the shame feels, especially when you’re already juggling the demands of being a mom and a caregiver—those worries are completely understandable.  \n\nIt’s normal to feel judged about a diagnosis that carries a lot of stigma. You don’t have to share every detail with everyone; you can decide who gets a brief “I’m being treated for cervical cancer” and who learns more. Setting clear boundaries—like saying, “I’m focusing on my treatment right now, so I’m not ready to talk about it in depth”—helps you protect your emotional space while still keeping loved ones in the loop.  \n\nPractical steps can ease the load:  \n1. **Choose a trusted confidant** (partner, close friend, or a counselor) and share your feelings with them first.  \n2. **Prepare a short, neutral script** (“I’m undergoing treatment for cervical cancer”) to use when you need to disclose quickly.  \n3. **Explore support groups**—many hospitals and online communities offer peer support where you can share anonymously or with a small circle.  \n4. **Consider therapy or counseling** to work through shame and build coping skills.  \n\nRemember, you’re not alone, and sharing when you feel ready can actually lighten the burden—your team and loved ones will be there to support you every step of the way.",
+          "order": 1,
+          "qid": "S23-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "I feel ashamed telling people what kind of cancer I have. How do I carry this without hiding?",
+          "gt": "It’s completely normal to feel judged when you talk about cervical cancer. You can protect your privacy while still getting the support you need.  \n1. **Use neutral language** – say “I’m receiving treatment for a gynecologic cancer” or “I’m undergoing radiation and chemotherapy for a cancer in my reproductive system.”  \n2. **Choose your audience** – share only with people you trust (close friends, family, or a counselor).  \n3. **Set boundaries** – let people know what you’re comfortable discussing and what you’d rather keep private.  \n4. **Seek support groups** – many online and local groups use “cancer” or “gynecologic cancer” as the label, so you can connect without feeling singled out.  \n5. **Practice self‑advocacy** – remind yourself that your health is your right; you deserve care and compassion, not judgment.  \nIf you feel overwhelmed, a brief talk with a therapist or oncology social worker can help you navigate these conversations.",
+          "order": 1,
+          "qid": "S23-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "I feel ashamed telling people what kind of cancer I have. How do I carry this without hiding?",
+          "gt": "It’s completely normal to feel uneasy sharing a cancer diagnosis—especially one that carries social stigma. Remember that cervical cancer is a common, treatable disease, not a moral judgment. Here are a few practical ways to manage the conversation:\n\n1. **Choose your circle** – Share first with a trusted friend, partner, or family member who will support you. You can keep the details brief (“I’m dealing with a health issue”) until you’re ready to explain more.\n\n2. **Use neutral language** – If you prefer privacy, say “I have a cancer diagnosis” or “I’m undergoing treatment for a pelvic cancer.” You can add “cervical” later if you feel comfortable.\n\n3. **Set boundaries** – Let people know what you’re comfortable discussing. It’s okay to say, “I’m not ready to talk about it yet” or “I’d rather keep it private.”\n\n4. **Seek support groups** – Online or local groups for cervical cancer survivors can provide a non‑judgmental space to share experiences and coping strategies.\n\n5. **Professional help** – A counselor or social worker can help you navigate disclosure and address feelings of shame.\n\nYou’re not alone, and you deserve support without judgment. Focus on your treatment plan—weekly cisplatin, pelvic radiation, and brachytherapy—and on the fact that you’re taking active steps toward recovery.",
+          "order": 1,
+          "qid": "S23-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "I feel ashamed telling people what kind of cancer I have. How do I carry this without hiding?",
+          "gt": "It’s normal to feel judged, but you don’t have to hide who you are.  \n1. **Use neutral language** – say “I’m receiving treatment for cervical cancer” or “I’m in a cancer treatment program.” This keeps the focus on the disease, not the word “cervical.”  \n2. **Choose your audience** – share with people you trust (close friends, family, or a support‑group member). If someone asks, you can politely say, “I’m not comfortable discussing it in detail, but I’m doing well.”  \n3. **Set boundaries** – let people know what you’re comfortable sharing and what you’d rather keep private.  \n4. **Leverage support** – join a local or online cervical‑cancer support group; hearing others’ stories can reduce shame and give you coping tools.  \n5. **Professional help** – a counselor or therapist experienced in oncology can help you process stigma and build confidence.  \n\nRemember, you’re not alone, and your courage in facing treatment is what matters most.",
+          "order": 1,
+          "qid": "S23-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S24",
+      "title": "Fixing the fence (diffuse large B-cell lymphoma)",
+      "diagnosis": "Diffuse large B-cell lymphoma, curative intent",
+      "treatment_plan": "R-CHOP every 3 weeks for 6 cycles (or tailored regimen); interim PET after a few cycles",
+      "narrative": "I'm 66 and run a small farm. A fast-growing node appeared in my neck. They’re aiming to cure this with chemo.",
+      "qa": [
+        {
+          "q": "Does 'curative intent' really mean cure for someone my age?",
+          "gt": "I hear how frightening the idea of “curative intent” feels, especially when you’re already juggling the demands of a farm and the worry of a fast‑growing neck node. It’s natural to feel uncertain about what that term really means for someone your age.  \n\n“Curative intent” means the treatment plan is designed to eradicate the cancer, not just control it. In head‑and‑neck cancers, the most common regimens that aim for cure are combinations of platinum‑based chemotherapy (cisplatin 75 mg/m² IV on day 1 of a 21‑day cycle) with 5‑fluorouracil (500 mg/m² IV continuous infusion days 1‑5) or a targeted agent like cetuximab (initial 400 mg/m² IV, then 250 mg/m² weekly). The exact drugs and schedule depend on the tumor’s histology, stage, and your overall health.  \n\nSuccess is measured by imaging (CT/MRI) every 2–3 months, tumor marker trends if applicable, and symptom relief. A response is usually defined as at least a 30 % reduction in the largest tumor diameter. Side effects can include nausea, mucositis, neuropathy, and myelosuppression; blood counts and electrolytes are checked before each cycle.  \n\nIf the disease progresses or you develop intolerable toxicity, the oncologist may switch to a different agent, reduce the dose, or consider palliative care options. Your age alone isn’t a barrier to cure, but factors like performance status, organ function, and comorbidities influence the likelihood of a successful outcome.  \n\nWe’ll monitor your response closely and adjust the plan as needed, so you’re not alone in this journey.",
+          "order": 1,
+          "qid": "S24-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "Does 'curative intent' really mean cure for someone my age?",
+          "gt": "Curative intent means the treatment plan is designed to eradicate the lymphoma, not just control it. In diffuse large B‑cell lymphoma (DLBCL), age alone isn’t the only factor—tumor biology, stage, performance status, and organ function matter most. For a 66‑year‑old with a localized node and good performance status, 6 cycles of R‑CHOP followed by interim PET is standard and can cure >70 % of patients. Older patients often tolerate the regimen well, especially if dose‑adjusted or if comorbidities are managed. However, “cure” is a statistical term; individual outcomes vary. Discuss your specific risk factors, potential side‑effects, and supportive care options with your oncologist to understand your personal prognosis and to make an informed decision.",
+          "order": 1,
+          "qid": "S24-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "Does 'curative intent' really mean cure for someone my age?",
+          "gt": "Curative intent means the treatment plan is designed to eradicate the lymphoma, not just control it. For a 66‑year‑old with diffuse large B‑cell lymphoma, many patients achieve long‑term remission with R‑CHOP, especially if you’re otherwise healthy and the disease is localized. Five‑year survival for DLBCL in people 60–69 is roughly 60‑70 % when treated aggressively, and it improves if you respond early on the interim PET scan. Age alone isn’t a definitive barrier; comorbidities, organ function, and how well you tolerate the first few cycles are the real determinants. Discuss your overall health, goals, and any concerns with your oncologist—curative intent is realistic, but it’s personalized to your situation.",
+          "order": 1,
+          "qid": "S24-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "Does 'curative intent' really mean cure for someone my age?",
+          "gt": "**Curative intent means the treatment plan is designed to eradicate the lymphoma, not that a cure is guaranteed.**  \nFor a 66‑year‑old with diffuse large B‑cell lymphoma (DLBCL) treated with R‑CHOP, the 5‑year overall survival is roughly 60–70 % for early‑stage disease and 50–60 % for more advanced stages, assuming good performance status and no major comorbidities. Age alone is not a definitive barrier; many patients in their 60s and 70s achieve long‑term remission.  \n\nHowever, older patients may have reduced tolerance to chemotherapy, and comorbidities can affect both treatment intensity and outcomes. “Curative intent” reflects the physicians’ belief that cure is achievable with the chosen regimen, but it does not guarantee it. Discuss your overall health, goals, and any concerns with your oncologist to tailor the plan to your situation.",
+          "order": 1,
+          "qid": "S24-Q01",
+          "method_name": "persona"
+        }
+      ]
+    },
+    {
+      "id": "S25",
+      "title": "Trailhead ahead (metastatic kidney cancer)",
+      "diagnosis": "Metastatic renal cell carcinoma",
+      "treatment_plan": "Combination immunotherapy or immunotherapy plus targeted therapy; monitor for immune-related side effects",
+      "narrative": "I'm 61 and love national parks. I want a plan that lets me keep hiking without ignoring warning signs.",
+      "qa": [
+        {
+          "q": "How do we choose between combinations without wrecking my stamina?",
+          "gt": "I hear the mix of excitement and anxiety you feel about staying strong on those trails—especially when you’re eager to keep exploring while protecting your stamina.\n\n**A practical, evidence‑based plan**\n\n1. **Baseline check** – Have a quick cardiovascular screen (blood pressure, resting ECG, and a simple VO₂‑max or sub‑max test if possible). This gives you a safe “max heart rate” (≈220‑age) and a target training zone (60‑75 % for endurance, 75‑85 % for tempo).  \n2. **Structured training** – Aim for 3–4 sessions per week:  \n   * 1 long, steady hike (70‑75 % HR zone, 2–3 hrs)  \n   * 1 interval session (4 × 10 min at 80‑85 % HR, 5 min recovery)  \n   * 1 strength/ mobility day (body‑weight or light resistance)  \n   * 1 rest or active recovery (yoga, walking).  \n3. **Pacing & monitoring** – Use a heart‑rate monitor or GPS watch. Stop if you hit >85 % HR for >10 min, feel chest tightness, dizziness, or severe fatigue.  \n4. **Nutrition & hydration** – 30–60 g carbs per hour on long hikes, electrolytes, and 2–3 L water per day.  \n5. **Progression** – Increase distance or elevation by no more than 10 % per week.  \n6. **Safety net** – Carry a first‑aid kit, a phone, and let someone know your route. If any warning signs appear, pause and seek medical advice.\n\n**You’re not alone—let’s keep your hikes safe and sustainable.**",
+          "order": 1,
+          "qid": "S25-Q01",
+          "method_name": "RECAP"
+        },
+        {
+          "q": "How do we choose between combinations without wrecking my stamina?",
+          "gt": "**Choosing a regimen that preserves your stamina**\n\n| Regimen | Typical fatigue profile | Key monitoring points | Practical tips |\n|---------|------------------------|-----------------------|----------------|\n| **ICI alone** (e.g., nivolumab + ipilimumab) | Moderate fatigue; peaks after first 2–3 cycles | CBC, CMP, thyroid, adrenal, and cortisol levels; symptom diary | Start at lower dose if you’re very active; consider a 2‑week break after 4 cycles if fatigue spikes. |\n| **ICI + TKI** (e.g., pembrolizumab + axitinib) | Higher fatigue, hypertension, hand‑foot syndrome | BP, weight, CBC, CMP, liver enzymes; watch for rash/diarrhea | Dose‑modify the TKI first (e.g., 2 mg BID → 1 mg BID) before stopping the ICI. |\n| **ICI + TKI + ICI** (rare, high toxicity) | Severe fatigue, high immune‑related adverse events | Same labs + frequent imaging | Usually reserved for clinical trials; not recommended for active hikers. |\n\n**How to decide**\n\n1. **Assess baseline fitness** – If you’re already hiking regularly, a single‑agent ICI may be enough to keep fatigue low.  \n2. **Consider comorbidities** – Hypertension or cardiovascular disease favors ICI alone; if you have no such issues, ICI + TKI can improve progression‑free survival.  \n3. **Start low, go slow** – Begin with the lower‑intensity regimen; if disease control is adequate, you can stay on it.  \n4. **Monitor closely** – Use a symptom diary and weekly labs; catch early signs of fatigue or immune toxicity.  \n5. **Adjust proactively** – Reduce TKI dose or pause the ICI if fatigue > grade 2; resume once symptoms improve.  \n\n**Bottom line:**  \n- **If you want to keep hiking** and avoid major fatigue, start with **ICI alone** and add a TKI only if disease progression occurs or if you’re comfortable with a slightly higher side‑effect burden.  \n- **If you’re willing to tolerate a bit more fatigue** for potentially better tumor control, go for **ICI + TKI** with close monitoring and dose‑adjustment plans.  \n\nAlways discuss these options with your oncologist, who can tailor the plan to your specific health status and activity goals.",
+          "order": 1,
+          "qid": "S25-Q01",
+          "method_name": "basemodel"
+        },
+        {
+          "q": "How do we choose between combinations without wrecking my stamina?",
+          "gt": "**Choosing a regimen that preserves your hiking stamina**\n\n1. **Assess your baseline** – Your ECOG performance status, lung function, and any cardiovascular issues dictate how much “extra” fatigue a drug can add.  \n2. **Side‑effect profiles** –  \n   * Nivolumab + ipilimumab* can cause immune‑related fatigue, colitis, and endocrinopathies.  \n   * Pembrolizumab + axitinib* adds hypertension, hand‑foot syndrome, and proteinuria, but often has a more predictable fatigue pattern.  \n3. **Start low, go slow** – If you’re already fatigued, begin with a single‑agent checkpoint inhibitor (e.g., pembrolizumab) and add axitinib only if disease control is inadequate.  \n4. **Monitor early** – Use patient‑reported outcome tools (e.g., PRO‑CTCAE) and check labs every 2–3 weeks. Promptly treat immune‑related events (steroids, antihypertensives) to prevent a cascade of fatigue.  \n5. **Shared decision‑making** – Discuss your hiking goals with your oncologist; a tailored plan that balances efficacy with tolerability is key.  \n\nBy matching drug intensity to your stamina reserve and catching side effects early, you can keep enjoying the trails while fighting cancer.",
+          "order": 1,
+          "qid": "S25-Q01",
+          "method_name": "eprime"
+        },
+        {
+          "q": "How do we choose between combinations without wrecking my stamina?",
+          "gt": "**Choosing a regimen that preserves your stamina**\n\n1. **Start with your overall health** – Your ECOG performance status, kidney function, and any other chronic conditions (e.g., heart disease, diabetes) guide the choice.  \n2. **Side‑effect profiles** –  \n   * **ICI alone (nivolumab + ipilimumab)**: common fatigue, thyroiditis, colitis; usually manageable with steroids and early symptom reporting.  \n   * **ICI + VEGF inhibitor (e.g., pembrolizumab + lenvatinib or cabozantinib)**: adds hypertension, hand‑foot syndrome, diarrhea, and can increase fatigue.  \n3. **Biomarkers & prior therapy** – PD‑L1 status, VEGF‑targeted therapy exposure, and previous toxicities help refine the choice.  \n4. **Shared decision‑making** – Discuss your hiking goals, willingness to tolerate potential side effects, and the need for frequent monitoring (blood pressure, labs, symptom diary).  \n5. **Early intervention** – Promptly report fatigue, shortness of breath, or new pain; use supportive measures (hydration, rest, low‑dose steroids if needed).  \n\nIn short, weigh the likelihood of fatigue and other side effects against your activity goals, and choose the regimen that offers the best balance of efficacy and tolerability for you.",
+          "order": 1,
+          "qid": "S25-Q01",
+          "method_name": "persona"
+        }
+      ]
+    }
+  ]
+}

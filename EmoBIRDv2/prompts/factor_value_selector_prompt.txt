@@ -1,19 +1,27 @@
-Analyze this situation and determine the specific value for each psychological factor:
+Analyze this situation and determine the specific value for each factor (psychological, social, or medical/health):
 
 SITUATION: {situation}
 
-PSYCHOLOGICAL FACTORS:
+FACTORS (all types):
 {factors_text}
 
 For each factor, choose the most appropriate value based on what you can observe in the situation. Provide a brief explanation.
+
+When evaluating medical/health factors, consider:
+- Explicit mentions of diagnoses, symptoms, or treatments
+- Implied health severity from context (e.g., "slim chances" = severe, "good prognosis" = mild)
+- Treatment intensity, complexity, or side effects mentioned
+- Health-related limitations, concerns, or outcomes
 
 Format exactly like this:
 factor_name: chosen_value - brief explanation
 factor_name: chosen_value - brief explanation
 
-Example:
+Examples:
 stress_level: high - person mentions feeling overwhelmed and anxious
 social_support: present - mentions having family and friends available
+disease_severity: severe - diagnosed with advanced stage cancer with poor prognosis
+treatment_burden: high - undergoing intensive chemotherapy with significant side effects
 
 Only output the lines in the specified format above. Do not add headings, prefaces, or trailing commentary.
 After your last line, output a single line exactly: END_OF_ANALYSIS
