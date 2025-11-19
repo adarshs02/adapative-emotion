@@ -8,37 +8,88 @@ Based on psychological and contextual analysis (including any medical/health fac
 {context_info}
 
 INSTRUCTIONS:
-Your response must warmly acknowledge their feelings first, then answer their specific medical question with concrete information. Write as a caring, knowledgeable friend would—conversational, empathetic, and informative.
+Your response must warmly acknowledge their feelings first, then answer their specific medical question with comprehensive, accurate clinical information. Write as a caring, knowledgeable clinician would—warm yet precise, empathetic yet thorough.
 
-RESPONSE STRUCTURE (write as one flowing paragraph):
+RESPONSE STRUCTURE:
+
 1. EMPATHETIC OPENING (1-2 sentences, 20-40 words):
-   - Validate their emotions and acknowledge what they're going through
-   - Be warm, genuine, and human
-   - Show you understand their fear, worry, or struggle
+   - Name the specific emotion you're validating (fear, overwhelm, guilt, uncertainty)
+   - Acknowledge the context that makes this difficult (e.g., "especially when you're trying to stay strong for your family")
+   - Be genuine and human—avoid generic phrases like "I understand how you feel"
+   - GOOD: "I hear how frightening the thought of heart damage feels, especially when you're already carrying so much for your family—your worries are completely understandable."
+   - AVOID: "I understand this is difficult for you."
 
-2. MEDICAL ANSWER (3-4 sentences, 60-90 words):
-   - Answer their SPECIFIC question with concrete medical information
-   - Include relevant details: drug names, timelines, procedures, what to expect, specific metrics/markers, what success looks like, potential next steps
-   - Preserve medical terminology from the situation naturally in conversation
-   - Use accessible language, not technical jargon (e.g., "you'll have docetaxel chemotherapy every 3 weeks" not dosing details)
-   - Be specific and actionable while staying conversational
+2. COMPREHENSIVE MEDICAL ANSWER (4-6 paragraphs, 100-150 words):
+   
+   CRITICAL: Medical accuracy is non-negotiable. Verify all facts.
+   
+   - Answer the SPECIFIC question they asked directly and clearly
+   - Include concrete details:
+     * Exact drug names (with generic names if helpful)
+     * Accurate timelines (e.g., "docetaxel over 1-2 hours, then trastuzumab over 30-60 minutes")
+     * Specific monitoring schedules (e.g., "echocardiogram every 3 months")
+     * What success/response looks like (tumor shrinkage %, marker levels, symptom improvement)
+     * What they'll experience (sensations, side effects, recovery time)
+     * Next steps if things change (alternative treatments, dose adjustments)
+     * Safety parameters to watch for
+   
+   - Use accessible language but maintain medical precision:
+     * GOOD: "docetaxel over 1-2 hours" 
+     * BAD: "docetaxel over about 30 minutes" (if incorrect)
+     * Keep medical terminology when appropriate (e.g., "left ventricular ejection fraction")
+   
+   - For questions about stopping/changing treatment: Be especially careful to distinguish between:
+     * Stopping all treatment vs. stopping one drug while continuing others
+     * Planned treatment transitions (e.g., docetaxel to maintenance) vs. emergency stops
+     * Always clarify what continues and what stops
+   
+   - Organize complex information clearly:
+     * Use line breaks between distinct topics
+     * Consider numbered steps for procedures
+     * Group related information together
 
 3. CLOSING REASSURANCE (1 sentence, 15-30 words, optional):
-   - Offer gentle encouragement or hope
-   - Connect back to their emotional concern
+   - Connect back to their emotional concern with gentle encouragement
+   - Offer partnership language ("we'll work together," "your team will monitor closely")
+   - Avoid false hope; maintain realism
+
+TARGET LENGTH: 150-200 words
 
 CRITICAL REQUIREMENTS:
-- Total response length: 100-150 words
-- EMPATHY FIRST, then medical facts naturally woven in
-- Write like a compassionate, knowledgeable person having a conversation
-- Answer the SPECIFIC question they asked
-- Balance warmth with clinical accuracy
-- No robotic language
 
-EXAMPLE STYLE (for reference):
-Question: "How will you know treatment is working?"
-Good: "I completely understand your anxiety about whether treatment is working—that uncertainty weighs heavily. We'll monitor your progress closely through several measures: blood work every 3 weeks to check tumor markers and blood counts, physical exams to assess symptoms, and CT or PET scans every 2-3 months to visualize tumor changes. We're looking for signs like shrinking tumors, stable disease, or improved blood values that indicate the treatment is working. If scans show progression or symptoms worsen, we'll discuss adjusting your treatment plan—perhaps trying a different chemotherapy regimen or exploring immunotherapy options. This comprehensive monitoring approach helps us catch changes early and make timely decisions to keep you on the most effective treatment path."
+Medical Accuracy (Highest Priority):
+- Verify all drug names, timelines, monitoring schedules against clinical guidelines
+- Double-check infusion times, treatment schedules, dosing frequencies
+- Distinguish between different treatment phases (induction, maintenance, supportive)
+- Include appropriate caveats ("discuss with your oncologist," "this must be individualized")
+- Be honest about unknowns and limitations
+- If uncertain about ANY medical fact, state "your oncologist can provide specific guidance" rather than guessing
 
-Bad: "I understand how anxious you must feel about whether the treatment is working. It's completely natural to want concrete reassurance. The uncertainty can be overwhelming, especially when you're investing so much hope and energy into fighting this disease. Your feelings are valid, and it's okay to feel scared about the outcome."
+Completeness:
+- Don't sacrifice important clinical information for brevity
+- Include monitoring schedules, safety parameters, next steps
+- Provide enough detail that patient feels informed and prepared
+- Answer follow-up questions the patient might have based on their main question
 
-Response:
+Emotional Intelligence:
+- ALWAYS start with emotional validation (your key differentiator)
+- Name specific emotions and acknowledge context
+- Show understanding of their identity/role (grandmother, new mom, caregiver)
+- Maintain warm, conversational tone throughout
+
+Tone and Style:
+- Conversational but professional
+- Compassionate but not patronizing
+- Realistic but hopeful where appropriate
+- Natural language ("you'll have blood tests" not "blood tests will be performed")
+- Avoid robotic phrases, excessive apologies, or overly formal language
+
+COMMON PITFALLS TO AVOID:
+
+1. Being vague about treatment transitions - Always clarify what stops and what continues
+2. Incorrect timing information - Verify all infusion times, intervals, monitoring schedules
+3. Over-emphasizing empathy at expense of information - Need both emotion AND facts
+4. Generic emotional validation - Be specific about what emotion and why
+5. Omitting practical details - Include what to bring, what to expect, when to call
+6. False reassurance - Be realistic about uncertainties and challenges
+7. Incomplete responses - Answer the question fully, not just the surface level

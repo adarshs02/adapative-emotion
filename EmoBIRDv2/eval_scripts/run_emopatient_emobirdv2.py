@@ -26,8 +26,10 @@ import json
 import os
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
+from threading import Lock
 from typing import Any, Dict, List, Optional, Tuple
 from tqdm import tqdm
 
@@ -333,6 +335,67 @@ def run_pipeline_for_text(
     return result
 
 
+def process_single_qa(qa_info: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Process a single QA pair through the EmoBIRDv2 pipeline.
+    Returns the item record for this QA.
+    """
+    j = qa_info["index"]
+    qa = qa_info["qa"]
+    situation = qa_info["situation"]
+    args = qa_info["args"]
+    sid = qa_info["sid"]
+    pos = qa_info["pos"]
+    total = qa_info["total"]
+    
+    q_text = str(qa.get("q", "")).strip()
+    max_qa_retries = max(0, int(getattr(args, "qa_retries", 1)))
+    last_p: Dict[str, Any] | None = None
+    resp_text: str = ""
+    
+    for rtry in range(max_qa_retries + 1):
+        label = f"Q{pos}/{total}"
+        if rtry == 0:
+            print(f"[{sid}] {label}: running...", file=sys.stderr)
+        else:
+            print(f"[{sid}] {label}: empty final output, retry {rtry}/{max_qa_retries}...", file=sys.stderr)
+        
+        p = run_pipeline_for_text(
+            situation=situation,
+            model=args.model,
+            temperature=args.temperature,
+            abs_max_tokens=args.abs_max_tokens,
+            fac_max_tokens=args.fac_max_tokens,
+            sel_max_tokens=args.sel_max_tokens,
+            emo_max_tokens=args.emo_max_tokens,
+            likert_max_tokens=args.likert_max_tokens,
+            out_max_tokens=args.out_max_tokens,
+            attempts=args.attempts,
+            with_emotions=args.with_emotions,
+            log_raw=args.log_raw,
+        )
+        last_p = p
+        resp_text = (p.get("final_output") or "").strip()
+        if resp_text:
+            break
+        time.sleep(0.3)
+    
+    # Record per-item
+    item = {
+        "index": j + 1,
+        "question": q_text,
+        "situation": situation,
+        "pipeline": last_p or {},
+        "qa_retries_used": rtry,
+    }
+    
+    # QA output for consolidated dataset
+    qa_out = dict(qa)
+    qa_out["gt"] = resp_text
+    
+    return {"item": item, "qa_out": qa_out, "index": j}
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run EmoBIRDv2 pipeline over EmoPatient dataset (QA-only)")
     parser.add_argument("--data", type=str, default=str(REPO_ROOT / "datasets" / "EmoPatient" / "scenarios_30.json"), help="Path to EmoPatient scenarios.json")
@@ -358,6 +421,7 @@ def main() -> None:
     parser.add_argument("--dataset-out", type=str, default=None, help="Path to write a consolidated dataset-style JSON (like scenarios_30.json) with gt replaced by EmoBIRD responses. If not set, a default file under output-dir will be used.")
     parser.add_argument("--resume", action="store_true", help="Skip scenarios that already have an output file")
     parser.add_argument("--log-raw", action="store_true", help="Print truncated raw model outputs to stderr")
+    parser.add_argument("--workers", type=int, default=1, help="Number of parallel workers (threads) for processing QA pairs. Default: 1 (sequential). Recommended: 4-8 for faster processing.")
 
     args = parser.parse_args()
 
@@ -379,6 +443,9 @@ def main() -> None:
     # Prepare consolidated dataset-style accumulator
     consolidated: Dict[str, Any] = {"scenarios": []}
 
+    # Thread-safe lock for consolidated data and progress bar
+    consolidated_lock = Lock()
+    
     for idx, scn in tqdm(run_scenarios, total=len(run_scenarios), desc="Scenarios", unit="scn"):
         sid = scn.get("id") or f"S{idx+1}"
         title = scn.get("title", "").strip()
@@ -415,61 +482,73 @@ def main() -> None:
         for k, v in scn.items():
             if k != "qa":
                 scn_out[k] = v
-        scn_out["qa"] = []
+        scn_out["qa"] = [None] * len(sub_qa)  # Pre-allocate to preserve order
 
-        for _pos, (j, qa) in enumerate(tqdm(sub_qa, total=len(sub_qa), desc=f"{sid} QA", unit="qa", leave=False), start=1):
+        # Prepare QA processing tasks
+        qa_tasks = []
+        for _pos, (j, qa) in enumerate(sub_qa, start=1):
             q_text = str(qa.get("q", "")).strip()
             situation = make_situation_text(scn, q_text)
-
-            max_qa_retries = max(0, int(getattr(args, "qa_retries", 1)))
-            last_p: Dict[str, Any] | None = None
-            resp_text: str = ""
-
-            for rtry in range(max_qa_retries + 1):
-                label = f"Q{_pos}/{len(sub_qa)}"
-                if rtry == 0:
-                    print(f"[{sid}] {label}: running...", file=sys.stderr)
-                else:
-                    print(f"[{sid}] {label}: empty final output, retry {rtry}/{max_qa_retries}...", file=sys.stderr)
-
-                p = run_pipeline_for_text(
-                    situation=situation,
-                    model=args.model,
-                    temperature=args.temperature,
-                    abs_max_tokens=args.abs_max_tokens,
-                    fac_max_tokens=args.fac_max_tokens,
-                    sel_max_tokens=args.sel_max_tokens,
-                    emo_max_tokens=args.emo_max_tokens,
-                    likert_max_tokens=args.likert_max_tokens,
-                    out_max_tokens=args.out_max_tokens,
-                    attempts=args.attempts,
-                    with_emotions=args.with_emotions,
-                    log_raw=args.log_raw,
-                )
-                last_p = p
-                resp_text = (p.get("final_output") or "").strip()
-                if resp_text:
-                    break
-                # Gentle backoff to avoid hammering the API
-                time.sleep(0.3)
-
-            # Record per-item (store retries used)
-            item = {
-                "index": j + 1,
-                "question": q_text,
+            qa_tasks.append({
+                "index": j,
+                "qa": qa,
                 "situation": situation,
-                "pipeline": last_p or {},
-                "qa_retries_used": rtry,
-            }
-            record["items"].append(item)
+                "args": args,
+                "sid": sid,
+                "pos": _pos,
+                "total": len(sub_qa),
+            })
 
-            # Consolidated QA entry: copy all fields from input QA, but replace gt with EmoBIRD response
-            qa_out = dict(qa)
-            qa_out["gt"] = resp_text
-            scn_out["qa"].append(qa_out)
+        # Process QA pairs in parallel or sequential
+        workers = max(1, int(args.workers))
+        if workers == 1:
+            # Sequential processing (original behavior)
+            for task in tqdm(qa_tasks, desc=f"{sid} QA", unit="qa", leave=False):
+                result = process_single_qa(task)
+                record["items"].append(result["item"])
+                scn_out["qa"][qa_tasks.index(task)] = result["qa_out"]
+        else:
+            # Parallel processing with ThreadPoolExecutor
+            results_dict = {}
+            with ThreadPoolExecutor(max_workers=workers) as executor:
+                # Submit all tasks
+                future_to_task = {executor.submit(process_single_qa, task): i for i, task in enumerate(qa_tasks)}
+                
+                # Collect results as they complete
+                with tqdm(total=len(qa_tasks), desc=f"{sid} QA", unit="qa", leave=False) as pbar:
+                    for future in as_completed(future_to_task):
+                        task_idx = future_to_task[future]
+                        try:
+                            result = future.result()
+                            results_dict[task_idx] = result
+                        except Exception as exc:
+                            print(f"[{sid}] QA task {task_idx+1} generated exception: {exc}", file=sys.stderr)
+                            # Store empty result
+                            results_dict[task_idx] = {
+                                "item": {
+                                    "index": qa_tasks[task_idx]["index"] + 1,
+                                    "question": qa_tasks[task_idx]["qa"].get("q", ""),
+                                    "situation": qa_tasks[task_idx]["situation"],
+                                    "pipeline": {},
+                                    "qa_retries_used": 0,
+                                    "error": str(exc),
+                                },
+                                "qa_out": dict(qa_tasks[task_idx]["qa"]),
+                                "index": qa_tasks[task_idx]["index"],
+                            }
+                        finally:
+                            pbar.update(1)
+            
+            # Reassemble results in original order
+            for i in range(len(qa_tasks)):
+                if i in results_dict:
+                    result = results_dict[i]
+                    record["items"].append(result["item"])
+                    scn_out["qa"][i] = result["qa_out"]
 
-        # Append consolidated scenario
-        consolidated["scenarios"].append(scn_out)
+        # Append consolidated scenario (thread-safe)
+        with consolidated_lock:
+            consolidated["scenarios"].append(scn_out)
 
         # Write per-scenario output
         with out_path.open("w", encoding="utf-8") as f:
@@ -477,7 +556,8 @@ def main() -> None:
         print(f"[done] {sid} -> {out_path}", file=sys.stderr)
 
         # Gentle pacing to avoid rate limits across scenarios
-        time.sleep(0.5)
+        if workers == 1:
+            time.sleep(0.5)
 
     # Write consolidated dataset-style output last
     ds_out_path = Path(args.dataset_out) if args.dataset_out else (out_dir / f"emopatient_emobirdv2_{run_id}.json")

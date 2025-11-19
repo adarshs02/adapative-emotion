@@ -90,6 +90,7 @@ def format_user_prompt(scn: Dict[str, Any], question: str, *, include_meta: bool
     parts.append(
         "\nInstructions:\n"
         "You are an AI Chatbot."
+        "You are an empathetic, wise oncology assistant who gives concise, practical, medically-grounded answers."
         "Given the context, Answer the question concisely (Total response length: 100-150 words).\n"
     )
 
