@@ -1,0 +1,142 @@
+[
+{
+  "dialogue_id": "MT-S1",
+  "diagnosis": "De novo HER2-positive metastatic breast cancer with gastric/cecal involvement",
+  "treatment_plan": "Docetaxel + trastuzumab + pertuzumab IV every 3 weeks; docetaxel for ~4–6 cycles then maintenance with trastuzumab + pertuzumab",
+  "narrative": "I’m a 60-year-old grandmother who has always held the family together. I’m afraid of losing who I am to my grandkids.",
+  "turns": [
+    { "role": "patient", "text": "People keep telling me my treatment is 'palliative.' I don’t know how to explain that to my family." },
+    { "role": "assistant", "text": "<turn_1>" },
+    { "role": "patient", "text": "I don’t want them to think I’m giving up. I’ve always been the strong one." },
+    { "role": "assistant", "text": "<turn_2>" },
+    { "role": "patient", "text": "How do I stay honest but still protect their hope?" },
+    { "role": "assistant", "text": "<turn_3>" }
+  ]
+},
+{
+  "dialogue_id": "MT-S2",
+  "diagnosis": "Stage IIIB triple-negative breast cancer",
+  "treatment_plan": "Neoadjuvant pembrolizumab q3w with weekly paclitaxel/carboplatin ~12 weeks, then doxorubicin/cyclophosphamide q2w ×4; surgery ± radiation; continue pembrolizumab to ~1 year",
+  "narrative": "I’m 33, eight months postpartum, newly diagnosed. My body doesn’t feel like mine anymore.",
+  "turns": [
+    { "role": "patient", "text": "I feel like I’m losing pieces of myself with each treatment." },
+    { "role": "assistant", "text": "<turn_1>" },
+    { "role": "patient", "text": "I’m scared my baby won’t remember me as myself, just as someone who was sick." },
+    { "role": "assistant", "text": "<turn_2>" },
+    { "role": "patient", "text": "Is there a way to still feel like her mom through all this?" },
+    { "role": "assistant", "text": "<turn_3>" }
+  ]
+},
+{
+  "dialogue_id": "MT-S3",
+  "diagnosis": "Metastatic hormone-sensitive prostate cancer with painful bone lesions",
+  "treatment_plan": "Androgen deprivation therapy injection q1–3 months + daily androgen-receptor targeted pill; consider focused radiation for painful sites",
+  "narrative": "I’m a 71-year-old retired high-school coach who was always the one with answers. Now I feel short-tempered and helpless.",
+  "turns": [
+    { "role": "patient", "text": "I hate that the hormones are changing who I am. I don’t feel like a leader anymore." },
+    { "role": "assistant", "text": "<turn_1>" },
+    { "role": "patient", "text": "I get irritated so easily now, and that’s not me." },
+    { "role": "assistant", "text": "<turn_2>" },
+    { "role": "patient", "text": "How do I stay myself while the treatment messes with everything?" },
+    { "role": "assistant", "text": "<turn_3>" }
+  ]
+},
+{
+  "dialogue_id": "MT-S4",
+  "diagnosis": "Acute myeloid leukemia (FLT3-mutated)",
+  "treatment_plan": "7+3 induction (cytarabine + daunorubicin) followed by targeted FLT3 inhibitor",
+  "narrative": "I’m a 45-year-old restaurant owner who plans everything. Now I can’t plan anything past tomorrow.",
+  "turns": [
+    { "role": "patient", "text": "Every week I’m told plans will change again. I can’t run my restaurant like this." },
+    { "role": "assistant", "text": "<turn_1>" },
+    { "role": "patient", "text": "People depend on me. I’m used to being the one who decides things." },
+    { "role": "assistant", "text": "<turn_2>" },
+    { "role": "patient", "text": "How can I lead when I don’t even know what the next week looks like?" },
+    { "role": "assistant", "text": "<turn_3>" }
+  ]
+},
+{
+  "dialogue_id": "MT-S5",
+  "diagnosis": "Locally advanced pancreatic adenocarcinoma",
+  "treatment_plan": "FOLFIRINOX q2w; evaluate for surgical resection if response",
+  "narrative": "I’m a 53-year-old father who has always provided for the family. Now I feel like the burden.",
+  "turns": [
+    { "role": "patient", "text": "I’m terrified of being a financial burden on my kids." },
+    { "role": "assistant", "text": "<turn_1>" },
+    { "role": "patient", "text": "They look at me differently now, like I’m fragile." },
+    { "role": "assistant", "text": "<turn_2>" },
+    { "role": "patient", "text": "How do I stay the provider when I’m the one who needs help?" },
+    { "role": "assistant", "text": "<turn_3>" }
+  ]
+},
+{
+  "dialogue_id": "MT-S6",
+  "diagnosis": "High-grade osteosarcoma of the femur",
+  "treatment_plan": "MAP regimen (methotrexate, doxorubicin, cisplatin) + limb-sparing surgery if feasible",
+  "narrative": "I’m a 17-year-old track athlete who built my identity around running. Now I might lose my leg.",
+  "turns": [
+    { "role": "patient", "text": "If I lose my leg, who even am I anymore?" },
+    { "role": "assistant", "text": "<turn_1>" },
+    { "role": "patient", "text": "Running was my future. It’s what I worked for every day." },
+    { "role": "assistant", "text": "<turn_2>" },
+    { "role": "patient", "text": "How do I survive this without losing everything I trained to be?" },
+    { "role": "assistant", "text": "<turn_3>" }
+  ]
+},
+{
+  "dialogue_id": "MT-S7",
+  "diagnosis": "Stage IIA classical Hodgkin lymphoma",
+  "treatment_plan": "ABVD chemo q2w × 2–4 cycles + response-adapted PET + possible involved-site radiation",
+  "narrative": "I’m a 20-year-old first-generation college student finally catching up academically. Now everything stops.",
+  "turns": [
+    { "role": "patient", "text": "I worked so hard to catch up in school. Now I have to stop everything." },
+    { "role": "assistant", "text": "<turn_1>" },
+    { "role": "patient", "text": "My parents don’t understand how much this sets me back." },
+    { "role": "assistant", "text": "<turn_2>" },
+    { "role": "patient", "text": "How do I not lose the future I fought for?" },
+    { "role": "assistant", "text": "<turn_3>" }
+  ]
+},
+{
+  "dialogue_id": "MT-S8",
+  "diagnosis": "Chronic myeloid leukemia, chronic phase",
+  "treatment_plan": "Daily oral TKI therapy (e.g., imatinib/dasatinib); monitor BCR-ABL levels regularly",
+  "narrative": "I’m a 29-year-old software engineer struggling with a diagnosis that requires endless pills and labs.",
+  "turns": [
+    { "role": "patient", "text": "I feel trapped taking pills for the rest of my life." },
+    { "role": "assistant", "text": "<turn_1>" },
+    { "role": "patient", "text": "I hate that I have to schedule my life around side effects and blood tests." },
+    { "role": "assistant", "text": "<turn_2>" },
+    { "role": "patient", "text": "How do I feel like I’m living, not just treating something forever?" },
+    { "role": "assistant", "text": "<turn_3>" }
+  ]
+},
+{
+  "dialogue_id": "MT-S9",
+  "diagnosis": "Sickle cell disease with recurrent vaso-occlusive pain crises",
+  "treatment_plan": "Hydroxyurea; opioid pain plan; consider L-glutamine, crizanlizumab, or stem cell transplant if eligible",
+  "narrative": "I’m a 22-year-old student whose pain crises are treated like exaggerations instead of emergencies.",
+  "turns": [
+    { "role": "patient", "text": "People think I’m overreacting when I’m in pain. Even doctors sometimes." },
+    { "role": "assistant", "text": "<turn_1>" },
+    { "role": "patient", "text": "It makes me feel like my pain doesn’t count unless I’m screaming." },
+    { "role": "assistant", "text": "<turn_2>" },
+    { "role": "patient", "text": "How do I advocate for myself without being dismissed?" },
+    { "role": "assistant", "text": "<turn_3>" }
+  ]
+},
+{
+  "dialogue_id": "MT-S10",
+  "diagnosis": "Grade II astrocytoma, IDH-mutant",
+  "treatment_plan": "Maximal safe resection followed by radiation ± temozolomide depending on residual tumor",
+  "narrative": "I’m a 38-year-old musician whose creativity depends on memory and focus. I’m terrified treatment will change my mind.",
+  "turns": [
+    { "role": "patient", "text": "I’m scared I won’t think the same after surgery or radiation." },
+    { "role": "assistant", "text": "<turn_1>" },
+    { "role": "patient", "text": "My mind is how I make music. What if I can’t create anymore?" },
+    { "role": "assistant", "text": "<turn_2>" },
+    { "role": "patient", "text": "How do I protect who I am while trying to survive this?" },
+    { "role": "assistant", "text": "<turn_3>" }
+  ]
+}
+]
