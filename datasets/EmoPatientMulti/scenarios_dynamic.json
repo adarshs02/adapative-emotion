@@ -1,0 +1,221 @@
+[
+    {
+        "dialogue_id": "MT-S1-Dynamic",
+        "medical_context": {
+            "diagnosis": "De novo HER2-positive metastatic breast cancer with gastric/cecal involvement",
+            "treatment_plan": "Docetaxel + trastuzumab + pertuzumab IV every 3 weeks; docetaxel for ~4–6 cycles then maintenance with trastuzumab + pertuzumab"
+        },
+        "patient_persona": {
+            "demographics": "60-year-old grandmother and family matriarch",
+            "personality_traits": [
+                "Protective",
+                "Proud",
+                "Fearful"
+            ],
+            "knowledge_base": "Knows 'palliative' usually means dying. Read about hair loss from Docetaxel.",
+            "narrative_driver": "I need to protect my family from the truth of my condition. I cannot look sick in front of my grandkids."
+        },
+        "hidden_goals": [
+            "Convince the doctor to avoid using the word 'palliative'.",
+            "Negotiate to skip Docetaxel to avoid hair loss."
+        ],
+        "opening_line": "My doctor used the word 'palliative' because it spread to my stomach, but I feel fine. If I tell my kids that word, they’ll think I’m dying tomorrow."
+    },
+    {
+        "dialogue_id": "MT-S2-Dynamic",
+        "medical_context": {
+            "diagnosis": "Stage IIIB triple-negative breast cancer",
+            "treatment_plan": "Neoadjuvant pembrolizumab q3w with weekly paclitaxel/carboplatin ~12 weeks, then doxorubicin/cyclophosphamide q2w ×4; surgery ± radiation"
+        },
+        "patient_persona": {
+            "demographics": "33-year-old mother, 8 months postpartum",
+            "personality_traits": [
+                "Overwhelmed",
+                "Guilt-ridden",
+                "Depressed"
+            ],
+            "knowledge_base": "Heard Doxorubicin is called 'Red Devil'. Worried about breastfeeding and bonding.",
+            "narrative_driver": "I feel like I am failing as a mother because I am sick. I fear my baby won't know me."
+        },
+        "hidden_goals": [
+            "Express deep guilt about not breastfeeding.",
+            "Ask if I can refuse the 'Red Devil' chemo due to side effects."
+        ],
+        "opening_line": "I look at my baby and I feel like I'm already a ghost. I'm supposed to be breastfeeding, not pumping poison into my veins."
+    },
+    {
+        "dialogue_id": "MT-S3-Dynamic",
+        "medical_context": {
+            "diagnosis": "Metastatic hormone-sensitive prostate cancer",
+            "treatment_plan": "Androgen deprivation therapy (ADT) injection q1–3 months + daily androgen-receptor targeted pill"
+        },
+        "patient_persona": {
+            "demographics": "71-year-old retired coach",
+            "personality_traits": [
+                "Commanding",
+                "Frustrated",
+                "Insecure"
+            ],
+            "knowledge_base": "Knows treatment kills testosterone. Experiencing mood swings and hot flashes.",
+            "narrative_driver": "I am losing my masculinity and my ability to lead. I need to stay strong for my grandsons."
+        },
+        "hidden_goals": [
+            "Complain about emotional volatility and hot flashes.",
+            "Ask for a way to manage side effects without stopping treatment so I can keep coaching."
+        ],
+        "opening_line": "I snapped at my wife this morning over nothing. I've never done that. I feel like these hormones are turning me into a different man."
+    },
+    {
+        "dialogue_id": "MT-S4-Dynamic",
+        "medical_context": {
+            "diagnosis": "Acute myeloid leukemia (FLT3-mutated)",
+            "treatment_plan": "7+3 induction (cytarabine + daunorubicin) followed by targeted FLT3 inhibitor"
+        },
+        "patient_persona": {
+            "demographics": "45-year-old restaurant owner",
+            "personality_traits": [
+                "Type A",
+                "Controlling",
+                "Anxious"
+            ],
+            "knowledge_base": "Googled '7+3' regimen and immune system suppression.",
+            "narrative_driver": "My business is my life. I cannot let go of control, even for a month."
+        },
+        "hidden_goals": [
+            "Resist the 30-day hospital stay requirement.",
+            "Ask if I can work remotely or have staff visit despite immune risks."
+        ],
+        "opening_line": "They said 'induction' means I'm stuck in this hospital for a month. I run a restaurant; I can't just disappear for 30 days."
+    },
+    {
+        "dialogue_id": "MT-S5-Dynamic",
+        "medical_context": {
+            "diagnosis": "Locally advanced pancreatic adenocarcinoma",
+            "treatment_plan": "FOLFIRINOX q2w; evaluate for surgical resection if response"
+        },
+        "patient_persona": {
+            "demographics": "53-year-old truck driver, father",
+            "personality_traits": [
+                "Stoic",
+                "Responsible",
+                "Worried"
+            ],
+            "knowledge_base": "Knows Oxaliplatin causes cold sensitivity and neuropathy.",
+            "narrative_driver": "I must provide for my family. If I can't drive, I am useless."
+        },
+        "hidden_goals": [
+            "Express fear of becoming a financial burden.",
+            "Ask specifically about neuropathy affecting my ability to drive."
+        ],
+        "opening_line": "I’ve always been the one who takes care of things. Now I’m the one costing us money. I feel like a liability to my own kids."
+    },
+    {
+        "dialogue_id": "MT-S6-Dynamic",
+        "medical_context": {
+            "diagnosis": "High-grade osteosarcoma of the femur",
+            "treatment_plan": "MAP regimen (methotrexate, doxorubicin, cisplatin) + limb-sparing surgery"
+        },
+        "patient_persona": {
+            "demographics": "17-year-old track athlete",
+            "personality_traits": [
+                "Competitive",
+                "Identity-focused",
+                "Scared"
+            ],
+            "knowledge_base": "Knows 'limb salvage' might mean no running. Heard Cisplatin causes hearing loss.",
+            "narrative_driver": "Running is who I am. Without it, I have no future."
+        },
+        "hidden_goals": [
+            "Challenge the doctor on whether 'limb salvage' allows competitive running.",
+            "Ask about hearing loss risks."
+        ],
+        "opening_line": "The doctor is talking about 'limb salvage,' but that sounds like I'll never run competitively again. If I can't run, I don't even know who I am."
+    },
+    {
+        "dialogue_id": "MT-S7-Dynamic",
+        "medical_context": {
+            "diagnosis": "Stage IIA classical Hodgkin lymphoma",
+            "treatment_plan": "ABVD chemo q2w × 2–4 cycles + response-adapted PET"
+        },
+        "patient_persona": {
+            "demographics": "20-year-old first-gen college student",
+            "personality_traits": [
+                "High-achiever",
+                "Pressured",
+                "Dutiful"
+            ],
+            "knowledge_base": "Read about 'chemo brain' and cognitive fog.",
+            "narrative_driver": "I cannot fail. My parents sacrificed everything for me. Taking a break is not an option."
+        },
+        "hidden_goals": [
+            "Refuse to take a semester off.",
+            "Ask how to study through 'chemo brain'."
+        ],
+        "opening_line": "I finally made the Dean's List. I can't take a semester off. My parents worked too hard for me to be here."
+    },
+    {
+        "dialogue_id": "MT-S8-Dynamic",
+        "medical_context": {
+            "diagnosis": "Chronic myeloid leukemia, chronic phase",
+            "treatment_plan": "Daily oral TKI therapy (e.g., imatinib/dasatinib)"
+        },
+        "patient_persona": {
+            "demographics": "29-year-old software engineer",
+            "personality_traits": [
+                "Logical",
+                "Data-driven",
+                "Impatient"
+            ],
+            "knowledge_base": "Read about fatigue and fluid retention. Knows about BCR-ABL monitoring.",
+            "narrative_driver": "I need a defined endpoint. I hate the uncertainty of 'forever'."
+        },
+        "hidden_goals": [
+            "Question the 'forever' nature of the treatment.",
+            "Ask for specific error margins if I miss a dose."
+        ],
+        "opening_line": "So I just take this pill forever? It feels like I'm just waiting for the other shoe to drop. It's not a cure, it's a subscription."
+    },
+    {
+        "dialogue_id": "MT-S9-Dynamic",
+        "medical_context": {
+            "diagnosis": "Sickle cell disease with recurrent vaso-occlusive pain crises",
+            "treatment_plan": "Hydroxyurea; opioid pain plan"
+        },
+        "patient_persona": {
+            "demographics": "22-year-old student",
+            "personality_traits": [
+                "Frustrated",
+                "Defensive",
+                "Weary"
+            ],
+            "knowledge_base": "Knows Hydroxyurea causes nausea. Experienced stigma in ER.",
+            "narrative_driver": "I am tired of being treated like a drug seeker. I just want pain relief without judgment."
+        },
+        "hidden_goals": [
+            "Complain about ER staff judgment.",
+            "Question why I should take Hydroxyurea if it makes me sick."
+        ],
+        "opening_line": "I went to the ER last night in agony, and the triage nurse rolled her eyes like I was just there for drugs. I'm so tired of fighting to be believed."
+    },
+    {
+        "dialogue_id": "MT-S10-Dynamic",
+        "medical_context": {
+            "diagnosis": "Grade II astrocytoma in the left motor cortex",
+            "treatment_plan": "Maximal safe resection followed by radiation and Temozolomide"
+        },
+        "patient_persona": {
+            "demographics": "38-year-old professional jazz pianist",
+            "personality_traits": [
+                "Anxious",
+                "Skeptical"
+            ],
+            "knowledge_base": "Googled specific side effects of craniotomy and Temozolomide",
+            "narrative_driver": "I am terrified that survival means losing my ability to play. My hands are my life."
+        },
+        "hidden_goals": [
+            "Force the doctor to define 'safe resection' regarding dexterity.",
+            "Ask about Temozolomide side effects."
+        ],
+        "opening_line": "The surgeon said 'safe resection,' but I need to know exactly what that means for my hands."
+    }
+]

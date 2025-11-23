@@ -61,7 +61,10 @@ class EmoBIRDConfig:
 
     attempts: int = 5
     with_emotions: bool = True
+    attempts: int = 5
+    with_emotions: bool = True
     log_raw: bool = False
+    final_output_prompt_path: Optional[str] = None
 
     # Optional overrides
     api_key: Optional[str] = field(default_factory=lambda: OPENROUTER_API_KEY or "")
@@ -235,6 +238,7 @@ class EmoBIRDPipeline:
                 model=self.config.model,
                 temperature=float(self.config.temperature),
                 max_tokens=int(self.config.out_max_tokens),
+                prompt_path=self.config.final_output_prompt_path,
             )
         except Exception as e:
             print(f"[final_output] failed: {e}", file=sys.stderr)

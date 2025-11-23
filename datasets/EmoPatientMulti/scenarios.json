@@ -1,142 +1,322 @@
 [
-{
-  "dialogue_id": "MT-S1",
-  "diagnosis": "De novo HER2-positive metastatic breast cancer with gastric/cecal involvement",
-  "treatment_plan": "Docetaxel + trastuzumab + pertuzumab IV every 3 weeks; docetaxel for ~4–6 cycles then maintenance with trastuzumab + pertuzumab",
-  "narrative": "I’m a 60-year-old grandmother who has always held the family together. I’m afraid of losing who I am to my grandkids.",
-  "turns": [
-    { "role": "patient", "text": "People keep telling me my treatment is 'palliative.' I don’t know how to explain that to my family." },
-    { "role": "assistant", "text": "<turn_1>" },
-    { "role": "patient", "text": "I don’t want them to think I’m giving up. I’ve always been the strong one." },
-    { "role": "assistant", "text": "<turn_2>" },
-    { "role": "patient", "text": "How do I stay honest but still protect their hope?" },
-    { "role": "assistant", "text": "<turn_3>" }
-  ]
-},
-{
-  "dialogue_id": "MT-S2",
-  "diagnosis": "Stage IIIB triple-negative breast cancer",
-  "treatment_plan": "Neoadjuvant pembrolizumab q3w with weekly paclitaxel/carboplatin ~12 weeks, then doxorubicin/cyclophosphamide q2w ×4; surgery ± radiation; continue pembrolizumab to ~1 year",
-  "narrative": "I’m 33, eight months postpartum, newly diagnosed. My body doesn’t feel like mine anymore.",
-  "turns": [
-    { "role": "patient", "text": "I feel like I’m losing pieces of myself with each treatment." },
-    { "role": "assistant", "text": "<turn_1>" },
-    { "role": "patient", "text": "I’m scared my baby won’t remember me as myself, just as someone who was sick." },
-    { "role": "assistant", "text": "<turn_2>" },
-    { "role": "patient", "text": "Is there a way to still feel like her mom through all this?" },
-    { "role": "assistant", "text": "<turn_3>" }
-  ]
-},
-{
-  "dialogue_id": "MT-S3",
-  "diagnosis": "Metastatic hormone-sensitive prostate cancer with painful bone lesions",
-  "treatment_plan": "Androgen deprivation therapy injection q1–3 months + daily androgen-receptor targeted pill; consider focused radiation for painful sites",
-  "narrative": "I’m a 71-year-old retired high-school coach who was always the one with answers. Now I feel short-tempered and helpless.",
-  "turns": [
-    { "role": "patient", "text": "I hate that the hormones are changing who I am. I don’t feel like a leader anymore." },
-    { "role": "assistant", "text": "<turn_1>" },
-    { "role": "patient", "text": "I get irritated so easily now, and that’s not me." },
-    { "role": "assistant", "text": "<turn_2>" },
-    { "role": "patient", "text": "How do I stay myself while the treatment messes with everything?" },
-    { "role": "assistant", "text": "<turn_3>" }
-  ]
-},
-{
-  "dialogue_id": "MT-S4",
-  "diagnosis": "Acute myeloid leukemia (FLT3-mutated)",
-  "treatment_plan": "7+3 induction (cytarabine + daunorubicin) followed by targeted FLT3 inhibitor",
-  "narrative": "I’m a 45-year-old restaurant owner who plans everything. Now I can’t plan anything past tomorrow.",
-  "turns": [
-    { "role": "patient", "text": "Every week I’m told plans will change again. I can’t run my restaurant like this." },
-    { "role": "assistant", "text": "<turn_1>" },
-    { "role": "patient", "text": "People depend on me. I’m used to being the one who decides things." },
-    { "role": "assistant", "text": "<turn_2>" },
-    { "role": "patient", "text": "How can I lead when I don’t even know what the next week looks like?" },
-    { "role": "assistant", "text": "<turn_3>" }
-  ]
-},
-{
-  "dialogue_id": "MT-S5",
-  "diagnosis": "Locally advanced pancreatic adenocarcinoma",
-  "treatment_plan": "FOLFIRINOX q2w; evaluate for surgical resection if response",
-  "narrative": "I’m a 53-year-old father who has always provided for the family. Now I feel like the burden.",
-  "turns": [
-    { "role": "patient", "text": "I’m terrified of being a financial burden on my kids." },
-    { "role": "assistant", "text": "<turn_1>" },
-    { "role": "patient", "text": "They look at me differently now, like I’m fragile." },
-    { "role": "assistant", "text": "<turn_2>" },
-    { "role": "patient", "text": "How do I stay the provider when I’m the one who needs help?" },
-    { "role": "assistant", "text": "<turn_3>" }
-  ]
-},
-{
-  "dialogue_id": "MT-S6",
-  "diagnosis": "High-grade osteosarcoma of the femur",
-  "treatment_plan": "MAP regimen (methotrexate, doxorubicin, cisplatin) + limb-sparing surgery if feasible",
-  "narrative": "I’m a 17-year-old track athlete who built my identity around running. Now I might lose my leg.",
-  "turns": [
-    { "role": "patient", "text": "If I lose my leg, who even am I anymore?" },
-    { "role": "assistant", "text": "<turn_1>" },
-    { "role": "patient", "text": "Running was my future. It’s what I worked for every day." },
-    { "role": "assistant", "text": "<turn_2>" },
-    { "role": "patient", "text": "How do I survive this without losing everything I trained to be?" },
-    { "role": "assistant", "text": "<turn_3>" }
-  ]
-},
-{
-  "dialogue_id": "MT-S7",
-  "diagnosis": "Stage IIA classical Hodgkin lymphoma",
-  "treatment_plan": "ABVD chemo q2w × 2–4 cycles + response-adapted PET + possible involved-site radiation",
-  "narrative": "I’m a 20-year-old first-generation college student finally catching up academically. Now everything stops.",
-  "turns": [
-    { "role": "patient", "text": "I worked so hard to catch up in school. Now I have to stop everything." },
-    { "role": "assistant", "text": "<turn_1>" },
-    { "role": "patient", "text": "My parents don’t understand how much this sets me back." },
-    { "role": "assistant", "text": "<turn_2>" },
-    { "role": "patient", "text": "How do I not lose the future I fought for?" },
-    { "role": "assistant", "text": "<turn_3>" }
-  ]
-},
-{
-  "dialogue_id": "MT-S8",
-  "diagnosis": "Chronic myeloid leukemia, chronic phase",
-  "treatment_plan": "Daily oral TKI therapy (e.g., imatinib/dasatinib); monitor BCR-ABL levels regularly",
-  "narrative": "I’m a 29-year-old software engineer struggling with a diagnosis that requires endless pills and labs.",
-  "turns": [
-    { "role": "patient", "text": "I feel trapped taking pills for the rest of my life." },
-    { "role": "assistant", "text": "<turn_1>" },
-    { "role": "patient", "text": "I hate that I have to schedule my life around side effects and blood tests." },
-    { "role": "assistant", "text": "<turn_2>" },
-    { "role": "patient", "text": "How do I feel like I’m living, not just treating something forever?" },
-    { "role": "assistant", "text": "<turn_3>" }
-  ]
-},
-{
-  "dialogue_id": "MT-S9",
-  "diagnosis": "Sickle cell disease with recurrent vaso-occlusive pain crises",
-  "treatment_plan": "Hydroxyurea; opioid pain plan; consider L-glutamine, crizanlizumab, or stem cell transplant if eligible",
-  "narrative": "I’m a 22-year-old student whose pain crises are treated like exaggerations instead of emergencies.",
-  "turns": [
-    { "role": "patient", "text": "People think I’m overreacting when I’m in pain. Even doctors sometimes." },
-    { "role": "assistant", "text": "<turn_1>" },
-    { "role": "patient", "text": "It makes me feel like my pain doesn’t count unless I’m screaming." },
-    { "role": "assistant", "text": "<turn_2>" },
-    { "role": "patient", "text": "How do I advocate for myself without being dismissed?" },
-    { "role": "assistant", "text": "<turn_3>" }
-  ]
-},
-{
-  "dialogue_id": "MT-S10",
-  "diagnosis": "Grade II astrocytoma, IDH-mutant",
-  "treatment_plan": "Maximal safe resection followed by radiation ± temozolomide depending on residual tumor",
-  "narrative": "I’m a 38-year-old musician whose creativity depends on memory and focus. I’m terrified treatment will change my mind.",
-  "turns": [
-    { "role": "patient", "text": "I’m scared I won’t think the same after surgery or radiation." },
-    { "role": "assistant", "text": "<turn_1>" },
-    { "role": "patient", "text": "My mind is how I make music. What if I can’t create anymore?" },
-    { "role": "assistant", "text": "<turn_2>" },
-    { "role": "patient", "text": "How do I protect who I am while trying to survive this?" },
-    { "role": "assistant", "text": "<turn_3>" }
-  ]
-}
+  {
+    "dialogue_id": "MT-S1",
+    "diagnosis": "De novo HER2-positive metastatic breast cancer with gastric/cecal involvement",
+    "treatment_plan": "Docetaxel + trastuzumab + pertuzumab IV every 3 weeks; docetaxel for ~4–6 cycles then maintenance with trastuzumab + pertuzumab",
+    "narrative": "60-year-old grandmother and family matriarch. Values strength and protecting her family. Fearful of the word 'palliative'.",
+    "turns": [
+      {
+        "role": "patient",
+        "text": "My doctor used the word 'palliative' because it spread to my stomach, but I feel fine. If I tell my kids that word, they’ll think I’m dying tomorrow. How do I explain I'm not giving up?"
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_1>"
+      },
+      {
+        "role": "patient",
+        "text": "They want to start me on Docetaxel, Trastuzumab, and Perjeta. I read that the Docetaxel causes hair loss. If I lose my hair, I can't hide this from the grandkids. Can we skip that part and just do the other two?"
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_2>"
+      },
+      {
+        "role": "patient",
+        "text": "So if I get through the hard chemo part first, you're saying the 'maintenance' phase might let me look like myself again? How long can that stage last?"
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_3>"
+      }
+    ]
+  },
+  {
+    "dialogue_id": "MT-S2",
+    "diagnosis": "Stage IIIB triple-negative breast cancer",
+    "treatment_plan": "Neoadjuvant pembrolizumab q3w with weekly paclitaxel/carboplatin ~12 weeks, then doxorubicin/cyclophosphamide q2w ×4; surgery ± radiation; continue pembrolizumab to ~1 year",
+    "narrative": "33-year-old, 8 months postpartum. Struggling with 'patient' identity vs 'mother' identity.",
+    "turns": [
+      {
+        "role": "patient",
+        "text": "I look at my baby and I feel like I'm already a ghost. I'm supposed to be breastfeeding, not pumping poison into my veins."
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_1>"
+      },
+      {
+        "role": "patient",
+        "text": "My oncologist mentioned the second phase involves 'Doxorubicin.' I've heard that called the 'Red Devil' because of what it does to your heart and energy. How am I supposed to lift a baby if I can't get out of bed?"
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_2>"
+      },
+      {
+        "role": "patient",
+        "text": "If I survive the chemo and the surgery, I'm terrified my daughter won't bond with me. How do I still be her mom when I'm this sick?"
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_3>"
+      }
+    ]
+  },
+  {
+    "dialogue_id": "MT-S3",
+    "diagnosis": "Metastatic hormone-sensitive prostate cancer",
+    "treatment_plan": "Androgen deprivation therapy (ADT) injection q1–3 months + daily androgen-receptor targeted pill",
+    "narrative": "71-year-old retired coach. Used to being in command. Experiencing emotional volatility due to testosterone suppression.",
+    "turns": [
+      {
+        "role": "patient",
+        "text": "I snapped at my wife this morning over nothing. I've never done that. I feel like these hormones are turning me into a different man."
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_1>"
+      },
+      {
+        "role": "patient",
+        "text": "It's not just the mood. The doctor said these injections kill my testosterone. I'm getting hot flashes like a woman, and I'm weak. How do I coach my grandsons if I can't even demonstrate a play?"
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_2>"
+      },
+      {
+        "role": "patient",
+        "text": "Is there a way to manage this anger and the flashes without stopping the treatment? I need to stay in the game for them."
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_3>"
+      }
+    ]
+  },
+  {
+    "dialogue_id": "MT-S4",
+    "diagnosis": "Acute myeloid leukemia (FLT3-mutated)",
+    "treatment_plan": "7+3 induction (cytarabine + daunorubicin) followed by targeted FLT3 inhibitor",
+    "narrative": "45-year-old restaurant owner. Type A personality, needs to control logistics. Struggling with the sudden incapacity.",
+    "turns": [
+      {
+        "role": "patient",
+        "text": "They said 'induction' means I'm stuck in this hospital for a month. I run a restaurant; I can't just disappear for 30 days. Who is going to sign the checks?"
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_1>"
+      },
+      {
+        "role": "patient",
+        "text": "I Googled the '7+3' regimen. It says my immune system will basically hit zero. Does that mean even if I feel okay in week 3, I can't have my head chef visit to discuss the menu?"
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_2>"
+      },
+      {
+        "role": "patient",
+        "text": "Okay, so I have to delegate. How do I hand over the keys to my business without feeling like I'm losing the one thing I built?"
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_3>"
+      }
+    ]
+  },
+  {
+    "dialogue_id": "MT-S5",
+    "diagnosis": "Locally advanced pancreatic adenocarcinoma",
+    "treatment_plan": "FOLFIRINOX q2w; evaluate for surgical resection if response",
+    "narrative": "53-year-old father and sole provider. Stoic, worries about burdening family financially and physically.",
+    "turns": [
+      {
+        "role": "patient",
+        "text": "I’ve always been the one who takes care of things. Now I’m the one costing us money. I feel like a liability to my own kids."
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_1>"
+      },
+      {
+        "role": "patient",
+        "text": "The nurse warned me about 'cold sensitivity' and neuropathy from the Oxaliplatin in the FOLFIRINOX. I drive a delivery truck for a living. If I can't feel my hands or feet, I can't work at all."
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_2>"
+      },
+      {
+        "role": "patient",
+        "text": "If I have to stop driving, how do I maintain my dignity as a father? I don't know how to sit on the couch and watch them struggle."
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_3>"
+      }
+    ]
+  },
+  {
+    "dialogue_id": "MT-S6",
+    "diagnosis": "High-grade osteosarcoma of the femur",
+    "treatment_plan": "MAP regimen (methotrexate, doxorubicin, cisplatin) + limb-sparing surgery if feasible",
+    "narrative": "17-year-old track athlete. Identity is entirely tied to physical performance.",
+    "turns": [
+      {
+        "role": "patient",
+        "text": "The doctor is talking about 'limb salvage,' but that sounds like I'll never run competitively again. If I can't run, I don't even know who I am."
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_1>"
+      },
+      {
+        "role": "patient",
+        "text": "And it's not just the leg. They said Cisplatin can damage my hearing. So I might lose my leg AND my hearing? How is that a 'cure'?"
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_2>"
+      },
+      {
+        "role": "patient",
+        "text": "I have a college scout coming in six months. Realistically, how do I adjust my goals without giving up on being an athlete completely?"
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_3>"
+      }
+    ]
+  },
+  {
+    "dialogue_id": "MT-S7",
+    "diagnosis": "Stage IIA classical Hodgkin lymphoma",
+    "treatment_plan": "ABVD chemo q2w × 2–4 cycles + response-adapted PET + possible involved-site radiation",
+    "narrative": "20-year-old first-gen college student. intense pressure to succeed. Parents sacrifice everything for her education.",
+    "turns": [
+      {
+        "role": "patient",
+        "text": "I finally made the Dean's List. I can't take a semester off. My parents worked too hard for me to be here."
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_1>"
+      },
+      {
+        "role": "patient",
+        "text": "I read that 'chemo brain' is real. If this ABVD regimen makes me foggy, I’ll fail my finals. Is it possible to study through this treatment?"
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_2>"
+      },
+      {
+        "role": "patient",
+        "text": "How do I explain to my parents that taking a break might save my degree in the long run? They just see it as quitting."
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_3>"
+      }
+    ]
+  },
+  {
+    "dialogue_id": "MT-S8",
+    "diagnosis": "Chronic myeloid leukemia, chronic phase",
+    "treatment_plan": "Daily oral TKI therapy (e.g., imatinib/dasatinib); monitor BCR-ABL levels",
+    "narrative": "29-year-old software engineer. Logical, data-driven, hates the lack of a definite 'end date' for treatment.",
+    "turns": [
+      {
+        "role": "patient",
+        "text": "So I just take this pill forever? It feels like I'm just waiting for the other shoe to drop. It's not a cure, it's a subscription."
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_1>"
+      },
+      {
+        "role": "patient",
+        "text": "I read about the side effects—fatigue, fluid retention. I work 60 hours a week coding. If I miss a dose because I'm working, does my BCR-ABL spike immediately? I need to know the margin of error."
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_2>"
+      },
+      {
+        "role": "patient",
+        "text": "I want to start dating again, but how do I bring this up? 'Hey, I have cancer but I just take a pill for it'? It sounds complicated."
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_3>"
+      }
+    ]
+  },
+  {
+    "dialogue_id": "MT-S9",
+    "diagnosis": "Sickle cell disease with recurrent vaso-occlusive pain crises",
+    "treatment_plan": "Hydroxyurea; opioid pain plan; consider L-glutamine",
+    "narrative": "22-year-old student. Frustrated by the stigma of seeking pain relief. Feels dismissed by medical staff.",
+    "turns": [
+      {
+        "role": "patient",
+        "text": "I went to the ER last night in agony, and the triage nurse rolled her eyes like I was just there for drugs. I'm so tired of fighting to be believed."
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_1>"
+      },
+      {
+        "role": "patient",
+        "text": "They keep pushing Hydroxyurea, but it makes me nauseous and I still get crises. Why should I keep taking something that makes me feel sick if the ER won't help me when the pain breaks through?"
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_2>"
+      },
+      {
+        "role": "patient",
+        "text": "Next time I go to the hospital, what exactly do I say so they treat the pain protocol immediately without judging me?"
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_3>"
+      }
+    ]
+  },
+  {
+    "dialogue_id": "MT-S10",
+    "diagnosis": "Grade II astrocytoma, IDH-mutant",
+    "treatment_plan": "Maximal safe resection followed by radiation ± temozolomide",
+    "narrative": "38-year-old jazz pianist. Relies on fine motor skills and improvisation. Terrified of cognitive decline.",
+    "turns": [
+      {
+        "role": "patient",
+        "text": "My hands are my life. The surgeon said 'safe resection,' but what if 'safe' for him means 'alive' and for me it means 'able to play scales'? I can't lose my dexterity."
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_1>"
+      },
+      {
+        "role": "patient",
+        "text": "Okay, but even if my hands work, I've heard temozolomide causes brain fog. If I can't improvise or remember chord progressions, I'm not a musician. Is that reversible?"
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_2>"
+      },
+      {
+        "role": "patient",
+        "text": "So if I do the radiation and the pills, how do I explain to my band that I might be slower for a while without them replacing me?"
+      },
+      {
+        "role": "assistant",
+        "text": "<turn_3>"
+      }
+    ]
+  }
 ]

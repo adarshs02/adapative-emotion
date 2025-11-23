@@ -273,7 +273,7 @@ def step_likert(*, situation: str, factors: List[Dict[str, Any]], emotions: List
     return None
 
 
-def step_final_output(*, situation: str, abstract: Optional[str], selections: List[Dict[str, str]], likert_items: List[Dict[str, Any]], model: str, temperature: float, max_tokens: int) -> Optional[str]:
+def step_final_output(*, situation: str, abstract: Optional[str], selections: List[Dict[str, str]], likert_items: List[Dict[str, Any]], model: str, temperature: float, max_tokens: int, prompt_path: Optional[str] = None) -> Optional[str]:
     try:
         return FOG.generate_final_output(
             situation=situation,
@@ -283,6 +283,7 @@ def step_final_output(*, situation: str, abstract: Optional[str], selections: Li
             model=model,
             temperature=temperature,
             max_tokens=max_tokens,
+            prompt_path=prompt_path,
         )
     except Exception as e:
         print(f"[final_output] failed: {e}", file=sys.stderr)
@@ -303,6 +304,7 @@ def run_pipeline_for_turn(
     attempts: int,
     with_emotions: bool,
     log_raw: bool,
+    final_output_prompt: Optional[str] = None,
 ) -> Dict[str, Any]:
     """Run the full EmoBIRDv2 pipeline for a single turn."""
     result: Dict[str, Any] = {
@@ -404,6 +406,7 @@ def run_pipeline_for_turn(
         model=model,
         temperature=temperature,
         max_tokens=out_max_tokens,
+        prompt_path=final_output_prompt,
     )
     if final_text:
         result["final_output"] = final_text
@@ -435,10 +438,11 @@ def process_dialogue_task(task_info: Dict[str, Any]) -> Dict[str, Any]:
     result = process_dialogue(dialogue, args, idx)
     
     # Write individual dialogue result
-    out_path = out_dir / f"{dialogue_id}_emobirdv2_{run_id}.json"
-    with out_path.open("w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
-    print(f"[done] {dialogue_id} -> {out_path}", file=sys.stderr)
+    # out_path = out_dir / f"{dialogue_id}_emobirdv2_{run_id}.json"
+    # with out_path.open("w", encoding="utf-8") as f:
+    #     json.dump(result, f, ensure_ascii=False, indent=2)
+    # print(f"[done] {dialogue_id} -> {out_path}", file=sys.stderr)
+    print(f"[done] {dialogue_id}", file=sys.stderr)
     
     return result
 
@@ -511,6 +515,7 @@ def process_dialogue(
                     attempts=args.attempts,
                     with_emotions=args.with_emotions,
                     log_raw=args.log_raw,
+                    final_output_prompt=args.final_output_prompt,
                 )
                 
                 response_text = (pipeline_result.get("final_output") or "").strip()
@@ -540,7 +545,7 @@ def process_dialogue(
         "treatment_plan": dialogue.get("treatment_plan"),
         "narrative": dialogue.get("narrative"),
         "turns": completed_turns,
-        "turn_results": turn_results,
+        # "turn_results": turn_results, # Simplified output
     }
 
 
@@ -567,6 +572,7 @@ def main() -> None:
     parser.add_argument("--resume", action="store_true", help="Skip dialogues that already have output files")
     parser.add_argument("--log-raw", action="store_true", help="Print truncated raw model outputs to stderr")
     parser.add_argument("--workers", type=int, default=1, help="Number of parallel workers for processing dialogues. Default: 1 (sequential)")
+    parser.add_argument("--final-output-prompt", type=str, default=str(REPO_ROOT / "EmoBIRDv2" / "prompts" / "multiturn_dynamic.txt"), help="Path to custom final output prompt file")
 
     args = parser.parse_args()
 

@@ -31,10 +31,14 @@ from EmoBIRDv2.utils.constants import (
 from EmoBIRDv2.scripts.abstract_generator import call_openrouter
 
 
-def load_prompt() -> str:
+def load_prompt(prompt_path: Optional[str] = None) -> str:
     # Conversational final output prompt (not SEC-EU). Must contain:
     # either {situation} or {user_input}, plus {emotion_insights} and {context_info}
-    path = os.path.join(PROMPT_DIR, "final_output_prompt.txt")
+    if prompt_path:
+        path = prompt_path
+    else:
+        path = os.path.join(PROMPT_DIR, "final_output_prompt.txt")
+    
     with open(path, "r", encoding="utf-8") as f:
         return f.read()
 
@@ -117,6 +121,7 @@ def generate_final_output(
     model: Optional[str] = None,
     temperature: Optional[float] = None,
     max_tokens: Optional[int] = None,
+    prompt_path: Optional[str] = None,
 ) -> str:
     """Build the final conversational output and call OpenRouter.
 
@@ -125,8 +130,9 @@ def generate_final_output(
     - selections: factor selections (list of {name,value,explanation})
     - likert_items: list of {emotion, rating, score}
     - model/temperature/max_tokens: overrides; defaults from constants if None
+    - prompt_path: optional path to a custom prompt file
     """
-    template = load_prompt()
+    template = load_prompt(prompt_path)
     emotion_insights = _format_emotion_insights(likert_items)
     context_info = _build_context_info(abstract=abstract, selections=selections)
     user_prompt = build_user_prompt(

@@ -207,7 +207,7 @@ def process_dialogue(
         "treatment_plan": dialogue.get("treatment_plan"),
         "narrative": dialogue.get("narrative"),
         "turns": completed_turns,
-        "turn_responses": turn_responses,
+        # "turn_responses": turn_responses, # Simplified output
     }
 
 
@@ -235,10 +235,11 @@ def process_dialogue_task(task_info: Dict[str, Any]) -> Optional[Dict[str, Any]]
     result = process_dialogue(dialogue, args, idx)
     
     # Write individual dialogue result
-    out_path = out_dir / f"{dialogue_id}_basemodel_{run_id}.json"
-    with out_path.open("w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
-    print(f"[done] {dialogue_id} -> {out_path}", file=sys.stderr)
+    # out_path = out_dir / f"{dialogue_id}_basemodel_{run_id}.json"
+    # with out_path.open("w", encoding="utf-8") as f:
+    #     json.dump(result, f, ensure_ascii=False, indent=2)
+    # print(f"[done] {dialogue_id} -> {out_path}", file=sys.stderr)
+    print(f"[done] {dialogue_id}", file=sys.stderr)
     
     return result
 
