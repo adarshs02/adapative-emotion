@@ -10,6 +10,7 @@ Abstract Generator (EmoBIRDv2)
 import json
 import os
 import sys
+import time
 from typing import Optional, Dict, Any
 
 import requests
@@ -52,6 +53,7 @@ def call_openrouter(
     system: Optional[str] = None,
     extra_headers: Optional[Dict[str, str]] = None,
     extra_payload: Optional[Dict[str, Any]] = None,
+    retries: int = 3,
 ) -> str:
     headers = {
         "Authorization": f"Bearer {api_key}",
@@ -77,29 +79,55 @@ def call_openrouter(
     if extra_payload:
         payload.update({k: v for k, v in extra_payload.items() if v is not None})
 
-    resp = requests.post(
-        OPENROUTER_URL,
-        headers=headers,
-        data=json.dumps(payload),
-        timeout=(OPENROUTER_CONNECT_TIMEOUT, OPENROUTER_READ_TIMEOUT),
-    )
-    resp.raise_for_status()
-    data = resp.json()
-    # Surface API-declared errors even with 200 status
-    if isinstance(data, dict) and data.get("error"):
-        raise RuntimeError(f"OpenRouter error: {data.get('error')}")
-    try:
-        content = (data["choices"][0]["message"].get("content") or "").strip()
-        if content:
-            return content
-        # Fallback: use tool call function arguments if present
-        tool_calls = data["choices"][0]["message"].get("tool_calls") or []
-        if tool_calls:
-            args = tool_calls[0].get("function", {}).get("arguments")
-            return (args or "").strip()
-        return ""
-    except Exception:
-        return ""
+    last_error = None
+    for attempt in range(retries):
+        try:
+            resp = requests.post(
+                OPENROUTER_URL,
+                headers=headers,
+                data=json.dumps(payload),
+                timeout=(OPENROUTER_CONNECT_TIMEOUT, OPENROUTER_READ_TIMEOUT),
+            )
+            resp.raise_for_status()
+            data = resp.json()
+            # Surface API-declared errors even with 200 status
+            if isinstance(data, dict) and data.get("error"):
+                raise RuntimeError(f"OpenRouter error: {data.get('error')}")
+            try:
+                content = (data["choices"][0]["message"].get("content") or "").strip()
+                if content:
+                    return content
+                # Fallback: use tool call function arguments if present
+                tool_calls = data["choices"][0]["message"].get("tool_calls") or []
+                if tool_calls:
+                    args = tool_calls[0].get("function", {}).get("arguments")
+                    if args:
+                        return args.strip()
+                # If we got a response but it's empty, that's a real empty response, not an error
+                if attempt == retries - 1:
+                    return ""
+                # Otherwise retry
+                last_error = "Empty response from API"
+                continue
+            except (KeyError, IndexError, TypeError) as e:
+                last_error = f"Failed to parse response: {e}"
+                if attempt == retries - 1:
+                    return ""
+                continue
+        except requests.exceptions.Timeout as e:
+            last_error = f"Timeout: {e}"
+            if attempt < retries - 1:
+                time.sleep(2 ** attempt)  # Exponential backoff
+                continue
+            return ""
+        except Exception as e:
+            last_error = f"Request failed: {e}"
+            if attempt < retries - 1:
+                time.sleep(2 ** attempt)
+                continue
+            return ""
+    
+    return ""
 
 
 def read_stdin() -> Optional[str]:

@@ -10,6 +10,7 @@ import argparse
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import re
 
 # Repo paths
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -110,6 +111,8 @@ def run_emobird_pipeline(
                 break
         except Exception as e:
             print(f"[abstract] attempt {i} failed: {e}", file=sys.stderr)
+            if 'raw' in locals():
+                print(f"[abstract] raw output: {raw!r}", file=sys.stderr)
     
     if not abstract:
         return None
@@ -232,12 +235,19 @@ def generate_assistant_system_context(scenario: Dict[str, Any]) -> str:
     Constructs the system context for the Assistant Agent (EmoBIRD).
     """
     context = scenario["medical_context"]
+    persona = scenario["patient_persona"]
     
     parts = []
     if context.get("diagnosis"):
         parts.append(f"Diagnosis: {context['diagnosis']}")
     if context.get("treatment_plan"):
         parts.append(f"Treatment Plan: {context['treatment_plan']}")
+    
+    # Add patient persona details for personalization
+    if persona.get("demographics"):
+        parts.append(f"Patient Demographics: {persona['demographics']}")
+    if persona.get("narrative_driver"):
+        parts.append(f"Patient Main Concern/Goal: {persona['narrative_driver']}")
     
     return "\n".join(parts)
 
@@ -339,6 +349,7 @@ def run_simulation(scenario: Dict[str, Any], turns: int = 4, patient_model: str 
         "dialogue_id": dialogue_id,
         "diagnosis": scenario["medical_context"].get("diagnosis"),
         "treatment_plan": scenario["medical_context"].get("treatment_plan"),
+        "demographics": scenario["patient_persona"].get("demographics"),
         "transcript": transcript
     }
 
@@ -351,6 +362,10 @@ def run_simulation_task(task_data: Dict[str, Any]) -> Dict[str, Any]:
         assistant_model=task_data["assistant_model"],
         qa_retries=task_data["qa_retries"],
     )
+
+def natural_sort_key(s):
+    return [int(text) if text.isdigit() else text.lower()
+            for text in re.split('([0-9]+)', s)]
 
 def main():
     parser = argparse.ArgumentParser(description="Run dynamic patient simulation with EmoBIRD")
@@ -416,6 +431,9 @@ def main():
                 finally:
                     completed += 1
                     print(f"Progress: {completed}/{len(tasks)} scenarios completed", file=sys.stderr)
+    
+    # Sort results by dialogue_id (natural sort)
+    results.sort(key=lambda x: natural_sort_key(x["dialogue_id"]))
     
     # Save results
     out_path = REPO_ROOT / "EmoBIRDv2" / "eval_results" / "simulation_results_emobird.json"

@@ -3,7 +3,7 @@ import os
 # MODEL PARAMS
 MODEL_NAME="openai/gpt-oss-20b"  # Upgraded from llama-3.1-8b-instruct for better medical reasoning
 MODEL_TEMPERATURE = 0.2  # Lowered from 0.6 for more consistent multi-stage reasoning
-ABSTRACT_MAX_TOKENS = 384  # Increased from 256 to support 150-word abstracts with medical details
+ABSTRACT_MAX_TOKENS = 512  # Increased from 384 to prevent JSON truncation in complex medical scenarios
 FACTOR_MAX_TOKENS = 768  # Increased from 512 to prevent truncation of medical factors
 EMOTION_MAX_TOKENS = 256
 LIKERT_MAX_TOKENS = 384  # Increased from 256 to support medical context guidance

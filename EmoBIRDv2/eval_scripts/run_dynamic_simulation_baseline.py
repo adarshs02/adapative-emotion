@@ -9,6 +9,7 @@ import argparse
 from pathlib import Path
 from typing import Any, Dict, List
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import re
 
 # Repo paths
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -101,10 +102,7 @@ def generate_assistant_system_prompt(scenario: Dict[str, Any]) -> str:
 - Main Concern: {context.get('narrative_driver', 'N/A')}
 
 **Instructions**:
-1. **Tone:** Start with 1-2 sentences explicitly validating the patient's emotion before providing medical answers.
-2. **Relevance:** When explaining side effects or risks, specifically mention how they might affect the patient's daily life (e.g., their job, hobbies, or family role) based on the profile above.
-3. **Length:** Keep the total response under 200 words.
-4. **Safety:** Be medically accurate but practical. Do not be alarmist.
+1. **Length:** Keep the total response under 200 words.
 """
     return prompt
 
@@ -151,7 +149,22 @@ def run_simulation(scenario: Dict[str, Any], turns: int = 4, patient_model: str 
         for msg in conversation_history:
             assistant_history.append(msg)
         
-        assistant_response = call_llm(assistant_sys_prompt, assistant_history, model=assistant_model)
+        assistant_response = None
+        for retry in range(3):  # Retry up to 3 times for assistant
+            try:
+                assistant_response = call_llm(assistant_sys_prompt, assistant_history, model=assistant_model)
+                if assistant_response and assistant_response.strip():
+                    break
+                else:
+                    if retry < 2:
+                        print(f"    Assistant retry {retry+1}/2 (empty response)...", file=sys.stderr)
+            except Exception as e:
+                print(f"    Assistant LLM error (attempt {retry+1}): {e}", file=sys.stderr)
+                if retry == 2:
+                    assistant_response = "[Assistant LLM failed]"
+        
+        if not assistant_response or not assistant_response.strip():
+            assistant_response = "[Empty assistant response]"
         
         conversation_history.append({"role": "assistant", "content": assistant_response})
         transcript.append({"role": "assistant", "content": assistant_response})
@@ -177,13 +190,18 @@ def run_simulation(scenario: Dict[str, Any], turns: int = 4, patient_model: str 
         "dialogue_id": dialogue_id,
         "diagnosis": scenario["medical_context"].get("diagnosis"),
         "treatment_plan": scenario["medical_context"].get("treatment_plan"),
+        "demographics": scenario["patient_persona"].get("demographics"),
         "transcript": transcript
     }
+
+def natural_sort_key(s):
+    return [int(text) if text.isdigit() else text.lower()
+            for text in re.split('([0-9]+)', s)]
 
 def main():
     parser = argparse.ArgumentParser(description="Run dynamic patient simulation (Baseline - No EmoBIRD)")
     parser.add_argument("--patient-model", type=str, default="openai/gpt-5.1", help="Model to use for the Patient Agent")
-    parser.add_argument("--assistant-model", type=str, default=MODEL_NAME, help="Model to use for the Assistant Agent (Baseline)")
+    parser.add_argument("--assistant-model", type=str, default="openai/gpt-oss-20b", help="Model to use for the Assistant Agent (Baseline)")
     parser.add_argument("--turns", type=int, default=3, help="Number of turns to simulate")
     parser.add_argument("--workers", type=int, default=1, help="Number of parallel workers. Default: 1 (sequential)")
     parser.add_argument("--data", type=str, default=str(REPO_ROOT / "datasets" / "EmoPatientMulti" / "scenarios_dynamic.json"), help="Path to dynamic scenarios JSON")
@@ -236,6 +254,9 @@ def main():
                 finally:
                     completed += 1
                     print(f"Progress: {completed}/{len(tasks)} scenarios completed", file=sys.stderr)
+    
+    # Sort results by dialogue_id (natural sort)
+    results.sort(key=lambda x: natural_sort_key(x["dialogue_id"]))
     
     # Save results
     out_path = REPO_ROOT / "EmoBIRDv2" / "eval_results" / "simulation_results_baseline.json"
